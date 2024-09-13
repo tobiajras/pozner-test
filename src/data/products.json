@@ -1,0 +1,654 @@
+[
+  {
+    "id": 1,
+    "name": "Granos de Café Orgánico 500g",
+    "category": "Granos de Café",
+    "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
+    "price": 12.99,
+    "currency": "USD",
+    "stock": 120,
+    "image_url": "granos-grvity.webp",
+    "sku": "CO500",
+    "rating": 4.8,
+    "reviews_count": 25,
+    "color": []
+  },
+  {
+    "id": 2,
+    "name": "Taza de Cerámica 350ml",
+    "category": "Tazas",
+    "description": "Taza de cerámica con el logo de la empresa.",
+    "price": 9.99,
+    "currency": "USD",
+    "stock": 80,
+    "image_url": "taza-grvity.webp",
+    "sku": "TLC350",
+    "rating": 4.5,
+    "reviews_count": 14,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/taza_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/taza_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/taza_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Vaso Térmico 450ml",
+    "category": "Vasos Térmicos",
+    "description": "Vaso térmico de acero inoxidable para llevar café caliente o frío.",
+    "price": 15.99,
+    "currency": "USD",
+    "stock": 50,
+    "image_url": "cafe-grvity.webp",
+    "sku": "VT450",
+    "rating": 4.7,
+    "reviews_count": 20,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/vaso_termico_negro.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/vaso_termico_blanco.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/vaso_termico_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Cápsulas de Café Intenso - 10 unidades",
+    "category": "Cápsulas",
+    "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
+    "price": 7.99,
+    "currency": "USD",
+    "stock": 200,
+    "image_url": "capsula-grvity.webp",
+    "sku": "CCI10",
+    "rating": 4.9,
+    "reviews_count": 45,
+    "color": []
+  },
+  {
+    "id": 5,
+    "name": "Gorra con Logo",
+    "category": "Merchandising",
+    "description": "Gorra de algodón con el logo de la empresa.",
+    "price": 14.99,
+    "currency": "USD",
+    "stock": 60,
+    "image_url": "gorra-grvity.webp",
+    "sku": "GLN01",
+    "rating": 4.3,
+    "reviews_count": 10,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/gorra_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/gorra_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/gorra_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Remera con Logo",
+    "category": "Merchandising",
+    "description": "Remera de algodón con el logo impreso.",
+    "price": 19.99,
+    "currency": "USD",
+    "stock": 40,
+    "image_url": "remera-grvity.webp",
+    "sku": "RLB02",
+    "rating": 4.6,
+    "reviews_count": 18,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/remera_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/remera_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/remera_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Buzo con Logo",
+    "category": "Merchandising",
+    "description": "Buzo de algodón con capucha y el logo bordado.",
+    "price": 39.99,
+    "currency": "USD",
+    "stock": 25,
+    "image_url": "buzo-grvity.webp",
+    "sku": "BLG03",
+    "rating": 4.9,
+    "reviews_count": 22,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/buzo_negro.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/buzo_blanco.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/buzo_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Granos de Café Orgánico 500g",
+    "category": "Granos de Café",
+    "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
+    "price": 12.99,
+    "currency": "USD",
+    "stock": 120,
+    "image_url": "granos-grvity.webp",
+    "sku": "CO500",
+    "rating": 4.8,
+    "reviews_count": 25,
+    "color": []
+  },
+  {
+    "id": 9,
+    "name": "Taza de Cerámica 350ml",
+    "category": "Tazas",
+    "description": "Taza de cerámica con el logo de la empresa.",
+    "price": 9.99,
+    "currency": "USD",
+    "stock": 80,
+    "image_url": "taza-grvity.webp",
+    "sku": "TLC350",
+    "rating": 4.5,
+    "reviews_count": 14,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/taza_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/taza_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/taza_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Vaso Térmico 450ml",
+    "category": "Vasos Térmicos",
+    "description": "Vaso térmico de acero inoxidable para llevar café caliente o frío.",
+    "price": 15.99,
+    "currency": "USD",
+    "stock": 50,
+    "image_url": "cafe-grvity.webp",
+    "sku": "VT450",
+    "rating": 4.7,
+    "reviews_count": 20,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/vaso_termico_negro.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/vaso_termico_blanco.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/vaso_termico_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Cápsulas de Café Intenso - 10 unidades",
+    "category": "Cápsulas",
+    "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
+    "price": 7.99,
+    "currency": "USD",
+    "stock": 200,
+    "image_url": "capsula-grvity.webp",
+    "sku": "CCI10",
+    "rating": 4.9,
+    "reviews_count": 45,
+    "color": []
+  },
+  {
+    "id": 12,
+    "name": "Gorra con Logo",
+    "category": "Merchandising",
+    "description": "Gorra de algodón con el logo de la empresa.",
+    "price": 14.99,
+    "currency": "USD",
+    "stock": 60,
+    "image_url": "gorra-grvity.webp",
+    "sku": "GLN01",
+    "rating": 4.3,
+    "reviews_count": 10,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/gorra_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/gorra_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/gorra_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Remera con Logo",
+    "category": "Merchandising",
+    "description": "Remera de algodón con el logo impreso.",
+    "price": 19.99,
+    "currency": "USD",
+    "stock": 40,
+    "image_url": "remera-grvity.webp",
+    "sku": "RLB02",
+    "rating": 4.6,
+    "reviews_count": 18,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/remera_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/remera_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/remera_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Buzo con Logo",
+    "category": "Merchandising",
+    "description": "Buzo de algodón con capucha y el logo bordado.",
+    "price": 39.99,
+    "currency": "USD",
+    "stock": 25,
+    "image_url": "buzo-grvity.webp",
+    "sku": "BLG03",
+    "rating": 4.9,
+    "reviews_count": 22,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/buzo_negro.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/buzo_blanco.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/buzo_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Granos de Café Orgánico 500g",
+    "category": "Granos de Café",
+    "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
+    "price": 12.99,
+    "currency": "USD",
+    "stock": 120,
+    "image_url": "granos-grvity.webp",
+    "sku": "CO500",
+    "rating": 4.8,
+    "reviews_count": 25,
+    "color": []
+  },
+  {
+    "id": 16,
+    "name": "Taza de Cerámica 350ml",
+    "category": "Tazas",
+    "description": "Taza de cerámica con el logo de la empresa.",
+    "price": 9.99,
+    "currency": "USD",
+    "stock": 80,
+    "image_url": "taza-grvity.webp",
+    "sku": "TLC350",
+    "rating": 4.5,
+    "reviews_count": 14,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/taza_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/taza_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/taza_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Vaso Térmico 450ml",
+    "category": "Vasos Térmicos",
+    "description": "Vaso térmico de acero inoxidable para llevar café caliente o frío.",
+    "price": 15.99,
+    "currency": "USD",
+    "stock": 50,
+    "image_url": "cafe-grvity.webp",
+    "sku": "VT450",
+    "rating": 4.7,
+    "reviews_count": 20,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/vaso_termico_negro.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/vaso_termico_blanco.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/vaso_termico_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Cápsulas de Café Intenso - 10 unidades",
+    "category": "Cápsulas",
+    "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
+    "price": 7.99,
+    "currency": "USD",
+    "stock": 200,
+    "image_url": "capsula-grvity.webp",
+    "sku": "CCI10",
+    "rating": 4.9,
+    "reviews_count": 45,
+    "color": []
+  },
+  {
+    "id": 19,
+    "name": "Gorra con Logo",
+    "category": "Merchandising",
+    "description": "Gorra de algodón con el logo de la empresa.",
+    "price": 14.99,
+    "currency": "USD",
+    "stock": 60,
+    "image_url": "gorra-grvity.webp",
+    "sku": "GLN01",
+    "rating": 4.3,
+    "reviews_count": 10,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/gorra_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/gorra_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/gorra_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Remera con Logo",
+    "category": "Merchandising",
+    "description": "Remera de algodón con el logo impreso.",
+    "price": 19.99,
+    "currency": "USD",
+    "stock": 40,
+    "image_url": "remera-grvity.webp",
+    "sku": "RLB02",
+    "rating": 4.6,
+    "reviews_count": 18,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/remera_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/remera_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/remera_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Buzo con Logo",
+    "category": "Merchandising",
+    "description": "Buzo de algodón con capucha y el logo bordado.",
+    "price": 39.99,
+    "currency": "USD",
+    "stock": 25,
+    "image_url": "buzo-grvity.webp",
+    "sku": "BLG03",
+    "rating": 4.9,
+    "reviews_count": 22,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/buzo_negro.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/buzo_blanco.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/buzo_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Granos de Café Orgánico 500g",
+    "category": "Granos de Café",
+    "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
+    "price": 12.99,
+    "currency": "USD",
+    "stock": 120,
+    "image_url": "granos-grvity.webp",
+    "sku": "CO500",
+    "rating": 4.8,
+    "reviews_count": 25,
+    "color": []
+  },
+  {
+    "id": 23,
+    "name": "Taza de Cerámica 350ml",
+    "category": "Tazas",
+    "description": "Taza de cerámica con el logo de la empresa.",
+    "price": 9.99,
+    "currency": "USD",
+    "stock": 80,
+    "image_url": "taza-grvity.webp",
+    "sku": "TLC350",
+    "rating": 4.5,
+    "reviews_count": 14,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/taza_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/taza_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/taza_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Vaso Térmico 450ml",
+    "category": "Vasos Térmicos",
+    "description": "Vaso térmico de acero inoxidable para llevar café caliente o frío.",
+    "price": 15.99,
+    "currency": "USD",
+    "stock": 50,
+    "image_url": "cafe-grvity.webp",
+    "sku": "VT450",
+    "rating": 4.7,
+    "reviews_count": 20,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/vaso_termico_negro.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/vaso_termico_blanco.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/vaso_termico_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Cápsulas de Café Intenso - 10 unidades",
+    "category": "Cápsulas",
+    "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
+    "price": 7.99,
+    "currency": "USD",
+    "stock": 200,
+    "image_url": "capsula-grvity.webp",
+    "sku": "CCI10",
+    "rating": 4.9,
+    "reviews_count": 45,
+    "color": []
+  },
+  {
+    "id": 26,
+    "name": "Gorra con Logo",
+    "category": "Merchandising",
+    "description": "Gorra de algodón con el logo de la empresa.",
+    "price": 14.99,
+    "currency": "USD",
+    "stock": 60,
+    "image_url": "gorra-grvity.webp",
+    "sku": "GLN01",
+    "rating": 4.3,
+    "reviews_count": 10,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/gorra_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/gorra_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/gorra_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Remera con Logo",
+    "category": "Merchandising",
+    "description": "Remera de algodón con el logo impreso.",
+    "price": 19.99,
+    "currency": "USD",
+    "stock": 40,
+    "image_url": "remera-grvity.webp",
+    "sku": "RLB02",
+    "rating": 4.6,
+    "reviews_count": 18,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/remera_negra.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/remera_blanca.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/remera_azul.jpg"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Buzo con Logo",
+    "category": "Merchandising",
+    "description": "Buzo de algodón con capucha y el logo bordado.",
+    "price": 39.99,
+    "currency": "USD",
+    "stock": 25,
+    "image_url": "buzo-grvity.webp",
+    "sku": "BLG03",
+    "rating": 4.9,
+    "reviews_count": 22,
+    "color": [
+      {
+        "color": "Negro",
+        "image_url": "https://example.com/images/buzo_negro.jpg"
+      },
+      {
+        "color": "Blanco",
+        "image_url": "https://example.com/images/buzo_blanco.jpg"
+      },
+      {
+        "color": "Azul",
+        "image_url": "https://example.com/images/buzo_azul.jpg"
+      }
+    ]
+  }
+]
