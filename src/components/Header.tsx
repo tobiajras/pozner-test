@@ -6,7 +6,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-background-dark'>
+    <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-secondary'>
       <section className='flex items-center gap-20 py-5 max-w-6xl w-full'>
         <Link href='/' className='flex items-center gap-2'>
           <div>

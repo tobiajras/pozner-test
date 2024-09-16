@@ -1,12 +1,13 @@
-import products from '@/data/products.json';
-
-import Image from 'next/image';
+import CarrouselFeatured from '@/components/CarrouselFeatured';
+import HeroHome from '@/components/HeroHome';
 
 export default function Home() {
   return (
-    <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]'>
-      <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
-        <section>home</section>
+    <div className='flex justify-center min-h-screen'>
+      <main className=''>
+        <HeroHome />
+        <CarrouselFeatured title='Lanzamientos' startIndex={0} lastIndex={10} />
+        <CarrouselFeatured title='Destacados' startIndex={10} lastIndex={20} />
       </main>
     </div>
   );
