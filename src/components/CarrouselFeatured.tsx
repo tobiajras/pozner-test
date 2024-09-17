@@ -25,8 +25,12 @@ const CarrouselFeatured = ({ title, startIndex, lastIndex }) => {
                 <div className='flex flex-col w-full h-full'>
                   <img
                     className='object-contain px-3 py-5 md:px-5 md:py-12 h-36 min-[500px]:h-44 md:h-56 lg:h-72'
-                    src={`/assets/products/${product.image_url}`}
-                    alt={product.id}
+                    src={`/assets/products/${
+                      product.image_url
+                        ? product.image_url
+                        : product.color[0].image_url
+                    }`}
+                    alt={product.name}
                   />
                   <h3 className='text-color-primary font-semibold h-12 line-clamp-2 mb-1 max-w-48'>
                     {product.name}

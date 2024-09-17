@@ -6,12 +6,11 @@
     "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
     "price": 9000,
     "currency": " ARS",
-    "stock": 120,
     "image_url": "granos-grvity.webp",
+    "stock": 120,
     "sku": "CO500",
     "rating": 4.8,
-    "reviews_count": 25,
-    "color": []
+    "reviews_count": 25
   },
   {
     "id": 2,
@@ -21,22 +20,21 @@
     "price": 20000,
     "currency": " ARS",
     "stock": 80,
-    "image_url": "taza-grvity.webp",
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/taza_negra.jpg"
+        "image_url": "taza-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/taza_blanca.jpg"
+        "image_url": "taza-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/taza_azul.jpg"
+        "image_url": "taza-grvity-blue.webp"
       }
     ]
   },
@@ -48,22 +46,21 @@
     "price": 9000,
     "currency": " ARS",
     "stock": 50,
-    "image_url": "cafe-grvity.webp",
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/vaso_termico_negro.jpg"
+        "image_url": "cafe-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/vaso_termico_blanco.jpg"
+        "image_url": "cafe-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/vaso_termico_azul.jpg"
+        "image_url": "cafe-grvity-blue.webp"
       }
     ]
   },
@@ -75,11 +72,14 @@
     "price": 48700,
     "currency": " ARS",
     "stock": 200,
-    "image_url": "capsula-grvity.webp",
     "sku": "CCI10",
     "rating": 4.9,
     "reviews_count": 45,
-    "color": []
+    "color": [
+      {
+        "image_url": "capsula-grvity.webp"
+      }
+    ]
   },
   {
     "id": 5,
@@ -89,22 +89,21 @@
     "price": 6700,
     "currency": " ARS",
     "stock": 60,
-    "image_url": "gorra-grvity.webp",
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/gorra_negra.jpg"
+        "image_url": "gorra-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/gorra_blanca.jpg"
+        "image_url": "gorra-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/gorra_azul.jpg"
+        "image_url": "gorra-grvity-blue.webp"
       }
     ]
   },
@@ -116,22 +115,21 @@
     "price": 9800,
     "currency": " ARS",
     "stock": 40,
-    "image_url": "remera-grvity.webp",
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/remera_negra.jpg"
+        "image_url": "remera-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/remera_blanca.jpg"
+        "image_url": "remera-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/remera_azul.jpg"
+        "image_url": "remera-grvity-blue.webp"
       }
     ]
   },
@@ -143,22 +141,21 @@
     "price": 20900,
     "currency": " ARS",
     "stock": 25,
-    "image_url": "buzo-grvity.webp",
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/buzo_negro.jpg"
+        "image_url": "buzo-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/buzo_blanco.jpg"
+        "image_url": "buzo-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/buzo_azul.jpg"
+        "image_url": "buzo-grvity-blue.webp"
       }
     ]
   },
@@ -169,12 +166,11 @@
     "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
     "price": 9000,
     "currency": " ARS",
-    "stock": 120,
     "image_url": "granos-grvity.webp",
+    "stock": 120,
     "sku": "CO500",
     "rating": 4.8,
-    "reviews_count": 25,
-    "color": []
+    "reviews_count": 25
   },
   {
     "id": 9,
@@ -184,22 +180,21 @@
     "price": 20000,
     "currency": " ARS",
     "stock": 80,
-    "image_url": "taza-grvity.webp",
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/taza_negra.jpg"
+        "image_url": "taza-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/taza_blanca.jpg"
+        "image_url": "taza-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/taza_azul.jpg"
+        "image_url": "taza-grvity-blue.webp"
       }
     ]
   },
@@ -211,22 +206,21 @@
     "price": 9000,
     "currency": " ARS",
     "stock": 50,
-    "image_url": "cafe-grvity.webp",
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/vaso_termico_negro.jpg"
+        "image_url": "cafe-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/vaso_termico_blanco.jpg"
+        "image_url": "cafe-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/vaso_termico_azul.jpg"
+        "image_url": "cafe-grvity-blue.webp"
       }
     ]
   },
@@ -238,11 +232,14 @@
     "price": 48700,
     "currency": " ARS",
     "stock": 200,
-    "image_url": "capsula-grvity.webp",
     "sku": "CCI10",
     "rating": 4.9,
     "reviews_count": 45,
-    "color": []
+    "color": [
+      {
+        "image_url": "capsula-grvity.webp"
+      }
+    ]
   },
   {
     "id": 12,
@@ -252,22 +249,21 @@
     "price": 6700,
     "currency": " ARS",
     "stock": 60,
-    "image_url": "gorra-grvity.webp",
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/gorra_negra.jpg"
+        "image_url": "gorra-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/gorra_blanca.jpg"
+        "image_url": "gorra-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/gorra_azul.jpg"
+        "image_url": "gorra-grvity-blue.webp"
       }
     ]
   },
@@ -279,22 +275,21 @@
     "price": 9800,
     "currency": " ARS",
     "stock": 40,
-    "image_url": "remera-grvity.webp",
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/remera_negra.jpg"
+        "image_url": "remera-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/remera_blanca.jpg"
+        "image_url": "remera-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/remera_azul.jpg"
+        "image_url": "remera-grvity-blue.webp"
       }
     ]
   },
@@ -306,22 +301,21 @@
     "price": 20900,
     "currency": " ARS",
     "stock": 25,
-    "image_url": "buzo-grvity.webp",
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/buzo_negro.jpg"
+        "image_url": "buzo-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/buzo_blanco.jpg"
+        "image_url": "buzo-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/buzo_azul.jpg"
+        "image_url": "buzo-grvity-blue.webp"
       }
     ]
   },
@@ -331,13 +325,12 @@
     "category": "Granos de Café",
     "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
     "price": 9000,
+    "image_url": "granos-grvity.webp",
     "currency": " ARS",
     "stock": 120,
-    "image_url": "granos-grvity.webp",
     "sku": "CO500",
     "rating": 4.8,
-    "reviews_count": 25,
-    "color": []
+    "reviews_count": 25
   },
   {
     "id": 16,
@@ -347,22 +340,21 @@
     "price": 20000,
     "currency": " ARS",
     "stock": 80,
-    "image_url": "taza-grvity.webp",
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/taza_negra.jpg"
+        "image_url": "taza-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/taza_blanca.jpg"
+        "image_url": "taza-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/taza_azul.jpg"
+        "image_url": "taza-grvity-blue.webp"
       }
     ]
   },
@@ -374,22 +366,21 @@
     "price": 9000,
     "currency": " ARS",
     "stock": 50,
-    "image_url": "cafe-grvity.webp",
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/vaso_termico_negro.jpg"
+        "image_url": "cafe-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/vaso_termico_blanco.jpg"
+        "image_url": "taza-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/vaso_termico_azul.jpg"
+        "image_url": "taza-grvity-blue.webp"
       }
     ]
   },
@@ -401,11 +392,14 @@
     "price": 48700,
     "currency": " ARS",
     "stock": 200,
-    "image_url": "capsula-grvity.webp",
     "sku": "CCI10",
     "rating": 4.9,
     "reviews_count": 45,
-    "color": []
+    "color": [
+      {
+        "image_url": "capsula-grvity.webp"
+      }
+    ]
   },
   {
     "id": 19,
@@ -415,22 +409,21 @@
     "price": 6700,
     "currency": " ARS",
     "stock": 60,
-    "image_url": "gorra-grvity.webp",
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/gorra_negra.jpg"
+        "image_url": "gorra-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/gorra_blanca.jpg"
+        "image_url": "gorra-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/gorra_azul.jpg"
+        "image_url": "gorra-grvity-blue.webp"
       }
     ]
   },
@@ -442,22 +435,21 @@
     "price": 9800,
     "currency": " ARS",
     "stock": 40,
-    "image_url": "remera-grvity.webp",
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/remera_negra.jpg"
+        "image_url": "remera-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/remera_blanca.jpg"
+        "image_url": "remera-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/remera_azul.jpg"
+        "image_url": "remera-grvity-blue.webp"
       }
     ]
   },
@@ -469,22 +461,21 @@
     "price": 20900,
     "currency": " ARS",
     "stock": 25,
-    "image_url": "buzo-grvity.webp",
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/buzo_negro.jpg"
+        "image_url": "buzo-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/buzo_blanco.jpg"
+        "image_url": "buzo-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/buzo_azul.jpg"
+        "image_url": "buzo-grvity-blue.webp"
       }
     ]
   },
@@ -495,12 +486,11 @@
     "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
     "price": 9000,
     "currency": " ARS",
-    "stock": 120,
     "image_url": "granos-grvity.webp",
+    "stock": 120,
     "sku": "CO500",
     "rating": 4.8,
-    "reviews_count": 25,
-    "color": []
+    "reviews_count": 25
   },
   {
     "id": 23,
@@ -510,22 +500,21 @@
     "price": 20000,
     "currency": " ARS",
     "stock": 80,
-    "image_url": "taza-grvity.webp",
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/taza_negra.jpg"
+        "image_url": "taza-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/taza_blanca.jpg"
+        "image_url": "taza-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/taza_azul.jpg"
+        "image_url": "taza-grvity-blue.webp"
       }
     ]
   },
@@ -537,22 +526,21 @@
     "price": 9000,
     "currency": " ARS",
     "stock": 50,
-    "image_url": "cafe-grvity.webp",
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/vaso_termico_negro.jpg"
+        "image_url": "cafe-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/vaso_termico_blanco.jpg"
+        "image_url": "taza-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/vaso_termico_azul.jpg"
+        "image_url": "taza-grvity-blue.webp"
       }
     ]
   },
@@ -564,11 +552,14 @@
     "price": 48700,
     "currency": " ARS",
     "stock": 200,
-    "image_url": "capsula-grvity.webp",
     "sku": "CCI10",
     "rating": 4.9,
     "reviews_count": 45,
-    "color": []
+    "color": [
+      {
+        "image_url": "capsula-grvity.webp"
+      }
+    ]
   },
   {
     "id": 26,
@@ -578,22 +569,21 @@
     "price": 6700,
     "currency": " ARS",
     "stock": 60,
-    "image_url": "gorra-grvity.webp",
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/gorra_negra.jpg"
+        "image_url": "gorra-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/gorra_blanca.jpg"
+        "image_url": "gorra-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/gorra_azul.jpg"
+        "image_url": "gorra-grvity-blue.webp"
       }
     ]
   },
@@ -605,22 +595,21 @@
     "price": 9800,
     "currency": " ARS",
     "stock": 40,
-    "image_url": "remera-grvity.webp",
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/remera_negra.jpg"
+        "image_url": "remera-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/remera_blanca.jpg"
+        "image_url": "remera-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/remera_azul.jpg"
+        "image_url": "remera-grvity-blue.webp"
       }
     ]
   },
@@ -632,22 +621,21 @@
     "price": 20900,
     "currency": " ARS",
     "stock": 25,
-    "image_url": "buzo-grvity.webp",
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
     "color": [
       {
         "color": "Negro",
-        "image_url": "https://example.com/images/buzo_negro.jpg"
+        "image_url": "buzo-grvity.webp"
       },
       {
         "color": "Blanco",
-        "image_url": "https://example.com/images/buzo_blanco.jpg"
+        "image_url": "buzo-grvity-white.webp"
       },
       {
         "color": "Azul",
-        "image_url": "https://example.com/images/buzo_azul.jpg"
+        "image_url": "buzo-grvity-blue.webp"
       }
     ]
   }

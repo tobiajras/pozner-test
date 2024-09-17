@@ -11,31 +11,29 @@ import WhatsappIcon from './icons/WhatsappIcon';
 import GrvityLogo from './icons/GrvityLogo';
 import Link from 'next/link';
 
-interface FooterProps {
-
-}
+interface FooterProps {}
 
 interface NavigationLink {
-    id: string | number;
-    title: string;
-    url: string;
-    external?: boolean;
+  id: string | number;
+  title: string;
+  url: string;
+  external?: boolean;
 }
 
 interface Company {
-    id: string;
-    name: string;
-    adress?: string;
-    city?: string;
-    telephone?: string | null;
-    email?: string | null;
-    instagram?: string;
-    facebook?: string | null;
-    whatsapp?: string | null;
-    googlemaps?: string | null;
-    menu?: string | null;
-    openDays?: Array<{ day: string; hours: string[] }> | null;
-    footer: string;
+  id: string;
+  name: string;
+  adress?: string;
+  city?: string;
+  telephone?: string | null;
+  email?: string | null;
+  instagram?: string;
+  facebook?: string | null;
+  whatsapp?: string | null;
+  googlemaps?: string | null;
+  menu?: string | null;
+  openDays?: Array<{ day: string; hours: string[] }> | null;
+  footer: string;
 }
 
 const Footer: React.FC<FooterProps> = () => {
@@ -79,7 +77,7 @@ const Footer: React.FC<FooterProps> = () => {
                     <FacebookIcon className='w-8 h-8 text-color-text-light hover:text-color-title-light transition-colors' />
                   </a>
                 )}
-                {company.whatsapp as Company['whatsapp'] && (
+                {(company.whatsapp as Company['whatsapp']) && (
                   <a
                     href={`https://api.whatsapp.com/send?phone=549${company.whatsapp}&text=Hola! Quería hacer una consulta`}
                     target='_blank'
@@ -127,7 +125,7 @@ const Footer: React.FC<FooterProps> = () => {
                   </p>
                 </div>
               )}
-              {company.telephone as Company['telephone'] && (
+              {(company.telephone as Company['telephone']) && (
                 <div>
                   <h4 className='text-color-title-light'>Teléfono</h4>
                   <a
@@ -138,7 +136,7 @@ const Footer: React.FC<FooterProps> = () => {
                   </a>
                 </div>
               )}
-              {company.email as Company['email'] && (
+              {(company.email as Company['email']) && (
                 <div>
                   <h4 className='text-color-title-light'>Email</h4>
                   <a

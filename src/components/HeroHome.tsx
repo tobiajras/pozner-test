@@ -4,7 +4,7 @@ import React from 'react';
 
 const HeroHome = () => {
   return (
-    <section className='my-28'>
+    <section className='my-32'>
       <div className='flex justify-center items-center gap-20'>
         <article>
           <h2 className='text-5xl font-semibold text-color-primary'>

@@ -16,7 +16,9 @@ const ProductosPage = () => {
             <div className='h-48 w-48'>
               <Image
                 className='w-full h-full object-contain object-bottom'
-                src={`/assets/products/${product.image_url}`}
+                src={`/assets/products/${
+                  product.image_url || product.color?.[0]?.image_url
+                }`}
                 alt={product.name}
                 width={150}
                 height={150}
