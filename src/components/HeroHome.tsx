@@ -15,7 +15,7 @@ const HeroHome = () => {
           </p>
           <div className='mt-8'>
             <Link
-              className='bg-color-primary hover:bg-color-primary-dark transition-colors px-5 py-4 text-color-title-light rounded-sm'
+              className='bg-color-primary hover:bg-color-primary-dark transition-colors px-5 py-4 text-color-title-light rounded'
               href='/productos'
             >
               Ver catálogo

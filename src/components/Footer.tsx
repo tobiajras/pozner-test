@@ -49,7 +49,7 @@ const Footer: React.FC<FooterProps> = () => {
               <div className='w-36 md:w-44 h-16'>
                 <Image
                   className='w-full h-full object-contain object-left'
-                  src='assets/company/logo.webp'
+                  src='/assets/company/logo.webp'
                   alt={`${company.name} logo`}
                   width={288}
                   height={72}
