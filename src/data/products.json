@@ -71,15 +71,11 @@
     "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
     "price": 48700,
     "currency": " ARS",
+    "image_url": "capsula-grvity.webp",
     "stock": 200,
     "sku": "CCI10",
     "rating": 4.9,
-    "reviews_count": 45,
-    "color": [
-      {
-        "image_url": "capsula-grvity.webp"
-      }
-    ]
+    "reviews_count": 45
   },
   {
     "id": 5,
@@ -231,15 +227,11 @@
     "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
     "price": 48700,
     "currency": " ARS",
+    "image_url": "capsula-grvity.webp",
     "stock": 200,
     "sku": "CCI10",
     "rating": 4.9,
-    "reviews_count": 45,
-    "color": [
-      {
-        "image_url": "capsula-grvity.webp"
-      }
-    ]
+    "reviews_count": 45
   },
   {
     "id": 12,
@@ -391,15 +383,11 @@
     "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
     "price": 48700,
     "currency": " ARS",
+    "image_url": "capsula-grvity.webp",
     "stock": 200,
     "sku": "CCI10",
     "rating": 4.9,
-    "reviews_count": 45,
-    "color": [
-      {
-        "image_url": "capsula-grvity.webp"
-      }
-    ]
+    "reviews_count": 45
   },
   {
     "id": 19,
@@ -551,15 +539,11 @@
     "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
     "price": 48700,
     "currency": " ARS",
+    "image_url": "capsula-grvity.webp",
     "stock": 200,
     "sku": "CCI10",
     "rating": 4.9,
-    "reviews_count": 45,
-    "color": [
-      {
-        "image_url": "capsula-grvity.webp"
-      }
-    ]
+    "reviews_count": 45
   },
   {
     "id": 26,
