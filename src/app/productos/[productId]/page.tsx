@@ -88,6 +88,7 @@ const ProductId = ({ params }) => {
                     </div>
                   </div>
                 )}
+                <div className='max-w-96'>{productById.description}</div>
               </div>
               <div className='mt-10'>
                 <button className='bg-color-primary hover:bg-color-primary-dark transition-colors text-white px-10 py-3 rounded'>

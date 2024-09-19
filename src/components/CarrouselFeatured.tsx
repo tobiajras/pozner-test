@@ -10,7 +10,7 @@ const CarrouselFeatured = ({ title, startIndex, lastIndex }) => {
 
   return (
     <section className='flex justify-center w-full'>
-      <div className=' max-w-6xl m-3 sm:m-5 overflow-hidden pb-10 md:pb-16'>
+      <div className=' max-w-6xl w-full m-3 sm:m-5 overflow-hidden pb-10 md:pb-16'>
         <h3 className='mb-3 font-medium text-xl sm:text-2xl sm:mb-5'>
           {title}
         </h3>

@@ -8,7 +8,7 @@ import CartIcon from './icons/CartIcon';
 const Header = () => {
   return (
     <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-secondary'>
-      <section className='flex items-center gap-20 py-5 max-w-6xl w-full'>
+      <section className='flex items-center gap-10 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-6 sm:mx-8 md:mx-10'>
         <Link href='/' className='flex items-center gap-2 w-full'>
           <div>
             <Image
@@ -42,7 +42,7 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <article className='flex justify-end items-center gap-5 w-full'>
+        <article className='flex justify-end items-center gap-3 lg:gap-5 w-full'>
           <div className='w-full'>
             <label htmlFor=''></label>
             <input
