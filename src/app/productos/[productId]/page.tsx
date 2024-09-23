@@ -78,10 +78,10 @@ const ProductId = ({ params }) => {
                           onMouseEnter={() => setSelectedColor(color.color)}
                           className={`${
                             colorMap[color.color]
-                          } w-8 h-8 rounded-full ring-1 ring-offset-4 ring-color-title hover:ring-color-primary hover:ring-2 transition-all cursor-pointer ${
+                          } w-8 h-8 rounded-full ring-1 ring-offset-4  hover:ring-color-primary hover:ring-2 transition-all cursor-pointer ${
                             selectedColor === color.color
                               ? 'ring-2 ring-color-primary'
-                              : ''
+                              : 'ring-color-text'
                           }`}
                         ></div>
                       ))}
