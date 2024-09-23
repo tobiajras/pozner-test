@@ -5,11 +5,11 @@ import { company } from '../constants/constants';
 const NosotrosPage = () => {
   return (
     <section className='flex justify-center'>
-      <div className='max-w-6xl my-20 flex flex-col gap-20'>
-        <article className='flex items-center gap-10'>
+      <div className='max-w-6xl my-10 md:my-20 flex flex-col gap-10 md:gap-20'>
+        <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-6 sm:mx-8 md:mx-10'>
           <div>
             <Image
-              className='rounded w-[450px]'
+              className='rounded w-[300px] md:w-[450px]'
               src='/assets/nosotros/nosotros-1.webp'
               alt='Nosotros'
               width={608}
@@ -17,10 +17,10 @@ const NosotrosPage = () => {
             />
           </div>
           <div>
-            <h3 className='text-5xl font-bold text-color-primary mb-3 max-w-[600px]'>
+            <h3 className='text-3xl sm:text-4xl md:text-5xl font-bold text-color-primary mb-3 max-w-[300px] sm:max-w-[450px]'>
               Pasión por el Café
             </h3>
-            <div className='flex flex-col gap-2 max-w-[500px] text-color-text text-lg'>
+            <div className='flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] text-color-text sm:text-lg'>
               <p className=''>
                 En {company.name}, nuestra pasión por el café nos lleva a
                 seleccionar solo los mejores granos de especialidad.
@@ -32,10 +32,10 @@ const NosotrosPage = () => {
             </div>
           </div>
         </article>
-        <article className='flex items-center gap-10'>
+        <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-6 sm:mx-8 md:mx-10'>
           <div>
             <Image
-              className='rounded w-[450px]'
+              className='rounded w-[300px] md:w-[450px]'
               src='/assets/nosotros/nosotros-2.webp'
               alt='Nosotros'
               width={608}
@@ -43,10 +43,10 @@ const NosotrosPage = () => {
             />
           </div>
           <div>
-            <h3 className='text-5xl font-bold text-color-secondary mb-3 max-w-[600px]'>
+            <h3 className='text-3xl sm:text-4xl md:text-5xl font-bold text-color-secondary mb-3 max-w-[300px] sm:max-w-[450px]'>
               Un Espacio para Compartir Momentos
             </h3>
-            <div className='flex flex-col gap-2 max-w-[500px] text-color-text text-lg'>
+            <div className='flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] text-color-text sm:text-lg'>
               <p className=''>
                 Más que una cafetería, somos un lugar para disfrutar, relajarse
                 y compartir momentos.
@@ -58,10 +58,10 @@ const NosotrosPage = () => {
             </div>
           </div>
         </article>
-        <article className='flex items-center gap-10'>
+        <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-6 sm:mx-8 md:mx-10'>
           <div>
             <Image
-              className='rounded w-[450px]'
+              className='rounded w-[300px] md:w-[450px]'
               src='/assets/nosotros/nosotros-3.webp'
               alt='Nosotros'
               width={608}
@@ -69,10 +69,10 @@ const NosotrosPage = () => {
             />
           </div>
           <div>
-            <h3 className='text-5xl font-bold text-color-primary mb-3 max-w-[600px]'>
+            <h3 className='text-3xl sm:text-4xl md:text-5xl font-bold text-color-primary mb-3 max-w-[300px] sm:max-w-[450px]'>
               Calidad Artesanal en Cada Taza
             </h3>
-            <div className='flex flex-col gap-2 max-w-[500px] text-color-text text-lg'>
+            <div className='flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] text-color-text sm:text-lg'>
               <p className=''>
                 Trabajamos con productores locales y tostadores expertos para
                 ofrecerte un café de calidad inigualable.

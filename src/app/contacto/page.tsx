@@ -58,7 +58,7 @@ const ContactoPage = () => {
                   key={idx}
                   className='flex gap-2 sm:text-lg lg:text-xl font-rubik-font font-medium text-center'
                 >
-                  <span className='text-color-primary font-semibold'>
+                  <span className='text-color-title font-semibold'>
                     {openDay.day}
                   </span>
                   <div className='flex gap-3'>
@@ -80,7 +80,7 @@ const ContactoPage = () => {
                   Ubicación
                 </h5>
               </div>
-              <span className='text-color-primary sm:text-lg lg:text-xl font-semibold'>
+              <span className='text-color-title sm:text-lg lg:text-xl font-semibold'>
                 {company.adress}, {company.city}
               </span>
             </div>
@@ -101,7 +101,7 @@ const ContactoPage = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <InstagramIcon className='w-8 h-8 text-color-primary hover:text-color-primary-dark transition-colors' />
+                  <InstagramIcon className='w-8 h-8 text-color-title hover:text-color-text transition-colors' />
                 </a>
               )}
               {company.facebook && (
@@ -110,7 +110,7 @@ const ContactoPage = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <FacebookIcon className='w-8 h-8 text-color-primary hover:text-color-primary-dark transition-colors' />
+                  <FacebookIcon className='w-8 h-8 text-color-title hover:text-color-text transition-colors' />
                 </a>
               )}
               {(company.whatsapp as Company['whatsapp']) && (
@@ -119,7 +119,7 @@ const ContactoPage = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <WhatsappIcon className='w-8 h-8 text-color-primary hover:text-color-primary-dark transition-colors' />
+                  <WhatsappIcon className='w-8 h-8 text-color-title hover:text-color-text transition-colors' />
                 </a>
               )}
             </div>

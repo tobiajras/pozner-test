@@ -14,7 +14,7 @@ export const company = {
   openDays: [
     { day: 'Lunes', hours: ['07:30 a 19:30'] },
     // { day: 'Martes', hours: ['09:00 a 19:30'] },
-    { day: 'Miércoles', hours: ['07:30 a 19:30', '07:30 a 19:30'] },
+    { day: 'Miércoles', hours: ['07:30 a 19:30'] },
     { day: 'Jueves', hours: ['07:30 a 19:30'] },
     { day: 'Viernes', hours: ['07:30 a 21:30'] },
     { day: 'Sábado', hours: ['07:30 a 19:30'] },

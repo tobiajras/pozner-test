@@ -38,8 +38,6 @@ const ProductId = ({ params }) => {
   // Ejemplo de cómo usar el color seleccionado
   const selectedColorObject = getSelectedColorObject();
 
-  console.log(selectedColor);
-
   return (
     <section className='flex justify-center mx-10 my-20'>
       {productById && (
