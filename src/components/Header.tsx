@@ -2,7 +2,7 @@
 
 import { navigation, company } from '@/app/constants/constants';
 
-import { useState } from 'react';
+import { useNavbarStore } from '@/store/navbarStore';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -12,15 +12,21 @@ import HamburguerIcon from './icons/HamburguerIcon';
 import CloseIcon from './icons/CloseIcon';
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isMenuOpen, isCartOpen, setIsMenuOpen, setIsCartOpen } =
+    useNavbarStore();
 
   return (
     <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-secondary'>
       <section className='flex items-center gap-5 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-6 sm:mx-8 md:mx-10  overflow-hidden'>
         <article className='flex w-full'>
-          <Link className='flex items-center gap-2' href='/'>
+          <Link
+            className='flex items-center gap-2'
+            href='/'
+            onClick={() => setIsMenuOpen(false)}
+          >
             <div>
               <Image
+                priority
                 className='w-16 h-16'
                 src='/assets/company/favicon.webp'
                 alt={`${company.name} favicon`}
@@ -30,6 +36,7 @@ const Header = () => {
             </div>
             <div>
               <Image
+                priority
                 src='/assets/company/logo.webp'
                 alt={`${company.name} logo`}
                 width={100}
@@ -64,14 +71,15 @@ const Header = () => {
           <Link
             className='text-color-text-light hover:text-color-title-light transition-all'
             href='/carrito'
+            onClick={() => setIsMenuOpen(false)}
           >
             <CartIcon className='w-6 h-6' />
           </Link>
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             className='md:hidden text-color-text-light hover:text-color-title-light transition-all'
           >
-            {isOpen ? (
+            {isMenuOpen ? (
               <CloseIcon className='w-6 h-6' />
             ) : (
               <HamburguerIcon className='w-6 h-6' />
@@ -81,8 +89,8 @@ const Header = () => {
         <div className='md:hidden overflow-hidden absolute top-24 right-0 h-svh w-full pointer-events-none'>
           <nav
             className={`${
-              isOpen ? 'right-0' : '-right-full'
-            } absolute top-0 right-0 h-full w-1/2 bg-color-bg-secondary transition-all duration-300 pointer-events-auto`}
+              isMenuOpen ? 'right-0' : '-right-full'
+            } absolute top-0 h-full w-1/2 bg-color-bg-secondary transition-all duration-300 pointer-events-auto`}
           >
             <ul className='flex flex-col gap-2 p-5'>
               {navigation.map((nav) => (
@@ -90,7 +98,7 @@ const Header = () => {
                   <Link
                     className='text-color-text-light hover:text-color-title-light text-lg transition-colors'
                     href={nav.url}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {nav.title}
                   </Link>
@@ -98,6 +106,14 @@ const Header = () => {
               ))}
             </ul>
           </nav>
+          <div
+            onClick={() => setIsMenuOpen(false)}
+            className={`${
+              isMenuOpen
+                ? 'opacity-100 pointer-events-auto'
+                : 'opacity-0 pointer-events-none'
+            } absolute top-0 left-0 h-full w-full bg-black/50 -z-10 transition-opacity`}
+          ></div>
         </div>
       </section>
     </header>

@@ -37,6 +37,7 @@ const HeroHome = () => {
         <article>
           <div className='w-[280px] sm:w-[320px] md:w-[340px] lg:w-[440px] xl:w-[520px] relative'>
             <Image
+              priority
               className='w-full h-full md:object-contain rounded-b-md'
               src='/assets/inicio/hero-image.webp'
               alt='Imágen de inicio'

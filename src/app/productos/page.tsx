@@ -13,7 +13,7 @@ const ProductosPage = () => {
             className='flex flex-col items-center py-6 px-4 sm:py-8 sm:px-8 bg-[#f6f6f6] hover:bg-[#EEEEEE] transition-colors rounded-sm'
             key={product.id}
           >
-            <div className='h-28 sm:h-36 lg:h-44 w-28 sm:w-36 lg:w-44'>
+            <div className='h-[120px] sm:h-36 lg:h-44 w-[120px] sm:w-36 lg:w-44'>
               <Image
                 className='w-full h-full object-contain object-bottom'
                 src={`/assets/products/${
@@ -25,7 +25,7 @@ const ProductosPage = () => {
               />
             </div>
             <div className='mt-8 w-full'>
-              <h4 className='text-sm sm:text-base text-color-primary font-semibold h-10 sm:h-12 line-clamp-2 mb-1 max-w-28 sm:max-w-36 lg:max-w-44'>
+              <h4 className='text-sm sm:text-base text-color-primary font-semibold h-10 sm:h-12 line-clamp-2 mb-1 max-w-[120px] sm:max-w-36 lg:max-w-44'>
                 {product.name}
               </h4>
               <span className='font-medium text-lg'>
