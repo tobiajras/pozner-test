@@ -1,6 +1,12 @@
 const UserIcon = ({ className }) => {
   return (
-    <svg width='24' height='25' viewBox='0 0 24 25' fill='currentColor'>
+    <svg
+      width='24'
+      height='25'
+      viewBox='0 0 24 25'
+      fill='currentColor'
+      className={` ${className}`}
+    >
       <path
         fillRule='evenodd'
         clipRule='evenodd'

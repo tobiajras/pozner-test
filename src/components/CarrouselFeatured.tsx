@@ -3,6 +3,7 @@
 import products from '@/data/products.json';
 
 import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const CarrouselFeatured = ({ title, startIndex, lastIndex }) => {
@@ -23,7 +24,9 @@ const CarrouselFeatured = ({ title, startIndex, lastIndex }) => {
                 key={product.id}
               >
                 <div className='flex flex-col w-full h-full'>
-                  <img
+                  <Image
+                    width={451}
+                    height={600}
                     className='object-contain px-3 py-5 md:px-5 md:py-12 h-36 min-[500px]:h-44 md:h-56 lg:h-72'
                     src={`/assets/products/${
                       product.image_url

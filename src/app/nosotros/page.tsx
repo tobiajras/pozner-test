@@ -17,7 +17,7 @@ const NosotrosPage = () => {
             />
           </div>
           <div>
-            <h3 className='text-3xl sm:text-4xl md:text-5xl font-bold text-color-primary mb-3 max-w-[300px] sm:max-w-[450px]'>
+            <h3 className='text-3xl sm:text-4xl md:text-5xl font-bold text-color-primary mb-3 max-w-[300px] sm:max-w-[450px] lg:max-w-[550px]'>
               Pasión por el Café
             </h3>
             <div className='flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] text-color-text sm:text-lg'>
@@ -43,7 +43,7 @@ const NosotrosPage = () => {
             />
           </div>
           <div>
-            <h3 className='text-3xl sm:text-4xl md:text-5xl font-bold text-color-secondary mb-3 max-w-[300px] sm:max-w-[450px]'>
+            <h3 className='text-3xl sm:text-4xl md:text-5xl font-bold text-color-secondary mb-3 max-w-[300px] sm:max-w-[450px] lg:max-w-[550px]'>
               Un Espacio para Compartir Momentos
             </h3>
             <div className='flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] text-color-text sm:text-lg'>
@@ -69,7 +69,7 @@ const NosotrosPage = () => {
             />
           </div>
           <div>
-            <h3 className='text-3xl sm:text-4xl md:text-5xl font-bold text-color-primary mb-3 max-w-[300px] sm:max-w-[450px]'>
+            <h3 className='text-3xl sm:text-4xl md:text-5xl font-bold text-color-primary mb-3 max-w-[300px] sm:max-w-[450px] lg:max-w-[550px]'>
               Calidad Artesanal en Cada Taza
             </h3>
             <div className='flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] text-color-text sm:text-lg'>
