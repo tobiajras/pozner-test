@@ -6,7 +6,7 @@
     "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
     "price": 9000,
     "currency": " ARS",
-    "image": "granos-grvity.webp",
+    "image_url": "granos-grvity.webp",
     "stock": 120,
     "sku": "CO500",
     "rating": 4.8,
@@ -23,7 +23,17 @@
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
-    "image": "taza-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["taza-grvity.webp"]
+      },
+      {
+        "Blanco": ["taza-grvity-white.webp"]
+      },
+      {
+        "Azul": ["taza-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 3,
@@ -36,7 +46,17 @@
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
-    "image": "cafe-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["cafe-grvity.webp"]
+      },
+      {
+        "Blanco": ["cafe-grvity-white.webp"]
+      },
+      {
+        "Azul": ["cafe-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 4,
@@ -45,7 +65,7 @@
     "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
     "price": 48700,
     "currency": " ARS",
-    "image": "capsula-grvity.webp",
+    "image_url": "capsula-grvity.webp",
     "stock": 200,
     "sku": "CCI10",
     "rating": 4.9,
@@ -62,7 +82,17 @@
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
-    "image": "gorra-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["gorra-grvity.webp"]
+      },
+      {
+        "Blanco": ["gorra-grvity-white.webp"]
+      },
+      {
+        "Azul": ["gorra-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 6,
@@ -75,7 +105,17 @@
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
-    "image": "remera-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["remera-grvity.webp"]
+      },
+      {
+        "Blanco": ["remera-grvity-white.webp"]
+      },
+      {
+        "Azul": ["remera-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 7,
@@ -88,7 +128,17 @@
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
-    "image": "buzo-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["buzo-grvity.webp"]
+      },
+      {
+        "Blanco": ["buzo-grvity-white.webp"]
+      },
+      {
+        "Azul": ["buzo-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 8,
@@ -97,7 +147,7 @@
     "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
     "price": 9000,
     "currency": " ARS",
-    "image": "granos-grvity.webp",
+    "image_url": "granos-grvity.webp",
     "stock": 120,
     "sku": "CO500",
     "rating": 4.8,
@@ -114,7 +164,17 @@
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
-    "image": "taza-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["taza-grvity.webp"]
+      },
+      {
+        "Blanco": ["taza-grvity-white.webp"]
+      },
+      {
+        "Azul": ["taza-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 10,
@@ -127,7 +187,17 @@
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
-    "image": "cafe-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["cafe-grvity.webp"]
+      },
+      {
+        "Blanco": ["cafe-grvity-white.webp"]
+      },
+      {
+        "Azul": ["cafe-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 11,
@@ -136,7 +206,7 @@
     "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
     "price": 48700,
     "currency": " ARS",
-    "image": "capsula-grvity.webp",
+    "image_url": "capsula-grvity.webp",
     "stock": 200,
     "sku": "CCI10",
     "rating": 4.9,
@@ -153,7 +223,17 @@
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
-    "image": "gorra-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["gorra-grvity.webp"]
+      },
+      {
+        "Blanco": ["gorra-grvity-white.webp"]
+      },
+      {
+        "Azul": ["gorra-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 13,
@@ -166,7 +246,17 @@
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
-    "image": "remera-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["remera-grvity.webp"]
+      },
+      {
+        "Blanco": ["remera-grvity-white.webp"]
+      },
+      {
+        "Azul": ["remera-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 14,
@@ -179,7 +269,17 @@
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
-    "image": "buzo-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["buzo-grvity.webp"]
+      },
+      {
+        "Blanco": ["buzo-grvity-white.webp"]
+      },
+      {
+        "Azul": ["buzo-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 15,
@@ -187,7 +287,7 @@
     "category": "Granos de Café",
     "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
     "price": 9000,
-    "image": "granos-grvity.webp",
+    "image_url": "granos-grvity.webp",
     "currency": " ARS",
     "stock": 120,
     "sku": "CO500",
@@ -205,7 +305,17 @@
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
-    "image": "taza-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["taza-grvity.webp"]
+      },
+      {
+        "Blanco": ["taza-grvity-white.webp"]
+      },
+      {
+        "Azul": ["taza-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 17,
@@ -218,7 +328,17 @@
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
-    "image": "cafe-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["cafe-grvity.webp"]
+      },
+      {
+        "Blanco": ["taza-grvity-white.webp"]
+      },
+      {
+        "Azul": ["taza-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 18,
@@ -227,7 +347,7 @@
     "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
     "price": 48700,
     "currency": " ARS",
-    "image": "capsula-grvity.webp",
+    "image_url": "capsula-grvity.webp",
     "stock": 200,
     "sku": "CCI10",
     "rating": 4.9,
@@ -244,7 +364,17 @@
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
-    "image": "gorra-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["gorra-grvity.webp"]
+      },
+      {
+        "Blanco": ["gorra-grvity-white.webp"]
+      },
+      {
+        "Azul": ["gorra-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 20,
@@ -257,7 +387,17 @@
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
-    "image": "remera-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["remera-grvity.webp"]
+      },
+      {
+        "Blanco": ["remera-grvity-white.webp"]
+      },
+      {
+        "Azul": ["remera-grvity-blue.webp"]
+      }
+    ]
   },
   {
     "id": 21,
@@ -270,6 +410,16 @@
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
-    "image": "buzo-grvity.webp"
+    "colors": [
+      {
+        "Negro": ["buzo-grvity.webp"]
+      },
+      {
+        "Blanco": ["buzo-grvity-white.webp"]
+      },
+      {
+        "Azul": ["buzo-grvity-blue.webp"]
+      }
+    ]
   }
 ]

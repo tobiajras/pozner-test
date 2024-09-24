@@ -12,15 +12,14 @@ import HamburguerIcon from './icons/HamburguerIcon';
 import CloseIcon from './icons/CloseIcon';
 
 const Header = () => {
-  const { isMenuOpen, isCartOpen, setIsMenuOpen, setIsCartOpen } =
-    useNavbarStore();
+  const { isMenuOpen, setIsMenuOpen } = useNavbarStore();
 
   return (
     <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-secondary'>
-      <section className='flex items-center gap-5 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-6 sm:mx-8 md:mx-10  overflow-hidden'>
+      <section className='flex items-center gap-5 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-6 sm:mx-8 md:mx-10 overflow-hidden'>
         <article className='flex w-full'>
           <Link
-            className='flex items-center gap-2'
+            className='flex items-center gap-2 md:gap-3'
             href='/'
             onClick={() => setIsMenuOpen(false)}
           >

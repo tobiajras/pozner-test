@@ -28,11 +28,7 @@ const CarrouselFeatured = ({ title, startIndex, lastIndex }) => {
                     width={451}
                     height={600}
                     className='object-contain px-3 py-5 md:px-5 md:py-12 h-36 min-[500px]:h-44 md:h-56 lg:h-72'
-                    src={`/assets/products/${
-                      product.image_url
-                        ? product.image_url
-                        : product.color[0].image_url
-                    }`}
+                    src={`/assets/products/${product.image}`}
                     alt={product.name}
                   />
                   <h3 className='text-color-primary font-semibold h-12 line-clamp-2 mb-1 max-w-48'>
