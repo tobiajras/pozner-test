@@ -23,17 +23,11 @@
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
-    "colors": [
-      {
-        "Negro": ["taza-grvity.webp"]
-      },
-      {
-        "Blanco": ["taza-grvity-white.webp"]
-      },
-      {
-        "Azul": ["taza-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["taza-grvity.webp"],
+      "Blanco": ["taza-grvity-white.webp"],
+      "Azul": ["taza-grvity-blue.webp"]
+    }
   },
   {
     "id": 3,
@@ -46,17 +40,11 @@
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
-    "colors": [
-      {
-        "Negro": ["cafe-grvity.webp"]
-      },
-      {
-        "Blanco": ["cafe-grvity-white.webp"]
-      },
-      {
-        "Azul": ["cafe-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["cafe-grvity.webp"],
+      "Blanco": ["cafe-grvity-white.webp"],
+      "Azul": ["cafe-grvity-blue.webp"]
+    }
   },
   {
     "id": 4,
@@ -82,17 +70,11 @@
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
-    "colors": [
-      {
-        "Negro": ["gorra-grvity.webp"]
-      },
-      {
-        "Blanco": ["gorra-grvity-white.webp"]
-      },
-      {
-        "Azul": ["gorra-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["gorra-grvity.webp"],
+      "Blanco": ["gorra-grvity-white.webp"],
+      "Azul": ["gorra-grvity-blue.webp"]
+    }
   },
   {
     "id": 6,
@@ -105,17 +87,11 @@
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
-    "colors": [
-      {
-        "Negro": ["remera-grvity.webp"]
-      },
-      {
-        "Blanco": ["remera-grvity-white.webp"]
-      },
-      {
-        "Azul": ["remera-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["remera-grvity.webp"],
+      "Blanco": ["remera-grvity-white.webp"],
+      "Azul": ["remera-grvity-blue.webp"]
+    }
   },
   {
     "id": 7,
@@ -128,17 +104,11 @@
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
-    "colors": [
-      {
-        "Negro": ["buzo-grvity.webp"]
-      },
-      {
-        "Blanco": ["buzo-grvity-white.webp"]
-      },
-      {
-        "Azul": ["buzo-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["buzo-grvity.webp"],
+      "Blanco": ["buzo-grvity-white.webp"],
+      "Azul": ["buzo-grvity-blue.webp"]
+    }
   },
   {
     "id": 8,
@@ -164,17 +134,11 @@
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
-    "colors": [
-      {
-        "Negro": ["taza-grvity.webp"]
-      },
-      {
-        "Blanco": ["taza-grvity-white.webp"]
-      },
-      {
-        "Azul": ["taza-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["taza-grvity.webp"],
+      "Blanco": ["taza-grvity-white.webp"],
+      "Azul": ["taza-grvity-blue.webp"]
+    }
   },
   {
     "id": 10,
@@ -187,17 +151,11 @@
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
-    "colors": [
-      {
-        "Negro": ["cafe-grvity.webp"]
-      },
-      {
-        "Blanco": ["cafe-grvity-white.webp"]
-      },
-      {
-        "Azul": ["cafe-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["cafe-grvity.webp"],
+      "Blanco": ["cafe-grvity-white.webp"],
+      "Azul": ["cafe-grvity-blue.webp"]
+    }
   },
   {
     "id": 11,
@@ -223,17 +181,11 @@
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
-    "colors": [
-      {
-        "Negro": ["gorra-grvity.webp"]
-      },
-      {
-        "Blanco": ["gorra-grvity-white.webp"]
-      },
-      {
-        "Azul": ["gorra-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["gorra-grvity.webp"],
+      "Blanco": ["gorra-grvity-white.webp"],
+      "Azul": ["gorra-grvity-blue.webp"]
+    }
   },
   {
     "id": 13,
@@ -246,17 +198,11 @@
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
-    "colors": [
-      {
-        "Negro": ["remera-grvity.webp"]
-      },
-      {
-        "Blanco": ["remera-grvity-white.webp"]
-      },
-      {
-        "Azul": ["remera-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["remera-grvity.webp"],
+      "Blanco": ["remera-grvity-white.webp"],
+      "Azul": ["remera-grvity-blue.webp"]
+    }
   },
   {
     "id": 14,
@@ -269,17 +215,11 @@
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
-    "colors": [
-      {
-        "Negro": ["buzo-grvity.webp"]
-      },
-      {
-        "Blanco": ["buzo-grvity-white.webp"]
-      },
-      {
-        "Azul": ["buzo-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["buzo-grvity.webp"],
+      "Blanco": ["buzo-grvity-white.webp"],
+      "Azul": ["buzo-grvity-blue.webp"]
+    }
   },
   {
     "id": 15,
@@ -305,17 +245,11 @@
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
-    "colors": [
-      {
-        "Negro": ["taza-grvity.webp"]
-      },
-      {
-        "Blanco": ["taza-grvity-white.webp"]
-      },
-      {
-        "Azul": ["taza-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["taza-grvity.webp"],
+      "Blanco": ["taza-grvity-white.webp"],
+      "Azul": ["taza-grvity-blue.webp"]
+    }
   },
   {
     "id": 17,
@@ -328,17 +262,11 @@
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
-    "colors": [
-      {
-        "Negro": ["cafe-grvity.webp"]
-      },
-      {
-        "Blanco": ["taza-grvity-white.webp"]
-      },
-      {
-        "Azul": ["taza-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["cafe-grvity.webp"],
+      "Blanco": ["taza-grvity-white.webp"],
+      "Azul": ["taza-grvity-blue.webp"]
+    }
   },
   {
     "id": 18,
@@ -364,17 +292,11 @@
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
-    "colors": [
-      {
-        "Negro": ["gorra-grvity.webp"]
-      },
-      {
-        "Blanco": ["gorra-grvity-white.webp"]
-      },
-      {
-        "Azul": ["gorra-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["gorra-grvity.webp"],
+      "Blanco": ["gorra-grvity-white.webp"],
+      "Azul": ["gorra-grvity-blue.webp"]
+    }
   },
   {
     "id": 20,
@@ -387,17 +309,11 @@
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
-    "colors": [
-      {
-        "Negro": ["remera-grvity.webp"]
-      },
-      {
-        "Blanco": ["remera-grvity-white.webp"]
-      },
-      {
-        "Azul": ["remera-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["remera-grvity.webp"],
+      "Blanco": ["remera-grvity-white.webp"],
+      "Azul": ["remera-grvity-blue.webp"]
+    }
   },
   {
     "id": 21,
@@ -410,16 +326,10 @@
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
-    "colors": [
-      {
-        "Negro": ["buzo-grvity.webp"]
-      },
-      {
-        "Blanco": ["buzo-grvity-white.webp"]
-      },
-      {
-        "Azul": ["buzo-grvity-blue.webp"]
-      }
-    ]
+    "colors": {
+      "Negro": ["buzo-grvity.webp"],
+      "Blanco": ["buzo-grvity-white.webp"],
+      "Azul": ["buzo-grvity-blue.webp"]
+    }
   }
 ]

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import products from '@/data/products.json';
+import productsDetails from '@/data/productsDetails.json';
 import Image from 'next/image';
 
 const colorMap: { [key: string]: string } = {
@@ -21,22 +21,27 @@ const ProductId = ({ params }) => {
   const [selectedColor, setSelectedColor] = useState('');
 
   useEffect(() => {
-    const product = products.find((product) => product.id == params.productId);
-    setProductById(product);
+    const productDetails = productsDetails.find(
+      (product) => product.id == params.productId
+    );
+    setProductById(productDetails);
     // Establecer el primer color como color por defecto si existe
-    if (product && product.color && product.color.length > 0) {
-      setSelectedColor(product.color[0].color);
+    if (productDetails && productDetails.colors) {
+      const firstColor = Object.keys(productDetails.colors)[0];
+      setSelectedColor(firstColor);
     }
   }, [params.productId]);
 
   // Función para obtener el objeto de color seleccionado
   const getSelectedColorObject = () => {
-    if (!productById || !productById.color) return null;
-    return productById.color.find((c) => c.color === selectedColor);
+    if (!productById || !productById.colors) return null;
+    return productById.colors.find((c) => c.colors === selectedColor);
   };
 
   // Ejemplo de cómo usar el color seleccionado
-  const selectedColorObject = getSelectedColorObject();
+  // const selectedColorObject = getSelectedColorObject();
+
+  console.log('selectedColor', selectedColor);
 
   return (
     <section className='flex justify-center mx-10 my-20'>
@@ -47,7 +52,9 @@ const ProductId = ({ params }) => {
               <Image
                 className='w-full h-full object-contain object-bottom'
                 src={`/assets/products/${
-                  selectedColorObject?.image_url || productById.image_url
+                  productById.colors
+                    ? productById.colors[selectedColor]
+                    : productById.image_url
                 }`}
                 alt={productById.name}
                 width={150}
@@ -66,23 +73,25 @@ const ProductId = ({ params }) => {
                 </span>
               </div>
               <div className='flex flex-col gap-5 mt-5'>
-                {productById.color && (
+                {productById.colors && (
                   <div>
                     <h6 className=''>Colores</h6>
                     <div className='flex gap-5 mt-3 ml-1'>
-                      {productById.color.map((color, idx) => (
-                        <div
-                          key={idx}
-                          onMouseEnter={() => setSelectedColor(color.color)}
-                          className={`${
-                            colorMap[color.color]
-                          } w-8 h-8 rounded-full ring-1 ring-offset-4  hover:ring-color-primary hover:ring-2 transition-all cursor-pointer ${
-                            selectedColor === color.color
-                              ? 'ring-2 ring-color-primary'
-                              : 'ring-color-text'
-                          }`}
-                        ></div>
-                      ))}
+                      {Object.keys(productById.colors).map((color, idx) => {
+                        return (
+                          <div
+                            key={idx}
+                            onMouseEnter={() => setSelectedColor(color)}
+                            className={`${
+                              colorMap[color]
+                            } w-8 h-8 rounded-full ring-1 ring-offset-4  hover:ring-color-primary hover:ring-2 transition-all cursor-pointer ${
+                              selectedColor === color
+                                ? 'ring-2 ring-color-primary'
+                                : 'ring-color-text'
+                            }`}
+                          ></div>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
