@@ -17,14 +17,14 @@ const colorMap: { [key: string]: string } = {
 };
 
 const ProductId = ({ params }: { params: { productId: string } }) => {
-  const [productById, setProductById] = useState(null);
+  const [productById, setProductById] = useState<ProductType | null>(null);
   const [selectedColor, setSelectedColor] = useState('');
 
   useEffect(() => {
     const productDetails = productsDetails.find(
       (product) => product.id === parseInt(params.productId)
     );
-    setProductById(productDetails);
+    setProductById(productDetails || null);
     // Establecer el primer color como color por defecto si existe
     if (productDetails && productDetails.colors) {
       const firstColor = Object.keys(productDetails.colors)[0];
