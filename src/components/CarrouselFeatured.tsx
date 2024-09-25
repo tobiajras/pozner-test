@@ -6,7 +6,17 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const CarrouselFeatured = ({ title, startIndex, lastIndex }) => {
+interface CarrouselFeaturedProps {
+  title: string;
+  startIndex: number;
+  lastIndex: number;
+}
+
+const CarrouselFeatured = ({
+  title,
+  startIndex,
+  lastIndex,
+}: CarrouselFeaturedProps) => {
   const [emblaRef] = useEmblaCarousel({ dragFree: true });
 
   return (
