@@ -1,4 +1,4 @@
-const SpinnerIcon = ({ className }) => {
+const SpinnerIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       width='1em'

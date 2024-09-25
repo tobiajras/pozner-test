@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SocialIcons = ({ className }) => {
+const SocialIcons = ({ className }: { className?: string }) => {
   return (
     <svg
       id='Capa_1'

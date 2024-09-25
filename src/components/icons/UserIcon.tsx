@@ -1,4 +1,4 @@
-const UserIcon = ({ className }) => {
+const UserIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       width='24'

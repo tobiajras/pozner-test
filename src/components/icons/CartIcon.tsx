@@ -1,4 +1,4 @@
-const CartIcon = ({ className }) => {
+const CartIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       stroke='currentColor'

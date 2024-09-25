@@ -1,4 +1,4 @@
-const HamburguerIcon = ({ className }) => {
+const HamburguerIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       className={` ${className}`}

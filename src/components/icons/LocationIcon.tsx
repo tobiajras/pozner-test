@@ -1,4 +1,4 @@
-const LocationIcon = ({ className }) => {
+const LocationIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       className={` ${className}`}

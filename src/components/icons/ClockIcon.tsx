@@ -1,4 +1,4 @@
-const ClockIcon = ({ className }) => {
+const ClockIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       id='Layer_1'

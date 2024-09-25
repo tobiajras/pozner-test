@@ -1,4 +1,4 @@
-const SearchIcon = ({ className }) => {
+const SearchIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       className={` ${className}`}
