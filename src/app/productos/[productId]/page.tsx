@@ -4,6 +4,15 @@ import { useState, useEffect } from 'react';
 import productsDetails from '@/data/productsDetails.json';
 import Image from 'next/image';
 
+interface ProductType {
+  id: number;
+  name: string;
+  price: number;
+  image_url?: string;
+  colors?: { [key: string]: string[] };
+  description: string;
+}
+
 const colorMap: { [key: string]: string } = {
   Negro: 'bg-[#000000]',
   Blanco: 'bg-[#FFFFFF]',
@@ -17,7 +26,9 @@ const colorMap: { [key: string]: string } = {
 };
 
 const ProductId = ({ params }: { params: { productId: string } }) => {
-  const [productById, setProductById] = useState<ProductType | null>(null);
+  const [productById, setProductById] = useState<
+    ProductType | null | undefined
+  >(null);
   const [selectedColor, setSelectedColor] = useState('');
 
   useEffect(() => {
@@ -42,7 +53,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
                 className='w-full h-full object-contain object-bottom'
                 src={`/assets/products/${
                   productById.colors
-                    ? productById.colors[selectedColor]
+                    ? productById.colors[selectedColor][0]
                     : productById.image_url
                 }`}
                 alt={productById.name}
@@ -58,7 +69,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
               </h4>
               <div className='mt-2'>
                 <span className='font-semibold text-2xl text-color-title'>
-                  ${parseInt(productById.price).toLocaleString('es-ES')}
+                  ${productById.price.toLocaleString('es-ES')}
                 </span>
               </div>
               <div className='flex flex-col gap-5 mt-5'>
