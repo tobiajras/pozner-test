@@ -22,7 +22,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
 
   useEffect(() => {
     const productDetails = productsDetails.find(
-      (product) => product.id == params.productId
+      (product) => product.id === parseInt(params.productId)
     );
     setProductById(productDetails);
     // Establecer el primer color como color por defecto si existe
