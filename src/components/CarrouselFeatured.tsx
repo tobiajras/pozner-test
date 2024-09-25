@@ -45,7 +45,7 @@ const CarrouselFeatured = ({
                     {product.name}
                   </h3>
                   <span className='font-medium text-lg'>
-                    ${parseInt(product.price).toLocaleString('es-ES')}
+                    ${product.price.toLocaleString('es-ES')}
                   </span>
                 </div>
               </Link>
