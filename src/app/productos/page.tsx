@@ -27,7 +27,7 @@ const ProductosPage = () => {
                 {product.name}
               </h4>
               <span className='font-medium text-lg'>
-                ${parseInt(product.price).toLocaleString('es-ES')}
+                ${product.price.toLocaleString('es-ES')}
               </span>
             </div>
           </Link>
