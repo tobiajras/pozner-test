@@ -32,17 +32,6 @@ const ProductId = ({ params }) => {
     }
   }, [params.productId]);
 
-  // Función para obtener el objeto de color seleccionado
-  const getSelectedColorObject = () => {
-    if (!productById || !productById.colors) return null;
-    return productById.colors.find((c) => c.colors === selectedColor);
-  };
-
-  // Ejemplo de cómo usar el color seleccionado
-  // const selectedColorObject = getSelectedColorObject();
-
-  console.log('selectedColor', selectedColor);
-
   return (
     <section className='flex justify-center mx-10 my-20'>
       {productById && (
