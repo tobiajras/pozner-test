@@ -16,7 +16,7 @@ const colorMap: { [key: string]: string } = {
   Gris: 'bg-[#808080]',
 };
 
-const ProductId = ({ params }) => {
+const ProductId = ({ params }: { params: { productId: string } }) => {
   const [productById, setProductById] = useState(null);
   const [selectedColor, setSelectedColor] = useState('');
 
