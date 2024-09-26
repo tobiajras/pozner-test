@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import productsDetails from '@/data/productsDetails.json';
 import Image from 'next/image';
+import { useCartStore } from '@/store/cartStore';
 
 interface ProductType {
   id: number;
@@ -26,22 +27,28 @@ const colorMap: { [key: string]: string } = {
 };
 
 const ProductId = ({ params }: { params: { productId: string } }) => {
-  const [productById, setProductById] = useState<
-    ProductType | null | undefined
-  >(null);
-  const [selectedColor, setSelectedColor] = useState('');
+  const [productById, setProductById] = useState<ProductType | null>(null);
+  const [selectedColor, setSelectedColor] = useState<string | undefined>(
+    undefined
+  );
+  const addToCart = useCartStore((state) => state.addToCart);
 
   useEffect(() => {
     const productDetails = productsDetails.find(
       (product) => product.id === parseInt(params.productId)
     );
     setProductById(productDetails || null);
-    // Establecer el primer color como color por defecto si existe
     if (productDetails && productDetails.colors) {
       const firstColor = Object.keys(productDetails.colors)[0];
       setSelectedColor(firstColor);
     }
   }, [params.productId]);
+
+  const handleAddToCart = () => {
+    if (productById) {
+      addToCart(productById, 1, selectedColor);
+    }
+  };
 
   return (
     <section className='flex justify-center mx-10 my-20'>
@@ -52,7 +59,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
               <Image
                 className='w-full h-full object-contain object-bottom'
                 src={`/assets/products/${
-                  productById.colors
+                  productById.colors && selectedColor
                     ? productById.colors[selectedColor][0]
                     : productById.image_url
                 }`}
@@ -81,10 +88,10 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
                         return (
                           <div
                             key={idx}
-                            onMouseEnter={() => setSelectedColor(color)}
+                            onClick={() => setSelectedColor(color)}
                             className={`${
                               colorMap[color]
-                            } w-8 h-8 rounded-full ring-1 ring-offset-4  hover:ring-color-primary hover:ring-2 transition-all cursor-pointer ${
+                            } w-8 h-8 rounded-full ring-1 ring-offset-4 hover:ring-color-primary hover:ring-2 transition-all cursor-pointer ${
                               selectedColor === color
                                 ? 'ring-2 ring-color-primary'
                                 : 'ring-color-text'
@@ -98,7 +105,10 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
                 <div className='max-w-96'>{productById.description}</div>
               </div>
               <div className='mt-10'>
-                <button className='bg-color-primary hover:bg-color-primary-dark transition-colors text-white px-10 py-3 rounded'>
+                <button
+                  onClick={handleAddToCart}
+                  className='bg-color-primary hover:bg-color-primary-dark transition-colors text-white px-10 py-3 rounded'
+                >
                   Añadir al carrito
                 </button>
               </div>
