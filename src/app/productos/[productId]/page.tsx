@@ -31,7 +31,9 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
   const [selectedColor, setSelectedColor] = useState<string | undefined>(
     undefined
   );
-  const addToCart = useCartStore((state) => state.addToCart);
+  const [message, setMessage] = useState<string>('');
+
+  const { addToCart, cart } = useCartStore();
 
   useEffect(() => {
     const productDetails = productsDetails.find(
@@ -46,7 +48,24 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
 
   const handleAddToCart = () => {
     if (productById) {
-      addToCart(productById, 1, selectedColor);
+      const isInCart = cart.some(
+        (item) =>
+          String(item.id) === String(productById.id) &&
+          item.color === selectedColor
+      );
+
+      if (isInCart) {
+        setMessage('Este producto ya está en tu carrito');
+        setTimeout(() => setMessage(''), 3000); // Limpiar el mensaje después de 3 segundos
+      } else {
+        addToCart(
+          { ...productById, id: productById.id.toString() },
+          1,
+          selectedColor
+        );
+        setMessage('Producto añadido al carrito');
+        setTimeout(() => setMessage(''), 3000);
+      }
     }
   };
 
@@ -105,6 +124,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
                 <div className='max-w-96'>{productById.description}</div>
               </div>
               <div className='mt-10'>
+                {message && <p className='text-red-500 mb-2'>{message}</p>}
                 <button
                   onClick={handleAddToCart}
                   className='bg-color-primary hover:bg-color-primary-dark transition-colors text-white px-10 py-3 rounded'
