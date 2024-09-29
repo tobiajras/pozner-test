@@ -5,8 +5,20 @@ import Link from 'next/link';
 
 const ProductosPage = () => {
   return (
-    <section className='flex justify-center my-20'>
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10'>
+    <section className='flex flex-col items-center w-full'>
+      <section className='w-full max-w-[1920px] h-[400px] relative'>
+        <div className='w-full h-full'>
+          <Image
+            className='w-full h-full object-cover'
+            src='/assets/products/products-banner.webp'
+            alt='products'
+            width={1500}
+            height={400}
+          />
+        </div>
+        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/30'></div>
+      </section>
+      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10 my-20'>
         {products.map((product) => (
           <Link
             href={`/productos/${product.id}`}
