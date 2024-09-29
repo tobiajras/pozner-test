@@ -1,8 +1,8 @@
 'use client';
 
 import { navigation, company } from '@/app/constants/constants';
-
 import { useNavbarStore } from '@/store/navbarStore';
+import { useCartStore } from '@/store/cartStore';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -13,10 +13,13 @@ import CloseIcon from './icons/CloseIcon';
 
 const Header = () => {
   const { isMenuOpen, setIsMenuOpen } = useNavbarStore();
+  const { cart } = useCartStore();
+
+  const cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-secondary'>
-      <section className='flex items-center gap-5 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-6 sm:mx-8 md:mx-10 overflow-hidden'>
+      <section className='flex items-center gap-5 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-6 sm:mx-8 md:mx-10'>
         <article className='flex w-full'>
           <Link
             className='flex items-center gap-2 md:gap-3'
@@ -68,11 +71,16 @@ const Header = () => {
             />
           </div>
           <Link
-            className='text-color-text-light hover:text-color-title-light transition-all'
+            className='text-color-text-light hover:text-color-title-light transition-all relative'
             href='/carrito'
             onClick={() => setIsMenuOpen(false)}
           >
             <CartIcon className='w-6 h-6' />
+            {cartItemsCount > 0 && (
+              <span className='absolute -top-2 -right-2 bg-color-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center'>
+                {cartItemsCount}
+              </span>
+            )}
           </Link>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}

@@ -16,6 +16,19 @@ const ProductosPage = () => {
             height={400}
           />
         </div>
+        <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
+          <div className='max-w-6xl w-full'>
+            <div className='w-full '>
+              <h3 className='text-2xl sm:text-4xl lg:text-5xl font-semibold text-color-primary-light'>
+                ¡ARMÁ TU PEDIDO!
+              </h3>
+              <p className='flex flex-col text-2xl mt-1 text-color-text-light'>
+                <span>Seleccioná tus productos y agregalos al carrito.</span>
+                <span>Generamos el pedido por Whatsapp.</span>
+              </p>
+            </div>
+          </div>
+        </div>
         <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/30'></div>
       </section>
       <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10 my-20'>

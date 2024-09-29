@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import productsDetails from '@/data/productsDetails.json';
 import Image from 'next/image';
 import { useCartStore } from '@/store/cartStore';
+import toast, { Toaster } from 'react-hot-toast';
 
 interface ProductType {
   id: number;
@@ -31,7 +32,6 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
   const [selectedColor, setSelectedColor] = useState<string | undefined>(
     undefined
   );
-  const [message, setMessage] = useState<string>('');
 
   const { addToCart, cart } = useCartStore();
 
@@ -54,27 +54,44 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
           item.color === selectedColor
       );
 
+      toast.dismiss(); // Descarta todas las notificaciones existentes
+
       if (isInCart) {
-        setMessage('Este producto ya está en tu carrito');
-        setTimeout(() => setMessage(''), 3000); // Limpiar el mensaje después de 3 segundos
+        toast.error('Este producto ya está en tu carrito', {
+          id: 'error-carrito', // ID único para este tipo de error
+          duration: 3000, // Duración en milisegundos
+        });
       } else {
         addToCart(
           { ...productById, id: productById.id.toString() },
           1,
           selectedColor
         );
-        setMessage('Producto añadido al carrito');
-        setTimeout(() => setMessage(''), 3000);
+        toast.success('Producto añadido al carrito', {
+          id: 'exito-carrito', // ID único para este tipo de éxito
+          duration: 3000, // Duración en milisegundos
+        });
       }
     }
   };
 
   return (
-    <section className='flex justify-center mx-10 my-20'>
+    <section className='flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10 my-10 md:my-20'>
+      <Toaster
+        position='top-center'
+        reverseOrder={false}
+        toastOptions={{
+          // Previene que el usuario cierre la notificación manualmente
+          duration: 3000,
+          style: {
+            marginTop: '100px',
+          },
+        }}
+      />
       {productById && (
-        <div className='flex gap-10'>
-          <article className='px-20 py-40 bg-[#f6f6f6]'>
-            <div className='h-60 w-60'>
+        <div className='flex flex-col md:flex-row gap-10'>
+          <article className='flex justify-center px-10 py-20 sm:px-16 sm:py-24 md:px-20 md:py-40 bg-[#f6f6f6]'>
+            <div className='h-40 w-40 sm:h-48 sm:w-48 md:h-60 md:w-60'>
               <Image
                 className='w-full h-full object-contain object-bottom'
                 src={`/assets/products/${
@@ -90,7 +107,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
           </article>
           <article>
             <div className=''>
-              <h4 className='text-color-primary font-semibold text-3xl h-20 line-clamp-2 mb-1 max-w-96'>
+              <h4 className='text-color-primary font-semibold text-2xl md:text-3xl line-clamp-2 mb-1 max-w-72 sm:max-w-96 break-words'>
                 {productById.name}
               </h4>
               <div className='mt-2'>
@@ -110,7 +127,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
                             onClick={() => setSelectedColor(color)}
                             className={`${
                               colorMap[color]
-                            } w-8 h-8 rounded-full ring-1 ring-offset-4 hover:ring-color-primary hover:ring-2 transition-all cursor-pointer ${
+                            } w-7 h-7 md:w-8 md:h-8 rounded-full ring-1 ring-offset-4 hover:ring-color-primary hover:ring-2 transition-all cursor-pointer ${
                               selectedColor === color
                                 ? 'ring-2 ring-color-primary'
                                 : 'ring-color-text'
@@ -121,10 +138,11 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
                     </div>
                   </div>
                 )}
-                <div className='max-w-96'>{productById.description}</div>
+                <div className='max-w-72 sm:max-w-96 break-words'>
+                  {productById.description}
+                </div>
               </div>
-              <div className='mt-10'>
-                {message && <p className='text-red-500 mb-2'>{message}</p>}
+              <div className='mt-5 md:mt-10'>
                 <button
                   onClick={handleAddToCart}
                   className='bg-color-primary hover:bg-color-primary-dark transition-colors text-white px-10 py-3 rounded'
