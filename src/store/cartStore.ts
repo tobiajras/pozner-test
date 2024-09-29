@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 type ProductType = {
   id: string;
@@ -16,7 +16,6 @@ type CartStore = {
   cart: CartItem[];
   addToCart: (product: ProductType, quantity: number, color?: string) => void;
   removeFromCart: (id: string, color?: string) => void;
-  clearCart: () => void;
 };
 
 export const useCartStore = create<CartStore>((set) => ({
@@ -43,5 +42,4 @@ export const useCartStore = create<CartStore>((set) => ({
         (item) => !(item.id === id && item.color === color)
       ),
     })),
-  clearCart: () => set({ cart: [] }),
 }));
