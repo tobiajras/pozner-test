@@ -1,12 +1,12 @@
-import products from '@/data/products.json';
+import products from "@/data/products.json";
 
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 const ProductosPage = () => {
   return (
     <section className='flex flex-col items-center w-full'>
-      <section className='w-full max-w-[1920px] h-[400px] relative'>
+      <section className='w-full max-w-[1920px] h-[180px] sm:h-[260px] md:h-[320px] lg:h-[400px] relative'>
         <div className='w-full h-full'>
           <Image
             className='w-full h-full object-cover'
@@ -17,21 +17,21 @@ const ProductosPage = () => {
           />
         </div>
         <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
-          <div className='max-w-6xl w-full'>
-            <div className='w-full '>
+          <div className='max-w-6xl w-full flex justify-center'>
+            <div className='mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
               <h3 className='text-2xl sm:text-4xl lg:text-5xl font-semibold text-color-primary-light'>
                 ¡ARMÁ TU PEDIDO!
               </h3>
-              <p className='flex flex-col text-2xl mt-1 text-color-text-light'>
+              <p className='flex flex-col text-sm sm:text-lg md:text-2xl mt-1 text-color-text-light'>
                 <span>Seleccioná tus productos y agregalos al carrito.</span>
                 <span>Generamos el pedido por Whatsapp.</span>
               </p>
             </div>
           </div>
         </div>
-        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/30'></div>
+        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/40'></div>
       </section>
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10 my-20'>
+      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10 my-10 md:my-20'>
         {products.map((product) => (
           <Link
             href={`/productos/${product.id}`}
@@ -52,7 +52,7 @@ const ProductosPage = () => {
                 {product.name}
               </h4>
               <span className='font-medium text-lg'>
-                ${product.price.toLocaleString('es-ES')}
+                ${product.price.toLocaleString("es-ES")}
               </span>
             </div>
           </Link>

@@ -77,7 +77,7 @@ const Cart = () => {
 
   const sendOrderToWhatsApp = () => {
     const message = generateOrderMessage();
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=549${company.whatsapp}&text=${message}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=5491138596093&text=${message}`;
     window.open(whatsappUrl, "_blank");
   };
   return (
