@@ -7,25 +7,38 @@ import { company } from "../constants/constants";
 import CloseIcon from "@/components/icons/CloseIcon";
 import WhatsappIcon from "@/components/icons/WhatsappIcon";
 
+// Define una interfaz para el producto
+interface Product {
+  id: string | number;
+  name: string;
+  price: number;
+  quantity: number;
+  color?: string;
+  colors?: {
+    [key: string]: string[];
+  };
+  image_url?: string;
+}
+
 const Cart = () => {
   const { cart, addToCart, removeFromCart } = useCartStore();
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const updateQuantity = (
-    product: any,
+    product: Product,
     newQuantity: number,
     color?: string
   ) => {
     if (newQuantity <= 0) {
-      removeFromCart(product.id, color);
+      removeFromCart(product.id.toString(), color);
     } else {
       const quantityDiff = newQuantity - product.quantity;
-      addToCart(product, quantityDiff, color);
+      addToCart({ ...product, id: product.id.toString() }, quantityDiff, color);
     }
   };
 
-  const getImageUrl = (item: any) => {
+  const getImageUrl = (item: Product) => {
     if (item.color && item.colors && item.colors[item.color]) {
       return `/assets/products/${item.colors[item.color][0]}`;
     }
@@ -129,7 +142,7 @@ const Cart = () => {
                 <p className='hidden md:block font-semibold w-16 md:w-28 mr-5 text-color-title'>
                   ${(item.price * item.quantity).toLocaleString("es-ES")}
                 </p>
-                <div className='hidden md:block flex items-center border py-2 px-6 rounded'>
+                <div className='hidden md:flex items-center border py-2 px-6 rounded'>
                   <button
                     onClick={() =>
                       updateQuantity(item, item.quantity - 1, item.color)
