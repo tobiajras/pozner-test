@@ -1,7 +1,7 @@
-import products from "@/data/products.json";
+import products from '@/data/products.json';
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const ProductosPage = () => {
   return (
@@ -18,7 +18,7 @@ const ProductosPage = () => {
         </div>
         <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
           <div className='max-w-6xl w-full flex justify-center'>
-            <div className='mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+            <div className='md:w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
               <h3 className='text-2xl sm:text-4xl lg:text-5xl font-semibold text-color-primary-light'>
                 ¡ARMÁ TU PEDIDO!
               </h3>
@@ -52,7 +52,7 @@ const ProductosPage = () => {
                 {product.name}
               </h4>
               <span className='font-medium text-lg'>
-                ${product.price.toLocaleString("es-ES")}
+                ${product.price.toLocaleString('es-ES')}
               </span>
             </div>
           </Link>
