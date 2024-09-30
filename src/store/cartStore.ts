@@ -19,8 +19,13 @@ type CartStore = {
 };
 
 const loadCartFromLocalStorage = (): CartItem[] => {
-  const storedCart = localStorage.getItem('cart');
-  return storedCart ? JSON.parse(storedCart) : [];
+  // Verifica si estamos en el entorno del cliente
+  if (typeof window !== 'undefined') {
+    const storedCart = localStorage.getItem('cart');
+    return storedCart ? JSON.parse(storedCart) : [];
+  }
+  // Si estamos en el servidor, devolver un carrito vacío
+  return [];
 };
 
 export const useCartStore = create<CartStore>((set) => ({

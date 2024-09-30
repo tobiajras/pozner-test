@@ -77,7 +77,7 @@ const Header = () => {
           >
             <CartIcon className='w-6 h-6' />
             {cartItemsCount > 0 && (
-              <span className='absolute -top-2 -right-2 bg-color-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center'>
+              <span className='absolute -top-2 -right-2 bg-color-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold'>
                 {cartItemsCount}
               </span>
             )}

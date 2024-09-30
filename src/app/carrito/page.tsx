@@ -96,7 +96,7 @@ const Cart = () => {
             <div className='flex flex-col items-center mt-8'>
               <h4 className='text-center'>Tu carrito esta vacío</h4>
               <Link
-                className='mt-3 bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 pt-3 pb-2 text-color-title-light rounded'
+                className='mt-3 bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 py-3 text-color-title-light rounded'
                 href='/productos'
               >
                 Agregar Productos

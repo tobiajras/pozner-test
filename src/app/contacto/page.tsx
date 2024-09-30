@@ -41,7 +41,7 @@ const ContactoPage = () => {
           />
         </div>
         <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
-          <div className='max-w-6xl w-full flex justify-center'>
+          <div className='max-w-5xl w-full flex justify-center'>
             <div className='md:w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
               <h3 className='text-2xl sm:text-4xl lg:text-5xl font-semibold text-color-primary-light'>
                 CONOCÉ {company.name.toUpperCase()}
