@@ -3,8 +3,7 @@
 import { navigation, company } from '@/app/constants/constants';
 import { useNavbarStore } from '@/store/navbarStore';
 import { useCartStore } from '@/store/cartStore';
-import { useState, useEffect, Suspense } from 'react'; // Importar Suspense
-import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
+import { useEffect, Suspense } from 'react'; // Importar Suspense
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -12,12 +11,11 @@ import Image from 'next/image';
 import CartIcon from './icons/CartIcon';
 import HamburguerIcon from './icons/HamburguerIcon';
 import CloseIcon from './icons/CloseIcon';
+import SearchInput from './SearchInput';
 
 const Header = () => {
   const { isMenuOpen, setIsMenuOpen } = useNavbarStore();
   const { cart, setCart } = useCartStore(); // Añadir setCart
-  const [searchTerm, setSearchTerm] = useState(''); // Estado para el término de búsqueda
-  const searchParams = useSearchParams(); // Obtener los parámetros de búsqueda
 
   // Cargar el carrito desde localStorage
   const loadCartFromLocalStorage = () => {
@@ -31,21 +29,6 @@ const Header = () => {
   }, [setCart]);
 
   const cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0);
-
-  // Efecto para establecer el término de búsqueda desde los query params
-  useEffect(() => {
-    const term = searchParams.get('search') || ''; // Leer el término de búsqueda
-    setSearchTerm(term); // Establecer el término de búsqueda en el estado
-  }, [searchParams]);
-
-  const handleSearch = () => {
-    if (searchTerm) {
-      // Redirigir a la página de productos con el término de búsqueda como query param
-      window.location.href = `/productos?search=${encodeURIComponent(
-        searchTerm
-      )}`;
-    }
-  };
 
   return (
     <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-secondary'>
@@ -93,16 +76,9 @@ const Header = () => {
         </nav>
         <article className='flex justify-end items-center gap-3 lg:gap-5 w-full'>
           <div className='w-full'>
-            <input
-              type='text'
-              placeholder='Buscar...'
-              className='py-2 px-3 outline-none rounded-sm w-full'
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)} // Actualizar el estado al escribir
-              onKeyPress={(e) => {
-                if (e.key === 'Enter') handleSearch(); // Ejecutar búsqueda al presionar Enter
-              }}
-            />
+            <Suspense>
+              <SearchInput />
+            </Suspense>
           </div>
           <Link
             className='text-color-text-light hover:text-color-title-light transition-all relative'
@@ -161,11 +137,4 @@ const Header = () => {
   );
 };
 
-// Envolver el componente en Suspense
-const HeaderWithSuspense = () => (
-  <Suspense fallback={<div>Cargando...</div>}>
-    <Header />
-  </Suspense>
-);
-
-export default HeaderWithSuspense;
+export default Header;

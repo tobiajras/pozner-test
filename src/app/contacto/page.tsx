@@ -33,6 +33,7 @@ const ContactoPage = () => {
       <section className='w-full max-w-[1920px] h-[140px] sm:h-[220px] md:h-[280px] lg:h-[350px] relative'>
         <div className='w-full h-full'>
           <Image
+            priority
             className='w-full h-full object-cover'
             src='/assets/nosotros/nosotros-2.webp'
             alt='products'

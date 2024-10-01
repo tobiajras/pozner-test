@@ -30,6 +30,7 @@ const ProductosPage = () => {
       <section className='w-full max-w-[1920px] h-[180px] sm:h-[260px] md:h-[320px] lg:h-[400px] relative'>
         <div className='w-full h-full'>
           <Image
+            priority
             className='w-full h-full object-cover'
             src='/assets/products/products-banner.webp'
             alt='products'

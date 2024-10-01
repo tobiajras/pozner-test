@@ -9,6 +9,7 @@ const NosotrosPage = () => {
         <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-6 sm:mx-8 md:mx-10'>
           <div>
             <Image
+              priority
               className='rounded w-[300px] md:w-[450px]'
               src='/assets/nosotros/nosotros-1.webp'
               alt='Nosotros'
@@ -35,6 +36,7 @@ const NosotrosPage = () => {
         <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-6 sm:mx-8 md:mx-10'>
           <div>
             <Image
+              priority
               className='rounded w-[300px] md:w-[450px]'
               src='/assets/nosotros/nosotros-2.webp'
               alt='Nosotros'

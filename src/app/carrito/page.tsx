@@ -120,6 +120,7 @@ const Cart = () => {
         ) : cart.length === 0 ? (
           <section>
             <Image
+              priority
               className='w-48 mt-10'
               src='/assets/carrito/cart.svg'
               width={170}
@@ -143,13 +144,14 @@ const Cart = () => {
             </h2>
             <hr />
             <div className='flex flex-col gap-6 md:gap-10 mt-8 md:mt-10 '>
-              {cart.map((item) => (
+              {cart.map((item, idx) => (
                 <div
                   key={`${item.id}-${item.color}`}
                   className='flex items-center'
                 >
                   <div className='w-24 h-24 md:w-32 md:h-32 bg-[#f6f6f6] p-2 md:p-5'>
                     <Image
+                      priority={idx > 3 ? true : false}
                       src={getImageUrl(item)}
                       alt={item.name}
                       width={80}
