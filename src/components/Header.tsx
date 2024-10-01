@@ -3,7 +3,7 @@
 import { navigation, company } from '@/app/constants/constants';
 import { useNavbarStore } from '@/store/navbarStore';
 import { useCartStore } from '@/store/cartStore';
-import { useState, useEffect } from 'react'; // Importación de useEffect y useState
+import { useState, useEffect, Suspense } from 'react'; // Importar Suspense
 import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
 
 import Link from 'next/link';
@@ -161,4 +161,11 @@ const Header = () => {
   );
 };
 
-export default Header;
+// Envolver el componente en Suspense
+const HeaderWithSuspense = () => (
+  <Suspense fallback={<div>Cargando...</div>}>
+    <Header />
+  </Suspense>
+);
+
+export default HeaderWithSuspense;

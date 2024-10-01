@@ -4,6 +4,7 @@ import products from '@/data/products.json';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
+import { Suspense } from 'react'; // Importar Suspense
 
 const ProductosPage = () => {
   const searchParams = useSearchParams(); // Obtener los parámetros de búsqueda
@@ -82,4 +83,10 @@ const ProductosPage = () => {
   );
 };
 
-export default ProductosPage;
+const ProductosPageWithSuspense = () => (
+  <Suspense fallback={<div>Cargando...</div>}>
+    <ProductosPage />
+  </Suspense>
+);
+
+export default ProductosPageWithSuspense;
