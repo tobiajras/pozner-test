@@ -1,9 +1,29 @@
-import products from '@/data/products.json';
+'use client';
 
+import products from '@/data/products.json';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
 
 const ProductosPage = () => {
+  const searchParams = useSearchParams(); // Obtener los parámetros de búsqueda
+  const searchTerm = searchParams.get('search') || ''; // Leer el término de búsqueda
+
+  // Normalizar el término de búsqueda
+  const normalizedSearchTerm = searchTerm
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+
+  const filteredProducts = products.filter((product) => {
+    // Normalizar el nombre del producto
+    const normalizedProductName = product.name
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+    return normalizedProductName
+      .toLowerCase()
+      .includes(normalizedSearchTerm.toLowerCase()); // Filtrar productos
+  });
+
   return (
     <section className='flex flex-col items-center w-full'>
       <section className='w-full max-w-[1920px] h-[180px] sm:h-[260px] md:h-[320px] lg:h-[400px] relative'>
@@ -32,7 +52,7 @@ const ProductosPage = () => {
         <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/40'></div>
       </section>
       <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10 my-10 md:my-20'>
-        {products.map((product) => (
+        {filteredProducts.map((product) => (
           <Link
             href={`/productos/${product.id}`}
             className='flex flex-col items-center py-6 px-4 sm:py-8 sm:px-8 bg-[#f6f6f6] hover:bg-[#EEEEEE] transition-colors rounded-sm'

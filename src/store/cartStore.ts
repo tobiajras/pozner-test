@@ -16,20 +16,11 @@ type CartStore = {
   cart: CartItem[];
   addToCart: (product: ProductType, quantity: number, color?: string) => void;
   removeFromCart: (id: string, color?: string) => void;
-};
-
-const loadCartFromLocalStorage = (): CartItem[] => {
-  // Verifica si estamos en el entorno del cliente
-  if (typeof window !== 'undefined') {
-    const storedCart = localStorage.getItem('cart');
-    return storedCart ? JSON.parse(storedCart) : [];
-  }
-  // Si estamos en el servidor, devolver un carrito vacío
-  return [];
+  setCart: (newCart: CartItem[]) => void; // Añadir setCart
 };
 
 export const useCartStore = create<CartStore>((set) => ({
-  cart: loadCartFromLocalStorage(), // Cargar el carrito desde localStorage
+  cart: [],
   addToCart: (product, quantity, color) =>
     set((state) => {
       const existingItemIndex = state.cart.findIndex(
@@ -55,4 +46,9 @@ export const useCartStore = create<CartStore>((set) => ({
       localStorage.setItem('cart', JSON.stringify(newCart)); // Actualizar localStorage
       return { cart: newCart };
     }),
+  setCart: (newCart) => {
+    // Implementar setCart
+    localStorage.setItem('cart', JSON.stringify(newCart)); // Guardar en localStorage
+    set({ cart: newCart });
+  },
 }));

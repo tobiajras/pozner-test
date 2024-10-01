@@ -7,6 +7,8 @@ import Image from 'next/image';
 import CloseIcon from '@/components/icons/CloseIcon';
 import WhatsappIcon from '@/components/icons/WhatsappIcon';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import SpinnerIcon from '@/components/icons/SpinnerIcon';
 
 // Define una interfaz para el producto
 interface Product {
@@ -21,8 +23,34 @@ interface Product {
   image_url?: string;
 }
 
+type ProductType = {
+  id: string;
+  name: string;
+  price: number;
+  // Añade aquí otros campos que tenga tu producto
+};
+
+type CartItem = ProductType & {
+  quantity: number;
+  color?: string;
+};
+
 const Cart = () => {
-  const { cart, addToCart, removeFromCart } = useCartStore();
+  const { cart, addToCart, removeFromCart, setCart } = useCartStore(); // Añadir setCart
+  const [isLoading, setIsLoading] = useState(true);
+
+  const loadCartFromLocalStorage = (): CartItem[] => {
+    // Verifica si estamos en el entorno del cliente
+    const storedCart = localStorage.getItem('cart');
+    return storedCart ? JSON.parse(storedCart) : [];
+    // Si estamos en el servidor, devolver un carrito vacío
+  };
+
+  useEffect(() => {
+    const storedCart = loadCartFromLocalStorage(); // Cargar carrito desde localStorage
+    setCart(storedCart); // Usar setCart para establecer el carrito
+    setIsLoading(false);
+  }, []);
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -81,10 +109,15 @@ const Cart = () => {
     const whatsappUrl = `https://api.whatsapp.com/send?phone=5491138596093&text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
+
   return (
     <section className='flex justify-center my-10 md:my-20'>
-      <div className='min-h-[400px]'>
-        {cart.length === 0 ? (
+      <div className='min-h-[600px]'>
+        {isLoading ? (
+          <div className='flex justify-center'>
+            <SpinnerIcon className='animate-spin w-9 h-9 text-color-primary mt-10' />
+          </div>
+        ) : cart.length === 0 ? (
           <section>
             <Image
               className='w-48 mt-10'
@@ -96,7 +129,7 @@ const Cart = () => {
             <div className='flex flex-col items-center mt-8'>
               <h4 className='text-center'>Tu carrito esta vacío</h4>
               <Link
-                className='mt-3 bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 py-3 text-color-title-light rounded'
+                className='mt-3 bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 pt-3 pb-2 text-color-title-light rounded'
                 href='/productos'
               >
                 Agregar Productos
@@ -128,9 +161,17 @@ const Cart = () => {
                     <h3 className='font-semibold text-color-title line-clamp-1 text-sm sm:text-base break-words'>
                       {item.name}
                     </h3>
-                    <p className='text-sm text-gray-500'>
-                      {item.color && `Color: ${item.color}`}
-                    </p>
+                    {item.color && (
+                      <p className='text-sm text-gray-500'>
+                        {`Color: ${item.color}`}
+                      </p>
+                    )}
+                    {item.price && (
+                      <p className='text-sm text-gray-500'>{`Precio Unitario: $${item.price.toLocaleString(
+                        'es-ES'
+                      )}`}</p>
+                    )}
+
                     <p className='md:hidden font-semibold md:w-28 mr-5 text-color-title'>
                       ${(item.price * item.quantity).toLocaleString('es-ES')}
                     </p>

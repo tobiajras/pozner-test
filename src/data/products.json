@@ -92,7 +92,7 @@
   },
   {
     "id": 8,
-    "name": "Granos de Café Orgánico 500g",
+    "name": "Granos de Café Orgánico 500g v2",
     "category": "Granos de Café",
     "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
     "price": 9000,
@@ -105,7 +105,7 @@
   },
   {
     "id": 9,
-    "name": "Taza de Cerámica 350ml",
+    "name": "Taza de Cerámica 350ml v2",
     "category": "Tazas",
     "description": "Taza de cerámica con el logo de la empresa.",
     "price": 20000,
@@ -118,7 +118,7 @@
   },
   {
     "id": 10,
-    "name": "Vaso Térmico 450ml",
+    "name": "Vaso Térmico 450ml v2",
     "category": "Vasos Térmicos",
     "description": "Vaso térmico de acero inoxidable para llevar café caliente o frío.",
     "price": 9000,
@@ -131,7 +131,7 @@
   },
   {
     "id": 11,
-    "name": "Cápsulas de Café Intenso - 10 unidades",
+    "name": "Cápsulas de Café Intenso - 10 unidades v2",
     "category": "Cápsulas",
     "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
     "price": 48700,
@@ -144,7 +144,7 @@
   },
   {
     "id": 12,
-    "name": "Gorra con Logo",
+    "name": "Gorra con Logo v2",
     "category": "Merchandising",
     "description": "Gorra de algodón con el logo de la empresa.",
     "price": 6700,
@@ -157,7 +157,7 @@
   },
   {
     "id": 13,
-    "name": "Remera con Logo",
+    "name": "Remera con Logo v2",
     "category": "Merchandising",
     "description": "Remera de algodón con el logo impreso.",
     "price": 9800,
@@ -170,7 +170,7 @@
   },
   {
     "id": 14,
-    "name": "Buzo con Logo",
+    "name": "Buzo con Logo v2",
     "category": "Merchandising",
     "description": "Buzo de algodón con capucha y el logo bordado.",
     "price": 20900,
@@ -183,7 +183,7 @@
   },
   {
     "id": 15,
-    "name": "Granos de Café Orgánico 500g",
+    "name": "Granos de Café Orgánico 500g v3",
     "category": "Granos de Café",
     "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
     "price": 9000,
@@ -196,7 +196,7 @@
   },
   {
     "id": 16,
-    "name": "Taza de Cerámica 350ml",
+    "name": "Taza de Cerámica 350ml v3",
     "category": "Tazas",
     "description": "Taza de cerámica con el logo de la empresa.",
     "price": 20000,
@@ -209,7 +209,7 @@
   },
   {
     "id": 17,
-    "name": "Vaso Térmico 450ml",
+    "name": "Vaso Térmico 450ml v3",
     "category": "Vasos Térmicos",
     "description": "Vaso térmico de acero inoxidable para llevar café caliente o frío.",
     "price": 9000,
@@ -222,7 +222,7 @@
   },
   {
     "id": 18,
-    "name": "Cápsulas de Café Intenso - 10 unidades",
+    "name": "Cápsulas de Café Intenso - 10 unidades v3",
     "category": "Cápsulas",
     "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
     "price": 48700,
@@ -235,7 +235,7 @@
   },
   {
     "id": 19,
-    "name": "Gorra con Logo",
+    "name": "Gorra con Logo v3",
     "category": "Merchandising",
     "description": "Gorra de algodón con el logo de la empresa.",
     "price": 6700,
@@ -248,7 +248,7 @@
   },
   {
     "id": 20,
-    "name": "Remera con Logo",
+    "name": "Remera con Logo v3",
     "category": "Merchandising",
     "description": "Remera de algodón con el logo impreso.",
     "price": 9800,
@@ -261,7 +261,7 @@
   },
   {
     "id": 21,
-    "name": "Buzo con Logo",
+    "name": "Buzo con Logo v3",
     "category": "Merchandising",
     "description": "Buzo de algodón con capucha y el logo bordado.",
     "price": 20900,
