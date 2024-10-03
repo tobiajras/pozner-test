@@ -30,7 +30,7 @@ interface Company {
 const ContactoPage = () => {
   return (
     <section className='flex flex-col'>
-      <section className='w-full max-w-[1920px] h-[140px] sm:h-[220px] md:h-[280px] lg:h-[350px] relative'>
+      <section className='w-full max-w-[1920px] h-[180px] sm:h-[260px] md:h-[320px] lg:h-[400px] relative'>
         <div className='w-full h-full'>
           <Image
             priority

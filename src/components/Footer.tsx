@@ -44,7 +44,7 @@ const Footer: React.FC<FooterProps> = () => {
     >
       <div className='flex flex-col items-center w-full'>
         <section className='flex md:justify-center text-color-text w-full '>
-          <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-6 sm:mx-8 md:mx-10 py-10'>
+          <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10 py-10'>
             <article className='flex w-full flex-col'>
               <div className='w-36 md:w-44 h-16'>
                 <Image
@@ -151,7 +151,7 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
         </section>
         <section className='flex justify-center w-full pb-16 pt-8 border-t border-color-primary'>
-          <article className='flex flex-col md:flex-row justify-between items-center text-sm sm:text-base gap-3 sm:gap-5 w-full max-w-6xl mx-6 sm:mx-8 md:mx-10'>
+          <article className='flex flex-col md:flex-row justify-between items-center text-sm sm:text-base gap-3 sm:gap-5 w-full max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
             <div className='flex items-center gap-1 sm:gap-2 text-color-text-light'>
               <span>© Copyright 2024</span>
               <span>-</span>

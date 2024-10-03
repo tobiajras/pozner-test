@@ -6,7 +6,7 @@ const NosotrosPage = () => {
   return (
     <section className='flex justify-center'>
       <div className='max-w-6xl my-10 md:my-20 flex flex-col gap-10 md:gap-20'>
-        <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-6 sm:mx-8 md:mx-10'>
+        <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
           <div>
             <Image
               priority
@@ -33,7 +33,7 @@ const NosotrosPage = () => {
             </div>
           </div>
         </article>
-        <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-6 sm:mx-8 md:mx-10'>
+        <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
           <div>
             <Image
               priority
@@ -60,7 +60,7 @@ const NosotrosPage = () => {
             </div>
           </div>
         </article>
-        <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-6 sm:mx-8 md:mx-10'>
+        <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
           <div>
             <Image
               className='rounded w-[300px] md:w-[450px]'

@@ -22,17 +22,17 @@ const ServiciosSection = () => {
             },
           }}
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
-          className='flex flex-col items-start md:flex-row md:items-center md:justify-center gap-12 sm:gap-14 md:gap-20'
+          className='bg-color-primary rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center'
         >
-          <div className='md:min-w-52'>
+          <div className='p-16 w-full'>
             <div className='text-3xl sm:text-4xl lg:text-5xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
-                <span className='text-color-primary'>Desayuno</span>
-                <span className='text-color-primary'>Merienda</span>
+                <span className='text-color-title-light'>Desayuno</span>
+                <span className='text-color-title-light'>Merienda</span>
               </h4>
             </div>
             <div className='flex flex-col gap-2 md:text-lg lg:text-xl w-full max-w-[380px] sm:max-w-max sm:w-[480px] md:w-[350px] lg:w-[500px] text-color-text'>
-              <ul className='flex flex-col gap-1'>
+              <ul className='flex flex-col gap-1 text-color-title-light/75'>
                 <li>• Café</li>
                 <li>• Medialunas</li>
                 <li>• Tostadas</li>
@@ -43,9 +43,9 @@ const ServiciosSection = () => {
               </ul>
             </div>
           </div>
-          <div className='relative'>
+          <div className='relative w-full'>
             <Image
-              className='w-52 sm:w-60 md:w-80 rounded'
+              className='w-full h-full object-cover'
               src='/assets/servicios/servicio-1.webp'
               width={461}
               height={366}
@@ -64,16 +64,16 @@ const ServiciosSection = () => {
             },
           }}
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
-          className='flex flex-col items-start md:flex-row md:items-center md:justify-center gap-12 sm:gap-14 md:gap-20'
+          className='bg-color-primary rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center'
         >
-          <div className='md:order-2 md:min-w-52'>
+          <div className='md:order-2 p-20 w-full'>
             <div className='text-3xl sm:text-4xl lg:text-5xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
-                <span className='text-color-primary'>Almuerzo</span>
+                <span className='text-color-title-light'>Almuerzo</span>
               </h4>
             </div>
             <div className='flex flex-col gap-2 md:text-lg lg:text-xl w-full max-w-[380px] sm:max-w-max sm:w-[480px] md:w-[350px] lg:w-[500px] text-color-text'>
-              <ul className='flex flex-col gap-1'>
+              <ul className='flex flex-col gap-1 text-color-title-light/75'>
                 <li>• Pastas</li>
                 <li>• Milanesas</li>
                 <li>• Sandwiches</li>
@@ -83,9 +83,9 @@ const ServiciosSection = () => {
               </ul>
             </div>
           </div>
-          <div className='relative'>
+          <div className='relative w-full'>
             <Image
-              className='w-52 sm:w-60 md:w-80 rounded'
+              className='w-full h-full object-cover'
               src='/assets/servicios/servicio-2.webp'
               width={461}
               height={366}
@@ -104,16 +104,16 @@ const ServiciosSection = () => {
             },
           }}
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
-          className='flex flex-col items-start md:flex-row md:items-center md:justify-center gap-12 sm:gap-14 md:gap-20'
+          className='bg-color-primary rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center'
         >
-          <div className='md:min-w-52'>
+          <div className='p-16 w-full'>
             <div className='text-3xl sm:text-4xl lg:text-5xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4>
-                <span className='text-color-primary'>Postres</span>
+                <span className='text-color-title-light'>Postres</span>
               </h4>
             </div>
             <div className='flex flex-col gap-2 md:text-lg lg:text-xl w-full max-w-[380px] sm:max-w-max sm:w-[480px] md:w-[350px] lg:w-[500px] text-color-text'>
-              <ul className='flex flex-col gap-1'>
+              <ul className='flex flex-col gap-1 text-color-title-light/75'>
                 <li>• Ensalada de fruta</li>
                 <li>• Panqueques</li>
                 <li>• Brownie</li>
@@ -123,9 +123,9 @@ const ServiciosSection = () => {
               </ul>
             </div>
           </div>
-          <div className='relative'>
+          <div className='relative w-full'>
             <Image
-              className='w-52 sm:w-60 md:w-80 rounded'
+              className='w-full h-full object-cover'
               src='/assets/servicios/servicio-3.webp'
               width={461}
               height={366}

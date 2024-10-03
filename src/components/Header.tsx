@@ -32,30 +32,29 @@ const Header = () => {
 
   return (
     <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-secondary'>
-      <section className='flex items-center gap-5 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-6 sm:mx-8 md:mx-10'>
+      <section className='flex items-center gap-3 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         <article className='flex w-full'>
           <Link
             className='flex items-center gap-2 md:gap-3'
             href='/'
             onClick={() => setIsMenuOpen(false)}
           >
-            <div>
+            <Image
+              priority
+              className='w-[55px] h-[55px] md:w-14 md:h-14 lg:w-16 lg:h-16'
+              src='/assets/company/favicon.webp'
+              alt={`${company.name} favicon`}
+              width={64}
+              height={64}
+            />
+            <div className='h-12 w-28 md:w-36'>
               <Image
                 priority
-                className='w-16 h-16'
-                src='/assets/company/favicon.webp'
-                alt={`${company.name} favicon`}
-                width={100}
-                height={100}
-              />
-            </div>
-            <div>
-              <Image
-                priority
+                className='h-full w-full object-contain object-left'
                 src='/assets/company/logo.webp'
                 alt={`${company.name} logo`}
-                width={100}
-                height={100}
+                width={116}
+                height={56}
               />
             </div>
           </Link>
@@ -74,7 +73,7 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <article className='flex justify-end items-center gap-3 lg:gap-5 w-full'>
+        <article className='flex justify-end items-center gap-2 sm:gap-3 lg:gap-5 w-full'>
           <div className='w-full'>
             <Suspense>
               <SearchInput />
