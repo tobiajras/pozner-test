@@ -80,7 +80,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
 
   return (
     <section className='flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col items-center w-full'>
         <Toaster
           position='top-center'
           reverseOrder={false}
@@ -164,7 +164,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
             </article>
           </div>
         )}
-        <section className='mb-10'>
+        <section className='mb-10 w-full'>
           <CarrouselFeatured title='Sugeridos' startIndex={10} lastIndex={20} />
         </section>
       </div>

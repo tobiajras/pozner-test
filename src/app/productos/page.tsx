@@ -1,6 +1,7 @@
 'use client';
 
 import products from '@/data/products.json';
+import { div } from 'framer-motion/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
@@ -53,33 +54,53 @@ const ProductosPage = () => {
         </div>
         <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/40'></div>
       </section>
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10 my-10 md:my-20'>
-        {filteredProducts.map((product) => (
-          <Link
-            href={`/productos/${product.id}`}
-            className='flex flex-col items-center py-6 px-4 sm:py-8 sm:px-8 bg-[#f6f6f6] hover:bg-[#EEEEEE] transition-colors rounded-sm'
-            key={product.id}
-          >
-            <div className='h-[120px] sm:h-36 lg:h-44 w-[120px] sm:w-36 lg:w-44'>
-              <Image
-                className='w-full h-full object-contain object-bottom'
-                src={`/assets/products/${product.image}`}
-                alt={product.name}
-                width={150}
-                height={150}
-              />
-            </div>
-            <div className='mt-8 w-full'>
-              <h4 className='text-sm sm:text-base text-color-primary font-semibold h-10 sm:h-12 line-clamp-2 mb-1 max-w-[120px] sm:max-w-36 lg:max-w-44'>
-                {product.name}
-              </h4>
-              <span className='font-medium text-lg'>
-                ${product.price.toLocaleString('es-ES')}
+      <>
+        {filteredProducts.length > 0 ? ( // Verificar si hay productos filtrados
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10 my-10 md:my-20 min-h-[600px]'>
+            {filteredProducts.map((product) => (
+              <Link
+                href={`/productos/${product.id}`}
+                className='flex flex-col items-center py-6 px-4 sm:py-8 sm:px-8 bg-[#f6f6f6] hover:bg-[#EEEEEE] transition-colors rounded-sm'
+                key={product.id}
+              >
+                <div className='h-[120px] sm:h-36 lg:h-44 w-[120px] sm:w-36 lg:w-44'>
+                  <Image
+                    className='w-full h-full object-contain object-bottom'
+                    src={`/assets/products/${product.image}`}
+                    alt={product.name}
+                    width={150}
+                    height={150}
+                  />
+                </div>
+                <div className='mt-8 w-full'>
+                  <h4 className='text-sm sm:text-base text-color-primary font-semibold h-10 sm:h-12 line-clamp-2 mb-1 max-w-[120px] sm:max-w-36 lg:max-w-44'>
+                    {product.name}
+                  </h4>
+                  <span className='font-medium text-lg'>
+                    ${product.price.toLocaleString('es-ES')}
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className='flex flex-col items-center min-h-[600px] my-8 md:my-16'>
+            <div className='col-span-2 md:col-span-3 lg:col-span-4 text-center text-lg text-color-text'>
+              No se encontraron resultados para la búsqueda{' '}
+              <span className='text-color-title font-semibold'>
+                "{searchTerm}"
               </span>
+              .
             </div>
-          </Link>
-        ))}
-      </div>
+            <Link
+              className='mt-5 bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 pt-3 pb-2 text-color-title-light rounded'
+              href='/productos'
+            >
+              Ver catálogo
+            </Link>
+          </div>
+        )}
+      </>
     </section>
   );
 };

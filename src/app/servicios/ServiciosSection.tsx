@@ -24,7 +24,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
           className='relative rounded overflow-hidden flex flex-col items-start md:flex-row md:items-'
         >
-          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary/70 md:bg-color-primary/100 border-b-4 md:border-b-0 md:border-r-8 border-color-secondary-light'>
+          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary/70 md:bg-color-primary/100 border-b-4 md:border-b-0 md:border-r-8 border-color-secondary'>
             <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
                 <span className='text-color-title-light'>
@@ -70,7 +70,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
           className='relative rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center'
         >
-          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] md:order-2 h-full bg-color-primary/70 md:bg-color-primary/100 border-b-4 md:border-b-0 md:border-l-8 border-color-secondary-light'>
+          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] md:order-2 h-full bg-color-primary/70 md:bg-color-primary/100 border-b-4 md:border-b-0 md:border-l-8 border-color-secondary'>
             <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
                 <span className='text-color-title-light'>
@@ -117,7 +117,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
           className=' relative rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center'
         >
-          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary/70 md:bg-color-primary/100 border-b-4 md:border-b-0 md:border-r-8 border-color-secondary-light'>
+          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary/70 md:bg-color-primary/100 border-b-4 md:border-b-0 md:border-r-8 border-color-secondary'>
             <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
                 <span className='text-color-title-light'>
