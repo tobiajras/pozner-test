@@ -43,15 +43,15 @@ const NosotrosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
           className='flex flex-col items-center'
         >
-          <h4 className='text-3xl sm:text-4xl lg:text-5xl font-aleo-font font-semibold text-color-secondary text-center'>
+          <h4 className='text-2xl sm:text-3xl lg:text-4xl font-aleo-font font-semibold text-color-secondary text-center'>
             Conocé más de <span className='text-color-primary'>Nosotros</span>
           </h4>
-          <p className='w-full max-w-[380px] sm:max-w-max sm:w-[480px] lg:w-[500px] xl:w-[620px] text-center text-color-text text-sm sm:text-base lg:text-lg mt-3'>
+          <p className='w-full max-w-[380px] sm:max-w-max sm:w-[480px] lg:w-[500px] xl:w-[620px] text-center text-color-text text-sm sm:text-base lg:text-lg mt-2 sm:mt-3'>
             {nosotros.text}
           </p>
           <Link
             href='/nosotros'
-            className='bg-color-primary hover:bg-color-primary-dark transition-colors px-6 py-2 text-color-title-light rounded mt-3'
+            className='bg-color-primary hover:bg-color-primary-dark transition-colors px-6 py-2 text-color-title-light rounded mt-3 text-sm md:text-base'
           >
             Ver más
           </Link>
@@ -69,13 +69,13 @@ const NosotrosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
           onMouseUp={() => setClicked(false)}
           onMouseDown={() => setClicked(true)}
-          className={`overflow-hidden mt-8 relative ${
+          className={`overflow-hidden mt-5 md:mt-8 relative flex justify-start w-full ${
             clicked ? 'cursor-grabbing' : 'cursor-grab'
           }`}
           ref={emblaRef}
         >
-          <div className='flex'>
-            <div className='flex-[0_0_60%] sm:flex-[0_0_45%] md:flex-[0_0_35%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'>
+          <div className='flex justify-start items-start w-full'>
+            <div className='flex-[0_0_70%] sm:flex-[0_0_45%] md:flex-[0_0_35%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'>
               <Image
                 src='/assets/nosotros/nosotros-1.webp'
                 alt='imagen nosotros 1'
@@ -83,7 +83,7 @@ const NosotrosSection = () => {
                 height={474}
               />
             </div>
-            <div className='flex-[0_0_60%] sm:flex-[0_0_45%] md:flex-[0_0_35%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'>
+            <div className='flex-[0_0_70%] sm:flex-[0_0_45%] md:flex-[0_0_35%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'>
               <Image
                 src='/assets/nosotros/nosotros-2.webp'
                 alt='imagen nosotros 2'
@@ -91,7 +91,7 @@ const NosotrosSection = () => {
                 height={474}
               />
             </div>
-            <div className='flex-[0_0_60%] sm:flex-[0_0_45%] md:flex-[0_0_35%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'>
+            <div className='flex-[0_0_70%] sm:flex-[0_0_45%] md:flex-[0_0_35%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'>
               <Image
                 src='/assets/nosotros/nosotros-3.webp'
                 alt='imagen nosotros 3'
@@ -99,7 +99,7 @@ const NosotrosSection = () => {
                 height={474}
               />
             </div>
-            <div className='flex-[0_0_60%] sm:flex-[0_0_45%] md:flex-[0_0_35%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'>
+            <div className='flex-[0_0_70%] sm:flex-[0_0_45%] md:flex-[0_0_35%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'>
               <Image
                 src='/assets/nosotros/nosotros-4.webp'
                 alt='imagen nosotros 4'
@@ -107,7 +107,7 @@ const NosotrosSection = () => {
                 height={474}
               />
             </div>
-            <div className='flex-[0_0_60%] sm:flex-[0_0_45%] md:flex-[0_0_35%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'>
+            <div className='flex-[0_0_70%] sm:flex-[0_0_45%] md:flex-[0_0_35%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'>
               <Image
                 src='/assets/nosotros/nosotros-5.webp'
                 alt='imagen nosotros 5'

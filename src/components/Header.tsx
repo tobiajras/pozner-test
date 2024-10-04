@@ -96,9 +96,9 @@ const Header = () => {
             className='md:hidden text-color-text-light hover:text-color-title-light transition-all'
           >
             {isMenuOpen ? (
-              <CloseIcon className='w-6 h-6' />
+              <CloseIcon className='w-7 h-7' />
             ) : (
-              <HamburguerIcon className='w-6 h-6' />
+              <HamburguerIcon className='w-7 h-7' />
             )}
           </button>
         </article>

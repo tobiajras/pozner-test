@@ -22,17 +22,17 @@ const ServiciosSection = () => {
             },
           }}
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
-          className='rounded overflow-hidden flex flex-col items-start md:flex-row md:items-'
+          className='relative rounded overflow-hidden flex flex-col items-start md:flex-row md:items-'
         >
-          <div className='px-5 md:px-10 py-5 md:py-10 lg:py-16 max-w-[400px] sm:max-w-[450px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary border-b-4 md:border-b-0 md:border-r-8 border-color-secondary-light'>
-            <div className='text-3xl sm:text-3xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
+          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary/70 md:bg-color-primary/100 border-b-4 md:border-b-0 md:border-r-8 border-color-secondary-light'>
+            <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
                 <span className='text-color-title-light'>
                   Desayunos y Meriendas
                 </span>
               </h4>
             </div>
-            <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[420px] md:w-[350px] lg:w-[500px]'>
+            <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[310px] md:w-[350px] lg:w-[500px]'>
               <p className='text-color-text-light'>
                 Despertá tus sentidos con nuestras delicias matutinas, ¡el café
                 perfecto y opciones saludables para arrancar con energía!
@@ -47,7 +47,7 @@ const ServiciosSection = () => {
               </ul>
             </div>
           </div>
-          <div className='relative h-[220px] w-full md:w-[250px] lg:w-[300px] md:h-full'>
+          <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] md:h-full'>
             <Image
               className='w-full h-full object-cover'
               src='/assets/servicios/servicio-1.webp'
@@ -68,17 +68,17 @@ const ServiciosSection = () => {
             },
           }}
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
-          className='rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center'
+          className='relative rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center'
         >
-          <div className='px-5 md:px-10 py-5 md:py-10 lg:py-16 max-w-[400px] sm:max-w-[450px] md:max-w-full md:w-[450px] lg:w-[600px] md:order-2 h-full bg-color-primary border-b-4 md:border-b-0 md:border-l-8 border-color-secondary-light'>
-            <div className='text-3xl sm:text-3xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
+          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] md:order-2 h-full bg-color-primary/70 md:bg-color-primary/100 border-b-4 md:border-b-0 md:border-l-8 border-color-secondary-light'>
+            <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
                 <span className='text-color-title-light'>
                   Almorzá con sabor y frescura
                 </span>
               </h4>
             </div>
-            <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[420px] md:w-[350px] lg:w-[500px]'>
+            <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[310px] md:w-[350px] lg:w-[500px]'>
               <p className='text-color-text-light'>
                 Disfrutá de nuestros almuerzos caseros, preparados con
                 ingredientes frescos y un toque único. ¡Ideal para una pausa en
@@ -94,7 +94,7 @@ const ServiciosSection = () => {
               </ul>
             </div>
           </div>
-          <div className='relative h-[220px] w-full md:w-[250px] lg:w-[300px] md:h-full'>
+          <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] md:h-full'>
             <Image
               className='w-full h-full object-cover'
               src='/assets/servicios/servicio-2.webp'
@@ -115,17 +115,17 @@ const ServiciosSection = () => {
             },
           }}
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
-          className=' rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center'
+          className=' relative rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center'
         >
-          <div className='px-5 md:px-10 py-5 md:py-10 lg:py-16 max-w-[400px] sm:max-w-[450px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary border-b-4 md:border-b-0 md:border-r-8 border-color-secondary-light'>
-            <div className='text-3xl sm:text-3xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
+          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary/70 md:bg-color-primary/100 border-b-4 md:border-b-0 md:border-r-8 border-color-secondary-light'>
+            <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
                 <span className='text-color-title-light'>
                   Postres caseros y más
                 </span>
               </h4>
             </div>
-            <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[420px] md:w-[350px] lg:w-[500px]'>
+            <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[310px] md:w-[350px] lg:w-[500px]'>
               <p className='text-color-text-light'>
                 Deleitate con nuestros irresistibles postres. Desde clásicos que
                 enamoran hasta creaciones únicas, cada bocado es una dulce
@@ -141,7 +141,7 @@ const ServiciosSection = () => {
               </ul>
             </div>
           </div>
-          <div className='relative h-[220px] w-full md:w-[250px] lg:w-[300px] md:h-full'>
+          <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] md:h-full'>
             <Image
               className='w-full h-full object-cover'
               src='/assets/servicios/servicio-3.webp'
