@@ -77,7 +77,7 @@ const Footer: React.FC<FooterProps> = () => {
                     <FacebookIcon className='w-8 h-8 text-color-text-light hover:text-color-title-light transition-colors' />
                   </a>
                 )}
-                {(company.whatsapp as Company['whatsapp']) && (
+                {company.whatsapp && (
                   <a
                     href={`https://api.whatsapp.com/send?phone=549${company.whatsapp}&text=Hola! Quería hacer una consulta`}
                     target='_blank'
@@ -125,7 +125,7 @@ const Footer: React.FC<FooterProps> = () => {
                   </p>
                 </div>
               )}
-              {(company.telephone as Company['telephone']) && (
+              {company.telephone && (
                 <div>
                   <h4 className='text-color-title-light'>Teléfono</h4>
                   <a
@@ -136,7 +136,7 @@ const Footer: React.FC<FooterProps> = () => {
                   </a>
                 </div>
               )}
-              {(company.email as Company['email']) && (
+              {company.email && (
                 <div>
                   <h4 className='text-color-title-light'>Email</h4>
                   <a
