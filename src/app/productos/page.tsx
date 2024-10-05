@@ -1,7 +1,6 @@
 'use client';
 
 import products from '@/data/products.json';
-import { div } from 'framer-motion/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
@@ -88,7 +87,7 @@ const ProductosPage = () => {
             <div className='col-span-2 md:col-span-3 lg:col-span-4 text-center text-lg text-color-text'>
               No se encontraron resultados para la búsqueda{' '}
               <span className='text-color-title font-semibold'>
-                "{searchTerm}"
+                &quot;{searchTerm}&quot;
               </span>
               .
             </div>
