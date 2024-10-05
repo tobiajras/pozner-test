@@ -51,7 +51,7 @@ const NosotrosSection = () => {
           </p>
           <Link
             href='/nosotros'
-            className='bg-color-primary hover:bg-color-primary-dark transition-colors px-6 py-2 text-color-title-light rounded mt-3 text-sm md:text-base'
+            className='bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 py-3 text-color-title-light rounded mt-3 text-sm md:text-base'
           >
             Ver más
           </Link>

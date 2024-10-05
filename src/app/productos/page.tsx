@@ -92,7 +92,7 @@ const ProductosPage = () => {
               .
             </div>
             <Link
-              className='mt-5 bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 pt-3 pb-2 text-color-title-light rounded'
+              className='mt-5 border-2 border-transparent bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 py-3 text-color-title-light rounded'
               href='/productos'
             >
               Ver catálogo

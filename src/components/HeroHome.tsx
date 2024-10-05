@@ -17,14 +17,14 @@ const HeroHome = () => {
           </p>
           <div className='flex justify-center md:justify-start gap-3 mt-4 md:mt-6 lg:mt-8 text-xs sm:text-sm lg:text-base'>
             <Link
-              className='bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 pt-3 pb-2 text-color-title-light rounded'
+              className='border-2 border-transparent bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 py-3 text-color-title-light rounded'
               href='/productos'
             >
               Ver catálogo
             </Link>
             {company.menu && (
               <a
-                className='border-2 border-color-primary hover:bg-color-primary hover:text-color-title-light transition-colors px-4 md:px-6 pt-3 pb-2 font-medium text-color-primary rounded'
+                className='border-2 border-color-primary hover:bg-color-primary hover:text-color-title-light transition-colors px-4 md:px-6 py-3 font-medium text-color-primary rounded'
                 href={company.menu}
                 target='_blank'
                 rel='noopener noreferrer'
