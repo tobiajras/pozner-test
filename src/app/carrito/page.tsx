@@ -50,7 +50,7 @@ const Cart = () => {
     const storedCart = loadCartFromLocalStorage(); // Cargar carrito desde localStorage
     setCart(storedCart); // Usar setCart para establecer el carrito
     setIsLoading(false);
-  }, []);
+  }, [setCart]);
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
