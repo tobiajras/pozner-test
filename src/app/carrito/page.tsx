@@ -9,6 +9,7 @@ import WhatsappIcon from '@/components/icons/WhatsappIcon';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import SpinnerIcon from '@/components/icons/SpinnerIcon';
+import { company } from '../constants/constants';
 
 // Define una interfaz para el producto
 interface Product {
@@ -106,7 +107,7 @@ const Cart = () => {
 
   const sendOrderToWhatsApp = () => {
     const message = generateOrderMessage();
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=5491138596093&text=${message}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=549${company.whatsapp}&text=${message}`;
     window.open(whatsappUrl);
   };
 
