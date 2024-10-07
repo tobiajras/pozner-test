@@ -1,6 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+
+import { motion } from 'framer-motion';
 
 import { company } from '@/app/constants/constants';
 
@@ -8,7 +11,18 @@ const HeroHome = () => {
   return (
     <section className='mb-20'>
       <div className='flex flex-col md:flex-row justify-center items-center md:gap-6 lg:gap-8 xl:gap-10'>
-        <article className='mt-10 mb-5 mx-6 sm:mx-8 md:mx-0 md:mt-0 md:mb-0'>
+        <motion.article
+          initial={{ opacity: 0, x: -10 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 0.3,
+              ease: 'easeOut',
+            },
+          }}
+          className='mt-10 mb-5 mx-6 sm:mx-8 md:mx-0 md:mt-0 md:mb-0'
+        >
           <h1 className='text-center md:text-left text-[40px] sm:text-5xl lg:text-6xl font-semibold text-color-primary'>
             {company.name}
           </h1>
@@ -33,8 +47,18 @@ const HeroHome = () => {
               </a>
             )}
           </div>
-        </article>
-        <article>
+        </motion.article>
+        <motion.article
+          initial={{ opacity: 0, x: 10 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              duration: 0.3,
+              ease: 'easeOut',
+            },
+          }}
+        >
           <div className='w-[280px] sm:w-[320px] md:w-[340px] lg:w-[440px] xl:w-[520px] relative'>
             <Image
               priority
@@ -45,7 +69,7 @@ const HeroHome = () => {
               height={400}
             />
           </div>
-        </article>
+        </motion.article>
       </div>
     </section>
   );
