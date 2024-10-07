@@ -41,7 +41,7 @@ const CarrouselFeatured = ({
                     src={`/assets/products/${product.image}`}
                     alt={product.name}
                   />
-                  <h3 className='text-color-primary font-semibold h-12 line-clamp-2 mb-1 max-w-48'>
+                  <h3 className='text-color-title font-semibold h-12 line-clamp-2 mb-1 max-w-48'>
                     {product.name}
                   </h3>
                   <span className='font-medium text-lg'>

@@ -39,7 +39,7 @@ const HeroHome = () => {
             <Image
               priority
               className='w-full h-full md:object-contain rounded-b-md'
-              src='/assets/inicio/hero-image.webp'
+              src='/assets/inicio/home-background.webp'
               alt='Imágen de inicio'
               width={400}
               height={400}

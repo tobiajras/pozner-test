@@ -37,7 +37,7 @@ const ServiciosSection = () => {
                 Despertá tus sentidos con nuestras delicias matutinas, ¡el café
                 perfecto y opciones saludables para arrancar con energía!
               </p>
-              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-title-light/60'>
+              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text-light'>
                 <li>• Café</li>
                 <li>• Medialunas</li>
                 <li>• Tostadas</li>
@@ -84,7 +84,7 @@ const ServiciosSection = () => {
                 ingredientes frescos y un toque único. ¡Ideal para una pausa en
                 tu día!
               </p>
-              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-title-light/60'>
+              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text-light'>
                 <li>• Pastas</li>
                 <li>• Milanesas</li>
                 <li>• Sandwiches</li>
@@ -131,7 +131,7 @@ const ServiciosSection = () => {
                 enamoran hasta creaciones únicas, cada bocado es una dulce
                 celebración para tu paladar. ¡No te vayas sin probarlos!
               </p>
-              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-title-light/60'>
+              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text-light'>
                 <li>• Ensalada de fruta</li>
                 <li>• Panqueques</li>
                 <li>• Brownie</li>

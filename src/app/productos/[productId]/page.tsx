@@ -117,7 +117,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
             </article>
             <article>
               <div className=''>
-                <h4 className='text-color-primary font-semibold text-2xl md:text-3xl line-clamp-2 mb-1 max-w-72 sm:max-w-96 break-words'>
+                <h4 className='text-color-title font-semibold text-2xl md:text-3xl line-clamp-2 mb-1 max-w-72 sm:max-w-96 break-words'>
                   {productById.name}
                 </h4>
                 <div className='mt-2'>

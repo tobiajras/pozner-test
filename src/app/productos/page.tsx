@@ -72,7 +72,7 @@ const ProductosPage = () => {
                   />
                 </div>
                 <div className='mt-8 w-full'>
-                  <h4 className='text-sm sm:text-base text-color-primary font-semibold h-10 sm:h-12 line-clamp-2 mb-1 max-w-[120px] sm:max-w-36 lg:max-w-44'>
+                  <h4 className='text-sm sm:text-base text-color-title font-semibold h-10 sm:h-12 line-clamp-2 mb-1 max-w-[120px] sm:max-w-36 lg:max-w-44'>
                     {product.name}
                   </h4>
                   <span className='font-medium text-lg'>
