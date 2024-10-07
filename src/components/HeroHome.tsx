@@ -21,6 +21,7 @@ const HeroHome = () => {
               ease: 'easeOut',
             },
           }}
+          viewport={{ once: true }}
           className='mt-10 mb-5 mx-6 sm:mx-8 md:mx-0 md:mt-0 md:mb-0'
         >
           <h1 className='text-center md:text-left text-[40px] sm:text-5xl lg:text-6xl font-semibold text-color-primary'>
@@ -58,6 +59,7 @@ const HeroHome = () => {
               ease: 'easeOut',
             },
           }}
+          viewport={{ once: true }}
         >
           <div className='w-[280px] sm:w-[320px] md:w-[340px] lg:w-[440px] xl:w-[520px] relative'>
             <Image
