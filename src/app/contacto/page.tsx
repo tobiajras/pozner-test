@@ -53,7 +53,7 @@ const ContactoPage = () => {
             </div>
           </div>
         </div>
-        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/85 to-color-bg-secondary/85'></div>
+        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/70 to-color-bg-secondary/70'></div>
       </section>
       <section id='ubicacionSection' className='my-6 md:my-12 lg:my-16'>
         <motion.div
