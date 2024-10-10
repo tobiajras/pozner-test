@@ -41,13 +41,13 @@ const Header = () => {
           >
             <Image
               priority
-              className='w-[55px] h-[55px] md:w-14 md:h-14 lg:w-16 lg:h-16'
+              className='w-[53px] h-[53px] md:w-14 md:h-14 lg:w-16 lg:h-16'
               src='/assets/company/favicon.webp'
               alt={`${company.name} favicon`}
               width={64}
               height={64}
             />
-            <div className='h-12 w-28 md:w-36'>
+            <div className='h-11 sm:h-12 w-24 sm:w-28 md:w-36'>
               <Image
                 priority
                 className='h-full w-full object-contain object-left'

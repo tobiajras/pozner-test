@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = () => {
         <section className='flex md:justify-center text-color-text w-full '>
           <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10 py-10'>
             <article className='flex w-full flex-col'>
-              <div className='w-36 md:w-44 h-16'>
+              <div className='w-32 sm:w-36 md:w-44 h-14 sm:h-16'>
                 <Image
                   className='w-full h-full object-contain object-left'
                   src='/assets/company/logo.webp'
