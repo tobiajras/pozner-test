@@ -6,7 +6,7 @@ export const company = {
   telephone: null,
   email: null,
   instagram: 'cafenerea',
-  facebook: 'rondddo',
+  facebook: null,
   whatsapp: null,
   googlemaps:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14185.985310937604!2d-58.43838151639619!3d-34.61399317192931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb21170330f1%3A0x8d5dd7f22b725df4!2sNerea%20caf%C3%A9!5e0!3m2!1ses-419!2sar!4v1728531242586!5m2!1ses-419!2sar',
