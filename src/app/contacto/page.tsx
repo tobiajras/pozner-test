@@ -29,7 +29,7 @@ interface Company {
 
 const ContactoPage = () => {
   return (
-    <section className='flex flex-col'>
+    <section className='flex flex-col items-center'>
       <section className='w-full max-w-[1920px] h-[180px] sm:h-[260px] md:h-[320px] lg:h-[400px] relative'>
         <div className='w-full h-full'>
           <Image
@@ -53,7 +53,7 @@ const ContactoPage = () => {
             </div>
           </div>
         </div>
-        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/70 to-color-bg-secondary/70'></div>
+        <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/70 md:from-color-bg-secondary/80 to-color-bg-secondary/70 md:to-color-bg-secondary/80'></div>
       </section>
       <section id='ubicacionSection' className='my-6 md:my-12 lg:my-16'>
         <motion.div
