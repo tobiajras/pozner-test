@@ -9,8 +9,8 @@ export default function Home() {
     <div className='flex justify-center min-h-screen'>
       <main className='flex flex-col w-full'>
         <HeroHome />
-        <CarrouselFeatured title='Lanzamientos' startIndex={0} lastIndex={10} />
-        <CarrouselFeatured title='Destacados' startIndex={10} lastIndex={20} />
+        <CarrouselFeatured title='Lanzamientos' startIndex={0} lastIndex={8} />
+        <CarrouselFeatured title='Destacados' startIndex={8} lastIndex={16} />
         <ServiciosSection />
         <WhatsappBanner />
         <NosotrosSection />

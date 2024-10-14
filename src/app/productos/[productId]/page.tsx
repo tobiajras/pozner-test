@@ -22,11 +22,12 @@ const colorMap: { [key: string]: string } = {
   Negro: 'bg-[#000000]',
   Blanco: 'bg-[#FFFFFF]',
   Rojo: 'bg-[#FF0000]',
-  Azul: 'bg-[#1f263f]',
+  Azul: 'bg-[#0C2A50]',
+  Marron: 'bg-[#352622]',
   Verde: 'bg-[#008000]',
   Amarillo: 'bg-[#FFFF00]',
   Morado: 'bg-[#800080]',
-  Naranja: 'bg-[#FFA500]',
+  Naranja: 'bg-[#FF5120]',
   Gris: 'bg-[#808080]',
 };
 
@@ -101,7 +102,7 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
               <ReturnIcon className='w-12 h-12' />
             </Link>
             <article className='flex justify-center px-10 py-20 sm:px-16 sm:py-24 md:px-20 md:py-40 bg-[#f6f6f6]'>
-              <div className='h-40 w-40 sm:h-48 sm:w-48 md:h-60 md:w-60'>
+              <div className='h-40 w-40 sm:h-64 sm:w-64 md:h-60 md:w-60 lg:h-80 lg:w-80'>
                 <Image
                   className='w-full h-full object-contain object-bottom'
                   src={`/assets/products/${

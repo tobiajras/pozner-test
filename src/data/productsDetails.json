@@ -1,59 +1,51 @@
 [
   {
     "id": 1,
-    "name": "Granos de Café Orgánico 500g",
-    "category": "Granos de Café",
-    "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
-    "price": 9000,
+    "name": "Vaso reutilizable Térmico 250ml",
+    "category": "Vasos Térmicos",
+    "description": "Vaso térmico reutilizable para llevar café caliente o frío.",
+    "price": 3000,
     "currency": " ARS",
-    "image_url": "granos-grvity.webp",
-    "stock": 120,
-    "sku": "CO500",
+    "image_url": "vaso250-coffeetime.webp",
+    "stock": 80,
+    "sku": "TLC350",
     "rating": 4.8,
-    "reviews_count": 25
+    "reviews_count": 14
   },
   {
     "id": 2,
-    "name": "Taza de Cerámica 350ml",
-    "category": "Tazas",
-    "description": "Taza de cerámica con el logo de la empresa.",
-    "price": 20000,
+    "name": "Vaso reutilizable Térmico 350ml",
+    "category": "Vasos Térmicos",
+    "description": "Vaso térmico reutilizable para llevar café caliente o frío.",
+    "price": 4500,
     "currency": " ARS",
     "stock": 80,
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
-    "colors": {
-      "Negro": ["taza-grvity.webp"],
-      "Blanco": ["taza-grvity-white.webp"],
-      "Azul": ["taza-grvity-blue.webp"]
-    }
+    "image_url": "vaso350-coffeetime.webp"
   },
   {
     "id": 3,
-    "name": "Vaso Térmico 450ml",
+    "name": "Vaso reutilizable Térmico 400ml",
     "category": "Vasos Térmicos",
-    "description": "Vaso térmico de acero inoxidable para llevar café caliente o frío.",
-    "price": 9000,
+    "description": "Vaso térmico reutilizable para llevar café caliente o frío.",
+    "price": 6000,
     "currency": " ARS",
     "stock": 50,
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
-    "colors": {
-      "Negro": ["cafe-grvity.webp"],
-      "Blanco": ["cafe-grvity-white.webp"],
-      "Azul": ["cafe-grvity-blue.webp"]
-    }
+    "image_url": "vaso400-coffeetime.webp"
   },
   {
     "id": 4,
-    "name": "Cápsulas de Café Intenso - 10 unidades",
-    "category": "Cápsulas",
-    "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
-    "price": 48700,
+    "name": "Granos de Café Orgánico 500g",
+    "category": "Granos de Café",
+    "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
+    "price": 7500,
     "currency": " ARS",
-    "image_url": "capsula-grvity.webp",
+    "image_url": "granoscafe-coffeetime.webp",
     "stock": 200,
     "sku": "CCI10",
     "rating": 4.9,
@@ -61,110 +53,115 @@
   },
   {
     "id": 5,
-    "name": "Gorra con Logo",
+    "name": "Delantal Coffee Time",
     "category": "Merchandising",
-    "description": "Gorra de algodón con el logo de la empresa.",
-    "price": 6700,
+    "description": "Delantal de cintura Coffee Time.",
+    "price": 9000,
     "currency": " ARS",
     "stock": 60,
     "sku": "GLN01",
     "rating": 4.3,
     "reviews_count": 10,
     "colors": {
-      "Negro": ["gorra-grvity.webp"],
-      "Blanco": ["gorra-grvity-white.webp"],
-      "Azul": ["gorra-grvity-blue.webp"]
+      "Negro": ["delantal-negro-coffeetime.webp"],
+      "Azul": ["delantal-azul-coffeetime.webp"],
+      "Marron": ["delantal-marron-coffeetime.webp"]
     }
   },
   {
     "id": 6,
-    "name": "Remera con Logo",
-    "category": "Merchandising",
-    "description": "Remera de algodón con el logo impreso.",
-    "price": 9800,
+    "name": "Cápsulas de Café Intenso - 10 unidades",
+    "category": "Cápsulas",
+    "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
+    "price": 38700,
     "currency": " ARS",
     "stock": 40,
     "sku": "RLB02",
     "rating": 4.6,
     "reviews_count": 18,
-    "colors": {
-      "Negro": ["remera-grvity.webp"],
-      "Blanco": ["remera-grvity-white.webp"],
-      "Azul": ["remera-grvity-blue.webp"]
-    }
+    "image_url": "capsulas-coffeetime.webp"
   },
   {
     "id": 7,
-    "name": "Buzo con Logo",
+    "name": "Porta Vasos Coffee Time - 5 unidades",
     "category": "Merchandising",
-    "description": "Buzo de algodón con capucha y el logo bordado.",
-    "price": 20900,
+    "description": "Porta Vasos Coffee Time.",
+    "price": 6000,
     "currency": " ARS",
     "stock": 25,
     "sku": "BLG03",
     "rating": 4.9,
     "reviews_count": 22,
     "colors": {
-      "Negro": ["buzo-grvity.webp"],
-      "Blanco": ["buzo-grvity-white.webp"],
-      "Azul": ["buzo-grvity-blue.webp"]
+      "Marron": ["portavasos-marron-coffeetime.webp"],
+      "Azul": ["portavasos-azul-coffeetime.webp"],
+      "Negro": ["portavasos-negro-coffeetime.webp"]
     }
   },
   {
     "id": 8,
-    "name": "Granos de Café Orgánico 500g v2",
-    "category": "Granos de Café",
-    "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
-    "price": 9000,
+    "name": "Cuaderno tapa dura Coffee Time",
+    "category": "Merchandising",
+    "description": "Cuaderno tapa dura anillado Coffee Time.",
+    "price": 6000,
     "currency": " ARS",
-    "image_url": "granos-grvity.webp",
     "stock": 120,
     "sku": "CO500",
     "rating": 4.8,
-    "reviews_count": 25
+    "reviews_count": 25,
+    "colors": {
+      "Negro": ["cuaderno-negro-coffeetime.webp"],
+      "Marron": ["cuaderno-marron-coffeetime.webp"],
+      "Naranja": ["cuaderno-naranja-coffeetime.webp"]
+    }
   },
+
   {
     "id": 9,
-    "name": "Taza de Cerámica 350ml v2",
-    "category": "Tazas",
-    "description": "Taza de cerámica con el logo de la empresa.",
-    "price": 20000,
+    "name": "Remera Coffee Time",
+    "category": "Merchandising",
+    "description": "Remera Coffee Time",
+    "price": 8000,
     "currency": " ARS",
-    "stock": 80,
-    "sku": "TLC350",
-    "rating": 4.5,
-    "reviews_count": 14,
     "colors": {
-      "Negro": ["taza-grvity.webp"],
-      "Blanco": ["taza-grvity-white.webp"],
-      "Azul": ["taza-grvity-blue.webp"]
-    }
+      "Blanco": ["remera-blanco-coffeetime.webp"],
+      "Negro": ["remera-negro-coffeetime.webp"],
+      "Azul": ["remera-azul-coffeetime.webp"]
+    },
+    "stock": 200,
+    "sku": "CCI10",
+    "rating": 4.9,
+    "reviews_count": 45
   },
   {
     "id": 10,
-    "name": "Vaso Térmico 450ml v2",
-    "category": "Vasos Térmicos",
-    "description": "Vaso térmico de acero inoxidable para llevar café caliente o frío.",
-    "price": 9000,
+    "name": "Taza Cerámica 250ml",
+    "category": "Merchandising",
+    "description": "Taza Cerámica 250ml",
+    "price": 8000,
     "currency": " ARS",
-    "stock": 50,
-    "sku": "VT450",
-    "rating": 4.7,
-    "reviews_count": 20,
     "colors": {
-      "Negro": ["cafe-grvity.webp"],
-      "Blanco": ["cafe-grvity-white.webp"],
-      "Azul": ["cafe-grvity-blue.webp"]
-    }
+      "Blanco": ["tazaceramica-coffeetime.webp"],
+      "Negro": ["tazaceramica-negro-coffeetime.webp"],
+      "Azul": ["tazaceramica-azul-coffeetime.webp"]
+    },
+    "stock": 200,
+    "sku": "CCI10",
+    "rating": 4.9,
+    "reviews_count": 45
   },
   {
     "id": 11,
-    "name": "Cápsulas de Café Intenso - 10 unidades v2",
-    "category": "Cápsulas",
-    "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
-    "price": 48700,
+    "name": "Buzo Coffee Time",
+    "category": "Merchandising",
+    "description": "Buzo Coffee Time",
+    "price": 15000,
     "currency": " ARS",
-    "image_url": "capsula-grvity.webp",
+    "colors": {
+      "Negro": ["buzo-negro-coffeetime.webp"],
+      "Blanco": ["buzo-blanco-coffeetime.webp"],
+      "Marron": ["buzo-marron-coffeetime.webp"]
+    },
     "stock": 200,
     "sku": "CCI10",
     "rating": 4.9,
@@ -172,164 +169,71 @@
   },
   {
     "id": 12,
-    "name": "Gorra con Logo v2",
+    "name": "Bolsa lisa de tela Coffe Time",
     "category": "Merchandising",
-    "description": "Gorra de algodón con el logo de la empresa.",
-    "price": 6700,
-    "currency": " ARS",
-    "stock": 60,
-    "sku": "GLN01",
-    "rating": 4.3,
-    "reviews_count": 10,
-    "colors": {
-      "Negro": ["gorra-grvity.webp"],
-      "Blanco": ["gorra-grvity-white.webp"],
-      "Azul": ["gorra-grvity-blue.webp"]
-    }
-  },
-  {
-    "id": 13,
-    "name": "Remera con Logo v2",
-    "category": "Merchandising",
-    "description": "Remera de algodón con el logo impreso.",
-    "price": 9800,
-    "currency": " ARS",
-    "stock": 40,
-    "sku": "RLB02",
-    "rating": 4.6,
-    "reviews_count": 18,
-    "colors": {
-      "Negro": ["remera-grvity.webp"],
-      "Blanco": ["remera-grvity-white.webp"],
-      "Azul": ["remera-grvity-blue.webp"]
-    }
-  },
-  {
-    "id": 14,
-    "name": "Buzo con Logo v2",
-    "category": "Merchandising",
-    "description": "Buzo de algodón con capucha y el logo bordado.",
-    "price": 20900,
-    "currency": " ARS",
-    "stock": 25,
-    "sku": "BLG03",
-    "rating": 4.9,
-    "reviews_count": 22,
-    "colors": {
-      "Negro": ["buzo-grvity.webp"],
-      "Blanco": ["buzo-grvity-white.webp"],
-      "Azul": ["buzo-grvity-blue.webp"]
-    }
-  },
-  {
-    "id": 15,
-    "name": "Granos de Café Orgánico 500g v3",
-    "category": "Granos de Café",
-    "description": "Café orgánico de alta calidad, tostado medio. 100% arábica.",
-    "price": 9000,
-    "image_url": "granos-grvity.webp",
-    "currency": " ARS",
-    "stock": 120,
-    "sku": "CO500",
-    "rating": 4.8,
-    "reviews_count": 25
-  },
-  {
-    "id": 16,
-    "name": "Taza de Cerámica 350ml v3",
-    "category": "Tazas",
-    "description": "Taza de cerámica con el logo de la empresa.",
-    "price": 20000,
+    "description": "Bolsa de tela Coffe Time.",
+    "price": 2500,
     "currency": " ARS",
     "stock": 80,
     "sku": "TLC350",
     "rating": 4.5,
     "reviews_count": 14,
-    "colors": {
-      "Negro": ["taza-grvity.webp"],
-      "Blanco": ["taza-grvity-white.webp"],
-      "Azul": ["taza-grvity-blue.webp"]
-    }
+    "image_url": "bolsamarron-coffeetime.webp"
   },
   {
-    "id": 17,
-    "name": "Vaso Térmico 450ml v3",
-    "category": "Vasos Térmicos",
-    "description": "Vaso térmico de acero inoxidable para llevar café caliente o frío.",
-    "price": 9000,
+    "id": 13,
+    "name": "Bolsa rayada de tela Coffe Time",
+    "category": "Merchandising",
+    "description": "Bolsa rayada de tela Coffe Time.",
+    "price": 2500,
     "currency": " ARS",
     "stock": 50,
     "sku": "VT450",
     "rating": 4.7,
     "reviews_count": 20,
-    "colors": {
-      "Negro": ["cafe-grvity.webp"],
-      "Blanco": ["taza-grvity-white.webp"],
-      "Azul": ["taza-grvity-blue.webp"]
-    }
+    "image_url": "bolsablanca-coffeetime.webp"
   },
   {
-    "id": 18,
-    "name": "Cápsulas de Café Intenso - 10 unidades v3",
-    "category": "Cápsulas",
-    "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
-    "price": 48700,
+    "id": 14,
+    "name": "Vaso térmico de Acero Inoxidable 250ml",
+    "category": "Vasos Térmicos",
+    "description": "Vaso térmico de Acero Inoxidable 250ml",
+    "price": 6000,
     "currency": " ARS",
-    "image_url": "capsula-grvity.webp",
+    "image_url": "vasotermico250-coffeetime.webp",
     "stock": 200,
     "sku": "CCI10",
     "rating": 4.9,
     "reviews_count": 45
   },
   {
-    "id": 19,
-    "name": "Gorra con Logo v3",
+    "id": 15,
+    "name": "Gorra Coffee Time",
     "category": "Merchandising",
-    "description": "Gorra de algodón con el logo de la empresa.",
-    "price": 6700,
+    "description": "Gorra Coffee Time",
+    "price": 6000,
     "currency": " ARS",
-    "stock": 60,
-    "sku": "GLN01",
-    "rating": 4.3,
-    "reviews_count": 10,
     "colors": {
-      "Negro": ["gorra-grvity.webp"],
-      "Blanco": ["gorra-grvity-white.webp"],
-      "Azul": ["gorra-grvity-blue.webp"]
-    }
-  },
-  {
-    "id": 20,
-    "name": "Remera con Logo v3",
-    "category": "Merchandising",
-    "description": "Remera de algodón con el logo impreso.",
-    "price": 9800,
-    "currency": " ARS",
-    "stock": 40,
-    "sku": "RLB02",
-    "rating": 4.6,
-    "reviews_count": 18,
-    "colors": {
-      "Negro": ["remera-grvity.webp"],
-      "Blanco": ["remera-grvity-white.webp"],
-      "Azul": ["remera-grvity-blue.webp"]
-    }
-  },
-  {
-    "id": 21,
-    "name": "Buzo con Logo v3",
-    "category": "Merchandising",
-    "description": "Buzo de algodón con capucha y el logo bordado.",
-    "price": 20900,
-    "currency": " ARS",
-    "stock": 25,
-    "sku": "BLG03",
+      "Marron": ["gorra-marron-coffeetime.webp"],
+      "Negro": ["gorra-negro-coffeetime.webp"],
+      "Azul": ["gorra-azul-coffeetime.webp"]
+    },
+    "stock": 200,
+    "sku": "CCI10",
     "rating": 4.9,
-    "reviews_count": 22,
-    "colors": {
-      "Negro": ["buzo-grvity.webp"],
-      "Blanco": ["buzo-grvity-white.webp"],
-      "Azul": ["buzo-grvity-blue.webp"]
-    }
+    "reviews_count": 45
+  },
+  {
+    "id": 16,
+    "name": "Sticker Coffee Time - 10 unidades",
+    "category": "Merchandising",
+    "description": "Sticker Autoadhesivo Coffee Time",
+    "price": 1400,
+    "currency": " ARS",
+    "image_url": "sticker-coffeetime.webp",
+    "stock": 200,
+    "sku": "CCI10",
+    "rating": 4.9,
+    "reviews_count": 45
   }
 ]
