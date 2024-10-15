@@ -14,7 +14,7 @@ interface ProductType {
   name: string;
   price: number;
   image_url?: string;
-  colors?: { [key: string]: string[] };
+  colors?: { [key: string]: string[] | undefined };
   description: string;
 }
 
@@ -106,7 +106,9 @@ const ProductId = ({ params }: { params: { productId: string } }) => {
                 <Image
                   className='w-full h-full object-contain object-bottom'
                   src={`/assets/products/${
-                    productById.colors && selectedColor
+                    productById.colors &&
+                    selectedColor &&
+                    productById.colors[selectedColor]
                       ? productById.colors[selectedColor][0]
                       : productById.image_url
                   }`}
