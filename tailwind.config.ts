@@ -26,7 +26,7 @@ const config: Config = {
         'color-title': '#141517',
         'color-title-light': '#ffff',
         'color-text': '#667781',
-        'color-text-light': '#d4d4d4',
+        'color-text-light': '#E0E0E0',
       },
     },
   },
