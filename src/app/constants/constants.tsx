@@ -1,35 +1,35 @@
 export const company = {
-  id: 'panda-coffee',
-  name: 'Panda Coffee',
-  adress: 'Ituzaingo 333',
-  city: 'San Isidro',
-  telephone: '1123922251',
+  id: 'estoico-coffee',
+  name: 'Estoico Café',
+  adress: 'Acoyte 899',
+  city: 'Caballito',
+  telephone: null,
   email: null,
-  instagram: 'pandacoffee.ar',
+  instagram: 'estoicocafe',
   facebook: null,
-  whatsapp: '1123922251',
+  whatsapp: null,
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13157.32306849437!2d-58.512258800000005!3d-34.4691324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1703d11276b%3A0xed74c2ebe47bf44d!2sPanda%20Coffee!5e0!3m2!1ses-419!2sar!4v1728693924876!5m2!1ses-419!2sar',
-  menu: 'https://www.canva.com/design/DAGC4QShem4/Som5XVlzYy-MwOCpE3v4Iw/view?utm_content=DAGC4QShem4&utm_campaign=designshare&utm_medium=link&utm_source=editor',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13135.414957834642!2d-58.450284634198!3d-34.60785980623461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccba5e0e19adb%3A0xc2dc96a25b4c78c4!2sEstoico%20Caf%C3%A9%20De%20Especialidad!5e0!3m2!1ses-419!2sar!4v1728699081128!5m2!1ses-419!2sar',
+  menu: 'https://menu.fu.do/estoico?fbclid=PAZXh0bgNhZW0CMTEAAaZy3PPAHPt1VxQo8Yc34vlw1yFGJAII_03OFiNmHdLRHZWbaElZd9yBuuM_aem_iNJd-LD8MxePe0tRih0jWQ',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:30'] },
-    { day: 'Martes', hours: ['09:00 a 18:30'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:30'] },
-    { day: 'Jueves', hours: ['09:00 a 18:30'] },
-    { day: 'Viernes', hours: ['09:00 a 18:30'] },
-    { day: 'Sábado', hours: ['09:00 a 18:30'] },
-    // { day: 'Domingo', hours: ['09:00 a 18:30'] },
+    { day: 'Lunes', hours: ['09:00 a 20:00'] },
+    // { day: 'Martes', hours: ['09:00 a 20:00'] },
+    { day: 'Miércoles', hours: ['08:30 a 20:00'] },
+    { day: 'Jueves', hours: ['09:00 a 20:00'] },
+    { day: 'Viernes', hours: ['08:30 a 20:00'] },
+    { day: 'Sábado', hours: ['09:00 a 20:00'] },
+    { day: 'Domingo', hours: ['09:00 a 20:00'] },
   ],
   footer: 'Café de Especialidad, dedicación y pasión por lo que hacemos.',
 };
 
 export const nosotros = {
-  text: 'En Panda Café, nos enorgullecemos de nuestra larga trayectoria con los más altos estándares de calidad. Con amplia experiencia en el rubro, nos hemos comprometido a brindar un ambiente ideal para que disfrutes de nuestra gastronomía con amigos y familiares.',
+  text: 'En Estoico Café, nos enorgullecemos de nuestra larga trayectoria con los más altos estándares de calidad. Con amplia experiencia en el rubro, nos hemos comprometido a brindar un ambiente ideal para que disfrutes de nuestra gastronomía con amigos y familiares.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://panda-cafe.vercel.app/',
-  title: 'Panda Café - Café de Especialidad',
+  metadataBase: 'https://estoico-cafe.vercel.app/',
+  title: 'Estoico Café - Café de Especialidad',
   description: 'Café de Especialidad, dedicación y pasión por lo que hacemos.',
 };
 
