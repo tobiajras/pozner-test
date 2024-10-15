@@ -24,7 +24,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
           className='relative rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.1)]'
         >
-          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary-dark/70 md:bg-color-bg-primary'>
+          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary-dark/85 md:bg-color-bg-primary'>
             <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
                 <span className='text-color-title-light md:text-color-primary'>
@@ -70,7 +70,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
           className='relative rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.1)]'
         >
-          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] md:order-2 h-full bg-color-secondary-dark/70 md:bg-color-bg-primary'>
+          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] md:order-2 h-full bg-color-secondary-dark/85 md:bg-color-bg-primary'>
             <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
                 <span className='text-color-title-light md:text-color-secondary'>
@@ -117,7 +117,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
           className=' relative rounded overflow-hidden flex flex-col items-start md:flex-row md:items-center md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.1)]'
         >
-          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary-dark/70 md:bg-color-bg-primary'>
+          <div className='px-5 md:px-10 py-8 sm:py-10 lg:py-16 max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[450px] lg:w-[600px] h-full bg-color-primary-dark/85 md:bg-color-bg-primary'>
             <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
                 <span className='text-color-title-light md:text-color-primary'>
