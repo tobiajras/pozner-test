@@ -40,7 +40,7 @@ const ContactoSection = () => {
         id='sedesSection'
         className='flex flex-col items-center my-8 md:my-14 lg:my-20 mx-4 sm:mx-6 md:mx-8 lg:mx-10'
       >
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-5 md:gap-x-16 gap-y-20'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-5 md:gap-x-16 gap-y-10 md:gap-y-20'>
           {sedes.map((sede) => (
             <motion.article
               initial={{ opacity: 0, y: 10 }}
