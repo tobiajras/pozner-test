@@ -106,7 +106,7 @@ const ContactoSection = () => {
                   {sede.whatsapp && (
                     <div className='flex w-full'>
                       <a
-                        href={`https://api.whatsapp.com/send?phone=549${company.whatsapp}&text=Hola! Quería hacer una consulta`}
+                        href={`https://api.whatsapp.com/send?phone=549${sede.whatsapp}&text=Hola! Quería hacer una consulta`}
                         target='_blank'
                         rel='noopener noreferrer'
                         className='flex justify-center items-center gap-1 bg-[#25D366] hover:bg-[#05B146] transition-colors text-color-title-light text-sm sm:text-base md:text-lg  py-2 px-4 rounded w-full text-center'
