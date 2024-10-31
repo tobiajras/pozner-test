@@ -91,9 +91,12 @@ const MenuPage = () => {
             className='py-5 w-full'
             key={menuCategory.id}
           >
-            <h4 className='text-color-title text-lg md:text-xl font-semibold'>
-              {menuCategory.category}
-            </h4>
+            <div className='flex items-center gap-3'>
+              <h4 className='text-color-primary text-lg md:text-xl font-semibold text-nowrap'>
+                {menuCategory.category}
+              </h4>
+              <div className='bg-color-primary h-0.5 w-full'></div>
+            </div>
             <ul className='flex flex-col w-full'>
               {menuCategory.products.map((menuItem) => (
                 <li
