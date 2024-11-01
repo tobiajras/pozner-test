@@ -10,12 +10,12 @@ body {
 
 .background-menu {
   background-image: url('/assets/company/cafe-pattern.webp');
-  background-size: 220px;
+  background-size: 200px;
 }
 
 @media (min-width: 640px) {
   .background-menu {
-    background-size: 260px;
+    background-size: 250px;
   }
 }
 @media (min-width: 768px) {

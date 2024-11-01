@@ -37,7 +37,7 @@ const MenuPage = () => {
 
   return (
     <section className='flex flex-col items-center relative'>
-      <div className='background-menu w-full h-full absolute -z-20 opacity-10'></div>
+      <div className='background-menu w-full h-full absolute -z-20 opacity-[0.075]'></div>
       <header className='sticky top-0 left-0 right-0 bottom-0 w-full flex flex-col items-center bg-color-bg-secondary z-50'>
         <div className='flex justify-center items-center gap-2 md:gap-3 h-20 p-4 max-w-xl'>
           <Image
