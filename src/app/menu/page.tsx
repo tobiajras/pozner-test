@@ -84,7 +84,7 @@ const MenuPage = () => {
           </div>
         </nav>
       </header>
-      <main className='flex flex-col items-center max-w-sm md:max-w-md lg:max-w-lg px-4 w-full'>
+      <main className='flex flex-col items-center max-w-sm md:max-w-md lg:max-w-lg px-4 w-full mb-10'>
         {menu.map((menuCategory) => (
           <Element
             name={menuCategory.category}
