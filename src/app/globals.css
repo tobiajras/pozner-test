@@ -8,6 +8,22 @@
 body {
 }
 
+.background-menu {
+  background-image: url('/assets/company/cafe-pattern.webp');
+  background-size: 220px;
+}
+
+@media (min-width: 640px) {
+  .background-menu {
+    background-size: 260px;
+  }
+}
+@media (min-width: 768px) {
+  .background-menu {
+    background-size: 280px;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
