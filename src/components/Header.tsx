@@ -42,6 +42,7 @@ const Header = () => {
             <Image
               priority
               className='w-[53px] h-[53px] md:w-14 md:h-14 lg:w-16 lg:h-16'
+              // className='w-[53px] h-[53px] md:w-14 md:h-14 lg:w-16 lg:h-16 ring-2 ring-white rounded-full'
               src='/assets/company/favicon.webp'
               alt={`${company.name} favicon`}
               width={64}

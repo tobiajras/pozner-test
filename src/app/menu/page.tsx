@@ -43,6 +43,7 @@ const MenuPage = () => {
           <Image
             priority
             className='w-14 h-14 lg:w-16 lg:h-16'
+            // className='w-14 h-14 lg:w-16 lg:h-16 ring-2 ring-white rounded-full'
             src='/assets/company/favicon.webp'
             alt='favicon'
             width={64}

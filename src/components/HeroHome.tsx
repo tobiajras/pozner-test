@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import { motion } from 'framer-motion';
 
-import { company } from '@/app/constants/constants';
+import { company, metadataCompany } from '@/app/constants/constants';
 
 const HeroHome = () => {
   return (
@@ -37,10 +37,19 @@ const HeroHome = () => {
             >
               Ver catálogo
             </Link>
-            {company.menu && (
+            {company.menu ? (
               <a
                 className='border-2 border-color-primary hover:bg-color-primary hover:text-color-title-light transition-colors px-4 md:px-6 py-3 font-medium text-color-primary rounded'
                 href={company.menu}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Ver Menú
+              </a>
+            ) : (
+              <a
+                className='border-2 border-color-primary hover:bg-color-primary hover:text-color-title-light transition-colors px-4 md:px-6 py-3 font-medium text-color-primary rounded'
+                href={`${metadataCompany.metadataBase}/menu`}
                 target='_blank'
                 rel='noopener noreferrer'
               >
