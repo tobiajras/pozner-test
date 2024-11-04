@@ -36,17 +36,17 @@ const ServiciosSection = () => {
           <div className='max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[400px] lg:w-[600px]'>
             <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
-                <span className='text-color-primary'>
+                <span className='text-color-title-light md:text-color-primary'>
                   Desayunos y Meriendas
                 </span>
               </h4>
             </div>
             <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[310px] md:w-[350px] lg:w-[500px]'>
-              <p className='text-color-text'>
+              <p className='text-color-text-light md:text-color-text'>
                 Despertá tus sentidos con nuestras delicias matutinas, ¡el café
                 perfecto y opciones saludables para arrancar con energía!
               </p>
-              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text'>
+              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text-light md:text-color-text'>
                 <li>• Café</li>
                 <li>• Medialunas</li>
                 <li>• Tostadas</li>
@@ -82,18 +82,18 @@ const ServiciosSection = () => {
           <div className='max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[400px] lg:w-[600px]'>
             <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
-                <span className='text-color-primary'>
+                <span className='text-color-title-light md:text-color-primary'>
                   Almorzá con sabor y frescura
                 </span>
               </h4>
             </div>
             <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[310px] md:w-[350px] lg:w-[500px]'>
-              <p className='text-color-text'>
+              <p className='text-color-text-light md:text-color-text'>
                 Disfrutá de nuestros almuerzos caseros, preparados con
                 ingredientes frescos y un toque único. ¡Ideal para una pausa en
                 tu día!
               </p>
-              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text'>
+              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text-light md:text-color-text'>
                 <li>• Pastas</li>
                 <li>• Milanesas</li>
                 <li>• Sandwiches</li>
@@ -129,18 +129,18 @@ const ServiciosSection = () => {
           <div className='max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[400px] lg:w-[600px]'>
             <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
               <h4 className='flex flex-col gap-1'>
-                <span className='text-color-primary'>
+                <span className='text-color-title-light md:text-color-primary'>
                   Postres caseros y más
                 </span>
               </h4>
             </div>
             <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[310px] md:w-[350px] lg:w-[500px]'>
-              <p className='text-color-text'>
+              <p className='text-color-text-light md:text-color-text'>
                 Deleitate con nuestros irresistibles postres. Desde clásicos que
                 enamoran hasta creaciones únicas, cada bocado es una dulce
                 celebración para tu paladar. ¡No te vayas sin probarlos!
               </p>
-              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text'>
+              <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text-light md:text-color-text'>
                 <li>• Ensalada de fruta</li>
                 <li>• Panqueques</li>
                 <li>• Brownie</li>
