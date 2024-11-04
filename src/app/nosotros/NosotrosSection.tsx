@@ -43,7 +43,7 @@ const NosotrosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
           className='flex flex-col items-center'
         >
-          <h4 className='text-2xl sm:text-4xl lg:text-5xl font-aleo-font font-semibold text-color-title text-center'>
+          <h4 className='text-2xl sm:text-3xl lg:text-4xl font-aleo-font font-semibold text-color-title text-center'>
             Conocé más de <span className='text-color-primary'>Nosotros</span>
           </h4>
           <p className='w-full max-w-[380px] sm:max-w-max sm:w-[480px] lg:w-[500px] xl:w-[620px] text-center text-color-text text-sm sm:text-base lg:text-lg mt-2 sm:mt-3'>
