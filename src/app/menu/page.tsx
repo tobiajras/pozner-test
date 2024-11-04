@@ -100,7 +100,7 @@ const MenuPage = () => {
               <div className='bg-color-primary h-0.5 w-full'></div>
             </div>
             <ul className='flex flex-col w-full'>
-              {menuCategory.products.map((menuItem) => (
+              {menuCategory.products.map((menuItem, idx) => (
                 <li
                   className='flex justify-between py-5 border-b'
                   key={menuItem.id}
@@ -118,9 +118,10 @@ const MenuPage = () => {
                       ${menuItem.price.toLocaleString('es-ES')}
                     </span>
                   </div>
-                  <div>
+                  <div className='w-24 h-24 sm:w-28 sm:h-28 overflow-hidden rounded shadow-[0_0_10px_rgba(0,0,0,0.3)] shadow-gray-400'>
                     <Image
-                      className='w-24 h-24 sm:w-28 sm:h-28 object-contain'
+                      priority={idx < 5 && true}
+                      className='w-full h-full object-contain'
                       src={`/assets/menu/${menuItem.image}`}
                       width={200}
                       height={200}
