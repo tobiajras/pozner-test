@@ -14,7 +14,7 @@ const HeroHome = () => {
             EN{' '}
             <span className='font-semibold'>{company.name.toUpperCase()}</span>
           </h1>
-          <div className='text-color-text-light text-center md:text-left text-sm sm:text-base lg:text-xl max-w-[300px] md:max-w-[360px] lg:max-w-[650px] sm:mt-3 md:mt-5 lg:mt-8'>
+          <div className='text-color-text-light text-center md:text-left text-sm sm:text-base lg:text-xl max-w-[300px] md:max-w-[360px] lg:max-w-[650px] mt-3 md:mt-5 lg:mt-8'>
             <p className='text-nowrap'>
               Café de especialidad + Delicias caseras,
             </p>
