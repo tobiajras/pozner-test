@@ -134,7 +134,7 @@ const Footer: React.FC<FooterProps> = () => {
             </article>
           </div>
         </section>
-        <section className='flex justify-center w-full pb-16 pt-8 border-t border-color-primary'>
+        <section className='flex justify-center w-full pb-16 pt-8 border-t-2 border-color-primary'>
           <article className='flex flex-col md:flex-row justify-between items-center text-sm sm:text-base gap-3 sm:gap-5 w-full max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
             <div className='flex items-center gap-1 sm:gap-2 text-color-text-light'>
               <span>© Copyright 2024</span>

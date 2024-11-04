@@ -1,64 +1,64 @@
 export const company = {
-  id: 'chois-cafe',
-  name: 'Choi’s Café',
-  adress: null,
-  city: null,
-  telephone: null,
+  id: 'san-cafe',
+  name: 'San Café',
+  adress: 'Paraguay 3511',
+  city: 'Palermo',
+  telephone: '1170611286',
   email: null,
-  instagram: 'choiscafe_',
+  instagram: 'sancafe.ba',
   facebook: null,
-  whatsapp: null,
+  whatsapp: '1170611286',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13132.039548257635!2d-58.481960005531036!3d-34.629190436028594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc96c42e2e521%3A0xe54f73e2a3724079!2sChoi&#39;s%20%26%20Cafe!5e0!3m2!1ses-419!2sar!4v1728793792504!5m2!1ses-419!2sar',
-  menu: 'https://pedix.app/choiscafe/categoria/IvAWVDzKtInNIIrt5MPN',
+    'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15032078.654732473!2d-76.7359454!3d-23.0992527!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb053474b4c7%3A0x22ff6ddcecff662a!2sSan%20Cafe!5e0!3m2!1ses-419!2sar!4v1729618978221!5m2!1ses-419!2sar',
+  menu: 'https://drive.google.com/file/d/1GqBM6YlCj9yExM1XMdNLwQun5_NeYWDP/view',
   openDays: [
-    { day: 'Lunes', hours: ['07:00 a 20:00'] },
-    { day: 'Martes', hours: ['07:00 a 20:00'] },
-    { day: 'Miércoles', hours: ['07:00 a 20:00'] },
-    { day: 'Jueves', hours: ['07:00 a 20:00'] },
-    { day: 'Viernes', hours: ['07:00 a 20:00'] },
-    { day: 'Sábado', hours: ['07:00 a 20:00'] },
-    { day: 'Domingo', hours: ['08:00 a 16:00'] },
+    { day: 'Lunes', hours: ['08:00 a 21:00'] },
+    { day: 'Martes', hours: ['08:00 a 21:00'] },
+    { day: 'Miércoles', hours: ['08:00 a 21:00'] },
+    { day: 'Jueves', hours: ['08:00 a 21:00'] },
+    { day: 'Viernes', hours: ['08:00 a 21:00'] },
+    { day: 'Sábado', hours: ['08:00 a 21:00'] },
+    { day: 'Domingo', hours: ['10:00 a 20:00'] },
   ],
   footer: 'Café de Especialidad, dedicación y pasión por lo que hacemos.',
 };
 
 export const nosotros = {
-  text: 'En Choi’s Café, nos enorgullecemos de nuestra larga trayectoria con los más altos estándares de calidad. Con amplia experiencia en el rubro, nos hemos comprometido a brindar un ambiente ideal para que disfrutes de nuestra gastronomía con amigos y familiares.',
+  text: 'En San Café, nos enorgullecemos de nuestra larga trayectoria con los más altos estándares de calidad. Con amplia experiencia en el rubro, nos hemos comprometido a brindar un ambiente ideal para que disfrutes de nuestra gastronomía con amigos y familiares.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://chois-cafe.vercel.app/',
-  title: 'Choi’s Café - Café de Especialidad',
+  metadataBase: 'https://san-cafe.vercel.app/',
+  title: 'San Café - Café de Especialidad',
   description: 'Café de Especialidad, dedicación y pasión por lo que hacemos.',
 };
 
-export const sedes = [
-  {
-    id: 1,
-    title: 'Avellaneda',
-    adress: 'Av. Avellaneda 3780',
-    city: 'Flores',
-    tel: '1166136307',
-    whatsapp: '1166136307',
-    schedule:
-      'Horario: Lunes a Viernes 07:00 a 20:00hs | Sábados y Domingos 08:00 a 20:00hs',
-    appointment: 'https://maps.app.goo.gl/rQDHMRJeVE47QXJ9A',
-    image: 'sedes-1.webp',
-  },
-  {
-    id: 2,
-    title: 'Emilio Lamarca',
-    adress: 'Emilio Lamarca 698',
-    city: 'Flores',
-    tel: '1154823625',
-    whatsapp: '1154823625',
-    schedule:
-      'Horario: Lunes a Viernes 07:00 a 17:00hs | Sábados 08:00 a 13:00hs | Domingos 07:00 a 17:00hs',
-    appointment: 'https://maps.app.goo.gl/K15nicEoja6Mm5As8',
-    image: 'sedes-2.webp',
-  },
-];
+// export const sedes = [
+//   {
+//     id: 1,
+//     title: 'Avellaneda',
+//     adress: 'Av. Avellaneda 3780',
+//     city: 'Flores',
+//     tel: '1166136307',
+//     whatsapp: '1166136307',
+//     schedule:
+//       'Horario: Lunes a Viernes 07:00 a 20:00hs | Sábados y Domingos 08:00 a 20:00hs',
+//     appointment: 'https://maps.app.goo.gl/rQDHMRJeVE47QXJ9A',
+//     image: 'sedes-1.webp',
+//   },
+//   {
+//     id: 2,
+//     title: 'Emilio Lamarca',
+//     adress: 'Emilio Lamarca 698',
+//     city: 'Flores',
+//     tel: '1154823625',
+//     whatsapp: '1154823625',
+//     schedule:
+//       'Horario: Lunes a Viernes 07:00 a 17:00hs | Sábados 08:00 a 13:00hs | Domingos 07:00 a 17:00hs',
+//     appointment: 'https://maps.app.goo.gl/K15nicEoja6Mm5As8',
+//     image: 'sedes-2.webp',
+//   },
+// ];
 
 export const navigation = [
   {
