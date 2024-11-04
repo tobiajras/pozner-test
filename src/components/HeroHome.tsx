@@ -9,7 +9,7 @@ import { company, metadataCompany } from '@/app/constants/constants';
 
 const HeroHome = () => {
   return (
-    <section className='mb-20'>
+    <section className='mb-20 md:my-20'>
       <div className='flex flex-col md:flex-row justify-center items-center md:gap-6 lg:gap-8 xl:gap-10'>
         <motion.article
           initial={{ opacity: 0, x: -10 }}
@@ -70,10 +70,10 @@ const HeroHome = () => {
           }}
           viewport={{ once: true }}
         >
-          <div className='w-[280px] sm:w-[320px] md:w-[340px] lg:w-[440px] xl:w-[520px] relative'>
+          <div className='w-[220px] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[450px] relative'>
             <Image
               priority
-              className='w-full h-full md:object-contain rounded-b-md'
+              className='w-full h-full md:object-contain rounded-md'
               src='/assets/inicio/home-background.webp'
               alt='Imágen de inicio'
               width={400}
