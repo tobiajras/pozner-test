@@ -45,12 +45,12 @@ const HeroHome = () => {
                 </a>
               ) : (
                 <a
-                  className='px-4 md:px-6 py-3 text-color-title-light rounded'
+                  className='px-4 md:px-6 py-3 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full bg-color-primary hover:bg-color-primary-dark transition-colors text-color-title-light font-medium text-sm md:text-lg lg:text-xl ring lg:ring-4 ring-color-title-light flex items-center justify-center'
                   href={`${metadataCompany.metadataBase}/menu`}
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  Ver Menú
+                  MENÚ
                 </a>
               )}
             </div>
