@@ -7,13 +7,12 @@ const HeroHome = () => {
     <section className='mb-20 bg-color-primary flex justify-center overflow-hidden'>
       <div className='flex flex-col md:flex-row justify-center items-center gap-10 md:gap-3 lg:gap-8 xl:gap-10 max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         <article className='mt-10 mb-5 mx-6 sm:mx-8 md:mx-0 md:mt-0 md:mb-0'>
-          <h3 className='text-nowrap text-center md:text-left text-[35px] sm:text-[40px] leading-10 lg:text-6xl font-medium text-color-title-light'>
-            SABORES ÚNICOS
-          </h3>
-          <h1 className='text-nowrap text-center md:text-left text-[35px] sm:text-[40px] leading-10 lg:text-6xl font-medium text-color-title-light'>
-            EN{' '}
-            <span className='font-semibold'>{company.name.toUpperCase()}</span>
+          <h1 className='text-nowrap text-center md:text-left text-[35px] sm:text-[40px] leading-10 lg:text-6xl font-semibold text-color-title-light'>
+            {company.name}
           </h1>
+          <h3 className='text-nowrap text-center md:text-left text-3xl sm:text-4xl lg:text-5xl font-medium text-color-title-light'>
+            Brunch & Café
+          </h3>
           <div className='text-color-text-light text-center md:text-left text-sm sm:text-base lg:text-xl max-w-[300px] md:max-w-[360px] lg:max-w-[650px] mt-3 md:mt-5 lg:mt-8'>
             <p className='text-nowrap'>
               Café de especialidad + Delicias caseras,

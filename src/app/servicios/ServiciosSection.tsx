@@ -24,7 +24,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
         >
           <div className='bg-color-primary-dark/80 md:bg-transparent px-5 py-8 sm:py-10 md:px-0 max-w-[320px] sm:max-w-[350px] md:max-w-full w-full flex gap-5 lg:gap-10 justify-center items-center relative rounded md:rounded-none'>
-            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
+            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] xl:w-[320px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
               <Image
                 className='w-full h-full object-cover'
                 src='/assets/servicios/servicio-1.webp'
@@ -43,8 +43,8 @@ const ServiciosSection = () => {
               </div>
               <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[310px] md:w-[350px] lg:w-[500px]'>
                 <p className='text-color-text-light md:text-color-text'>
-                  Despertá tus sentidos con nuestras delicias matutinas, ¡el
-                  café perfecto y opciones saludables para arrancar con energía!
+                  Empezá el día con lo mejor: un café delicioso y una selección
+                  de sabores frescos y saludables para renovar energías
                 </p>
                 <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text-light md:text-color-text'>
                   <li>• Café</li>
@@ -70,8 +70,8 @@ const ServiciosSection = () => {
           }}
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
         >
-          <div className='bg-color-primary-dark/80 md:bg-transparent px-5 py-8 sm:py-10 md:px-0 max-w-[320px] sm:max-w-[350px] md:max-w-full w-full flex gap-5 lg:gap-10 justify-center items-center relative rounded md:rounded-none'>
-            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
+          <div className='bg-color-secondary-dark/80 md:bg-transparent px-5 py-8 sm:py-10 md:px-0 max-w-[320px] sm:max-w-[350px] md:max-w-full w-full flex gap-5 lg:gap-10 justify-center items-center relative rounded md:rounded-none'>
+            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] xl:w-[320px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
               <Image
                 className='w-full h-full object-cover'
                 src='/assets/servicios/servicio-2.webp'
@@ -83,23 +83,23 @@ const ServiciosSection = () => {
             <div className='max-w-[320px] sm:max-w-[350px] md:max-w-full md:w-[400px] lg:w-[600px]'>
               <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
                 <h4 className='flex flex-col gap-1'>
-                  <span className='text-color-title-light md:text-color-primary'>
-                    Almorzá con sabor y frescura
+                  <span className='text-color-title-light md:text-color-secondary'>
+                    El Brunch perfecto
                   </span>
                 </h4>
               </div>
               <div className='flex flex-col gap-4 md:text-lg lg:text-lg w-full max-w-[380px] sm:max-w-max sm:w-[310px] md:w-[350px] lg:w-[500px]'>
                 <p className='text-color-text-light md:text-color-text'>
-                  Disfrutá de nuestros almuerzos caseros, preparados con
-                  ingredientes frescos y un toque único. ¡Ideal para una pausa
-                  en tu día!
+                  Disfrutá de nuestras comidas caseras, preparadas con
+                  ingredientes frescos y un toque especial. ¡Perfectas para
+                  cualquier hora del día!
                 </p>
                 <ul className='grid grid-cols-2 text-sm sm:text-base md:text-lg text-color-text-light md:text-color-text'>
-                  <li>• Pastas</li>
-                  <li>• Milanesas</li>
-                  <li>• Sandwiches</li>
-                  <li>• Carnes</li>
-                  <li>• Guarniciones</li>
+                  <li>• Sándwiches gourmet</li>
+                  <li>• Wraps</li>
+                  <li>• Bagels rellenos</li>
+                  <li>• Croissants</li>
+                  <li>• Waffles</li>
                   <li>• Ensaladas</li>
                 </ul>
               </div>
@@ -119,7 +119,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
         >
           <div className='bg-color-primary-dark/80 md:bg-transparent px-5 py-8 sm:py-10 md:px-0 max-w-[320px] sm:max-w-[350px] md:max-w-full w-full flex gap-5 lg:gap-10 justify-center items-center relative rounded md:rounded-none'>
-            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
+            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] xl:w-[320px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
               <Image
                 className='w-full h-full object-cover'
                 src='/assets/servicios/servicio-3.webp'
@@ -132,7 +132,7 @@ const ServiciosSection = () => {
               <div className='text-xl sm:text-2xl lg:text-4xl font-aleo-font font-semibold mb-1 sm:mb-2'>
                 <h4 className='flex flex-col gap-1'>
                   <span className='text-color-title-light md:text-color-primary'>
-                    Postres caseros y más
+                    Delicias Dulces
                   </span>
                 </h4>
               </div>
