@@ -1,10 +1,11 @@
 'use client';
 
-import products from '@/data/products.json';
+import products from '@/data/catalogo.json';
 
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 interface CarrouselFeaturedProps {
   title: string;
@@ -19,34 +20,51 @@ const CarrouselFeatured = ({
 }: CarrouselFeaturedProps) => {
   const [emblaRef] = useEmblaCarousel({ dragFree: true });
 
+  const [clicked, setClicked] = useState(false);
+
   return (
     <section className='flex justify-center w-full'>
-      <div className=' max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden pb-6 md:pb-10'>
+      <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden pb-6 md:pb-10'>
         <h3 className='mb-3 font-medium text-xl sm:text-2xl sm:mb-5'>
           {title}
         </h3>
-        <div ref={emblaRef}>
+        <div
+          onMouseUp={() => setClicked(false)}
+          onMouseDown={() => setClicked(true)}
+          ref={emblaRef}
+          className={` ${clicked ? 'cursor-grabbing' : 'cursor-grab'}`}
+        >
           <div className='flex gap-3 sm:gap-5'>
             {products.slice(startIndex, lastIndex).map((product) => (
               <Link
-                href={`/productos/${product.id}`}
-                className='w-full flex-[0_0_43%] p-3 bg-[#f6f6f6] hover:bg-[#EEEEEE] transition-colors rounded-sm relative sm:p-5 sm:flex-[0_0_28%]  lg:flex-[0_0_21%]'
+                href={`/catalogo/${product.id}`}
+                className='w-full h-full overflow-hidden flex-[0_0_40%] rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] hover:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.3)] transition-all relative1 sm:flex-[0_0_33%] lg:flex-[0_0_28%]'
                 key={product.id}
               >
-                <div className='flex flex-col w-full h-full'>
+                <div className='flex overflow-hidden max-h-64'>
                   <Image
                     width={451}
                     height={600}
-                    className='object-contain px-3 py-5 md:px-5 md:py-12 h-36 min-[500px]:h-44 md:h-56 lg:h-72'
-                    src={`/assets/products/${product.image}`}
+                    className='object-cover w-full h-full overflow-hidden'
+                    src={`/assets/catalogo/${product.marca?.toLowerCase()}/${
+                      product.id
+                    }/${product.images?.[0] || 'placeholder.webp'}`}
                     alt={product.name}
                   />
-                  <h3 className='text-color-title font-semibold h-12 line-clamp-2 mb-1 max-w-48'>
+                </div>
+                <div className='py-5 px-3'>
+                  <h3 className='md:text-xl text-color-title font-semibold h-16 line-clamp-2 mb-1 max-w-64'>
                     {product.name}
                   </h3>
-                  <span className='font-medium text-lg'>
-                    ${product.price.toLocaleString('es-ES')}
-                  </span>
+                  <div className='flex flex-col gap-1'>
+                    <span className='text-color-text'>
+                      {product.ano} |{' '}
+                      {(product.kilometraje ?? 0).toLocaleString('es-ES')} km
+                    </span>
+                    <span className='text-color-text'>
+                      {product.transmision} | {product.combustible}
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}

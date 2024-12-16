@@ -46,18 +46,16 @@ const HeroHome = () => {
               Descubrí las mejores opciones, calidad garantizada y financiación
               a tu medida. ¡Esperamos tu mensaje!
             </p>
-            {company.mercadolibre && (
-              <div className='flex mt-4 md:mt-3'>
-                <a
-                  href='/catalogo'
-                  target='_blank'
-                  className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title-light rounded'
-                  // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title rounded'
-                >
-                  Ver Catálogo
-                </a>
-              </div>
-            )}
+            <div className='flex mt-4 md:mt-3'>
+              <a
+                href='/catalogo'
+                target='_blank'
+                // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title-light rounded font-medium'
+                className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title rounded font-medium'
+              >
+                Ver Catálogo
+              </a>
+            </div>
           </article>
           <div className='absolute w-3 sm:w-5 md:w-10 lg:w-16 h-full top-0 -left-5 bg-gradient-to-r from-color-bg-secondary'></div>
           <div className='absolute w-3 sm:w-5 md:w-10 lg:w-16 h-full top-0 -right-5 bg-gradient-to-l from-color-bg-secondary'></div>

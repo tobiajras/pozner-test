@@ -123,7 +123,7 @@
     ]
   },
   {
-    "id": "chevrolet-meriva-5",
+    "id": "meriva-5",
     "name": "Chevrolet Meriva 1.8",
     "marca": "Chevrolet",
     "modelo": "Meriva",
@@ -135,23 +135,23 @@
     "direccion": "Hidráulica",
     "puertas": 5,
     "images": [
-      "chevrolet-meriva-5-1.webp",
-      "chevrolet-meriva-5-2.webp",
-      "chevrolet-meriva-5-3.webp",
-      "chevrolet-meriva-5-4.webp",
-      "chevrolet-meriva-5-5.webp",
-      "chevrolet-meriva-5-6.webp",
-      "chevrolet-meriva-5-7.webp",
-      "chevrolet-meriva-5-8.webp",
-      "chevrolet-meriva-5-9.webp",
-      "chevrolet-meriva-5-10.webp",
-      "chevrolet-meriva-5-11.webp",
-      "chevrolet-meriva-5-12.webp",
-      "chevrolet-meriva-5-13.webp",
-      "chevrolet-meriva-5-14.webp",
-      "chevrolet-meriva-5-15.webp",
-      "chevrolet-meriva-5-16.webp",
-      "chevrolet-meriva-5-17.webp"
+      "meriva-5-1.webp",
+      "meriva-5-2.webp",
+      "meriva-5-3.webp",
+      "meriva-5-4.webp",
+      "meriva-5-5.webp",
+      "meriva-5-6.webp",
+      "meriva-5-7.webp",
+      "meriva-5-8.webp",
+      "meriva-5-9.webp",
+      "meriva-5-10.webp",
+      "meriva-5-11.webp",
+      "meriva-5-12.webp",
+      "meriva-5-13.webp",
+      "meriva-5-14.webp",
+      "meriva-5-15.webp",
+      "meriva-5-16.webp",
+      "meriva-5-17.webp"
     ]
   },
   {
@@ -165,20 +165,27 @@
     "combustible": "Nafta",
     "transmision": "Manual",
     "direccion": "Eléctrica",
-    "puertas": 5
-  },
-  {
-    "id": 6,
-    "name": "Cápsulas de Café Intenso - 10 unidades",
-    "category": "Cápsulas",
-    "description": "Cápsulas compatibles con máquinas Nespresso. Sabor intenso y profundo.",
-    "price": 38700,
-    "currency": " ARS",
-    "stock": 40,
-    "sku": "RLB02",
-    "rating": 4.6,
-    "reviews_count": 18,
-    "image": "capsulas-coffeetime.webp"
+    "puertas": 5,
+    "images": [
+      "ford-ka-6-1.webp",
+      "ford-ka-6-2.webp",
+      "ford-ka-6-3.webp",
+      "ford-ka-6-4.webp",
+      "ford-ka-6-5.webp",
+      "ford-ka-6-6.webp",
+      "ford-ka-6-7.webp",
+      "ford-ka-6-8.webp",
+      "ford-ka-6-9.webp",
+      "ford-ka-6-10.webp",
+      "ford-ka-6-11.webp",
+      "ford-ka-6-12.webp",
+      "ford-ka-6-13.webp",
+      "ford-ka-6-14.webp",
+      "ford-ka-6-15.webp",
+      "ford-ka-6-16.webp",
+      "ford-ka-6-17.webp",
+      "ford-ka-6-18.webp"
+    ]
   },
   {
     "id": "captur-7",
@@ -430,44 +437,5 @@
       "peugeot408-13-19.webp",
       "peugeot408-13-20.webp"
     ]
-  },
-  {
-    "id": 14,
-    "name": "Vaso térmico de Acero Inoxidable 250ml",
-    "category": "Vasos Térmicos",
-    "description": "Vaso térmico de Acero Inoxidable 250ml",
-    "price": 6000,
-    "currency": " ARS",
-    "image": "vasotermico250-coffeetime.webp",
-    "stock": 200,
-    "sku": "CCI10",
-    "rating": 4.9,
-    "reviews_count": 45
-  },
-  {
-    "id": 15,
-    "name": "Gorra Coffee Time",
-    "category": "Merchandising",
-    "description": "Gorra Coffee Time",
-    "price": 6000,
-    "currency": " ARS",
-    "image": "gorra-marron-coffeetime.webp",
-    "stock": 200,
-    "sku": "CCI10",
-    "rating": 4.9,
-    "reviews_count": 45
-  },
-  {
-    "id": 16,
-    "name": "Sticker Coffee Time - 10 unidades",
-    "category": "Merchandising",
-    "description": "Sticker Autoadhesivo Coffee Time",
-    "price": 1400,
-    "currency": " ARS",
-    "image": "sticker-coffeetime.webp",
-    "stock": 200,
-    "sku": "CCI10",
-    "rating": 4.9,
-    "reviews_count": 45
   }
 ]

@@ -12,11 +12,7 @@ export default function Home() {
         <main className='flex flex-col w-full'>
           <HeroHome />
           <ServiciosHome />
-          <CarrouselFeatured
-            title='Lanzamientos'
-            startIndex={0}
-            lastIndex={8}
-          />
+          <CarrouselFeatured title='Ingresos' startIndex={0} lastIndex={8} />
           <CarrouselFeatured title='Destacados' startIndex={8} lastIndex={16} />
           <PreguntasHome />
           <LogosCarousel />

@@ -1,6 +1,6 @@
 'use client';
 
-import products from '@/data/products.json';
+import products from '@/data/catalogo.json';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
@@ -52,33 +52,41 @@ const CatalogoPage = () => {
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/70 to-color-bg-secondary/100'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/60 to-color-bg-secondary/80'></div>
         </section>
         <>
           {filteredProducts.length > 0 ? ( // Verificar si hay productos filtrados
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10 my-10 md:my-20 min-h-[600px] place-content-start'>
+            <div className='max-w-6xl grid grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10 my-10 md:my-20 min-h-[600px] place-content-start'>
               {filteredProducts.map((product) => (
                 <Link
                   href={`/catalogo/${product.id}`}
-                  className='flex flex-col items-center py-6 px-4 sm:py-8 sm:px-8 bg-[#f6f6f6] hover:bg-[#EEEEEE] transition-colors rounded-sm'
+                  className='flex flex-col items-center overflow-hidden rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] hover:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.3)] transition-all'
                   key={product.id}
                 >
-                  <div className='h-[120px] sm:h-36 lg:h-44 w-[120px] sm:w-36 lg:w-44'>
+                  <div className=''>
                     <Image
-                      className='w-full h-full object-contain object-bottom'
-                      src={`/assets/catalogo/${product.image}`}
+                      className='w-full h-full object-cover overflow-hidden'
+                      src={`/assets/catalogo/${product.marca?.toLowerCase()}/${
+                        product.id
+                      }/${product.images?.[0] || 'placeholder.webp'}`}
                       alt={product.name}
                       width={150}
                       height={150}
                     />
                   </div>
-                  <div className='mt-8 w-full'>
-                    <h4 className='text-sm sm:text-base text-color-title font-semibold h-10 sm:h-12 line-clamp-2 mb-1 max-w-[120px] sm:max-w-36 lg:max-w-44'>
+                  <div className='mt-8 w-full px-3 py-5'>
+                    <h4 className='md:text-xl text-color-title font-semibold h-12 sm:h-16 line-clamp-2 mb-1 max-w-[150px] sm:max-w-44 lg:max-w-64'>
                       {product.name}
                     </h4>
-                    <span className='font-medium text-lg'>
-                      ${product.price.toLocaleString('es-ES')}
-                    </span>
+                    <div className='flex flex-col gap-1'>
+                      <span className=' text-color-text'>
+                        {product.ano} |{' '}
+                        {(product.kilometraje ?? 0).toLocaleString('es-ES')} km
+                      </span>
+                      <span className=' text-color-text'>
+                        {product.transmision} | {product.combustible}
+                      </span>
+                    </div>
                   </div>
                 </Link>
               ))}
