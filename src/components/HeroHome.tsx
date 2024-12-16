@@ -1,60 +1,68 @@
-import Image from 'next/image';
+'use client';
 
-import { company, metadataCompany } from '@/app/constants/constants';
+import { TypeAnimation } from 'react-type-animation';
+import { company } from '@/app/constants/constants';
+import LocationZoneIcon from './icons/LocationZoneIcon';
 
 const HeroHome = () => {
   return (
-    <section className='mb-20 bg-color-primary flex justify-center overflow-hidden'>
-      <div className='flex flex-col md:flex-row justify-center items-center gap-10 md:gap-3 lg:gap-8 xl:gap-10 max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-        <article className='mt-10 mb-5 mx-6 sm:mx-8 md:mx-0 md:mt-0 md:mb-0'>
-          <h1 className='text-nowrap text-center md:text-left text-[35px] sm:text-[40px] leading-10 lg:text-6xl font-semibold text-color-title-light'>
-            {company.name}
-          </h1>
-          <h3 className='text-nowrap text-center md:text-left text-3xl sm:text-4xl lg:text-5xl font-medium text-color-title-light'>
-            Brunch & Café
-          </h3>
-          <div className='text-color-text-light text-center md:text-left text-sm sm:text-base lg:text-xl max-w-[300px] md:max-w-[360px] lg:max-w-[650px] mt-3 md:mt-5 lg:mt-8'>
-            <p className='text-nowrap'>
-              Café de especialidad + Delicias caseras,
-            </p>
-            <p className='text-nowrap'>
-              la combinación ideal para empezar tu día
-            </p>
-          </div>
-        </article>
-        <article>
-          <div className='w-[220px] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[550px] relative'>
-            <Image
-              priority
-              className='md:ml-20 lg:ml-32 w-full h-full md:object-contain'
-              src='/assets/inicio/home-background.webp'
-              alt='Imágen de inicio'
-              width={400}
-              height={400}
-            />
-            <div className='absolute -top-10 left-0 w-full md:w-auto md:top-0 md:left-6 lg:left-16 h-full flex justify-center md:items-center'>
-              {company.menu ? (
-                <a
-                  className='px-4 md:px-6 py-3 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full bg-color-primary hover:bg-color-primary-dark transition-colors text-color-title-light font-medium text-sm md:text-lg lg:text-xl ring lg:ring-4 ring-color-title-light flex items-center justify-center'
-                  href={company.menu}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  MENÚ
-                </a>
-              ) : (
-                <a
-                  className='px-4 md:px-6 py-3 w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full bg-color-primary hover:bg-color-primary-dark transition-colors text-color-title-light font-medium text-sm md:text-lg lg:text-xl ring lg:ring-4 ring-color-title-light flex items-center justify-center'
-                  href={`${metadataCompany.metadataBase}/menu`}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  MENÚ
-                </a>
-              )}
+    <section
+      id='inicioSection'
+      className='flex justify-center overflow-hidden bg-color-bg-secondary'
+    >
+      <div
+        className={`h-[380px] sm:h-[380px] md:h-[390px] lg:h-[520px] xl:h-[670px] relative max-w-[1920px] w-full flex flex-col items-center md:flex-row md:justify-center gap-8 md:gap-0 lg:gap-8 py-10 md:py-28 lg:py-40 home-background z-10`}
+      >
+        <div className='flex justify-center max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+          <article className='w-full flex flex-col items-center md:items-start md:min-w-[430px] lg:min-w-[540px]'>
+            <div className='flex items-center text-lg sm:text-xl md:font-medium mb-1 md:mb-1.5 text-center text-color-title-light'>
+              <span>
+                <LocationZoneIcon className='w-6 h-6 md:w-7 md:h-7' />
+              </span>
+              <span>
+                {company.adress}, {company.city}
+              </span>
             </div>
-          </div>
-        </article>
+            <div className='flex flex-col gap-1 text-nowrap'>
+              <div className='flex flex-col items-center md:flex-row md:gap-3'>
+                <h2 className='text-color-secondary-light text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold break-words'>
+                  {company.name.toUpperCase()}
+                </h2>
+              </div>
+              <div className='flex flex-col items-center md:flex-row md:gap-3 md:w-[400px]'>
+                <h2 className='text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-color-title-light'>
+                  COMPRÁ TU{' '}
+                </h2>
+                <h2 className='text-color-primary-light text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold'>
+                  <TypeAnimation
+                    sequence={['AUTO', 2000, 'CAMIONETA', 2000, 'PICKUP', 2000]}
+                    repeat={Infinity}
+                    speed={50}
+                  />
+                </h2>
+              </div>
+            </div>
+            <p className='sm:text-lg lg:text-xl text-center md:text-start text-color-text-light mt-3 max-w-sm sm:max-w-md lg:max-w-lg'>
+              Descubrí las mejores opciones, calidad garantizada y financiación
+              a tu medida. ¡Esperamos tu mensaje!
+            </p>
+            {company.mercadolibre && (
+              <div className='flex mt-4 md:mt-3'>
+                <a
+                  href='/catalogo'
+                  target='_blank'
+                  className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title-light rounded'
+                  // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title rounded'
+                >
+                  Ver Catálogo
+                </a>
+              </div>
+            )}
+          </article>
+          <div className='absolute w-3 sm:w-5 md:w-10 lg:w-16 h-full top-0 -left-5 bg-gradient-to-r from-color-bg-secondary'></div>
+          <div className='absolute w-3 sm:w-5 md:w-10 lg:w-16 h-full top-0 -right-5 bg-gradient-to-l from-color-bg-secondary'></div>
+        </div>
+        <div className='absolute top-0 left-0 w-full h-full bg-color-bg-secondary/70 -z-10'></div>
       </div>
     </section>
   );

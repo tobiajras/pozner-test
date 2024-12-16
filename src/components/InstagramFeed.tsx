@@ -8,16 +8,6 @@ import SpinnerIcon from './icons/SpinnerIcon';
 
 import { motion } from 'framer-motion';
 
-declare global {
-  interface Window {
-    instgrm?: {
-      Embeds: {
-        process(): void;
-      };
-    };
-  }
-}
-
 const InstagramFeed = () => {
   useEffect(() => {
     if (window.instgrm) {

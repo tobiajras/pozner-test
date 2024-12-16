@@ -8,9 +8,6 @@ import LocationIcon from '@/components/icons/LocationIcon';
 import SocialIcons from '@/components/icons/SocialIcons';
 import WhatsappIcon from '@/components/icons/WhatsappIcon';
 
-import Footer from '@/components/Footer';
-import HeaderWithSuspense from '@/components/Header';
-
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -33,7 +30,6 @@ interface Company {
 const ContactoPage = () => {
   return (
     <>
-      <HeaderWithSuspense />
       <section className='flex flex-col items-center'>
         <section className='w-full max-w-[1920px] h-[160px] sm:h-[220px] md:h-[260px] lg:h-[350px] relative'>
           <div className='w-full h-full'>
@@ -60,92 +56,6 @@ const ContactoPage = () => {
           </div>
           <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/70 md:from-color-bg-secondary/80 to-color-bg-secondary/70 md:to-color-bg-secondary/85'></div>
         </section>
-        {/* <section
-          id='sedesSection'
-          className='flex flex-col items-center my-8 md:my-14 lg:my-20 mx-4 sm:mx-6 md:mx-8 lg:mx-10'
-        >
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-5 md:gap-x-16 gap-y-10 md:gap-y-20'>
-            {sedes.map((sede) => (
-              <motion.article
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    duration: 0.3,
-                    ease: 'easeOut',
-                  },
-                }}
-                viewport={{ margin: '0px 0px -300px 0px', once: true }}
-                key={sede.id}
-              >
-                <div className='w-[280px] md:w-[320px] lg:w-[405px] overflow-hidden rounded sm:rounded-lg md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
-                  <a
-                    href={sede.appointment ? sede.appointment : undefined} // Cambiado para no enviar a ningún link si es null
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <Image
-                      className='hover:scale-105 transition-transform duration-700'
-                      src={`/assets/sedes/${sede.image}`}
-                      width={608}
-                      height={480}
-                      alt={`${sede.title} imagen`}
-                    />
-                  </a>
-                </div>
-                <div>
-                  {sede.title && (
-                    <h4 className='text-color-primary font-medium text-2xl mt-3'>
-                      {sede.title}
-                    </h4>
-                  )}
-                  {sede.adress && (
-                    <h6 className='text-color-text text-sm sm:text-base lg:text-lg'>
-                      {sede.adress}
-                    </h6>
-                  )}
-                  {sede.tel && (
-                    <span className='text-sm sm:text-base lg:text-lg text-color-primary'>
-                      {sede.tel}
-                    </span>
-                  )}
-                  <p className='text-color-text text-sm sm:text-base lg:text-lg max-w-[280px] md:max-w-[320px] lg:max-w-[405px]'>
-                    {sede.schedule}
-                  </p>
-                  <div className='flex gap-3 mt-3'>
-                    {sede.appointment && (
-                      <div className='flex w-full'>
-                        <a
-                          href={sede.appointment}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                          className='flex justify-center items-center gap-1 bg-color-primary hover:bg-color-primary-dark transition-colors text-color-title-light text-sm sm:text-base md:text-lg  py-2 px-4 rounded w-full text-center'
-                        >
-                          <LocationIcon />
-                          <span>Ubicación</span>
-                        </a>
-                      </div>
-                    )}
-                    {sede.whatsapp && (
-                      <div className='flex w-full'>
-                        <a
-                          href={`https://api.whatsapp.com/send?phone=549${sede.whatsapp}&text=Hola! Quería hacer una consulta`}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                          className='flex justify-center items-center gap-1 bg-[#25D366] hover:bg-[#05B146] transition-colors text-color-title-light text-sm sm:text-base md:text-lg  py-2 px-4 rounded w-full text-center'
-                        >
-                          <WhatsappIcon />
-                          <span>Whatsapp</span>
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </section> */}
         <section id='ubicacionSection' className='my-6 md:my-12 lg:my-16'>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -256,7 +166,6 @@ const ContactoPage = () => {
           </motion.div>
         </section>
       </section>
-      <Footer />
     </>
   );
 };

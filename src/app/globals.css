@@ -8,20 +8,11 @@
 body {
 }
 
-.background-menu {
-  background-image: url('/assets/company/cafe-pattern.webp');
-  background-size: 200px;
-}
-
-@media (min-width: 640px) {
-  .background-menu {
-    background-size: 250px;
-  }
-}
-@media (min-width: 768px) {
-  .background-menu {
-    background-size: 280px;
-  }
+.home-background {
+  background-image: url('/assets/inicio/home-background.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @layer utilities {

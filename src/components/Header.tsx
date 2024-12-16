@@ -2,37 +2,19 @@
 
 import { navigation, company } from '@/app/constants/constants';
 import { useNavbarStore } from '@/store/navbarStore';
-import { useCartStore } from '@/store/cartStore';
-import { useEffect, Suspense } from 'react'; // Importar Suspense
 
 import Link from 'next/link';
 import Image from 'next/image';
 
-import CartIcon from './icons/CartIcon';
 import HamburguerIcon from './icons/HamburguerIcon';
 import CloseIcon from './icons/CloseIcon';
-import SearchInput from './SearchInput';
 
 const Header = () => {
   const { isMenuOpen, setIsMenuOpen } = useNavbarStore();
-  const { cart, setCart } = useCartStore(); // Añadir setCart
-
-  // Cargar el carrito desde localStorage
-  const loadCartFromLocalStorage = () => {
-    const storedCart = localStorage.getItem('cart');
-    return storedCart ? JSON.parse(storedCart) : [];
-  };
-
-  useEffect(() => {
-    const storedCart = loadCartFromLocalStorage(); // Cargar carrito desde localStorage
-    setCart(storedCart); // Usar setCart para establecer el carrito
-  }, [setCart]);
-
-  const cartItemsCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-secondary'>
-      <section className='flex items-center gap-3 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+      <section className='flex justify-between items-center gap-3 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         <article className='flex w-full'>
           <Link
             className='flex items-center gap-2 md:gap-3'
@@ -41,14 +23,14 @@ const Header = () => {
           >
             <Image
               priority
-              className='w-[53px] h-[53px] md:w-14 md:h-14 lg:w-16 lg:h-16'
-              // className='w-[53px] h-[53px] md:w-14 md:h-14 lg:w-16 lg:h-16 ring-2 ring-white rounded-full'
+              className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px]'
+              // className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] ring-2 ring-white rounded-full'
               src='/assets/company/favicon.webp'
               alt={`${company.name} favicon`}
               width={64}
               height={64}
             />
-            <div className='h-10 w-24 sm:w-28 md:w-32'>
+            <div className='h-10 w-24 sm:w-28 md:w-40'>
               <Image
                 priority
                 className='h-full w-full object-contain object-left'
@@ -74,27 +56,10 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <article className='flex justify-end items-center gap-2 sm:gap-3 lg:gap-5 w-full'>
-          <div className='w-full'>
-            <Suspense>
-              <SearchInput />
-            </Suspense>
-          </div>
-          <Link
-            className='text-color-text-light hover:text-color-title-light transition-all relative'
-            href='/carrito'
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <CartIcon className='w-6 h-6' />
-            {cartItemsCount > 0 && (
-              <span className='absolute -top-2 -right-2 bg-color-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold'>
-                {cartItemsCount}
-              </span>
-            )}
-          </Link>
+        <article className='md:hidden flex justify-end items-center gap-2 sm:gap-3 lg:gap-5'>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className='md:hidden text-color-text-light hover:text-color-title-light transition-all'
+            className=' text-color-text-light hover:text-color-title-light transition-all'
           >
             {isMenuOpen ? (
               <CloseIcon className='w-7 h-7' />

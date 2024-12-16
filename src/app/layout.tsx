@@ -1,7 +1,11 @@
 import { metadataCompany } from './constants/constants';
 
-import { Poppins } from 'next/font/google';
+import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -23,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${poppins.variable} font-poppins bg-color-bg-primary text-color-text antialiased`}
+        className={`${poppins.variable} ${inter.variable} font-inter bg-color-bg-primary text-color-text antialiased`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

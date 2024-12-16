@@ -2,13 +2,9 @@ import Image from 'next/image';
 
 import { company } from '../constants/constants';
 
-import Footer from '@/components/Footer';
-import HeaderWithSuspense from '@/components/Header';
-
 const NosotrosPage = () => {
   return (
     <>
-      <HeaderWithSuspense />
       <section className='flex justify-center'>
         <div className='max-w-6xl my-10 md:my-20 flex flex-col gap-10 md:gap-20'>
           <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
@@ -24,16 +20,18 @@ const NosotrosPage = () => {
             </div>
             <div>
               <h3 className='text-2xl sm:text-3xl md:text-4xl font-bold text-color-primary mb-3 max-w-[300px] sm:max-w-[450px] lg:max-w-[480px]'>
-                Pasión por el Café
+                Seguridad en Cada Kilómetro
               </h3>
               <div className='flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] text-color-text sm:text-lg'>
                 <p className=''>
-                  En {company.name}, nuestra pasión por el café nos lleva a
-                  seleccionar solo los mejores granos de especialidad.
+                  En {company.name}, tu seguridad es nuestra prioridad. Por eso,
+                  todos nuestros vehículos son sometidos a rigurosos controles
+                  técnicos.
                 </p>
                 <p className=''>
-                  Cada taza que servimos es el resultado de un proceso
-                  cuidadoso, desde la finca hasta tu mesa.
+                  Queremos que disfrutes cada viaje con la tranquilidad de
+                  contar con un auto confiable y preparado para cualquier
+                  camino.
                 </p>
               </div>
             </div>
@@ -51,16 +49,16 @@ const NosotrosPage = () => {
             </div>
             <div>
               <h3 className='text-2xl sm:text-3xl md:text-4xl font-bold text-color-secondary mb-3 max-w-[300px] sm:max-w-[450px] lg:max-w-[480px]'>
-                Un Espacio para Compartir Momentos
+                Confianza al Elegir tu Auto
               </h3>
               <div className='flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] text-color-text sm:text-lg'>
                 <p className=''>
-                  Más que una cafetería, somos un lugar para disfrutar,
-                  relajarse y compartir momentos.
+                  Comprar un auto es una gran decisión, y estamos para
+                  acompañarte en cada paso.
                 </p>
                 <p className=''>
-                  Nos encanta ver cómo el café une a las personas, y nos
-                  esforzamos para que cada visita sea una experiencia memorable.
+                  Nuestro equipo te brinda asesoramiento honesto y transparente,
+                  porque tu confianza es lo más importante para nosotros.
                 </p>
               </div>
             </div>
@@ -77,24 +75,23 @@ const NosotrosPage = () => {
             </div>
             <div>
               <h3 className='text-2xl sm:text-3xl md:text-4xl font-bold text-color-primary mb-3 max-w-[300px] sm:max-w-[450px] lg:max-w-[480px]'>
-                Calidad Artesanal en Cada Taza
+                Financiación a tu Alcance
               </h3>
               <div className='flex flex-col gap-2 max-w-[300px] sm:max-w-[500px] text-color-text sm:text-lg'>
                 <p className=''>
-                  Trabajamos con productores locales y tostadores expertos para
-                  ofrecerte un café de calidad inigualable.
+                  Sabemos que cada cliente tiene necesidades únicas, por eso
+                  ofrecemos planes de financiación flexibles y adaptados a tu
+                  presupuesto.
                 </p>
                 <p className=''>
-                  Nuestro equipo está comprometido con técnicas artesanales que
-                  resaltan lo mejor de cada grano, sin comprometer la frescura
-                  ni el sabor.
+                  Te ayudamos a cumplir el sueño de tener tu auto, sin
+                  complicaciones.
                 </p>
               </div>
             </div>
           </article>
         </div>
       </section>
-      <Footer />
     </>
   );
 };
