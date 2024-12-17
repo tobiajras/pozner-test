@@ -52,7 +52,7 @@ const CatalogoPage = () => {
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/60 to-color-bg-secondary/80'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/60 to-color-bg-secondary/50'></div>
         </section>
         <>
           {filteredProducts.length > 0 ? ( // Verificar si hay productos filtrados
@@ -66,7 +66,7 @@ const CatalogoPage = () => {
                   <div className=''>
                     <Image
                       className='w-full h-full object-cover overflow-hidden'
-                      src={`/assets/catalogo/${product.marca?.toLowerCase()}/${
+                      src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
                         product.id
                       }/${product.images?.[0] || 'placeholder.webp'}`}
                       alt={product.name}
@@ -74,7 +74,7 @@ const CatalogoPage = () => {
                       height={150}
                     />
                   </div>
-                  <div className='mt-8 w-full px-3 py-5'>
+                  <div className='w-full px-3 py-5'>
                     <h4 className='md:text-xl text-color-title font-semibold h-12 sm:h-16 line-clamp-2 mb-1 max-w-[150px] sm:max-w-44 lg:max-w-64'>
                       {product.name}
                     </h4>

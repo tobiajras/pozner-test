@@ -46,7 +46,7 @@ const CarrouselFeatured = ({
                     width={451}
                     height={600}
                     className='object-cover w-full h-full overflow-hidden'
-                    src={`/assets/catalogo/${product.marca?.toLowerCase()}/${
+                    src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
                       product.id
                     }/${product.images?.[0] || 'placeholder.webp'}`}
                     alt={product.name}
