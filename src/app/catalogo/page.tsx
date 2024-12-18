@@ -43,11 +43,11 @@ const CatalogoPage = () => {
             <div className='max-w-5xl w-full flex justify-center'>
               <div className='md:w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
                 <h3 className='text-2xl sm:text-4xl lg:text-5xl font-semibold text-color-primary-light'>
-                  ¡CONOCÉ NUESTRO STOCK!
+                  ¡NUESTRO STOCK!
                 </h3>
                 <p className='flex flex-col text-sm sm:text-lg md:text-2xl mt-1 text-color-text-light'>
-                  <span>Seleccioná tus productos y agregalos al carrito.</span>
-                  <span>Generamos el pedido por Whatsapp.</span>
+                  <span>Elegí el que más te guste y contactanos,</span>
+                  <span>tenemos variedad de marcas</span>
                 </p>
               </div>
             </div>
