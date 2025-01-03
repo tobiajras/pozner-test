@@ -141,7 +141,7 @@ const ContactoPage = () => {
                       <FacebookIcon className='w-8 h-8 text-color-title hover:text-color-text transition-colors' />
                     </a>
                   )}
-                  {(company.whatsapp as Company['whatsapp']) && (
+                  {company.whatsapp && (
                     <a
                       href={`https://api.whatsapp.com/send?phone=549${company.whatsapp}&text=Hola! Quería hacer una consulta`}
                       target='_blank'

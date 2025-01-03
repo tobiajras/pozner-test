@@ -8,6 +8,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useState, useCallback, useEffect } from 'react';
 import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon';
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon';
+import CheckIcon from '@/components/icons/CheckIcon';
+import CarrouselFeatured from '@/components/CarrouselFeatured';
 
 interface ProductPageProps {
   params: {
@@ -29,6 +31,8 @@ const ProductPage = ({ params }: ProductPageProps) => {
     },
     [embla]
   );
+
+  console.log('selectedIndex', selectedIndex);
 
   const scrollPrev = useCallback(() => {
     if (embla && selectedIndex > 0) {
@@ -69,16 +73,16 @@ const ProductPage = ({ params }: ProductPageProps) => {
   }
 
   return (
-    <section className='flex justify-center mx-auto px-4 py-8 md:py-12'>
-      <div className='grid md:grid-cols-2 gap-8 max-w-6xl'>
+    <section className='flex flex-col items-center mx-auto px-4 py-8 md:py-12'>
+      <div className='flex gap-8 max-w-6xl'>
         {/* Galería de imágenes */}
-        <div className='space-y-4'>
+        <div className='space-y-4 w-full'>
           <div className='overflow-hidden relative group' ref={mainViewportRef}>
             <div className='flex'>
               {product.images.map((image, index) => (
                 <div
                   key={index}
-                  className='relative aspect-square flex-[0_0_100%]'
+                  className='relative h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden'
                 >
                   <Image
                     src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
@@ -86,7 +90,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
                     }/${image}`}
                     alt={`${product.name} - Imagen ${index + 1}`}
                     fill
-                    className='object-cover rounded-lg'
+                    className='object-cover'
                     priority={index === 0}
                   />
                 </div>
@@ -125,7 +129,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
               <button
                 key={index}
                 onClick={() => scrollTo(index)}
-                className={`relative w-20 aspect-square flex-shrink-0 rounded-lg overflow-hidden outline-none ${
+                className={`relative w-24 aspect-square flex-shrink-0 rounded overflow-hidden outline-none ${
                   selectedIndex === index ? 'ring-[3px] ring-color-primary' : ''
                 }`}
               >
@@ -135,6 +139,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
                   }/${image}`}
                   alt={`${product.name} - Miniatura ${index + 1}`}
                   fill
+                  priority
                   className='object-cover'
                 />
               </button>
@@ -143,47 +148,79 @@ const ProductPage = ({ params }: ProductPageProps) => {
         </div>
 
         {/* Detalles del producto */}
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 w-full'>
           <h1 className='text-3xl font-bold text-color-title'>
             {product.name}
           </h1>
 
-          <div className='grid grid-cols-2 gap-4 text-color-text'>
-            <div>
-              <p className='font-semibold'>Año</p>
+          <div className='flex flex-col gap-3 text-color-text'>
+            <div className='flex flex-col gap-1'>
+              <p className='text-color-title font-semibold'>Año</p>
               <p>{product.ano}</p>
             </div>
             <div>
-              <p className='font-semibold'>Kilometraje</p>
+              <p className='text-color-title font-semibold'>Kilometraje</p>
               <p>{(product.kilometraje ?? 0).toLocaleString('es-ES')} km</p>
             </div>
             <div>
-              <p className='font-semibold'>Transmisión</p>
+              <p className='text-color-title font-semibold'>Transmisión</p>
               <p>{product.transmision}</p>
             </div>
             <div>
-              <p className='font-semibold'>Combustible</p>
+              <p className='text-color-title font-semibold'>Combustible</p>
               <p>{product.combustible}</p>
             </div>
             <div>
-              <p className='font-semibold'>Dirección</p>
+              <p className='text-color-title font-semibold'>Dirección</p>
               <p>{product.direccion}</p>
             </div>
             <div>
-              <p className='font-semibold'>Puertas</p>
+              <p className='text-color-title font-semibold'>Puertas</p>
               <p>{product.puertas}</p>
             </div>
           </div>
 
           {/* Botón de WhatsApp */}
-          <Link
-            href={`https://wa.me/TUNUMERO?text=Hola, estoy interesado en el ${product.name}`}
-            target='_blank'
-            className='mt-6 bg-color-primary hover:bg-color-primary-dark text-color-title-light py-3 px-6 rounded text-center transition-colors'
-          >
-            Consultar por WhatsApp
-          </Link>
+          <div className='mt-3'>
+            <Link
+              href={`https://wa.me/TUNUMERO?text=Hola, estoy interesado en el ${product.name}`}
+              target='_blank'
+              className='bg-color-primary text-color-title font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]'
+            >
+              Consultar
+            </Link>
+          </div>
+          <hr className='mt-8 mb-5' />
+          <div className='flex flex-col gap-3'>
+            <div className='text-color-text flex items-center'>
+              <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
+              <span>Excelente estado, como se ve en las fotos.</span>
+            </div>
+            <div className='text-color-text flex items-center'>
+              <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
+              <span>Papeles al día, sin deudas, listo para transferir.</span>
+            </div>
+            <div className='text-color-text flex items-center'>
+              <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
+              <span>Recibimos tu usado.</span>
+            </div>
+            <div className='text-color-text flex items-center'>
+              <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
+              <span>Financiación con cuotas fijas y en pesos.</span>
+            </div>
+            <div className='text-color-text flex items-center'>
+              <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
+              <span>Gestión rápida y sencilla.</span>
+            </div>
+          </div>
         </div>
+      </div>
+      <div className='mt-10'>
+        <CarrouselFeatured
+          title='Recomendados'
+          startIndex={16}
+          lastIndex={24}
+        />
       </div>
     </section>
   );

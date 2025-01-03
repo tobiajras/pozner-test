@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { preguntas } from '@/app/constants/constants';
 import { useState } from 'react';
 import DropDownIcon from './icons/DropDownIcon';
+import { motion } from 'framer-motion';
 const PreguntasHome = () => {
   const [activeAnswer, setActiveAnswer] = useState('preg-1');
 
@@ -43,13 +44,23 @@ const PreguntasHome = () => {
                       <DropDownIcon className='text-color-title-light' />
                     </div>
                   </div>
-                  <p
+                  <div
                     className={`${
                       activeAnswer !== pregunta.id && 'hidden'
                     } text-color-text mt-1 mb-3 text-sm sm:text-base`}
                   >
-                    {pregunta.answer}
-                  </p>
+                    <motion.p
+                      initial={{ opacity: 0, y: -5 }}
+                      animate={{
+                        opacity: activeAnswer === pregunta.id ? 1 : 0,
+                        y: activeAnswer === pregunta.id ? 0 : -5,
+                      }}
+                      transition={{ duration: 0.3, ease: 'easeIn' }}
+                      className=''
+                    >
+                      {pregunta.answer}
+                    </motion.p>
+                  </div>
                 </div>
                 <hr />
               </li>

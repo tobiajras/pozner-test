@@ -2,7 +2,7 @@ import CarrouselFeatured from '@/components/CarrouselFeatured';
 import HeroHome from '@/components/HeroHome';
 import ServiciosHome from '@/components/ServiciosHome';
 import PreguntasHome from '@/components/PreguntasHome';
-import InstagramFeed from '@/components/InstagramFeed';
+// import InstagramFeed from '@/components/InstagramFeed';
 import LogosCarousel from '@/components/LogosCarousel';
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
           <CarrouselFeatured title='Destacados' startIndex={8} lastIndex={16} />
           <PreguntasHome />
           <LogosCarousel />
-          <InstagramFeed />
+          {/* <InstagramFeed /> */}
         </main>
       </div>
     </>

@@ -1,63 +1,93 @@
 'use client';
 
-import { company } from '@/app/constants/constants';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { useEffect } from 'react';
-import Script from 'next/script';
-import SpinnerIcon from './icons/SpinnerIcon';
+interface InstagramPost {
+  id: string;
+  media_type: string;
+  media_url: string;
+  permalink: string;
+  caption?: string;
+  thumbnail_url?: string;
+}
 
-import { motion } from 'framer-motion';
+interface InstagramFeedProps {
+  accessToken: string;
+  limit?: number;
+}
 
-const InstagramFeed = () => {
+const InstagramFeed = ({ accessToken, limit = 6 }: InstagramFeedProps) => {
+  const [posts, setPosts] = useState<InstagramPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
-    if (window.instgrm) {
-      window.instgrm.Embeds.process();
-    }
-  }, []);
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch(
+          `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url&access_token=${accessToken}&limit=${limit}`
+        );
+        
+        if (!response.ok) {
+          throw new Error('Error al obtener las publicaciones de Instagram');
+        }
+
+        const data = await response.json();
+        setPosts(data.data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Error desconocido');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, [accessToken, limit]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-[300px]">
+        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-color-primary"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center text-color-text py-8">
+        <p>No se pudieron cargar las publicaciones de Instagram</p>
+      </div>
+    );
+  }
 
   return (
-    <section className='flex justify-center my-8 md:my-14 lg:my-20 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.3,
-            ease: 'easeOut',
-          },
-        }}
-        viewport={{ margin: '0px 0px -300px 0px', once: true }}
-        className='w-[326px] h-[420px] sm:w-96 sm:h-[446px] md:w-[500px] md:h-[555px] lg:w-[600px] lg:h-[621px] xl:w-[700px] xl:h-[688px]'
-      >
-        <blockquote
-          className='instagram-media w-[326px] h-[420px] sm:w-96 sm:h-[446px] md:w-[500px] md:h-[555px] lg:w-[600px] lg:h-[621px] xl:w-[700px] xl:h-[688px]'
-          data-instgrm-permalink={`https://www.instagram.com/${company.instagram}/`}
-          data-instgrm-version='12'
-        >
-          <div className='flex justify-center items-center h-full'>
-            <a
-              id='main_link'
-              href={`https://www.instagram.com/${company.instagram}/`}
-              target='_blank'
-            >
-              <div className='flex justify-center items-center animate-spin'>
-                <SpinnerIcon className='w-10 h-10 text-color-primary-dark' />
-              </div>
-            </a>
-          </div>
-        </blockquote>
-        <Script
-          src='https://www.instagram.com/embed.js'
-          strategy='lazyOnload'
-          onLoad={() => {
-            if (window.instgrm) {
-              window.instgrm.Embeds.process();
-            }
-          }}
-        />
-      </motion.div>
-    </section>
+    <div className="max-w-6xl mx-auto px-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {posts.map((post) => (
+          <Link
+            href={post.permalink}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={post.id}
+            className="relative aspect-square group overflow-hidden rounded-lg"
+          >
+            <Image
+              src={post.media_type === 'VIDEO' ? post.thumbnail_url || post.media_url : post.media_url}
+              alt={post.caption || 'Publicación de Instagram'}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <p className="text-white text-sm px-4 text-center line-clamp-3">
+                {post.caption || 'Ver en Instagram'}
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 };
 
