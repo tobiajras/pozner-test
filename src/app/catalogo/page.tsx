@@ -4,7 +4,7 @@ import products from '@/data/catalogo.json';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
-// import { Suspense } from 'react'; // Importar Suspense
+import { Suspense } from 'react'; // Importar Suspense
 
 const CatalogoPage = () => {
   const searchParams = useSearchParams(); // Obtener los parámetros de búsqueda
@@ -114,10 +114,10 @@ const CatalogoPage = () => {
   );
 };
 
-// const CatalogoPageWithSuspense = () => (
-//   <Suspense fallback={<div>Cargando...</div>}>
-//     <CatalogoPage />
-//   </Suspense>
-// );
+const CatalogoPageWithSuspense = () => (
+  <Suspense fallback={<div>Cargando...</div>}>
+    <CatalogoPage />
+  </Suspense>
+);
 
-export default CatalogoPage;
+export default CatalogoPageWithSuspense;
