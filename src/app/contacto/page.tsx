@@ -11,22 +11,6 @@ import WhatsappIcon from '@/components/icons/WhatsappIcon';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-interface Company {
-  id: string;
-  name: string;
-  adress?: string;
-  city?: string;
-  telephone?: string | null;
-  email?: string | null;
-  instagram?: string;
-  facebook?: string | null;
-  whatsapp?: string | null;
-  googlemaps?: string | null;
-  menu?: string | null;
-  openDays?: Array<{ day: string; hours: string[] }> | null;
-  footer: string;
-}
-
 const ContactoPage = () => {
   return (
     <>
