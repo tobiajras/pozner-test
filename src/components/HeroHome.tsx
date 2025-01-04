@@ -7,10 +7,7 @@ import Link from 'next/link';
 
 const HeroHome = () => {
   return (
-    <section
-      id='inicioSection'
-      className='flex justify-center overflow-hidden bg-color-bg-secondary'
-    >
+    <section id='inicioSection' className='flex justify-center overflow-hidden'>
       <div
         className={`h-[380px] sm:h-[380px] md:h-[390px] lg:h-[520px] xl:h-[670px] relative max-w-[1920px] w-full flex flex-col items-center md:flex-row md:justify-center gap-8 md:gap-0 lg:gap-8 py-10 md:py-28 lg:py-40 home-background z-10`}
       >
@@ -57,8 +54,8 @@ const HeroHome = () => {
               </Link>
             </div>
           </article>
-          <div className='absolute w-3 sm:w-5 md:w-10 lg:w-16 h-full top-0 -left-5 bg-gradient-to-r from-color-bg-secondary'></div>
-          <div className='absolute w-3 sm:w-5 md:w-10 lg:w-16 h-full top-0 -right-5 bg-gradient-to-l from-color-bg-secondary'></div>
+          <div className='absolute w-3 sm:w-5 md:w-10 lg:w-20 h-full top-0 -left-0 bg-gradient-to-r from-color-bg-secondary'></div>
+          <div className='absolute w-3 sm:w-5 md:w-10 lg:w-20 h-full top-0 -right-0 bg-gradient-to-l from-color-bg-secondary'></div>
         </div>
         <div className='absolute top-0 left-0 w-full h-full bg-color-bg-secondary/50 -z-10'></div>
       </div>

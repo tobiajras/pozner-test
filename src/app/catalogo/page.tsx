@@ -1,5 +1,6 @@
 'use client';
 
+import SearchIcon from '@/components/icons/SearchIcon';
 import products from '@/data/catalogo.json';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -56,16 +57,16 @@ const CatalogoPage = () => {
         </section>
         <>
           {filteredProducts.length > 0 ? ( // Verificar si hay productos filtrados
-            <div className='max-w-6xl grid grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-10 my-10 md:my-20 min-h-[600px] place-content-start'>
+            <div className='max-w-6xl grid grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-12 my-10 md:my-20 min-h-[600px] place-content-start mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
               {filteredProducts.map((product) => (
                 <Link
                   href={`/catalogo/${product.id}`}
-                  className='flex flex-col items-center overflow-hidden rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] hover:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.3)] transition-all'
+                  className='relative group flex flex-col items-center overflow-hidden rounded md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] hover:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.3)] transition-all'
                   key={product.id}
                 >
-                  <div className=''>
+                  <div className='w-full h-full'>
                     <Image
-                      className='w-full h-full object-cover overflow-hidden'
+                      className='w-full h-full object-cover overflow-hidden group-hover:scale-105 transition-transform duration-700'
                       src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
                         product.id
                       }/${product.images?.[0] || 'placeholder.webp'}`}
@@ -74,11 +75,14 @@ const CatalogoPage = () => {
                       height={150}
                     />
                   </div>
-                  <div className='w-full px-3 py-5'>
+                  <div className='w-full px-4 py-5'>
                     <h4 className='md:text-xl text-color-title font-semibold h-12 sm:h-16 line-clamp-2 mb-1 max-w-[150px] sm:max-w-44 lg:max-w-64'>
                       {product.name}
                     </h4>
-                    <div className='flex flex-col gap-1'>
+                    <div className='flex flex-col gap-1 relative'>
+                      <div className='absolute -top-0 left-0 w-full h-full flex justify-end items-center'>
+                        <SearchIcon className='text-color-primary hover:text-color-primary-light size-10 bg-color-bg-secondary-light group-hover:bg-color-bg-secondary-light transition-colors rounded-full p-2.5 stroke-[3]' />
+                      </div>
                       <span className=' text-color-text'>
                         {product.ano} |{' '}
                         {(product.kilometraje ?? 0).toLocaleString('es-ES')} km

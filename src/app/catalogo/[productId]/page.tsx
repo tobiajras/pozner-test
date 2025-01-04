@@ -83,7 +83,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
               {product.images.map((image, index) => (
                 <div
                   key={index}
-                  className='relative h-60 md:h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden'
+                  className='relative h-60 md:h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'
                 >
                   <Image
                     src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
