@@ -10,6 +10,7 @@ import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon';
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon';
 import CheckIcon from '@/components/icons/CheckIcon';
 import CarrouselFeatured from '@/components/CarrouselFeatured';
+import WhatsappIcon from '@/components/icons/WhatsappIcon';
 
 interface ProductPageProps {
   params: {
@@ -74,7 +75,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
 
   return (
     <section className='flex flex-col items-center mx-auto px-4 py-8 md:py-12'>
-      <div className='flex gap-8 max-w-6xl'>
+      <div className='flex flex-col md:flex-row gap-8 max-w-6xl'>
         {/* Galería de imágenes */}
         <div className='space-y-4 w-full'>
           <div className='overflow-hidden relative group' ref={mainViewportRef}>
@@ -82,7 +83,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
               {product.images.map((image, index) => (
                 <div
                   key={index}
-                  className='relative h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden'
+                  className='relative h-60 md:h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden'
                 >
                   <Image
                     src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
@@ -181,13 +182,14 @@ const ProductPage = ({ params }: ProductPageProps) => {
           </div>
 
           {/* Botón de WhatsApp */}
-          <div className='mt-3'>
+          <div className='flex mt-3'>
             <Link
               href={`https://wa.me/TUNUMERO?text=Hola, estoy interesado en el ${product.name}`}
               target='_blank'
-              className='bg-color-primary text-color-title font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]'
+              className='flex gap-2 bg-color-primary text-color-title font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]'
             >
-              Consultar
+              <WhatsappIcon className='w-6 h-6' />
+              <span>Consultar</span>
             </Link>
           </div>
           <hr className='mt-8 mb-5' />
@@ -215,7 +217,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
           </div>
         </div>
       </div>
-      <div className='mt-10'>
+      <div className='mt-16'>
         <CarrouselFeatured
           title='Recomendados'
           startIndex={16}

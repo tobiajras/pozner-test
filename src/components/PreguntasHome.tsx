@@ -50,12 +50,12 @@ const PreguntasHome = () => {
                     } text-color-text mt-1 mb-3 text-sm sm:text-base`}
                   >
                     <motion.p
-                      initial={{ opacity: 0, y: -5 }}
+                      initial={{ opacity: 0, y: -3 }}
                       animate={{
                         opacity: activeAnswer === pregunta.id ? 1 : 0,
-                        y: activeAnswer === pregunta.id ? 0 : -5,
+                        y: activeAnswer === pregunta.id ? 0 : -3,
                       }}
-                      transition={{ duration: 0.3, ease: 'easeIn' }}
+                      transition={{ duration: 0.3 }}
                       className=''
                     >
                       {pregunta.answer}
