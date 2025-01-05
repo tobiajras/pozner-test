@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
 import { Suspense } from 'react'; // Importar Suspense
+import { company } from '../constants/constants';
 
 const CatalogoPage = () => {
   const searchParams = useSearchParams(); // Obtener los parámetros de búsqueda
@@ -170,7 +171,13 @@ const CatalogoPage = () => {
                     </h4>
                     <div className='flex flex-col gap-1 relative'>
                       <div className='absolute -top-0 left-0 w-full h-full flex justify-end items-center'>
-                        <SearchIcon className='text-color-primary hover:text-color-primary-light size-10 bg-color-bg-secondary-light group-hover:bg-color-bg-secondary-light transition-colors rounded-full p-2.5 stroke-[3]' />
+                        <SearchIcon
+                          className={`${
+                            company.dark
+                              ? 'text-color-title-light size-10 bg-color-primary hover:bg-color-primary-light transition-colors rounded-full p-2.5 stroke-[3]'
+                              : 'text-color-title size-10 bg-color-primary hover:bg-color-primary-dark transition-colors rounded-full p-2.5 stroke-[3]'
+                          }`}
+                        />
                       </div>
                       <span className=' text-color-text'>
                         {product.ano} |{' '}
