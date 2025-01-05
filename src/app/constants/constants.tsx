@@ -4,7 +4,6 @@ export const company = {
   name: 'Goodcar Ituzaingo',
   adress: 'Gral. Pinto 205',
   city: 'Ituzaingó',
-  telephone: null,
   email: 'leo-an@hotmail.com',
   instagram: 'good_car_ituzaingo',
   facebook: 'good.car.ar',

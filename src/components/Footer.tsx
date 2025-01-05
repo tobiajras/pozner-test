@@ -97,16 +97,6 @@ const Footer = () => {
               <div>
                 <h4 className='text-color-title-light'>Contacto</h4>
                 <div className='flex flex-col'>
-                  {company.telephone &&
-                    company.telephone.map((phone, idx) => (
-                      <span
-                        key={idx}
-                        href={`tel:${phone}`}
-                        className='text-color-text-light'
-                      >
-                        {phone}
-                      </span>
-                    ))}
                   {company.whatsapp &&
                     company.whatsapp.map((whatsappNumber, idx) => (
                       <a
