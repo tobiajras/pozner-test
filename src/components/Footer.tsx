@@ -70,27 +70,16 @@ const Footer = () => {
                 <ul className='flex flex-col'>
                   {navigation.map((link) => (
                     <li key={link.id}>
-                      {link?.external ? (
-                        <a
-                          href={link.url}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                          className='text-color-text-light hover:text-color-title-light transition-colors cursor-pointer'
-                        >
-                          {link.title}
-                        </a>
-                      ) : (
-                        <Link
-                          to={`${link.url}`}
-                          spy={true}
-                          smooth={true}
-                          offset={-176}
-                          duration={500}
-                          className='text-color-text-light hover:text-color-title-light transition-colors cursor-pointer'
-                        >
-                          {link.title}
-                        </Link>
-                      )}
+                      <Link
+                        to={`${link.url}`}
+                        spy={true}
+                        smooth={true}
+                        offset={-176}
+                        duration={500}
+                        className='text-color-text-light hover:text-color-title-light transition-colors cursor-pointer'
+                      >
+                        {link.title}
+                      </Link>
                     </li>
                   ))}
                 </ul>
