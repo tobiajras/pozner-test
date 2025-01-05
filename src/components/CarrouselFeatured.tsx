@@ -6,7 +6,6 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import ViewIcon from './icons/ViewIcon';
 import SearchIcon from './icons/SearchIcon';
 import { company } from '@/app/constants/constants';
 

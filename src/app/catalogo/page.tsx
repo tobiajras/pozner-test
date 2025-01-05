@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
 import { Suspense } from 'react'; // Importar Suspense
-import InstagramFeed from '@/components/InstagramFeed';
 
 const CatalogoPage = () => {
   const searchParams = useSearchParams(); // Obtener los parámetros de búsqueda
@@ -203,17 +202,6 @@ const CatalogoPage = () => {
             </div>
           )}
         </>
-
-        {/* Instagram Feed */}
-        <div className='mt-16 mb-8'>
-          <h2 className='text-2xl sm:text-3xl font-bold text-center text-color-title mb-8'>
-            Seguinos en Instagram
-          </h2>
-          <InstagramFeed
-            token={process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN || ''}
-            userId={process.env.NEXT_PUBLIC_INSTAGRAM_BUSINESS_ID}
-          />
-        </div>
       </section>
     </>
   );
