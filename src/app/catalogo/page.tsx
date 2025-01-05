@@ -46,7 +46,7 @@ const CatalogoPage = () => {
 
   return (
     <>
-      <section className='flex flex-col items-center w-full'>
+      <section className='flex flex-col items-center w-full mb-10 md:mb-20'>
         <section className='w-full max-w-[1920px] h-[140px] sm:h-[160px] md:h-[220px] lg:h-[300px] relative'>
           <div className='w-full h-full'>
             <Image
