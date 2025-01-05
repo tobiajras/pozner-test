@@ -15,7 +15,7 @@ const ContactoPage = () => {
   return (
     <>
       <section className='flex flex-col items-center'>
-        <section className='w-full max-w-[1920px] h-[160px] sm:h-[220px] md:h-[260px] lg:h-[350px] relative'>
+        <section className='w-full max-w-[1920px] h-[140px] sm:h-[160px] md:h-[220px] lg:h-[300px] relative'>
           <div className='w-full h-full'>
             <Image
               priority
@@ -27,18 +27,19 @@ const ContactoPage = () => {
             />
           </div>
           <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
-            <div className='max-w-5xl w-full flex justify-center'>
-              <div className='md:w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-                <h3 className='text-2xl sm:text-4xl lg:text-5xl font-semibold text-color-primary-light'>
-                  CONOCÉ {company.name.toUpperCase()}
+            <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+              <div className='flex flex-col items-center text-center'>
+                <h3 className='text-2xl sm:text-4xl lg:text-5xl font-bold text-color-primary-light'>
+                  ESPERAMOS TU CONSULTA
                 </h3>
-                <p className='flex flex-col text-sm sm:text-lg md:text-2xl mt-1 text-color-text-light'>
-                  <span>Te invitamos a visitar nuestro local</span>
+                <p className='flex flex-col text-sm sm:text-lg md:text-2xl mt-1 text-color-text-light max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[550px]'>
+                  Resolvemos todas tus dudas y te acompañamos en cada paso del
+                  proceso
                 </p>
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/70 to-color-bg-secondary/60'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/80 to-color-bg-secondary/70'></div>
         </section>
         <section id='ubicacionSection' className='my-6 md:my-12 lg:my-16'>
           <motion.div
@@ -137,18 +138,50 @@ const ContactoPage = () => {
                 </div>
               </div>
             </article>
-            <article>
-              <iframe
-                className='w-72 h-56 sm:w-[450px] sm:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[500px] xl:w-[550px] rounded-md'
-                src={company.googlemaps}
-                width='500'
-                height='350'
-                loading='lazy'
-                referrerPolicy='no-referrer-when-downgrade'
-              ></iframe>
-            </article>
+            <div className='p-3 md:p-5 [box-shadow:0_0_10px_rgba(0,0,0,0.1)] rounded-md'>
+              <a
+                href={company.googlemapsLink}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div className='w-72 h-56 sm:w-[450px] sm:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[500px] xl:w-[550px] rounded-md overflow-hidden'>
+                  <Image
+                    priority
+                    className='w-full h-full object-cover rounded-md transition-all duration-300 hover:scale-105'
+                    src='/assets/contacto/contacto-local.webp'
+                    alt='local'
+                    width={608}
+                    height={480}
+                  />
+                </div>
+              </a>
+              <div className='flex justify-center items-center mt-4'>
+                <a
+                  href={company.googlemapsLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={`${
+                    company.dark
+                      ? 'text-color-title-light bg-color-primary hover:bg-color-primary-dark'
+                      : 'text-color-title bg-color-primary hover:bg-color-primary-dark'
+                  } font-medium w-full text-center py-2 md:py-3 rounded-md transition-colors`}
+                >
+                  Ver en Google Maps
+                </a>
+              </div>
+            </div>
           </motion.div>
         </section>
+        <article className='w-full'>
+          <iframe
+            className='w-full h-[300px] md:h-[350px] lg:h-[400px] rounded-md'
+            src={company.googlemaps}
+            width='1920'
+            height='400'
+            loading='lazy'
+            referrerPolicy='no-referrer-when-downgrade'
+          ></iframe>
+        </article>
       </section>
     </>
   );

@@ -56,7 +56,6 @@ const PreguntasHome = () => {
                         y: activeAnswer === pregunta.id ? 0 : -3,
                       }}
                       transition={{ duration: 0.3 }}
-                      className=''
                     >
                       {pregunta.answer}
                     </motion.p>

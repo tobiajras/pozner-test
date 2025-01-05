@@ -8,27 +8,19 @@ import InstagramIcon from './icons/InstagramIcon';
 import FacebookIcon from './icons/FacebookIcon';
 import WhatsappIcon from './icons/WhatsappIcon';
 
+import { Link } from 'react-scroll';
 import GrvityLogo from './icons/GrvityLogo';
-import Link from 'next/link';
 
-interface FooterProps {}
-
-interface NavigationLink {
-  id: string | number;
-  title: string;
-  url: string;
-  external?: boolean;
-}
-
-const Footer: React.FC<FooterProps> = () => {
+const Footer = () => {
   return (
     <footer
       id='contactoSection'
       className='flex justify-center pt-10 shadow-top-lg bg-color-bg-secondary'
+      style={{ boxShadow: '0 -4px 6px rgba(0, 0, 0, 0.1)' }}
     >
       <div className='flex flex-col items-center w-full'>
-        <section className='flex md:justify-center text-color-text w-full '>
-          <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10 py-10'>
+        <section className='flex md:justify-center text-color-text-light w-full '>
+          <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-6 sm:mx-8 md:mx-10 py-10'>
             <article className='flex w-full flex-col'>
               <div className='w-32 sm:w-36 md:w-40 h-12 sm:h-14'>
                 <Image
@@ -63,7 +55,7 @@ const Footer: React.FC<FooterProps> = () => {
                 )}
                 {company.whatsapp && (
                   <a
-                    href={`https://api.whatsapp.com/send?phone=549${company.whatsapp}&text=Hola! Quería hacer una consulta`}
+                    href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería hacer una consulta`}
                     target='_blank'
                     rel='noopener noreferrer'
                   >
@@ -76,7 +68,7 @@ const Footer: React.FC<FooterProps> = () => {
               <div>
                 <h4 className='text-color-title-light'>Menú</h4>
                 <ul className='flex flex-col'>
-                  {navigation.map((link: NavigationLink) => (
+                  {navigation.map((link) => (
                     <li key={link.id}>
                       {link?.external ? (
                         <a
@@ -89,7 +81,11 @@ const Footer: React.FC<FooterProps> = () => {
                         </a>
                       ) : (
                         <Link
-                          href={`${link.url}`}
+                          to={`${link.url}`}
+                          spy={true}
+                          smooth={true}
+                          offset={-176}
+                          duration={500}
                           className='text-color-text-light hover:text-color-title-light transition-colors cursor-pointer'
                         >
                           {link.title}
@@ -109,17 +105,33 @@ const Footer: React.FC<FooterProps> = () => {
                   </p>
                 </div>
               )}
-              {company.telephone && (
-                <div>
-                  <h4 className='text-color-title-light'>Teléfono</h4>
-                  <a
-                    className='text-color-text-light'
-                    href={`tel:${company.telephone}`}
-                  >
-                    {company.telephone}
-                  </a>
+              <div>
+                <h4 className='text-color-title-light'>Contacto</h4>
+                <div className='flex flex-col'>
+                  {company.telephone &&
+                    company.telephone.map((phone, idx) => (
+                      <span
+                        key={idx}
+                        href={`tel:${phone}`}
+                        className='text-color-text-light'
+                      >
+                        {phone}
+                      </span>
+                    ))}
+                  {company.whatsapp &&
+                    company.whatsapp.map((whatsappNumber, idx) => (
+                      <a
+                        key={idx}
+                        href={`https://api.whatsapp.com/send?phone=549${whatsappNumber}&text=Hola! Quería hacer una consulta`}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-color-text-light hover:text-color-title-light transition-colors'
+                      >
+                        {whatsappNumber}
+                      </a>
+                    ))}
                 </div>
-              )}
+              </div>
               {company.email && (
                 <div>
                   <h4 className='text-color-title-light'>Email</h4>
@@ -134,8 +146,12 @@ const Footer: React.FC<FooterProps> = () => {
             </article>
           </div>
         </section>
-        <section className='flex justify-center w-full pb-16 pt-8 border-t-2 border-color-primary'>
-          <article className='flex flex-col md:flex-row justify-between items-center text-sm sm:text-base gap-3 sm:gap-5 w-full max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+        <section
+          className={`${
+            company.dark ? 'border-color-primary-light' : 'border-color-primary'
+          } flex justify-center w-full pb-16 pt-8 border-t`}
+        >
+          <article className='flex flex-col md:flex-row justify-between items-center text-sm sm:text-base gap-3 sm:gap-5 w-full max-w-6xl mx-6 sm:mx-8 md:mx-10'>
             <div className='flex items-center gap-1 sm:gap-2 text-color-text-light'>
               <span>© Copyright 2024</span>
               <span>-</span>
@@ -148,7 +164,7 @@ const Footer: React.FC<FooterProps> = () => {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <GrvityLogo className='w-32 text-white hover:text-[#D1FA2D] transition-colors' />
+                <GrvityLogo className='w-32 text-color-text-light hover:text-[#D1FA2D] transition-colors' />
               </a>
             </div>
           </article>

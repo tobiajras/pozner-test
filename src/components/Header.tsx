@@ -23,8 +23,9 @@ const Header = () => {
           >
             <Image
               priority
-              className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px]'
-              // className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] ring-2 ring-white rounded-full'
+              // className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px]'
+              // className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] [filter:drop-shadow(0_0_5px_white)] rounded-full'
+              className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] ring-[1.5px] ring-white rounded-full'
               src='/assets/company/favicon.webp'
               alt={`${company.name} favicon`}
               width={64}
@@ -47,7 +48,7 @@ const Header = () => {
             {navigation.map((nav) => (
               <li key={nav.id}>
                 <Link
-                  className='text-color-text-light hover:text-color-title-light transition-all duration-300'
+                  className='text-color-text-light font-medium hover:text-color-title-light transition-all duration-300'
                   href={nav.url}
                 >
                   {nav.title}
@@ -78,7 +79,7 @@ const Header = () => {
               {navigation.map((nav) => (
                 <li key={nav.id}>
                   <Link
-                    className='text-color-text-light hover:text-color-title-light text-lg transition-colors'
+                    className='text-color-text-light font-medium hover:text-color-title-light text-lg transition-colors'
                     href={nav.url}
                     onClick={() => setIsMenuOpen(false)}
                   >

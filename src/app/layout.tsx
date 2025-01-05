@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${poppins.variable} ${inter.variable} font-inter bg-color-bg-primary text-color-text antialiased`}
+        className={`${poppins.variable} ${inter.variable} font-inter font bg-color-bg-primary text-color-text antialiased`}
       >
         <Header />
         {children}

@@ -11,6 +11,7 @@ import ArrowRightIcon from '@/components/icons/ArrowRightIcon';
 import CheckIcon from '@/components/icons/CheckIcon';
 import CarrouselFeatured from '@/components/CarrouselFeatured';
 import WhatsappIcon from '@/components/icons/WhatsappIcon';
+import { company } from '@/app/constants/constants';
 
 interface ProductPageProps {
   params: {
@@ -184,9 +185,14 @@ const ProductPage = ({ params }: ProductPageProps) => {
           {/* Botón de WhatsApp */}
           <div className='flex mt-3'>
             <Link
-              href={`https://wa.me/TUNUMERO?text=Hola, estoy interesado en el ${product.name}`}
+              href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${product.name}`}
               target='_blank'
-              className='flex gap-2 bg-color-primary text-color-title font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]'
+              rel='noopener noreferrer'
+              className={`${
+                company.dark
+                  ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
+                  : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
+              } flex gap-2 font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]`}
             >
               <WhatsappIcon className='w-6 h-6' />
               <span>Consultar</span>

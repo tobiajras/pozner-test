@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation'; // Importar useSearchParams
 import { Suspense } from 'react'; // Importar Suspense
+import InstagramFeed from '@/components/InstagramFeed';
 
 const CatalogoPage = () => {
   const searchParams = useSearchParams(); // Obtener los parámetros de búsqueda
@@ -61,17 +62,16 @@ const CatalogoPage = () => {
           <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
             <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
               <div className='text-center'>
-                <h3 className='text-2xl sm:text-4xl lg:text-5xl font-semibold text-color-primary-light'>
+                <h3 className='text-2xl sm:text-4xl lg:text-5xl font-bold text-color-primary-light'>
                   ¡CATÁLOGO ONLINE!
                 </h3>
                 <p className='flex flex-col text-sm sm:text-lg md:text-2xl mt-1 text-color-text-light'>
-                  <span>Elegí el que más te guste y contactanos,</span>
-                  <span>tenemos variedad de marcas</span>
+                  Explorá nuestro stock disponible y encontrá tu vehículo ideal
                 </p>
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/60 to-color-bg-secondary/50'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/40'></div>
         </section>
 
         {/* Filtros y Buscador */}
@@ -203,6 +203,17 @@ const CatalogoPage = () => {
             </div>
           )}
         </>
+
+        {/* Instagram Feed */}
+        <div className='mt-16 mb-8'>
+          <h2 className='text-2xl sm:text-3xl font-bold text-center text-color-title mb-8'>
+            Seguinos en Instagram
+          </h2>
+          <InstagramFeed
+            token={process.env.NEXT_PUBLIC_FACEBOOK_ACCESS_TOKEN || ''}
+            userId={process.env.NEXT_PUBLIC_INSTAGRAM_BUSINESS_ID}
+          />
+        </div>
       </section>
     </>
   );

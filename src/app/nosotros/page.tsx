@@ -5,8 +5,34 @@ import { company } from '../constants/constants';
 const NosotrosPage = () => {
   return (
     <>
-      <section className='flex justify-center'>
-        <div className='max-w-6xl my-10 md:my-20 flex flex-col gap-10 md:gap-20'>
+      <section className='flex flex-col items-center w-full mb-10 md:mb-20'>
+        <section className='w-full max-w-[1920px] h-[140px] sm:h-[160px] md:h-[220px] lg:h-[300px] relative'>
+          <div className='w-full h-full'>
+            <Image
+              priority
+              className='w-full h-full object-cover'
+              src='/assets/nosotros/nosotros-banner.webp'
+              alt='products'
+              width={1500}
+              height={400}
+            />
+          </div>
+          <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
+            <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+              <div className='text-center'>
+                <h3 className='text-2xl sm:text-4xl lg:text-5xl font-bold text-color-primary-light'>
+                  SOMOS {company.name.toUpperCase()}
+                </h3>
+                <p className='flex flex-col text-sm sm:text-lg md:text-2xl mt-1 text-color-text-light max-w-[300px] sm:max-w-[550px] md:max-w-[650px] lg:max-w-[750px]'>
+                  Te acompañamos con transparencia, opciones flexibles de
+                  financiación y vehículos sometidos a controles técnicos
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/40'></div>
+        </section>
+        <div className='max-w-6xl mt-10 md:mt-20 flex flex-col gap-10 md:gap-20'>
           <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
             <div className='[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
               <Image
