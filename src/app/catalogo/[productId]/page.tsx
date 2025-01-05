@@ -83,7 +83,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
               {product.images.map((image, index) => (
                 <div
                   key={index}
-                  className='relative h-60 md:h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'
+                  className='relative h-60 md:h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden [box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'
                 >
                   <Image
                     src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
@@ -186,7 +186,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
             <Link
               href={`https://wa.me/TUNUMERO?text=Hola, estoy interesado en el ${product.name}`}
               target='_blank'
-              className='flex gap-2 bg-color-primary text-color-title font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]'
+              className='flex gap-2 bg-color-primary text-color-title font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]'
             >
               <WhatsappIcon className='w-6 h-6' />
               <span>Consultar</span>

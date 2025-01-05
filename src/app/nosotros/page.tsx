@@ -8,7 +8,7 @@ const NosotrosPage = () => {
       <section className='flex justify-center'>
         <div className='max-w-6xl my-10 md:my-20 flex flex-col gap-10 md:gap-20'>
           <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-            <div className='md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
+            <div className='[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
               <Image
                 priority
                 className='rounded w-[300px] md:w-[450px]'
@@ -35,7 +35,7 @@ const NosotrosPage = () => {
             </div>
           </article>
           <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-            <div className='md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)] md:order-2'>
+            <div className='[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)] md:order-2'>
               <Image
                 priority
                 className='rounded w-[300px] md:w-[450px]'
@@ -63,7 +63,7 @@ const NosotrosPage = () => {
             </div>
           </article>
           <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-            <div className='md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
+            <div className='[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
               <Image
                 className='rounded w-[300px] md:w-[450px]'
                 src='/assets/nosotros/nosotros-3.webp'

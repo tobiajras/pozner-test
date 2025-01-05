@@ -24,7 +24,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
         >
           <div className='bg-color-primary-dark/80 md:bg-transparent px-5 py-8 sm:py-10 md:px-0 max-w-[320px] sm:max-w-[350px] md:max-w-full w-full flex gap-5 lg:gap-10 justify-center items-center relative rounded md:rounded-none'>
-            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] xl:w-[320px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
+            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] xl:w-[320px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden [box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
               <Image
                 className='w-full h-full object-cover'
                 src='/assets/servicios/servicio-1.webp'
@@ -71,7 +71,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
         >
           <div className='bg-color-secondary-dark/80 md:bg-transparent px-5 py-8 sm:py-10 md:px-0 max-w-[320px] sm:max-w-[350px] md:max-w-full w-full flex gap-5 lg:gap-10 justify-center items-center relative rounded md:rounded-none'>
-            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] xl:w-[320px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
+            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] xl:w-[320px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden [box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
               <Image
                 className='w-full h-full object-cover'
                 src='/assets/servicios/servicio-2.webp'
@@ -119,7 +119,7 @@ const ServiciosSection = () => {
           viewport={{ margin: '0px 0px -300px 0px', once: true }}
         >
           <div className='bg-color-primary-dark/80 md:bg-transparent px-5 py-8 sm:py-10 md:px-0 max-w-[320px] sm:max-w-[350px] md:max-w-full w-full flex gap-5 lg:gap-10 justify-center items-center relative rounded md:rounded-none'>
-            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] xl:w-[320px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden md:[box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
+            <div className='absolute md:relative top-0 left-0 -z-10 md:z-0 w-full md:w-[250px] lg:w-[300px] xl:w-[320px] h-full md:rounded-xl lg:rounded-2xl overflow-hidden [box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'>
               <Image
                 className='w-full h-full object-cover'
                 src='/assets/servicios/servicio-3.webp'

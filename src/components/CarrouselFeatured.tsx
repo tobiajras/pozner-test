@@ -40,7 +40,7 @@ const CarrouselFeatured = ({
             {products.slice(startIndex, lastIndex).map((product) => (
               <Link
                 href={`/catalogo/${product.id}`}
-                className='group w-full h-full overflow-hidden flex-[0_0_40%] rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] hover:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.3)] transition-all relative1 sm:flex-[0_0_33%] lg:flex-[0_0_28%]'
+                className='group w-full h-full overflow-hidden flex-[0_0_40%] rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] hover:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.3)] transition-all relative1 sm:flex-[0_0_33%] lg:flex-[0_0_28%]'
                 key={product.id}
               >
                 <div className='flex overflow-hidden max-h-64'>

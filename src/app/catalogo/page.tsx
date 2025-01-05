@@ -10,6 +10,16 @@ import { Suspense } from 'react'; // Importar Suspense
 const CatalogoPage = () => {
   const searchParams = useSearchParams(); // Obtener los parámetros de búsqueda
   const searchTerm = searchParams.get('search') || ''; // Leer el término de búsqueda
+  const marcaFilter = searchParams.get('marca') || '';
+  const categoriaFilter = searchParams.get('categoria') || '';
+
+  // Obtener marcas y categorías únicas
+  const marcas = Array.from(
+    new Set(products.map((product) => product.marca))
+  ).sort();
+  const categorias = Array.from(
+    new Set(products.map((product) => product.categoria))
+  ).sort();
 
   // Normalizar el término de búsqueda
   const normalizedSearchTerm = searchTerm
@@ -21,15 +31,23 @@ const CatalogoPage = () => {
     const normalizedProductName = product.name
       .normalize('NFD')
       .replace(/[\u0300-\u036f]/g, '');
-    return normalizedProductName
+
+    const matchesSearch = normalizedProductName
       .toLowerCase()
-      .includes(normalizedSearchTerm.toLowerCase()); // Filtrar productos
+      .includes(normalizedSearchTerm.toLowerCase());
+
+    const matchesMarca = marcaFilter ? product.marca === marcaFilter : true;
+    const matchesCategoria = categoriaFilter
+      ? product.categoria === categoriaFilter
+      : true;
+
+    return matchesSearch && matchesMarca && matchesCategoria;
   });
 
   return (
     <>
       <section className='flex flex-col items-center w-full'>
-        <section className='w-full max-w-[1920px] h-[180px] sm:h-[260px] md:h-[320px] lg:h-[400px] relative'>
+        <section className='w-full max-w-[1920px] h-[140px] sm:h-[160px] md:h-[220px] lg:h-[300px] relative'>
           <div className='w-full h-full'>
             <Image
               priority
@@ -41,10 +59,10 @@ const CatalogoPage = () => {
             />
           </div>
           <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
-            <div className='max-w-5xl w-full flex justify-center'>
-              <div className='md:w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+            <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+              <div className='text-center'>
                 <h3 className='text-2xl sm:text-4xl lg:text-5xl font-semibold text-color-primary-light'>
-                  ¡NUESTRO STOCK!
+                  ¡CATÁLOGO ONLINE!
                 </h3>
                 <p className='flex flex-col text-sm sm:text-lg md:text-2xl mt-1 text-color-text-light'>
                   <span>Elegí el que más te guste y contactanos,</span>
@@ -55,13 +73,85 @@ const CatalogoPage = () => {
           </div>
           <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/60 to-color-bg-secondary/50'></div>
         </section>
+
+        {/* Filtros y Buscador */}
+        <div className='w-full max-w-6xl'>
+          <div className='flex flex-col sm:flex-row gap-3 sm:gap-5 mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-0 mt-8'>
+            {/* Buscador */}
+            <div className='relative w-full'>
+              <input
+                type='text'
+                placeholder='Buscar vehículo...'
+                defaultValue={searchTerm}
+                onChange={(e) => {
+                  const params = new URLSearchParams(window.location.search);
+                  if (e.target.value) {
+                    params.set('search', e.target.value);
+                  } else {
+                    params.delete('search');
+                  }
+                  window.history.pushState(null, '', `?${params.toString()}`);
+                }}
+                className='w-full px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
+              />
+              <SearchIcon className='absolute right-3 top-1/2 -translate-y-1/2 size-5' />
+            </div>
+
+            <div className='flex flex-row sm:flex-row gap-3 sm:gap-5'>
+              {/* Filtro de Marca */}
+              <select
+                defaultValue={marcaFilter}
+                onChange={(e) => {
+                  const params = new URLSearchParams(window.location.search);
+                  if (e.target.value) {
+                    params.set('marca', e.target.value);
+                  } else {
+                    params.delete('marca');
+                  }
+                  window.history.pushState(null, '', `?${params.toString()}`);
+                }}
+                className='w-full sm:w-auto px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
+              >
+                <option value=''>Todas las marcas</option>
+                {marcas.map((marca) => (
+                  <option key={marca} value={marca}>
+                    {marca}
+                  </option>
+                ))}
+              </select>
+
+              {/* Filtro de Categoría */}
+              <select
+                defaultValue={categoriaFilter}
+                onChange={(e) => {
+                  const params = new URLSearchParams(window.location.search);
+                  if (e.target.value) {
+                    params.set('categoria', e.target.value);
+                  } else {
+                    params.delete('categoria');
+                  }
+                  window.history.pushState(null, '', `?${params.toString()}`);
+                }}
+                className='w-full sm:w-auto px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
+              >
+                <option value=''>Todas las categorías</option>
+                {categorias.map((categoria) => (
+                  <option key={categoria} value={categoria}>
+                    {categoria}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+
         <>
           {filteredProducts.length > 0 ? ( // Verificar si hay productos filtrados
-            <div className='max-w-6xl grid grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-12 my-10 md:my-20 min-h-[600px] place-content-start mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+            <div className='max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-12 mt-10 min-h-[600px] place-content-start mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
               {filteredProducts.map((product) => (
                 <Link
                   href={`/catalogo/${product.id}`}
-                  className='relative group flex flex-col items-center overflow-hidden rounded md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] hover:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.3)] transition-all'
+                  className='relative group flex flex-col items-center overflow-hidden rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] hover:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.3)] transition-all'
                   key={product.id}
                 >
                   <div className='w-full h-full'>
