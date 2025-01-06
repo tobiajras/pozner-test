@@ -20,7 +20,7 @@ const ServiciosHome = () => {
 
   return (
     <div id='serviciosSection'>
-      <section className='flex justify-center'>
+      <section className='flex justify-center py-10'>
         <div className='flex flex-col gap-8 items-center my-10 lg:my-16 overflow-hidden'>
           <article>
             <div className='flex flex-col md:gap-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-center'>

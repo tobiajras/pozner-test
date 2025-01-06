@@ -25,7 +25,7 @@ const Footer = () => {
               <div className='w-32 sm:w-36 md:w-40 h-12 sm:h-14'>
                 <Image
                   className='w-full h-full object-contain object-left'
-                  src='/assets/company/logo.webp'
+                  src='/assets/company/logo-white.webp'
                   alt={`${company.name} logo`}
                   width={288}
                   height={72}
@@ -41,7 +41,7 @@ const Footer = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <InstagramIcon className='w-8 h-8 text-color-text-light hover:text-color-title-light transition-colors' />
+                    <InstagramIcon className='w-8 h-8 text-color-text-light hover:text-color-primary-light transition-colors' />
                   </a>
                 )}
                 {company.facebook && (
@@ -50,7 +50,7 @@ const Footer = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <FacebookIcon className='w-8 h-8 text-color-text-light hover:text-color-title-light transition-colors' />
+                    <FacebookIcon className='w-8 h-8 text-color-text-light hover:text-color-primary-light transition-colors' />
                   </a>
                 )}
                 {company.whatsapp && (
@@ -59,7 +59,7 @@ const Footer = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    <WhatsappIcon className='w-8 h-8 text-color-text-light hover:text-color-title-light transition-colors' />
+                    <WhatsappIcon className='w-8 h-8 text-color-text-light hover:text-color-primary-light transition-colors' />
                   </a>
                 )}
               </div>
@@ -76,7 +76,7 @@ const Footer = () => {
                         smooth={true}
                         offset={-176}
                         duration={500}
-                        className='text-color-text-light hover:text-color-title-light transition-colors cursor-pointer'
+                        className='text-color-text-light hover:text-color-primary-light transition-colors cursor-pointer'
                       >
                         {link.title}
                       </Link>
@@ -104,7 +104,7 @@ const Footer = () => {
                         href={`https://api.whatsapp.com/send?phone=549${whatsappNumber}&text=Hola! Quería hacer una consulta`}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='text-color-text-light hover:text-color-title-light transition-colors'
+                        className='text-color-text-light hover:text-color-primary-light transition-colors'
                       >
                         {whatsappNumber}
                       </a>
@@ -116,7 +116,7 @@ const Footer = () => {
                   <h4 className='text-color-title-light'>Email</h4>
                   <a
                     href={`mailto:${company.email}`}
-                    className='text-color-text-light hover:text-color-title-light transition-colors'
+                    className='text-color-text-light hover:text-color-primary-light transition-colors'
                   >
                     {company.email}
                   </a>

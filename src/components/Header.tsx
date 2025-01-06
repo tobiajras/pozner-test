@@ -13,7 +13,7 @@ const Header = () => {
   const { isMenuOpen, setIsMenuOpen } = useNavbarStore();
 
   return (
-    <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-secondary'>
+    <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-primary shadow-md'>
       <section className='flex justify-between items-center gap-3 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         <article className='flex w-full'>
           <Link
@@ -23,9 +23,9 @@ const Header = () => {
           >
             <Image
               priority
-              // className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px]'
+              className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px]'
               // className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] [filter:drop-shadow(0_0_5px_white)] rounded-full'
-              className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] ring-[1.5px] ring-white rounded-full'
+              // className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] ring-[1.5px] ring-white rounded-full'
               src='/assets/company/favicon.webp'
               alt={`${company.name} favicon`}
               width={64}
@@ -48,7 +48,7 @@ const Header = () => {
             {navigation.map((nav) => (
               <li key={nav.id}>
                 <Link
-                  className='text-color-text-light font-medium hover:text-color-title-light transition-all duration-300'
+                  className='text-color-text font-medium hover:text-color-title transition-all duration-300'
                   href={nav.url}
                 >
                   {nav.title}
@@ -60,7 +60,7 @@ const Header = () => {
         <article className='md:hidden flex justify-end items-center gap-2 sm:gap-3 lg:gap-5'>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className=' text-color-text-light hover:text-color-title-light transition-all'
+            className=' text-color-text hover:text-color-title transition-all'
           >
             {isMenuOpen ? (
               <CloseIcon className='w-7 h-7' />
@@ -79,7 +79,7 @@ const Header = () => {
               {navigation.map((nav) => (
                 <li key={nav.id}>
                   <Link
-                    className='text-color-text-light font-medium hover:text-color-title-light text-lg transition-colors'
+                    className='text-color-text font-medium hover:text-color-title text-lg transition-colors'
                     href={nav.url}
                     onClick={() => setIsMenuOpen(false)}
                   >

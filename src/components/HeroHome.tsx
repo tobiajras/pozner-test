@@ -9,7 +9,7 @@ const HeroHome = () => {
   return (
     <section id='inicioSection' className='flex justify-center overflow-hidden'>
       <div
-        className={`h-[380px] sm:h-[380px] md:h-[390px] lg:h-[520px] xl:h-[670px] relative max-w-[1920px] w-full flex flex-col items-center md:flex-row md:justify-center gap-8 md:gap-0 lg:gap-8 py-10 md:py-28 lg:py-40 home-background z-10`}
+        className={`h-[400px] md:h-[420px] lg:h-[550px] xl:h-[700px] relative max-w-[1920px] w-full flex flex-col items-center md:flex-row md:justify-center gap-8 md:gap-0 lg:gap-8 py-10 md:py-28 lg:py-40 home-background z-10`}
       >
         <div className='flex justify-center max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
           <article className='w-full flex flex-col items-center md:items-start md:min-w-[430px] lg:min-w-[540px]'>
@@ -62,7 +62,7 @@ const HeroHome = () => {
           <div className='hidden md:block absolute w-3 sm:w-5 md:w-10 lg:w-20 h-full top-0 -left-0 bg-gradient-to-r from-color-bg-secondary'></div>
           <div className='hidden md:block absolute w-3 sm:w-5 md:w-10 lg:w-20 h-full top-0 -right-0 bg-gradient-to-l from-color-bg-secondary'></div>
         </div>
-        <div className='absolute top-0 left-0 w-full h-full bg-color-bg-secondary/50 -z-10'></div>
+        <div className='absolute top-0 left-0 w-full h-full bg-color-bg-secondary/40 -z-10'></div>
       </div>
     </section>
   );
