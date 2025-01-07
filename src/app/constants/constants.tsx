@@ -25,7 +25,7 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://kitt-race.vercel.app/',
+  metadataBase: 'https://kittrace-automotores.vercel.app/',
   title: 'KITT Race Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
