@@ -77,22 +77,24 @@ const ProductPage = ({ params }: ProductPageProps) => {
   }
 
   return (
-    <section className='flex flex-col items-center mx-auto px-4 py-8 md:py-12'>
+    <section className='flex flex-col items-center mx-auto mt-10 md:mt-16'>
       {/* Botón volver */}
-      <div className='w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mb-6'>
-        <Link
-          href='/catalogo'
-          className={`${
-            company.dark
-              ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
-              : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
-          } inline-flex items-center gap-2 px-4 py-2 rounded transition-colors`}
-        >
-          <ArrowLeftIcon className='w-4 h-4' />
-          <span>Volver al catálogo</span>
-        </Link>
+      <div className='w-full flex justify-center'>
+        <div className='w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mb-6 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+          <Link
+            href='/catalogo'
+            className={`${
+              company.dark
+                ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
+                : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
+            } inline-flex items-center gap-2 px-4 py-2 rounded transition-colors`}
+          >
+            <ArrowLeftIcon className='w-4 h-4' />
+            <span>Volver al catálogo</span>
+          </Link>
+        </div>
       </div>
-      <div className='flex flex-col lg:flex-row gap-8 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl'>
+      <div className='flex flex-col lg:flex-row gap-8 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         {/* Galería de imágenes */}
         <div className='space-y-4 w-full'>
           <div className='overflow-hidden relative group' ref={mainViewportRef}>
