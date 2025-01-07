@@ -15,7 +15,7 @@ const ContactoPage = () => {
   return (
     <>
       <section className='flex flex-col items-center'>
-        <section className='w-full max-w-[1920px] h-[140px] sm:h-[160px] md:h-[220px] lg:h-[300px] relative'>
+        <section className='w-full max-w-[1920px] h-[160px] sm:h-[200px] md:h-[240px] lg:h-[320px] relative'>
           <div className='w-full h-full'>
             <Image
               priority
@@ -39,7 +39,7 @@ const ContactoPage = () => {
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-primary/100 to-color-primary/60'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-primary/90 to-color-primary/60'></div>
         </section>
         <section id='ubicacionSection' className='my-6 md:my-12 lg:my-16'>
           <motion.div
@@ -114,7 +114,7 @@ const ContactoPage = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <InstagramIcon className='w-8 h-8 text-color-title hover:text-color-primary-light transition-colors' />
+                      <InstagramIcon className='w-8 h-8 text-color-title hover:text-color-primary transition-colors' />
                     </a>
                   )}
                   {company.facebook && (
@@ -123,7 +123,7 @@ const ContactoPage = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <FacebookIcon className='w-8 h-8 text-color-title hover:text-color-primary-light transition-colors' />
+                      <FacebookIcon className='w-8 h-8 text-color-title hover:text-color-primary transition-colors' />
                     </a>
                   )}
                   {company.whatsapp && (
@@ -132,7 +132,7 @@ const ContactoPage = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <WhatsappIcon className='w-8 h-8 text-color-title hover:text-color-primary-light transition-colors' />
+                      <WhatsappIcon className='w-8 h-8 text-color-title hover:text-color-primary transition-colors' />
                     </a>
                   )}
                 </div>
