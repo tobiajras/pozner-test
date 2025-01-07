@@ -22,7 +22,7 @@ const Footer = () => {
         <section className='flex md:justify-center text-color-text-light w-full '>
           <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-6 sm:mx-8 md:mx-10 py-10'>
             <article className='flex w-full flex-col'>
-              <div className='w-32 sm:w-36 md:w-40 h-12 sm:h-14'>
+              <div className='w-32 sm:w-36 md:w-40 lg:w-48 h-12 sm:h-14'>
                 <Image
                   className='w-full h-full object-contain object-left'
                   src='/assets/company/logo-white.webp'

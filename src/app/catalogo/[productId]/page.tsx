@@ -78,7 +78,21 @@ const ProductPage = ({ params }: ProductPageProps) => {
 
   return (
     <section className='flex flex-col items-center mx-auto px-4 py-8 md:py-12'>
-      <div className='flex flex-col md:flex-row gap-8 max-w-6xl'>
+      {/* Botón volver */}
+      <div className='w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mb-6'>
+        <Link
+          href='/catalogo'
+          className={`${
+            company.dark
+              ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
+              : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
+          } inline-flex items-center gap-2 px-4 py-2 rounded transition-colors`}
+        >
+          <ArrowLeftIcon className='w-4 h-4' />
+          <span>Volver al catálogo</span>
+        </Link>
+      </div>
+      <div className='flex flex-col lg:flex-row gap-8 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl'>
         {/* Galería de imágenes */}
         <div className='space-y-4 w-full'>
           <div className='overflow-hidden relative group' ref={mainViewportRef}>
@@ -87,7 +101,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
                 <button
                   key={index}
                   onClick={() => setShowModal(true)}
-                  className='relative h-60 md:h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden [box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)] cursor-zoom-in'
+                  className='relative h-60 sm:h-80 md:h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden [box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)] cursor-zoom-in'
                 >
                   <Image
                     src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
@@ -154,7 +168,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
 
         {/* Detalles del producto */}
         <div className='flex flex-col gap-4 w-full'>
-          <h1 className='text-3xl font-bold text-color-title'>
+          <h1 className='text-3xl font-bold text-color-primary'>
             {product.name}
           </h1>
 
@@ -238,7 +252,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
         />
       )}
 
-      <div className='mt-16'>
+      <div className='mt-16 w-full'>
         <CarrouselFeatured
           title='Recomendados'
           startIndex={16}

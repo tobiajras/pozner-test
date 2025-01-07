@@ -71,10 +71,10 @@ const HeroHome = () => {
               </Link>
             </div>
           </article>
-          <div className='hidden md:block absolute w-3 sm:w-5 md:w-10 lg:w-24 h-full top-0 -left-0 bg-gradient-to-r from-color-primary/40'></div>
-          <div className='hidden md:block absolute w-3 sm:w-5 md:w-10 lg:w-24 h-full top-0 -right-0 bg-gradient-to-l from-color-primary/40'></div>
+          <div className='hidden md:block absolute w-3 sm:w-5 md:w-10 lg:w-24 h-full top-0 -left-0 bg-gradient-to-r from-color-bg-secondary/60'></div>
+          <div className='hidden md:block absolute w-3 sm:w-5 md:w-10 lg:w-24 h-full top-0 -right-0 bg-gradient-to-l from-color-bg-secondary/60'></div>
         </div>
-        <div className='absolute top-0 left-0 w-full h-full bg-color-primary/30 -z-10'></div>
+        <div className='absolute top-0 left-0 w-full h-full bg-color-bg-secondary/40 -z-10'></div>
       </div>
     </section>
   );

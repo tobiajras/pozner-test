@@ -56,7 +56,7 @@ const CarrouselFeatured = ({
                 </div>
                 <div className='py-5 px-4 bg-gradient-to-t bg-color-bg-secondary-light relative'>
                   <div className='absolute -top-8 left-0 w-full h-8 bg-gradient-to-t from-color-bg-secondary-light to-transparent'></div>
-                  <h3 className='md:text-xl text-color-title-light font-semibold h-16 line-clamp-2 mb-1 max-w-64'>
+                  <h3 className='md:text-xl text-color-primary-light font-semibold h-16 line-clamp-2 mb-1 max-w-64'>
                     {product.name}
                   </h3>
                   <div className='flex flex-col gap-1 relative'>

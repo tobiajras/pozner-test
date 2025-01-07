@@ -101,7 +101,7 @@ const CatalogoPage = () => {
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-primary/50 to-color-primary/20'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/20'></div>
         </section>
 
         {/* Filtros y Buscador */}
@@ -173,7 +173,7 @@ const CatalogoPage = () => {
                       />
                     </div>
                     <div className='w-full px-4 py-5'>
-                      <h4 className='md:text-xl text-color-title font-semibold h-12 sm:h-16 line-clamp-2 mb-1 max-w-[150px] sm:max-w-44 lg:max-w-64'>
+                      <h4 className='md:text-xl text-color-primary font-semibold h-12 sm:h-16 line-clamp-2 mb-1 max-w-[150px] sm:max-w-44 lg:max-w-64'>
                         {product.name}
                       </h4>
                       <div className='flex flex-col gap-1 relative'>
