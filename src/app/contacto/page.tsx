@@ -39,7 +39,7 @@ const ContactoPage = () => {
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/80 to-color-bg-secondary/70'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-primary/100 to-color-primary/60'></div>
         </section>
         <section id='ubicacionSection' className='my-6 md:my-12 lg:my-16'>
           <motion.div
@@ -114,7 +114,7 @@ const ContactoPage = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <InstagramIcon className='w-8 h-8 text-color-title hover:text-color-text transition-colors' />
+                      <InstagramIcon className='w-8 h-8 text-color-title hover:text-color-primary-light transition-colors' />
                     </a>
                   )}
                   {company.facebook && (
@@ -123,7 +123,7 @@ const ContactoPage = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <FacebookIcon className='w-8 h-8 text-color-title hover:text-color-text transition-colors' />
+                      <FacebookIcon className='w-8 h-8 text-color-title hover:text-color-primary-light transition-colors' />
                     </a>
                   )}
                   {company.whatsapp && (
@@ -132,7 +132,7 @@ const ContactoPage = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <WhatsappIcon className='w-8 h-8 text-color-title hover:text-color-text transition-colors' />
+                      <WhatsappIcon className='w-8 h-8 text-color-title hover:text-color-primary-light transition-colors' />
                     </a>
                   )}
                 </div>
@@ -162,8 +162,8 @@ const ContactoPage = () => {
                   rel='noopener noreferrer'
                   className={`${
                     company.dark
-                      ? 'text-color-title-light bg-color-primary hover:bg-color-primary-dark'
-                      : 'text-color-title bg-color-primary hover:bg-color-primary-dark'
+                      ? 'text-color-title-light bg-color-primary hover:bg-color-primary-light hover:text-color-title'
+                      : 'text-color-title bg-color-primary hover:bg-color-primary-light hover:text-color-title'
                   } font-medium w-full text-center py-2 md:py-3 rounded-md transition-colors`}
                 >
                   Ver en Google Maps

@@ -12,6 +12,7 @@ import CheckIcon from '@/components/icons/CheckIcon';
 import CarrouselFeatured from '@/components/CarrouselFeatured';
 import WhatsappIcon from '@/components/icons/WhatsappIcon';
 import { company } from '@/app/constants/constants';
+import ImageGalleryModal from '@/components/ImageGalleryModal';
 
 interface ProductPageProps {
   params: {
@@ -23,6 +24,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
   const product = products.find((p) => p.id === params.productId);
   const [mainViewportRef, embla] = useEmblaCarousel();
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
   const scrollTo = useCallback(
     (index: number) => {
@@ -33,8 +35,6 @@ const ProductPage = ({ params }: ProductPageProps) => {
     },
     [embla]
   );
-
-  console.log('selectedIndex', selectedIndex);
 
   const scrollPrev = useCallback(() => {
     if (embla && selectedIndex > 0) {
@@ -51,6 +51,8 @@ const ProductPage = ({ params }: ProductPageProps) => {
   // Manejar las teclas de flecha
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (showModal) return; // No manejar las teclas si el modal está abierto
+
       if (e.key === 'ArrowLeft') {
         scrollPrev();
       } else if (e.key === 'ArrowRight') {
@@ -60,7 +62,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [scrollPrev, scrollNext]);
+  }, [scrollPrev, scrollNext, showModal]);
 
   useEffect(() => {
     if (embla) {
@@ -82,9 +84,10 @@ const ProductPage = ({ params }: ProductPageProps) => {
           <div className='overflow-hidden relative group' ref={mainViewportRef}>
             <div className='flex'>
               {product.images.map((image, index) => (
-                <div
+                <button
                   key={index}
-                  className='relative h-60 md:h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden [box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'
+                  onClick={() => setShowModal(true)}
+                  className='relative h-60 md:h-96 w-full flex-[0_0_100%] rounded-md overflow-hidden [box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)] cursor-zoom-in'
                 >
                   <Image
                     src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
@@ -95,7 +98,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
                     className='object-cover'
                     priority={index === 0}
                   />
-                </div>
+                </button>
               ))}
             </div>
             {/* Botones de navegación */}
@@ -223,6 +226,18 @@ const ProductPage = ({ params }: ProductPageProps) => {
           </div>
         </div>
       </div>
+
+      {/* Modal de galería */}
+      {showModal && (
+        <ImageGalleryModal
+          images={product.images}
+          currentIndex={selectedIndex}
+          productId={product.id}
+          marcaId={product.marcaId || ''}
+          onClose={() => setShowModal(false)}
+        />
+      )}
+
       <div className='mt-16'>
         <CarrouselFeatured
           title='Recomendados'

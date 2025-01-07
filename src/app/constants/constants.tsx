@@ -88,5 +88,6 @@ export const navigation = [
     id: '3',
     title: 'Contacto',
     url: '/contacto',
+    button: true,
   },
 ];

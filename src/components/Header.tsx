@@ -48,7 +48,11 @@ const Header = () => {
             {navigation.map((nav) => (
               <li key={nav.id}>
                 <Link
-                  className='text-color-text font-medium hover:text-color-title transition-all duration-300'
+                  className={` ${
+                    nav.button
+                      ? 'bg-color-primary p-3 text-color-title-light rounded hover:bg-color-primary-light hover:text-color-title'
+                      : 'text-color-text hover:text-color-title'
+                  } font-medium  transition-all duration-300`}
                   href={nav.url}
                 >
                   {nav.title}
@@ -73,7 +77,7 @@ const Header = () => {
           <nav
             className={`${
               isMenuOpen ? 'right-0' : '-right-full'
-            } absolute top-0 h-full w-1/2 bg-color-bg-secondary transition-all duration-300 pointer-events-auto`}
+            } absolute top-0 h-full w-1/2 bg-color-bg-primary transition-all duration-300 pointer-events-auto`}
           >
             <ul className='flex flex-col gap-2 p-5'>
               {navigation.map((nav) => (

@@ -6,7 +6,7 @@ const NosotrosPage = () => {
   return (
     <>
       <section className='flex flex-col items-center w-full mb-10 md:mb-20'>
-        <section className='w-full max-w-[1920px] h-[140px] sm:h-[160px] md:h-[220px] lg:h-[300px] relative'>
+        <section className='w-full max-w-[1920px] h-[160px] sm:h-[200px] md:h-[240px] lg:h-[320px] relative'>
           <div className='w-full h-full'>
             <Image
               priority
@@ -30,7 +30,7 @@ const NosotrosPage = () => {
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/40'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-primary/50 to-color-primary/20'></div>
         </section>
         <div className='max-w-6xl mt-10 md:mt-20 flex flex-col gap-10 md:gap-20'>
           <article className='flex flex-col md:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
