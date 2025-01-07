@@ -31,7 +31,7 @@ const Header = () => {
               width={64}
               height={64}
             />
-            <div className='h-10 w-24 sm:w-28 md:w-40'>
+            <div className='h-10 w-32 sm:w-36 md:w-40'>
               <Image
                 priority
                 className='h-full w-full object-contain object-left'

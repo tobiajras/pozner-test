@@ -119,9 +119,7 @@ const ProductPage = ({ params }: ProductPageProps) => {
             <button
               onClick={scrollPrev}
               className={`absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all ${
-                selectedIndex === 0
-                  ? 'opacity-0'
-                  : 'opacity-0 group-hover:opacity-100 cursor-pointer'
+                selectedIndex === 0 ? 'opacity-0' : 'opacity-100 cursor-pointer'
               }`}
               disabled={selectedIndex === 0}
               aria-label='Anterior'
@@ -133,17 +131,22 @@ const ProductPage = ({ params }: ProductPageProps) => {
               className={`absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all ${
                 selectedIndex === product.images.length - 1
                   ? 'opacity-0'
-                  : 'opacity-0 group-hover:opacity-100 cursor-pointer'
+                  : 'opacity-100 cursor-pointer'
               }`}
               disabled={selectedIndex === product.images.length - 1}
               aria-label='Siguiente'
             >
               <ArrowRightIcon className='w-4 h-4' />
             </button>
+
+            {/* Indicador de posición */}
+            <div className='absolute bottom-2 right-2 bg-black/60 text-white px-2 py-1 rounded text-sm'>
+              {selectedIndex + 1}/{product.images.length}
+            </div>
           </div>
 
-          {/* Miniaturas */}
-          <div className='flex flex-wrap gap-2'>
+          {/* Miniaturas - ocultas en móvil */}
+          <div className='hidden md:flex flex-wrap gap-2'>
             {product.images.map((image, index) => (
               <button
                 key={index}

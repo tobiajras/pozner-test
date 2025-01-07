@@ -9,7 +9,7 @@ const HeroHome = () => {
   return (
     <section id='inicioSection' className='flex justify-center overflow-hidden'>
       <div
-        className={`h-[400px] md:h-[430px] lg:h-[560px] xl:h-[720px] relative max-w-[1920px] w-full flex flex-col items-center md:flex-row md:justify-center gap-8 md:gap-0 lg:gap-8 py-10 md:py-28 lg:py-40 home-background z-10`}
+        className={`h-[380px] md:h-[430px] lg:h-[560px] xl:h-[720px] relative max-w-[1920px] w-full flex flex-col items-center md:flex-row md:justify-center gap-8 md:gap-0 lg:gap-8 py-10 md:py-28 lg:py-40 home-background z-10`}
       >
         <div className='flex justify-center max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
           <article className='w-full flex flex-col items-center md:items-start md:min-w-[430px] lg:min-w-[540px]'>
@@ -51,7 +51,7 @@ const HeroHome = () => {
                   company.dark
                     ? 'text-color-title-light bg-color-primary hover:bg-color-primary-light hover:text-color-title'
                     : 'text-color-title bg-color-primary-light hover:bg-color-primary'
-                } transition-colors py-2 md:py-3 px-4 md:px-6 rounded font-medium`}
+                } transition-colors py-3 px-5 md:px-6 rounded font-medium`}
                 // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title-light rounded font-medium'
                 // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title rounded font-medium'
               >
@@ -63,7 +63,7 @@ const HeroHome = () => {
                   company.dark
                     ? 'text-color-title bg-color-primary-light hover:bg-color-primary hover:text-color-title-light'
                     : 'text-color-title bg-color-primary-light hover:bg-color-primary hover:text-color-title-light'
-                } transition-colors py-2 md:py-3 px-4 md:px-6 rounded font-medium`}
+                } transition-colors py-3 px-5 md:px-6 rounded font-medium`}
                 // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title-light rounded font-medium'
                 // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title rounded font-medium'
               >

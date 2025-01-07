@@ -23,9 +23,9 @@ const NosotrosPage = () => {
                 <h3 className='text-2xl sm:text-4xl lg:text-5xl font-bold text-color-primary-light'>
                   SOMOS {company.name.toUpperCase()}
                 </h3>
-                <p className='flex flex-col text-sm sm:text-lg md:text-2xl mt-1 text-color-text-light max-w-[300px] sm:max-w-[550px] md:max-w-[650px] lg:max-w-[750px]'>
-                  Te acompañamos con transparencia, opciones flexibles de
-                  financiación y vehículos sometidos a controles técnicos
+                <p className='flex flex-col sm:text-lg md:text-2xl mt-1 text-color-text-light max-w-[300px] sm:max-w-[550px] md:max-w-[650px] lg:max-w-[750px]'>
+                  Te acompañamos con opciones flexibles de financiación y
+                  vehículos sometidos a controles técnicos
                 </p>
               </div>
             </div>

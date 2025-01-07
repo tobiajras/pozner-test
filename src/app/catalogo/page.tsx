@@ -95,7 +95,7 @@ const CatalogoPage = () => {
                 <h3 className='text-2xl sm:text-4xl lg:text-5xl font-bold text-color-primary-light'>
                   ¡CATÁLOGO ONLINE!
                 </h3>
-                <p className='flex flex-col text-sm sm:text-lg md:text-2xl mt-1 text-color-text-light md:max-w-xl lg:max-w-none'>
+                <p className='flex flex-col sm:text-lg md:text-2xl mt-1 text-color-text-light max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-none'>
                   Explorá nuestro stock disponible y encontrá tu vehículo ideal
                 </p>
               </div>
