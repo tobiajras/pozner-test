@@ -1,37 +1,33 @@
 export const company = {
   dark: true,
-  id: 'sanjuan-cars',
-  name: 'San Juan Cars',
-  adress: 'Rioja Sur 1093',
-  city: 'San Juan',
+  id: 'telles-automotores',
+  name: 'Telles Automotores',
+  adress: 'Mendoza 324 sur',
+  city: 'Rawson',
   email: null,
-  instagram: 'sanjuancars_automotores',
-  facebook: 'sanjuan.cars',
-  whatsapp: ['2644514631'],
-  googlemapsLink: 'https://maps.app.goo.gl/zfbVjGxD1yrrvE9t5',
+  instagram: 'telles.automotores',
+  facebook: 'telleshnos',
+  whatsapp: ['2646607872', '2644437016'],
+  googlemapsLink: 'https://maps.app.goo.gl/KrrncgjTQ1yECAMaA',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.134554819606!2d-68.52309552362!3d-31.54792170262366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96816a9f61b08487%3A0xa5b08820502ad871!2sSanjuan%20Cars!5e0!3m2!1ses-419!2sar!4v1736277286759!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13599.352422290876!2d-68.53358628261721!3d-31.55605735430385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968140280a20be05%3A0x99bbd5c02dde7be7!2sTelles%20Automotores!5e0!3m2!1ses-419!2sar!4v1736303972709!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 13:00', '16:00 a 20:30'] },
-    { day: 'Martes', hours: ['09:00 a 13:00', '16:00 a 20:30'] },
-    { day: 'Miércoles', hours: ['09:00 a 13:00', '16:00 a 20:30'] },
-    { day: 'Jueves', hours: ['09:00 a 13:00', '16:00 a 20:30'] },
-    { day: 'Viernes', hours: ['09:00 a 13:00', '16:00 a 20:30'] },
-    { day: 'Sábado', hours: ['09:00 a 13:00', '16:00 a 20:30'] },
-    { day: 'Domingo', hours: ['09:00 a 13:00', '16:00 a 20:30'] },
+    { day: 'Lunes', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
+    { day: 'Martes', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
+    { day: 'Miércoles', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
+    { day: 'Jueves', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
+    { day: 'Viernes', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
+    { day: 'Sábado', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
+    // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://sanjuan-cars.vercel.app/',
-  title: 'San Juan Cars - Compra y Venta de Autos',
+  metadataBase: 'https://telles-automotores.vercel.app/',
+  title: 'Telles Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
-};
-
-export const nosotros = {
-  text: 'En Carbonetti Café, nuestra experiencia y dedicación nos motivan a brindarte un ambiente único y acogedor. Vení a disfrutar de nuestros sabores en buena compañía.',
 };
 
 export const preguntas = [
