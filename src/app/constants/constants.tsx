@@ -1,32 +1,32 @@
 export const company = {
   dark: true,
-  id: 'kittrace-automotores',
-  name: 'KITT Race Autos',
-  adress: 'Av. La Plata 1713',
-  city: 'Quilmes',
+  id: 'miralles-automotores',
+  name: 'Miralles Autos',
+  adress: 'Leyria 636',
+  city: 'Azul',
   email: null,
-  instagram: 'automotores.kittrace',
+  instagram: 'mirallesautomotores',
   facebook: null,
-  whatsapp: ['1157619927'],
+  whatsapp: ['2281576036'],
+  googlemapsLink: 'https://maps.app.goo.gl/yfPMEpud2o3xF9rR7',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419521.5511374571!2d-58.694217893749936!3d-34.76788088629637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f003c02e66d%3A0x6552021032076afd!2sKittrace!5e0!3m2!1ses-419!2sar!4v1733956742437!5m2!1ses-419!2sar',
-  googlemapsLink: 'https://maps.app.goo.gl/TVxjCfSekRoVgEHF6',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d237.50542252907994!2d-59.85669387182016!3d-36.78305622041747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9594275241df73cd%3A0xde83001d2ba35502!2sMiralles%20Automotores!5e0!3m2!1ses-419!2sar!4v1736276660118!5m2!1ses-419!2sar',
   mercadolibre: null,
   openDays: [
-    { day: 'Lunes', hours: ['09:30 a 13:00', '14:00 a 18:30'] },
-    { day: 'Martes', hours: ['09:30 a 13:00', '14:00 a 18:30'] },
-    { day: 'Miércoles', hours: ['09:30 a 13:00', '14:00 a 18:30'] },
-    { day: 'Jueves', hours: ['09:30 a 13:00', '14:00 a 18:30'] },
-    { day: 'Viernes', hours: ['09:30 a 13:00', '14:00 a 18:30'] },
-    { day: 'Sábado', hours: ['09:30 a 14:30'] },
+    { day: 'Lunes', hours: ['09:00 a 12:30', '16:00 a 19:30'] },
+    { day: 'Martes', hours: ['09:00 a 12:30', '16:00 a 19:30'] },
+    { day: 'Miércoles', hours: ['09:00 a 12:30', '16:00 a 19:30'] },
+    { day: 'Jueves', hours: ['09:00 a 12:30', '16:00 a 19:30'] },
+    { day: 'Viernes', hours: ['09:00 a 12:30', '16:00 a 19:30'] },
+    { day: 'Sábado', hours: ['09:00 a 13:00'] },
     // { day: 'Domingo', hours: ['09:00 a 16:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://kittrace-automotores.vercel.app/',
-  title: 'KITT Race Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://miralles-automotores.vercel.app/',
+  title: 'Miralles Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
