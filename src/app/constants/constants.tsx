@@ -7,7 +7,7 @@ export const company = {
   email: null,
   instagram: 'sanjuancars_automotores',
   facebook: 'sanjuan.cars',
-  whatsapp: ['2644228806', '2644514631'],
+  whatsapp: ['2644514631'],
   googlemapsLink: 'https://maps.app.goo.gl/zfbVjGxD1yrrvE9t5',
   googlemaps:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.134554819606!2d-68.52309552362!3d-31.54792170262366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96816a9f61b08487%3A0xa5b08820502ad871!2sSanjuan%20Cars!5e0!3m2!1ses-419!2sar!4v1736277286759!5m2!1ses-419!2sar',
