@@ -1,22 +1,22 @@
 export const company = {
   dark: true,
-  id: 'av-automotor',
-  name: 'AV Automotor',
-  adress: 'Rafael Núñez 5751',
-  city: 'Cordoba',
+  id: 'contarino-automobile',
+  name: 'Contarino Autos',
+  adress: 'H. Yrigoyen 11501',
+  city: 'Lomas de Zamora',
   email: null,
-  instagram: 'av.automotor',
+  instagram: 'contarino.automobile',
   facebook: null,
-  whatsapp: ['3516653727'],
-  googlemapsLink: 'https://maps.app.goo.gl/RXC42mY49PxPsGcc6',
+  whatsapp: ['1160198318', '1128174929'],
+  googlemapsLink: 'https://maps.app.goo.gl/qfXT5wmGEmwohKim6',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.3172591108805!2d-64.25099722402489!3d-31.350223293056704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329eade1b0224f%3A0xc9642a7a65847d05!2sAv%20Automotores!5e0!3m2!1ses-419!2sar!4v1736305128680!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209786.42480192962!2d-58.77836362187498!3d-34.75778716426573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd304f5819841%3A0xc536d375c905a766!2sContarino%20Automobile!5e0!3m2!1ses-419!2sar!4v1736306791222!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:00'] },
-    { day: 'Martes', hours: ['09:00 a 18:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:00'] },
-    { day: 'Jueves', hours: ['09:00 a 18:00'] },
-    { day: 'Viernes', hours: ['09:00 a 18:00'] },
+    { day: 'Lunes', hours: ['09:30 a 18:30'] },
+    { day: 'Martes', hours: ['09:30 a 18:30'] },
+    { day: 'Miércoles', hours: ['09:30 a 18:30'] },
+    { day: 'Jueves', hours: ['09:30 a 18:30'] },
+    { day: 'Viernes', hours: ['09:30 a 18:30'] },
     // { day: 'Sábado', hours: ['09:00 a 18:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -24,8 +24,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://av-automotor.vercel.app/',
-  title: 'AV Automotor - Compra y Venta de Autos',
+  metadataBase: 'https://contarino-automobile.vercel.app/',
+  title: 'Contarino Automobile - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
