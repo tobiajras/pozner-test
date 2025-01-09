@@ -1,22 +1,22 @@
 export const company = {
   dark: true,
-  id: 'contarino-automobile',
-  name: 'Contarino Autos',
-  adress: 'H. Yrigoyen 11501',
-  city: 'Lomas de Zamora',
+  id: 'liberato-automotores',
+  name: 'Liberato Autos',
+  adress: 'Washington 3532',
+  city: 'Saavedra',
   email: null,
-  instagram: 'contarino.automobile',
+  instagram: 'liberatoautomotores',
   facebook: null,
-  whatsapp: ['1160198318', '1128174929'],
-  googlemapsLink: 'https://maps.app.goo.gl/qfXT5wmGEmwohKim6',
+  whatsapp: ['1134820512'],
+  googlemapsLink: 'https://maps.app.goo.gl/EghLFFgjWQBeHEmh7',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209786.42480192962!2d-58.77836362187498!3d-34.75778716426573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd304f5819841%3A0xc536d375c905a766!2sContarino%20Automobile!5e0!3m2!1ses-419!2sar!4v1736306791222!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.8749040206735!2d-58.48265942065431!3d-34.5567226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb68e08f5be13%3A0x89221937c1fb081f!2sLiberato%20Automotores!5e0!3m2!1ses-419!2sar!4v1736307550238!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:30 a 18:30'] },
-    { day: 'Martes', hours: ['09:30 a 18:30'] },
-    { day: 'Miércoles', hours: ['09:30 a 18:30'] },
-    { day: 'Jueves', hours: ['09:30 a 18:30'] },
-    { day: 'Viernes', hours: ['09:30 a 18:30'] },
+    { day: 'Lunes', hours: ['11:00 a 13:00', '14:00 a 17:00'] },
+    { day: 'Martes', hours: ['11:00 a 13:00', '14:00 a 17:00'] },
+    { day: 'Miércoles', hours: ['11:00 a 13:00', '14:00 a 17:00'] },
+    { day: 'Jueves', hours: ['11:00 a 13:00', '14:00 a 17:00'] },
+    { day: 'Viernes', hours: ['11:00 a 13:00', '14:00 a 17:00'] },
     // { day: 'Sábado', hours: ['09:00 a 18:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -24,8 +24,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://contarino-automobile.vercel.app/',
-  title: 'Contarino Automobile - Compra y Venta de Autos',
+  metadataBase: 'https://liberato-automotores.vercel.app/',
+  title: 'Liberato Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
