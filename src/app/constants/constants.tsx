@@ -1,22 +1,22 @@
 export const company = {
   dark: true,
-  id: 'valeria-motors',
-  name: 'Valeria Motors',
-  adress: 'Av. Espora 2059',
-  city: 'Valeria del Mar',
+  id: 'dm-automotores',
+  name: 'DM Automotores',
+  adress: 'Av. La plata 519',
+  city: 'Ostende',
   email: null,
-  instagram: 'valeria.motors_automotores',
+  instagram: 'dm_automotores1',
   facebook: null,
-  whatsapp: ['2267529661', '2254405549'],
-  googlemapsLink: 'https://maps.app.goo.gl/f7n5RZxQAx3Xpsay8',
+  whatsapp: ['2236067804'],
+  googlemapsLink: 'https://maps.app.goo.gl/riXKmePLHyTDym7x7',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12721.949899374811!2d-56.9193635128418!3d-37.141106799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c9d7e312a3c3b%3A0x4b0aa6a0b2dacde1!2sValeria%20Motors!5e0!3m2!1ses-419!2sar!4v1737675119830!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12724.417679488646!2d-56.8976975128418!3d-37.1264307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c9daf72d2c8c5%3A0x2447c7e2078aab05!2sDM%20automotores!5e0!3m2!1ses-419!2sar!4v1737676092149!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['10:00 a 21:00'] },
-    { day: 'Martes', hours: ['10:00 a 21:00'] },
-    { day: 'Miércoles', hours: ['10:00 a 21:00'] },
-    { day: 'Jueves', hours: ['10:00 a 21:00'] },
-    { day: 'Viernes', hours: ['10:00 a 21:00'] },
+    { day: 'Lunes', hours: ['08:00 a 20:00'] },
+    { day: 'Martes', hours: ['08:00 a 20:00'] },
+    { day: 'Miércoles', hours: ['08:00 a 20:00'] },
+    { day: 'Jueves', hours: ['08:00 a 20:00'] },
+    { day: 'Viernes', hours: ['08:00 a 20:00'] },
     // { day: 'Sábado', hours: ['09:00 a 13:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -24,8 +24,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://valeria-motors.vercel.app/',
-  title: 'Valeria Motors - Compra y Venta de Autos',
+  metadataBase: 'https://dm-automotores.vercel.app/',
+  title: 'DM Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
