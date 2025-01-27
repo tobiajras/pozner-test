@@ -1,23 +1,23 @@
 export const company = {
-  dark: false,
-  id: 'landa-automotores',
-  name: 'Landa Automotores',
-  adress: 'Rawson 140 Norte',
-  city: 'San Juan',
-  email: 'landaautomotores@yahoo.com.ar',
-  instagram: 'landa_automotores',
-  facebook: null,
-  whatsapp: ['2645446818', '2645446816', '2645250630', '2644593747'],
-  googlemapsLink: 'https://maps.app.goo.gl/26MeDyQPg99cYLq56',
+  dark: true,
+  id: 'arduino-automotores',
+  name: 'Arduino Autos',
+  adress: 'Nelsis Muriziasco 1586',
+  city: 'Santa Fé',
+  email: 'jmarduino@hotmail.com',
+  instagram: 'arduino.automotores',
+  facebook: 'arduinoautomotores',
+  whatsapp: ['3406457535'],
+  googlemapsLink: 'https://maps.app.goo.gl/nuy2orkDZMLGNfzG9',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.7199021749675!2d-68.51823212401747!3d-31.53185210184342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96816a85cba225df%3A0x2553ed9e5779a96f!2sLanda%20Automotores!5e0!3m2!1ses-419!2sar!4v1737663971676!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.4257391858137!2d-61.84729412400249!3d-31.895028019553777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ca5929fb5481e1%3A0x120573ee5f384f1f!2sARDUINO%20AUTOMOTORES!5e0!3m2!1ses-419!2sar!4v1737666779268!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 13:30', '17:00 a 21:00'] },
-    { day: 'Martes', hours: ['09:00 a 13:30', '17:00 a 21:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 13:30', '17:00 a 21:00'] },
-    { day: 'Jueves', hours: ['09:00 a 13:30', '17:00 a 21:00'] },
-    { day: 'Viernes', hours: ['09:00 a 13:30', '17:00 a 21:00'] },
-    { day: 'Sábado', hours: ['09:00 a 14:00'] },
+    { day: 'Lunes', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
+    { day: 'Martes', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
+    { day: 'Miércoles', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
+    { day: 'Jueves', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
+    { day: 'Viernes', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
+    { day: 'Sábado', hours: ['08:00 a 12:00'] },
 
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -25,8 +25,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://landa-automotores.vercel.app/',
-  title: 'Landa Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://arduino-automotores.vercel.app/',
+  title: 'Arduino Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
