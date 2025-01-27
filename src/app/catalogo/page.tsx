@@ -5,17 +5,21 @@ import products from '@/data/catalogo.json';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Suspense } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { company } from '../constants/constants';
 import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon';
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon';
+import { useDebounce } from '@/hooks/useDebounce';
 
 const ITEMS_PER_PAGE = 12;
 
 const CatalogoPage = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const searchTerm = searchParams.get('search') || '';
+  const [searchValue, setSearchValue] = useState(
+    searchParams.get('search') || ''
+  );
+  const debouncedSearchValue = useDebounce(searchValue, 300);
   const marcaFilter = searchParams.get('marca') || '';
   const categoriaFilter = searchParams.get('categoria') || '';
   const currentPage = Number(searchParams.get('page')) || 1;
@@ -29,7 +33,7 @@ const CatalogoPage = () => {
   ).sort();
 
   // Normalizar el término de búsqueda
-  const normalizedSearchTerm = searchTerm
+  const normalizedSearchTerm = debouncedSearchValue
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '');
 
@@ -61,7 +65,7 @@ const CatalogoPage = () => {
   const handlePageChange = (page: number) => {
     const params = new URLSearchParams(window.location.search);
     params.set('page', page.toString());
-    router.push(`/catalogo?${params.toString()}`);
+    router.push(`/catalogo?${params.toString()}`, { scroll: false });
   };
 
   const updateFilters = (key: string, value: string) => {
@@ -72,8 +76,20 @@ const CatalogoPage = () => {
       params.delete(key);
     }
     params.delete('page'); // Resetear página al cambiar filtros
-    router.push(`/catalogo?${params.toString()}`);
+    router.replace(`/catalogo?${params.toString()}`, { scroll: false });
   };
+
+  // Actualizar la URL cuando cambie el valor debounceado
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (debouncedSearchValue) {
+      params.set('search', debouncedSearchValue);
+    } else {
+      params.delete('search');
+    }
+    params.delete('page'); // Resetear página al cambiar filtros
+    router.replace(`/catalogo?${params.toString()}`, { scroll: false });
+  }, [debouncedSearchValue, router]);
 
   return (
     <>
@@ -112,8 +128,8 @@ const CatalogoPage = () => {
               <input
                 type='text'
                 placeholder='Buscar vehículo...'
-                defaultValue={searchTerm}
-                onChange={(e) => updateFilters('search', e.target.value)}
+                value={searchValue}
+                onChange={(e) => setSearchValue(e.target.value)}
                 className='w-full px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
               />
               <SearchIcon className='absolute right-3 top-1/2 -translate-y-1/2 size-5' />
@@ -122,7 +138,7 @@ const CatalogoPage = () => {
             <div className='flex flex-row sm:flex-row gap-3 sm:gap-5'>
               {/* Filtro de Marca */}
               <select
-                defaultValue={marcaFilter}
+                value={marcaFilter}
                 onChange={(e) => updateFilters('marca', e.target.value)}
                 className='w-full sm:w-auto px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
               >
@@ -136,7 +152,7 @@ const CatalogoPage = () => {
 
               {/* Filtro de Categoría */}
               <select
-                defaultValue={categoriaFilter}
+                value={categoriaFilter}
                 onChange={(e) => updateFilters('categoria', e.target.value)}
                 className='w-full sm:w-auto px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
               >
@@ -238,11 +254,11 @@ const CatalogoPage = () => {
           ) : (
             <div className='flex flex-col items-center min-h-[600px] my-8 md:my-16'>
               <div className='col-span-2 md:col-span-3 lg:col-span-4 text-center text-lg text-color-text'>
-                {searchTerm ? (
+                {searchValue ? (
                   <>
                     No se encontraron resultados para la búsqueda{' '}
                     <span className='text-color-title font-semibold'>
-                      &quot;{searchTerm}&quot;
+                      &quot;{searchValue}&quot;
                     </span>
                     {(marcaFilter || categoriaFilter) &&
                       ' con los filtros seleccionados'}
@@ -283,6 +299,11 @@ const CatalogoPage = () => {
               <Link
                 className='mt-5 border-2 border-transparent bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 py-3 text-color-title-light rounded'
                 href='/catalogo'
+                onClick={(e) => {
+                  e.preventDefault();
+                  setSearchValue('');
+                  router.replace('/catalogo', { scroll: false });
+                }}
               >
                 Ver catálogo completo
               </Link>
