@@ -65,7 +65,7 @@ const CarrouselFeatured = ({
                         className={`${
                           company.dark
                             ? ' text-color-title bg-color-primary-light hover:bg-color-primary-light/80'
-                            : 'text-color-title-light bg-color-primary hover:bg-color-primary-dark'
+                            : 'text-color-title bg-color-primary hover:bg-color-primary-dark'
                         } size-8 md:size-10 transition-colors rounded-full p-1.5 md:p-2.5 stroke-[3]`}
                       />
                     </div>

@@ -50,7 +50,7 @@ const HeroHome = () => {
                 className={`${
                   company.dark
                     ? 'text-color-title-light bg-color-primary hover:bg-color-primary-light hover:text-color-title'
-                    : 'text-color-title bg-color-primary-light hover:bg-color-primary'
+                    : 'text-color-title bg-color-primary hover:bg-color-primary-dark'
                 } transition-colors py-3 px-5 md:px-6 rounded font-medium`}
                 // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title-light rounded font-medium'
                 // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title rounded font-medium'
@@ -62,7 +62,7 @@ const HeroHome = () => {
                 className={`${
                   company.dark
                     ? 'text-color-title bg-color-primary-light hover:bg-color-primary hover:text-color-title-light'
-                    : 'text-color-title bg-color-primary-light hover:bg-color-primary hover:text-color-title-light'
+                    : 'text-color-title bg-color-primary-light hover:bg-color-primary'
                 } transition-colors py-3 px-5 md:px-6 rounded font-medium`}
                 // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title-light rounded font-medium'
                 // className='bg-color-primary hover:bg-color-primary-dark transition-colors py-2 md:py-3 px-4 md:px-6 text-color-title rounded font-medium'

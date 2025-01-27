@@ -49,7 +49,11 @@ const Header = () => {
                 <Link
                   className={` ${
                     nav.button
-                      ? 'bg-color-primary p-3 text-color-title-light rounded hover:bg-color-primary-light hover:text-color-title'
+                      ? `${
+                          company.dark
+                            ? 'text-color-title-light'
+                            : 'text-color-title'
+                        } bg-color-primary p-3 rounded hover:bg-color-primary-light hover:text-color-title`
                       : 'text-color-text hover:text-color-title'
                   } font-medium  transition-all duration-300`}
                   href={nav.url}
