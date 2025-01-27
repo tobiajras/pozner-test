@@ -1,23 +1,23 @@
 export const company = {
   dark: true,
-  id: 'arduino-automotores',
-  name: 'Arduino Autos',
-  adress: 'Nelsis Muriziasco 1586',
-  city: 'Santa Fé',
-  email: 'jmarduino@hotmail.com',
-  instagram: 'arduino.automotores',
-  facebook: 'arduinoautomotores',
-  whatsapp: ['3406457535'],
-  googlemapsLink: 'https://maps.app.goo.gl/nuy2orkDZMLGNfzG9',
+  id: 'gariboldi-autos',
+  name: 'Gariboldi Autos',
+  adress: 'Saavedra 30',
+  city: 'Córdoba',
+  email: null,
+  instagram: 'diego_gariboldi_automotores',
+  facebook: 'diegogariboldiautomotores',
+  whatsapp: ['3582593434', '3582466193', '3582649853'],
+  googlemapsLink: 'https://maps.app.goo.gl/hwqmYBWr3f7rzppQ9',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.4257391858137!2d-61.84729412400249!3d-31.895028019553777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ca5929fb5481e1%3A0x120573ee5f384f1f!2sARDUINO%20AUTOMOTORES!5e0!3m2!1ses-419!2sar!4v1737666779268!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.3601972679876!2d-64.59511022392962!3d-33.621901406313675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d1c40d9a96c593%3A0x4dac08b55b06a2ec!2sGariboldi%20Automotores!5e0!3m2!1ses-419!2sar!4v1737667980529!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
-    { day: 'Martes', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
-    { day: 'Miércoles', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
-    { day: 'Jueves', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
-    { day: 'Viernes', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
-    { day: 'Sábado', hours: ['08:00 a 12:00'] },
+    { day: 'Lunes', hours: ['08:00 a 12:30', '16:30 a 20:30'] },
+    { day: 'Martes', hours: ['08:00 a 12:30', '16:30 a 20:30'] },
+    { day: 'Miércoles', hours: ['08:00 a 12:30', '16:30 a 20:30'] },
+    { day: 'Jueves', hours: ['08:00 a 12:30', '16:30 a 20:30'] },
+    { day: 'Viernes', hours: ['08:00 a 12:30', '16:30 a 20:30'] },
+    // { day: 'Sábado', hours: ['08:00 a 12:00'] },
 
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -25,8 +25,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://arduino-automotores.vercel.app/',
-  title: 'Arduino Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://gariboldi-autos.vercel.app/',
+  title: 'Diego Gariboldi Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
