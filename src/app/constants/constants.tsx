@@ -1,22 +1,22 @@
 export const company = {
   dark: true,
-  id: 'aguilar-e-hijos',
-  name: 'Aguilar e Hijos',
-  adress: 'Av. Perón 272',
-  city: 'Azul',
-  email: 'b.aguilar@aguilarehijos.com.ar',
-  instagram: 'aguilarehijosazul',
-  facebook: null,
-  whatsapp: ['2281499002', '2281429320'],
-  googlemapsLink: 'https://maps.app.goo.gl/4VPJvyhTdZ2Qk66R9',
+  id: 'alpes-autos',
+  name: 'Alpes Autos',
+  adress: 'Córdoba 3905',
+  city: 'Villa Ballester',
+  email: null,
+  instagram: 'alpes.autos',
+  facebook: 'alpesautomotores',
+  whatsapp: ['1157576949', '1147673682'],
+  googlemapsLink: 'https://maps.app.goo.gl/EwuJngLeSSxcxGcv5',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.6737067597733!2d-59.8744284134919!3d-36.77839440402209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959427bd2bbc11b5%3A0xb7256d067aa49801!2sAguilar%20Autos!5e0!3m2!1ses-419!2sar!4v1737694721831!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13459176.721371504!2d-69.0936224!3d-34.5552817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb75a713c445d%3A0x2856763e3dfad74c!2sALPES%20AUTOMOTORES!5e0!3m2!1ses-419!2sar!4v1737695491094!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 12:00', '16:00 a 20:00'] },
-    { day: 'Martes', hours: ['09:00 a 12:00', '16:00 a 20:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 12:00', '16:00 a 20:00'] },
-    { day: 'Jueves', hours: ['09:00 a 12:00', '16:00 a 20:00'] },
-    { day: 'Viernes', hours: ['09:00 a 12:00', '16:00 a 20:00'] },
+    { day: 'Lunes', hours: ['09:00 a 12:30', '16:00 a 20:00'] },
+    { day: 'Martes', hours: ['09:00 a 12:30', '16:00 a 20:00'] },
+    { day: 'Miércoles', hours: ['09:00 a 12:30', '16:00 a 20:00'] },
+    { day: 'Jueves', hours: ['09:00 a 12:30', '16:00 a 20:00'] },
+    { day: 'Viernes', hours: ['09:00 a 12:30', '16:00 a 20:00'] },
     // { day: 'Sábado', hours: ['09:30 a 13:30'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -24,8 +24,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://aguilar-e-hijos.vercel.app/',
-  title: 'Aguilar e Hijos - Compra y Venta de Autos',
+  metadataBase: 'https://alpes-autos.vercel.app/',
+  title: 'Alpes Autos - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
