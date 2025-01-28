@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'machine-select',
-  name: 'Machine Select',
-  adress: 'Av. Castro Barros 1409',
+  id: 'cordoba-automotores',
+  name: 'Córdoba Autos',
+  adress: 'Diego de cala 420',
   city: 'Córdoba',
-  email: 'secretariamachine5900@gmail.com',
-  instagram: 'machine.select',
-  facebook: 'machine5900cba',
-  whatsapp: ['3512568667', '3515737520'],
-  googlemapsLink: 'https://maps.app.goo.gl/pazeKeqpoZv5eHeeA',
+  email: null,
+  instagram: 'cordobautomotores',
+  facebook: null,
+  whatsapp: ['3512369062'],
+  googlemapsLink: 'https://maps.app.goo.gl/aDtuR4cdBec6Y5my9',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.7750386882717!2d-64.20794551498821!3d-31.392765928758465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298e917766327%3A0xd142ab6fc3510582!2sMachine%205900!5e0!3m2!1ses-419!2sar!4v1737691800906!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54471.968263793446!2d-64.25140373046871!3d-31.427953848557717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943299cd782eb2c3%3A0x20b69f4aa720d87c!2sCordoba%20Automotores!5e0!3m2!1ses-419!2sar!4v1737692696876!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['08:30 a 18:30'] },
-    { day: 'Martes', hours: ['08:30 a 18:30'] },
-    { day: 'Miércoles', hours: ['08:30 a 18:30'] },
-    { day: 'Jueves', hours: ['08:30 a 18:30'] },
-    { day: 'Viernes', hours: ['08:30 a 18:30'] },
-    { day: 'Sábado', hours: ['09:00 a 13:00'] },
+    { day: 'Lunes', hours: ['09:30 a 19:30'] },
+    { day: 'Martes', hours: ['09:30 a 19:30'] },
+    { day: 'Miércoles', hours: ['09:30 a 19:30'] },
+    { day: 'Jueves', hours: ['09:30 a 19:30'] },
+    { day: 'Viernes', hours: ['09:30 a 19:30'] },
+    { day: 'Sábado', hours: ['09:30 a 13:30'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://machine-select.vercel.app/',
-  title: 'Machine Select - Compra y Venta de Autos',
+  metadataBase: 'https://cordoba-automotores.vercel.app/',
+  title: 'Córdoba Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
