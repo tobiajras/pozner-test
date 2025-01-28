@@ -45,6 +45,7 @@ const CarrouselFeatured = ({
               >
                 <div className='flex overflow-hidden h-40 sm:h-48 md:h-56 xl:h-64'>
                   <Image
+                    priority
                     width={451}
                     height={600}
                     className='object-cover w-full h-full overflow-hidden group-hover:scale-105 transition-transform duration-700'

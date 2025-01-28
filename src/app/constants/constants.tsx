@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'dm-automotores',
-  name: 'DM Automotores',
-  adress: 'Av. La plata 519',
-  city: 'Ostende',
+  id: 'martino-automoviles',
+  name: 'Martino Autos',
+  adress: 'Bs As y Circunvalación',
+  city: 'Villa Gesell',
   email: null,
-  instagram: 'dm_automotores1',
-  facebook: null,
-  whatsapp: ['2236067804'],
-  googlemapsLink: 'https://maps.app.goo.gl/riXKmePLHyTDym7x7',
+  instagram: 'martino_automoviles',
+  facebook: 'martinoautomoviles',
+  whatsapp: ['2255485823', '2255453530'],
+  googlemapsLink: 'https://maps.app.goo.gl/vsBtaWYUaV627CiUA',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12724.417679488646!2d-56.8976975128418!3d-37.1264307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c9daf72d2c8c5%3A0x2447c7e2078aab05!2sDM%20automotores!5e0!3m2!1ses-419!2sar!4v1737676092149!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12705.181334690278!2d-56.99539511284179!3d-37.24069980000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959b60fbfa363da1%3A0x3290da0128483f5b!2sMartino%20Autom%C3%B3viles!5e0!3m2!1ses-419!2sar!4v1737676876145!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['08:00 a 20:00'] },
-    { day: 'Martes', hours: ['08:00 a 20:00'] },
-    { day: 'Miércoles', hours: ['08:00 a 20:00'] },
-    { day: 'Jueves', hours: ['08:00 a 20:00'] },
-    { day: 'Viernes', hours: ['08:00 a 20:00'] },
-    // { day: 'Sábado', hours: ['09:00 a 13:00'] },
+    { day: 'Lunes', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
+    { day: 'Martes', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
+    { day: 'Miércoles', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
+    { day: 'Jueves', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
+    { day: 'Viernes', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
+    { day: 'Sábado', hours: ['09:00 a 13:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://dm-automotores.vercel.app/',
-  title: 'DM Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://martino-automoviles.vercel.app/',
+  title: 'Martino Automóviles - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
