@@ -23,8 +23,8 @@ const Header = () => {
           >
             <Image
               priority
-              // className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px]'
-              className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] ring-[1.5px] ring-color-bg-secondary rounded-full'
+              className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px]'
+              // className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] ring-[1.5px] ring-color-bg-secondary rounded-full'
               src='/assets/company/favicon.webp'
               alt={`${company.name} favicon`}
               width={64}
