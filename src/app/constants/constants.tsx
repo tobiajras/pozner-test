@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'oscar-mammana-autos',
-  name: 'Oscar Mammana Autos',
-  adress: 'H. Yrigoyen 142',
-  city: 'Quilmes',
-  email: null,
-  instagram: 'autososcarmammana',
+  id: 'bresci-autos',
+  name: 'Bresci Autos',
+  adress: 'Av. Buzón 816',
+  city: 'Tandil',
+  email: 'info@bresciautos.com.ar',
+  instagram: 'bresciautos',
   facebook: null,
-  whatsapp: ['1144393133', '1158091171'],
-  googlemapsLink: 'https://maps.app.goo.gl/MuPyPWQgzoPtRkfP9',
+  whatsapp: ['2494441661'],
+  googlemapsLink: 'https://maps.app.goo.gl/NQVL9umkW8VC4bm57',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6711618.203733944!2d-66.41772865!3d-34.77681449927564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e11024ff3e5%3A0x437bf914dfae9ca7!2sOscar%20Mammana!5e0!3m2!1ses-419!2sar!4v1737761703144!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.0751850555944!2d-59.123152923763534!3d-37.31704670581425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911ff1ee4653b1%3A0x56e55c08a848750b!2sBrescia%20Autos!5e0!3m2!1ses-419!2sar!4v1737783342234!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 19:00'] },
-    { day: 'Martes', hours: ['09:00 a 19:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 19:00'] },
-    { day: 'Jueves', hours: ['09:00 a 19:00'] },
-    { day: 'Viernes', hours: ['09:00 a 19:00'] },
-    { day: 'Sábado', hours: ['09:00 a 13:00'] },
+    { day: 'Lunes', hours: ['08:00 a 18:00'] },
+    { day: 'Martes', hours: ['08:00 a 18:00'] },
+    { day: 'Miércoles', hours: ['08:00 a 18:00'] },
+    { day: 'Jueves', hours: ['08:00 a 18:00'] },
+    { day: 'Viernes', hours: ['08:00 a 18:00'] },
+    // { day: 'Sábado', hours: ['08:00 a 18:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://oscar-mammana-autos.vercel.app/',
-  title: 'Oscar Mammana Autos - Compra y Venta de Autos',
+  metadataBase: 'https://bresci-autos.vercel.app/',
+  title: 'Bresci Autos - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
