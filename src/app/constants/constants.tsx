@@ -8,8 +8,8 @@ export const company = {
   instagram: 'imolaautomotores',
   facebook: 'Imola-Automotores',
   whatsapp: [
-    '2804436749',
     '2804361704',
+    '2804436749',
     '2804264127',
     '2804515099',
     '2804364797',
