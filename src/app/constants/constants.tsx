@@ -1,22 +1,28 @@
 export const company = {
   dark: true,
-  id: 'hache-concesionaria',
-  name: 'Hache Autos',
-  adress: '1ra Junta y Lestonac',
-  city: 'Entre Ríos',
-  email: 'concesionaria.hache@gmail.com',
-  instagram: 'hache_concesionaria',
-  facebook: 'hache.concesionaria',
-  whatsapp: ['3446560109', '3446216263'],
-  googlemapsLink: 'https://maps.app.goo.gl/CTz7sMyS3oKQur4ZA',
+  id: 'imola-automotores',
+  name: 'Imola Automotores',
+  adress: 'H. Irigoyen 1667',
+  city: 'Trelew',
+  email: 'Imola-ventas@hotmail.com',
+  instagram: 'imolaautomotores',
+  facebook: 'Imola-Automotores',
+  whatsapp: [
+    '2804436749',
+    '2804361704',
+    '2804264127',
+    '2804515099',
+    '2804364797',
+  ],
+  googlemapsLink: 'https://maps.app.goo.gl/txr75324vDyFezGe9',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.343637871636!2d-58.5220555812201!3d-32.99471459244034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95baa95944aafc7d%3A0xe786ceaea33d1199!2sHache%20concesionaria!5e0!3m2!1ses-419!2sar!4v1737845763437!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.4387201899003!2d-65.29485618756848!3d-43.26318387100285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbe0144d15c3e303f%3A0xa93da0f1a52d5883!2sImola%20Automotores!5e0!3m2!1ses-419!2sar!4v1737846857349!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
-    { day: 'Martes', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
-    { day: 'Jueves', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
-    { day: 'Viernes', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
+    { day: 'Lunes', hours: ['08:45 a 12:45', '15:45 a 19:45'] },
+    { day: 'Martes', hours: ['08:45 a 12:45', '15:45 a 19:45'] },
+    { day: 'Miércoles', hours: ['08:45 a 12:45', '15:45 a 19:45'] },
+    { day: 'Jueves', hours: ['08:45 a 12:45', '15:45 a 19:45'] },
+    { day: 'Viernes', hours: ['08:45 a 12:45', '15:45 a 19:45'] },
     { day: 'Sábado', hours: ['09:00 a 13:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -24,8 +30,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://hache-concesionaria.vercel.app/',
-  title: 'Hache Concesionaria - Compra y Venta de Autos',
+  metadataBase: 'https://imola-automotores.vercel.app/',
+  title: 'Imola Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
