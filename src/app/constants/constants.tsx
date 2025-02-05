@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'gamma-automotores',
-  name: 'Gamma Autos',
-  adress: 'Av. 14 3003',
-  city: 'Berazategui',
-  email: 'gammaautomotores@hotmail.com',
-  instagram: 'gammaautomotores',
+  id: 'gume-garage',
+  name: 'Gume Garage',
+  adress: 'Av. Salceda 1545',
+  city: 'Tandil',
+  email: 'gumeautomotores@gmail.com',
+  instagram: 'gume.garage',
   facebook: null,
-  whatsapp: ['1150621895', '1137716646', '1166825777', '1120443064'],
-  googlemapsLink: 'https://maps.app.goo.gl/PW7sQGn8ZTsBvz336',
+  whatsapp: ['2494608831'],
+  googlemapsLink: 'https://maps.app.goo.gl/8apD91ZEeuvjMVkNA',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13109.405742290395!2d-58.2285113!3d-34.7719271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f2cb2b69675%3A0x8b1b6ea9e1ae82ff!2sGamma%20Automotores!5e0!3m2!1ses-419!2sar!4v1737787575472!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6711618.203733944!2d-66.41772865000003!3d-34.77681449927564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911f38484528d7%3A0x62cfca55051af67e!2sGume%20Garage!5e0!3m2!1ses-419!2sar!4v1737788093059!5m2!1ses-419!2sar',
   openDays: [
     { day: 'Lunes', hours: ['09:00 a 19:00'] },
     { day: 'Martes', hours: ['09:00 a 19:00'] },
     { day: 'Miércoles', hours: ['09:00 a 19:00'] },
     { day: 'Jueves', hours: ['09:00 a 19:00'] },
     { day: 'Viernes', hours: ['09:00 a 19:00'] },
-    { day: 'Sábado', hours: ['09:00 a 14:00'] },
+    { day: 'Sábado', hours: ['09:00 a 19:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://gamma-automotores.vercel.app/',
-  title: 'Gamma Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://gume-garage.vercel.app/',
+  title: 'Gume Garage - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
