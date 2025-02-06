@@ -1,16 +1,16 @@
 export const company = {
   dark: true,
-  id: 'tomasautos-olavarria',
-  name: 'Tomás Autos',
-  adress: 'Av. Urquiza 2216',
-  city: 'Olavarría',
+  id: 'turia-motors',
+  name: 'Turia Motors',
+  adress: 'N. Repetto 3487',
+  city: 'Olivos',
   email: null,
-  instagram: 'tomasautosolavarria',
+  instagram: 'turiamotors',
   facebook: null,
-  whatsapp: ['2284537622', '2284562439'],
-  googlemapsLink: 'https://maps.app.goo.gl/2ptLx23HEXPBRoTZ6',
+  whatsapp: ['1136410404', '1139479780'],
+  googlemapsLink: 'https://maps.app.goo.gl/SE1axptmLP64W8Bc7',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!3m2!1ses-419!2sar!4v1737863129644!5m2!1ses-419!2sar!6m8!1m7!1sIfDc4pTmfljoHNmE1kV5aA!2m2!1d-36.90590536217124!2d-60.31764719778464!3f270.1668826400868!4f-4.290469578025807!5f0.7820865974627469',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13459771.236132408!2d-73.38849319999998!3d-34.55160671692316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1c4e28442ed%3A0xec2296fff43a359e!2sTURIA%20MOTORS!5e0!3m2!1ses-419!2sar!4v1737865672969!5m2!1ses-419!2sar',
   openDays: [
     { day: 'Lunes', hours: ['09:00 a 18:00'] },
     { day: 'Martes', hours: ['09:00 a 18:00'] },
@@ -24,8 +24,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://tomasautos-olavarria.vercel.app/',
-  title: 'Tomás Autos Olavarría - Compra y Venta de Autos',
+  metadataBase: 'https://turia-motors.vercel.app/',
+  title: 'Turia Motors - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
