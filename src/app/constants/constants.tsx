@@ -1,28 +1,22 @@
 export const company = {
   dark: true,
-  id: 'imola-automotores',
-  name: 'Imola Automotores',
-  adress: 'H. Irigoyen 1667',
-  city: 'Trelew',
-  email: 'Imola-ventas@hotmail.com',
-  instagram: 'imolaautomotores',
-  facebook: 'Imola-Automotores',
-  whatsapp: [
-    '2804361704',
-    '2804436749',
-    '2804264127',
-    '2804515099',
-    '2804364797',
-  ],
-  googlemapsLink: 'https://maps.app.goo.gl/txr75324vDyFezGe9',
+  id: 'espinoza-automotores',
+  name: 'Espinoza Autos',
+  adress: 'Mac Lean 1160',
+  city: 'Resistencia',
+  email: 'briannahuelespinoza@gmail.com',
+  instagram: 'espinozaautomotores',
+  facebook: 'AutomotoresLeonardoEspinoza',
+  whatsapp: ['3624556867'],
+  googlemapsLink: 'https://maps.app.goo.gl/K9HYVzpfiGTLdsXG6',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.4387201899003!2d-65.29485618756848!3d-43.26318387100285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbe0144d15c3e303f%3A0xa93da0f1a52d5883!2sImola%20Automotores!5e0!3m2!1ses-419!2sar!4v1737846857349!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.716149036517!2d-59.01328412417624!3d-27.446955615738183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450c78c7d3e4b9%3A0x2ec669eb622a0d85!2sAutomotores%20Leonardo%20Espinoza!5e0!3m2!1ses-419!2sar!4v1737856394281!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['08:45 a 12:45', '15:45 a 19:45'] },
-    { day: 'Martes', hours: ['08:45 a 12:45', '15:45 a 19:45'] },
-    { day: 'Miércoles', hours: ['08:45 a 12:45', '15:45 a 19:45'] },
-    { day: 'Jueves', hours: ['08:45 a 12:45', '15:45 a 19:45'] },
-    { day: 'Viernes', hours: ['08:45 a 12:45', '15:45 a 19:45'] },
+    { day: 'Lunes', hours: ['09:00 a 13:00', '17:00 a 20:30'] },
+    { day: 'Martes', hours: ['09:00 a 13:00', '17:00 a 20:30'] },
+    { day: 'Miércoles', hours: ['09:00 a 13:00', '17:00 a 20:30'] },
+    { day: 'Jueves', hours: ['09:00 a 13:00', '17:00 a 20:30'] },
+    { day: 'Viernes', hours: ['09:00 a 13:00', '17:00 a 20:30'] },
     { day: 'Sábado', hours: ['09:00 a 13:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -30,8 +24,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://imola-automotores.vercel.app/',
-  title: 'Imola Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://espinoza-automotores.vercel.app/',
+  title: 'Espinoza Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
