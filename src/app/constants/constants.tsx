@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'rauch-automotores',
-  name: 'Rauch Autos',
-  adress: 'Castelli 56',
+  id: 'stilo-automotores',
+  name: 'Stilo Automotores',
+  adress: 'Av. Irigoyen 154',
   city: 'Rauch',
-  email: null,
-  instagram: 'rauch.automotores',
-  facebook: null,
-  whatsapp: ['2494307591'],
-  googlemapsLink: 'https://maps.app.goo.gl/DXS1E8rkK1gQ1t356',
+  email: 'stiloautomotores@yahoo.com.ar',
+  instagram: 'stilo_automotores',
+  facebook: 'Stilo-Automotores',
+  whatsapp: ['2494018224', '2494018225'],
+  googlemapsLink: 'https://maps.app.goo.gl/Yvi63mxiHA5oCg5y9',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d798.9141918387827!2d-59.09297877143969!3d-36.7788006982586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95972768a2773b67%3A0xc5a3f1634074f445!2sCastelli%2056%2C%20B7203ANB%20Rauch%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1737860919173!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d798.9293134900867!2d-59.095696499999995!3d-36.7773499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9597276a407d1b03%3A0x59e9b359628c2164!2sSTILO%20Automotores!5e0!3m2!1ses-419!2sar!4v1737862008141!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:00'] },
-    { day: 'Martes', hours: ['09:00 a 18:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:00'] },
-    { day: 'Jueves', hours: ['09:00 a 18:00'] },
-    { day: 'Viernes', hours: ['09:00 a 18:00'] },
-    // { day: 'Sábado', hours: ['09:00 a 13:00'] },
+    { day: 'Lunes', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
+    { day: 'Martes', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
+    { day: 'Miércoles', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
+    { day: 'Jueves', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
+    { day: 'Viernes', hours: ['08:00 a 12:00', '15:30 a 20:00'] },
+    { day: 'Sábado', hours: ['09:00 a 12:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://rauch-automotores.vercel.app/',
-  title: 'Rauch Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://stilo-automotores.vercel.app/',
+  title: 'Stilo Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
