@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'bonicelli-automotores',
-  name: 'Bonicelli Autos',
-  adress: 'Av. Del Valle 5118',
-  city: 'Olavarría',
-  email: 'pablobonicelli@hotmail.com',
-  instagram: 'automotores.bonicelli',
-  facebook: 'Bonicelli-Automotores',
-  whatsapp: ['2284532753'],
-  googlemapsLink: 'https://maps.app.goo.gl/XaW9fzoHJktCoREUA',
+  id: 'rauch-automotores',
+  name: 'Rauch Autos',
+  adress: 'Castelli 56',
+  city: 'Rauch',
+  email: null,
+  instagram: 'rauch.automotores',
+  facebook: null,
+  whatsapp: ['2494307591'],
+  googlemapsLink: 'https://maps.app.goo.gl/DXS1E8rkK1gQ1t356',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13459771.236132408!2d-73.3884932!3d-34.55160671692316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95944533995a1f7f%3A0xfcef73bb8e5238b6!2sBONICELLI%20AUTOMOTORES!5e0!3m2!1ses-419!2sar!4v1737859703146!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d798.9141918387827!2d-59.09297877143969!3d-36.7788006982586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95972768a2773b67%3A0xc5a3f1634074f445!2sCastelli%2056%2C%20B7203ANB%20Rauch%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1737860919173!5m2!1ses-419!2sar',
   openDays: [
     { day: 'Lunes', hours: ['09:00 a 18:00'] },
     { day: 'Martes', hours: ['09:00 a 18:00'] },
     { day: 'Miércoles', hours: ['09:00 a 18:00'] },
     { day: 'Jueves', hours: ['09:00 a 18:00'] },
     { day: 'Viernes', hours: ['09:00 a 18:00'] },
-    { day: 'Sábado', hours: ['09:00 a 13:00'] },
+    // { day: 'Sábado', hours: ['09:00 a 13:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://bonicelli-automotores.vercel.app/',
-  title: 'Bonicelli Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://rauch-automotores.vercel.app/',
+  title: 'Rauch Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
