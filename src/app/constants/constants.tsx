@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'victorporte-automotores',
-  name: 'Victor Porte Autos',
-  adress: 'Líbano 1780',
-  city: 'Olavarría',
+  id: 'zion-autos',
+  name: 'Zion Autos',
+  adress: 'Av. Dardo Rocha 886',
+  city: 'Berazategui',
   email: null,
-  instagram: 'victor_porte_automotores',
+  instagram: 'zion_autos',
   facebook: null,
-  whatsapp: ['2284476048'],
-  googlemapsLink: 'https://maps.app.goo.gl/TB3dYL3sRFY6WeNP8',
+  whatsapp: ['1124562361', '1164593325'],
+  googlemapsLink: 'https://maps.app.goo.gl/js8qdzrBvRSdgtqm9',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12765.665160657887!2d-60.33267883268817!3d-36.88038829172324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959445c1c3734ffb%3A0xab6109f3b7755670!2sVictor%20Porte%20Automotores!5e0!3m2!1ses-419!2sar!4v1737868789427!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.3435534279397!2d-58.24491108788849!3d-34.772125572781384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f256a89e1b1%3A0xf149a1c34fc6b492!2sZion%20Autos!5e0!3m2!1ses-419!2sar!4v1737869450917!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
-    { day: 'Martes', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
-    { day: 'Jueves', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
-    { day: 'Viernes', hours: ['09:00 a 13:00', '16:00 a 20:00'] },
-    // { day: 'Sábado', hours: ['09:00 a 12:00'] },
+    { day: 'Lunes', hours: ['08:30 a 12:30', '14:00 a 18:30'] },
+    { day: 'Martes', hours: ['08:30 a 12:30', '14:00 a 18:30'] },
+    { day: 'Miércoles', hours: ['08:30 a 12:30', '14:00 a 18:30'] },
+    { day: 'Jueves', hours: ['08:30 a 12:30', '14:00 a 18:30'] },
+    { day: 'Viernes', hours: ['08:30 a 12:30', '14:00 a 18:30'] },
+    { day: 'Sábado', hours: ['08:30 a 13:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://victorporte-automotores.vercel.app/',
-  title: 'Victor Porte Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://zion-autos.vercel.app/',
+  title: 'Zion Autos - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
