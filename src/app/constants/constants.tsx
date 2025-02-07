@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'nantes-automotores',
-  name: 'Nantes Autos',
-  adress: 'Av. Luro 2220',
-  city: 'Santa Rosa',
-  email: null,
-  instagram: 'nantes.automotores',
+  id: 'acosta-automotores',
+  name: 'Acosta Autos',
+  adress: 'Nuche y Ameghino',
+  city: 'San Juan',
+  email: 'automotoresacosta@gmail.com',
+  instagram: 'automotoresacosta',
   facebook: null,
-  whatsapp: ['2954329654'],
-  googlemapsLink: 'https://maps.app.goo.gl/BDFRuahnTSciCyVB6',
+  whatsapp: ['2644165821', '2645854116'],
+  googlemapsLink: 'https://maps.app.goo.gl/5VwEnUjMVnwDy1yT6',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!4v1737876303009!6m8!1m7!1stDfZRY1ISYocVVV6cqA3-g!2m2!1d-36.63904904201097!2d-64.28263514516523!3f272.9735538803946!4f1.0782819754048205!5f0.7820865974627469',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.3105618406066!2d-68.55104861494912!3d-31.543090535858482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9681412f7cbb7419%3A0xa4030bda705bab93!2sAutomotores%20Acosta!5e0!3m2!1ses-419!2sar!4v1738128694134!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['08:00 a 20:00'] },
-    { day: 'Martes', hours: ['08:00 a 20:00'] },
-    { day: 'Miércoles', hours: ['08:00 a 20:00'] },
-    { day: 'Jueves', hours: ['08:00 a 20:00'] },
-    { day: 'Viernes', hours: ['08:00 a 20:00'] },
-    { day: 'Sábado', hours: ['08:00 a 13:00'] },
+    { day: 'Lunes', hours: ['09:00 a 14:00', '17:30 a 21:00'] },
+    { day: 'Martes', hours: ['09:00 a 14:00', '17:30 a 21:00'] },
+    { day: 'Miércoles', hours: ['09:00 a 14:00', '17:30 a 21:00'] },
+    { day: 'Jueves', hours: ['09:00 a 14:00', '17:30 a 21:00'] },
+    { day: 'Viernes', hours: ['09:00 a 14:00', '17:30 a 21:00'] },
+    { day: 'Sábado', hours: ['09:00 a 14:00', '17:00 a 20:30'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://nantes-automotores.vercel.app/',
-  title: 'Nantes Autos - Compra y Venta de Autos',
+  metadataBase: 'https://acosta-automotores.vercel.app/',
+  title: 'Acosta Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
