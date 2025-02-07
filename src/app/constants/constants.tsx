@@ -1,16 +1,16 @@
 export const company = {
   dark: true,
-  id: 'farias-multimarca',
-  name: 'Farias Multimarca',
-  adress: 'Av. Mitre 2135',
-  city: '9 de Julio',
+  id: 'nantes-automotores',
+  name: 'Nantes Autos',
+  adress: 'Av. Luro 2220',
+  city: 'Santa Rosa',
   email: null,
-  instagram: 'fariasmultimarcaok',
-  facebook: 'fariasautomotoresok',
-  whatsapp: ['2317528636', '2317462013'],
-  googlemapsLink: 'https://maps.app.goo.gl/BFAmuUXqPPtFZSR2A',
+  instagram: 'nantes.automotores',
+  facebook: null,
+  whatsapp: ['2954329654'],
+  googlemapsLink: 'https://maps.app.goo.gl/BDFRuahnTSciCyVB6',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332.2960577211955!2d-60.89377312362521!3d-35.44913617231372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bf0d8dc0ed5c3d%3A0x7fb97127fd643fd1!2sFARIAS%20AUTOMOTORES!5e0!3m2!1ses-419!2sar!4v1737873381741!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!4v1737876303009!6m8!1m7!1stDfZRY1ISYocVVV6cqA3-g!2m2!1d-36.63904904201097!2d-64.28263514516523!3f272.9735538803946!4f1.0782819754048205!5f0.7820865974627469',
   openDays: [
     { day: 'Lunes', hours: ['08:00 a 20:00'] },
     { day: 'Martes', hours: ['08:00 a 20:00'] },
@@ -24,8 +24,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://farias-multimarca.vercel.app/',
-  title: 'Farias Multimarca - Compra y Venta de Autos',
+  metadataBase: 'https://nantes-automotores.vercel.app/',
+  title: 'Nantes Autos - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
