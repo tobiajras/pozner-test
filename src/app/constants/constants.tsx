@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'chronos-automotores',
-  name: 'Chronos Autos',
-  adress: 'Juan B Justo 3745',
-  city: 'Mar del Plata',
+  id: 'farias-multimarca',
+  name: 'Farias Multimarca',
+  adress: 'Av. Mitre 2135',
+  city: '9 de Julio',
   email: null,
-  instagram: 'chronosautomotores_',
-  facebook: '100087047653974',
-  whatsapp: ['2235525054'],
-  googlemapsLink: 'https://maps.app.goo.gl/rH5vsjF94t3vtXsQ9',
+  instagram: 'fariasmultimarcaok',
+  facebook: 'fariasautomotoresok',
+  whatsapp: ['2317528636', '2317462013'],
+  googlemapsLink: 'https://maps.app.goo.gl/BFAmuUXqPPtFZSR2A',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.3606200632194!2d-57.57608514313974!3d-38.01537157358772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dec0bc339d0b%3A0x3f02e699f53d85c8!2sChronos%20Automotores!5e0!3m2!1ses-419!2sar!4v1737872829995!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332.2960577211955!2d-60.89377312362521!3d-35.44913617231372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bf0d8dc0ed5c3d%3A0x7fb97127fd643fd1!2sFARIAS%20AUTOMOTORES!5e0!3m2!1ses-419!2sar!4v1737873381741!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:00'] },
-    { day: 'Martes', hours: ['09:00 a 18:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:00'] },
-    { day: 'Jueves', hours: ['09:00 a 18:00'] },
-    { day: 'Viernes', hours: ['09:00 a 18:00'] },
-    { day: 'Sábado', hours: ['09:00 a 13:00'] },
+    { day: 'Lunes', hours: ['08:00 a 20:00'] },
+    { day: 'Martes', hours: ['08:00 a 20:00'] },
+    { day: 'Miércoles', hours: ['08:00 a 20:00'] },
+    { day: 'Jueves', hours: ['08:00 a 20:00'] },
+    { day: 'Viernes', hours: ['08:00 a 20:00'] },
+    { day: 'Sábado', hours: ['08:00 a 13:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://chronos-automotores.vercel.app/',
-  title: 'Chronos Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://farias-multimarca.vercel.app/',
+  title: 'Farias Multimarca - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
