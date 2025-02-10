@@ -1,22 +1,22 @@
 export const company = {
   dark: true,
-  id: 'auto-inmo-sport',
-  name: 'Auto.Inmo.Sport',
-  adress: 'Andrade 43',
-  city: 'Lanús',
-  email: 'brokers.auto.inmo.sport@gmail.com',
-  instagram: 'auto.inmo.sport',
-  facebook: 'dano.auto.inmo.sport',
-  whatsapp: ['1144020008', '1170017000'],
-  googlemapsLink: 'https://maps.app.goo.gl/NSe72cUDP8mqkReq8',
+  id: 'onemotors-cba',
+  name: 'One Motors',
+  adress: 'Emilio Caraffa 2726',
+  city: 'Córdoba',
+  email: 'fedeschmid@hotmail.com',
+  instagram: 'onemotors_cba',
+  facebook: 'onemotorscordoba',
+  whatsapp: ['3516770499'],
+  googlemapsLink: 'https://maps.app.goo.gl/zH4FHKUKbdinnKTC6',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13118.339357345778!2d-58.40420693425971!3d-34.71564992857825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd3e0670e3c9%3A0x2aebcd360390754!2sBrokers%20Auto%20Inmo.%20Sport!5e0!3m2!1ses-419!2sar!4v1738130445204!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13677135.011584703!2d-73.73659190000002!3d-33.184085131186386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298e62c6c9f07%3A0x3d771e507177250f!2sOne%20Motors!5e0!3m2!1ses-419!2sar!4v1738130842160!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:30'] },
-    { day: 'Martes', hours: ['09:00 a 18:30'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:30'] },
-    { day: 'Jueves', hours: ['09:00 a 18:30'] },
-    { day: 'Viernes', hours: ['09:00 a 18:30'] },
+    { day: 'Lunes', hours: ['10:00 a 13:30', '15:30 a 18:30'] },
+    { day: 'Martes', hours: ['10:00 a 13:30', '15:30 a 18:30'] },
+    { day: 'Miércoles', hours: ['10:00 a 13:30', '15:30 a 18:30'] },
+    { day: 'Jueves', hours: ['10:00 a 13:30', '15:30 a 18:30'] },
+    { day: 'Viernes', hours: ['10:00 a 13:30', '15:30 a 18:30'] },
     // { day: 'Sábado', hours: ['09:00 a 18:30'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -24,8 +24,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://auto-inmo-sport.vercel.app/',
-  title: 'Auto.Inmo.Sport - Compra y Venta de Autos',
+  metadataBase: 'https://onemotors-cba.vercel.app/',
+  title: 'One Motors - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };

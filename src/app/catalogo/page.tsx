@@ -65,7 +65,7 @@ const CatalogoPage = () => {
   const handlePageChange = (page: number) => {
     const params = new URLSearchParams(window.location.search);
     params.set('page', page.toString());
-    router.push(`/catalogo?${params.toString()}`, { scroll: false });
+    router.push(`/catalogo?${params.toString()}`);
   };
 
   const updateFilters = (key: string, value: string) => {
@@ -76,7 +76,7 @@ const CatalogoPage = () => {
       params.delete(key);
     }
     params.delete('page'); // Resetear página al cambiar filtros
-    router.replace(`/catalogo?${params.toString()}`, { scroll: false });
+    router.replace(`/catalogo?${params.toString()}`);
   };
 
   // Actualizar la URL cuando cambie el valor debounceado
@@ -88,7 +88,7 @@ const CatalogoPage = () => {
       params.delete('search');
     }
     params.delete('page'); // Resetear página al cambiar filtros
-    router.replace(`/catalogo?${params.toString()}`, { scroll: false });
+    router.replace(`/catalogo?${params.toString()}`);
   }, [debouncedSearchValue, router]);
 
   return (
