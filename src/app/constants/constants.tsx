@@ -1,22 +1,22 @@
 export const company = {
   dark: true,
-  id: 'onemotors-cba',
-  name: 'One Motors',
-  adress: 'Emilio Caraffa 2726',
+  id: 'cartuccia-automotores',
+  name: 'Cartuccia Autos',
+  adress: 'Mamerto Esquiu 57',
   city: 'Córdoba',
-  email: 'fedeschmid@hotmail.com',
-  instagram: 'onemotors_cba',
-  facebook: 'onemotorscordoba',
-  whatsapp: ['3516770499'],
-  googlemapsLink: 'https://maps.app.goo.gl/zH4FHKUKbdinnKTC6',
+  email: null,
+  instagram: 'automotores_cartuccia',
+  facebook: null,
+  whatsapp: ['3585090730', '3585614483'],
+  googlemapsLink: 'https://maps.app.goo.gl/yyMQEtY9HGWWWGMU8',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13677135.011584703!2d-73.73659190000002!3d-33.184085131186386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298e62c6c9f07%3A0x3d771e507177250f!2sOne%20Motors!5e0!3m2!1ses-419!2sar!4v1738130842160!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3366.747133351385!2d-64.39128218796529!3d-32.4527025736917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2810024a4aaf7%3A0xa94478f4941e6ab5!2sAutomotores%20Cartuccia!5e0!3m2!1ses-419!2sar!4v1738132240021!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['10:00 a 13:30', '15:30 a 18:30'] },
-    { day: 'Martes', hours: ['10:00 a 13:30', '15:30 a 18:30'] },
-    { day: 'Miércoles', hours: ['10:00 a 13:30', '15:30 a 18:30'] },
-    { day: 'Jueves', hours: ['10:00 a 13:30', '15:30 a 18:30'] },
-    { day: 'Viernes', hours: ['10:00 a 13:30', '15:30 a 18:30'] },
+    { day: 'Lunes', hours: ['08:30 a 13:30', '16:30 a 20:30'] },
+    { day: 'Martes', hours: ['08:30 a 13:30', '16:30 a 20:30'] },
+    { day: 'Miércoles', hours: ['08:30 a 13:30', '16:30 a 20:30'] },
+    { day: 'Jueves', hours: ['08:30 a 13:30', '16:30 a 20:30'] },
+    { day: 'Viernes', hours: ['08:30 a 13:30', '16:30 a 20:30'] },
     // { day: 'Sábado', hours: ['09:00 a 18:30'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -24,8 +24,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://onemotors-cba.vercel.app/',
-  title: 'One Motors - Compra y Venta de Autos',
+  metadataBase: 'https://cartuccia-automotores.vercel.app/',
+  title: 'Cartuccia Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
