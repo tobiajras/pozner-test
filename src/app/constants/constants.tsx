@@ -24,7 +24,7 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://automotores-mauro.vercel.app/',
+  metadataBase: 'https://mauro-automotores.vercel.app/',
   title: 'Mauro Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
