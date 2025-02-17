@@ -13,9 +13,9 @@ const config: Config = {
         poppins: ['var(--font-poppins)'],
       },
       colors: {
-        'color-primary': '#102535',
-        'color-primary-dark': '#061A29',
-        'color-primary-light': '#7D95A7',
+        'color-primary': '#F65013',
+        'color-primary-dark': '#E33E00',
+        'color-primary-light': '#FF9872',
         'color-secondary': '#1E1E1E',
         'color-secondary-dark': '#222222',
         'color-secondary-light': '#E4E4E4',
