@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'tamburrino-automotores',
-  name: 'Tamburrino Autos',
-  adress: 'Av. Espora 1325',
-  city: 'Adrogué',
+  id: 'mauro-automotores',
+  name: 'Mauro Automotores',
+  adress: 'H. Yrigoyen 14572',
+  city: 'Burzaco',
   email: null,
-  instagram: 'tamburrino_automotores',
-  facebook: null,
-  whatsapp: ['1125664389'],
-  googlemapsLink: 'https://maps.app.goo.gl/TopdZE83mQ583JS37',
+  instagram: 'automotores_mauro',
+  facebook: '100063567101796',
+  whatsapp: ['1158669871'],
+  googlemapsLink: 'https://maps.app.goo.gl/wCimuwUdmD2wPf8c7',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13103.861725231545!2d-58.398753731945895!3d-34.80681154753279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd3cd47f5d551%3A0x5e83c816b56e7c0b!2sTamburrino%20Automotores!5e0!3m2!1ses-419!2sar!4v1739674326430!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210062.29684074235!2d-58.61861212187501!3d-34.649060955347295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd5f2a96c259b%3A0x50d836e4a9ef90ed!2sMauro%20automotores!5e0!3m2!1ses-419!2sar!4v1739675787775!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['08:30 a 13:00', '15:00 a 18:30'] },
-    { day: 'Martes', hours: ['08:30 a 13:00', '15:00 a 18:30'] },
-    { day: 'Miércoles', hours: ['08:30 a 13:00', '15:00 a 18:30'] },
-    { day: 'Jueves', hours: ['08:30 a 13:00', '15:00 a 18:30'] },
-    { day: 'Viernes', hours: ['08:30 a 13:00', '15:00 a 18:30'] },
-    { day: 'Sábado', hours: ['09:00 a 13:00'] },
+    { day: 'Lunes', hours: ['09:30 a 18:00'] },
+    { day: 'Martes', hours: ['09:30 a 18:00'] },
+    { day: 'Miércoles', hours: ['09:30 a 18:00'] },
+    { day: 'Jueves', hours: ['09:30 a 18:00'] },
+    { day: 'Viernes', hours: ['09:30 a 18:00'] },
+    { day: 'Sábado', hours: ['10:00 a 14:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://tamburrino-automotores.vercel.app/',
-  title: 'Tamburrino Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://automotores-mauro.vercel.app/',
+  title: 'Mauro Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
