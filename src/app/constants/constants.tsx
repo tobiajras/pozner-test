@@ -1,7 +1,7 @@
 export const company = {
   dark: true,
   id: 'mauro-automotores',
-  name: 'Mauro Automotores',
+  name: 'Mauro Autos',
   adress: 'H. Yrigoyen 14572',
   city: 'Burzaco',
   email: null,
