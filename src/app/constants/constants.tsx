@@ -1,22 +1,22 @@
 export const company = {
-  dark: true,
-  id: 'ferreiro-autos',
-  name: 'Ferreiro Autos',
-  adress: 'Eva Peron 801',
-  city: 'Temperley',
-  email: null,
-  instagram: 'ferreiro.autos',
-  facebook: null,
-  whatsapp: ['1166823388', '1142440517'],
-  googlemapsLink: 'https://maps.app.goo.gl/6Uv5MgUpR9AgTUgX8',
+  dark: false,
+  id: 'elvis-automotores',
+  name: 'Elvis Automotores',
+  adress: 'Los Quilmes 735',
+  city: 'Bernal',
+  email: 'elvisautomotores@gmail.com',
+  instagram: 'elvisautomotores',
+  facebook: 'elvisautomotores',
+  whatsapp: ['1142591365'],
+  googlemapsLink: 'https://maps.app.goo.gl/xBe1BcqaNwk8WsL76',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209743.72724429175!2d-58.386617773537196!3d-34.77458848273619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2d93bd8542d%3A0xa0b44edee2dfed78!2sFerreiro%20Autos!5e0!3m2!1ses-419!2sar!4v1739746985292!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.43087533483!2d-58.306150023387794!3d-34.71953206362535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32d8caf2de46d%3A0x2e7afd1ab0355f3d!2sAUTOMOTORES%20ELVIS!5e0!3m2!1ses-419!2sar!4v1739747574441!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:30 a 19:00'] },
-    { day: 'Martes', hours: ['09:30 a 19:00'] },
-    { day: 'Miércoles', hours: ['09:30 a 19:00'] },
-    { day: 'Jueves', hours: ['09:30 a 19:00'] },
-    { day: 'Viernes', hours: ['09:30 a 19:00'] },
+    { day: 'Lunes', hours: ['09:00 a 18:00'] },
+    { day: 'Martes', hours: ['09:00 a 18:00'] },
+    { day: 'Miércoles', hours: ['09:00 a 18:00'] },
+    { day: 'Jueves', hours: ['09:00 a 18:00'] },
+    { day: 'Viernes', hours: ['09:00 a 18:00'] },
     // { day: 'Sábado', hours: ['09:30 a 19:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
@@ -24,8 +24,8 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://ferreiro-autos.vercel.app/',
-  title: 'Ferreiro Autos - Compra y Venta de Autos',
+  metadataBase: 'https://elvis-automotores.vercel.app/',
+  title: 'Elvis Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
