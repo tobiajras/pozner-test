@@ -7,7 +7,7 @@ export const company = {
   email: 'elvisautomotores@gmail.com',
   instagram: 'elvisautomotores',
   facebook: 'elvisautomotores',
-  whatsapp: ['1142591365'],
+  whatsapp: ['1132309644'],
   googlemapsLink: 'https://maps.app.goo.gl/xBe1BcqaNwk8WsL76',
   googlemaps:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.43087533483!2d-58.306150023387794!3d-34.71953206362535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32d8caf2de46d%3A0x2e7afd1ab0355f3d!2sAUTOMOTORES%20ELVIS!5e0!3m2!1ses-419!2sar!4v1739747574441!5m2!1ses-419!2sar',
