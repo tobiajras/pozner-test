@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'korban-automotores',
-  name: 'Korban Autos',
-  adress: 'A. Storni 599',
-  city: 'Florencio Varela',
-  email: 'korbanautomotores@gmail.com',
-  instagram: 'korban_oficial',
+  id: 'ferreiro-autos',
+  name: 'Ferreiro Autos',
+  adress: 'Eva Peron 801',
+  city: 'Temperley',
+  email: null,
+  instagram: 'ferreiro.autos',
   facebook: null,
-  whatsapp: ['1162323313'],
-  googlemapsLink: 'https://maps.app.goo.gl/H5mCEsTHxhvqSW7s5',
+  whatsapp: ['1166823388', '1142440517'],
+  googlemapsLink: 'https://maps.app.goo.gl/6Uv5MgUpR9AgTUgX8',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210029.63905840318!2d-58.580257271874984!3d-34.66194754956696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f3a9face5eb%3A0xa736e1ad6f7e3214!2sKorban%20Automotores!5e0!3m2!1ses-419!2sar!4v1739746030609!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209743.72724429175!2d-58.386617773537196!3d-34.77458848273619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2d93bd8542d%3A0xa0b44edee2dfed78!2sFerreiro%20Autos!5e0!3m2!1ses-419!2sar!4v1739746985292!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:00'] },
-    { day: 'Martes', hours: ['09:00 a 18:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:00'] },
-    { day: 'Jueves', hours: ['09:00 a 18:00'] },
-    { day: 'Viernes', hours: ['09:00 a 18:00'] },
-    { day: 'Sábado', hours: ['09:00 a 18:00'] },
+    { day: 'Lunes', hours: ['09:30 a 19:00'] },
+    { day: 'Martes', hours: ['09:30 a 19:00'] },
+    { day: 'Miércoles', hours: ['09:30 a 19:00'] },
+    { day: 'Jueves', hours: ['09:30 a 19:00'] },
+    { day: 'Viernes', hours: ['09:30 a 19:00'] },
+    // { day: 'Sábado', hours: ['09:30 a 19:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://korban-automotores.vercel.app/',
-  title: 'Korban Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://ferreiro-autos.vercel.app/',
+  title: 'Ferreiro Autos - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
