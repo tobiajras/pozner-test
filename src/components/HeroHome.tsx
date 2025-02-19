@@ -18,7 +18,8 @@ const HeroHome = () => {
                 <LocationZoneIcon className='w-6 h-6 md:w-7 md:h-7' />
               </span>
               <span>
-                {company.adress}, {company.city}
+                {company.adress}
+                {company.city && `, ${company.city}`}
               </span>
             </div>
             <div className='flex flex-col gap-1 text-nowrap'>
