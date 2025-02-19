@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'gamallo-automotores',
-  name: 'Gamallo Autos',
-  adress: 'Remedios de Escalada de San Martin 976',
+  id: 'ds-automotores',
+  name: 'DS Automotores',
+  adress: 'Remedios de escalada 3099',
   city: null,
-  email: null,
-  instagram: 'gamalloautomotores',
-  facebook: 'gamallo.automotores',
-  whatsapp: ['1139200591', '1177049542'],
-  googlemapsLink: 'https://maps.app.goo.gl/KuwhKqasqP4gicRd9',
+  email: 'dansilva@hotmail.com.ar',
+  instagram: 'dsautomotores',
+  facebook: 'automotoresdanielsilva',
+  whatsapp: ['1166393401'],
+  googlemapsLink: 'https://maps.app.goo.gl/ZxRLCdpbohvnfqir8',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210029.63905840318!2d-58.580257271874956!3d-34.66194754956696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcccc29d3f49e1%3A0x5d27e54504af44a6!2sGamallo%20Automotores!5e0!3m2!1ses-419!2sar!4v1739835605816!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.2892540024664!2d-58.4142372233897!3d-34.6726484611434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccc869ec7b7bf%3A0x2ef3945e92125e98!2sAUTOMOTORES%20DANIEL%20SILVA!5e0!3m2!1ses-419!2sar!4v1739835971197!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:30 a 18:00'] },
-    { day: 'Martes', hours: ['09:30 a 18:00'] },
-    { day: 'Miércoles', hours: ['09:30 a 18:00'] },
-    { day: 'Jueves', hours: ['09:30 a 18:00'] },
-    { day: 'Viernes', hours: ['09:30 a 18:00'] },
-    { day: 'Sábado', hours: ['09:30 a 14:00'] },
+    { day: 'Lunes', hours: ['09:00 a 18:00'] },
+    { day: 'Martes', hours: ['09:00 a 18:00'] },
+    { day: 'Miércoles', hours: ['09:00 a 18:00'] },
+    { day: 'Jueves', hours: ['09:00 a 18:00'] },
+    { day: 'Viernes', hours: ['09:00 a 18:00'] },
+    { day: 'Sábado', hours: ['09:00 a 14:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://gamallo-automotores.vercel.app/',
-  title: 'Gamallo Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://ds-automotores.vercel.app/',
+  title: 'DS Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
