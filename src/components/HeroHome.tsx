@@ -13,11 +13,11 @@ const HeroHome = () => {
       >
         <div className='flex justify-center max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
           <article className='w-full flex flex-col items-center md:items-start md:min-w-[430px] lg:min-w-[540px]'>
-            <div className='flex items-center text-lg sm:text-xl md:font-medium mb-1 md:mb-1.5 text-center text-color-title-light'>
+            <div className='flex items-start sm:items-center text-lg sm:text-xl md:font-medium mb-1 md:mb-1.5 text-center text-color-title-light'>
               <span>
                 <LocationZoneIcon className='w-6 h-6 md:w-7 md:h-7' />
               </span>
-              <span>
+              <span className='max-w-72 sm:max-w-none'>
                 {company.adress}
                 {company.city && `, ${company.city}`}
               </span>
@@ -75,7 +75,7 @@ const HeroHome = () => {
           <div className='hidden md:block absolute w-3 sm:w-5 md:w-10 lg:w-24 h-full top-0 -left-0 bg-gradient-to-r from-color-bg-secondary/60'></div>
           <div className='hidden md:block absolute w-3 sm:w-5 md:w-10 lg:w-24 h-full top-0 -right-0 bg-gradient-to-l from-color-bg-secondary/60'></div>
         </div>
-        <div className='absolute top-0 left-0 w-full h-full bg-color-bg-secondary/40 -z-10'></div>
+        <div className='absolute top-0 left-0 w-full h-full bg-color-bg-secondary/50 md:bg-color-bg-secondary/40 -z-10'></div>
       </div>
     </section>
   );

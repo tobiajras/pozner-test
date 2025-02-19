@@ -1,31 +1,31 @@
 export const company = {
   dark: true,
-  id: 'ds-automotores',
-  name: 'DS Automotores',
-  adress: 'Remedios de escalada 3099',
+  id: 'bcars-automotores',
+  name: 'BCARS Autos',
+  adress: 'Remedios de Escalada de San Martin 1992',
   city: null,
-  email: 'dansilva@hotmail.com.ar',
-  instagram: 'dsautomotores',
-  facebook: 'automotoresdanielsilva',
-  whatsapp: ['1166393401'],
-  googlemapsLink: 'https://maps.app.goo.gl/ZxRLCdpbohvnfqir8',
+  email: null,
+  instagram: 'bcarsautomotores',
+  facebook: null,
+  whatsapp: ['1136620534'],
+  googlemapsLink: 'https://maps.app.goo.gl/zXSZQoUws355sdqt6',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.2892540024664!2d-58.4142372233897!3d-34.6726484611434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccc869ec7b7bf%3A0x2ef3945e92125e98!2sAUTOMOTORES%20DANIEL%20SILVA!5e0!3m2!1ses-419!2sar!4v1739835971197!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d205.06080697526016!2d-58.403867404608356!3d-34.68063313479936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd01f8fb9beb%3A0x79355525ada1b490!2sBCARS!5e0!3m2!1ses-419!2sar!4v1739836733212!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:00'] },
-    { day: 'Martes', hours: ['09:00 a 18:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:00'] },
-    { day: 'Jueves', hours: ['09:00 a 18:00'] },
-    { day: 'Viernes', hours: ['09:00 a 18:00'] },
-    { day: 'Sábado', hours: ['09:00 a 14:00'] },
+    { day: 'Lunes', hours: ['10:00 a 18:00'] },
+    { day: 'Martes', hours: ['10:00 a 18:00'] },
+    { day: 'Miércoles', hours: ['10:00 a 18:00'] },
+    { day: 'Jueves', hours: ['10:00 a 18:00'] },
+    { day: 'Viernes', hours: ['10:00 a 18:00'] },
+    { day: 'Sábado', hours: ['10:00 a 14:00'] },
     // { day: 'Domingo', hours: ['08:30 a 13:00', '17:00 a 21:00'] },
   ],
   footer: 'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://ds-automotores.vercel.app/',
-  title: 'DS Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://bcars-automotores.vercel.app/',
+  title: 'BCARS Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
 };
