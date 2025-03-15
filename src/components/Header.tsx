@@ -13,7 +13,15 @@ const Header = () => {
   const { isMenuOpen, setIsMenuOpen } = useNavbarStore();
 
   return (
-    <header className='sticky top-0 left-0 z-30 flex justify-center h-24 bg-color-bg-primary shadow-md'>
+    <header
+      className={`sticky top-0 left-0 z-30 flex justify-center h-24 ${
+        company.darkmode
+          ? 'bg-color-bg-secondary-dark'
+          : company.dark
+          ? 'bg-color-bg-primary'
+          : 'bg-color-bg-secondary-dark'
+      }  shadow-md`}
+    >
       <section className='flex justify-between items-center gap-3 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         <article className='flex w-full'>
           <Link
@@ -24,7 +32,13 @@ const Header = () => {
             <Image
               priority
               className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px]'
-              // className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] ring-[1.5px] ring-color-bg-secondary rounded-full'
+              // className={`w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] ring-[1.5px] ${
+              //   company.darkmode
+              //     ? 'ring-color-bg-primary'
+              //     : company.dark
+              //     ? 'ring-color-bg-secondary'
+              //     : 'ring-color-bg-primary'
+              // }  rounded-full`}
               src='/assets/company/favicon.webp'
               alt={`${company.name} favicon`}
               width={64}
@@ -51,9 +65,11 @@ const Header = () => {
                     nav.button
                       ? `${
                           company.dark
-                            ? 'text-color-title-light'
-                            : 'text-color-title'
-                        } bg-color-primary p-3 rounded hover:bg-color-primary-light hover:text-color-title`
+                            ? 'text-color-title-light hover:bg-color-primary-dark'
+                            : 'text-color-title hover:bg-color-primary-light'
+                        } bg-color-primary p-3 rounded `
+                      : company.darkmode
+                      ? 'text-color-text-light hover:text-color-title-light'
                       : 'text-color-text hover:text-color-title'
                   } font-medium  transition-all duration-300`}
                   href={nav.url}
@@ -67,7 +83,11 @@ const Header = () => {
         <article className='md:hidden flex justify-end items-center gap-2 sm:gap-3 lg:gap-5'>
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className=' text-color-text hover:text-color-title transition-all'
+            className={`${
+              company.darkmode
+                ? 'text-color-text-light hover:text-color-title-light'
+                : 'text-color-text hover:text-color-title'
+            } transition-all`}
           >
             {isMenuOpen ? (
               <CloseIcon className='w-7 h-7' />
@@ -80,13 +100,21 @@ const Header = () => {
           <nav
             className={`${
               isMenuOpen ? 'right-0' : '-right-full'
-            } absolute top-0 h-full w-1/2 bg-color-bg-primary transition-all duration-300 pointer-events-auto`}
+            } absolute top-0 h-full w-1/2 ${
+              company.darkmode
+                ? 'bg-color-bg-secondary-dark'
+                : 'bg-color-bg-primary'
+            }  transition-all duration-300 pointer-events-auto`}
           >
             <ul className='flex flex-col gap-2 p-5'>
               {navigation.map((nav) => (
                 <li key={nav.id}>
                   <Link
-                    className='text-color-text font-medium hover:text-color-title text-lg transition-colors'
+                    className={`${
+                      company.darkmode
+                        ? 'text-color-text-light hover:text-color-title-light'
+                        : 'text-color-text font-medium hover:text-color-title'
+                    } text-lg transition-colors`}
                     href={nav.url}
                     onClick={() => setIsMenuOpen(false)}
                   >

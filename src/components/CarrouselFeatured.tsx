@@ -40,43 +40,75 @@ const CarrouselFeatured = ({
             {products.slice(startIndex, lastIndex).map((product) => (
               <Link
                 href={`/catalogo/${product.id}`}
-                className='group w-full h-full overflow-hidden flex-[0_0_70%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_28%] rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] hover:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.3)] transition-all relative'
+                className='group w-full h-full overflow-hidden flex-[0_0_70%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_28%] rounded-xl bg-white border-2 border-gray-300 hover:border-color-primary transition-all duration-300 relative block'
                 key={product.id}
               >
-                <div className='flex overflow-hidden h-40 sm:h-48 md:h-56 xl:h-64'>
+                {/* Badge de marca */}
+                <div className='absolute top-3 left-3 z-10'>
+                  <span className='bg-color-primary/90 text-color-title-light text-xs font-medium px-2.5 py-1 rounded-full backdrop-blur-sm'>
+                    {product.marca}
+                  </span>
+                </div>
+
+                {/* Imagen con overlay */}
+                <div className='relative overflow-hidden h-44 sm:h-48 md:h-52 xl:h-56'>
                   <Image
                     priority
                     width={451}
                     height={600}
-                    className='object-cover w-full h-full overflow-hidden group-hover:scale-105 transition-transform duration-700'
+                    className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
                     src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
                       product.id
                     }/${product.images?.[0] || 'placeholder.webp'}`}
                     alt={product.name}
                   />
+                  {/* Overlay con degradado */}
+                  <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+
+                  {/* Botón de búsqueda */}
+                  <div className='absolute right-3 bottom-0 translate-y-[-12px] transition-transform duration-300 ease-out'>
+                    <div
+                      className={`${
+                        company.dark
+                          ? 'bg-color-primary hover:bg-color-primary-dark text-color-title-light'
+                          : 'bg-color-primary hover:bg-color-primary-dark text-color-title-light'
+                      } p-2 rounded-full shadow-lg transition-colors`}
+                    >
+                      <SearchIcon className='size-5 md:size-6 stroke-[3]' />
+                    </div>
+                  </div>
                 </div>
-                <div className='py-5 px-4 bg-gradient-to-t bg-color-bg-secondary-light relative'>
-                  <div className='absolute -top-8 left-0 w-full h-8 bg-gradient-to-t from-color-bg-secondary-light to-transparent'></div>
-                  <h3 className='md:text-xl text-color-primary-light font-semibold h-16 line-clamp-2 mb-1 max-w-64'>
+
+                {/* Contenido */}
+                <div className='w-full px-4 py-4'>
+                  {/* Nombre del vehículo */}
+                  <h3 className='text-lg md:text-xl text-color-title font-semibold line-clamp-2 mb-2 min-h-[3.5rem]'>
                     {product.name}
                   </h3>
-                  <div className='flex flex-col gap-1 relative'>
-                    <div className='absolute -top-0 left-0 w-full h-full flex justify-end items-center'>
-                      <SearchIcon
-                        className={`${
-                          company.dark
-                            ? ' text-color-title bg-color-primary-light hover:bg-color-primary-light/80'
-                            : 'text-color-title bg-color-primary hover:bg-color-primary-dark'
-                        } size-8 md:size-10 transition-colors rounded-full p-1.5 md:p-2.5 stroke-[3]`}
-                      />
+
+                  {/* Línea separadora */}
+                  <div className='w-12 md:w-16 h-0.5 bg-color-primary mb-3'></div>
+
+                  {/* Especificaciones */}
+                  <div className='flex flex-col gap-1.5'>
+                    <div className='flex items-center gap-2'>
+                      <span className='text-color-primary font-medium'>
+                        {product.ano}
+                      </span>
+                      <span className='text-xs text-color-text'>•</span>
+                      <span className='text-color-text text-sm'>
+                        {(product.kilometraje ?? 0).toLocaleString('es-ES')} km
+                      </span>
                     </div>
-                    <span className='text-color-text-light line-clamp-1'>
-                      {product.ano} |{' '}
-                      {(product.kilometraje ?? 0).toLocaleString('es-ES')} km
-                    </span>
-                    <span className='text-color-text-light line-clamp-1'>
-                      {product.transmision} | {product.combustible}
-                    </span>
+                    <div className='flex items-center gap-2'>
+                      <span className='text-color-text text-sm'>
+                        {product.transmision}
+                      </span>
+                      <span className='text-xs text-color-text'>•</span>
+                      <span className='text-color-text text-sm'>
+                        {product.combustible}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>

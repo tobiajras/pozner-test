@@ -9,7 +9,7 @@ import { Suspense, useEffect, useState } from 'react';
 import { company } from '../constants/constants';
 import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon';
 import ArrowRightIcon from '@/components/icons/ArrowRightIcon';
-import { useDebounce } from '@/hooks/useDebounce';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ITEMS_PER_PAGE = 12;
 
@@ -19,10 +19,24 @@ const CatalogoPage = () => {
   const [searchValue, setSearchValue] = useState(
     searchParams.get('search') || ''
   );
-  const debouncedSearchValue = useDebounce(searchValue, 300);
   const marcaFilter = searchParams.get('marca') || '';
   const categoriaFilter = searchParams.get('categoria') || '';
   const currentPage = Number(searchParams.get('page')) || 1;
+  const searchFilter = searchParams.get('search') || '';
+
+  // Restaurar la página guardada al recargar
+  useEffect(() => {
+    // Solo ejecutar si no hay un parámetro de página en la URL
+    if (!searchParams.has('page')) {
+      const savedPage = sessionStorage.getItem('catalogCurrentPage');
+      if (savedPage) {
+        const params = new URLSearchParams(window.location.search);
+        params.set('page', savedPage);
+        router.replace(`/catalogo?${params.toString()}`, { scroll: false });
+        sessionStorage.removeItem('catalogCurrentPage');
+      }
+    }
+  }, [router, searchParams]);
 
   // Obtener marcas y categorías únicas
   const marcas = Array.from(
@@ -33,7 +47,7 @@ const CatalogoPage = () => {
   ).sort();
 
   // Normalizar el término de búsqueda
-  const normalizedSearchTerm = debouncedSearchValue
+  const normalizedSearchTerm = searchFilter
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '');
 
@@ -62,34 +76,131 @@ const CatalogoPage = () => {
     startIndex + ITEMS_PER_PAGE
   );
 
+  // Mantener la posición del scroll solo en recargas
+  useEffect(() => {
+    // Guardar la posición del scroll antes de recargar
+    const handleBeforeUnload = () => {
+      sessionStorage.setItem(
+        'catalogScrollPosition',
+        window.scrollY.toString()
+      );
+      // También guardar la página actual
+      sessionStorage.setItem('catalogCurrentPage', currentPage.toString());
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    // Recuperar la posición del scroll solo si viene de una recarga
+    const savedScrollPosition = sessionStorage.getItem('catalogScrollPosition');
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition));
+      sessionStorage.removeItem('catalogScrollPosition');
+    }
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [currentPage]);
+
+  // Modificar handlePageChange para hacer scroll hacia arriba al cambiar de página
   const handlePageChange = (page: number) => {
     const params = new URLSearchParams(window.location.search);
     params.set('page', page.toString());
     router.push(`/catalogo?${params.toString()}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Modificar updateFilters para mantener el comportamiento actual
   const updateFilters = (key: string, value: string) => {
-    const params = new URLSearchParams(window.location.search);
-    if (value) {
-      params.set(key, value);
-    } else {
-      params.delete(key);
+    // Crear un nuevo objeto URLSearchParams
+    const params = new URLSearchParams();
+
+    // Mantener el término de búsqueda si existe
+    const currentSearchParam = searchParams.get('search') || '';
+    if (currentSearchParam) {
+      params.set('search', currentSearchParam);
     }
-    params.delete('page'); // Resetear página al cambiar filtros
-    router.replace(`/catalogo?${params.toString()}`);
+
+    // Actualizar los filtros
+    if (key === 'marca') {
+      if (value) {
+        params.set('marca', value);
+      }
+      // Mantener el filtro de categoría si existe
+      if (categoriaFilter) {
+        params.set('categoria', categoriaFilter);
+      }
+    } else if (key === 'categoria') {
+      if (value) {
+        params.set('categoria', value);
+      }
+      // Mantener el filtro de marca si existe
+      if (marcaFilter) {
+        params.set('marca', marcaFilter);
+      }
+    }
+
+    // Nunca incluir el parámetro de página en un cambio de filtro
+    // Siempre empezar desde la página 1
+
+    router.push(`/catalogo?${params.toString()}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Actualizar la URL cuando cambie el valor debounceado
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (debouncedSearchValue) {
-      params.set('search', debouncedSearchValue);
-    } else {
-      params.delete('search');
+  // Actualizar búsqueda - solo actualiza el estado local
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(e.target.value);
+  };
+
+  // Ejecutar búsqueda inmediatamente al presionar Enter
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      executeSearch(searchValue);
     }
-    params.delete('page'); // Resetear página al cambiar filtros
-    router.replace(`/catalogo?${params.toString()}`);
-  }, [debouncedSearchValue, router]);
+  };
+
+  // Función para ejecutar la búsqueda
+  const executeSearch = (value: string) => {
+    // Crear un nuevo objeto URLSearchParams sin los parámetros actuales
+    const params = new URLSearchParams();
+
+    // Mantener los filtros de marca y categoría si existen
+    if (marcaFilter) {
+      params.set('marca', marcaFilter);
+    }
+
+    if (categoriaFilter) {
+      params.set('categoria', categoriaFilter);
+    }
+
+    // Añadir el término de búsqueda si existe
+    if (value) {
+      params.set('search', value);
+    }
+
+    // Nunca incluir el parámetro de página en una búsqueda nueva
+    // Siempre empezar desde la página 1
+
+    router.push(`/catalogo?${params.toString()}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Mantener sincronizado el estado local con los query params
+  useEffect(() => {
+    // Verificar si estamos en la URL base del catálogo sin parámetros
+    const hasNoParams = window.location.search === '';
+    const isDirectCatalogNavigation =
+      window.location.pathname === '/catalogo' && hasNoParams;
+
+    if (isDirectCatalogNavigation) {
+      // Si se navega directamente a /catalogo sin parámetros, limpiar todo
+      setSearchValue('');
+    } else {
+      // Comportamiento normal: sincronizar con los parámetros de la URL
+      const searchFromParams = searchParams.get('search') || '';
+      setSearchValue(searchFromParams);
+    }
+  }, [searchParams]);
 
   return (
     <>
@@ -117,7 +228,7 @@ const CatalogoPage = () => {
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/20'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary-dark/50 to-color-bg-secondary-dark/40'></div>
         </section>
 
         {/* Filtros y Buscador */}
@@ -127,9 +238,10 @@ const CatalogoPage = () => {
             <div className='relative w-full'>
               <input
                 type='text'
-                placeholder='Buscar vehículo...'
+                placeholder='Buscar vehículo y presionar Enter...'
                 value={searchValue}
-                onChange={(e) => setSearchValue(e.target.value)}
+                onChange={handleSearch}
+                onKeyPress={handleKeyPress}
                 className='w-full px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
               />
               <SearchIcon className='absolute right-3 top-1/2 -translate-y-1/2 size-5' />
@@ -170,51 +282,102 @@ const CatalogoPage = () => {
         <>
           {filteredProducts.length > 0 ? (
             <>
-              <div className='max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-12 mt-10 min-h-[600px] place-content-start mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-                {paginatedProducts.map((product) => (
-                  <Link
-                    href={`/catalogo/${product.id}`}
-                    className='relative group flex flex-col items-center overflow-hidden rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] hover:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.3)] transition-all'
-                    key={product.id}
-                  >
-                    <div className='w-full h-full'>
-                      <Image
-                        className='w-full h-full object-cover overflow-hidden group-hover:scale-105 transition-transform duration-700'
-                        src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
-                          product.id
-                        }/${product.images?.[0] || 'placeholder.webp'}`}
-                        alt={product.name}
-                        width={150}
-                        height={150}
-                      />
-                    </div>
-                    <div className='w-full px-4 py-5'>
-                      <h4 className='md:text-xl text-color-primary font-semibold h-12 sm:h-16 line-clamp-2 mb-1 max-w-[150px] sm:max-w-44 lg:max-w-64'>
-                        {product.name}
-                      </h4>
-                      <div className='flex flex-col gap-1 relative'>
-                        <div className='absolute -top-0 left-0 w-full h-full flex justify-end items-center'>
-                          <SearchIcon
-                            className={`${
-                              company.dark
-                                ? 'text-color-title-light size-10 bg-color-primary hover:bg-color-primary-light transition-colors rounded-full p-2.5 stroke-[3]'
-                                : 'text-color-title size-10 bg-color-primary hover:bg-color-primary-dark transition-colors rounded-full p-2.5 stroke-[3]'
-                            }`}
-                          />
+              <AnimatePresence mode='wait'>
+                <motion.div
+                  key={`${currentPage}-${marcaFilter}-${categoriaFilter}-${searchFilter}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className='max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-12 mt-10 min-h-[600px] place-content-start mx-4 sm:mx-6 md:mx-8 lg:mx-10'
+                >
+                  {paginatedProducts.map((product) => (
+                    <motion.div
+                      key={product.id}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.15 }}
+                    >
+                      <Link
+                        href={`/catalogo/${product.id}`}
+                        className='group w-full h-full overflow-hidden rounded-xl bg-white border-2 border-gray-300 hover:border-color-primary transition-all duration-300 relative block'
+                      >
+                        {/* Badge de marca */}
+                        <div className='absolute top-3 left-3 z-10'>
+                          <span className='bg-color-primary/90 text-color-title-light text-xs font-medium px-2.5 py-1 rounded-full backdrop-blur-sm'>
+                            {product.marca}
+                          </span>
                         </div>
-                        <span className=' text-color-text'>
-                          {product.ano} |{' '}
-                          {(product.kilometraje ?? 0).toLocaleString('es-ES')}{' '}
-                          km
-                        </span>
-                        <span className=' text-color-text'>
-                          {product.transmision} | {product.combustible}
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
+
+                        {/* Imagen con overlay */}
+                        <div className='relative overflow-hidden h-44 sm:h-48 md:h-52 xl:h-56'>
+                          <Image
+                            className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
+                            src={`/assets/catalogo/${product.marcaId?.toLowerCase()}/${
+                              product.id
+                            }/${product.images?.[0] || 'placeholder.webp'}`}
+                            alt={product.name}
+                            width={451}
+                            height={600}
+                          />
+                          {/* Overlay con degradado */}
+                          <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+
+                          {/* Botón de búsqueda */}
+                          <div className='absolute right-3 bottom-0 translate-y-[-12px] transition-transform duration-300 ease-out'>
+                            <div
+                              className={`${
+                                company.dark
+                                  ? 'bg-color-primary hover:bg-color-primary-dark text-color-title-light'
+                                  : 'bg-color-primary hover:bg-color-primary-dark text-color-title-light'
+                              } p-2 rounded-full shadow-lg transition-colors`}
+                            >
+                              <SearchIcon className='size-5 md:size-6 stroke-[3]' />
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Contenido */}
+                        <div className='w-full px-4 py-4'>
+                          {/* Nombre del vehículo */}
+                          <h3 className='text-lg md:text-xl text-color-title font-semibold line-clamp-2 mb-2 min-h-[3.5rem]'>
+                            {product.name}
+                          </h3>
+
+                          {/* Línea separadora */}
+                          <div className='w-12 md:w-16 h-0.5 bg-color-primary mb-3'></div>
+
+                          {/* Especificaciones */}
+                          <div className='flex flex-col gap-1.5'>
+                            <div className='flex items-center gap-2'>
+                              <span className='text-color-primary font-medium'>
+                                {product.ano}
+                              </span>
+                              <span className='text-xs text-color-text'>•</span>
+                              <span className='text-color-text text-sm'>
+                                {(product.kilometraje ?? 0).toLocaleString(
+                                  'es-ES'
+                                )}{' '}
+                                km
+                              </span>
+                            </div>
+                            <div className='flex items-center gap-2'>
+                              <span className='text-color-text text-sm'>
+                                {product.transmision}
+                              </span>
+                              <span className='text-xs text-color-text'>•</span>
+                              <span className='text-color-text text-sm'>
+                                {product.combustible}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </AnimatePresence>
 
               {/* Paginación */}
               {totalPages > 1 && (
@@ -230,7 +393,13 @@ const CatalogoPage = () => {
                         : 'bg-color-primary text-color-title-light hover:bg-color-primary-light hover:text-color-title'
                     } transition-colors`}
                   >
-                    <ArrowLeftIcon className='w-4 h-4' />
+                    <ArrowLeftIcon
+                      className={`w-4 h-4 ${
+                        company.dark
+                          ? 'text-color-title-light'
+                          : 'text-color-title'
+                      }`}
+                    />
                   </button>
                   <span className='text-color-text'>
                     Página {currentPage} de {totalPages}
@@ -246,7 +415,13 @@ const CatalogoPage = () => {
                         : 'bg-color-primary text-color-title-light hover:bg-color-primary-light hover:text-color-title'
                     } transition-colors`}
                   >
-                    <ArrowRightIcon className='w-4 h-4' />
+                    <ArrowRightIcon
+                      className={`w-4 h-4 ${
+                        company.dark
+                          ? 'text-color-title-light'
+                          : 'text-color-title'
+                      }`}
+                    />
                   </button>
                 </div>
               )}
@@ -254,11 +429,11 @@ const CatalogoPage = () => {
           ) : (
             <div className='flex flex-col items-center min-h-[600px] my-8 md:my-16'>
               <div className='col-span-2 md:col-span-3 lg:col-span-4 text-center text-lg text-color-text'>
-                {searchValue ? (
+                {searchFilter ? (
                   <>
                     No se encontraron resultados para la búsqueda{' '}
                     <span className='text-color-title font-semibold'>
-                      &quot;{searchValue}&quot;
+                      &quot;{searchFilter}&quot;
                     </span>
                     {(marcaFilter || categoriaFilter) &&
                       ' con los filtros seleccionados'}
@@ -301,8 +476,11 @@ const CatalogoPage = () => {
                 href='/catalogo'
                 onClick={(e) => {
                   e.preventDefault();
+                  // Limpiar el estado local
                   setSearchValue('');
-                  router.replace('/catalogo', { scroll: false });
+                  // Navegar a la URL sin parámetros
+                  router.push('/catalogo');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
               >
                 Ver catálogo completo

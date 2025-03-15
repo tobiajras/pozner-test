@@ -1,5 +1,6 @@
 export const company = {
   dark: true,
+  darkmode: false,
   id: 'fratelli-automotores',
   name: 'Fratelli Autos',
   adress: 'Ricardo Balbín 1766',
