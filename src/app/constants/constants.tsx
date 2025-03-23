@@ -34,33 +34,33 @@ export const metadataCompany = {
 export const preguntas = [
   {
     id: 'preg-1',
-    question: '¿Qué tipo de vehículos venden?',
+    question: '¿Puedo financiar la compra de mi auto?',
     answer:
-      'Tenemos una variedad de vehículos, desde autos y camionetas hasta utilitarios y autos usados. Todos están revisados y listos para salir a la calle.',
+      'Sí, financiamos tu compra de manera flexible. Entregando el 60% del valor, el resto lo abonás en 12, 18, 24, 30 o 36 cuotas fijas en pesos. ¡Consultanos y encontraremos la mejor opción para vos!',
   },
   {
     id: 'preg-2',
-    question: '¿Cómo puedo encontrar el auto que busco?',
+    question: '¿Aceptan permutas?',
     answer:
-      'Podés acercarte a nuestra sucursal, donde te ayudamos a encontrar el auto que mejor se ajuste a lo que necesitas. ¡Te asesoramos en todo el proceso!',
+      'Sí, tomamos tu auto usado como parte de pago. Acercate con tu vehículo para una tasación sin compromiso y hacé el cambio de manera fácil y rápida.',
   },
   {
     id: 'preg-3',
-    question: '¿Qué documentos necesito para comprar un auto?',
+    question: '¿Qué requisitos necesito para comprar un auto?',
     answer:
-      'Con tu DNI y, si optás por financiarlo, solo te pedimos algunos papeles más como el recibo de sueldo y un comprobante de domicilio. Te acompañamos en cada paso.',
+      'Solo necesitás tu DNI. Si elegís financiarlo, te pedimos algunos documentos adicionales como recibo de sueldo y comprobante de domicilio. Te acompañamos en todo el proceso.',
   },
   {
     id: 'preg-4',
-    question: '¿Tienen opciones de financiación?',
+    question: '¿Qué tipos de vehículos tienen disponibles?',
     answer:
-      'Sí, tenemos planes de financiación a medida. Contamos con varias opciones para que encuentres la que mejor se adapte a tu bolsillo.',
+      'Contamos con una amplia variedad de autos, camionetas y utilitarios, tanto nuevos como usados. Todos nuestros vehículos están revisados y listos para salir a la calle.',
   },
   {
     id: 'preg-5',
     question: '¿Los autos tienen garantía?',
     answer:
-      'Sí, todos nuestros vehículos están revisados y cuentan con garantía, para que puedas estar tranquilo con tu compra.',
+      'Sí, todos nuestros vehículos están revisados y cuentan con garantía. Queremos que compres con total tranquilidad y seguridad.',
   },
 ];
 
