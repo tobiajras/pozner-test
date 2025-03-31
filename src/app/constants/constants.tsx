@@ -56,12 +56,6 @@ export const preguntas = [
     answer:
       'Contamos con una amplia variedad de autos, camionetas y utilitarios, tanto nuevos como usados. Todos nuestros vehículos están revisados y listos para salir a la calle.',
   },
-  {
-    id: 'preg-5',
-    question: '¿Los autos tienen garantía?',
-    answer:
-      'Sí, todos nuestros vehículos están revisados y cuentan con garantía. Queremos que compres con total tranquilidad y seguridad.',
-  },
 ];
 
 export const navigation = [
