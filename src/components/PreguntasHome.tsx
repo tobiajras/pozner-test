@@ -45,7 +45,7 @@ const PreguntasHome = () => {
           </h4>
           <article className=''>
             <ul className='flex flex-col'>
-              {preguntas.map((pregunta, index) => (
+              {preguntas.map((pregunta) => (
                 <li
                   onClick={() => handleClick(pregunta.id)}
                   key={pregunta.id}
