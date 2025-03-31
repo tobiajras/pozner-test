@@ -25,7 +25,7 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://fratelli-automotores.vercel.app/',
+  metadataBase: 'https://fratelliautomotores.com.ar/',
   title: 'Fratelli Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
