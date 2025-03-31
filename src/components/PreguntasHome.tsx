@@ -17,10 +17,10 @@ const PreguntasHome = () => {
       id='preguntasSection'
       className='flex justify-center my-10 md:my-16 lg:my-20'
     >
-      <div className='flex flex-col md:flex-row gap-5 md:gap-8 max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+      <div className=' flex flex-col md:flex-row gap-5 md:gap-8 max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         <motion.article
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, margin: '-100px' }}
         >
@@ -35,8 +35,8 @@ const PreguntasHome = () => {
           </div>
         </motion.article>
         <motion.article
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, margin: '-100px' }}
         >
