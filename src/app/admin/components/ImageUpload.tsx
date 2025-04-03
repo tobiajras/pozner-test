@@ -3,7 +3,7 @@
 import { Trash, Plus } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
-import { ImageCropModal } from './image-crop-modal';
+import ImageCropModal from './ImageCropModal';
 
 interface ImageUploadProps {
   onImagesSelected: (files: File[]) => void;
@@ -21,7 +21,7 @@ export function ImageUpload({
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [cropModalOpen, setCropModalOpen] = useState(false);
-  const [setCurrentImageIndex] = useState<number>(-1);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(-1);
   const [tempImageUrl, setTempImageUrl] = useState<string>('');
   const [tempFile, setTempFile] = useState<File | null>(null);
 
@@ -166,8 +166,13 @@ export function ImageUpload({
           setTempImageUrl('');
           setTempFile(null);
         }}
-        imageUrl={tempImageUrl}
-        onCropComplete={handleCropComplete}
+        image={tempImageUrl}
+        onCrop={(croppedImageUrl) => {
+          // Convertir la URL de datos a Blob
+          fetch(croppedImageUrl)
+            .then((res) => res.blob())
+            .then((blob) => handleCropComplete(blob));
+        }}
       />
     </div>
   );

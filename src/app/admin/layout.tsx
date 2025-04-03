@@ -17,6 +17,13 @@ export default function AdminLayout({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Agregar el CSS de Cropper.js dinámicamente
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href =
+      'https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css';
+    document.head.appendChild(link);
+
     // Verificar la cookie de autenticación
     const authCookie = Cookies.get('admin-auth');
 

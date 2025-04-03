@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react';
 import Cropper from 'react-cropper';
-import 'cropperjs/dist/cropper.css';
+// CSS importado a través de link en layout.tsx
 
 interface ImageCropModalProps {
   isOpen: boolean;
