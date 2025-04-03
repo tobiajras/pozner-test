@@ -22,10 +22,10 @@ const Footer = () => {
         <section className='flex md:justify-center text-color-text-light w-full '>
           <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-6 sm:mx-8 md:mx-10 py-10'>
             <article className='flex w-full flex-col'>
-              <div className='w-48 sm:w-52 md:w-52 lg:w-56 h-12 sm:h-14'>
+              <div className='w-52 sm:w-56 md:w-60 lg:w-64 h-12 sm:h-14'>
                 <Image
                   className='w-full h-full object-contain object-left'
-                  src='/assets/company/logo-white.webp'
+                  src='/assets/company/fratelli-logo-white.svg'
                   alt={`${company.name} logo`}
                   width={288}
                   height={72}
@@ -132,7 +132,7 @@ const Footer = () => {
         >
           <article className='flex flex-col md:flex-row justify-between items-center text-sm sm:text-base gap-3 sm:gap-5 w-full max-w-6xl mx-6 sm:mx-8 md:mx-10'>
             <div className='flex items-center gap-1 sm:gap-2 text-color-text-light'>
-              <span>© Copyright 2024</span>
+              <span>© Copyright {new Date().getFullYear()}</span>
               <span>-</span>
               <span>{company.name}</span>
             </div>

@@ -44,11 +44,11 @@ const Header = () => {
               width={64}
               height={64}
             />
-            <div className='h-12 w-32 sm:w-36 md:w-40'>
+            <div className='h-12 w-44 sm:w-48 md:w-56 lg:w-72 mt-1.5'>
               <Image
                 priority
                 className='h-full w-full object-contain object-left'
-                src='/assets/company/logo.webp'
+                src='/assets/company/fratelli-logo.svg'
                 alt={`${company.name} logo`}
                 width={116}
                 height={56}

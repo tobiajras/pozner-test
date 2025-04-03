@@ -142,8 +142,8 @@ export default function DashboardPage() {
             <div className='relative w-44 h-32 flex-shrink-0'>
               <Image
                 priority={idx < 4 ? true : false}
-                src={`/assets/catalogo/${auto.marca}/${auto.id}/${auto.imagenes[0]}`}
-                alt={`/assets/catalogo/${auto.marca}/${auto.id}/${auto.imagenes[0]}`}
+                src={`/assets/catalogo/${auto.marcaId}/${auto.id}/${auto.imagenes[0]}`}
+                alt={`${auto.marca} ${auto.modelo}`}
                 fill
                 className='object-cover rounded-lg'
               />
