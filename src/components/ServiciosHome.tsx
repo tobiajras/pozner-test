@@ -32,7 +32,7 @@ const ServiciosHome = () => {
             </p>
           </article>
           <article className=''>
-            <div className='w-[680px] sm:w-[720px] md:w-[720px] lg:w-[1200px]'>
+            <div className='w-[500px] sm:w-[620px] md:w-[700px] lg:w-[1000px]'>
               <Image
                 priority
                 className='w-full h-full object-contain'
