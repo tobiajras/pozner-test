@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { company } from '../constants/constants';
+import { company } from '@/app/constants/constants';
 import { motion } from 'framer-motion';
 
 const NosotrosPage = () => {
