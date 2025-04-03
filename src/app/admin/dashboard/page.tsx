@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import catalogo from '@/data/catalogo.json';
 import AutoModal from '../components/AutoModal';
 import { motion } from 'framer-motion';
-import { Edit, Trash, Plus, Pause, Play } from 'lucide-react';
+import { Edit, Trash, Plus } from 'lucide-react';
 import Image from 'next/image';
 
 interface Auto {

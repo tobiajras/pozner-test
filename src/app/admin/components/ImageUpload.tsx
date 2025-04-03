@@ -21,7 +21,7 @@ export function ImageUpload({
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [cropModalOpen, setCropModalOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(-1);
+  const [setCurrentImageIndex] = useState<number>(-1);
   const [tempImageUrl, setTempImageUrl] = useState<string>('');
   const [tempFile, setTempFile] = useState<File | null>(null);
 
