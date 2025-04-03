@@ -228,7 +228,7 @@ const CatalogoPage = () => {
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary-dark/50 to-color-bg-secondary-dark/40'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary-dark/70 to-color-bg-secondary-dark/70'></div>
         </section>
 
         {/* Filtros y Buscador */}

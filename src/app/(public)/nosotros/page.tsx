@@ -22,27 +22,17 @@ const NosotrosPage = () => {
           <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
             <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
               <div className='text-center'>
-                <motion.h3
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7 }}
-                  className='text-2xl sm:text-4xl lg:text-5xl font-bold text-color-primary-light'
-                >
+                <h3 className='text-2xl sm:text-4xl lg:text-5xl font-bold text-color-primary-light'>
                   SOMOS {company.name.toUpperCase()}
-                </motion.h3>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.2 }}
-                  className='flex flex-col sm:text-lg md:text-2xl mt-1 text-color-text-light max-w-[300px] sm:max-w-[550px] md:max-w-[650px] lg:max-w-[750px]'
-                >
+                </h3>
+                <p className='flex flex-col sm:text-lg md:text-2xl mt-1 text-color-text-light max-w-[300px] sm:max-w-[550px] md:max-w-[650px] lg:max-w-[750px]'>
                   Más de 18 años de experiencia brindando confianza y calidad en
                   cada vehículo que vendemos
-                </motion.p>
+                </p>
               </div>
             </div>
           </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/50 to-color-bg-secondary/30'></div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary/80 to-color-bg-secondary/80'></div>
         </section>
         <div className='max-w-6xl mt-10 md:mt-20 flex flex-col gap-10 md:gap-20'>
           {/* Historia y local */}

@@ -25,7 +25,7 @@ export const company = {
 };
 
 export const metadataCompany = {
-  metadataBase: 'https://fratelli-automotores.vercel.app/',
+  metadataBase: 'https://fratelliautomotores.com.ar/',
   title: 'Fratelli Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos, Seguridad y Confianza en Cada Kilómetro.',
@@ -55,12 +55,6 @@ export const preguntas = [
     question: '¿Qué tipos de vehículos tienen disponibles?',
     answer:
       'Contamos con una amplia variedad de autos, camionetas y utilitarios, tanto nuevos como usados. Todos nuestros vehículos están revisados y listos para salir a la calle.',
-  },
-  {
-    id: 'preg-5',
-    question: '¿Los autos tienen garantía?',
-    answer:
-      'Sí, todos nuestros vehículos están revisados y cuentan con garantía. Queremos que compres con total tranquilidad y seguridad.',
   },
 ];
 
