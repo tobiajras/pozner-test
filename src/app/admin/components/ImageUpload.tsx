@@ -21,7 +21,6 @@ export function ImageUpload({
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [cropModalOpen, setCropModalOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(-1);
   const [tempImageUrl, setTempImageUrl] = useState<string>('');
   const [tempFile, setTempFile] = useState<File | null>(null);
 
@@ -83,6 +82,12 @@ export function ImageUpload({
 
   const triggerFileInput = () => {
     document.getElementById('images')?.click();
+  };
+
+  const handleCloseModal = () => {
+    setCropModalOpen(false);
+    setTempImageUrl('');
+    setTempFile(null);
   };
 
   return (
@@ -160,12 +165,7 @@ export function ImageUpload({
       {/* Modal de recorte de imágenes */}
       <ImageCropModal
         isOpen={cropModalOpen}
-        onClose={() => {
-          setCropModalOpen(false);
-          setCurrentImageIndex(-1);
-          setTempImageUrl('');
-          setTempFile(null);
-        }}
+        onClose={handleCloseModal}
         imageUrl={tempImageUrl}
         onCropComplete={handleCropComplete}
       />

@@ -199,3 +199,6 @@ export function ImageCropModal({
     </div>
   );
 }
+
+// Añadir exportación por defecto para garantizar compatibilidad
+export default ImageCropModal;
