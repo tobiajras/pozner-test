@@ -1,8 +1,8 @@
 'use client';
 
-import { ImageIcon, X, Edit, Trash, Plus, GripVertical } from 'lucide-react';
+import { Trash, Plus } from 'lucide-react';
 import Image from 'next/image';
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { ImageCropModal } from './image-crop-modal';
 
 interface ImageUploadProps {

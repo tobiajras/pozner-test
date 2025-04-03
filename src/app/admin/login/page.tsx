@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
 
-const LoginPage = () => {
+export default function LoginPage() {
   const router = useRouter();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -20,7 +20,7 @@ const LoginPage = () => {
 
     try {
       // Credenciales de prueba
-      if (email === 'admin@fratelli.com' && password === 'admin123') {
+      if (email === 'fratelli999' && password === 'admin999') {
         Cookies.set('admin-auth', 'true', { expires: 7 });
         router.push('/admin/dashboard');
       } else {
@@ -34,10 +34,10 @@ const LoginPage = () => {
   };
 
   return (
-    <div className='min-h-screen flex items-center justify-center bg-color-bg-primary py-12 px-4 sm:px-6 lg:px-8'>
+    <div className='min-h-screen flex items-center justify-center bg-white py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-md w-full space-y-8'>
         <div>
-          <h2 className='mt-6 text-center text-3xl font-extrabold text-color-text'>
+          <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
             Panel de Administración
           </h2>
           <p className='mt-2 text-center text-sm text-gray-600'>
@@ -47,16 +47,17 @@ const LoginPage = () => {
         <form className='mt-8 space-y-6' onSubmit={handleSubmit}>
           <div className='rounded-md shadow-sm -space-y-px'>
             <div>
-              <label htmlFor='email' className='sr-only'>
-                Email
+              <label htmlFor='username' className='sr-only'>
+                Usuario
               </label>
               <input
-                id='email'
+                id='username'
                 name='email'
-                type='email'
+                type='text'
+                autoComplete='username'
                 required
-                className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-color-text rounded-t-md focus:outline-none focus:ring-color-primary focus:border-color-primary focus:z-10 sm:text-sm'
-                placeholder='Email'
+                className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm'
+                placeholder='Usuario'
               />
             </div>
             <div>
@@ -67,8 +68,9 @@ const LoginPage = () => {
                 id='password'
                 name='password'
                 type='password'
+                autoComplete='current-password'
                 required
-                className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-color-text rounded-b-md focus:outline-none focus:ring-color-primary focus:border-color-primary focus:z-10 sm:text-sm'
+                className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm'
                 placeholder='Contraseña'
               />
             </div>
@@ -82,7 +84,7 @@ const LoginPage = () => {
             <button
               type='submit'
               disabled={loading}
-              className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-color-primary hover:bg-color-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color-primary disabled:opacity-50'
+              className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:opacity-50'
             >
               {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
             </button>
@@ -91,12 +93,10 @@ const LoginPage = () => {
 
         <div className='text-sm text-center text-gray-500'>
           <p>Credenciales de prueba:</p>
-          <p>Email: admin@fratelli.com</p>
-          <p>Contraseña: admin123</p>
+          <p>Usuario: fratelli999</p>
+          <p>Contraseña: admin999</p>
         </div>
       </div>
     </div>
   );
-};
-
-export default LoginPage;
+}

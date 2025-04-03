@@ -3,14 +3,22 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { MOCK_STATS } from '@/app/constants/admin';
+import Cookies from 'js-cookie';
 
 export default function AdminPage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirigir al dashboard
-    router.push('/admin/dashboard');
+    // Verificar autenticación
+    const authCookie = Cookies.get('admin-auth');
+
+    // Si no hay cookie de autenticación, redirigir a login
+    if (!authCookie) {
+      router.push('/admin/login');
+    } else {
+      // Si está autenticado, redirigir al dashboard
+      router.push('/admin/dashboard');
+    }
   }, [router]);
 
   return (
@@ -21,7 +29,8 @@ export default function AdminPage() {
         transition={{ duration: 0.5 }}
         className='text-center'
       >
-        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-red-500 mx-auto'></div>
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-red-500 mx-auto mb-4'></div>
+        <p className='text-gray-600'>Redirigiendo...</p>
       </motion.div>
     </div>
   );

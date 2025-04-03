@@ -2,10 +2,8 @@
 
 import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { motion } from 'framer-motion';
 import { ImageUpload } from './ImageUpload';
 import Image from 'next/image';
-import { ImageCropModal } from './image-crop-modal';
 
 interface FormData {
   marca: string;
