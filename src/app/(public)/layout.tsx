@@ -1,7 +1,13 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
-import { company } from '../constants/constants';
+import { company, metadataCompany } from '../constants/constants';
+
+export const metadata = {
+  metadataBase: metadataCompany.metadataBase,
+  title: metadataCompany.title,
+  description: metadataCompany.description,
+};
 
 export default function PublicLayout({
   children,
