@@ -22,9 +22,6 @@ export default function LoginPage() {
     const username = formData.get('username') as string;
     const password = formData.get('password') as string;
 
-    // Mostrar en consola lo que estamos enviando
-    console.log('Enviando credenciales:', { username, password });
-
     try {
       // URL correcta del endpoint de login
       const response = await fetch(`${API_BASE_URL}/api/admin/login`, {
@@ -39,12 +36,6 @@ export default function LoginPage() {
 
       // Obtener la respuesta como texto para depuración
       const responseText = await response.text();
-      console.log('Respuesta del servidor (status):', response.status);
-      console.log('Respuesta del servidor (headers):', response.headers);
-      console.log(
-        'Respuesta del servidor (body):',
-        responseText.substring(0, 200)
-      );
 
       let data;
       try {
@@ -58,8 +49,6 @@ export default function LoginPage() {
       if (!response.ok) {
         throw new Error(data.error || 'Error al iniciar sesión');
       }
-
-      console.log('Login exitoso, datos recibidos:', data);
 
       // Guardar token en cookies
       Cookies.set('admin-auth', data.token, { expires: 7 });
