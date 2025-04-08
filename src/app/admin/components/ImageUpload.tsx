@@ -10,7 +10,6 @@ interface ImageUploadProps {
   maxFiles?: number;
   accept?: string;
   defaultImageUrl?: string;
-  showCrop?: boolean;
 }
 
 export function ImageUpload({
@@ -18,7 +17,6 @@ export function ImageUpload({
   maxFiles = 10,
   accept = 'image/*',
   defaultImageUrl,
-  showCrop = true,
 }: ImageUploadProps) {
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -26,8 +24,6 @@ export function ImageUpload({
   const [tempImageUrl, setTempImageUrl] = useState<string>('');
   const [tempFile, setTempFile] = useState<File | null>(null);
   const [editingIndex, setEditingIndex] = useState<number>(-1);
-  const [filesToProcess, setFilesToProcess] = useState<File[]>([]);
-  const [currentFileIndex, setCurrentFileIndex] = useState<number>(-1);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
