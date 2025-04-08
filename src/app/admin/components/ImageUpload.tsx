@@ -10,6 +10,7 @@ interface ImageUploadProps {
   maxFiles?: number;
   accept?: string;
   defaultImageUrl?: string;
+  showCrop?: boolean;
 }
 
 export function ImageUpload({
@@ -17,6 +18,7 @@ export function ImageUpload({
   maxFiles = 10,
   accept = 'image/*',
   defaultImageUrl,
+  showCrop = true,
 }: ImageUploadProps) {
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -35,22 +37,37 @@ export function ImageUpload({
     );
     if (filesToProcess.length === 0) return;
 
-    // Procesar todas las imágenes directamente
-    const newFiles = [...selectedFiles, ...filesToProcess];
-    setSelectedFiles(newFiles);
-    onImagesSelected(newFiles);
-
-    // Crear previsualizaciones para todas las imágenes
-    filesToProcess.forEach((file) => {
+    if (showCrop) {
+      // Si showCrop está habilitado, mostrar el modal de recorte para la primera imagen
+      const file = filesToProcess[0];
+      setTempFile(file);
       const reader = new FileReader();
       reader.onload = (e: ProgressEvent<FileReader>) => {
         const result = e.target?.result;
         if (result && typeof result === 'string') {
-          setPreviewImages((prev) => [...prev, result]);
+          setTempImageUrl(result);
+          setCropModalOpen(true);
         }
       };
       reader.readAsDataURL(file);
-    });
+    } else {
+      // Si showCrop está deshabilitado, procesar todas las imágenes directamente
+      const newFiles = [...selectedFiles, ...filesToProcess];
+      setSelectedFiles(newFiles);
+      onImagesSelected(newFiles);
+
+      // Crear previsualizaciones para todas las imágenes
+      filesToProcess.forEach((file) => {
+        const reader = new FileReader();
+        reader.onload = (e: ProgressEvent<FileReader>) => {
+          const result = e.target?.result;
+          if (result && typeof result === 'string') {
+            setPreviewImages((prev) => [...prev, result]);
+          }
+        };
+        reader.readAsDataURL(file);
+      });
+    }
 
     if (e.target) {
       e.target.value = '';
