@@ -380,7 +380,6 @@ const CreateAutoModal = ({
                       onImagesSelected={handleImagesSelected}
                       maxFiles={20}
                       accept='image/*'
-                      showCrop={true}
                     />
                   </div>
 
