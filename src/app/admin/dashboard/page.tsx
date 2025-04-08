@@ -3,15 +3,7 @@
 import { useState, useEffect } from 'react';
 import AutoModal from '../components/AutoModal';
 import { motion } from 'framer-motion';
-import {
-  Edit,
-  Trash,
-  Plus,
-  RefreshCw,
-  Star,
-  Zap,
-  DollarSign,
-} from 'lucide-react';
+import { Edit, Trash, Plus, RefreshCw, Star, Zap } from 'lucide-react';
 import Image from 'next/image';
 import Cookies from 'js-cookie';
 import { ConfirmModal } from '../components/ConfirmModal';
@@ -205,7 +197,7 @@ export default function DashboardPage() {
     }
   };
 
-  const handleToggleEstado = async (id: string, currentActive: boolean) => {
+  const handleToggleEstado = async (id: string) => {
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(

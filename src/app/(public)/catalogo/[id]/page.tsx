@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeftIcon } from '@/components/icons/ArrowLeftIcon';
+import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon';
 
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar/api';
 
@@ -54,7 +54,9 @@ export default function AutoDetailPage() {
         const data = await response.json();
         setCar(data);
       } catch (error) {
-        setError(error instanceof Error ? error.message : 'Error al cargar el vehículo');
+        setError(
+          error instanceof Error ? error.message : 'Error al cargar el vehículo'
+        );
       } finally {
         setLoading(false);
       }
@@ -99,7 +101,10 @@ export default function AutoDetailPage() {
         {/* Galería de imágenes */}
         <div className='space-y-4'>
           {car.Images.map((image, index) => (
-            <div key={index} className='relative aspect-video rounded-lg overflow-hidden'>
+            <div
+              key={index}
+              className='relative aspect-video rounded-lg overflow-hidden'
+            >
               <Image
                 src={image.thumbnailUrl}
                 alt={`${car.brand} ${car.model} - Imagen ${index + 1}`}
@@ -128,7 +133,9 @@ export default function AutoDetailPage() {
             </div>
             <div className='bg-gray-50 p-4 rounded-lg'>
               <p className='text-sm text-gray-500'>Kilometraje</p>
-              <p className='font-medium'>{car.mileage.toLocaleString('es-AR')} km</p>
+              <p className='font-medium'>
+                {car.mileage.toLocaleString('es-AR')} km
+              </p>
             </div>
             <div className='bg-gray-50 p-4 rounded-lg'>
               <p className='text-sm text-gray-500'>Transmisión</p>
@@ -162,4 +169,4 @@ export default function AutoDetailPage() {
       </div>
     </div>
   );
-} 
+}
