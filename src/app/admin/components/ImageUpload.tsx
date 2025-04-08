@@ -2,7 +2,7 @@
 
 import { Edit, Trash, Plus } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ImageCropModal } from './image-crop-modal';
 
 interface ImageUploadProps {
@@ -40,16 +40,10 @@ export function ImageUpload({
     setSelectedFiles(updatedFiles);
     onImagesSelected(updatedFiles);
 
-    // Crear previsualizaciones para todas las imágenes
+    // Crear previsualizaciones para todas las imágenes usando URL.createObjectURL
     newFiles.forEach((file) => {
-      const reader = new FileReader();
-      reader.onload = (e: ProgressEvent<FileReader>) => {
-        const result = e.target?.result;
-        if (result && typeof result === 'string') {
-          setPreviewImages((prev) => [...prev, result]);
-        }
-      };
-      reader.readAsDataURL(file);
+      const url = URL.createObjectURL(file);
+      setPreviewImages((prev) => [...prev, url]);
     });
 
     if (e.target) {
@@ -61,15 +55,9 @@ export function ImageUpload({
     const file = selectedFiles[index];
     setEditingIndex(index);
     setTempFile(file);
-    const reader = new FileReader();
-    reader.onload = (e: ProgressEvent<FileReader>) => {
-      const result = e.target?.result;
-      if (result && typeof result === 'string') {
-        setTempImageUrl(result);
-        setCropModalOpen(true);
-      }
-    };
-    reader.readAsDataURL(file);
+    const url = URL.createObjectURL(file);
+    setTempImageUrl(url);
+    setCropModalOpen(true);
   };
 
   const handleCropComplete = async (croppedFile: File) => {
@@ -82,18 +70,12 @@ export function ImageUpload({
     onImagesSelected(newFiles);
 
     // Actualizar la previsualización
-    const reader = new FileReader();
-    reader.onload = (e: ProgressEvent<FileReader>) => {
-      const result = e.target?.result;
-      if (result && typeof result === 'string') {
-        setPreviewImages((prev) => {
-          const newPreviews = [...prev];
-          newPreviews[editingIndex] = result;
-          return newPreviews;
-        });
-      }
-    };
-    reader.readAsDataURL(croppedFile);
+    const url = URL.createObjectURL(croppedFile);
+    setPreviewImages((prev) => {
+      const newPreviews = [...prev];
+      newPreviews[editingIndex] = url;
+      return newPreviews;
+    });
 
     // Limpiar el estado temporal
     setTempFile(null);
@@ -103,6 +85,9 @@ export function ImageUpload({
   };
 
   const removeImage = (index: number) => {
+    // Revocar la URL de objeto para liberar memoria
+    URL.revokeObjectURL(previewImages[index]);
+    
     const newFiles = selectedFiles.filter((_, i) => i !== index);
     const newPreviews = previewImages.filter((_, i) => i !== index);
     setSelectedFiles(newFiles);
@@ -113,6 +98,13 @@ export function ImageUpload({
   const triggerFileInput = () => {
     document.getElementById('images')?.click();
   };
+
+  // Limpiar las URLs de objeto cuando el componente se desmonte
+  useEffect(() => {
+    return () => {
+      previewImages.forEach(url => URL.revokeObjectURL(url));
+    };
+  }, [previewImages]);
 
   return (
     <div>
