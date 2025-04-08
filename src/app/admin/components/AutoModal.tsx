@@ -113,6 +113,13 @@ const AutoModal = ({
 
       // Llamar al callback de éxito con los datos del formulario
       await onSubmit(dataToSubmit);
+
+      // Limpiar las URLs de objeto creadas
+      formData.imagenes.forEach((url) => {
+        if (url.startsWith('blob:')) {
+          URL.revokeObjectURL(url);
+        }
+      });
     } catch (error) {
       console.error('Error al procesar el formulario:', error);
       alert(
@@ -127,10 +134,8 @@ const AutoModal = ({
   const handleImagesSelected = (files: File[]) => {
     // Guardar los archivos de imagen para enviar al servidor
     setSelectedFiles(files);
-
-    // Generar URLs para vista previa
-    const imageUrls = files.map((file) => URL.createObjectURL(file));
-    setFormData((prev) => ({ ...prev, imagenes: imageUrls }));
+    // No necesitamos crear URLs de objeto, solo mantener los archivos
+    setFormData((prev) => ({ ...prev, imagenes: [] }));
   };
 
   const inputStyles =
@@ -401,6 +406,7 @@ const AutoModal = ({
                       maxFiles={20}
                       accept='image/*'
                       defaultImageUrl={initialData?.imagenes[0]}
+                      showCrop={true}
                     />
                   </div>
 

@@ -1,8 +1,8 @@
 'use client';
 
-import { ImageIcon, X, Edit, Trash, Plus, GripVertical } from 'lucide-react';
+import { Edit, Trash, Plus } from 'lucide-react';
 import Image from 'next/image';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { ImageCropModal } from './image-crop-modal';
 
 interface ImageUploadProps {
@@ -23,7 +23,6 @@ export function ImageUpload({
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [cropModalOpen, setCropModalOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(-1);
   const [tempImageUrl, setTempImageUrl] = useState<string>('');
   const [tempFile, setTempFile] = useState<File | null>(null);
   const [editingIndex, setEditingIndex] = useState<number>(-1);
@@ -38,37 +37,22 @@ export function ImageUpload({
     );
     if (filesToProcess.length === 0) return;
 
-    // Si showCrop es true y se seleccionó una sola imagen, mostrar el modal de recorte
-    if (showCrop && filesToProcess.length === 1) {
-      const file = filesToProcess[0];
-      setTempFile(file);
+    // Procesar todas las imágenes directamente
+    const newFiles = [...selectedFiles, ...filesToProcess];
+    setSelectedFiles(newFiles);
+    onImagesSelected(newFiles);
+
+    // Crear previsualizaciones para todas las imágenes
+    filesToProcess.forEach((file) => {
       const reader = new FileReader();
       reader.onload = (e: ProgressEvent<FileReader>) => {
         const result = e.target?.result;
         if (result && typeof result === 'string') {
-          setTempImageUrl(result);
-          setCropModalOpen(true);
+          setPreviewImages((prev) => [...prev, result]);
         }
       };
       reader.readAsDataURL(file);
-    } else {
-      // Si showCrop es false o se seleccionaron múltiples imágenes, procesar directamente
-      const newFiles = [...selectedFiles, ...filesToProcess];
-      setSelectedFiles(newFiles);
-      onImagesSelected(newFiles);
-
-      // Crear previsualizaciones para todas las imágenes
-      filesToProcess.forEach((file) => {
-        const reader = new FileReader();
-        reader.onload = (e: ProgressEvent<FileReader>) => {
-          const result = e.target?.result;
-          if (result && typeof result === 'string') {
-            setPreviewImages((prev) => [...prev, result]);
-          }
-        };
-        reader.readAsDataURL(file);
-      });
-    }
+    });
 
     if (e.target) {
       e.target.value = '';
@@ -90,7 +74,7 @@ export function ImageUpload({
     reader.readAsDataURL(file);
   };
 
-  const handleCropComplete = (croppedFile: File) => {
+  const handleCropComplete = async (croppedFile: File) => {
     if (!tempFile) return;
 
     let newFiles: File[];
@@ -230,7 +214,6 @@ export function ImageUpload({
         isOpen={cropModalOpen}
         onClose={() => {
           setCropModalOpen(false);
-          setCurrentImageIndex(-1);
           setTempImageUrl('');
           setTempFile(null);
           setEditingIndex(-1);

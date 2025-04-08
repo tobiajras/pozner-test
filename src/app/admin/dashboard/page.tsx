@@ -360,21 +360,21 @@ export default function DashboardPage() {
         });
       }
 
-      console.log('Enviando solicitud de creación de auto...');
       const response = await fetch(`${API_BASE_URL}/api/cars`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
+          'Content-Type': 'multipart/form-data',
         },
         body: formData,
       });
 
       if (!response.ok) {
         const errorData = await response.json();
+        console.error('Error en la respuesta del servidor:', errorData);
         throw new Error(errorData.message || 'Error al crear el auto');
       }
 
-      console.log('Auto creado exitosamente');
       // Cerrar el modal y actualizar la lista
       setIsModalOpen(false);
       setSelectedAuto(undefined);
@@ -412,15 +412,6 @@ export default function DashboardPage() {
       formData.append('doors', data.puertas.toString());
       formData.append('color', 'sin color');
 
-      // Agregar las imágenes si existen
-      if (data.imagenes && data.imagenes.length > 0) {
-        // Aquí deberíamos convertir las URLs a archivos si es necesario
-        // Por ahora, asumimos que las imágenes ya están en el formato correcto
-        data.imagenes.forEach((imagen, index) => {
-          formData.append(`images`, imagen);
-        });
-      }
-
       const response = await fetch(
         `${API_BASE_URL}/api/cars/${selectedAuto.id}`,
         {
@@ -434,6 +425,7 @@ export default function DashboardPage() {
 
       if (!response.ok) {
         const errorData = await response.json();
+        console.error('Error en la respuesta del servidor:', errorData);
         throw new Error(errorData.message || 'Error al actualizar el auto');
       }
 
