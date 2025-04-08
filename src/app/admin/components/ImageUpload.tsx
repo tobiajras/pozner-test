@@ -20,6 +20,10 @@ export function ImageUpload({
 }: ImageUploadProps) {
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [cropModalOpen, setCropModalOpen] = useState(false);
+  const [tempImageUrl, setTempImageUrl] = useState<string>('');
+  const [tempFile, setTempFile] = useState<File | null>(null);
+  const [editingIndex, setEditingIndex] = useState<number>(-1);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -51,6 +55,51 @@ export function ImageUpload({
     if (e.target) {
       e.target.value = '';
     }
+  };
+
+  const handleEditImage = (index: number) => {
+    const file = selectedFiles[index];
+    setEditingIndex(index);
+    setTempFile(file);
+    const reader = new FileReader();
+    reader.onload = (e: ProgressEvent<FileReader>) => {
+      const result = e.target?.result;
+      if (result && typeof result === 'string') {
+        setTempImageUrl(result);
+        setCropModalOpen(true);
+      }
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleCropComplete = async (croppedFile: File) => {
+    if (!tempFile || editingIndex < 0) return;
+
+    // Actualizar la imagen en el índice específico
+    const newFiles = [...selectedFiles];
+    newFiles[editingIndex] = croppedFile;
+    setSelectedFiles(newFiles);
+    onImagesSelected(newFiles);
+
+    // Actualizar la previsualización
+    const reader = new FileReader();
+    reader.onload = (e: ProgressEvent<FileReader>) => {
+      const result = e.target?.result;
+      if (result && typeof result === 'string') {
+        setPreviewImages((prev) => {
+          const newPreviews = [...prev];
+          newPreviews[editingIndex] = result;
+          return newPreviews;
+        });
+      }
+    };
+    reader.readAsDataURL(croppedFile);
+
+    // Limpiar el estado temporal
+    setTempFile(null);
+    setTempImageUrl('');
+    setEditingIndex(-1);
+    setCropModalOpen(false);
   };
 
   const removeImage = (index: number) => {
@@ -99,8 +148,16 @@ export function ImageUpload({
                 />
               </div>
 
-              {/* Botón de eliminar */}
-              <div className='absolute top-2 right-2'>
+              {/* Botones de acciones */}
+              <div className='absolute top-2 right-2 flex gap-1'>
+                <button
+                  className='bg-white rounded-full p-1.5 shadow-sm text-blue-500 hover:text-blue-700 z-10'
+                  onClick={() => handleEditImage(index)}
+                  type='button'
+                  title='Editar imagen'
+                >
+                  <Edit size={16} />
+                </button>
                 <button
                   className='bg-white rounded-full p-1.5 shadow-sm text-red-500 hover:text-red-700 z-10'
                   onClick={() => removeImage(index)}
@@ -137,6 +194,19 @@ export function ImageUpload({
           multiple
         />
       </div>
+
+      {/* Modal de recorte de imágenes */}
+      <ImageCropModal
+        isOpen={cropModalOpen}
+        onClose={() => {
+          setCropModalOpen(false);
+          setTempImageUrl('');
+          setTempFile(null);
+          setEditingIndex(-1);
+        }}
+        imageUrl={tempImageUrl}
+        onCropComplete={handleCropComplete}
+      />
     </div>
   );
 }
