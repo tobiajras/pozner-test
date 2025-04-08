@@ -197,7 +197,7 @@ export default function DashboardPage() {
     }
   };
 
-  const handleToggleEstado = async (id: string) => {
+  const handleToggleEstado = async (id: string, active: boolean) => {
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(
@@ -209,6 +209,7 @@ export default function DashboardPage() {
             'Content-Type': 'application/json',
             Accept: 'application/json',
           },
+          body: JSON.stringify({ active: !active }),
         }
       );
 

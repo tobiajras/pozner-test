@@ -26,48 +26,35 @@ export function ImageUpload({
   const [tempImageUrl, setTempImageUrl] = useState<string>('');
   const [tempFile, setTempFile] = useState<File | null>(null);
   const [editingIndex, setEditingIndex] = useState<number>(-1);
+  const [filesToProcess, setFilesToProcess] = useState<File[]>([]);
+  const [currentFileIndex, setCurrentFileIndex] = useState<number>(-1);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files || files.length === 0) return;
 
-    const filesToProcess = Array.from(files).slice(
+    const newFiles = Array.from(files).slice(
       0,
       maxFiles - selectedFiles.length
     );
-    if (filesToProcess.length === 0) return;
+    if (newFiles.length === 0) return;
 
-    if (showCrop) {
-      // Si showCrop está habilitado, mostrar el modal de recorte para la primera imagen
-      const file = filesToProcess[0];
-      setTempFile(file);
+    // Procesar todas las imágenes directamente
+    const updatedFiles = [...selectedFiles, ...newFiles];
+    setSelectedFiles(updatedFiles);
+    onImagesSelected(updatedFiles);
+
+    // Crear previsualizaciones para todas las imágenes
+    newFiles.forEach((file) => {
       const reader = new FileReader();
       reader.onload = (e: ProgressEvent<FileReader>) => {
         const result = e.target?.result;
         if (result && typeof result === 'string') {
-          setTempImageUrl(result);
-          setCropModalOpen(true);
+          setPreviewImages((prev) => [...prev, result]);
         }
       };
       reader.readAsDataURL(file);
-    } else {
-      // Si showCrop está deshabilitado, procesar todas las imágenes directamente
-      const newFiles = [...selectedFiles, ...filesToProcess];
-      setSelectedFiles(newFiles);
-      onImagesSelected(newFiles);
-
-      // Crear previsualizaciones para todas las imágenes
-      filesToProcess.forEach((file) => {
-        const reader = new FileReader();
-        reader.onload = (e: ProgressEvent<FileReader>) => {
-          const result = e.target?.result;
-          if (result && typeof result === 'string') {
-            setPreviewImages((prev) => [...prev, result]);
-          }
-        };
-        reader.readAsDataURL(file);
-      });
-    }
+    });
 
     if (e.target) {
       e.target.value = '';
@@ -90,41 +77,29 @@ export function ImageUpload({
   };
 
   const handleCropComplete = async (croppedFile: File) => {
-    if (!tempFile) return;
+    if (!tempFile || editingIndex < 0) return;
 
-    let newFiles: File[];
-    let newPreviews: string[];
-
-    if (editingIndex >= 0) {
-      // Si estamos editando una imagen existente
-      newFiles = selectedFiles.map((file, i) =>
-        i === editingIndex ? croppedFile : file
-      );
-      newPreviews = [...previewImages];
-      const reader = new FileReader();
-      reader.onload = (e: ProgressEvent<FileReader>) => {
-        const result = e.target?.result;
-        if (result && typeof result === 'string') {
-          newPreviews[editingIndex] = result;
-          setPreviewImages(newPreviews);
-        }
-      };
-      reader.readAsDataURL(croppedFile);
-    } else {
-      // Si es una nueva imagen
-      newFiles = [...selectedFiles, croppedFile];
-      const reader = new FileReader();
-      reader.onload = (e: ProgressEvent<FileReader>) => {
-        const result = e.target?.result;
-        if (result && typeof result === 'string') {
-          setPreviewImages([...previewImages, result]);
-        }
-      };
-      reader.readAsDataURL(croppedFile);
-    }
-
+    // Actualizar la imagen en el índice específico
+    const newFiles = [...selectedFiles];
+    newFiles[editingIndex] = croppedFile;
     setSelectedFiles(newFiles);
     onImagesSelected(newFiles);
+
+    // Actualizar la previsualización
+    const reader = new FileReader();
+    reader.onload = (e: ProgressEvent<FileReader>) => {
+      const result = e.target?.result;
+      if (result && typeof result === 'string') {
+        setPreviewImages((prev) => {
+          const newPreviews = [...prev];
+          newPreviews[editingIndex] = result;
+          return newPreviews;
+        });
+      }
+    };
+    reader.readAsDataURL(croppedFile);
+
+    // Limpiar el estado temporal
     setTempFile(null);
     setTempImageUrl('');
     setEditingIndex(-1);
