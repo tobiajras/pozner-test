@@ -405,7 +405,6 @@ const AutoModal = ({
                       maxFiles={20}
                       accept='image/*'
                       defaultImageUrl={initialData?.imagenes[0]}
-                      showCrop={true}
                     />
                   </div>
 
