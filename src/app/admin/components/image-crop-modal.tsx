@@ -13,7 +13,7 @@ interface ImageCropModalProps {
   isOpen: boolean;
   onClose: () => void;
   imageUrl: string;
-  onCropComplete: (croppedImage: Blob) => void;
+  onCropComplete: (croppedImage: File) => void;
 }
 
 // Función para crear un crop centrado con relación de aspecto
@@ -48,24 +48,57 @@ function canvasPreview(
     throw new Error('No 2d context');
   }
 
+  // Obtener las dimensiones reales de la imagen
   const scaleX = image.naturalWidth / image.width;
   const scaleY = image.naturalHeight / image.height;
 
-  // Configurar el tamaño del canvas para el recorte
+  // Calcular las dimensiones del área de recorte en píxeles reales
+  const cropX = crop.x * scaleX;
+  const cropY = crop.y * scaleY;
+  const cropWidth = crop.width * scaleX;
+  const cropHeight = crop.height * scaleY;
+
+  // Configurar el tamaño del canvas de vista previa para que coincida con el área visible
   canvas.width = crop.width;
   canvas.height = crop.height;
 
-  // Dibujar la imagen recortada en el canvas
-  ctx.drawImage(
+  // Asegurarse de que el contexto esté limpio
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Crear un canvas temporal para mantener la calidad
+  const tempCanvas = document.createElement('canvas');
+  tempCanvas.width = cropWidth;
+  tempCanvas.height = cropHeight;
+  const tempCtx = tempCanvas.getContext('2d');
+
+  if (!tempCtx) {
+    throw new Error('No 2d context');
+  }
+
+  // Dibujar la porción recortada en el canvas temporal
+  tempCtx.drawImage(
     image,
-    crop.x * scaleX,
-    crop.y * scaleY,
-    crop.width * scaleX,
-    crop.height * scaleY,
+    cropX,
+    cropY,
+    cropWidth,
+    cropHeight,
     0,
     0,
-    crop.width,
-    crop.height
+    cropWidth,
+    cropHeight
+  );
+
+  // Dibujar desde el canvas temporal al canvas de vista previa
+  ctx.drawImage(
+    tempCanvas,
+    0,
+    0,
+    cropWidth,
+    cropHeight,
+    0,
+    0,
+    canvas.width,
+    canvas.height
   );
 }
 
@@ -77,45 +110,87 @@ export function ImageCropModal({
 }: ImageCropModalProps) {
   const [crop, setCrop] = useState<Crop>();
   const [completedCrop, setCompletedCrop] = useState<PixelCrop>();
-  const [aspect] = useState<number>(1); // Forzar relación 1:1
+  const [aspect] = useState<number>(4 / 3); // Cambiar relación de aspecto a 4:3
   const imgRef = useRef<HTMLImageElement>(null);
   const previewCanvasRef = useRef<HTMLCanvasElement>(null);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  // Limpiar el estado cuando se cierra el modal o cambia la imagen
+  useEffect(() => {
+    if (!isOpen) {
+      setCrop(undefined);
+      setCompletedCrop(undefined);
+      setIsImageLoaded(false);
+      // Limpiar el canvas
+      if (previewCanvasRef.current) {
+        const ctx = previewCanvasRef.current.getContext('2d');
+        if (ctx) {
+          ctx.clearRect(
+            0,
+            0,
+            previewCanvasRef.current.width,
+            previewCanvasRef.current.height
+          );
+        }
+      }
+    }
+  }, [isOpen, imageUrl]);
 
   // Cuando la imagen se carga, establecer un recorte inicial
   const onImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
     const { width, height } = e.currentTarget;
-    setCrop(centerAspectCrop(width, height, aspect || 1));
+    const initialCrop = centerAspectCrop(width, height, aspect || 1);
+    setCrop(initialCrop);
+    setCompletedCrop(undefined); // Limpiar el crop completado anterior
+    setIsImageLoaded(true);
   };
 
-  // Actualizar el canvas de vista previa cuando cambia el recorte
+  // Actualizar el canvas de vista previa cuando cambia el recorte o se carga la imagen
   useEffect(() => {
-    if (
-      completedCrop?.width &&
-      completedCrop?.height &&
-      imgRef.current &&
-      previewCanvasRef.current
-    ) {
-      canvasPreview(imgRef.current, previewCanvasRef.current, completedCrop);
+    if (isImageLoaded && imgRef.current && previewCanvasRef.current) {
+      // Si no hay un crop completado, usar el crop actual
+      const cropToUse = completedCrop || crop;
+      if (cropToUse && cropToUse.width && cropToUse.height) {
+        canvasPreview(
+          imgRef.current,
+          previewCanvasRef.current,
+          cropToUse as PixelCrop
+        );
+      }
     }
-  }, [completedCrop]);
+  }, [completedCrop, crop, isImageLoaded]);
+
+  const handleClose = () => {
+    setCrop(undefined);
+    setCompletedCrop(undefined);
+    setIsImageLoaded(false);
+    onClose();
+  };
 
   // Función para aplicar el recorte y cerrar el modal
   const handleCropApply = () => {
-    if (
-      completedCrop?.width &&
-      completedCrop?.height &&
-      previewCanvasRef.current
-    ) {
-      previewCanvasRef.current.toBlob(
-        (blob) => {
-          if (blob) {
-            onCropComplete(blob);
-            onClose();
-          }
-        },
-        'image/jpeg',
-        0.95
-      );
+    if (imgRef.current && previewCanvasRef.current && (completedCrop || crop)) {
+      const cropToUse = completedCrop || crop;
+      if (cropToUse && cropToUse.width && cropToUse.height) {
+        canvasPreview(
+          imgRef.current,
+          previewCanvasRef.current,
+          cropToUse as PixelCrop
+        );
+        previewCanvasRef.current.toBlob(
+          (blob) => {
+            if (blob) {
+              const file = new File([blob], 'cropped-image.jpg', {
+                type: 'image/jpeg',
+              });
+              onCropComplete(file);
+              handleClose();
+            }
+          },
+          'image/jpeg',
+          0.95
+        );
+      }
     }
   };
 
@@ -127,7 +202,7 @@ export function ImageCropModal({
         <div className='flex justify-between items-center mb-4'>
           <h2 className='text-xl font-semibold'>Recortar imagen</h2>
           <button
-            onClick={onClose}
+            onClick={handleClose}
             className='text-gray-500 hover:text-gray-700'
           >
             <svg
@@ -182,7 +257,7 @@ export function ImageCropModal({
         <div className='mt-6 flex justify-end space-x-2'>
           <button
             type='button'
-            onClick={onClose}
+            onClick={handleClose}
             className='px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50'
           >
             Cancelar

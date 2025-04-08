@@ -1,11 +1,14 @@
 'use client';
 
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { ImageUpload } from './ImageUpload';
-import Image from 'next/image';
+
+// URL base del API
+const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
 
 interface FormData {
+  id?: string;
   marca: string;
   marcaId: string;
   modelo: string;
@@ -18,7 +21,6 @@ interface FormData {
   descripcion: string;
   imagenes: string[];
   categoria: string;
-  estado: 'activo' | 'pausado' | 'vendido';
 }
 
 interface AutoModalProps {
@@ -39,7 +41,7 @@ const AutoModal = ({
       marca: '',
       marcaId: '',
       modelo: '',
-      año: 0,
+      año: new Date().getFullYear(),
       kilometraje: 0,
       transmision: '',
       combustible: '',
@@ -47,27 +49,88 @@ const AutoModal = ({
       precio: 0,
       descripcion: '',
       imagenes: [],
-      categoria: '',
-      estado: 'activo',
+      categoria: 'Auto',
     }
   );
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [submitting, setSubmitting] = useState(false);
+
+  // Resetear el formulario cuando se abre con nuevos datos
+  useEffect(() => {
+    if (isOpen) {
+      setFormData(
+        initialData || {
+          marca: '',
+          marcaId: '',
+          modelo: '',
+          año: new Date().getFullYear(),
+          kilometraje: 0,
+          transmision: '',
+          combustible: '',
+          puertas: 0,
+          precio: 0,
+          descripcion: '',
+          imagenes: [],
+          categoria: 'Auto',
+        }
+      );
+      setSelectedFiles([]);
+    }
+  }, [isOpen, initialData]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(formData);
+
+    // Evitar múltiples envíos
+    if (submitting) return;
+
+    setSubmitting(true);
+
+    try {
+      // Validar que todos los campos requeridos estén completos
+      if (
+        !formData.marca ||
+        !formData.modelo ||
+        !formData.año ||
+        !formData.precio ||
+        !formData.descripcion ||
+        !formData.categoria ||
+        !formData.transmision ||
+        !formData.combustible ||
+        !formData.puertas
+      ) {
+        alert('Por favor, complete todos los campos requeridos');
+        setSubmitting(false);
+        return;
+      }
+
+      // Preparar los datos para enviar al componente padre
+      const dataToSubmit = {
+        ...formData,
+        images: selectedFiles, // Enviar los archivos de imagen directamente
+      };
+
+      // Llamar al callback de éxito con los datos del formulario
+      await onSubmit(dataToSubmit);
+    } catch (error) {
+      console.error('Error al procesar el formulario:', error);
+      alert(
+        'Error al procesar el formulario: ' +
+          (error instanceof Error ? error.message : 'Error desconocido')
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleImagesSelected = (files: File[]) => {
-    // Convertir los archivos a URLs
+    // Guardar los archivos de imagen para enviar al servidor
+    setSelectedFiles(files);
+
+    // Generar URLs para vista previa
     const imageUrls = files.map((file) => URL.createObjectURL(file));
     setFormData((prev) => ({ ...prev, imagenes: imageUrls }));
-  };
-
-  const handleRemoveImage = (index: number) => {
-    setFormData((prev) => ({
-      ...prev,
-      imagenes: prev.imagenes.filter((_, i) => i !== index),
-    }));
   };
 
   const inputStyles =
@@ -76,6 +139,8 @@ const AutoModal = ({
     'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
   const textareaStyles =
     'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
+
+  console.log('formData', formData);
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -115,6 +180,24 @@ const AutoModal = ({
                   <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                     <div>
                       <label className='block text-sm font-medium text-gray-700'>
+                        Modelo
+                      </label>
+                      <input
+                        type='text'
+                        value={formData.modelo}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            modelo: e.target.value,
+                          }))
+                        }
+                        className={inputStyles}
+                        placeholder='Ej: Focus, Cruze, Corolla'
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className='block text-sm font-medium text-gray-700'>
                         Marca
                       </label>
                       <input
@@ -131,25 +214,6 @@ const AutoModal = ({
                         }
                         className={inputStyles}
                         placeholder='Ej: Ford, Chevrolet, Toyota'
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className='block text-sm font-medium text-gray-700'>
-                        Modelo
-                      </label>
-                      <input
-                        type='text'
-                        value={formData.modelo}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            modelo: e.target.value,
-                          }))
-                        }
-                        className={inputStyles}
-                        placeholder='Ej: Focus, Cruze, Corolla'
                         required
                       />
                     </div>
@@ -336,29 +400,8 @@ const AutoModal = ({
                       onImagesSelected={handleImagesSelected}
                       maxFiles={20}
                       accept='image/*'
-                      defaultImageUrl={formData.imagenes[0]}
+                      defaultImageUrl={initialData?.imagenes[0]}
                     />
-                    {formData.imagenes.length > 0 && (
-                      <div className='mt-4 grid grid-cols-4 gap-4'>
-                        {formData.imagenes.map((imagen, index) => (
-                          <div key={index} className='relative aspect-square'>
-                            <Image
-                              src={imagen}
-                              alt={`Imagen ${index + 1}`}
-                              fill
-                              className='object-cover rounded-lg'
-                            />
-                            <button
-                              type='button'
-                              onClick={() => handleRemoveImage(index)}
-                              className='absolute top-2 right-2 bg-red-500 text-white p-1 rounded-full hover:bg-red-600'
-                            >
-                              ×
-                            </button>
-                          </div>
-                        ))}
-                      </div>
-                    )}
                   </div>
 
                   <div className='mt-6 flex justify-end space-x-3'>
@@ -366,14 +409,44 @@ const AutoModal = ({
                       type='button'
                       onClick={onClose}
                       className='px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color-secondary'
+                      disabled={submitting}
                     >
                       Cancelar
                     </button>
                     <button
                       type='submit'
-                      className='px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-color-primary hover:bg-color-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color-secondary'
+                      className='px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-color-primary hover:bg-color-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color-secondary flex items-center'
+                      disabled={submitting}
                     >
-                      {initialData ? 'Actualizar' : 'Agregar'}
+                      {submitting ? (
+                        <>
+                          <svg
+                            className='animate-spin -ml-1 mr-3 h-5 w-5 text-white'
+                            xmlns='http://www.w3.org/2000/svg'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                          >
+                            <circle
+                              className='opacity-25'
+                              cx='12'
+                              cy='12'
+                              r='10'
+                              stroke='currentColor'
+                              strokeWidth='4'
+                            ></circle>
+                            <path
+                              className='opacity-75'
+                              fill='currentColor'
+                              d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+                            ></path>
+                          </svg>
+                          {initialData ? 'Actualizando...' : 'Creando...'}
+                        </>
+                      ) : initialData ? (
+                        'Guardar Cambios'
+                      ) : (
+                        'Crear Auto'
+                      )}
                     </button>
                   </div>
                 </form>

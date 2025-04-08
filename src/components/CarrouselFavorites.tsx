@@ -47,23 +47,23 @@ interface Auto {
   Category: Categoria;
 }
 
-interface CarrouselFeaturedProps {
+interface CarrouselFavoritesProps {
   title: string;
 }
 
-const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
+const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
   const [emblaRef] = useEmblaCarousel({ dragFree: true });
   const [clicked, setClicked] = useState(false);
   const [favoritos, setFavoritos] = useState<Auto[]>([]);
-  const [cargando, setCargando] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const obtenerDestacados = async () => {
-      setCargando(true);
+    const fetchFavoritos = async () => {
+      setLoading(true);
       try {
         const response = await fetch(
-          'https://api.fratelliautomotores.com.ar/api/cars/featured'
+          'https://api.fratelliautomotores.com.ar/api/cars/favorites'
         );
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
@@ -71,19 +71,17 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
         const data = await response.json();
         setFavoritos(data);
       } catch (err) {
-        console.error('Error al obtener destacados:', err);
-        setError('No se pudieron cargar los vehículos destacados');
+        console.error('Error al obtener favoritos:', err);
+        setError('No se pudieron cargar los vehículos favoritos');
       } finally {
-        setCargando(false);
+        setLoading(false);
       }
     };
 
-    obtenerDestacados();
+    fetchFavoritos();
   }, []);
 
-  console.log(favoritos);
-
-  if (cargando) {
+  if (loading) {
     return (
       <section className='flex justify-center w-full'>
         <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden pb-6 md:pb-10'>
@@ -119,7 +117,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
             {title}
           </h3>
           <div className='text-center py-8'>
-            No hay vehículos destacados disponibles
+            No hay vehículos favoritos disponibles
           </div>
         </div>
       </section>
@@ -168,9 +166,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                     width={451}
                     height={600}
                     className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
-                    src={
-                      auto.Images[0]?.thumbnailUrl || '/assets/placeholder.webp'
-                    }
+                    src={auto.Images[0]?.imageUrl || '/assets/placeholder.webp'}
                     alt={`${auto.brand} ${auto.model}`}
                   />
                   {/* Overlay con degradado */}
@@ -238,4 +234,4 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
   );
 };
 
-export default CarrouselFeatured;
+export default CarrouselFavorites;

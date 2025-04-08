@@ -1,4 +1,5 @@
 import CarrouselFeatured from '@/components/CarrouselFeatured';
+import CarrouselFavorites from '@/components/CarrouselFavorites';
 import HeroHome from '@/components/HeroHome';
 import ServiciosHome from '@/components/ServiciosHome';
 import PreguntasHome from '@/components/PreguntasHome';
@@ -12,8 +13,8 @@ export default function Home() {
         <main className='flex flex-col w-full'>
           <HeroHome />
           <ServiciosHome />
-          <CarrouselFeatured title='Ingresos' startIndex={0} lastIndex={8} />
-          <CarrouselFeatured title='Destacados' startIndex={8} lastIndex={16} />
+          <CarrouselFeatured title='Ingresos' />
+          <CarrouselFavorites title='Destacados' />
           <PreguntasHome />
           <LogosCarousel />
         </main>
