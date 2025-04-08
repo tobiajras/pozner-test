@@ -180,15 +180,16 @@ export function ImageCropModal({
         previewCanvasRef.current.toBlob(
           (blob) => {
             if (blob) {
-              const file = new File([blob], 'cropped-image.jpg', {
-                type: 'image/jpeg',
+              // Mantener el formato original de la imagen
+              const file = new File([blob], 'cropped-image', {
+                type: blob.type,
               });
               onCropComplete(file);
               handleClose();
             }
           },
-          'image/jpeg',
-          0.95
+          undefined, // No forzar formato
+          undefined  // No forzar calidad
         );
       }
     }
