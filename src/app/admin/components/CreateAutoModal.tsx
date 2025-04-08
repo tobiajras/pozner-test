@@ -1,15 +1,11 @@
 'use client';
 
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { ImageUpload } from './ImageUpload';
 
-// URL base del API
-
-interface FormData {
-  id?: string;
+interface FormFields {
   marca: string;
-  marcaId: string;
   modelo: string;
   año: number;
   kilometraje: number;
@@ -18,76 +14,43 @@ interface FormData {
   puertas: number;
   precio: number;
   descripcion: string;
-  imagenes: string[];
   categoria: string;
 }
 
-interface AutoModalProps {
+interface CreateAutoModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (data: Omit<FormData, 'id'>) => void;
-  initialData?: FormData;
+  onSubmit: (formData: globalThis.FormData) => Promise<void>;
 }
 
-const AutoModal = ({
+const CreateAutoModal = ({
   isOpen,
   onClose,
   onSubmit,
-  initialData,
-}: AutoModalProps) => {
-  const [formData, setFormData] = useState<FormData>(
-    initialData || {
-      marca: '',
-      marcaId: '',
-      modelo: '',
-      año: new Date().getFullYear(),
-      kilometraje: 0,
-      transmision: '',
-      combustible: '',
-      puertas: 0,
-      precio: 0,
-      descripcion: '',
-      imagenes: [],
-      categoria: 'Auto',
-    }
-  );
+}: CreateAutoModalProps) => {
+  const [formData, setFormData] = useState<FormFields>({
+    marca: '',
+    modelo: '',
+    año: new Date().getFullYear(),
+    kilometraje: 0,
+    transmision: '',
+    combustible: '',
+    puertas: 0,
+    precio: 0,
+    descripcion: '',
+    categoria: 'Auto',
+  });
 
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [submitting, setSubmitting] = useState(false);
 
-  // Resetear el formulario cuando se abre con nuevos datos
-  useEffect(() => {
-    if (isOpen) {
-      setFormData(
-        initialData || {
-          marca: '',
-          marcaId: '',
-          modelo: '',
-          año: new Date().getFullYear(),
-          kilometraje: 0,
-          transmision: '',
-          combustible: '',
-          puertas: 0,
-          precio: 0,
-          descripcion: '',
-          imagenes: [],
-          categoria: 'Auto',
-        }
-      );
-      setSelectedFiles([]);
-    }
-  }, [isOpen, initialData]);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Evitar múltiples envíos
     if (submitting) return;
 
     setSubmitting(true);
-
     try {
-      // Validar que todos los campos requeridos estén completos
+      // Validar campos requeridos
       if (
         !formData.marca ||
         !formData.modelo ||
@@ -100,41 +63,56 @@ const AutoModal = ({
         !formData.puertas
       ) {
         alert('Por favor, complete todos los campos requeridos');
-        setSubmitting(false);
         return;
       }
 
-      // Preparar los datos para enviar al componente padre
-      const dataToSubmit = {
-        ...formData,
-        images: selectedFiles, // Enviar los archivos de imagen directamente
-      };
+      // Crear FormData para enviar al backend
+      const submitFormData = new FormData();
+      submitFormData.append('brand', formData.marca);
+      submitFormData.append('model', formData.modelo);
+      submitFormData.append('year', formData.año.toString());
+      submitFormData.append('price', formData.precio.toString());
+      submitFormData.append('description', formData.descripcion);
+      submitFormData.append('category', formData.categoria);
+      submitFormData.append('mileage', formData.kilometraje.toString());
+      submitFormData.append('transmission', formData.transmision);
+      submitFormData.append('fuel', formData.combustible);
+      submitFormData.append('doors', formData.puertas.toString());
+      submitFormData.append('color', 'sin color');
 
-      // Llamar al callback de éxito con los datos del formulario
-      await onSubmit(dataToSubmit);
+      // Agregar imágenes si existen
+      if (selectedFiles.length > 0) {
+        selectedFiles.forEach((file) => {
+          submitFormData.append('images', file);
+        });
+      }
 
-      // Limpiar las URLs de objeto creadas
-      formData.imagenes.forEach((url) => {
-        if (url.startsWith('blob:')) {
-          URL.revokeObjectURL(url);
-        }
+      // Enviar al componente padre
+      await onSubmit(submitFormData);
+
+      // Limpiar formulario
+      setFormData({
+        marca: '',
+        modelo: '',
+        año: new Date().getFullYear(),
+        kilometraje: 0,
+        transmision: '',
+        combustible: '',
+        puertas: 0,
+        precio: 0,
+        descripcion: '',
+        categoria: 'Auto',
       });
+      setSelectedFiles([]);
     } catch (error) {
       console.error('Error al procesar el formulario:', error);
-      alert(
-        'Error al procesar el formulario: ' +
-          (error instanceof Error ? error.message : 'Error desconocido')
-      );
     } finally {
       setSubmitting(false);
     }
   };
 
   const handleImagesSelected = (files: File[]) => {
-    // Guardar los archivos de imagen para enviar al servidor
     setSelectedFiles(files);
-    // No necesitamos crear URLs de objeto, solo mantener los archivos
-    setFormData((prev) => ({ ...prev, imagenes: [] }));
   };
 
   const inputStyles =
@@ -143,8 +121,6 @@ const AutoModal = ({
     'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
   const textareaStyles =
     'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
-
-  console.log('formData', formData);
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -177,7 +153,7 @@ const AutoModal = ({
                   as='h3'
                   className='text-lg font-medium leading-6 text-gray-900 mb-4'
                 >
-                  {initialData ? 'Editar Auto' : 'Agregar Nuevo Auto'}
+                  Agregar Nuevo Auto
                 </Dialog.Title>
 
                 <form onSubmit={handleSubmit} className='space-y-4'>
@@ -211,9 +187,6 @@ const AutoModal = ({
                           setFormData((prev) => ({
                             ...prev,
                             marca: e.target.value,
-                            marcaId: e.target.value
-                              .toLowerCase()
-                              .replace(/\s+/g, '-'),
                           }))
                         }
                         className={inputStyles}
@@ -400,11 +373,13 @@ const AutoModal = ({
                   </div>
 
                   <div>
+                    <label className='block text-sm font-medium text-gray-700 mb-2'>
+                      Imágenes
+                    </label>
                     <ImageUpload
                       onImagesSelected={handleImagesSelected}
                       maxFiles={20}
                       accept='image/*'
-                      defaultImageUrl={initialData?.imagenes[0]}
                       showCrop={true}
                     />
                   </div>
@@ -445,10 +420,8 @@ const AutoModal = ({
                               d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
                             ></path>
                           </svg>
-                          {initialData ? 'Actualizando...' : 'Creando...'}
+                          Creando...
                         </>
-                      ) : initialData ? (
-                        'Guardar Cambios'
                       ) : (
                         'Crear Auto'
                       )}
@@ -464,4 +437,4 @@ const AutoModal = ({
   );
 };
 
-export default AutoModal;
+export default CreateAutoModal;

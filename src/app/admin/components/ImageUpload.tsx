@@ -10,7 +10,6 @@ interface ImageUploadProps {
   maxFiles?: number;
   accept?: string;
   defaultImageUrl?: string;
-  showCrop?: boolean;
 }
 
 export function ImageUpload({
@@ -18,7 +17,6 @@ export function ImageUpload({
   maxFiles = 10,
   accept = 'image/*',
   defaultImageUrl,
-  showCrop = false,
 }: ImageUploadProps) {
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);

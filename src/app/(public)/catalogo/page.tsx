@@ -65,7 +65,6 @@ const CatalogoPage = () => {
   const [cars, setCars] = useState<ApiCar[]>([]);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [marcas, setMarcas] = useState<string[]>([]);
   const [categorias, setCategorias] = useState<string[]>([]);
 
@@ -99,8 +98,7 @@ const CatalogoPage = () => {
       
       setMarcas(uniqueBrands);
       setCategorias(uniqueCategories);
-    } catch (error) {
-      setError(error instanceof Error ? error.message : 'Error al cargar los vehículos');
+    } catch () {
     } finally {
       setLoading(false);
     }
