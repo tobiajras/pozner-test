@@ -69,11 +69,14 @@ const CatalogoPage = () => {
   const [categorias, setCategorias] = useState<string[]>([]);
 
   // Función para obtener los autos con filtros
-  const fetchCars = async (page: number, filters?: { search?: string; marca?: string; categoria?: string }) => {
+  const fetchCars = async (
+    page: number,
+    filters?: { search?: string; marca?: string; categoria?: string }
+  ) => {
     setLoading(true);
     try {
       let url = `${API_BASE_URL}/cars?page=${page}&limit=${ITEMS_PER_PAGE}`;
-      
+
       if (filters?.search) {
         url += `&search=${encodeURIComponent(filters.search)}`;
       }
@@ -93,12 +96,17 @@ const CatalogoPage = () => {
       setTotalPages(data.totalPages);
 
       // Extraer marcas y categorías únicas
-      const uniqueBrands = Array.from(new Set(data.cars.map(car => car.brand))).sort();
-      const uniqueCategories = Array.from(new Set(data.cars.map(car => car.Category.name))).sort();
-      
+      const uniqueBrands = Array.from(
+        new Set(data.cars.map((car) => car.brand))
+      ).sort();
+      const uniqueCategories = Array.from(
+        new Set(data.cars.map((car) => car.Category.name))
+      ).sort();
+
       setMarcas(uniqueBrands);
       setCategorias(uniqueCategories);
-    } catch () {
+    } catch (error) {
+      console.error('Error al cargar los vehículos:', error);
     } finally {
       setLoading(false);
     }
@@ -109,7 +117,7 @@ const CatalogoPage = () => {
     fetchCars(currentPage, {
       search: searchFilter,
       marca: marcaFilter,
-      categoria: categoriaFilter
+      categoria: categoriaFilter,
     });
   }, [currentPage, searchFilter, marcaFilter, categoriaFilter]);
 
@@ -151,18 +159,18 @@ const CatalogoPage = () => {
   // Función para actualizar filtros
   const updateFilters = (key: string, value: string) => {
     const params = new URLSearchParams(window.location.search);
-    
+
     if (value) {
       params.set(key, value);
     } else {
       params.delete(key);
     }
-    
+
     // Resetear a la página 1 cuando se cambian los filtros (excepto para la paginación)
     if (key !== 'page') {
       params.delete('page');
     }
-    
+
     router.push(`/catalogo?${params.toString()}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -302,7 +310,10 @@ const CatalogoPage = () => {
                         <div className='relative overflow-hidden h-44 sm:h-48 md:h-52 xl:h-56'>
                           <Image
                             className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
-                            src={car.Images[0]?.thumbnailUrl || '/assets/catalogo/placeholder.webp'}
+                            src={
+                              car.Images[0]?.thumbnailUrl ||
+                              '/assets/catalogo/placeholder.webp'
+                            }
                             alt={`${car.brand} ${car.model}`}
                             width={451}
                             height={600}
@@ -366,7 +377,9 @@ const CatalogoPage = () => {
               {totalPages > 1 && (
                 <div className='flex justify-center items-center gap-4 mt-8 mb-8'>
                   <button
-                    onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+                    onClick={() =>
+                      handlePageChange(Math.max(1, currentPage - 1))
+                    }
                     disabled={currentPage === 1}
                     className={`px-4 py-2 rounded ${
                       currentPage === 1
@@ -386,7 +399,9 @@ const CatalogoPage = () => {
                     Página {currentPage} de {totalPages}
                   </span>
                   <button
-                    onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+                    onClick={() =>
+                      handlePageChange(Math.min(totalPages, currentPage + 1))
+                    }
                     disabled={currentPage === totalPages}
                     className={`px-4 py-2 rounded ${
                       currentPage === totalPages
