@@ -11,6 +11,7 @@ import { company } from '@/app/constants/constants';
 import ImageGalleryModal from '@/components/ImageGalleryModal';
 import useEmblaCarousel from 'embla-carousel-react';
 import DropDownIcon from '@/components/icons/DropDownIcon';
+import CarrouselRelated from '@/components/CarrouselRelated';
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar/api';
 
 interface ApiCar {
@@ -351,6 +352,13 @@ export default function AutoDetailPage() {
           onClose={() => setShowModal(false)}
         />
       )}
+
+      {/* Carrusel de vehículos relacionados */}
+      <CarrouselRelated
+        title='Recomendados'
+        currentCarId={car.id}
+        categoryId={car.categoryId}
+      />
     </section>
   );
 }
