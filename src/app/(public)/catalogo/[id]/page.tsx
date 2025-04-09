@@ -4,14 +4,13 @@ import { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon';
-import ArrowRightIcon from '@/components/icons/ArrowRightIcon';
+import ArrowIcon from '@/components/icons/ArrowIcon';
 import CheckIcon from '@/components/icons/CheckIcon';
 import WhatsappIcon from '@/components/icons/WhatsappIcon';
 import { company } from '@/app/constants/constants';
 import ImageGalleryModal from '@/components/ImageGalleryModal';
 import useEmblaCarousel from 'embla-carousel-react';
-
+import DropDownIcon from '@/components/icons/DropDownIcon';
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar/api';
 
 interface ApiCar {
@@ -146,7 +145,7 @@ export default function AutoDetailPage() {
   console.log(car);
 
   return (
-    <section className='flex flex-col items-center mx-auto mt-10 md:mt-16'>
+    <section className='flex flex-col items-center mx-auto mt-10 md:mt-16 mb-16 md:mb-20'>
       {/* Botón volver */}
       <div className='w-full flex justify-center'>
         <div className='w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mb-6 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
@@ -158,14 +157,14 @@ export default function AutoDetailPage() {
                 : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
             } inline-flex items-center gap-2 px-4 py-2 rounded transition-colors`}
           >
-            <ArrowLeftIcon className='w-4 h-4' />
+            <ArrowIcon className='w-4 h-4 rotate-180' />
             <span>Volver al catálogo</span>
           </Link>
         </div>
       </div>
       <div className='flex flex-col lg:flex-row gap-8 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         {/* Galería de imágenes */}
-        <div className='space-y-4 w-full lg:w-1/2'>
+        <div className='space-y-4 w-full lg:w-3/5'>
           <div className='overflow-hidden relative group' ref={mainViewportRef}>
             <div className='flex'>
               {car.Images.map((image, index) => (
@@ -194,7 +193,7 @@ export default function AutoDetailPage() {
               disabled={selectedIndex === 0}
               aria-label='Anterior'
             >
-              <ArrowLeftIcon className='w-4 h-4' />
+              <ArrowIcon className='w-4 h-4 rotate-180' />
             </button>
             <button
               onClick={scrollNext}
@@ -206,7 +205,7 @@ export default function AutoDetailPage() {
               disabled={selectedIndex === car.Images.length - 1}
               aria-label='Siguiente'
             >
-              <ArrowRightIcon className='w-4 h-4' />
+              <ArrowIcon className='w-4 h-4' />
             </button>
 
             {/* Indicador de posición */}
@@ -235,16 +234,43 @@ export default function AutoDetailPage() {
               </button>
             ))}
           </div>
+          {car.description && (
+            <div className='flex'>
+              <div className='mt-6 md:mt-8 pr-8 md:pr-10 lg:pr-20'>
+                <h2 className='text-xl font-medium mb-2 text-color-title'>
+                  Descripción
+                </h2>
+                <p className='text-color-text'>{car.description}</p>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Detalles del auto */}
-        <div className='flex flex-col gap-4 w-full lg:w-1/2'>
-          <h1 className='text-3xl font-bold text-color-primary'>
-            {car.brand} {car.model}
+        <div className='flex flex-col w-full lg:w-2/5'>
+          <div className='flex gap-2 font-medium items-center'>
+            <Link href={`/catalogo`}>
+              <p className='text-color-primary/60 hover:text-color-primary transition-colors'>
+                catálogo
+              </p>
+            </Link>
+            <DropDownIcon className='w-3 h-3 -rotate-90 text-color-primary/60' />
+            <Link
+              href={`/catalogo?categoria=${car.Category.name.toLowerCase()}`}
+            >
+              <p className='text-color-primary/60 hover:text-color-primary transition-colors'>
+                {car.Category.name}
+              </p>
+            </Link>
+          </div>
+          <h1 className='text-3xl font-bold text-color-primary mb-2'>
+            {car.model}
           </h1>
-          <p className='text-2xl font-semibold text-color-primary'>
-            ${parseFloat(car.price).toLocaleString('es-AR')}
-          </p>
+          {car.price && (
+            <p className='text-2xl font-semibold text-color-primary mb-4'>
+              ${parseFloat(car.price).toLocaleString('es-AR')}
+            </p>
+          )}
 
           <div className='flex flex-col gap-3 text-color-text'>
             <div className='flex flex-col gap-1'>
@@ -268,14 +294,9 @@ export default function AutoDetailPage() {
               <p>{car.doors}</p>
             </div>
             <div>
-              <p className='text-color-title font-semibold'>Categoría</p>
-              <p>{car.Category.name}</p>
+              <p className='text-color-title font-semibold'>Marca</p>
+              <p>{car.brand}</p>
             </div>
-          </div>
-
-          <div className='mt-4'>
-            <h2 className='text-xl font-semibold mb-2'>Descripción</h2>
-            <p className='text-gray-600'>{car.description}</p>
           </div>
 
           {/* Botón de WhatsApp */}

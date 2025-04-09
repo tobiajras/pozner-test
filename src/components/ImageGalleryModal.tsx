@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import ArrowLeftIcon from './icons/ArrowLeftIcon';
-import ArrowRightIcon from './icons/ArrowRightIcon';
+import ArrowIcon from './icons/ArrowIcon';
 import CloseIcon from './icons/CloseIcon';
 
 interface ImageGalleryModalProps {
@@ -68,12 +67,10 @@ const ImageGalleryModal = ({
         {/* Imagen actual */}
         <div className='relative w-full aspect-[4/3] flex items-center justify-center'>
           <Image
-            src={`/assets/catalogo/${marcaId?.toLowerCase()}/${productId}/${
-              images[index]
-            }`}
+            src={`${images[index]}`}
             alt={`Imagen ${index + 1}`}
             fill
-            className='object-contain'
+            className='object-cover'
             sizes='(max-width: 1024px) 90vw, 1024px'
             priority
           />
@@ -87,7 +84,7 @@ const ImageGalleryModal = ({
           }}
           className='absolute left-2 top-1/2 -translate-y-1/2 text-white transition-colors bg-black/40 hover:bg-black/80 p-2 rounded-full'
         >
-          <ArrowLeftIcon className='w-6 h-6' />
+          <ArrowIcon className='w-6 h-6 rotate-180' />
         </button>
 
         <button
@@ -97,7 +94,7 @@ const ImageGalleryModal = ({
           }}
           className='absolute right-2 top-1/2 -translate-y-1/2 text-white transition-colors bg-black/40 hover:bg-black/80 p-2 rounded-full'
         >
-          <ArrowRightIcon className='w-6 h-6' />
+          <ArrowIcon className='w-6 h-6' />
         </button>
 
         {/* Contador de imágenes */}

@@ -1,4 +1,4 @@
-const ArrowRightIcon = ({ className }: { className: string }) => {
+const ArrowIcon = ({ className }: { className: string }) => {
   return (
     <svg
       stroke='currentColor'
@@ -14,4 +14,4 @@ const ArrowRightIcon = ({ className }: { className: string }) => {
   );
 };
 
-export default ArrowRightIcon;
+export default ArrowIcon;

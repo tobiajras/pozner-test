@@ -11,7 +11,7 @@ interface FormData {
   marca: string;
   marcaId: string;
   modelo: string;
-  año: number;
+  año: number | undefined;
   kilometraje: number;
   transmision: string;
   combustible: string;
@@ -40,7 +40,7 @@ const AutoModal = ({
       marca: '',
       marcaId: '',
       modelo: '',
-      año: new Date().getFullYear(),
+      año: undefined,
       kilometraje: 0,
       transmision: '',
       combustible: '',
@@ -48,7 +48,7 @@ const AutoModal = ({
       precio: 0,
       descripcion: '',
       imagenes: [],
-      categoria: 'Auto',
+      categoria: '',
     }
   );
 
@@ -63,7 +63,7 @@ const AutoModal = ({
           marca: '',
           marcaId: '',
           modelo: '',
-          año: new Date().getFullYear(),
+          año: undefined,
           kilometraje: 0,
           transmision: '',
           combustible: '',
@@ -71,7 +71,7 @@ const AutoModal = ({
           precio: 0,
           descripcion: '',
           imagenes: [],
-          categoria: 'Auto',
+          categoria: '',
         }
       );
       setSelectedFiles([]);
@@ -252,10 +252,11 @@ const AutoModal = ({
                         value={formData.kilometraje.toLocaleString('es-AR')}
                         onChange={(e) => {
                           const value = e.target.value.replace(/\./g, '');
-                          if (!isNaN(Number(value))) {
+                          const numValue = value === '' ? 0 : Number(value);
+                          if (!isNaN(numValue)) {
                             setFormData((prev) => ({
                               ...prev,
-                              kilometraje: parseInt(value),
+                              kilometraje: Math.max(0, numValue),
                             }));
                           }
                         }}
@@ -366,10 +367,11 @@ const AutoModal = ({
                         value={formData.precio.toLocaleString('es-AR')}
                         onChange={(e) => {
                           const value = e.target.value.replace(/\./g, '');
-                          if (!isNaN(Number(value))) {
+                          const numValue = value === '' ? 0 : Number(value);
+                          if (!isNaN(numValue)) {
                             setFormData((prev) => ({
                               ...prev,
-                              precio: parseInt(value),
+                              precio: Math.max(0, numValue),
                             }));
                           }
                         }}

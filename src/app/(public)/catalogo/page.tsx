@@ -6,8 +6,7 @@ import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Suspense, useEffect, useState } from 'react';
 import { company } from '@/app/constants/constants';
-import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon';
-import ArrowRightIcon from '@/components/icons/ArrowRightIcon';
+import ArrowIcon from '@/components/icons/ArrowIcon';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar/api';
@@ -387,8 +386,8 @@ const CatalogoPage = () => {
                         : 'bg-color-primary text-color-title-light hover:bg-color-primary-light hover:text-color-title'
                     } transition-colors`}
                   >
-                    <ArrowLeftIcon
-                      className={`w-4 h-4 ${
+                    <ArrowIcon
+                      className={`w-4 h-4 rotate-180 ${
                         company.dark
                           ? 'text-color-title-light'
                           : 'text-color-title'
@@ -409,7 +408,7 @@ const CatalogoPage = () => {
                         : 'bg-color-primary text-color-title-light hover:bg-color-primary-light hover:text-color-title'
                     } transition-colors`}
                   >
-                    <ArrowRightIcon
+                    <ArrowIcon
                       className={`w-4 h-4 ${
                         company.dark
                           ? 'text-color-title-light'
