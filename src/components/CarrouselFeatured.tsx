@@ -169,7 +169,8 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                     height={600}
                     className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
                     src={
-                      auto.Images[0]?.thumbnailUrl || '/assets/placeholder.webp'
+                      auto.Images.sort((a, b) => a.order - b.order)[0]
+                        ?.thumbnailUrl || '/assets/placeholder.webp'
                     }
                     alt={`${auto.brand} ${auto.model}`}
                   />

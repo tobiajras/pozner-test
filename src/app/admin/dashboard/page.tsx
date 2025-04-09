@@ -8,6 +8,8 @@ import Image from 'next/image';
 import Cookies from 'js-cookie';
 import { ConfirmModal } from '../components/ConfirmModal';
 import SellConfirmModal from '../components/SellConfirmModal';
+import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
+import { Notification } from '../components/Notification';
 
 // URL base del API
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
@@ -98,13 +100,28 @@ export default function DashboardPage() {
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [totalAutos, setTotalAutos] = useState(0);
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [autoToDelete, setAutoToDelete] = useState<Auto | null>(null);
   const [sellModalOpen, setSellModalOpen] = useState(false);
   const [autoToSell, setAutoToSell] = useState<Auto | null>(null);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [notification, setNotification] = useState<{
+    isOpen: boolean;
+    type: 'success' | 'error';
+    message: string;
+  }>({
+    isOpen: false,
+    type: 'success',
+    message: '',
+  });
 
-  const fetchAutos = async (page = 1) => {
-    setLoading(true);
+  const fetchAutos = async (page = 1, append = false) => {
+    if (page === 1) {
+      setLoading(true);
+    } else {
+      setLoadingMore(true);
+    }
     setError(null);
     try {
       const token = Cookies.get('admin-auth');
@@ -126,7 +143,6 @@ export default function DashboardPage() {
 
       const data: ApiResponse = await response.json();
 
-      // Mapear los datos de la API al formato que espera nuestro componente
       const autosFormateados: Auto[] = data.cars.map((car) => ({
         id: car.id,
         marca: car.brand,
@@ -147,9 +163,12 @@ export default function DashboardPage() {
         favorito: car.favorite,
       }));
 
-      setAutos(autosFormateados);
+      setAutos((prev) =>
+        append ? [...prev, ...autosFormateados] : autosFormateados
+      );
       setCurrentPage(data.currentPage);
       setTotalPages(data.totalPages);
+      setTotalAutos(data.total);
     } catch (error) {
       console.error('Error al cargar los autos:', error);
       setError(
@@ -157,8 +176,21 @@ export default function DashboardPage() {
       );
     } finally {
       setLoading(false);
+      setLoadingMore(false);
     }
   };
+
+  const loadMore = () => {
+    if (currentPage < totalPages && !loadingMore) {
+      fetchAutos(currentPage + 1, true);
+    }
+  };
+
+  const observer = useInfiniteScroll({
+    onLoadMore: loadMore,
+    hasMore: currentPage < totalPages,
+    loading: loadingMore,
+  });
 
   useEffect(() => {
     fetchAutos();
@@ -189,11 +221,32 @@ export default function DashboardPage() {
         throw new Error('Error al eliminar el auto');
       }
 
-      // Actualizar la lista después de eliminar
-      fetchAutos(currentPage);
+      // Actualizar la lista local eliminando el auto y ajustando el total
+      setAutos((prevAutos) =>
+        prevAutos.filter((auto) => auto.id !== autoToDelete.id)
+      );
+      setTotalAutos((prev) => prev - 1);
+
+      // Si la página actual queda vacía y no es la primera página, cargar la página anterior
+      if (autos.length === 1 && currentPage > 1) {
+        const prevPage = currentPage - 1;
+        setCurrentPage(prevPage);
+        fetchAutos(prevPage, false);
+      }
+
+      // Mostrar notificación de éxito
+      setNotification({
+        isOpen: true,
+        type: 'success',
+        message: 'Auto eliminado con éxito',
+      });
     } catch (error) {
       console.error('Error al eliminar el auto:', error);
-      alert('Error al eliminar el auto');
+      setNotification({
+        isOpen: true,
+        type: 'error',
+        message: 'Error al eliminar el auto',
+      });
     }
   };
 
@@ -492,12 +545,14 @@ export default function DashboardPage() {
   return (
     <div className='container mx-auto px-4 py-8'>
       <div className='flex justify-between items-center mb-6'>
-        <h1 className='text-2xl font-semibold text-color-text'>
-          Autos{' '}
-          {loading && (
-            <RefreshCw className='inline ml-2 h-5 w-5 animate-spin' />
-          )}
-        </h1>
+        <div>
+          <h1 className='text-2xl font-semibold text-color-text'>
+            Autos{' '}
+            {loading && (
+              <RefreshCw className='inline ml-2 h-5 w-5 animate-spin' />
+            )}
+          </h1>
+        </div>
         <div className='flex gap-2'>
           <button
             onClick={() => {
@@ -641,30 +696,31 @@ export default function DashboardPage() {
                   </div>
                 </div>
               </div>
-
-              {/* Botón de venta en la parte inferior derecha */}
             </motion.div>
           ))}
+
+          {loadingMore && (
+            <div className='flex justify-center py-4'>
+              <div className='animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-color-primary'></div>
+            </div>
+          )}
+
+          {currentPage < totalPages && !loadingMore && (
+            <div
+              ref={(node) => {
+                if (node && observer.current) {
+                  observer.current.observe(node);
+                }
+              }}
+              className='h-10'
+            />
+          )}
         </div>
       )}
 
-      {totalPages > 1 && (
-        <div className='flex justify-center mt-8 gap-2'>
-          {Array.from({ length: totalPages }).map((_, i) => (
-            <button
-              key={i}
-              onClick={() => fetchAutos(i + 1)}
-              className={`px-3 py-1 rounded ${
-                currentPage === i + 1
-                  ? 'bg-color-primary text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              {i + 1}
-            </button>
-          ))}
-        </div>
-      )}
+      <p className='mx-auto text-center text-gray-500 mt-5'>
+        Total: {totalAutos} autos
+      </p>
 
       <AutoModal
         isOpen={isModalOpen}
@@ -695,6 +751,13 @@ export default function DashboardPage() {
         }}
         onConfirm={handleSellConfirm}
         autoName={`${autoToSell?.marca} ${autoToSell?.modelo}`}
+      />
+
+      <Notification
+        isOpen={notification.isOpen}
+        onClose={() => setNotification((prev) => ({ ...prev, isOpen: false }))}
+        type={notification.type}
+        message={notification.message}
       />
     </div>
   );

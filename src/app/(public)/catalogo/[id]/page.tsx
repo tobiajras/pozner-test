@@ -42,6 +42,7 @@ interface ApiCar {
   Images: {
     thumbnailUrl: string;
     imageUrl: string;
+    order: number;
   }[];
 }
 
@@ -53,6 +54,7 @@ export default function AutoDetailPage() {
   const [mainViewportRef, embla] = useEmblaCarousel();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [orderedImages, setOrderedImages] = useState<ApiCar['Images']>([]);
 
   const scrollTo = useCallback(
     (index: number) => {
@@ -108,7 +110,10 @@ export default function AutoDetailPage() {
           throw new Error('Error al cargar el vehículo');
         }
         const data = await response.json();
-        setCar(data);
+        // Ordenar las imágenes por el campo order
+        const sortedImages = [...data.Images].sort((a, b) => a.order - b.order);
+        setOrderedImages(sortedImages);
+        setCar({ ...data, Images: sortedImages });
       } catch (error) {
         setError(
           error instanceof Error ? error.message : 'Error al cargar el vehículo'
@@ -168,7 +173,7 @@ export default function AutoDetailPage() {
         <div className='space-y-4 w-full lg:w-3/5'>
           <div className='overflow-hidden relative group' ref={mainViewportRef}>
             <div className='flex'>
-              {car.Images.map((image, index) => (
+              {orderedImages.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => setShowModal(true)}
@@ -217,7 +222,7 @@ export default function AutoDetailPage() {
 
           {/* Miniaturas - ocultas en móvil */}
           <div className='hidden md:flex flex-wrap gap-2'>
-            {car.Images.map((image, index) => (
+            {orderedImages.map((image, index) => (
               <button
                 key={index}
                 onClick={() => scrollTo(index)}
@@ -345,7 +350,7 @@ export default function AutoDetailPage() {
       {/* Modal de galería */}
       {showModal && (
         <ImageGalleryModal
-          images={car.Images.map((img) => img.imageUrl)}
+          images={orderedImages.map((img) => img.imageUrl)}
           currentIndex={selectedIndex}
           productId={car.id}
           marcaId={car.brand.toLowerCase()}

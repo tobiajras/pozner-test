@@ -3,6 +3,7 @@
 import { Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { ImageUpload } from './ImageUpload';
+import { Auto } from '@/types/auto';
 
 // URL base del API
 
@@ -25,8 +26,8 @@ interface FormData {
 interface AutoModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (data: Omit<FormData, 'id'>) => void;
-  initialData?: FormData;
+  onSubmit: (data: Omit<FormData, 'id'> & { images?: File[] }) => void;
+  initialData?: Auto;
 }
 
 const AutoModal = ({
