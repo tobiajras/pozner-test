@@ -76,7 +76,7 @@ interface ApiResponse {
   cars: ApiCar[];
 }
 
-interface FormData {
+interface AutoFormData {
   id?: string;
   marca: string;
   marcaId: string;
@@ -376,9 +376,7 @@ export default function DashboardPage() {
     }
   };
 
-  const handleCreateAuto = async (
-    data: Omit<FormData, 'id'> & { images?: File[] }
-  ) => {
+  const handleCreateAuto = async (data: any) => {
     try {
       console.log('Creando auto con datos:', data);
       const token = Cookies.get('admin-auth');
@@ -391,7 +389,24 @@ export default function DashboardPage() {
       formData.append('model', data.modelo);
       formData.append('year', data.año.toString());
       formData.append('price', data.precio.toString());
-      formData.append('description', data.descripcion);
+
+      // Tratamiento especial para la descripción
+      try {
+        // Limitar la longitud y manejar posibles caracteres especiales
+        const descripcion = data.descripcion || '';
+        // Convertir caracteres especiales a entidades HTML si es necesario
+        const descripcionLimpia = descripcion.replace(/\r\n/g, '\n').trim();
+        formData.append('description', descripcionLimpia);
+        console.log(
+          'Descripción procesada correctamente:',
+          descripcionLimpia.length,
+          'caracteres'
+        );
+      } catch (e) {
+        console.error('Error al procesar la descripción:', e);
+        formData.append('description', 'Error al procesar la descripción');
+      }
+
       formData.append('category', data.categoria);
       formData.append('mileage', data.kilometraje.toString());
       formData.append('transmission', data.transmision);
@@ -401,9 +416,21 @@ export default function DashboardPage() {
 
       // Agregar las imágenes si existen
       if (data.images && data.images.length > 0) {
-        data.images.forEach((imagen) => {
-          formData.append('images', imagen);
+        data.images.forEach((image) => {
+          formData.append('images', image);
         });
+      }
+
+      // Agregar imagesToDelete si existe
+      if (data.imagesToDelete && data.imagesToDelete.length > 0) {
+        formData.append('imagesToDelete', JSON.stringify(data.imagesToDelete));
+        console.log('Enviando imagesToDelete:', data.imagesToDelete);
+      }
+
+      // Agregar imageOrder si existe
+      if (data.imageOrder && data.imageOrder.length > 0) {
+        formData.append('imageOrder', JSON.stringify(data.imageOrder));
+        console.log('Enviando imageOrder:', data.imageOrder);
       }
 
       const response = await fetch(`${API_BASE_URL}/api/cars`, {
@@ -433,11 +460,13 @@ export default function DashboardPage() {
     }
   };
 
-  const handleEditAuto = async (data: Omit<FormData, 'id'>) => {
+  const handleEditAuto = async (data: any) => {
     try {
       if (!selectedAuto) {
         throw new Error('No se ha seleccionado ningún auto para editar');
       }
+
+      console.log('Datos recibidos para editar auto:', data);
 
       const token = Cookies.get('admin-auth');
 
@@ -449,13 +478,61 @@ export default function DashboardPage() {
       formData.append('model', data.modelo);
       formData.append('year', data.año.toString());
       formData.append('price', data.precio.toString());
-      formData.append('description', data.descripcion);
+
+      // Tratamiento especial para la descripción
+      try {
+        // Limitar la longitud y manejar posibles caracteres especiales
+        const descripcion = data.descripcion || '';
+        // Convertir caracteres especiales a entidades HTML si es necesario
+        const descripcionLimpia = descripcion.replace(/\r\n/g, '\n').trim();
+        formData.append('description', descripcionLimpia);
+        console.log(
+          'Descripción procesada correctamente:',
+          descripcionLimpia.length,
+          'caracteres'
+        );
+      } catch (e) {
+        console.error('Error al procesar la descripción:', e);
+        formData.append('description', 'Error al procesar la descripción');
+      }
+
       formData.append('category', data.categoria);
       formData.append('mileage', data.kilometraje.toString());
       formData.append('transmission', data.transmision);
       formData.append('fuel', data.combustible);
       formData.append('doors', data.puertas.toString());
       formData.append('color', 'sin color');
+
+      // Agregar imágenes nuevas si existen
+      if (data.images && data.images.length > 0) {
+        data.images.forEach((image) => {
+          formData.append('images', image);
+        });
+        console.log('Imágenes nuevas agregadas:', data.images.length);
+      }
+
+      // Agregar imageOrder si existe
+      if (data.imageOrder && data.imageOrder.length > 0) {
+        const jsonImageOrder = JSON.stringify(data.imageOrder);
+        formData.append('imageOrder', jsonImageOrder);
+        console.log('Orden de imágenes enviado:', jsonImageOrder);
+      }
+
+      // Agregar imagesToDelete si existe
+      if (data.imagesToDelete && data.imagesToDelete.length > 0) {
+        const jsonImagesToDelete = JSON.stringify(data.imagesToDelete);
+        formData.append('imagesToDelete', jsonImagesToDelete);
+        console.log('Imágenes a eliminar enviadas:', jsonImagesToDelete);
+      }
+
+      // Mostrar el FormData para diagnóstico
+      console.log(
+        'FormData creado, enviando a:',
+        `${API_BASE_URL}/api/cars/${selectedAuto.id}`
+      );
+      for (let [key, value] of formData.entries()) {
+        console.log(`${key}: ${value instanceof File ? value.name : value}`);
+      }
 
       const response = await fetch(
         `${API_BASE_URL}/api/cars/${selectedAuto.id}`,
@@ -473,6 +550,9 @@ export default function DashboardPage() {
         console.error('Error en la respuesta del servidor:', errorData);
         throw new Error(errorData.message || 'Error al actualizar el auto');
       }
+
+      const responseData = await response.json();
+      console.log('Respuesta del servidor:', responseData);
 
       // Cerrar el modal y actualizar la lista
       setIsModalOpen(false);

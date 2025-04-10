@@ -9,7 +9,7 @@ import Cookies from 'js-cookie';
 
 // URL base del API
 
-interface FormData {
+interface AutoFormData {
   id?: string;
   marca: string;
   marcaId: string;
@@ -33,7 +33,13 @@ interface FormData {
 interface AutoModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (data: Omit<FormData, 'id'> & { images?: File[] }) => void;
+  onSubmit: (
+    data: Omit<AutoFormData, 'id'> & {
+      images?: File[];
+      imagesToDelete?: string[];
+      imageOrder?: Array<{ id: string; order: number }>;
+    }
+  ) => void;
   initialData?: Auto;
 }
 
@@ -43,7 +49,7 @@ const AutoModal = ({
   onSubmit,
   initialData,
 }: AutoModalProps) => {
-  const [formData, setFormData] = useState<FormData>(
+  const [formData, setFormData] = useState<AutoFormData>(
     initialData
       ? {
           ...initialData,
@@ -69,6 +75,10 @@ const AutoModal = ({
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [submitting, setSubmitting] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [imagesToDelete, setImagesToDelete] = useState<string[]>([]);
+  const [imageOrder, setImageOrder] = useState<
+    Array<{ id: string; order: number }>
+  >([]);
 
   // Cargar los datos del auto cuando se está editando
   useEffect(() => {
@@ -145,10 +155,19 @@ const AutoModal = ({
     }
   }, [isOpen, initialData]);
 
+  const handleImagesUpdate = (data: {
+    newImages: File[];
+    imagesToDelete: string[];
+    imageOrder: Array<{ id: string; order: number }>;
+  }) => {
+    console.log('ImageUpdate recibido:', data);
+    setSelectedFiles(data.newImages);
+    setImagesToDelete(data.imagesToDelete);
+    setImageOrder(data.imageOrder);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Evitar múltiples envíos
     if (submitting) return;
 
     setSubmitting(true);
@@ -175,9 +194,12 @@ const AutoModal = ({
       // Preparar los datos para enviar al componente padre
       const dataToSubmit = {
         ...formData,
-        año: parseInt(formData.año),
         images: selectedFiles,
+        imagesToDelete,
+        imageOrder,
       };
+
+      console.log('Enviando datos al backend:', dataToSubmit);
 
       // Llamar al callback de éxito con los datos del formulario
       await onSubmit(dataToSubmit);
@@ -460,48 +482,33 @@ const AutoModal = ({
                       <label className='block text-sm font-medium text-gray-700 mb-2'>
                         Descripción
                       </label>
-                      <textarea
-                        value={formData.descripcion}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            descripcion: e.target.value,
-                          }))
-                        }
-                        className={textareaStyles}
-                        rows={4}
-                        placeholder='Detalles adicionales del vehículo'
-                        required
-                      />
-                    </div>
-
-                    {/* Previsualización de imágenes existentes */}
-                    {formData.imagenes.length > 0 && (
-                      <div className='space-y-2'>
-                        <label className='block text-sm font-medium text-gray-700'>
-                          Imágenes actuales
-                        </label>
-                        <div className='grid grid-cols-4 gap-4'>
-                          {formData.imagenes.map((imagen, index) => (
-                            <div
-                              key={imagen.id}
-                              className='relative aspect-[4/3] rounded-lg overflow-hidden'
-                            >
-                              <Image
-                                src={imagen.thumbnailUrl}
-                                alt={`Imagen ${index + 1}`}
-                                fill
-                                className='object-cover'
-                              />
-                            </div>
-                          ))}
+                      <div className='relative'>
+                        <textarea
+                          value={formData.descripcion}
+                          onChange={(e) => {
+                            // Limitar a 5000 caracteres para prevenir problemas
+                            const texto = e.target.value.slice(0, 5000);
+                            setFormData((prev) => ({
+                              ...prev,
+                              descripcion: texto,
+                            }));
+                          }}
+                          className={textareaStyles}
+                          rows={4}
+                          placeholder='Detalles adicionales del vehículo'
+                          required
+                        />
+                        <div className='text-xs text-gray-500 text-right mt-1'>
+                          {formData.descripcion.length}/5000 caracteres
                         </div>
                       </div>
-                    )}
+                    </div>
 
                     <div>
                       <ImageUpload
                         onImagesSelected={handleImagesSelected}
+                        onImagesUpdate={handleImagesUpdate}
+                        defaultImages={formData.imagenes}
                         maxFiles={20}
                         accept='image/*'
                       />
