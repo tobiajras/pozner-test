@@ -4,7 +4,6 @@ import { Fragment, useState, useEffect, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { ImageUpload } from './ImageUpload';
 import { Auto } from '@/types/auto';
-import Image from 'next/image';
 import Cookies from 'js-cookie';
 import { ChevronDown } from 'lucide-react';
 

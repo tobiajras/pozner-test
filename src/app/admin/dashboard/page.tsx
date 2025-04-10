@@ -76,22 +76,6 @@ interface ApiResponse {
   cars: ApiCar[];
 }
 
-interface AutoFormData {
-  id?: string;
-  marca: string;
-  marcaId: string;
-  modelo: string;
-  año: number;
-  kilometraje: number;
-  transmision: string;
-  combustible: string;
-  puertas: number;
-  precio: number;
-  descripcion: string;
-  imagenes: string[];
-  categoria: string;
-}
-
 export default function DashboardPage() {
   const [autos, setAutos] = useState<Auto[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -415,7 +399,7 @@ export default function DashboardPage() {
 
       // Agregar las imágenes si existen
       if (data.images && data.images.length > 0) {
-        data.images.forEach((image) => {
+        data.images.forEach((image: File) => {
           formData.append('images', image);
         });
       }
@@ -515,7 +499,7 @@ export default function DashboardPage() {
 
       // Agregar imágenes nuevas si existen
       if (data.images && data.images.length > 0) {
-        data.images.forEach((image) => {
+        data.images.forEach((image: File) => {
           formData.append('images', image);
         });
         console.log('Imágenes nuevas agregadas:', data.images.length);
@@ -540,9 +524,15 @@ export default function DashboardPage() {
         'FormData creado, enviando a:',
         `${API_BASE_URL}/api/cars/${selectedAuto.id}`
       );
-      for (let [key, value] of formData.entries()) {
-        console.log(`${key}: ${value instanceof File ? value.name : value}`);
-      }
+
+      // Manera alternativa de mostrar el FormData sin usar iteradores directamente
+      const formDataEntries: string[] = [];
+      formData.forEach((value, key) => {
+        formDataEntries.push(
+          `${key}: ${value instanceof File ? value.name : value}`
+        );
+      });
+      console.log(formDataEntries);
 
       const response = await fetch(
         `${API_BASE_URL}/api/cars/${selectedAuto.id}`,

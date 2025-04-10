@@ -105,7 +105,6 @@ const SortableImage = ({
 const SortableNewImage = ({
   id,
   src,
-  index,
   onEdit,
   onRemove,
 }: {

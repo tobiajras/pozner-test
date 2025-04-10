@@ -16,8 +16,6 @@ interface ImageGalleryModalProps {
 const ImageGalleryModal = ({
   images,
   currentIndex,
-  productId,
-  marcaId,
   onClose,
 }: ImageGalleryModalProps) => {
   const [index, setIndex] = useState(currentIndex);

@@ -1,8 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { useDropzone } from 'react-dropzone';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { useDropzone, FileWithPath } from 'react-dropzone';
+import {
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DropResult,
+} from 'react-beautiful-dnd';
 import Image from 'next/image';
 import { Image as ImageType } from '@/types/auto';
 import { Trash2 } from 'lucide-react';
@@ -25,12 +30,12 @@ export const CarImageManager: React.FC<CarImageManagerProps> = ({
     accept: {
       'image/*': ['.jpeg', '.jpg', '.png', '.webp'],
     },
-    onDrop: (acceptedFiles) => {
+    onDrop: (acceptedFiles: FileWithPath[]) => {
       setFiles([...files, ...acceptedFiles]);
     },
   });
 
-  const handleDragEnd = (result: any) => {
+  const handleDragEnd = (result: DropResult) => {
     if (!result.destination) return;
 
     const items = Array.from(images);

@@ -53,11 +53,7 @@ interface CarrouselRelatedProps {
   categoryId: string;
 }
 
-const CarrouselRelated = ({
-  title,
-  currentCarId,
-  categoryId,
-}: CarrouselRelatedProps) => {
+const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
   const [emblaRef] = useEmblaCarousel({ dragFree: true });
   const [clicked, setClicked] = useState(false);
   const [relatedCars, setRelatedCars] = useState<Auto[]>([]);
