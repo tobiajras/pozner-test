@@ -617,7 +617,7 @@ export default function DashboardPage() {
                   <div className='flex justify-between items-start'>
                     <div>
                       <h3 className='text-lg font-semibold text-color-text'>
-                        {auto.marca} {auto.modelo}
+                        {auto.modelo}
                       </h3>
                       <p className='text-gray-600'>{auto.año}</p>
                       <p className='text-xl font-bold text-color-primary mt-1'>
@@ -740,7 +740,7 @@ export default function DashboardPage() {
         }}
         onConfirm={handleDelete}
         title='Eliminar Auto'
-        message={`¿Estás seguro de que deseas eliminar el ${autoToDelete?.marca} ${autoToDelete?.modelo}? Esta acción no se puede deshacer.`}
+        message={`¿Estás seguro de que deseas eliminar el ${autoToDelete?.modelo} ${autoToDelete?.marca} ? Esta acción no se puede deshacer.`}
       />
 
       <SellConfirmModal

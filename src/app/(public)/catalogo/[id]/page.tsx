@@ -260,7 +260,7 @@ export default function AutoDetailPage() {
                 catálogo
               </p>
             </Link>
-            <DropDownIcon className='w-3 h-3 -rotate-90 text-color-primary/60' />
+            <DropDownIcon className='w-2.5 h-2.5 -rotate-90 text-color-primary/60' />
             <Link
               href={`/catalogo?categoria=${car.Category.name.toLowerCase()}`}
             >

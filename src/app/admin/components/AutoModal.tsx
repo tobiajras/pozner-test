@@ -4,6 +4,8 @@ import { Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { ImageUpload } from './ImageUpload';
 import { Auto } from '@/types/auto';
+import Image from 'next/image';
+import Cookies from 'js-cookie';
 
 // URL base del API
 
@@ -12,14 +14,19 @@ interface FormData {
   marca: string;
   marcaId: string;
   modelo: string;
-  año: number | undefined;
+  año: string;
   kilometraje: number;
   transmision: string;
   combustible: string;
   puertas: number;
   precio: number;
   descripcion: string;
-  imagenes: string[];
+  imagenes: Array<{
+    id: string;
+    imageUrl: string;
+    thumbnailUrl: string;
+    order: number;
+  }>;
   categoria: string;
 }
 
@@ -37,34 +44,17 @@ const AutoModal = ({
   initialData,
 }: AutoModalProps) => {
   const [formData, setFormData] = useState<FormData>(
-    initialData || {
-      marca: '',
-      marcaId: '',
-      modelo: '',
-      año: undefined,
-      kilometraje: 0,
-      transmision: '',
-      combustible: '',
-      puertas: 0,
-      precio: 0,
-      descripcion: '',
-      imagenes: [],
-      categoria: '',
-    }
-  );
-
-  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
-  const [submitting, setSubmitting] = useState(false);
-
-  // Resetear el formulario cuando se abre con nuevos datos
-  useEffect(() => {
-    if (isOpen) {
-      setFormData(
-        initialData || {
+    initialData
+      ? {
+          ...initialData,
+          año: initialData.año?.toString() || '',
+          imagenes: [],
+        }
+      : {
           marca: '',
           marcaId: '',
           modelo: '',
-          año: undefined,
+          año: '',
           kilometraje: 0,
           transmision: '',
           combustible: '',
@@ -74,7 +64,83 @@ const AutoModal = ({
           imagenes: [],
           categoria: '',
         }
-      );
+  );
+
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [submitting, setSubmitting] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  // Cargar los datos del auto cuando se está editando
+  useEffect(() => {
+    const fetchCarDetails = async () => {
+      if (initialData?.id && isOpen) {
+        setLoading(true);
+        try {
+          const token = Cookies.get('admin-auth');
+          const response = await fetch(
+            `https://api.fratelliautomotores.com.ar/api/cars/${initialData.id}`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+                Accept: 'application/json',
+              },
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error('Error al cargar los detalles del auto');
+          }
+
+          const data = await response.json();
+
+          // Ordenar las imágenes por el campo order
+          const sortedImages = [...data.Images].sort(
+            (a, b) => a.order - b.order
+          );
+
+          setFormData({
+            id: data.id,
+            marca: data.brand,
+            marcaId: data.brand.toLowerCase(),
+            modelo: data.model,
+            año: data.year.toString(),
+            kilometraje: data.mileage,
+            transmision: data.transmission,
+            combustible: data.fuel,
+            puertas: data.doors,
+            precio: parseFloat(data.price),
+            descripcion: data.description,
+            imagenes: sortedImages,
+            categoria: data.Category.name,
+          });
+        } catch (error) {
+          console.error('Error al cargar los detalles del auto:', error);
+        } finally {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchCarDetails();
+  }, [initialData?.id, isOpen]);
+
+  // Resetear el formulario cuando se abre con nuevos datos
+  useEffect(() => {
+    if (isOpen && !initialData) {
+      setFormData({
+        marca: '',
+        marcaId: '',
+        modelo: '',
+        año: '',
+        kilometraje: 0,
+        transmision: '',
+        combustible: '',
+        puertas: 0,
+        precio: 0,
+        descripcion: '',
+        imagenes: [],
+        categoria: '',
+      });
       setSelectedFiles([]);
     }
   }, [isOpen, initialData]);
@@ -88,11 +154,12 @@ const AutoModal = ({
     setSubmitting(true);
 
     try {
-      // Validar que todos los campos requeridos estén completos
+      // Validar que todos los campos requeridos estén completos y que el año sea válido
       if (
         !formData.marca ||
         !formData.modelo ||
         !formData.año ||
+        isNaN(parseInt(formData.año)) ||
         !formData.precio ||
         !formData.descripcion ||
         !formData.categoria ||
@@ -108,16 +175,17 @@ const AutoModal = ({
       // Preparar los datos para enviar al componente padre
       const dataToSubmit = {
         ...formData,
-        images: selectedFiles, // Enviar los archivos de imagen directamente
+        año: parseInt(formData.año),
+        images: selectedFiles,
       };
 
       // Llamar al callback de éxito con los datos del formulario
       await onSubmit(dataToSubmit);
 
       // Limpiar las URLs de objeto creadas
-      formData.imagenes.forEach((url) => {
-        if (url.startsWith('blob:')) {
-          URL.revokeObjectURL(url);
+      formData.imagenes.forEach((imagen) => {
+        if (imagen.imageUrl.startsWith('blob:')) {
+          URL.revokeObjectURL(imagen.imageUrl);
         }
       });
     } catch (error) {
@@ -181,282 +249,311 @@ const AutoModal = ({
                   {initialData ? 'Editar Auto' : 'Agregar Nuevo Auto'}
                 </Dialog.Title>
 
-                <form onSubmit={handleSubmit} className='space-y-4'>
-                  <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                    <div>
-                      <label className='block text-sm font-medium text-gray-700'>
-                        Modelo
-                      </label>
-                      <input
-                        type='text'
-                        value={formData.modelo}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            modelo: e.target.value,
-                          }))
-                        }
-                        className={inputStyles}
-                        placeholder='Ej: Focus, Cruze, Corolla'
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className='block text-sm font-medium text-gray-700'>
-                        Marca
-                      </label>
-                      <input
-                        type='text'
-                        value={formData.marca}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            marca: e.target.value,
-                            marcaId: e.target.value
-                              .toLowerCase()
-                              .replace(/\s+/g, '-'),
-                          }))
-                        }
-                        className={inputStyles}
-                        placeholder='Ej: Ford, Chevrolet, Toyota'
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className='block text-sm font-medium text-gray-700'>
-                        Año
-                      </label>
-                      <input
-                        type='number'
-                        value={formData.año}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            año: parseInt(e.target.value),
-                          }))
-                        }
-                        className={inputStyles}
-                        placeholder='Ingrese el año del vehículo'
-                        min='1900'
-                        max={new Date().getFullYear()}
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className='block text-sm font-medium text-gray-700'>
-                        Kilometraje
-                      </label>
-                      <input
-                        type='text'
-                        value={formData.kilometraje.toLocaleString('es-AR')}
-                        onChange={(e) => {
-                          const value = e.target.value.replace(/\./g, '');
-                          const numValue = value === '' ? 0 : Number(value);
-                          if (!isNaN(numValue)) {
+                {loading ? (
+                  <div className='flex justify-center py-8'>
+                    <div className='animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-color-primary'></div>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className='space-y-4'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Modelo
+                        </label>
+                        <input
+                          type='text'
+                          value={formData.modelo}
+                          onChange={(e) =>
                             setFormData((prev) => ({
                               ...prev,
-                              kilometraje: Math.max(0, numValue),
-                            }));
+                              modelo: e.target.value,
+                            }))
                           }
-                        }}
-                        className={inputStyles}
-                        placeholder='Ingrese el kilometraje del vehículo'
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className='block text-sm font-medium text-gray-700'>
-                        Categoría
-                      </label>
-                      <input
-                        type='text'
-                        value={formData.categoria}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            categoria: e.target.value,
-                          }))
-                        }
-                        className={inputStyles}
-                        placeholder='Ej: Auto, SUV, Camioneta'
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <label className='block text-sm font-medium text-gray-700'>
-                        Transmisión
-                      </label>
-                      <select
-                        value={formData.transmision}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            transmision: e.target.value,
-                          }))
-                        }
-                        className={selectStyles}
-                        required
-                      >
-                        <option value=''>
-                          Seleccionar tipo de transmisión
-                        </option>
-                        <option value='Manual'>Manual</option>
-                        <option value='Automática'>Automática</option>
-                        <option value='CVT'>CVT</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className='block text-sm font-medium text-gray-700'>
-                        Combustible
-                      </label>
-                      <select
-                        value={formData.combustible}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            combustible: e.target.value,
-                          }))
-                        }
-                        className={selectStyles}
-                        required
-                      >
-                        <option value=''>
-                          Seleccionar tipo de combustible
-                        </option>
-                        <option value='Nafta'>Nafta</option>
-                        <option value='Diésel'>Diésel</option>
-                        <option value='GNC'>GNC</option>
-                        <option value='Eléctrico'>Eléctrico</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className='block text-sm font-medium text-gray-700'>
-                        Puertas
-                      </label>
-                      <select
-                        value={formData.puertas}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            puertas: parseInt(e.target.value),
-                          }))
-                        }
-                        className={selectStyles}
-                        required
-                      >
-                        <option value=''>
-                          Seleccionar cantidad de puertas
-                        </option>
-                        <option value='3'>3 puertas</option>
-                        <option value='4'>4 puertas</option>
-                        <option value='5'>5 puertas</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className='block text-sm font-medium text-gray-700'>
-                        Precio
-                      </label>
-                      <input
-                        type='text'
-                        value={formData.precio.toLocaleString('es-AR')}
-                        onChange={(e) => {
-                          const value = e.target.value.replace(/\./g, '');
-                          const numValue = value === '' ? 0 : Number(value);
-                          if (!isNaN(numValue)) {
+                          className={inputStyles}
+                          placeholder='Ej: Focus, Cruze, Corolla'
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Marca
+                        </label>
+                        <input
+                          type='text'
+                          value={formData.marca}
+                          onChange={(e) =>
                             setFormData((prev) => ({
                               ...prev,
-                              precio: Math.max(0, numValue),
-                            }));
+                              marca: e.target.value,
+                              marcaId: e.target.value
+                                .toLowerCase()
+                                .replace(/\s+/g, '-'),
+                            }))
                           }
-                        }}
-                        className={inputStyles}
-                        placeholder='Ingrese el precio del vehículo'
+                          className={inputStyles}
+                          placeholder='Ej: Ford, Chevrolet, Toyota'
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Año
+                        </label>
+                        <input
+                          type='number'
+                          value={formData.año}
+                          onChange={(e) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              año: e.target.value,
+                            }))
+                          }
+                          className={inputStyles}
+                          placeholder='Ingrese el año del vehículo'
+                          min='1900'
+                          max={new Date().getFullYear()}
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Kilometraje
+                        </label>
+                        <input
+                          type='text'
+                          value={formData.kilometraje.toLocaleString('es-AR')}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/\./g, '');
+                            const numValue = value === '' ? 0 : Number(value);
+                            if (!isNaN(numValue)) {
+                              setFormData((prev) => ({
+                                ...prev,
+                                kilometraje: Math.max(0, numValue),
+                              }));
+                            }
+                          }}
+                          className={inputStyles}
+                          placeholder='Ingrese el kilometraje del vehículo'
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Categoría
+                        </label>
+                        <input
+                          type='text'
+                          value={formData.categoria}
+                          onChange={(e) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              categoria: e.target.value,
+                            }))
+                          }
+                          className={inputStyles}
+                          placeholder='Ej: Auto, SUV, Camioneta'
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Transmisión
+                        </label>
+                        <select
+                          value={formData.transmision}
+                          onChange={(e) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              transmision: e.target.value,
+                            }))
+                          }
+                          className={selectStyles}
+                          required
+                        >
+                          <option value=''>
+                            Seleccionar tipo de transmisión
+                          </option>
+                          <option value='Manual'>Manual</option>
+                          <option value='Automática'>Automática</option>
+                          <option value='CVT'>CVT</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Combustible
+                        </label>
+                        <select
+                          value={formData.combustible}
+                          onChange={(e) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              combustible: e.target.value,
+                            }))
+                          }
+                          className={selectStyles}
+                          required
+                        >
+                          <option value=''>
+                            Seleccionar tipo de combustible
+                          </option>
+                          <option value='Nafta'>Nafta</option>
+                          <option value='Diésel'>Diésel</option>
+                          <option value='GNC'>GNC</option>
+                          <option value='Eléctrico'>Eléctrico</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Puertas
+                        </label>
+                        <select
+                          value={formData.puertas}
+                          onChange={(e) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              puertas: parseInt(e.target.value),
+                            }))
+                          }
+                          className={selectStyles}
+                          required
+                        >
+                          <option value=''>
+                            Seleccionar cantidad de puertas
+                          </option>
+                          <option value='3'>3 puertas</option>
+                          <option value='4'>4 puertas</option>
+                          <option value='5'>5 puertas</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Precio
+                        </label>
+                        <input
+                          type='text'
+                          value={formData.precio.toLocaleString('es-AR')}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/\./g, '');
+                            const numValue = value === '' ? 0 : Number(value);
+                            if (!isNaN(numValue)) {
+                              setFormData((prev) => ({
+                                ...prev,
+                                precio: Math.max(0, numValue),
+                              }));
+                            }
+                          }}
+                          className={inputStyles}
+                          placeholder='Ingrese el precio del vehículo'
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className='block text-sm font-medium text-gray-700 mb-2'>
+                        Descripción
+                      </label>
+                      <textarea
+                        value={formData.descripcion}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            descripcion: e.target.value,
+                          }))
+                        }
+                        className={textareaStyles}
+                        rows={4}
+                        placeholder='Detalles adicionales del vehículo'
                         required
                       />
                     </div>
-                  </div>
 
-                  <div>
-                    <label className='block text-sm font-medium text-gray-700 mb-2'>
-                      Descripción
-                    </label>
-                    <textarea
-                      value={formData.descripcion}
-                      onChange={(e) =>
-                        setFormData((prev) => ({
-                          ...prev,
-                          descripcion: e.target.value,
-                        }))
-                      }
-                      className={textareaStyles}
-                      rows={4}
-                      placeholder='Detalles adicionales del vehículo'
-                      required
-                    />
-                  </div>
+                    {/* Previsualización de imágenes existentes */}
+                    {formData.imagenes.length > 0 && (
+                      <div className='space-y-2'>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Imágenes actuales
+                        </label>
+                        <div className='grid grid-cols-4 gap-4'>
+                          {formData.imagenes.map((imagen, index) => (
+                            <div
+                              key={imagen.id}
+                              className='relative aspect-[4/3] rounded-lg overflow-hidden'
+                            >
+                              <Image
+                                src={imagen.thumbnailUrl}
+                                alt={`Imagen ${index + 1}`}
+                                fill
+                                className='object-cover'
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
 
-                  <div>
-                    <ImageUpload
-                      onImagesSelected={handleImagesSelected}
-                      maxFiles={20}
-                      accept='image/*'
-                      defaultImageUrl={initialData?.imagenes[0]}
-                    />
-                  </div>
+                    <div>
+                      <ImageUpload
+                        onImagesSelected={handleImagesSelected}
+                        maxFiles={20}
+                        accept='image/*'
+                      />
+                    </div>
 
-                  <div className='mt-6 flex justify-end space-x-3'>
-                    <button
-                      type='button'
-                      onClick={onClose}
-                      className='px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color-secondary'
-                      disabled={submitting}
-                    >
-                      Cancelar
-                    </button>
-                    <button
-                      type='submit'
-                      className='px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-color-primary hover:bg-color-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color-secondary flex items-center'
-                      disabled={submitting}
-                    >
-                      {submitting ? (
-                        <>
-                          <svg
-                            className='animate-spin -ml-1 mr-3 h-5 w-5 text-white'
-                            xmlns='http://www.w3.org/2000/svg'
-                            fill='none'
-                            viewBox='0 0 24 24'
-                          >
-                            <circle
-                              className='opacity-25'
-                              cx='12'
-                              cy='12'
-                              r='10'
-                              stroke='currentColor'
-                              strokeWidth='4'
-                            ></circle>
-                            <path
-                              className='opacity-75'
-                              fill='currentColor'
-                              d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
-                            ></path>
-                          </svg>
-                          {initialData ? 'Actualizando...' : 'Creando...'}
-                        </>
-                      ) : initialData ? (
-                        'Guardar Cambios'
-                      ) : (
-                        'Crear Auto'
-                      )}
-                    </button>
-                  </div>
-                </form>
+                    <div className='mt-6 flex justify-end space-x-3'>
+                      <button
+                        type='button'
+                        onClick={onClose}
+                        className='px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color-secondary'
+                        disabled={submitting}
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        type='submit'
+                        className='px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-color-primary hover:bg-color-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color-secondary flex items-center'
+                        disabled={submitting}
+                      >
+                        {submitting ? (
+                          <>
+                            <svg
+                              className='animate-spin -ml-1 mr-3 h-5 w-5 text-white'
+                              xmlns='http://www.w3.org/2000/svg'
+                              fill='none'
+                              viewBox='0 0 24 24'
+                            >
+                              <circle
+                                className='opacity-25'
+                                cx='12'
+                                cy='12'
+                                r='10'
+                                stroke='currentColor'
+                                strokeWidth='4'
+                              ></circle>
+                              <path
+                                className='opacity-75'
+                                fill='currentColor'
+                                d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+                              ></path>
+                            </svg>
+                            {initialData ? 'Actualizando...' : 'Creando...'}
+                          </>
+                        ) : initialData ? (
+                          'Guardar Cambios'
+                        ) : (
+                          'Crear Auto'
+                        )}
+                      </button>
+                    </div>
+                  </form>
+                )}
               </Dialog.Panel>
             </Transition.Child>
           </div>

@@ -34,7 +34,7 @@ export default function HistorialPage() {
       const response = await fetch(`${API_BASE_URL}/api/sells`, {
         headers: {
           Authorization: `Bearer ${token}`,
-          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
       });
 
