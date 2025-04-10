@@ -68,35 +68,26 @@ const CarrouselRelated = ({
     const obtenerRelacionados = async () => {
       setCargando(true);
       try {
-        // Obtenemos todos los vehículos
+        // Usamos el nuevo endpoint de recomendados
         const response = await fetch(
-          'https://api.fratelliautomotores.com.ar/api/cars'
+          `https://api.fratelliautomotores.com.ar/api/cars/${currentCarId}/recommended`
         );
+
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
-        const responseData = await response.json();
 
-        // Verificamos que la respuesta tenga la estructura correcta
-        if (!responseData || !Array.isArray(responseData.data)) {
+        const data = await response.json();
+
+        // Verificamos que la respuesta sea un array
+        if (!Array.isArray(data)) {
           throw new Error('Formato de respuesta inválido');
         }
 
-        const allCars = responseData.data;
-
-        // Filtramos el vehículo actual y mezclamos aleatoriamente
-        const filteredCars = allCars.filter(
-          (car: Auto) => car.id !== currentCarId
-        );
-        const shuffled = filteredCars.sort(() => 0.5 - Math.random());
-
-        // Tomamos los primeros 4 vehículos
-        const data = shuffled.slice(0, 4);
-
         setRelatedCars(data);
       } catch (err) {
-        console.error('Error al obtener vehículos relacionados:', err);
-        setError('No se pudieron cargar los vehículos relacionados');
+        console.error('Error al obtener vehículos recomendados:', err);
+        setError('No se pudieron cargar los vehículos recomendados');
       } finally {
         setCargando(false);
       }
@@ -223,11 +214,15 @@ const CarrouselRelated = ({
                   <div className='w-12 md:w-16 h-0.5 bg-color-primary mb-3'></div>
 
                   {/* Precio */}
-                  <div className='mb-2'>
-                    <span className='text-color-primary font-bold text-lg'>
-                      $ {parseInt(auto.price).toLocaleString('es-AR')}
-                    </span>
-                  </div>
+                  {auto.price && parseFloat(auto.price) > 0 ? (
+                    <div className='mb-2'>
+                      <span className='text-color-primary font-bold text-lg'>
+                        $ {parseFloat(auto.price).toLocaleString('es-AR')}
+                      </span>
+                    </div>
+                  ) : (
+                    ''
+                  )}
 
                   {/* Especificaciones */}
                   <div className='flex flex-col gap-1.5'>

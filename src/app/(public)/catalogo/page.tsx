@@ -190,8 +190,8 @@ const CatalogoPage = () => {
 
   return (
     <>
-      <section className='flex flex-col items-center w-full'>
-        <section className='w-full max-w-[1920px] h-[160px] sm:h-[200px] md:h-[240px] lg:h-[320px] relative'>
+      <section className='flex flex-col items-center w-full mb-16 md:mb-20'>
+        <section className='w-full max-w-[1920px] h-[160px] sm:h-[200px] md:h-[240px] lg:h-[300px] relative'>
           <div className='w-full h-full'>
             <Image
               priority
@@ -284,7 +284,7 @@ const CatalogoPage = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
-                  className='max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-12 mt-10 min-h-[600px] place-content-start mx-4 sm:mx-6 md:mx-8 lg:mx-10'
+                  className='max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:w-full gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-12 mt-10 min-h-[600px] place-content-start mx-4 sm:mx-6 md:mx-8 lg:mx-10'
                 >
                   {cars.map((car) => (
                     <motion.div
@@ -306,7 +306,7 @@ const CatalogoPage = () => {
                         </div>
 
                         {/* Imagen con overlay */}
-                        <div className='relative overflow-hidden h-44 sm:h-48 md:h-52 xl:h-56'>
+                        <div className='relative overflow-hidden '>
                           <Image
                             className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
                             src={
@@ -343,6 +343,18 @@ const CatalogoPage = () => {
 
                           {/* Línea separadora */}
                           <div className='w-12 md:w-16 h-0.5 bg-color-primary mb-3'></div>
+
+                          {/* Precio */}
+                          {car.price && parseFloat(car.price) > 0 ? (
+                            <div className='mb-2'>
+                              <span className='text-color-primary font-bold text-lg'>
+                                ${' '}
+                                {parseFloat(car.price).toLocaleString('es-AR')}
+                              </span>
+                            </div>
+                          ) : (
+                            ''
+                          )}
 
                           {/* Especificaciones */}
                           <div className='flex flex-col gap-1.5'>

@@ -92,12 +92,6 @@ export default function HistorialPage() {
       {autosVendidos.length === 0 && !loading && !error ? (
         <div className='text-center py-10 bg-gray-50 rounded-lg'>
           <p className='text-gray-500'>No hay autos vendidos para mostrar</p>
-          <button
-            onClick={() => fetchAutosVendidos()}
-            className='mt-4 px-4 py-2 bg-color-primary text-white rounded-lg hover:bg-color-primary/90 transition-colors'
-          >
-            Cargar historial
-          </button>
         </div>
       ) : (
         <div className='space-y-6'>
@@ -109,7 +103,7 @@ export default function HistorialPage() {
               className='bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6'
             >
               <div className='flex flex-col md:flex-row gap-6'>
-                <div className='relative w-full md:w-44 h-32 flex-shrink-0'>
+                <div className='relative w-[145px] h-[116px] md:w-[170px] md:h-[136px] flex-shrink-0'>
                   {auto.thumbnailUrl ? (
                     <Image
                       priority={idx < 4 ? true : false}

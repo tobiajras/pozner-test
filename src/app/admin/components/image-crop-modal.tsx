@@ -189,7 +189,7 @@ export function ImageCropModal({
             }
           },
           undefined, // No forzar formato
-          undefined  // No forzar calidad
+          undefined // No forzar calidad
         );
       }
     }
@@ -246,7 +246,7 @@ export function ImageCropModal({
             <p className='text-sm font-medium text-gray-700 mb-2'>
               Vista previa
             </p>
-            <div className='aspect-square border border-gray-300 rounded-md overflow-hidden bg-gray-100 flex items-center justify-center'>
+            <div className='w-[250px] h-[200px] border border-gray-300 rounded-md overflow-hidden bg-gray-100 flex items-center justify-center'>
               <canvas
                 ref={previewCanvasRef}
                 className='w-full h-full object-contain'

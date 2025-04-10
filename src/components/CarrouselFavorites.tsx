@@ -200,11 +200,15 @@ const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
                   <div className='w-12 md:w-16 h-0.5 bg-color-primary mb-3'></div>
 
                   {/* Precio */}
-                  <div className='mb-2'>
-                    <span className='text-color-primary font-bold text-lg'>
-                      $ {parseInt(auto.price).toLocaleString('es-AR')}
-                    </span>
-                  </div>
+                  {auto.price && parseFloat(auto.price) > 0 ? (
+                    <div className='mb-2'>
+                      <span className='text-color-primary font-bold text-lg'>
+                        $ {parseFloat(auto.price).toLocaleString('es-AR')}
+                      </span>
+                    </div>
+                  ) : (
+                    ''
+                  )}
 
                   {/* Especificaciones */}
                   <div className='flex flex-col gap-1.5'>

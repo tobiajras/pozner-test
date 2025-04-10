@@ -81,7 +81,7 @@ const SortableImage = ({
       >
         <GripVertical size={16} className='text-gray-600' />
       </div>
-      <div className='aspect-square relative'>
+      <div className='w-[110px] h-[88px] relative'>
         <Image
           src={image.thumbnailUrl}
           alt={`Imagen ${index + 1}`}
@@ -101,21 +101,53 @@ const SortableImage = ({
   );
 };
 
-// Componente para una imagen nueva (que no se puede arrastrar aún)
-const NewImage = ({
+// Componente para una imagen nueva (ahora también se puede arrastrar)
+const SortableNewImage = ({
+  id,
   src,
   index,
   onEdit,
   onRemove,
 }: {
+  id: string;
   src: string;
   index: number;
   onEdit: () => void;
   onRemove: () => void;
 }) => {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({
+    id,
+  });
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    zIndex: isDragging ? 10 : 1,
+  };
+
   return (
-    <div className='relative border rounded-md overflow-hidden'>
-      <div className='aspect-square relative'>
+    <div
+      ref={setNodeRef}
+      style={style}
+      className={`relative border rounded-md overflow-hidden ${
+        isDragging ? 'shadow-lg border-red-400 opacity-80' : ''
+      }`}
+    >
+      <div
+        className='absolute top-2 left-2 p-1.5 bg-white/80 rounded-full shadow-sm cursor-grab z-10 hover:bg-white'
+        {...attributes}
+        {...listeners}
+      >
+        <GripVertical size={16} className='text-gray-600' />
+      </div>
+      <div className='w-[110px] h-[88px] relative'>
         <Image src={src} alt='Nueva imagen' fill className='object-cover' />
       </div>
       <div className='absolute top-2 right-2 flex gap-1'>
@@ -156,6 +188,9 @@ export function ImageUpload({
   const [existingImages, setExistingImages] = useState(defaultImages);
   const [imagesToDelete, setImagesToDelete] = useState<string[]>([]);
 
+  // Generar IDs únicos para las nuevas imágenes
+  const [newImageIds, setNewImageIds] = useState<string[]>([]);
+
   // Sensores para detectar eventos de arrastre
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -179,6 +214,12 @@ export function ImageUpload({
     );
     if (newFiles.length === 0) return;
 
+    // Crear nuevos IDs únicos para las nuevas imágenes
+    const newIds = newFiles.map(
+      () => `new-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`
+    );
+    setNewImageIds((prev) => [...prev, ...newIds]);
+
     // Procesar todas las imágenes directamente
     const updatedFiles = [...selectedFiles, ...newFiles];
     setSelectedFiles(updatedFiles);
@@ -192,6 +233,18 @@ export function ImageUpload({
 
     if (e.target) {
       e.target.value = '';
+    }
+
+    // Notificar cambios si hay un handler
+    if (onImagesUpdate) {
+      onImagesUpdate({
+        newImages: updatedFiles,
+        imagesToDelete,
+        imageOrder: existingImages.map((img, idx) => ({
+          id: img.id,
+          order: idx,
+        })),
+      });
     }
   };
 
@@ -226,6 +279,18 @@ export function ImageUpload({
     setTempImageUrl('');
     setEditingIndex(-1);
     setCropModalOpen(false);
+
+    // Notificar cambios
+    if (onImagesUpdate) {
+      onImagesUpdate({
+        newImages: newFiles,
+        imagesToDelete,
+        imageOrder: existingImages.map((img, idx) => ({
+          id: img.id,
+          order: idx,
+        })),
+      });
+    }
   };
 
   const removeImage = (index: number, isExisting: boolean = false) => {
@@ -255,8 +320,11 @@ export function ImageUpload({
 
       const newFiles = selectedFiles.filter((_, i) => i !== index);
       const newPreviews = previewImages.filter((_, i) => i !== index);
+      const newIds = newImageIds.filter((_, i) => i !== index);
+
       setSelectedFiles(newFiles);
       setPreviewImages(newPreviews);
+      setNewImageIds(newIds);
       onImagesSelected(newFiles);
 
       // Notificar cambios con los archivos actualizados
@@ -273,7 +341,8 @@ export function ImageUpload({
     }
   };
 
-  const handleDragEnd = (event: DragEndEvent) => {
+  // Manejar eventos de drag and drop para imágenes existentes
+  const handleExistingDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
 
     if (!over) return;
@@ -287,18 +356,60 @@ export function ImageUpload({
 
         // Notificar cambios
         if (onImagesUpdate) {
+          const newOrder = newArray.map((img, idx) => ({
+            id: img.id,
+            order: idx,
+          }));
+
           onImagesUpdate({
             newImages: selectedFiles,
             imagesToDelete,
-            imageOrder: newArray.map((img, idx) => ({
-              id: img.id,
-              order: idx,
-            })),
+            imageOrder: newOrder,
           });
         }
 
         return newArray;
       });
+    }
+  };
+
+  // Manejar eventos de drag and drop para nuevas imágenes
+  const handleNewImagesDragEnd = (event: DragEndEvent) => {
+    const { active, over } = event;
+
+    if (!over) return;
+
+    if (active.id !== over.id) {
+      // Encontrar los índices correspondientes
+      const oldIndex = newImageIds.findIndex((id) => id === active.id);
+      const newIndex = newImageIds.findIndex((id) => id === over.id);
+
+      if (oldIndex === -1 || newIndex === -1) return;
+
+      // Reordenar los arrays
+      const newIds = arrayMove(newImageIds, oldIndex, newIndex);
+      const newPreviews = arrayMove(previewImages, oldIndex, newIndex);
+      const newFiles = arrayMove(selectedFiles, oldIndex, newIndex);
+
+      // Actualizar el estado
+      setNewImageIds(newIds);
+      setPreviewImages(newPreviews);
+      setSelectedFiles(newFiles);
+
+      // Notificar el cambio en las imágenes seleccionadas
+      onImagesSelected(newFiles);
+
+      // Notificar cambios al componente padre si es necesario
+      if (onImagesUpdate) {
+        onImagesUpdate({
+          newImages: newFiles,
+          imagesToDelete,
+          imageOrder: existingImages.map((img, idx) => ({
+            id: img.id,
+            order: idx,
+          })),
+        });
+      }
     }
   };
 
@@ -312,6 +423,18 @@ export function ImageUpload({
       previewImages.forEach((url) => URL.revokeObjectURL(url));
     };
   }, [previewImages]);
+
+  // Inicializar IDs únicos para nuevas imágenes si no existen aún
+  useEffect(() => {
+    if (selectedFiles.length > 0 && newImageIds.length === 0) {
+      setNewImageIds(
+        selectedFiles.map(
+          () =>
+            `new-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`
+        )
+      );
+    }
+  }, [selectedFiles, newImageIds]);
 
   return (
     <div>
@@ -329,7 +452,7 @@ export function ImageUpload({
             <DndContext
               sensors={sensors}
               collisionDetection={closestCenter}
-              onDragEnd={handleDragEnd}
+              onDragEnd={handleExistingDragEnd}
             >
               <SortableContext
                 items={existingImages.map((img) => img.id)}
@@ -353,35 +476,54 @@ export function ImageUpload({
         {/* Sección de nuevas imágenes */}
         <div>
           <label className='block text-sm font-medium text-gray-700 mb-2'>
-            Nuevas imágenes ({selectedFiles.length}/
-            {maxFiles - (existingImages.length - imagesToDelete.length)})
+            Nuevas imágenes{' '}
+            <span className='text-gray-500 text-xs font-normal'>
+              {selectedFiles.length > 0 ? '(Arrastra para reordenar)' : ''}
+            </span>
+            <span className='text-gray-500 text-xs font-normal ml-2'>
+              ({selectedFiles.length}/
+              {maxFiles - (existingImages.length - imagesToDelete.length)})
+            </span>
           </label>
-          <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4'>
-            {/* Área para subir nueva imagen */}
-            {selectedFiles.length +
-              existingImages.length -
-              imagesToDelete.length <
-              maxFiles && (
-              <div
-                className='border-2 border-dashed border-gray-300 rounded-md aspect-square flex flex-col items-center justify-center cursor-pointer hover:border-red-400 transition-colors'
-                onClick={triggerFileInput}
-              >
-                <Plus className='h-8 w-8 text-gray-400 mb-2' />
-                <span className='text-sm text-gray-500'>Agregar</span>
-              </div>
-            )}
 
-            {/* Vista previa de las nuevas imágenes */}
-            {previewImages.map((src, index) => (
-              <NewImage
-                key={index}
-                src={src}
-                index={index}
-                onEdit={() => handleEditImage(index)}
-                onRemove={() => removeImage(index)}
-              />
-            ))}
-          </div>
+          <DndContext
+            sensors={sensors}
+            collisionDetection={closestCenter}
+            onDragEnd={handleNewImagesDragEnd}
+          >
+            <SortableContext
+              items={newImageIds}
+              strategy={horizontalListSortingStrategy}
+            >
+              <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-2 rounded-md'>
+                {/* Área para subir nueva imagen */}
+                {selectedFiles.length +
+                  existingImages.length -
+                  imagesToDelete.length <
+                  maxFiles && (
+                  <div
+                    className='border-2 border-dashed border-gray-300 rounded-md w-[110px] h-[88px] flex flex-col items-center justify-center cursor-pointer hover:border-red-400 transition-colors'
+                    onClick={triggerFileInput}
+                  >
+                    <Plus className='h-8 w-8 text-gray-400 mb-2' />
+                    <span className='text-sm text-gray-500'>Agregar</span>
+                  </div>
+                )}
+
+                {/* Vista previa de las nuevas imágenes con arrastrar y soltar */}
+                {previewImages.map((src, index) => (
+                  <SortableNewImage
+                    key={newImageIds[index] || `temp-${index}`}
+                    id={newImageIds[index] || `temp-${index}`}
+                    src={src}
+                    index={index}
+                    onEdit={() => handleEditImage(index)}
+                    onRemove={() => removeImage(index)}
+                  />
+                ))}
+              </div>
+            </SortableContext>
+          </DndContext>
         </div>
       </div>
 

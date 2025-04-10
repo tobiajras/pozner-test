@@ -126,7 +126,7 @@ export default function DashboardPage() {
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(
-        `${API_BASE_URL}/api/cars?page=${page}&limit=10`,
+        `${API_BASE_URL}/api/admin/cars?page=${page}&limit=10`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -250,19 +250,18 @@ export default function DashboardPage() {
     }
   };
 
-  const handleToggleEstado = async (id: string, active: boolean) => {
+  const handleToggleEstado = async (id: string) => {
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(
         `${API_BASE_URL}/api/cars/${id}/toggle-active`,
         {
-          method: 'POST',
+          method: 'PATCH',
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
             Accept: 'application/json',
           },
-          body: JSON.stringify({ active: !active }),
         }
       );
 
@@ -447,16 +446,27 @@ export default function DashboardPage() {
         throw new Error(errorData.message || 'Error al crear el auto');
       }
 
+      // Mostrar notificación de éxito
+      setNotification({
+        isOpen: true,
+        type: 'success',
+        message: 'Auto creado exitosamente',
+      });
+
       // Cerrar el modal y actualizar la lista
       setIsModalOpen(false);
       setSelectedAuto(undefined);
       fetchAutos(currentPage);
     } catch (error) {
       console.error('Error al crear el auto:', error);
-      alert(
-        'Error al crear el auto: ' +
-          (error instanceof Error ? error.message : 'Error desconocido')
-      );
+
+      // Mostrar notificación de error
+      setNotification({
+        isOpen: true,
+        type: 'error',
+        message:
+          error instanceof Error ? error.message : 'Error al crear el auto',
+      });
     }
   };
 
@@ -554,16 +564,29 @@ export default function DashboardPage() {
       const responseData = await response.json();
       console.log('Respuesta del servidor:', responseData);
 
+      // Mostrar notificación de éxito
+      setNotification({
+        isOpen: true,
+        type: 'success',
+        message: 'Auto actualizado exitosamente',
+      });
+
       // Cerrar el modal y actualizar la lista
       setIsModalOpen(false);
       setSelectedAuto(undefined);
       fetchAutos(currentPage);
     } catch (error) {
       console.error('Error al actualizar el auto:', error);
-      alert(
-        'Error al actualizar el auto: ' +
-          (error instanceof Error ? error.message : 'Error desconocido')
-      );
+
+      // Mostrar notificación de error
+      setNotification({
+        isOpen: true,
+        type: 'error',
+        message:
+          error instanceof Error
+            ? error.message
+            : 'Error al actualizar el auto',
+      });
     }
   };
 
@@ -598,17 +621,36 @@ export default function DashboardPage() {
         );
       }
 
-      // Actualizar la lista después de marcar como vendido
-      fetchAutos(currentPage);
+      // Actualizar solo el auto vendido en la lista local
+      setAutos((prev) => prev.filter((auto) => auto.id !== autoToSell.id));
+      setTotalAutos((prev) => prev - 1);
+
+      // Mostrar notificación de éxito
+      setNotification({
+        isOpen: true,
+        type: 'success',
+        message: 'Auto marcado como vendido exitosamente',
+      });
+
+      // Cerrar el modal de venta
       setSellModalOpen(false);
       setAutoToSell(null);
     } catch (error) {
       console.error('Error al marcar el auto como vendido:', error);
-      alert(
-        error instanceof Error
-          ? error.message
-          : 'Error al marcar el auto como vendido'
-      );
+
+      // Mostrar notificación de error
+      setNotification({
+        isOpen: true,
+        type: 'error',
+        message:
+          error instanceof Error
+            ? error.message
+            : 'Error al marcar el auto como vendido',
+      });
+
+      // Cerrar el modal incluso si hay error
+      setSellModalOpen(false);
+      setAutoToSell(null);
     }
   };
 
@@ -670,10 +712,14 @@ export default function DashboardPage() {
               key={auto.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className='bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 flex flex-col'
+              className='bg-white rounded-lg [box-shadow:0_0_10px_rgba(0,0,0,0.07)] hover:[box-shadow:0_0_10px_rgba(0,0,0,0.2)] transition-shadow p-4 flex flex-col cursor-pointer relative'
+              onClick={() => {
+                setSelectedAuto(auto);
+                setIsModalOpen(true);
+              }}
             >
               <div className='flex items-center gap-4'>
-                <div className='relative w-44 h-32 flex-shrink-0'>
+                <div className='relative w-[145px] h-[116px] md:w-[170px] md:h-[136px] flex-shrink-0'>
                   {auto.imagenes && auto.imagenes.length > 0 ? (
                     <Image
                       priority={idx < 4 ? true : false}
@@ -700,17 +746,27 @@ export default function DashboardPage() {
                         {auto.modelo}
                       </h3>
                       <p className='text-gray-600'>{auto.año}</p>
-                      <p className='text-xl font-bold text-color-primary mt-1'>
-                        ${auto.precio.toLocaleString('es-AR')}
-                      </p>
+                      {auto.precio && auto.precio > 0 ? (
+                        <p className='text-xl font-bold text-color-primary mt-1'>
+                          ${auto.precio.toLocaleString('es-AR')}
+                        </p>
+                      ) : (
+                        ''
+                      )}
                       <p className='text-sm text-gray-500 mt-2'>
                         {auto.kilometraje.toLocaleString('es-AR')} km •{' '}
                         {auto.combustible}
                       </p>
                     </div>
-                    <div className='flex gap-2'>
+                    <div
+                      className='flex gap-2'
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       <button
-                        onClick={() => handleToggleEstado(auto.id, auto.active)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleToggleEstado(auto.id);
+                        }}
                         className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                           auto.active
                             ? 'bg-green-100 text-green-700 hover:bg-green-200'
@@ -720,37 +776,64 @@ export default function DashboardPage() {
                         {auto.active ? 'Activo' : 'Pausado'}
                       </button>
                       <button
-                        onClick={() => handleToggleDestacado(auto.id)}
-                        className={`p-2 rounded-full transition-colors ${
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (auto.active) {
+                            handleToggleDestacado(auto.id);
+                          }
+                        }}
+                        className={`p-2 rounded-full transition-all ${
                           auto.destacado
-                            ? 'bg-blue-100 text-blue-700 hover:bg-blue-200'
+                            ? 'bg-blue-100 text-blue-700 hover:bg-blue-200 shadow-sm'
                             : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                        } ${
+                          !auto.active ? 'opacity-50 cursor-not-allowed' : ''
                         }`}
                         title={
-                          auto.destacado
-                            ? 'Quitar de destacados'
-                            : 'Marcar como destacado'
+                          !auto.active
+                            ? 'Auto pausado, no puede modificarse'
+                            : auto.destacado
+                            ? 'Quitar de Ingreso'
+                            : 'Marcar como Ingreso'
                         }
                       >
-                        <Zap size={20} />
+                        {auto.destacado ? (
+                          <Zap size={20} fill='currentColor' />
+                        ) : (
+                          <Zap size={20} />
+                        )}
                       </button>
                       <button
-                        onClick={() => handleToggleFavorito(auto.id)}
-                        className={`p-2 rounded-full transition-colors ${
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (auto.active) {
+                            handleToggleFavorito(auto.id);
+                          }
+                        }}
+                        className={`p-2 rounded-full transition-all ${
                           auto.favorito
-                            ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'
+                            ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200 shadow-sm'
                             : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                        } ${
+                          !auto.active ? 'opacity-50 cursor-not-allowed' : ''
                         }`}
                         title={
-                          auto.favorito
+                          !auto.active
+                            ? 'Auto pausado, no puede modificarse'
+                            : auto.favorito
                             ? 'Quitar de favoritos'
                             : 'Marcar como favorito'
                         }
                       >
-                        <Star size={20} />
+                        {auto.favorito ? (
+                          <Star size={20} fill='currentColor' />
+                        ) : (
+                          <Star size={20} />
+                        )}
                       </button>
                       <button
-                        onClick={() => {
+                        onClick={(e) => {
+                          e.stopPropagation();
                           setSelectedAuto(auto);
                           setIsModalOpen(true);
                         }}
@@ -759,22 +842,33 @@ export default function DashboardPage() {
                         <Edit size={20} className='text-color-primary' />
                       </button>
                       <button
-                        onClick={() => handleDeleteClick(auto)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleDeleteClick(auto);
+                        }}
                         className='p-2 hover:bg-gray-100 rounded-full transition-colors'
                       >
                         <Trash size={20} className='text-red-500' />
                       </button>
                     </div>
                   </div>
-                  <div className='flex justify-end'>
-                    <button
-                      onClick={() => handleSellClick(auto)}
-                      className='bg-slate-700 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors'
-                    >
-                      Vender
-                    </button>
-                  </div>
                 </div>
+              </div>
+
+              {/* Botón de vender con posición absoluta */}
+              <div
+                className='absolute bottom-4 right-4'
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleSellClick(auto);
+                  }}
+                  className='bg-slate-700 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors'
+                >
+                  Vender
+                </button>
               </div>
             </motion.div>
           ))}

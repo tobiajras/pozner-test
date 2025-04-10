@@ -1,13 +1,15 @@
 'use client';
 
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState, useEffect, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { ImageUpload } from './ImageUpload';
 import { Auto } from '@/types/auto';
 import Image from 'next/image';
 import Cookies from 'js-cookie';
+import { ChevronDown } from 'lucide-react';
 
 // URL base del API
+const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
 
 interface AutoFormData {
   id?: string;
@@ -41,6 +43,11 @@ interface AutoModalProps {
     }
   ) => void;
   initialData?: Auto;
+}
+
+interface Category {
+  id: string;
+  name: string;
 }
 
 const AutoModal = ({
@@ -79,6 +86,45 @@ const AutoModal = ({
   const [imageOrder, setImageOrder] = useState<
     Array<{ id: string; order: number }>
   >([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+  const categoryInputRef = useRef<HTMLInputElement>(null);
+
+  // Cargar categorías del API
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/categories`);
+        if (response.ok) {
+          const data = await response.json();
+          setCategories(data);
+        }
+      } catch (error) {
+        console.error('Error al cargar categorías:', error);
+      }
+    };
+
+    if (isOpen) {
+      fetchCategories();
+    }
+  }, [isOpen]);
+
+  // Cerrar el dropdown cuando se hace clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        categoryInputRef.current &&
+        !categoryInputRef.current.contains(event.target as Node)
+      ) {
+        setShowCategoryDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   // Cargar los datos del auto cuando se está editando
   useEffect(() => {
@@ -179,7 +225,6 @@ const AutoModal = ({
         !formData.modelo ||
         !formData.año ||
         isNaN(parseInt(formData.año)) ||
-        !formData.precio ||
         !formData.descripcion ||
         !formData.categoria ||
         !formData.transmision ||
@@ -191,9 +236,16 @@ const AutoModal = ({
         return;
       }
 
+      // Asegurar que el precio sea un número válido (0 si es NaN)
+      let precioValidado = formData.precio;
+      if (isNaN(precioValidado)) {
+        precioValidado = 0;
+      }
+
       // Preparar los datos para enviar al componente padre
       const dataToSubmit = {
         ...formData,
+        precio: precioValidado,
         images: selectedFiles,
         imagesToDelete,
         imageOrder,
@@ -366,19 +418,53 @@ const AutoModal = ({
                         <label className='block text-sm font-medium text-gray-700'>
                           Categoría
                         </label>
-                        <input
-                          type='text'
-                          value={formData.categoria}
-                          onChange={(e) =>
-                            setFormData((prev) => ({
-                              ...prev,
-                              categoria: e.target.value,
-                            }))
-                          }
-                          className={inputStyles}
-                          placeholder='Ej: Auto, SUV, Camioneta'
-                          required
-                        />
+                        <div className='relative' ref={categoryInputRef}>
+                          <div className='flex items-center relative'>
+                            <input
+                              type='text'
+                              value={formData.categoria}
+                              onChange={(e) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  categoria: e.target.value,
+                                }))
+                              }
+                              onFocus={() => setShowCategoryDropdown(true)}
+                              className={inputStyles}
+                              placeholder='Ej: Auto, SUV, Camioneta'
+                              required
+                            />
+                            <button
+                              type='button'
+                              className='absolute right-2 p-1'
+                              onClick={() =>
+                                setShowCategoryDropdown(!showCategoryDropdown)
+                              }
+                            >
+                              <ChevronDown className='h-4 w-4 text-gray-500' />
+                            </button>
+                          </div>
+
+                          {showCategoryDropdown && (
+                            <div className='absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm'>
+                              {categories.map((category) => (
+                                <div
+                                  key={category.id}
+                                  className='px-4 py-2 hover:bg-gray-100 cursor-pointer'
+                                  onClick={() => {
+                                    setFormData((prev) => ({
+                                      ...prev,
+                                      categoria: category.name,
+                                    }));
+                                    setShowCategoryDropdown(false);
+                                  }}
+                                >
+                                  {category.name}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </div>
 
                       <div>
@@ -424,7 +510,7 @@ const AutoModal = ({
                             Seleccionar tipo de combustible
                           </option>
                           <option value='Nafta'>Nafta</option>
-                          <option value='Diésel'>Diésel</option>
+                          <option value='Diesel'>Diésel</option>
                           <option value='GNC'>GNC</option>
                           <option value='Eléctrico'>Eléctrico</option>
                         </select>
@@ -460,20 +546,30 @@ const AutoModal = ({
                         </label>
                         <input
                           type='text'
-                          value={formData.precio.toLocaleString('es-AR')}
+                          value={
+                            isNaN(formData.precio)
+                              ? ''
+                              : formData.precio.toLocaleString('es-AR')
+                          }
                           onChange={(e) => {
                             const value = e.target.value.replace(/\./g, '');
-                            const numValue = value === '' ? 0 : Number(value);
-                            if (!isNaN(numValue)) {
+                            if (value === '') {
                               setFormData((prev) => ({
                                 ...prev,
-                                precio: Math.max(0, numValue),
+                                precio: 0,
                               }));
+                            } else {
+                              const numValue = Number(value);
+                              if (!isNaN(numValue)) {
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  precio: Math.max(0, numValue),
+                                }));
+                              }
                             }
                           }}
                           className={inputStyles}
-                          placeholder='Ingrese el precio del vehículo'
-                          required
+                          placeholder='0'
                         />
                       </div>
                     </div>

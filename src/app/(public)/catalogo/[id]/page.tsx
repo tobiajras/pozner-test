@@ -246,7 +246,9 @@ export default function AutoDetailPage() {
                 <h2 className='text-xl font-medium mb-2 text-color-title'>
                   Descripción
                 </h2>
-                <p className='text-color-text'>{car.description}</p>
+                <p className='text-color-text whitespace-pre-line'>
+                  {car.description}
+                </p>
               </div>
             </div>
           )}
@@ -272,10 +274,12 @@ export default function AutoDetailPage() {
           <h1 className='text-3xl font-bold text-color-primary mb-2'>
             {car.model}
           </h1>
-          {car.price && (
+          {car.price && parseFloat(car.price) > 0 ? (
             <p className='text-2xl font-semibold text-color-primary mb-4'>
               ${parseFloat(car.price).toLocaleString('es-AR')}
             </p>
+          ) : (
+            ''
           )}
 
           <div className='flex flex-col gap-3 text-color-text'>
@@ -358,12 +362,14 @@ export default function AutoDetailPage() {
         />
       )}
 
-      {/* Carrusel de vehículos relacionados */}
-      <CarrouselRelated
-        title='Recomendados'
-        currentCarId={car.id}
-        categoryId={car.categoryId}
-      />
+      <section className='mt-10 md:mt-16 w-full'>
+        {/* Carrusel de vehículos relacionados */}
+        <CarrouselRelated
+          title='Recomendados'
+          currentCarId={car.id}
+          categoryId={car.categoryId}
+        />
+      </section>
     </section>
   );
 }
