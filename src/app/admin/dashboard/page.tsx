@@ -11,6 +11,23 @@ import SellConfirmModal from '../components/SellConfirmModal';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import { Notification } from '../components/Notification';
 
+// Interfaz para los datos del formulario de autos
+interface AutoFormData {
+  marca: string;
+  modelo: string;
+  año: string;
+  precio: number;
+  descripcion: string;
+  categoria: string;
+  kilometraje: number;
+  transmision: string;
+  combustible: string;
+  puertas: number;
+  images?: File[];
+  imagesToDelete?: string[];
+  imageOrder?: Array<{ id: string; order: number }>;
+}
+
 // URL base del API
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
 
@@ -359,7 +376,7 @@ export default function DashboardPage() {
     }
   };
 
-  const handleCreateAuto = async (data: any) => {
+  const handleCreateAuto = async (data: AutoFormData) => {
     try {
       console.log('Creando auto con datos:', data);
       const token = Cookies.get('admin-auth');
@@ -370,7 +387,7 @@ export default function DashboardPage() {
       // Agregar los campos de texto
       formData.append('brand', data.marca);
       formData.append('model', data.modelo);
-      formData.append('year', data.año.toString());
+      formData.append('year', data.año);
       formData.append('price', data.precio.toString());
 
       // Tratamiento especial para la descripción
@@ -454,7 +471,7 @@ export default function DashboardPage() {
     }
   };
 
-  const handleEditAuto = async (data: any) => {
+  const handleEditAuto = async (data: AutoFormData) => {
     try {
       if (!selectedAuto) {
         throw new Error('No se ha seleccionado ningún auto para editar');
@@ -470,7 +487,7 @@ export default function DashboardPage() {
       // Agregar los campos de texto
       formData.append('brand', data.marca);
       formData.append('model', data.modelo);
-      formData.append('year', data.año.toString());
+      formData.append('year', data.año);
       formData.append('price', data.precio.toString());
 
       // Tratamiento especial para la descripción
