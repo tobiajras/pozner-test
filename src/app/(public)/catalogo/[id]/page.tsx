@@ -168,7 +168,7 @@ export default function AutoDetailPage() {
           </Link>
         </div>
       </div>
-      <div className='flex flex-col lg:flex-row gap-8 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+      <div className='flex flex-col lg:flex-row gap-8 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         {/* Galería de imágenes */}
         <div className='space-y-4 w-full lg:w-3/5'>
           <div className='overflow-hidden relative group' ref={mainViewportRef}>
@@ -240,8 +240,119 @@ export default function AutoDetailPage() {
               </button>
             ))}
           </div>
+
+          {/* Detalles del auto en versión móvil */}
+          <div className='lg:hidden'>
+            <div className='flex gap-2 font-medium items-center'>
+              <Link href={`/catalogo`}>
+                <p className='text-color-primary/60 hover:text-color-primary transition-colors'>
+                  catálogo
+                </p>
+              </Link>
+              <DropDownIcon className='w-2.5 h-2.5 -rotate-90 text-color-primary/60' />
+              <Link
+                href={`/catalogo?categoria=${car.Category.name.toLowerCase()}`}
+              >
+                <p className='text-color-primary/60 hover:text-color-primary transition-colors'>
+                  {car.Category.name}
+                </p>
+              </Link>
+            </div>
+            <h1 className='text-3xl font-bold text-color-primary mb-2'>
+              {car.model}
+            </h1>
+            {car.price && parseFloat(car.price) > 0 ? (
+              <p className='text-2xl font-semibold text-color-primary mb-4'>
+                ${parseFloat(car.price).toLocaleString('es-AR')}
+              </p>
+            ) : (
+              ''
+            )}
+
+            <div className='flex flex-col gap-3 text-color-text'>
+              <div className='flex flex-col gap-1'>
+                <p className='text-color-title font-semibold'>Año</p>
+                <p>{car.year}</p>
+              </div>
+              <div>
+                <p className='text-color-title font-semibold'>Kilometraje</p>
+                <p>{car.mileage.toLocaleString('es-AR')} km</p>
+              </div>
+              <div>
+                <p className='text-color-title font-semibold'>Transmisión</p>
+                <p>{car.transmission}</p>
+              </div>
+              <div>
+                <p className='text-color-title font-semibold'>Combustible</p>
+                <p>{car.fuel}</p>
+              </div>
+              <div>
+                <p className='text-color-title font-semibold'>Puertas</p>
+                <p>{car.doors}</p>
+              </div>
+              <div>
+                <p className='text-color-title font-semibold'>Marca</p>
+                <p>{car.brand}</p>
+              </div>
+            </div>
+
+            {/* Botón de WhatsApp en versión móvil */}
+            <div className='flex mt-3'>
+              <Link
+                href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
+                target='_blank'
+                rel='noopener noreferrer'
+                className={`${
+                  company.dark
+                    ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
+                    : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
+                } flex gap-2 font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]`}
+              >
+                <WhatsappIcon className='w-6 h-6' />
+                <span>Consultar</span>
+              </Link>
+            </div>
+
+            {/* Descripción en móvil, ahora entre el botón de WhatsApp y la sección de checkmarks */}
+            {car.description && (
+              <div className='mt-6 mb-2'>
+                <h2 className='text-xl font-medium mb-2 text-color-title'>
+                  Descripción
+                </h2>
+                <p className='text-color-text whitespace-pre-line'>
+                  {car.description}
+                </p>
+              </div>
+            )}
+
+            <hr className='mt-8 mb-5' />
+            <div className='flex flex-col gap-3'>
+              <div className='text-color-text flex items-center'>
+                <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
+                <span>Excelente estado, listo para transferir.</span>
+              </div>
+              <div className='text-color-text flex items-center'>
+                <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
+                <span>Documentación completa y al día.</span>
+              </div>
+              <div className='text-color-text flex items-center'>
+                <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
+                <span>Tomamos tu usado como parte de pago.</span>
+              </div>
+              <div className='text-color-text flex items-center'>
+                <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
+                <span>Financiación accesible, cuotas fijas y en pesos.</span>
+              </div>
+              <div className='text-color-text flex items-center'>
+                <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
+                <span>Trámite rápido y sencillo.</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Descripción - Solo para desktop, ya que en móvil se muestra en otro lugar */}
           {car.description && (
-            <div className='flex'>
+            <div className='flex lg:block hidden'>
               <div className='mt-6 md:mt-8 pr-8 md:pr-10 lg:pr-20'>
                 <h2 className='text-xl font-medium mb-2 text-color-title'>
                   Descripción
@@ -254,8 +365,8 @@ export default function AutoDetailPage() {
           )}
         </div>
 
-        {/* Detalles del auto */}
-        <div className='flex flex-col w-full lg:w-2/5'>
+        {/* Detalles del auto en desktop */}
+        <div className='hidden lg:flex lg:flex-col w-full lg:w-2/5'>
           <div className='flex gap-2 font-medium items-center'>
             <Link href={`/catalogo`}>
               <p className='text-color-primary/60 hover:text-color-primary transition-colors'>
@@ -329,23 +440,23 @@ export default function AutoDetailPage() {
           <div className='flex flex-col gap-3'>
             <div className='text-color-text flex items-center'>
               <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-              <span>Excelente estado, como se ve en las fotos.</span>
+              <span>Excelente estado, listo para transferir.</span>
             </div>
             <div className='text-color-text flex items-center'>
               <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-              <span>Papeles al día, sin deudas, listo para transferir.</span>
+              <span>Documentación completa y al día.</span>
             </div>
             <div className='text-color-text flex items-center'>
               <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-              <span>Recibimos tu usado.</span>
+              <span>Tomamos tu usado como parte de pago.</span>
             </div>
             <div className='text-color-text flex items-center'>
               <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-              <span>Financiación con cuotas fijas y en pesos.</span>
+              <span>Financiación accesible, cuotas fijas y en pesos.</span>
             </div>
             <div className='text-color-text flex items-center'>
               <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-              <span>Gestión rápida y sencilla.</span>
+              <span>Trámite rápido y sencillo.</span>
             </div>
           </div>
         </div>

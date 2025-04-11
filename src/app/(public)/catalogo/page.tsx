@@ -218,13 +218,13 @@ const CatalogoPage = () => {
         </section>
 
         {/* Filtros y Buscador */}
-        <div className='w-full max-w-6xl'>
-          <div className='flex flex-col sm:flex-row gap-3 sm:gap-5 mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-0 mt-8'>
+        <div className='flex justify-center w-full max-w-6xl'>
+          <div className='max-w-[320px] sm:max-w-none md:max-w-[724px] lg:max-w-none w-full flex flex-col sm:flex-row gap-3 sm:gap-5 mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-0 mt-8'>
             {/* Buscador */}
             <div className='relative w-full'>
               <input
                 type='text'
-                placeholder='Buscar vehículo y presionar Enter...'
+                placeholder='Buscar vehículo...'
                 value={searchValue}
                 onChange={handleSearch}
                 onKeyPress={(e) => {
@@ -245,7 +245,7 @@ const CatalogoPage = () => {
                 onChange={(e) => updateFilters('marca', e.target.value)}
                 className='w-full sm:w-auto px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
               >
-                <option value=''>Todas las marcas</option>
+                <option value=''>Marcas</option>
                 {marcas.map((marca) => (
                   <option key={marca} value={marca}>
                     {marca}
@@ -259,7 +259,7 @@ const CatalogoPage = () => {
                 onChange={(e) => updateFilters('categoria', e.target.value)}
                 className='w-full sm:w-auto px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
               >
-                <option value=''>Todas las categorías</option>
+                <option value=''>Categorías</option>
                 {categorias.map((categoria) => (
                   <option key={categoria} value={categoria}>
                     {categoria}
@@ -296,7 +296,7 @@ const CatalogoPage = () => {
                     >
                       <Link
                         href={`/catalogo/${car.id}`}
-                        className='group w-full h-full overflow-hidden rounded-xl bg-white border-2 border-gray-300 hover:border-color-primary transition-all duration-300 relative block'
+                        className='group w-full h-full max-w-[320px] md:max-w-[350px] lg:max-w-none overflow-hidden rounded-xl bg-white border-2 border-gray-300 hover:border-color-primary transition-all duration-300 relative block'
                       >
                         {/* Badge de marca */}
                         <div className='absolute top-3 left-3 z-10'>

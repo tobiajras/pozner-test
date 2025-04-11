@@ -6,10 +6,14 @@ import { useState } from 'react';
 import DropDownIcon from './icons/DropDownIcon';
 import { motion } from 'framer-motion';
 const PreguntasHome = () => {
-  const [activeAnswer, setActiveAnswer] = useState<string | null>('preg-1');
+  const [activeAnswer, setActiveAnswer] = useState<string>('preg-1');
 
   const handleClick = (id: string) => {
-    setActiveAnswer(activeAnswer === id ? null : id);
+    if (activeAnswer === id) {
+      return;
+    }
+
+    setActiveAnswer(id);
   };
 
   return (
@@ -45,37 +49,56 @@ const PreguntasHome = () => {
           </h4>
           <article className=''>
             <ul className='flex flex-col'>
-              {preguntas.map((pregunta) => (
-                <li
-                  onClick={() => handleClick(pregunta.id)}
-                  key={pregunta.id}
-                  className='border-b border-gray-200 last:border-b-0'
-                >
-                  <div className='min-h-8 md:min-h-10 max-w-md sm:max-w-lg pt-5 pb-3 cursor-pointer group'>
-                    <div className='flex justify-between gap-4 items-center px-2'>
-                      <h6 className='sm:text-lg text-color-secondary group-hover:text-color-secondary-dark transition-colors font-semibold'>
-                        {pregunta.question}
-                      </h6>
-                      <div className='bg-color-primary group-hover:bg-color-primary-dark transition-colors flex justify-center items-center w-8 h-8 rounded-full shrink-0'>
-                        <DropDownIcon className='text-color-title-light w-3.5 h-3.5' />
-                      </div>
-                    </div>
-                    <motion.div
-                      initial={false}
-                      animate={{
-                        height: activeAnswer === pregunta.id ? 'auto' : 0,
-                        opacity: activeAnswer === pregunta.id ? 1 : 0,
-                      }}
-                      transition={{ duration: 0.3 }}
-                      className='overflow-hidden'
+              {preguntas.map((pregunta) => {
+                const isActive = activeAnswer === pregunta.id;
+                return (
+                  <li
+                    onClick={() => handleClick(pregunta.id)}
+                    key={pregunta.id}
+                    className='border-b border-gray-200 last:border-b-0'
+                  >
+                    <div
+                      className={`min-h-8 md:min-h-10 max-w-md sm:max-w-lg pt-5 pb-3 ${
+                        isActive ? 'cursor-default' : 'cursor-pointer group'
+                      }`}
                     >
-                      <p className='text-color-text mt-4 px-2 text-sm sm:text-base'>
-                        {pregunta.answer}
-                      </p>
-                    </motion.div>
-                  </div>
-                </li>
-              ))}
+                      <div className='flex justify-between gap-4 items-center px-2'>
+                        <h6
+                          className={`sm:text-lg ${
+                            isActive
+                              ? 'text-color-secondary-dark'
+                              : 'text-color-secondary group-hover:text-color-secondary-dark transition-colors'
+                          } font-semibold`}
+                        >
+                          {pregunta.question}
+                        </h6>
+                        <div
+                          className={`${
+                            isActive
+                              ? 'bg-color-primary-dark'
+                              : 'bg-color-primary group-hover:bg-color-primary-dark transition-colors'
+                          } flex justify-center items-center w-8 h-8 rounded-full shrink-0`}
+                        >
+                          <DropDownIcon className='text-color-title-light w-3.5 h-3.5' />
+                        </div>
+                      </div>
+                      <motion.div
+                        initial={false}
+                        animate={{
+                          height: isActive ? 'auto' : 0,
+                          opacity: isActive ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                        className='overflow-hidden'
+                      >
+                        <p className='text-color-text mt-4 px-2 text-sm sm:text-base'>
+                          {pregunta.answer}
+                        </p>
+                      </motion.div>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </article>
         </motion.article>
