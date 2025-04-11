@@ -1173,7 +1173,12 @@ export default function DashboardPage() {
             items={todosLosAutos.map((auto) => auto.id)}
             strategy={verticalListSortingStrategy}
           >
-            <div className='space-y-4'>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className='space-y-4'
+            >
               {todosLosAutos.map((auto, idx) => (
                 <SortableAutoCard
                   key={auto.id}
@@ -1194,7 +1199,7 @@ export default function DashboardPage() {
               {currentPage < totalPages && !loadingMore && (
                 <div ref={observerRef} className='h-10'></div>
               )}
-            </div>
+            </motion.div>
           </SortableContext>
         </DndContext>
       )}
