@@ -9,7 +9,7 @@ import { company } from '@/app/constants/constants';
 import ArrowIcon from '@/components/icons/ArrowIcon';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_BASE_URL = 'https://api.fratelliautomotores.com.ar/api';
+const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
 
 interface ApiCar {
   id: string;
@@ -48,7 +48,7 @@ interface ApiResponse {
   cars: ApiCar[];
 }
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 12;
 
 const CatalogoPage = () => {
   const router = useRouter();
@@ -60,12 +60,61 @@ const CatalogoPage = () => {
   const categoriaFilter = searchParams.get('categoria') || '';
   const currentPage = Number(searchParams.get('page')) || 1;
   const searchFilter = searchParams.get('search') || '';
+  const [isMobile, setIsMobile] = useState(false);
 
   const [cars, setCars] = useState<ApiCar[]>([]);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
   const [marcas, setMarcas] = useState<string[]>([]);
+  const [todasLasMarcas, setTodasLasMarcas] = useState<string[]>([]);
   const [categorias, setCategorias] = useState<string[]>([]);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    // Verificar inicialmente
+    checkIfMobile();
+
+    // Agregar listener para cambios de tamaño
+    window.addEventListener('resize', checkIfMobile);
+
+    // Limpiar listener
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
+  // Función para obtener todas las marcas disponibles
+  const fetchMarcas = async () => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/cars`);
+      if (!response.ok) {
+        throw new Error('Error al cargar las marcas');
+      }
+      const data: ApiResponse = await response.json();
+      const uniqueBrands = Array.from(
+        new Set(data.cars.map((car: ApiCar) => car.brand))
+      ).sort();
+      setTodasLasMarcas(uniqueBrands);
+      setMarcas(uniqueBrands);
+    } catch (error) {
+      console.error('Error al cargar las marcas:', error);
+    }
+  };
+
+  // Función para obtener las categorías del API
+  const fetchCategories = async () => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/categories`);
+      if (!response.ok) {
+        throw new Error('Error al cargar las categorías');
+      }
+      const data = await response.json();
+      setCategorias(data.map((cat: any) => cat.name).sort());
+    } catch (error) {
+      console.error('Error al cargar las categorías:', error);
+    }
+  };
 
   // Función para obtener los autos con filtros
   const fetchCars = async (
@@ -74,7 +123,7 @@ const CatalogoPage = () => {
   ) => {
     setLoading(true);
     try {
-      let url = `${API_BASE_URL}/cars?page=${page}&limit=${ITEMS_PER_PAGE}`;
+      let url = `${API_BASE_URL}/api/cars?page=${page}&limit=${ITEMS_PER_PAGE}`;
 
       if (filters?.search) {
         url += `&model=${encodeURIComponent(filters.search)}`;
@@ -93,23 +142,18 @@ const CatalogoPage = () => {
       const data: ApiResponse = await response.json();
       setCars(data.cars);
       setTotalPages(data.totalPages);
-
-      // Extraer marcas y categorías únicas
-      const uniqueBrands = Array.from(
-        new Set(data.cars.map((car) => car.brand))
-      ).sort();
-      const uniqueCategories = Array.from(
-        new Set(data.cars.map((car) => car.Category.name))
-      ).sort();
-
-      setMarcas(uniqueBrands);
-      setCategorias(uniqueCategories);
     } catch (error) {
       console.error('Error al cargar los vehículos:', error);
     } finally {
       setLoading(false);
     }
   };
+
+  // Efecto para cargar las marcas y categorías al montar el componente
+  useEffect(() => {
+    fetchMarcas();
+    fetchCategories();
+  }, []);
 
   // Efecto para cargar los autos cuando cambian los filtros
   useEffect(() => {
@@ -227,7 +271,7 @@ const CatalogoPage = () => {
                 placeholder='Buscar vehículo...'
                 value={searchValue}
                 onChange={handleSearch}
-                onKeyPress={(e) => {
+                onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     e.preventDefault();
                     executeSearch(searchValue);
@@ -235,7 +279,12 @@ const CatalogoPage = () => {
                 }}
                 className='w-full px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
               />
-              <SearchIcon className='absolute right-3 top-1/2 -translate-y-1/2 size-5' />
+              <button
+                onClick={() => executeSearch(searchValue)}
+                className='absolute right-3 top-1/2 -translate-y-1/2'
+              >
+                <SearchIcon className='size-5' />
+              </button>
             </div>
 
             <div className='flex flex-row sm:flex-row gap-3 sm:gap-5'>
@@ -245,8 +294,10 @@ const CatalogoPage = () => {
                 onChange={(e) => updateFilters('marca', e.target.value)}
                 className='w-full sm:w-auto px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
               >
-                <option value=''>Marcas</option>
-                {marcas.map((marca) => (
+                <option value=''>
+                  {isMobile ? 'Marcas' : 'Todas las marcas'}
+                </option>
+                {todasLasMarcas.map((marca) => (
                   <option key={marca} value={marca}>
                     {marca}
                   </option>
@@ -259,7 +310,9 @@ const CatalogoPage = () => {
                 onChange={(e) => updateFilters('categoria', e.target.value)}
                 className='w-full sm:w-auto px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
               >
-                <option value=''>Categorías</option>
+                <option value=''>
+                  {isMobile ? 'Categorías' : 'Todas las categorías'}
+                </option>
                 {categorias.map((categoria) => (
                   <option key={categoria} value={categoria}>
                     {categoria}
