@@ -77,7 +77,7 @@ const CatalogoPage = () => {
       let url = `${API_BASE_URL}/cars?page=${page}&limit=${ITEMS_PER_PAGE}`;
 
       if (filters?.search) {
-        url += `&search=${encodeURIComponent(filters.search)}`;
+        url += `&model=${encodeURIComponent(filters.search)}`;
       }
       if (filters?.marca) {
         url += `&brand=${encodeURIComponent(filters.marca)}`;
