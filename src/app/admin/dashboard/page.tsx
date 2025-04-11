@@ -1,15 +1,41 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import AutoModal from '../components/AutoModal';
 import { motion } from 'framer-motion';
-import { Edit, Trash, Plus, RefreshCw, Star, Zap } from 'lucide-react';
+import {
+  Edit,
+  Trash,
+  Plus,
+  RefreshCw,
+  Star,
+  Zap,
+  GripVertical,
+  Save,
+} from 'lucide-react';
 import Image from 'next/image';
 import Cookies from 'js-cookie';
 import { ConfirmModal } from '../components/ConfirmModal';
 import SellConfirmModal from '../components/SellConfirmModal';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import { Notification } from '../components/Notification';
+import {
+  DndContext,
+  closestCenter,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  DragEndEvent,
+} from '@dnd-kit/core';
+import {
+  arrayMove,
+  SortableContext,
+  sortableKeyboardCoordinates,
+  useSortable,
+  verticalListSortingStrategy,
+} from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
 
 // Interfaz para los datos del formulario de autos
 interface AutoFormData {
@@ -93,6 +119,211 @@ interface ApiResponse {
   cars: ApiCar[];
 }
 
+// Componente para un auto que se puede arrastrar
+interface SortableAutoCardProps {
+  auto: Auto;
+  index: number;
+  onEdit: (auto: Auto) => void;
+  onDelete: (auto: Auto) => void;
+  onSell: (auto: Auto) => void;
+  onToggleActive: (id: string) => void;
+  onToggleDestacado: (id: string) => void;
+  onToggleFavorito: (id: string) => void;
+  isDragDisabled?: boolean;
+}
+
+const SortableAutoCard = ({
+  auto,
+  index,
+  onEdit,
+  onDelete,
+  onSell,
+  onToggleActive,
+  onToggleDestacado,
+  onToggleFavorito,
+  isDragDisabled = false,
+}: SortableAutoCardProps) => {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({
+    id: auto.id,
+    disabled: isDragDisabled,
+  });
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    zIndex: isDragging ? 10 : 1,
+  };
+
+  return (
+    <div
+      ref={setNodeRef}
+      style={style}
+      className={`relative bg-white rounded-lg overflow-hidden shadow-sm transition-all ${
+        isDragging ? 'shadow-lg border-2 border-red-400 opacity-90' : ''
+      }`}
+    >
+      <div className='p-4 sm:p-6'>
+        <div className='flex flex-col sm:flex-row gap-4'>
+          <div className='relative w-full sm:w-[145px] h-[116px] md:w-[170px] md:h-[136px] flex-shrink-0'>
+            {auto.imagenes && auto.imagenes.length > 0 ? (
+              <Image
+                priority={index < 4 ? true : false}
+                src={auto.imagenes[0]}
+                alt={`${auto.modelo}`}
+                fill
+                className='object-cover rounded-lg'
+              />
+            ) : (
+              <div className='w-full h-full flex items-center justify-center bg-gray-100 rounded-lg'>
+                <span className='text-gray-400'>Sin imagen</span>
+              </div>
+            )}
+            {!auto.active && (
+              <div className='absolute inset-0 bg-black/50 flex items-center justify-center rounded-lg'>
+                <span className='text-white font-semibold'>Pausado</span>
+              </div>
+            )}
+            <div
+              className='absolute top-2 left-2 p-1.5 bg-white/80 rounded-full shadow-sm cursor-grab z-10 hover:bg-white'
+              {...attributes}
+              {...listeners}
+            >
+              <GripVertical size={16} className='text-gray-600' />
+            </div>
+          </div>
+
+          <div className='flex-grow'>
+            <div className='flex justify-between items-start'>
+              <div>
+                <h3 className='text-lg font-semibold text-color-text'>
+                  {auto.modelo}
+                </h3>
+                <p className='text-gray-600'>{auto.año}</p>
+                {auto.precio && auto.precio > 0 ? (
+                  <p className='text-xl font-bold text-color-primary mt-1'>
+                    ${auto.precio.toLocaleString('es-AR')}
+                  </p>
+                ) : (
+                  ''
+                )}
+                <p className='text-sm text-gray-500 mt-2'>
+                  {auto.kilometraje.toLocaleString('es-AR')} km •{' '}
+                  {auto.combustible}
+                </p>
+              </div>
+              <div className='flex gap-2'>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onToggleActive(auto.id);
+                  }}
+                  className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                    auto.active
+                      ? 'bg-green-100 text-green-700 hover:bg-green-200'
+                      : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'
+                  }`}
+                >
+                  {auto.active ? 'Activo' : 'Pausado'}
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (auto.active) {
+                      onToggleDestacado(auto.id);
+                    }
+                  }}
+                  className={`p-2 rounded-full transition-all ${
+                    auto.destacado
+                      ? 'bg-blue-100 text-blue-700 hover:bg-blue-200 shadow-sm'
+                      : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                  } ${!auto.active ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  title={
+                    !auto.active
+                      ? 'Auto pausado, no puede modificarse'
+                      : auto.destacado
+                      ? 'Quitar de Ingreso'
+                      : 'Marcar como Ingreso'
+                  }
+                >
+                  {auto.destacado ? (
+                    <Zap size={20} fill='currentColor' />
+                  ) : (
+                    <Zap size={20} />
+                  )}
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (auto.active) {
+                      onToggleFavorito(auto.id);
+                    }
+                  }}
+                  className={`p-2 rounded-full transition-all ${
+                    auto.favorito
+                      ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200 shadow-sm'
+                      : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                  } ${!auto.active ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  title={
+                    !auto.active
+                      ? 'Auto pausado, no puede modificarse'
+                      : auto.favorito
+                      ? 'Quitar de favoritos'
+                      : 'Marcar como favorito'
+                  }
+                >
+                  {auto.favorito ? (
+                    <Star size={20} fill='currentColor' />
+                  ) : (
+                    <Star size={20} />
+                  )}
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onEdit(auto);
+                  }}
+                  className='p-2 hover:bg-gray-100 rounded-full transition-colors'
+                >
+                  <Edit size={20} className='text-color-primary' />
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onDelete(auto);
+                  }}
+                  className='p-2 hover:bg-gray-100 rounded-full transition-colors'
+                >
+                  <Trash size={20} className='text-red-500' />
+                </button>
+              </div>
+            </div>
+
+            {/* Botón de vender con posición absoluta */}
+            <div className='mt-4 flex justify-end'>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onSell(auto);
+                }}
+                className='bg-slate-700 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors'
+              >
+                Vender
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function DashboardPage() {
   const [autos, setAutos] = useState<Auto[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -108,6 +339,8 @@ export default function DashboardPage() {
   const [autoToSell, setAutoToSell] = useState<Auto | null>(null);
   const [loadingMore, setLoadingMore] = useState(false);
   const [todosLosAutos, setTodosLosAutos] = useState<Auto[]>([]);
+  const [ordenModificado, setOrdenModificado] = useState(false);
+  const [guardandoOrden, setGuardandoOrden] = useState(false);
   const [notification, setNotification] = useState<{
     isOpen: boolean;
     type: 'success' | 'error';
@@ -117,6 +350,18 @@ export default function DashboardPage() {
     type: 'success',
     message: '',
   });
+
+  // Configuración de sensores para DnD
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 8, // Distancia en píxeles que se debe mover antes de comenzar el arrastre
+      },
+    }),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
 
   const fetchAutos = async (page = 1, append = false) => {
     if (page === 1) {
@@ -776,6 +1021,89 @@ export default function DashboardPage() {
     }
   };
 
+  // Crear una referencia para el elemento observado
+  const observerRef = useCallback(
+    (node: HTMLDivElement | null) => {
+      if (node !== null && currentPage < totalPages && !loadingMore) {
+        observer.current?.observe(node);
+      }
+    },
+    [currentPage, totalPages, loadingMore]
+  );
+
+  // Función para manejar el drag and drop
+  const handleDragEnd = (event: DragEndEvent) => {
+    const { active, over } = event;
+
+    if (!over) return;
+
+    if (active.id !== over.id) {
+      setTodosLosAutos((items) => {
+        const oldIndex = items.findIndex((item) => item.id === active.id);
+        const newIndex = items.findIndex((item) => item.id === over.id);
+
+        // Si no encontramos los índices, no hacemos nada
+        if (oldIndex === -1 || newIndex === -1) return items;
+
+        const newItems = arrayMove(items, oldIndex, newIndex);
+
+        // Marcar que el orden ha sido modificado
+        setOrdenModificado(true);
+
+        return newItems;
+      });
+    }
+  };
+
+  // Función para guardar el nuevo orden
+  const guardarOrden = async () => {
+    setGuardandoOrden(true);
+    try {
+      const token = Cookies.get('admin-auth');
+
+      // Preparar los datos en el formato esperado por la API
+      const updates = todosLosAutos.map((auto, index) => ({
+        id: auto.id,
+        position: (index + 1) * 1000, // Usar múltiplos de 1000 para permitir inserciones futuras
+      }));
+
+      const response = await fetch(`${API_BASE_URL}/api/cars/positions`, {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ updates }),
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          `Error ${response.status}: No se pudo actualizar el orden`
+        );
+      }
+
+      setNotification({
+        isOpen: true,
+        type: 'success',
+        message: 'El orden de los vehículos ha sido actualizado correctamente.',
+      });
+
+      setOrdenModificado(false);
+    } catch (error) {
+      console.error('Error al guardar el orden:', error);
+      setNotification({
+        isOpen: true,
+        type: 'error',
+        message:
+          error instanceof Error
+            ? error.message
+            : 'Error al actualizar el orden de los vehículos',
+      });
+    } finally {
+      setGuardandoOrden(false);
+    }
+  };
+
   console.log(autos);
 
   if (loading && autos.length === 0) {
@@ -788,24 +1116,36 @@ export default function DashboardPage() {
 
   return (
     <div className='container mx-auto px-4 py-8'>
-      <div className='flex justify-between items-center mb-6'>
-        <div>
-          <h1 className='text-2xl font-semibold text-color-text'>
-            Autos{' '}
-            {loading && (
-              <RefreshCw className='inline ml-2 h-5 w-5 animate-spin' />
-            )}
-          </h1>
-        </div>
-        <div className='flex gap-2'>
+      <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4'>
+        <h1 className='text-2xl font-semibold text-color-text'>
+          Administrar Vehículos{' '}
+          {loading && (
+            <RefreshCw className='inline ml-2 h-5 w-5 animate-spin' />
+          )}
+        </h1>
+        <div className='flex items-center gap-3'>
+          {ordenModificado && (
+            <button
+              onClick={guardarOrden}
+              disabled={guardandoOrden}
+              className='flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors disabled:opacity-70'
+            >
+              {guardandoOrden ? (
+                <div className='h-4 w-4 border-2 border-blue-200 border-t-blue-500 rounded-full animate-spin'></div>
+              ) : (
+                <Save size={16} />
+              )}
+              Guardar orden
+            </button>
+          )}
           <button
             onClick={() => {
               setSelectedAuto(undefined);
               setIsModalOpen(true);
             }}
-            className='px-4 py-2 bg-color-primary text-white rounded-lg hover:bg-color-primary/90 transition-colors flex items-center gap-2'
+            className='flex items-center gap-2 bg-color-primary hover:bg-color-primary/90 text-white px-4 py-2 rounded-md transition-colors'
           >
-            <Plus size={20} />
+            <Plus size={18} />
             Agregar Auto
           </button>
         </div>
@@ -817,201 +1157,46 @@ export default function DashboardPage() {
         </div>
       )}
 
-      {autos.length === 0 && !loading && !error ? (
-        <div className='text-center py-10 bg-gray-50 rounded-lg'>
-          <p className='text-gray-500'>No hay autos para mostrar</p>
-          <button
-            onClick={() => fetchAutos(1)}
-            className='mt-4 px-4 py-2 bg-color-primary text-white rounded-lg hover:bg-color-primary/90 transition-colors'
-          >
-            Cargar autos
-          </button>
+      {todosLosAutos.length === 0 && !loading ? (
+        <div className='text-center py-12 bg-gray-50 rounded-lg'>
+          <p className='text-gray-500'>
+            No hay autos disponibles. Agrega uno nuevo para comenzar.
+          </p>
         </div>
       ) : (
-        <div className='space-y-4'>
-          {autos.map((auto, idx) => (
-            <motion.div
-              key={auto.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className='bg-white rounded-lg [box-shadow:0_0_10px_rgba(0,0,0,0.07)] hover:[box-shadow:0_0_10px_rgba(0,0,0,0.2)] transition-shadow p-4 flex flex-col cursor-pointer relative'
-              onClick={() => {
-                setSelectedAuto(auto);
-                setIsModalOpen(true);
-              }}
-            >
-              <div className='flex items-center gap-4'>
-                <div className='relative w-[145px] h-[116px] md:w-[170px] md:h-[136px] flex-shrink-0'>
-                  {auto.imagenes && auto.imagenes.length > 0 ? (
-                    <Image
-                      priority={idx < 4 ? true : false}
-                      src={auto.imagenes[0]}
-                      alt={`${auto.modelo}`}
-                      fill
-                      className='object-cover rounded-lg'
-                    />
-                  ) : (
-                    <div className='w-full h-full flex items-center justify-center bg-gray-100 rounded-lg'>
-                      <span className='text-gray-400'>Sin imagen</span>
-                    </div>
-                  )}
-                  {!auto.active && (
-                    <div className='absolute inset-0 bg-black/50 flex items-center justify-center rounded-lg'>
-                      <span className='text-white font-semibold'>Pausado</span>
-                    </div>
-                  )}
-                </div>
-                <div className='flex-grow'>
-                  <div className='flex justify-between items-start'>
-                    <div>
-                      <h3 className='text-lg font-semibold text-color-text'>
-                        {auto.modelo}
-                      </h3>
-                      <p className='text-gray-600'>{auto.año}</p>
-                      {auto.precio && auto.precio > 0 ? (
-                        <p className='text-xl font-bold text-color-primary mt-1'>
-                          ${auto.precio.toLocaleString('es-AR')}
-                        </p>
-                      ) : (
-                        ''
-                      )}
-                      <p className='text-sm text-gray-500 mt-2'>
-                        {auto.kilometraje.toLocaleString('es-AR')} km •{' '}
-                        {auto.combustible}
-                      </p>
-                    </div>
-                    <div
-                      className='flex gap-2'
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleToggleEstado(auto.id);
-                        }}
-                        className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                          auto.active
-                            ? 'bg-green-100 text-green-700 hover:bg-green-200'
-                            : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'
-                        }`}
-                      >
-                        {auto.active ? 'Activo' : 'Pausado'}
-                      </button>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          if (auto.active) {
-                            handleToggleDestacado(auto.id);
-                          }
-                        }}
-                        className={`p-2 rounded-full transition-all ${
-                          auto.destacado
-                            ? 'bg-blue-100 text-blue-700 hover:bg-blue-200 shadow-sm'
-                            : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-                        } ${
-                          !auto.active ? 'opacity-50 cursor-not-allowed' : ''
-                        }`}
-                        title={
-                          !auto.active
-                            ? 'Auto pausado, no puede modificarse'
-                            : auto.destacado
-                            ? 'Quitar de Ingreso'
-                            : 'Marcar como Ingreso'
-                        }
-                      >
-                        {auto.destacado ? (
-                          <Zap size={20} fill='currentColor' />
-                        ) : (
-                          <Zap size={20} />
-                        )}
-                      </button>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          if (auto.active) {
-                            handleToggleFavorito(auto.id);
-                          }
-                        }}
-                        className={`p-2 rounded-full transition-all ${
-                          auto.favorito
-                            ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200 shadow-sm'
-                            : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
-                        } ${
-                          !auto.active ? 'opacity-50 cursor-not-allowed' : ''
-                        }`}
-                        title={
-                          !auto.active
-                            ? 'Auto pausado, no puede modificarse'
-                            : auto.favorito
-                            ? 'Quitar de favoritos'
-                            : 'Marcar como favorito'
-                        }
-                      >
-                        {auto.favorito ? (
-                          <Star size={20} fill='currentColor' />
-                        ) : (
-                          <Star size={20} />
-                        )}
-                      </button>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setSelectedAuto(auto);
-                          setIsModalOpen(true);
-                        }}
-                        className='p-2 hover:bg-gray-100 rounded-full transition-colors'
-                      >
-                        <Edit size={20} className='text-color-primary' />
-                      </button>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleDeleteClick(auto);
-                        }}
-                        className='p-2 hover:bg-gray-100 rounded-full transition-colors'
-                      >
-                        <Trash size={20} className='text-red-500' />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Botón de vender con posición absoluta */}
-              <div
-                className='absolute bottom-4 right-4'
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleSellClick(auto);
+        <DndContext
+          sensors={sensors}
+          collisionDetection={closestCenter}
+          onDragEnd={handleDragEnd}
+        >
+          <SortableContext
+            items={todosLosAutos.map((auto) => auto.id)}
+            strategy={verticalListSortingStrategy}
+          >
+            <div className='space-y-4'>
+              {todosLosAutos.map((auto, idx) => (
+                <SortableAutoCard
+                  key={auto.id}
+                  auto={auto}
+                  index={idx}
+                  onEdit={() => {
+                    setSelectedAuto(auto);
+                    setIsModalOpen(true);
                   }}
-                  className='bg-slate-700 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors'
-                >
-                  Vender
-                </button>
-              </div>
-            </motion.div>
-          ))}
-
-          {loadingMore && (
-            <div className='flex justify-center py-4'>
-              <div className='animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-color-primary'></div>
+                  onDelete={handleDeleteClick}
+                  onSell={handleSellClick}
+                  onToggleActive={handleToggleEstado}
+                  onToggleDestacado={handleToggleDestacado}
+                  onToggleFavorito={handleToggleFavorito}
+                  isDragDisabled={guardandoOrden}
+                />
+              ))}
+              {currentPage < totalPages && !loadingMore && (
+                <div ref={observerRef} className='h-10'></div>
+              )}
             </div>
-          )}
-
-          {currentPage < totalPages && !loadingMore && (
-            <div
-              ref={(node) => {
-                if (node && observer.current) {
-                  observer.current.observe(node);
-                }
-              }}
-              className='h-10'
-            />
-          )}
-        </div>
+          </SortableContext>
+        </DndContext>
       )}
 
       <p className='mx-auto text-center text-gray-500 mt-5'>
