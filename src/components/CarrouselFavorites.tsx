@@ -168,7 +168,7 @@ const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
                     className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
                     src={
                       auto.Images.sort((a, b) => a.order - b.order)[0]
-                        ?.imageUrl || '/assets/placeholder.webp'
+                        ?.thumbnailUrl || '/assets/placeholder.webp'
                     }
                     alt={`${auto.model}`}
                   />

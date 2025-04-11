@@ -52,13 +52,13 @@ const NosotrosPage = () => {
             >
               <Image
                 priority
-                className='rounded w-[300px] md:w-[450px] lg:w-[550px] transition-transform duration-700 group-hover:scale-105'
+                className='rounded w-[300px] md:w-[450px] lg:w-[550px]'
                 src='/assets/nosotros/local-historia.webp'
                 alt='Local antiguo de Fratelli'
                 width={608}
                 height={480}
               />
-              <div className='absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+              <div className='absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent pb-5 pt-9 px-5 transition-opacity duration-300'>
                 <p className='text-sm text-white italic'>
                   Nuestro primer local en el año 2005
                 </p>
@@ -112,13 +112,13 @@ const NosotrosPage = () => {
             >
               <Image
                 priority
-                className='rounded w-[300px] md:w-[450px] transition-transform duration-700 group-hover:scale-105'
+                className='rounded w-[300px] md:w-[450px]'
                 src='/assets/nosotros/nosotros-2.webp'
                 alt='Nuestra misión'
                 width={608}
                 height={480}
               />
-              <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+              <div className='absolute bottom-0 right-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent h-20'></div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -151,74 +151,6 @@ const NosotrosPage = () => {
               </div>
             </motion.div>
           </motion.article>
-
-          {/* Valores y compromiso */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: '-100px' }}
-            className='w-full bg-color-primary/10 py-10 md:py-16 mt-10'
-          >
-            <div className='max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10'>
-              <motion.h3
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className='text-2xl sm:text-3xl md:text-4xl font-bold text-color-primary text-center mb-8'
-              >
-                Nuestro Compromiso
-              </motion.h3>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10'>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className='bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300'
-                >
-                  <h4 className='text-xl font-bold text-color-primary mb-3'>
-                    Calidad Garantizada
-                  </h4>
-                  <p className='text-color-text'>
-                    Cada vehículo pasa por un riguroso proceso de inspección de
-                    más de 50 puntos antes de llegar a nuestro showroom.
-                  </p>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  viewport={{ once: true }}
-                  className='bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300'
-                >
-                  <h4 className='text-xl font-bold text-color-secondary mb-3'>
-                    Atención Personalizada
-                  </h4>
-                  <p className='text-color-text'>
-                    Entendemos que cada cliente es único, por eso ofrecemos un
-                    servicio adaptado a tus necesidades específicas.
-                  </p>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
-                  viewport={{ once: true }}
-                  className='bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300'
-                >
-                  <h4 className='text-xl font-bold text-color-primary mb-3'>
-                    Transparencia Total
-                  </h4>
-                  <p className='text-color-text'>
-                    Te brindamos toda la información sobre el vehículo que estás
-                    por adquirir, sin sorpresas ni letra chica.
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
     </>
