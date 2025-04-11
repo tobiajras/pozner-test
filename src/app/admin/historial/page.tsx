@@ -108,7 +108,7 @@ export default function HistorialPage() {
                     <Image
                       priority={idx < 4 ? true : false}
                       src={auto.thumbnailUrl}
-                      alt={`${auto.brand} ${auto.model}`}
+                      alt={`${auto.model}`}
                       fill
                       className='object-cover rounded-lg'
                     />
@@ -125,7 +125,7 @@ export default function HistorialPage() {
                   <div className='space-y-4'>
                     <div>
                       <h3 className='text-xl font-semibold text-color-text'>
-                        {auto.brand} {auto.model}
+                        {auto.model}
                       </h3>
                       <p className='text-gray-600 mt-1'>{auto.year}</p>
                     </div>

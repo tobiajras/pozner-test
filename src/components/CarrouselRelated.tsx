@@ -180,7 +180,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                     src={
                       auto.Images[0]?.thumbnailUrl || '/assets/placeholder.webp'
                     }
-                    alt={`${auto.brand} ${auto.model}`}
+                    alt={`${auto.model}`}
                   />
                   {/* Overlay con degradado */}
                   <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
@@ -203,7 +203,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                 <div className='p-4'>
                   {/* Nombre del vehículo */}
                   <h3 className='text-lg md:text-xl text-color-title font-semibold line-clamp-2 mb-2 min-h-[3.5rem]'>
-                    {auto.brand} {auto.model}
+                    {auto.model}
                   </h3>
 
                   {/* Línea separadora */}

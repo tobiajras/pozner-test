@@ -181,7 +181,7 @@ export default function AutoDetailPage() {
                 >
                   <Image
                     src={image.imageUrl}
-                    alt={`${car.brand} ${car.model} - Imagen ${index + 1}`}
+                    alt={`${car.model} - Imagen ${index + 1}`}
                     fill
                     className='object-cover'
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -226,13 +226,13 @@ export default function AutoDetailPage() {
               <button
                 key={index}
                 onClick={() => scrollTo(index)}
-                className={`relative w-20 aspect-[4/3] flex-shrink-0 rounded overflow-hidden outline-none ${
+                className={`relative w-32 aspect-[4/3] flex-shrink-0 rounded overflow-hidden outline-none ${
                   selectedIndex === index ? 'ring-2 ring-color-primary' : ''
                 }`}
               >
                 <Image
                   src={image.thumbnailUrl}
-                  alt={`${car.brand} ${car.model} - Miniatura ${index + 1}`}
+                  alt={`${car.model} - Miniatura ${index + 1}`}
                   fill
                   sizes='96px'
                   className='object-cover'
@@ -312,7 +312,7 @@ export default function AutoDetailPage() {
           {/* Botón de WhatsApp */}
           <div className='flex mt-3'>
             <Link
-              href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.brand} ${car.model}`}
+              href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
               target='_blank'
               rel='noopener noreferrer'
               className={`${

@@ -313,7 +313,7 @@ const CatalogoPage = () => {
                               car.Images[0]?.thumbnailUrl ||
                               '/assets/catalogo/placeholder.webp'
                             }
-                            alt={`${car.brand} ${car.model}`}
+                            alt={`${car.model}`}
                             width={451}
                             height={600}
                           />
@@ -338,7 +338,7 @@ const CatalogoPage = () => {
                         <div className='w-full px-4 py-4'>
                           {/* Nombre del vehículo */}
                           <h3 className='text-lg md:text-xl text-color-title font-semibold line-clamp-2 mb-2 min-h-[3.5rem]'>
-                            {`${car.brand} ${car.model}`}
+                            {`${car.model}`}
                           </h3>
 
                           {/* Línea separadora */}

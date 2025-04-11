@@ -731,7 +731,7 @@ export default function DashboardPage() {
                     <Image
                       priority={idx < 4 ? true : false}
                       src={auto.imagenes[0]}
-                      alt={`${auto.marca} ${auto.modelo}`}
+                      alt={`${auto.modelo}`}
                       fill
                       className='object-cover rounded-lg'
                     />
