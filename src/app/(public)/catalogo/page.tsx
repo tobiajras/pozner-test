@@ -48,6 +48,13 @@ interface ApiResponse {
   cars: ApiCar[];
 }
 
+interface Category {
+  id: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 const ITEMS_PER_PAGE = 12;
 
 const CatalogoPage = () => {
@@ -65,7 +72,6 @@ const CatalogoPage = () => {
   const [cars, setCars] = useState<ApiCar[]>([]);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [marcas, setMarcas] = useState<string[]>([]);
   const [todasLasMarcas, setTodasLasMarcas] = useState<string[]>([]);
   const [categorias, setCategorias] = useState<string[]>([]);
 
@@ -96,7 +102,6 @@ const CatalogoPage = () => {
         new Set(data.cars.map((car: ApiCar) => car.brand))
       ).sort();
       setTodasLasMarcas(uniqueBrands);
-      setMarcas(uniqueBrands);
     } catch (error) {
       console.error('Error al cargar las marcas:', error);
     }
@@ -109,8 +114,8 @@ const CatalogoPage = () => {
       if (!response.ok) {
         throw new Error('Error al cargar las categorías');
       }
-      const data = await response.json();
-      setCategorias(data.map((cat: any) => cat.name).sort());
+      const data: Category[] = await response.json();
+      setCategorias(data.map((cat) => cat.name).sort());
     } catch (error) {
       console.error('Error al cargar las categorías:', error);
     }
