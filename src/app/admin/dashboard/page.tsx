@@ -457,7 +457,8 @@ export default function DashboardPage() {
       // Cerrar el modal y actualizar la lista
       setIsModalOpen(false);
       setSelectedAuto(undefined);
-      fetchAutos(currentPage);
+      setCurrentPage(1);
+      fetchAutos(1, false);
     } catch (error) {
       console.error('Error al crear el auto:', error);
 
@@ -581,7 +582,7 @@ export default function DashboardPage() {
       // Cerrar el modal y actualizar la lista
       setIsModalOpen(false);
       setSelectedAuto(undefined);
-      fetchAutos(currentPage);
+      fetchAutos(currentPage, false);
     } catch (error) {
       console.error('Error al actualizar el auto:', error);
 
