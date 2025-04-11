@@ -1117,12 +1117,14 @@ export default function DashboardPage() {
   return (
     <div className='container mx-auto px-4 py-8'>
       <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4'>
-        <h1 className='text-2xl font-semibold text-color-text'>
-          Administrar Vehículos{' '}
-          {loading && (
-            <RefreshCw className='inline ml-2 h-5 w-5 animate-spin' />
-          )}
-        </h1>
+        <div className='flex flex-col gap-2'>
+          <h1 className='text-2xl font-semibold text-color-text'>
+            Administrar Vehículos{' '}
+            {loading && (
+              <RefreshCw className='inline ml-2 h-5 w-5 animate-spin' />
+            )}
+          </h1>
+        </div>
         <div className='flex items-center gap-3'>
           {ordenModificado && (
             <button
@@ -1138,6 +1140,20 @@ export default function DashboardPage() {
               Guardar orden
             </button>
           )}
+          <div className='flex items-center gap-2 text-sm'>
+            <div className='bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full'>
+              <span className='font-semibold'>
+                {todosLosAutos.filter((auto) => auto.destacado).length}/10
+              </span>{' '}
+              ingresos
+            </div>
+            <div className='bg-yellow-100 text-yellow-700 px-3 py-1.5 rounded-full'>
+              <span className='font-semibold'>
+                {todosLosAutos.filter((auto) => auto.favorito).length}/10
+              </span>{' '}
+              destacados
+            </div>
+          </div>
           <button
             onClick={() => {
               setSelectedAuto(undefined);
