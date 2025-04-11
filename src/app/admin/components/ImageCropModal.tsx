@@ -23,7 +23,7 @@ const ImageCropModal = ({
   const handleCrop = () => {
     if (cropper) {
       const canvas = cropper.getCroppedCanvas();
-      onCrop(canvas.toDataURL());
+      onCrop(canvas.toDataURL('image/jpeg', 1.0));
     }
   };
 

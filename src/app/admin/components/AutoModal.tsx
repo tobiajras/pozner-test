@@ -224,7 +224,6 @@ const AutoModal = ({
         !formData.modelo ||
         !formData.año ||
         isNaN(parseInt(formData.año)) ||
-        !formData.descripcion ||
         !formData.categoria ||
         !formData.transmision ||
         !formData.combustible ||
@@ -591,7 +590,6 @@ const AutoModal = ({
                           className={textareaStyles}
                           rows={4}
                           placeholder='Detalles adicionales del vehículo'
-                          required
                         />
                         <div className='text-xs text-gray-500 text-right mt-1'>
                           {formData.descripcion.length}/5000 caracteres

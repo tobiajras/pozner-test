@@ -107,6 +107,7 @@ export default function DashboardPage() {
   const [sellModalOpen, setSellModalOpen] = useState(false);
   const [autoToSell, setAutoToSell] = useState<Auto | null>(null);
   const [loadingMore, setLoadingMore] = useState(false);
+  const [todosLosAutos, setTodosLosAutos] = useState<Auto[]>([]);
   const [notification, setNotification] = useState<{
     isOpen: boolean;
     type: 'success' | 'error';
@@ -164,9 +165,22 @@ export default function DashboardPage() {
         favorito: car.favorite,
       }));
 
+      // Actualizar el array de autos visibles actualmente
       setAutos((prev) =>
         append ? [...prev, ...autosFormateados] : autosFormateados
       );
+
+      // Mantener un registro de todos los autos cargados para usar en paginación
+      if (append) {
+        const autosIds = new Set(todosLosAutos.map((auto) => auto.id));
+        const nuevosAutos = autosFormateados.filter(
+          (auto) => !autosIds.has(auto.id)
+        );
+        setTodosLosAutos((prev) => [...prev, ...nuevosAutos]);
+      } else {
+        setTodosLosAutos(autosFormateados);
+      }
+
       setCurrentPage(data.currentPage);
       setTotalPages(data.totalPages);
       setTotalAutos(data.total);
@@ -222,17 +236,32 @@ export default function DashboardPage() {
         throw new Error('Error al eliminar el auto');
       }
 
-      // Actualizar la lista local eliminando el auto y ajustando el total
+      // Eliminar el auto de la lista actual
       setAutos((prevAutos) =>
         prevAutos.filter((auto) => auto.id !== autoToDelete.id)
       );
+
+      // Eliminar de la lista completa de autos cargados
+      setTodosLosAutos((prev) =>
+        prev.filter((auto) => auto.id !== autoToDelete.id)
+      );
+
+      // Actualizar el contador total
       setTotalAutos((prev) => prev - 1);
 
-      // Si la página actual queda vacía y no es la primera página, cargar la página anterior
+      // Si la página actual está ahora vacía y no es la primera página,
+      // mostrar la página anterior
       if (autos.length === 1 && currentPage > 1) {
-        const prevPage = currentPage - 1;
-        setCurrentPage(prevPage);
-        fetchAutos(prevPage, false);
+        const nuevaPagina = currentPage - 1;
+        setCurrentPage(nuevaPagina);
+
+        // Mostrar los autos de la página anterior desde los que ya tenemos cargados
+        const indiceInicial = (nuevaPagina - 1) * 10;
+        const nuevoAutos = todosLosAutos
+          .filter((auto) => auto.id !== autoToDelete.id)
+          .slice(indiceInicial, indiceInicial + 10);
+
+        setAutos(nuevoAutos);
       }
 
       // Mostrar notificación de éxito
@@ -458,6 +487,7 @@ export default function DashboardPage() {
       setIsModalOpen(false);
       setSelectedAuto(undefined);
       setCurrentPage(1);
+      // Recargar desde la primera página
       fetchAutos(1, false);
     } catch (error) {
       console.error('Error al crear el auto:', error);
@@ -572,17 +602,79 @@ export default function DashboardPage() {
       const responseData = await response.json();
       console.log('Respuesta del servidor:', responseData);
 
+      // En lugar de actualizar parcialmente, vamos a obtener el auto completo actualizado
+      // para asegurarnos de tener las imágenes ordenadas correctamente
+      try {
+        const getResponse = await fetch(
+          `${API_BASE_URL}/api/cars/${selectedAuto.id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              Accept: 'application/json',
+            },
+          }
+        );
+
+        if (getResponse.ok) {
+          const autoCompleto = await getResponse.json();
+          console.log('Auto actualizado obtenido completo:', autoCompleto);
+
+          // Ordenar las imágenes según el orden devuelto por el API
+          const imagenesOrdenadas = autoCompleto.Images
+            ? [...autoCompleto.Images].sort((a, b) => a.order - b.order)
+            : [];
+
+          // Crear el objeto actualizado con las imágenes ordenadas
+          const autoActualizado: Auto = {
+            id: selectedAuto.id,
+            marca: autoCompleto.brand,
+            marcaId: autoCompleto.brand.toLowerCase(),
+            modelo: autoCompleto.model,
+            año: autoCompleto.year,
+            precio: parseFloat(autoCompleto.price),
+            active: autoCompleto.active,
+            imagenes: imagenesOrdenadas.map((img) => img.thumbnailUrl),
+            descripcion: autoCompleto.description,
+            kilometraje: autoCompleto.mileage,
+            combustible: autoCompleto.fuel,
+            transmision: autoCompleto.transmission,
+            puertas: autoCompleto.doors,
+            categoria: autoCompleto.Category?.name || 'Sin categoría',
+            categoriaId: autoCompleto.categoryId,
+            destacado: autoCompleto.featured,
+            favorito: autoCompleto.favorite,
+          };
+
+          // Actualizar en todosLosAutos
+          setTodosLosAutos((prev) =>
+            prev.map((auto) =>
+              auto.id === selectedAuto.id ? autoActualizado : auto
+            )
+          );
+
+          // Actualizar en autos (vista actual)
+          setAutos((prev) =>
+            prev.map((auto) =>
+              auto.id === selectedAuto.id ? autoActualizado : auto
+            )
+          );
+        } else {
+          console.error('Error al obtener el auto actualizado');
+        }
+      } catch (error) {
+        console.error('Error al obtener el auto actualizado:', error);
+      }
+
+      // Cerrar el modal
+      setIsModalOpen(false);
+      setSelectedAuto(undefined);
+
       // Mostrar notificación de éxito
       setNotification({
         isOpen: true,
         type: 'success',
         message: 'Auto actualizado exitosamente',
       });
-
-      // Cerrar el modal y actualizar la lista
-      setIsModalOpen(false);
-      setSelectedAuto(undefined);
-      fetchAutos(currentPage, false);
     } catch (error) {
       console.error('Error al actualizar el auto:', error);
 
@@ -629,9 +721,31 @@ export default function DashboardPage() {
         );
       }
 
-      // Actualizar solo el auto vendido en la lista local
+      // Actualizar la lista actual
       setAutos((prev) => prev.filter((auto) => auto.id !== autoToSell.id));
+
+      // Actualizar la lista completa de autos cargados
+      setTodosLosAutos((prev) =>
+        prev.filter((auto) => auto.id !== autoToSell.id)
+      );
+
+      // Actualizar el contador total
       setTotalAutos((prev) => prev - 1);
+
+      // Si la página actual está ahora vacía y no es la primera página,
+      // mostrar la página anterior
+      if (autos.length === 1 && currentPage > 1) {
+        const nuevaPagina = currentPage - 1;
+        setCurrentPage(nuevaPagina);
+
+        // Mostrar los autos de la página anterior desde los que ya tenemos cargados
+        const indiceInicial = (nuevaPagina - 1) * 10;
+        const nuevoAutos = todosLosAutos
+          .filter((auto) => auto.id !== autoToSell.id)
+          .slice(indiceInicial, indiceInicial + 10);
+
+        setAutos(nuevoAutos);
+      }
 
       // Mostrar notificación de éxito
       setNotification({

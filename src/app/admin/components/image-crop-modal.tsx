@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import ReactCrop, {
   Crop,
   PixelCrop,
@@ -58,25 +58,18 @@ function canvasPreview(
   const cropWidth = crop.width * scaleX;
   const cropHeight = crop.height * scaleY;
 
-  // Configurar el tamaño del canvas de vista previa para que coincida con el área visible
-  canvas.width = crop.width;
-  canvas.height = crop.height;
+  // Configurar el tamaño del canvas para usar las dimensiones reales de la imagen recortada
+  // en lugar de las dimensiones escaladas para la vista previa
+  canvas.width = cropWidth;
+  canvas.height = cropHeight;
 
-  // Asegurarse de que el contexto esté limpio
+  // Asegurarse de que el contexto esté limpio y configurado para alta calidad
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = 'high';
 
-  // Crear un canvas temporal para mantener la calidad
-  const tempCanvas = document.createElement('canvas');
-  tempCanvas.width = cropWidth;
-  tempCanvas.height = cropHeight;
-  const tempCtx = tempCanvas.getContext('2d');
-
-  if (!tempCtx) {
-    throw new Error('No 2d context');
-  }
-
-  // Dibujar la porción recortada en el canvas temporal
-  tempCtx.drawImage(
+  // Dibujar la imagen recortada directamente en el canvas a tamaño completo
+  ctx.drawImage(
     image,
     cropX,
     cropY,
@@ -86,19 +79,6 @@ function canvasPreview(
     0,
     cropWidth,
     cropHeight
-  );
-
-  // Dibujar desde el canvas temporal al canvas de vista previa
-  ctx.drawImage(
-    tempCanvas,
-    0,
-    0,
-    cropWidth,
-    cropHeight,
-    0,
-    0,
-    canvas.width,
-    canvas.height
   );
 }
 
@@ -114,6 +94,7 @@ export function ImageCropModal({
   const imgRef = useRef<HTMLImageElement>(null);
   const previewCanvasRef = useRef<HTMLCanvasElement>(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const [imgSrc, setImgSrc] = useState<string>(imageUrl);
 
   // Limpiar el estado cuando se cierra el modal o cambia la imagen
   useEffect(() => {
@@ -143,6 +124,7 @@ export function ImageCropModal({
     setCrop(initialCrop);
     setCompletedCrop(undefined); // Limpiar el crop completado anterior
     setIsImageLoaded(true);
+    setImgSrc(e.currentTarget.src);
   };
 
   // Actualizar el canvas de vista previa cuando cambia el recorte o se carga la imagen
@@ -167,33 +149,52 @@ export function ImageCropModal({
     onClose();
   };
 
-  // Función para aplicar el recorte y cerrar el modal
-  const handleCropApply = () => {
-    if (imgRef.current && previewCanvasRef.current && (completedCrop || crop)) {
-      const cropToUse = completedCrop || crop;
-      if (cropToUse && cropToUse.width && cropToUse.height) {
-        canvasPreview(
-          imgRef.current,
-          previewCanvasRef.current,
-          cropToUse as PixelCrop
-        );
-        previewCanvasRef.current.toBlob(
-          (blob) => {
-            if (blob) {
-              // Mantener el formato original de la imagen
-              const file = new File([blob], 'cropped-image', {
-                type: blob.type,
-              });
-              onCropComplete(file);
-              handleClose();
-            }
-          },
-          undefined, // No forzar formato
-          undefined // No forzar calidad
-        );
+  const handleCropApply = useCallback(() => {
+    if (
+      completedCrop?.width &&
+      completedCrop?.height &&
+      imgRef.current &&
+      previewCanvasRef.current
+    ) {
+      canvasPreview(imgRef.current, previewCanvasRef.current, completedCrop);
+
+      // Primero, detectar el tipo MIME de la imagen original
+      let mimeType = 'image/jpeg'; // Valor predeterminado
+      if (imgSrc.includes('image/png')) {
+        mimeType = 'image/png';
+      } else if (imgSrc.includes('image/webp')) {
+        mimeType = 'image/webp';
+      } else if (imgSrc.includes('image/gif')) {
+        mimeType = 'image/gif';
       }
+
+      // Obtener el canvas con la imagen recortada
+      const canvas = previewCanvasRef.current;
+
+      // Usar toBlob con el formato correcto y la máxima calidad
+      canvas.toBlob(
+        (blob) => {
+          if (!blob) {
+            console.error('No se pudo crear el blob');
+            return;
+          }
+
+          // Crear un nombre de archivo preservando la extensión original
+          const fileExtension = mimeType.split('/')[1];
+          const fileName = `cropped-image-${new Date().getTime()}.${fileExtension}`;
+
+          // Crear un nuevo File a partir del blob conservando el tipo MIME original
+          const croppedFile = new File([blob], fileName, { type: mimeType });
+
+          // Llamar al callback con el archivo recortado
+          onCropComplete(croppedFile);
+          onClose();
+        },
+        mimeType,
+        1.0
+      );
     }
-  };
+  }, [completedCrop, onCropComplete, onClose, imgSrc]);
 
   if (!isOpen) return null;
 
