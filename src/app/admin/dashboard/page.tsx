@@ -86,6 +86,7 @@ interface Auto {
   categoriaId: string;
   destacado: boolean;
   favorito: boolean;
+  position: number;
 }
 
 // Interfaz para la respuesta de la API
@@ -408,6 +409,7 @@ export default function DashboardPage() {
         categoriaId: car.categoryId,
         destacado: car.featured,
         favorito: car.favorite,
+        position: car.position,
       }));
 
       // Actualizar el array de autos visibles actualmente
@@ -888,6 +890,7 @@ export default function DashboardPage() {
             categoriaId: autoCompleto.categoryId,
             destacado: autoCompleto.featured,
             favorito: autoCompleto.favorite,
+            position: autoCompleto.position,
           };
 
           // Actualizar en todosLosAutos
@@ -1061,10 +1064,19 @@ export default function DashboardPage() {
     try {
       const token = Cookies.get('admin-auth');
 
+      // Obtener el rango de posiciones actual
+      const posiciones = todosLosAutos.map((auto) => auto.position);
+      const minPosition = Math.min(...posiciones);
+      const maxPosition = Math.max(...posiciones);
+      const rango = maxPosition - minPosition;
+      const incremento = rango / (todosLosAutos.length - 1);
+
       // Preparar los datos en el formato esperado por la API
       const updates = todosLosAutos.map((auto, index) => ({
         id: auto.id,
-        position: (index + 1) * 1000, // Usar múltiplos de 1000 para permitir inserciones futuras
+        position: Math.round(
+          minPosition + incremento * (todosLosAutos.length - 1 - index)
+        ), // Mantener el rango original y orden descendente
       }));
 
       const response = await fetch(`${API_BASE_URL}/api/cars/positions`, {
