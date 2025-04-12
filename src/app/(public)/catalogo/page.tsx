@@ -93,15 +93,12 @@ const CatalogoPage = () => {
   // Función para obtener todas las marcas disponibles
   const fetchMarcas = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/cars`);
+      const response = await fetch(`${API_BASE_URL}/api/cars/brands`);
       if (!response.ok) {
         throw new Error('Error al cargar las marcas');
       }
-      const data: ApiResponse = await response.json();
-      const uniqueBrands = Array.from(
-        new Set(data.cars.map((car: ApiCar) => car.brand))
-      ).sort();
-      setTodasLasMarcas(uniqueBrands);
+      const data: string[] = await response.json();
+      setTodasLasMarcas(data.sort());
     } catch (error) {
       console.error('Error al cargar las marcas:', error);
     }
