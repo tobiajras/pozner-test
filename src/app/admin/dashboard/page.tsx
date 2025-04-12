@@ -342,6 +342,8 @@ export default function DashboardPage() {
   const [todosLosAutos, setTodosLosAutos] = useState<Auto[]>([]);
   const [ordenModificado, setOrdenModificado] = useState(false);
   const [guardandoOrden, setGuardandoOrden] = useState(false);
+  const [autosDestacados, setAutosDestacados] = useState<Auto[]>([]);
+  const [autosFavoritos, setAutosFavoritos] = useState<Auto[]>([]);
   const [notification, setNotification] = useState<{
     isOpen: boolean;
     type: 'success' | 'error';
@@ -1116,6 +1118,98 @@ export default function DashboardPage() {
     }
   };
 
+  // Función para obtener los autos destacados
+  const fetchAutosDestacados = async () => {
+    try {
+      const token = Cookies.get('admin-auth');
+      const response = await fetch(`${API_BASE_URL}/api/cars/featured`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al cargar los autos destacados');
+      }
+
+      const data: ApiCar[] = await response.json();
+      const autosFormateados: Auto[] = data.map((car) => ({
+        id: car.id,
+        marca: car.brand,
+        marcaId: car.brand.toLowerCase(),
+        modelo: car.model,
+        año: car.year,
+        precio: parseFloat(car.price),
+        active: car.active,
+        imagenes: car.Images.map((img) => img.thumbnailUrl),
+        descripcion: car.description,
+        kilometraje: car.mileage,
+        combustible: car.fuel,
+        transmision: car.transmission,
+        puertas: car.doors,
+        categoria: car.Category?.name || 'Sin categoría',
+        categoriaId: car.categoryId,
+        destacado: car.featured,
+        favorito: car.favorite,
+        position: car.position,
+      }));
+
+      setAutosDestacados(autosFormateados);
+    } catch (error) {
+      console.error('Error al cargar los autos destacados:', error);
+    }
+  };
+
+  // Función para obtener los autos favoritos
+  const fetchAutosFavoritos = async () => {
+    try {
+      const token = Cookies.get('admin-auth');
+      const response = await fetch(`${API_BASE_URL}/api/cars/favorites`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al cargar los autos favoritos');
+      }
+
+      const data: ApiCar[] = await response.json();
+      const autosFormateados: Auto[] = data.map((car) => ({
+        id: car.id,
+        marca: car.brand,
+        marcaId: car.brand.toLowerCase(),
+        modelo: car.model,
+        año: car.year,
+        precio: parseFloat(car.price),
+        active: car.active,
+        imagenes: car.Images.map((img) => img.thumbnailUrl),
+        descripcion: car.description,
+        kilometraje: car.mileage,
+        combustible: car.fuel,
+        transmision: car.transmission,
+        puertas: car.doors,
+        categoria: car.Category?.name || 'Sin categoría',
+        categoriaId: car.categoryId,
+        destacado: car.featured,
+        favorito: car.favorite,
+        position: car.position,
+      }));
+
+      setAutosFavoritos(autosFormateados);
+    } catch (error) {
+      console.error('Error al cargar los autos favoritos:', error);
+    }
+  };
+
+  // Efecto para cargar los autos destacados y favoritos
+  useEffect(() => {
+    fetchAutosDestacados();
+    fetchAutosFavoritos();
+  }, []);
+
   console.log(autos);
 
   if (loading && autos.length === 0) {
@@ -1154,15 +1248,11 @@ export default function DashboardPage() {
           )}
           <div className='flex items-center gap-2 text-sm'>
             <div className='bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full'>
-              <span className='font-semibold'>
-                {todosLosAutos.filter((auto) => auto.destacado).length}/10
-              </span>{' '}
+              <span className='font-semibold'>{autosDestacados.length}/10</span>{' '}
               ingresos
             </div>
             <div className='bg-yellow-100 text-yellow-700 px-3 py-1.5 rounded-full'>
-              <span className='font-semibold'>
-                {todosLosAutos.filter((auto) => auto.favorito).length}/10
-              </span>{' '}
+              <span className='font-semibold'>{autosFavoritos.length}/10</span>{' '}
               destacados
             </div>
           </div>
