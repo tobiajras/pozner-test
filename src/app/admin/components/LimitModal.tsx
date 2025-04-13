@@ -2,7 +2,7 @@
 
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { Zap, Star, Info } from 'lucide-react';
+import { Zap, Star } from 'lucide-react';
 
 interface LimitModalProps {
   isOpen: boolean;
