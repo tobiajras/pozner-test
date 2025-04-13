@@ -19,6 +19,7 @@ import { ConfirmModal } from '../components/ConfirmModal';
 import SellConfirmModal from '../components/SellConfirmModal';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import { Notification } from '../components/Notification';
+import { LimitModal } from '../components/LimitModal';
 import {
   DndContext,
   closestCenter,
@@ -346,6 +347,10 @@ export default function DashboardPage() {
   const [guardandoOrden, setGuardandoOrden] = useState(false);
   const [autosDestacados, setAutosDestacados] = useState<Auto[]>([]);
   const [autosFavoritos, setAutosFavoritos] = useState<Auto[]>([]);
+  const [limitModalOpen, setLimitModalOpen] = useState(false);
+  const [limitType, setLimitType] = useState<'destacado' | 'favorito'>(
+    'destacado'
+  );
   const [notification, setNotification] = useState<{
     isOpen: boolean;
     type: 'success' | 'error';
@@ -610,6 +615,15 @@ export default function DashboardPage() {
       console.log('Toggling destacado para auto:', id);
       const token = Cookies.get('admin-auth');
 
+      // Verificar si estamos intentando activar un auto destacado y ya llegamos al límite
+      const autoActual = todosLosAutos.find((auto) => auto.id === id);
+      if (autoActual && !autoActual.destacado && autosDestacados.length >= 10) {
+        // Mostrar modal de límite alcanzado
+        setLimitType('destacado');
+        setLimitModalOpen(true);
+        return;
+      }
+
       const response = await fetch(
         `${API_BASE_URL}/api/cars/${id}/toggle-featured`,
         {
@@ -687,6 +701,15 @@ export default function DashboardPage() {
     try {
       console.log('Toggling favorito para auto:', id);
       const token = Cookies.get('admin-auth');
+
+      // Verificar si estamos intentando activar un auto favorito y ya llegamos al límite
+      const autoActual = todosLosAutos.find((auto) => auto.id === id);
+      if (autoActual && !autoActual.favorito && autosFavoritos.length >= 10) {
+        // Mostrar modal de límite alcanzado
+        setLimitType('favorito');
+        setLimitModalOpen(true);
+        return;
+      }
 
       const response = await fetch(
         `${API_BASE_URL}/api/cars/${id}/toggle-favorite`,
@@ -1476,6 +1499,13 @@ export default function DashboardPage() {
         onClose={() => setNotification((prev) => ({ ...prev, isOpen: false }))}
         type={notification.type}
         message={notification.message}
+      />
+
+      {/* Modal de límite alcanzado */}
+      <LimitModal
+        isOpen={limitModalOpen}
+        onClose={() => setLimitModalOpen(false)}
+        type={limitType}
       />
     </div>
   );
