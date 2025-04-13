@@ -125,7 +125,7 @@ const CatalogoPage = () => {
   ) => {
     setLoading(true);
     try {
-      let url = `${API_BASE_URL}/api/cars?page=${page}&limit=${ITEMS_PER_PAGE}`;
+      let url = `${API_BASE_URL}/api/cars?page=${page}&limit=${ITEMS_PER_PAGE}&sort=position:desc`;
 
       if (filters?.search) {
         url += `&model=${encodeURIComponent(filters.search)}`;

@@ -562,6 +562,41 @@ export default function DashboardPage() {
             : auto
         )
       );
+
+      // Actualizar también en todosLosAutos
+      setTodosLosAutos((prevAutos) =>
+        prevAutos.map((auto) =>
+          auto.id === id
+            ? {
+                ...auto,
+                active: autoActualizado.active,
+              }
+            : auto
+        )
+      );
+
+      // Si el auto está en destacados o favoritos, actualizar esas listas también
+      setAutosDestacados((prevAutos) =>
+        prevAutos.map((auto) =>
+          auto.id === id
+            ? {
+                ...auto,
+                active: autoActualizado.active,
+              }
+            : auto
+        )
+      );
+
+      setAutosFavoritos((prevAutos) =>
+        prevAutos.map((auto) =>
+          auto.id === id
+            ? {
+                ...auto,
+                active: autoActualizado.active,
+              }
+            : auto
+        )
+      );
     } catch (error) {
       console.error('Error al cambiar el estado del auto:', error);
       alert('Error al cambiar el estado del auto');
@@ -595,6 +630,7 @@ export default function DashboardPage() {
       const autoActualizado = await response.json();
       console.log('Auto actualizado:', autoActualizado);
 
+      // Actualizar en la lista visible actual
       setAutos((prevAutos) =>
         prevAutos.map((auto) =>
           auto.id === id
@@ -605,6 +641,40 @@ export default function DashboardPage() {
             : auto
         )
       );
+
+      // Actualizar en todos los autos
+      setTodosLosAutos((prevAutos) =>
+        prevAutos.map((auto) =>
+          auto.id === id
+            ? {
+                ...auto,
+                destacado: autoActualizado.featured,
+              }
+            : auto
+        )
+      );
+
+      // Actualizar la lista de autos destacados
+      // Si el auto se convirtió en destacado, añadirlo a la lista si no existe
+      if (autoActualizado.featured) {
+        const autoExistente = autosDestacados.find((auto) => auto.id === id);
+        if (!autoExistente) {
+          // Buscar el auto completo en todosLosAutos
+          const autoCompleto = todosLosAutos.find((auto) => auto.id === id);
+          if (autoCompleto) {
+            setAutosDestacados((prev) => [
+              ...prev,
+              { ...autoCompleto, destacado: true },
+            ]);
+          }
+        }
+      } else {
+        // Si el auto dejó de ser destacado, eliminarlo de la lista
+        setAutosDestacados((prev) => prev.filter((auto) => auto.id !== id));
+      }
+
+      // Volver a obtener la lista completa de destacados para asegurar sincronización
+      fetchAutosDestacados();
     } catch (error) {
       console.error('Error al cambiar el estado de destacado del auto:', error);
       alert('Error al cambiar el estado de destacado del auto');
@@ -638,6 +708,7 @@ export default function DashboardPage() {
       const autoActualizado = await response.json();
       console.log('Auto actualizado:', autoActualizado);
 
+      // Actualizar en la lista visible actual
       setAutos((prevAutos) =>
         prevAutos.map((auto) =>
           auto.id === id
@@ -648,6 +719,40 @@ export default function DashboardPage() {
             : auto
         )
       );
+
+      // Actualizar en todos los autos
+      setTodosLosAutos((prevAutos) =>
+        prevAutos.map((auto) =>
+          auto.id === id
+            ? {
+                ...auto,
+                favorito: autoActualizado.favorite,
+              }
+            : auto
+        )
+      );
+
+      // Actualizar la lista de autos favoritos
+      // Si el auto se convirtió en favorito, añadirlo a la lista si no existe
+      if (autoActualizado.favorite) {
+        const autoExistente = autosFavoritos.find((auto) => auto.id === id);
+        if (!autoExistente) {
+          // Buscar el auto completo en todosLosAutos
+          const autoCompleto = todosLosAutos.find((auto) => auto.id === id);
+          if (autoCompleto) {
+            setAutosFavoritos((prev) => [
+              ...prev,
+              { ...autoCompleto, favorito: true },
+            ]);
+          }
+        }
+      } else {
+        // Si el auto dejó de ser favorito, eliminarlo de la lista
+        setAutosFavoritos((prev) => prev.filter((auto) => auto.id !== id));
+      }
+
+      // Volver a obtener la lista completa de favoritos para asegurar sincronización
+      fetchAutosFavoritos();
     } catch (error) {
       console.error('Error al cambiar el estado de favorito del auto:', error);
       alert('Error al cambiar el estado de favorito del auto');
@@ -1223,13 +1328,16 @@ export default function DashboardPage() {
   return (
     <div className='container mx-auto px-4 py-8'>
       <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4'>
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col'>
           <h1 className='text-2xl font-semibold text-color-text'>
             Administrar Vehículos{' '}
             {loading && (
               <RefreshCw className='inline ml-2 h-5 w-5 animate-spin' />
             )}
           </h1>
+          <p className='text-gray-500'>
+            Total: <span className='font-medium'>{totalAutos}</span> vehículos
+          </p>
         </div>
         <div className='flex items-center gap-3'>
           {ordenModificado && (
@@ -1321,10 +1429,6 @@ export default function DashboardPage() {
           </SortableContext>
         </DndContext>
       )}
-
-      <p className='mx-auto text-center text-gray-500 mt-5'>
-        Total: {totalAutos} autos
-      </p>
 
       <AutoModal
         isOpen={isModalOpen}
