@@ -4,13 +4,29 @@ import { TypeAnimation } from 'react-type-animation';
 import { company } from '@/app/constants/constants';
 import LocationZoneIcon from './icons/LocationZoneIcon';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const HeroHome = () => {
   return (
     <section id='inicioSection' className='flex justify-center overflow-hidden'>
       <div
-        className={`h-[380px] md:h-[430px] lg:h-[560px] xl:h-[720px] relative max-w-[1920px] w-full flex flex-col items-center md:flex-row md:justify-center gap-8 md:gap-0 lg:gap-8 py-10 md:py-28 lg:py-40 home-background z-10`}
+        className={`h-[380px] md:h-[430px] lg:h-[560px] xl:h-[720px] relative max-w-[1920px] w-full flex flex-col items-center md:flex-row md:justify-center gap-8 md:gap-0 lg:gap-8 py-10 md:py-28 lg:py-40 z-10`}
       >
+        {/* Imagen de fondo */}
+        <div className='absolute inset-0 -z-20'>
+          <Image
+            src='/assets/inicio/home-background.webp'
+            alt='Background'
+            fill
+            priority
+            sizes='100vw'
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center',
+            }}
+          />
+        </div>
+
         <div className='flex justify-center max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
           <article className='w-full flex flex-col items-center md:items-start md:min-w-[430px] lg:min-w-[540px]'>
             <div className='flex items-start sm:items-center text-lg sm:text-xl md:font-medium mb-1 md:mb-1.5 text-center text-color-title-light'>

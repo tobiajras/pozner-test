@@ -8,13 +8,6 @@
 body {
 }
 
-.home-background {
-  background-image: url('/assets/inicio/home-background.webp');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
