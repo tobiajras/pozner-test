@@ -86,8 +86,22 @@ const AutoModal = ({
     Array<{ id: string; order: number }>
   >([]);
   const [categories, setCategories] = useState<Category[]>([]);
+  const [marcas, setMarcas] = useState<string[]>([]);
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+  const [showMarcaDropdown, setShowMarcaDropdown] = useState(false);
+  const [showTransmisionDropdown, setShowTransmisionDropdown] = useState(false);
+  const [showCombustibleDropdown, setShowCombustibleDropdown] = useState(false);
+  const [showPuertasDropdown, setShowPuertasDropdown] = useState(false);
   const categoryInputRef = useRef<HTMLInputElement>(null);
+  const marcaInputRef = useRef<HTMLInputElement>(null);
+  const transmisionInputRef = useRef<HTMLInputElement>(null);
+  const combustibleInputRef = useRef<HTMLInputElement>(null);
+  const puertasInputRef = useRef<HTMLInputElement>(null);
+
+  // Opciones para los selectores
+  const transmisionOptions = ['Manual', 'Automática', 'CVT'];
+  const combustibleOptions = ['Nafta', 'Diesel', 'GNC', 'Eléctrico'];
+  const puertasOptions = ['3', '4', '5'];
 
   // Cargar categorías del API
   useEffect(() => {
@@ -103,12 +117,26 @@ const AutoModal = ({
       }
     };
 
+    // Cargar marcas del API
+    const fetchMarcas = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/cars/brands`);
+        if (response.ok) {
+          const data = await response.json();
+          setMarcas(data.sort());
+        }
+      } catch (error) {
+        console.error('Error al cargar marcas:', error);
+      }
+    };
+
     if (isOpen) {
       fetchCategories();
+      fetchMarcas();
     }
   }, [isOpen]);
 
-  // Cerrar el dropdown cuando se hace clic fuera
+  // Cerrar los dropdowns cuando se hace clic fuera
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -116,6 +144,34 @@ const AutoModal = ({
         !categoryInputRef.current.contains(event.target as Node)
       ) {
         setShowCategoryDropdown(false);
+      }
+
+      if (
+        marcaInputRef.current &&
+        !marcaInputRef.current.contains(event.target as Node)
+      ) {
+        setShowMarcaDropdown(false);
+      }
+
+      if (
+        transmisionInputRef.current &&
+        !transmisionInputRef.current.contains(event.target as Node)
+      ) {
+        setShowTransmisionDropdown(false);
+      }
+
+      if (
+        combustibleInputRef.current &&
+        !combustibleInputRef.current.contains(event.target as Node)
+      ) {
+        setShowCombustibleDropdown(false);
+      }
+
+      if (
+        puertasInputRef.current &&
+        !puertasInputRef.current.contains(event.target as Node)
+      ) {
+        setShowPuertasDropdown(false);
       }
     };
 
@@ -350,22 +406,59 @@ const AutoModal = ({
                         <label className='block text-sm font-medium text-gray-700'>
                           Marca
                         </label>
-                        <input
-                          type='text'
-                          value={formData.marca}
-                          onChange={(e) =>
-                            setFormData((prev) => ({
-                              ...prev,
-                              marca: e.target.value,
-                              marcaId: e.target.value
-                                .toLowerCase()
-                                .replace(/\s+/g, '-'),
-                            }))
-                          }
-                          className={inputStyles}
-                          placeholder='Ej: Ford, Chevrolet, Toyota'
-                          required
-                        />
+                        <div className='relative' ref={marcaInputRef}>
+                          <div className='flex items-center relative'>
+                            <input
+                              type='text'
+                              value={formData.marca}
+                              onChange={(e) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  marca: e.target.value,
+                                  marcaId: e.target.value
+                                    .toLowerCase()
+                                    .replace(/\s+/g, '-'),
+                                }))
+                              }
+                              onFocus={() => setShowMarcaDropdown(true)}
+                              className={inputStyles}
+                              placeholder='Ej: Ford, Chevrolet, Toyota'
+                              required
+                            />
+                            <button
+                              type='button'
+                              className='absolute right-2 p-1'
+                              onClick={() =>
+                                setShowMarcaDropdown(!showMarcaDropdown)
+                              }
+                            >
+                              <ChevronDown className='h-4 w-4 text-gray-500' />
+                            </button>
+                          </div>
+
+                          {showMarcaDropdown && (
+                            <div className='absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto'>
+                              {marcas.map((marca) => (
+                                <div
+                                  key={marca}
+                                  className='px-4 py-2 hover:bg-gray-100 cursor-pointer'
+                                  onClick={() => {
+                                    setFormData((prev) => ({
+                                      ...prev,
+                                      marca: marca,
+                                      marcaId: marca
+                                        .toLowerCase()
+                                        .replace(/\s+/g, '-'),
+                                    }));
+                                    setShowMarcaDropdown(false);
+                                  }}
+                                >
+                                  {marca}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </div>
 
                       <div>
@@ -444,7 +537,7 @@ const AutoModal = ({
                           </div>
 
                           {showCategoryDropdown && (
-                            <div className='absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm'>
+                            <div className='absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto'>
                               {categories.map((category) => (
                                 <div
                                   key={category.id}
@@ -469,73 +562,168 @@ const AutoModal = ({
                         <label className='block text-sm font-medium text-gray-700'>
                           Transmisión
                         </label>
-                        <select
-                          value={formData.transmision}
-                          onChange={(e) =>
-                            setFormData((prev) => ({
-                              ...prev,
-                              transmision: e.target.value,
-                            }))
-                          }
-                          className={selectStyles}
-                          required
-                        >
-                          <option value=''>
-                            Seleccionar tipo de transmisión
-                          </option>
-                          <option value='Manual'>Manual</option>
-                          <option value='Automática'>Automática</option>
-                          <option value='CVT'>CVT</option>
-                        </select>
+                        <div className='relative' ref={transmisionInputRef}>
+                          <div className='flex items-center relative'>
+                            <input
+                              type='text'
+                              value={formData.transmision}
+                              onChange={(e) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  transmision: e.target.value,
+                                }))
+                              }
+                              onFocus={() => setShowTransmisionDropdown(true)}
+                              className={inputStyles}
+                              placeholder='Seleccionar tipo de transmisión'
+                              required
+                            />
+                            <button
+                              type='button'
+                              className='absolute right-2 p-1'
+                              onClick={() =>
+                                setShowTransmisionDropdown(
+                                  !showTransmisionDropdown
+                                )
+                              }
+                            >
+                              <ChevronDown className='h-4 w-4 text-gray-500' />
+                            </button>
+                          </div>
+
+                          {showTransmisionDropdown && (
+                            <div className='absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto'>
+                              {transmisionOptions.map((option) => (
+                                <div
+                                  key={option}
+                                  className='px-4 py-2 hover:bg-gray-100 cursor-pointer'
+                                  onClick={() => {
+                                    setFormData((prev) => ({
+                                      ...prev,
+                                      transmision: option,
+                                    }));
+                                    setShowTransmisionDropdown(false);
+                                  }}
+                                >
+                                  {option}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </div>
 
                       <div>
                         <label className='block text-sm font-medium text-gray-700'>
                           Combustible
                         </label>
-                        <select
-                          value={formData.combustible}
-                          onChange={(e) =>
-                            setFormData((prev) => ({
-                              ...prev,
-                              combustible: e.target.value,
-                            }))
-                          }
-                          className={selectStyles}
-                          required
-                        >
-                          <option value=''>
-                            Seleccionar tipo de combustible
-                          </option>
-                          <option value='Nafta'>Nafta</option>
-                          <option value='Diesel'>Diésel</option>
-                          <option value='GNC'>GNC</option>
-                          <option value='Eléctrico'>Eléctrico</option>
-                        </select>
+                        <div className='relative' ref={combustibleInputRef}>
+                          <div className='flex items-center relative'>
+                            <input
+                              type='text'
+                              value={formData.combustible}
+                              onChange={(e) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  combustible: e.target.value,
+                                }))
+                              }
+                              onFocus={() => setShowCombustibleDropdown(true)}
+                              className={inputStyles}
+                              placeholder='Seleccionar tipo de combustible'
+                              required
+                            />
+                            <button
+                              type='button'
+                              className='absolute right-2 p-1'
+                              onClick={() =>
+                                setShowCombustibleDropdown(
+                                  !showCombustibleDropdown
+                                )
+                              }
+                            >
+                              <ChevronDown className='h-4 w-4 text-gray-500' />
+                            </button>
+                          </div>
+
+                          {showCombustibleDropdown && (
+                            <div className='absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto'>
+                              {combustibleOptions.map((option) => (
+                                <div
+                                  key={option}
+                                  className='px-4 py-2 hover:bg-gray-100 cursor-pointer'
+                                  onClick={() => {
+                                    setFormData((prev) => ({
+                                      ...prev,
+                                      combustible: option,
+                                    }));
+                                    setShowCombustibleDropdown(false);
+                                  }}
+                                >
+                                  {option}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </div>
 
                       <div>
                         <label className='block text-sm font-medium text-gray-700'>
                           Puertas
                         </label>
-                        <select
-                          value={formData.puertas}
-                          onChange={(e) =>
-                            setFormData((prev) => ({
-                              ...prev,
-                              puertas: parseInt(e.target.value),
-                            }))
-                          }
-                          className={selectStyles}
-                          required
-                        >
-                          <option value=''>
-                            Seleccionar cantidad de puertas
-                          </option>
-                          <option value='3'>3 puertas</option>
-                          <option value='4'>4 puertas</option>
-                          <option value='5'>5 puertas</option>
-                        </select>
+                        <div className='relative' ref={puertasInputRef}>
+                          <div className='flex items-center relative'>
+                            <input
+                              type='text'
+                              value={
+                                formData.puertas
+                                  ? formData.puertas.toString()
+                                  : ''
+                              }
+                              onChange={(e) => {
+                                const value = parseInt(e.target.value);
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  puertas: isNaN(value) ? 0 : value,
+                                }));
+                              }}
+                              onFocus={() => setShowPuertasDropdown(true)}
+                              className={inputStyles}
+                              placeholder='Seleccionar cantidad de puertas'
+                              required
+                            />
+                            <button
+                              type='button'
+                              className='absolute right-2 p-1'
+                              onClick={() =>
+                                setShowPuertasDropdown(!showPuertasDropdown)
+                              }
+                            >
+                              <ChevronDown className='h-4 w-4 text-gray-500' />
+                            </button>
+                          </div>
+
+                          {showPuertasDropdown && (
+                            <div className='absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto'>
+                              {puertasOptions.map((option) => (
+                                <div
+                                  key={option}
+                                  className='px-4 py-2 hover:bg-gray-100 cursor-pointer'
+                                  onClick={() => {
+                                    setFormData((prev) => ({
+                                      ...prev,
+                                      puertas: parseInt(option),
+                                    }));
+                                    setShowPuertasDropdown(false);
+                                  }}
+                                >
+                                  {option} puertas
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       </div>
 
                       <div>

@@ -72,8 +72,8 @@ export default function AdminLayout({
   // Layout normal para usuarios autenticados
   return (
     <div className='min-h-screen bg-gray-50'>
-      <nav className='bg-white shadow-sm'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <nav className='bg-white shadow-sm flex justify-center'>
+        <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
           <div className='flex justify-between h-16'>
             <div className='flex'>
               <div className='flex-shrink-0 flex items-center'>
@@ -119,8 +119,10 @@ export default function AdminLayout({
         </div>
       </nav>
 
-      <main className='pb-16'>
-        <div className='max-w-7xl mx-auto sm:px-6 lg:px-8'>{children}</div>
+      <main className='pb-16 flex justify-center'>
+        <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+          {children}
+        </div>
       </main>
     </div>
   );

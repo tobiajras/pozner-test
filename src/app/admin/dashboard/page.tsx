@@ -1326,7 +1326,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className='container mx-auto px-4 py-8'>
+    <div className='max-w-7xl my-10'>
       <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4'>
         <div className='flex flex-col'>
           <h1 className='text-2xl font-semibold text-color-text'>
@@ -1424,6 +1424,14 @@ export default function DashboardPage() {
               ))}
               {currentPage < totalPages && !loadingMore && (
                 <div ref={observerRef} className='h-10'></div>
+              )}
+              {loadingMore && (
+                <div className='py-6 flex justify-center items-center'>
+                  <div className='animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-color-primary'></div>
+                  <span className='ml-3 text-gray-600'>
+                    Cargando más vehículos...
+                  </span>
+                </div>
               )}
             </motion.div>
           </SortableContext>
