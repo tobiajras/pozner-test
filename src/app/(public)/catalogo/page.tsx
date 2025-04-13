@@ -4,10 +4,11 @@ import SearchIcon from '@/components/icons/SearchIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useState, useRef } from 'react';
 import { company } from '@/app/constants/constants';
 import ArrowIcon from '@/components/icons/ArrowIcon';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
 
@@ -67,27 +68,43 @@ const CatalogoPage = () => {
   const categoriaFilter = searchParams.get('categoria') || '';
   const currentPage = Number(searchParams.get('page')) || 1;
   const searchFilter = searchParams.get('search') || '';
-  const [isMobile, setIsMobile] = useState(false);
 
   const [cars, setCars] = useState<ApiCar[]>([]);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
   const [todasLasMarcas, setTodasLasMarcas] = useState<string[]>([]);
-  const [categorias, setCategorias] = useState<string[]>([]);
+  const [categorias, setCategorias] = useState<Category[]>([]);
 
+  // Estados para controlar los dropdowns
+  const [showMarcaDropdown, setShowMarcaDropdown] = useState(false);
+  const [showCategoriaDropdown, setShowCategoriaDropdown] = useState(false);
+
+  // Referencias para detectar clics fuera de los dropdowns
+  const marcaInputRef = useRef<HTMLDivElement>(null);
+  const categoriaInputRef = useRef<HTMLDivElement>(null);
+
+  // Cerrar los dropdowns cuando se hace clic fuera
   useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 1024);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        marcaInputRef.current &&
+        !marcaInputRef.current.contains(event.target as Node)
+      ) {
+        setShowMarcaDropdown(false);
+      }
+
+      if (
+        categoriaInputRef.current &&
+        !categoriaInputRef.current.contains(event.target as Node)
+      ) {
+        setShowCategoriaDropdown(false);
+      }
     };
 
-    // Verificar inicialmente
-    checkIfMobile();
-
-    // Agregar listener para cambios de tamaño
-    window.addEventListener('resize', checkIfMobile);
-
-    // Limpiar listener
-    return () => window.removeEventListener('resize', checkIfMobile);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   // Función para obtener todas las marcas disponibles
@@ -112,7 +129,7 @@ const CatalogoPage = () => {
         throw new Error('Error al cargar las categorías');
       }
       const data: Category[] = await response.json();
-      setCategorias(data.map((cat) => cat.name).sort());
+      setCategorias(data);
     } catch (error) {
       console.error('Error al cargar las categorías:', error);
     }
@@ -290,37 +307,112 @@ const CatalogoPage = () => {
             </div>
 
             <div className='flex flex-row sm:flex-row gap-3 sm:gap-5'>
-              {/* Filtro de Marca */}
-              <select
-                value={marcaFilter}
-                onChange={(e) => updateFilters('marca', e.target.value)}
-                className='w-full sm:w-auto px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
-              >
-                <option value=''>
-                  {isMobile ? 'Marcas' : 'Todas las marcas'}
-                </option>
-                {todasLasMarcas.map((marca) => (
-                  <option key={marca} value={marca}>
-                    {marca}
-                  </option>
-                ))}
-              </select>
+              {/* Filtro de Marca - Nuevo estilo dropdown */}
+              <div className='relative w-full sm:w-[180px]' ref={marcaInputRef}>
+                <div className='flex items-center relative'>
+                  <input
+                    type='text'
+                    value={marcaFilter}
+                    readOnly
+                    placeholder='Marcas'
+                    onClick={() => setShowMarcaDropdown(!showMarcaDropdown)}
+                    className='w-full px-4 py-2.5 rounded cursor-pointer [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
+                  />
+                  <button
+                    type='button'
+                    className='absolute right-3 top-1/2 -translate-y-1/2'
+                    onClick={() => setShowMarcaDropdown(!showMarcaDropdown)}
+                  >
+                    <ChevronDown className='h-4 w-4 text-gray-500' />
+                  </button>
+                </div>
 
-              {/* Filtro de Categoría */}
-              <select
-                value={categoriaFilter}
-                onChange={(e) => updateFilters('categoria', e.target.value)}
-                className='w-full sm:w-auto px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
+                {showMarcaDropdown && (
+                  <div className='absolute z-20 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto [box-shadow:0px_5px_15px_rgba(0,0,0,0.15)]'>
+                    <div
+                      className='px-4 py-2 hover:bg-gray-100 cursor-pointer font-medium'
+                      onClick={() => {
+                        updateFilters('marca', '');
+                        setShowMarcaDropdown(false);
+                      }}
+                    >
+                      Todas las marcas
+                    </div>
+                    {todasLasMarcas.map((marca) => (
+                      <div
+                        key={marca}
+                        className={`px-4 py-2 hover:bg-gray-100 cursor-pointer ${
+                          marca === marcaFilter ? 'bg-gray-100' : ''
+                        }`}
+                        onClick={() => {
+                          updateFilters('marca', marca);
+                          setShowMarcaDropdown(false);
+                        }}
+                      >
+                        {marca}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Filtro de Categoría - Nuevo estilo dropdown */}
+              <div
+                className='relative w-full sm:w-[180px]'
+                ref={categoriaInputRef}
               >
-                <option value=''>
-                  {isMobile ? 'Categorías' : 'Todas las categorías'}
-                </option>
-                {categorias.map((categoria) => (
-                  <option key={categoria} value={categoria}>
-                    {categoria}
-                  </option>
-                ))}
-              </select>
+                <div className='flex items-center relative'>
+                  <input
+                    type='text'
+                    value={categoriaFilter}
+                    readOnly
+                    placeholder='Categorías'
+                    onClick={() =>
+                      setShowCategoriaDropdown(!showCategoriaDropdown)
+                    }
+                    className='w-full px-4 py-2.5 rounded cursor-pointer [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
+                  />
+                  <button
+                    type='button'
+                    className='absolute right-3 top-1/2 -translate-y-1/2'
+                    onClick={() =>
+                      setShowCategoriaDropdown(!showCategoriaDropdown)
+                    }
+                  >
+                    <ChevronDown className='h-4 w-4 text-gray-500' />
+                  </button>
+                </div>
+
+                {showCategoriaDropdown && (
+                  <div className='absolute z-20 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto [box-shadow:0px_5px_15px_rgba(0,0,0,0.15)]'>
+                    <div
+                      className='px-4 py-2 hover:bg-gray-100 cursor-pointer font-medium'
+                      onClick={() => {
+                        updateFilters('categoria', '');
+                        setShowCategoriaDropdown(false);
+                      }}
+                    >
+                      Todas las categorías
+                    </div>
+                    {categorias.map((categoria) => (
+                      <div
+                        key={categoria.id}
+                        className={`px-4 py-2 hover:bg-gray-100 cursor-pointer ${
+                          categoria.name === categoriaFilter
+                            ? 'bg-gray-100'
+                            : ''
+                        }`}
+                        onClick={() => {
+                          updateFilters('categoria', categoria.name);
+                          setShowCategoriaDropdown(false);
+                        }}
+                      >
+                        {categoria.name}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
