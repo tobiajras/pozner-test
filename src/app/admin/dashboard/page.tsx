@@ -166,9 +166,10 @@ const SortableAutoCard = ({
     <div
       ref={setNodeRef}
       style={style}
-      className={`relative bg-white rounded-lg overflow-hidden shadow-sm transition-all ${
+      className={`relative bg-white rounded-lg overflow-hidden [box-shadow:0_0_10px_rgba(0,0,0,0.08)] transition-shadow ${
         isDragging ? 'shadow-lg border-2 border-red-400 opacity-90' : ''
-      }`}
+      } cursor-pointer hover:[box-shadow:0_0_10px_rgba(0,0,0,0.2)]`}
+      onClick={() => onEdit(auto)}
     >
       <div className='p-4 sm:p-6'>
         <div className='flex flex-col sm:flex-row gap-4'>
@@ -195,6 +196,7 @@ const SortableAutoCard = ({
               className='absolute top-2 left-2 p-1.5 bg-white/80 rounded-full shadow-sm cursor-grab z-10 hover:bg-white'
               {...attributes}
               {...listeners}
+              onClick={(e) => e.stopPropagation()}
             >
               <GripVertical size={16} className='text-gray-600' />
             </div>
