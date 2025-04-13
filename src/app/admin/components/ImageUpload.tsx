@@ -147,7 +147,13 @@ const SortableNewImage = ({
         <GripVertical size={16} className='text-gray-600' />
       </div>
       <div className='w-[110px] h-[88px] relative'>
-        <Image src={src} alt='Nueva imagen' fill className='object-cover' />
+        <Image
+          priority
+          src={src}
+          alt='Nueva imagen'
+          fill
+          className='object-cover'
+        />
       </div>
       <div className='absolute top-2 right-2 flex gap-1'>
         <button
