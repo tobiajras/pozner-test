@@ -336,8 +336,6 @@ const AutoModal = ({
 
   const inputStyles =
     'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
-  const selectStyles =
-    'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
   const textareaStyles =
     'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
 
