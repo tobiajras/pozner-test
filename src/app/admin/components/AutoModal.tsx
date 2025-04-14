@@ -293,7 +293,7 @@ const AutoModal = ({
 
       // Validar que haya al menos una imagen
       if (selectedFiles.length === 0 && formData.imagenes.length === 0) {
-        setErrorMessage('Por favor, sube al menos una imagen del vehículo');
+        setErrorMessage('Por favor, subir al menos una imagen del vehículo');
         setShowErrorModal(true);
         setSubmitting(false);
         return;
