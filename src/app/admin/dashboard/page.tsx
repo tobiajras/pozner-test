@@ -964,7 +964,6 @@ export default function DashboardPage() {
 
         if (getResponse.ok) {
           const autoCompleto = await getResponse.json();
-          'Auto actualizado obtenido completo:', autoCompleto;
 
           // Ordenar las imágenes según el orden devuelto por el API
           const imagenesOrdenadas = autoCompleto.Images
