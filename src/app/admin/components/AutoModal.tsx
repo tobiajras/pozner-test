@@ -97,6 +97,8 @@ const AutoModal = ({
   const transmisionInputRef = useRef<HTMLInputElement>(null);
   const combustibleInputRef = useRef<HTMLInputElement>(null);
   const puertasInputRef = useRef<HTMLInputElement>(null);
+  const [showErrorModal, setShowErrorModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   // Opciones para los selectores
   const transmisionOptions = ['Manual', 'Automática', 'CVT'];
@@ -291,7 +293,8 @@ const AutoModal = ({
 
       // Validar que haya al menos una imagen
       if (selectedFiles.length === 0 && formData.imagenes.length === 0) {
-        alert('Por favor, subir al menos una imagen del vehículo');
+        setErrorMessage('Por favor, sube al menos una imagen del vehículo');
+        setShowErrorModal(true);
         setSubmitting(false);
         return;
       }
@@ -847,6 +850,62 @@ const AutoModal = ({
           </div>
         </div>
       </Dialog>
+      {/* Modal de Error */}
+      <Transition appear show={showErrorModal} as={Fragment}>
+        <Dialog
+          as='div'
+          className='relative z-50'
+          onClose={() => setShowErrorModal(false)}
+        >
+          <Transition.Child
+            as={Fragment}
+            enter='ease-out duration-300'
+            enterFrom='opacity-0'
+            enterTo='opacity-100'
+            leave='ease-in duration-200'
+            leaveFrom='opacity-100'
+            leaveTo='opacity-0'
+          >
+            <div className='fixed inset-0 bg-black bg-opacity-25' />
+          </Transition.Child>
+
+          <div className='fixed inset-0 overflow-y-auto'>
+            <div className='flex min-h-full items-center justify-center p-4 text-center'>
+              <Transition.Child
+                as={Fragment}
+                enter='ease-out duration-300'
+                enterFrom='opacity-0 scale-95'
+                enterTo='opacity-100 scale-100'
+                leave='ease-in duration-200'
+                leaveFrom='opacity-100 scale-100'
+                leaveTo='opacity-0 scale-95'
+              >
+                <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
+                  <Dialog.Title
+                    as='h3'
+                    className='text-lg font-medium leading-6 text-gray-900'
+                  >
+                    Error
+                  </Dialog.Title>
+                  <div className='mt-2'>
+                    <p className='text-sm text-gray-500'>{errorMessage}</p>
+                  </div>
+
+                  <div className='mt-4'>
+                    <button
+                      type='button'
+                      className='inline-flex justify-center rounded-md border border-transparent bg-color-primary px-4 py-2 text-sm font-medium text-white hover:bg-color-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-color-primary focus-visible:ring-offset-2'
+                      onClick={() => setShowErrorModal(false)}
+                    >
+                      Entendido
+                    </button>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
     </Transition>
   );
 };
