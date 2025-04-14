@@ -1481,7 +1481,7 @@ export default function DashboardPage() {
         }}
         onConfirm={handleDelete}
         title='Eliminar Auto'
-        message={`¿Estás seguro de que deseas eliminar el ${autoToDelete?.modelo} ${autoToDelete?.marca} ? Esta acción no se puede deshacer.`}
+        message={`¿Estás seguro de que deseas eliminar el ${autoToDelete?.modelo}? Esta acción no se puede deshacer.`}
       />
 
       <SellConfirmModal
@@ -1491,7 +1491,7 @@ export default function DashboardPage() {
           setAutoToSell(null);
         }}
         onConfirm={handleSellConfirm}
-        autoName={`${autoToSell?.marca} ${autoToSell?.modelo}`}
+        autoName={`${autoToSell?.modelo}`}
       />
 
       <Notification
