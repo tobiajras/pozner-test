@@ -81,8 +81,6 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
     obtenerDestacados();
   }, []);
 
-  console.log(favoritos);
-
   if (cargando) {
     return (
       <section className='flex justify-center w-full'>

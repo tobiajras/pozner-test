@@ -129,8 +129,6 @@ export default function HistorialPage() {
     );
   }
 
-  console.log(autosVendidos);
-
   return (
     <div className='max-w-7xl my-10'>
       <div className='flex justify-between items-center mb-6'>

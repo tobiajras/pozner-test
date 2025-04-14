@@ -261,7 +261,6 @@ const AutoModal = ({
     imagesToDelete: string[];
     imageOrder: Array<{ id: string; order: number }>;
   }) => {
-    console.log('ImageUpdate recibido:', data);
     setSelectedFiles(data.newImages);
     setImagesToDelete(data.imagesToDelete);
     setImageOrder(data.imageOrder);
@@ -290,6 +289,13 @@ const AutoModal = ({
         return;
       }
 
+      // Validar que haya al menos una imagen
+      if (selectedFiles.length === 0 && formData.imagenes.length === 0) {
+        alert('Por favor, subir al menos una imagen del vehículo');
+        setSubmitting(false);
+        return;
+      }
+
       // Asegurar que el precio sea un número válido (0 si es NaN)
       let precioValidado = formData.precio;
       if (isNaN(precioValidado)) {
@@ -304,8 +310,6 @@ const AutoModal = ({
         imagesToDelete,
         imageOrder,
       };
-
-      console.log('Enviando datos al backend:', dataToSubmit);
 
       // Llamar al callback de éxito con los datos del formulario
       await onSubmit(dataToSubmit);
@@ -338,8 +342,6 @@ const AutoModal = ({
     'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
   const textareaStyles =
     'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
-
-  console.log('formData', formData);
 
   return (
     <Transition appear show={isOpen} as={Fragment}>

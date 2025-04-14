@@ -612,7 +612,6 @@ export default function DashboardPage() {
 
   const handleToggleDestacado = async (id: string) => {
     try {
-      console.log('Toggling destacado para auto:', id);
       const token = Cookies.get('admin-auth');
 
       // Verificar si estamos intentando activar un auto destacado y ya llegamos al límite
@@ -644,7 +643,6 @@ export default function DashboardPage() {
       }
 
       const autoActualizado = await response.json();
-      console.log('Auto actualizado:', autoActualizado);
 
       // Actualizar en la lista visible actual
       setAutos((prevAutos) =>
@@ -699,7 +697,6 @@ export default function DashboardPage() {
 
   const handleToggleFavorito = async (id: string) => {
     try {
-      console.log('Toggling favorito para auto:', id);
       const token = Cookies.get('admin-auth');
 
       // Verificar si estamos intentando activar un auto favorito y ya llegamos al límite
@@ -731,7 +728,6 @@ export default function DashboardPage() {
       }
 
       const autoActualizado = await response.json();
-      console.log('Auto actualizado:', autoActualizado);
 
       // Actualizar en la lista visible actual
       setAutos((prevAutos) =>
@@ -786,7 +782,6 @@ export default function DashboardPage() {
 
   const handleCreateAuto = async (data: AutoFormData) => {
     try {
-      console.log('Creando auto con datos:', data);
       const token = Cookies.get('admin-auth');
 
       // Crear un FormData para enviar los datos y las imágenes
@@ -805,11 +800,6 @@ export default function DashboardPage() {
         // Convertir caracteres especiales a entidades HTML si es necesario
         const descripcionLimpia = descripcion.replace(/\r\n/g, '\n').trim();
         formData.append('description', descripcionLimpia);
-        console.log(
-          'Descripción procesada correctamente:',
-          descripcionLimpia.length,
-          'caracteres'
-        );
       } catch (e) {
         console.error('Error al procesar la descripción:', e);
         formData.append('description', 'Error al procesar la descripción');
@@ -832,13 +822,11 @@ export default function DashboardPage() {
       // Agregar imagesToDelete si existe
       if (data.imagesToDelete && data.imagesToDelete.length > 0) {
         formData.append('imagesToDelete', JSON.stringify(data.imagesToDelete));
-        console.log('Enviando imagesToDelete:', data.imagesToDelete);
       }
 
       // Agregar imageOrder si existe
       if (data.imageOrder && data.imageOrder.length > 0) {
         formData.append('imageOrder', JSON.stringify(data.imageOrder));
-        console.log('Enviando imageOrder:', data.imageOrder);
       }
 
       const response = await fetch(`${API_BASE_URL}/api/cars`, {
@@ -887,8 +875,6 @@ export default function DashboardPage() {
         throw new Error('No se ha seleccionado ningún auto para editar');
       }
 
-      console.log('Datos recibidos para editar auto:', data);
-
       const token = Cookies.get('admin-auth');
 
       // Crear un FormData para enviar los datos y las imágenes
@@ -907,11 +893,6 @@ export default function DashboardPage() {
         // Convertir caracteres especiales a entidades HTML si es necesario
         const descripcionLimpia = descripcion.replace(/\r\n/g, '\n').trim();
         formData.append('description', descripcionLimpia);
-        console.log(
-          'Descripción procesada correctamente:',
-          descripcionLimpia.length,
-          'caracteres'
-        );
       } catch (e) {
         console.error('Error al procesar la descripción:', e);
         formData.append('description', 'Error al procesar la descripción');
@@ -929,28 +910,19 @@ export default function DashboardPage() {
         data.images.forEach((image: File) => {
           formData.append('images', image);
         });
-        console.log('Imágenes nuevas agregadas:', data.images.length);
       }
 
       // Agregar imageOrder si existe
       if (data.imageOrder && data.imageOrder.length > 0) {
         const jsonImageOrder = JSON.stringify(data.imageOrder);
         formData.append('imageOrder', jsonImageOrder);
-        console.log('Orden de imágenes enviado:', jsonImageOrder);
       }
 
       // Agregar imagesToDelete si existe
       if (data.imagesToDelete && data.imagesToDelete.length > 0) {
         const jsonImagesToDelete = JSON.stringify(data.imagesToDelete);
         formData.append('imagesToDelete', jsonImagesToDelete);
-        console.log('Imágenes a eliminar enviadas:', jsonImagesToDelete);
       }
-
-      // Mostrar el FormData para diagnóstico
-      console.log(
-        'FormData creado, enviando a:',
-        `${API_BASE_URL}/api/cars/${selectedAuto.id}`
-      );
 
       // Manera alternativa de mostrar el FormData sin usar iteradores directamente
       const formDataEntries: string[] = [];
@@ -959,7 +931,6 @@ export default function DashboardPage() {
           `${key}: ${value instanceof File ? value.name : value}`
         );
       });
-      console.log(formDataEntries);
 
       const response = await fetch(
         `${API_BASE_URL}/api/cars/${selectedAuto.id}`,
@@ -978,9 +949,6 @@ export default function DashboardPage() {
         throw new Error(errorData.message || 'Error al actualizar el auto');
       }
 
-      const responseData = await response.json();
-      console.log('Respuesta del servidor:', responseData);
-
       // En lugar de actualizar parcialmente, vamos a obtener el auto completo actualizado
       // para asegurarnos de tener las imágenes ordenadas correctamente
       try {
@@ -996,7 +964,7 @@ export default function DashboardPage() {
 
         if (getResponse.ok) {
           const autoCompleto = await getResponse.json();
-          console.log('Auto actualizado obtenido completo:', autoCompleto);
+          'Auto actualizado obtenido completo:', autoCompleto;
 
           // Ordenar las imágenes según el orden devuelto por el API
           const imagenesOrdenadas = autoCompleto.Images
@@ -1339,8 +1307,6 @@ export default function DashboardPage() {
     fetchAutosDestacados();
     fetchAutosFavoritos();
   }, []);
-
-  console.log(autos);
 
   if (loading && autos.length === 0) {
     return (

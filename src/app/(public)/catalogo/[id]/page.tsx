@@ -148,8 +148,6 @@ export default function AutoDetailPage() {
     );
   }
 
-  console.log(car);
-
   return (
     <section className='flex flex-col items-center mx-auto mt-10 md:mt-16 mb-16 md:mb-20'>
       {/* Botón volver */}
