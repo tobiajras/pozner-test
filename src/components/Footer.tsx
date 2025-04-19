@@ -143,7 +143,7 @@ const Footer = () => {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <GravityLogo className='w-36 md:w-40 text-black hover:text-black/80 transition-colors' />
+                <GravityLogo className='w-36 md:w-40 text-white hover:text-color-primary transition-colors' />
               </a>
             </div>
           </article>
