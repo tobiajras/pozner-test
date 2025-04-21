@@ -9,7 +9,7 @@ import FacebookIcon from './icons/FacebookIcon';
 import WhatsappIcon from './icons/WhatsappIcon';
 
 import { Link } from 'react-scroll';
-import GrvityLogo from './icons/GrvityLogo';
+import GravityLogo from './icons/GravityLogo';
 
 const Footer = () => {
   return (
@@ -139,11 +139,11 @@ const Footer = () => {
             <div className='flex items-center gap-2'>
               <span className='text-color-text-light'>Desarrollado por:</span>
               <a
-                href='https://www.agenciagrvity.com/'
+                href='https://www.agenciagravity.com/'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <GrvityLogo className='w-32 text-color-text-light hover:text-[#D1FA2D] transition-colors' />
+                <GravityLogo className='w-36 md:w-40 text-white hover:text-[#D1FA2D] transition-colors' />
               </a>
             </div>
           </article>
