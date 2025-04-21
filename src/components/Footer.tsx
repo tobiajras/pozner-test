@@ -46,7 +46,7 @@ const Footer = () => {
                 )}
                 {company.facebook && (
                   <a
-                    href={`https://www.facebook.com/${company.facebook}/`}
+                    href={`${company.facebook}`}
                     target='_blank'
                     rel='noopener noreferrer'
                   >

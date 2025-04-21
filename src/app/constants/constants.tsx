@@ -7,7 +7,7 @@ export const company = {
   city: 'San Martín',
   email: null,
   instagram: 'fratelli_automotores_',
-  facebook: 'Fratelli-automotores',
+  facebook: 'https://www.facebook.com/p/Fratelli-automotores-100063644046860/',
   whatsapp: ['1162518114'],
   googlemapsLink: 'https://maps.app.goo.gl/eoj7JcSrh6ppgDFV7',
   googlemaps:
