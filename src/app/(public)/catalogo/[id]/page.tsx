@@ -166,7 +166,7 @@ export default function AutoDetailPage() {
           </Link>
         </div>
       </div>
-      <div className='flex flex-col lg:flex-row gap-8 max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+      <div className='flex flex-col lg:flex-row gap-8 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0'>
         {/* Galería de imágenes */}
         <div className='space-y-4 w-full lg:w-3/5'>
           <div className='overflow-hidden relative group' ref={mainViewportRef}>
