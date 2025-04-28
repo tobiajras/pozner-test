@@ -47,8 +47,8 @@ export function ImageCropModal({
         // Calcular dimensiones de contenedor
         if (containerRef.current) {
           // Ajustar tamaño para el área de recorte - reducido para mejor ajuste
-          const containerWidth = Math.min(500, window.innerWidth * 0.5);
-          const containerHeight = Math.min(350, window.innerHeight * 0.4);
+          const containerWidth = Math.min(450, window.innerWidth * 0.5);
+          const containerHeight = Math.min(300, window.innerHeight * 0.4);
 
           // Calcular escala para ajustar la imagen al contenedor
           const scale = Math.min(
