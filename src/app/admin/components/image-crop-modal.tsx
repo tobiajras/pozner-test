@@ -41,7 +41,8 @@ function centerAspectCrop(
 function canvasPreview(
   image: HTMLImageElement,
   canvas: HTMLCanvasElement,
-  crop: PixelCrop
+  crop: PixelCrop,
+  rotation: number = 0
 ) {
   const ctx = canvas.getContext('2d');
   if (!ctx) {
@@ -58,17 +59,24 @@ function canvasPreview(
   const cropWidth = crop.width * scaleX;
   const cropHeight = crop.height * scaleY;
 
-  // Configurar el tamaño del canvas para usar las dimensiones reales de la imagen recortada
-  // en lugar de las dimensiones escaladas para la vista previa
+  // Configurar el tamaño del canvas
   canvas.width = cropWidth;
   canvas.height = cropHeight;
 
-  // Asegurarse de que el contexto esté limpio y configurado para alta calidad
+  // Limpiar el canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.imageSmoothingEnabled = true;
   ctx.imageSmoothingQuality = 'high';
 
-  // Dibujar la imagen recortada directamente en el canvas a tamaño completo
+  // Aplicar rotación si es necesario
+  if (rotation > 0) {
+    ctx.save();
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.rotate((rotation * Math.PI) / 180);
+    ctx.translate(-canvas.width / 2, -canvas.height / 2);
+  }
+
+  // Dibujar la imagen recortada
   ctx.drawImage(
     image,
     cropX,
@@ -80,6 +88,10 @@ function canvasPreview(
     cropWidth,
     cropHeight
   );
+
+  if (rotation > 0) {
+    ctx.restore();
+  }
 }
 
 export function ImageCropModal({
@@ -90,18 +102,20 @@ export function ImageCropModal({
 }: ImageCropModalProps) {
   const [crop, setCrop] = useState<Crop>();
   const [completedCrop, setCompletedCrop] = useState<PixelCrop>();
-  const [aspect] = useState<number>(4 / 3); // Cambiar relación de aspecto a 4:3
+  const [aspect] = useState<number>(4 / 3);
+  const [rotation, setRotation] = useState<number>(0);
   const imgRef = useRef<HTMLImageElement>(null);
   const previewCanvasRef = useRef<HTMLCanvasElement>(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [imgSrc, setImgSrc] = useState<string>(imageUrl);
 
-  // Limpiar el estado cuando se cierra el modal o cambia la imagen
+  // Limpiar el estado cuando se cierra el modal
   useEffect(() => {
     if (!isOpen) {
       setCrop(undefined);
       setCompletedCrop(undefined);
       setIsImageLoaded(false);
+      setRotation(0);
       // Limpiar el canvas
       if (previewCanvasRef.current) {
         const ctx = previewCanvasRef.current.getContext('2d');
@@ -120,14 +134,19 @@ export function ImageCropModal({
   // Cuando la imagen se carga, establecer un recorte inicial
   const onImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
     const { width, height } = e.currentTarget;
-    const initialCrop = centerAspectCrop(width, height, aspect || 1);
+    const initialCrop = centerAspectCrop(width, height, aspect);
     setCrop(initialCrop);
-    setCompletedCrop(undefined); // Limpiar el crop completado anterior
+    setCompletedCrop(undefined);
     setIsImageLoaded(true);
     setImgSrc(e.currentTarget.src);
   };
 
-  // Actualizar el canvas de vista previa cuando cambia el recorte o se carga la imagen
+  // Rotar la imagen
+  const handleRotate = () => {
+    setRotation((prev) => (prev + 90) % 360);
+  };
+
+  // Actualizar el canvas de vista previa
   useEffect(() => {
     if (isImageLoaded && imgRef.current && previewCanvasRef.current) {
       // Si no hay un crop completado, usar el crop actual
@@ -136,16 +155,18 @@ export function ImageCropModal({
         canvasPreview(
           imgRef.current,
           previewCanvasRef.current,
-          cropToUse as PixelCrop
+          cropToUse as PixelCrop,
+          rotation
         );
       }
     }
-  }, [completedCrop, crop, isImageLoaded]);
+  }, [completedCrop, crop, isImageLoaded, rotation]);
 
   const handleClose = () => {
     setCrop(undefined);
     setCompletedCrop(undefined);
     setIsImageLoaded(false);
+    setRotation(0);
     onClose();
   };
 
@@ -156,9 +177,11 @@ export function ImageCropModal({
       imgRef.current &&
       previewCanvasRef.current
     ) {
-      canvasPreview(imgRef.current, previewCanvasRef.current, completedCrop);
+      // Crear un canvas temporal para el resultado final con rotación
+      const tempCanvas = document.createElement('canvas');
+      canvasPreview(imgRef.current, tempCanvas, completedCrop, rotation);
 
-      // Primero, detectar el tipo MIME de la imagen original
+      // Detectar el tipo MIME de la imagen original
       let mimeType = 'image/jpeg'; // Valor predeterminado
       if (imgSrc.includes('image/png')) {
         mimeType = 'image/png';
@@ -168,11 +191,8 @@ export function ImageCropModal({
         mimeType = 'image/gif';
       }
 
-      // Obtener el canvas con la imagen recortada
-      const canvas = previewCanvasRef.current;
-
-      // Usar toBlob con el formato correcto y la máxima calidad
-      canvas.toBlob(
+      // Obtener el blob con la imagen final
+      tempCanvas.toBlob(
         (blob) => {
           if (!blob) {
             console.error('No se pudo crear el blob');
@@ -183,7 +203,7 @@ export function ImageCropModal({
           const fileExtension = mimeType.split('/')[1];
           const fileName = `cropped-image-${new Date().getTime()}.${fileExtension}`;
 
-          // Crear un nuevo File a partir del blob conservando el tipo MIME original
+          // Crear un nuevo File a partir del blob
           const croppedFile = new File([blob], fileName, { type: mimeType });
 
           // Llamar al callback con el archivo recortado
@@ -194,7 +214,7 @@ export function ImageCropModal({
         1.0
       );
     }
-  }, [completedCrop, onCropComplete, onClose, imgSrc]);
+  }, [completedCrop, onCropComplete, onClose, imgSrc, rotation]);
 
   if (!isOpen) return null;
 
@@ -224,38 +244,66 @@ export function ImageCropModal({
           </button>
         </div>
 
-        <div className='flex flex-col md:flex-row gap-4'>
-          <div className='flex-1 overflow-hidden'>
+        <div className='hidden mb-4'>
+          <button
+            onClick={handleRotate}
+            className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600'
+          >
+            Rotar 90°
+          </button>
+        </div>
+
+        <div className='flex flex-col md:flex-row gap-6'>
+          <div className='flex-1'>
             <ReactCrop
               crop={crop}
               onChange={(c) => setCrop(c)}
               onComplete={(c) => setCompletedCrop(c)}
               aspect={aspect}
-              className='max-h-[60vh] mx-auto'
+              className='bg-gray-100'
             >
               <img
                 ref={imgRef}
                 src={imageUrl}
                 alt='Imagen a recortar'
                 onLoad={onImageLoad}
-                className='max-w-full max-h-[60vh] object-contain'
+                style={{
+                  transform: `rotate(${rotation}deg)`,
+                  maxWidth: '100%',
+                  transformOrigin: 'center center',
+                }}
+                className='max-h-[60vh]'
               />
             </ReactCrop>
           </div>
 
-          <div className='w-full md:w-64 flex flex-col'>
+          <div className='w-full md:w-64'>
             <p className='text-sm font-medium text-gray-700 mb-2'>
               Vista previa
             </p>
-            <div className='w-[250px] h-[200px] border border-gray-300 rounded-md overflow-hidden bg-gray-100 flex items-center justify-center'>
+            <div
+              className='border border-gray-300 bg-gray-100 rounded-md overflow-hidden'
+              style={{
+                width: '100%',
+                height: 0,
+                paddingBottom: '75%', // Proporción 4:3
+                position: 'relative',
+              }}
+            >
               <canvas
                 ref={previewCanvasRef}
-                className='w-full h-full object-contain'
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                }}
               />
             </div>
           </div>
         </div>
-
         <div className='mt-6 flex justify-end space-x-2'>
           <button
             type='button'
@@ -268,6 +316,7 @@ export function ImageCropModal({
             type='button'
             onClick={handleCropApply}
             className='px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600'
+            disabled={!completedCrop}
           >
             Aplicar recorte
           </button>
@@ -277,5 +326,4 @@ export function ImageCropModal({
   );
 }
 
-// Añadir exportación por defecto para garantizar compatibilidad
 export default ImageCropModal;
