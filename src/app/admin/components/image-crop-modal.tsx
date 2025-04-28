@@ -47,8 +47,8 @@ export function ImageCropModal({
         // Calcular dimensiones de contenedor
         if (containerRef.current) {
           // Ajustar tamaño para el área de recorte - reducido para mejor ajuste
-          const containerWidth = Math.min(450, window.innerWidth * 0.35);
-          const containerHeight = Math.min(300, window.innerHeight * 0.4);
+          const containerWidth = Math.min(500, window.innerWidth * 0.5);
+          const containerHeight = Math.min(350, window.innerHeight * 0.4);
 
           // Calcular escala para ajustar la imagen al contenedor
           const scale = Math.min(
@@ -64,15 +64,26 @@ export function ImageCropModal({
             height: scaledHeight,
           });
 
-          // Inicializar área de recorte (75% centrada)
-          const cropWidth = scaledWidth * 0.85;
-          const cropHeight = cropWidth * (3 / 4); // Aspecto 4:3
+          // Calcular dimensiones para evitar espacios en blanco
+          // Determinar el tamaño máximo disponible para el área de recorte
+          let maxCropWidth = scaledWidth * 0.85;
+          let maxCropHeight = maxCropWidth * (3 / 4); // Aspecto 4:3
+
+          // Si la altura calculada excede la altura de la imagen, recalcular basado en altura
+          if (maxCropHeight > scaledHeight * 0.85) {
+            maxCropHeight = scaledHeight * 0.85;
+            maxCropWidth = maxCropHeight * (4 / 3); // Aspecto 4:3
+          }
+
+          // Centrar el área de recorte
+          const cropX = (scaledWidth - maxCropWidth) / 2;
+          const cropY = (scaledHeight - maxCropHeight) / 2;
 
           setCropArea({
-            x: (scaledWidth - cropWidth) / 2,
-            y: (scaledHeight - cropHeight) / 2,
-            width: cropWidth,
-            height: cropHeight,
+            x: cropX,
+            y: cropY,
+            width: maxCropWidth,
+            height: maxCropHeight,
             dragging: false,
             resizing: false,
             resizeHandle: '',
@@ -559,8 +570,6 @@ export function ImageCropModal({
         tempCtx.restore();
 
         // Calcular posición equivalente en la imagen original rotada
-        const centerOriginalX = originalImage.width / 2;
-        const centerOriginalY = originalImage.height / 2;
         const centerCanvasX = containerSize.width / 2;
         const centerCanvasY = containerSize.height / 2;
 
