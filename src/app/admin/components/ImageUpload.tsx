@@ -177,6 +177,75 @@ const SortableNewImage = ({
   );
 };
 
+// Función para corregir la orientación EXIF
+const correctImageOrientation = async (file: File): Promise<File> => {
+  return new Promise((resolve) => {
+    const img = new window.Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      if (!ctx) {
+        resolve(file);
+        return;
+      }
+
+      // Obtener la orientación EXIF
+      const orientation = (file as any).orientation || 1;
+
+      // Ajustar el canvas según la orientación
+      if (orientation > 4) {
+        canvas.width = img.height;
+        canvas.height = img.width;
+      } else {
+        canvas.width = img.width;
+        canvas.height = img.height;
+      }
+
+      // Transformar el contexto según la orientación
+      switch (orientation) {
+        case 2:
+          ctx.transform(-1, 0, 0, 1, img.width, 0);
+          break;
+        case 3:
+          ctx.transform(-1, 0, 0, -1, img.width, img.height);
+          break;
+        case 4:
+          ctx.transform(1, 0, 0, -1, 0, img.height);
+          break;
+        case 5:
+          ctx.transform(0, 1, 1, 0, 0, 0);
+          break;
+        case 6:
+          ctx.transform(0, 1, -1, 0, img.height, 0);
+          break;
+        case 7:
+          ctx.transform(0, -1, -1, 0, img.height, img.width);
+          break;
+        case 8:
+          ctx.transform(0, -1, 1, 0, 0, img.width);
+          break;
+      }
+
+      // Dibujar la imagen
+      ctx.drawImage(img, 0, 0);
+
+      // Convertir el canvas a blob
+      canvas.toBlob((blob) => {
+        if (blob) {
+          const correctedFile = new File([blob], file.name, {
+            type: file.type,
+            lastModified: file.lastModified,
+          });
+          resolve(correctedFile);
+        } else {
+          resolve(file);
+        }
+      }, file.type);
+    };
+    img.src = URL.createObjectURL(file);
+  });
+};
+
 export function ImageUpload({
   onImagesSelected,
   maxFiles = 10,
@@ -208,7 +277,7 @@ export function ImageUpload({
     })
   );
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files || files.length === 0) return;
 
@@ -219,19 +288,24 @@ export function ImageUpload({
     );
     if (newFiles.length === 0) return;
 
+    // Corregir la orientación de cada archivo
+    const correctedFiles = await Promise.all(
+      newFiles.map((file) => correctImageOrientation(file))
+    );
+
     // Crear nuevos IDs únicos para las nuevas imágenes
-    const newIds = newFiles.map(
+    const newIds = correctedFiles.map(
       () => `new-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`
     );
     setNewImageIds((prev) => [...prev, ...newIds]);
 
     // Procesar todas las imágenes directamente
-    const updatedFiles = [...selectedFiles, ...newFiles];
+    const updatedFiles = [...selectedFiles, ...correctedFiles];
     setSelectedFiles(updatedFiles);
     onImagesSelected(updatedFiles);
 
     // Crear previsualizaciones para todas las imágenes usando URL.createObjectURL
-    newFiles.forEach((file) => {
+    correctedFiles.forEach((file) => {
       const url = URL.createObjectURL(file);
       setPreviewImages((prev) => [...prev, url]);
     });
