@@ -302,77 +302,27 @@ export function ImageCropModal({
     };
   }, [originalImage, containerSize, cropArea, rotation, updatePreview]);
 
-  // Manejar inicio de arrastre
-  const handleMouseDown = useCallback(
-    (e: React.MouseEvent<HTMLCanvasElement>) => {
-      if (!canvasRef.current) return;
-
-      const canvas = canvasRef.current;
-      const rect = canvas.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      // Verificar si se está haciendo clic en un handle de redimensionamiento
-      const handleSize = 12;
-      const halfHandle = handleSize / 2;
-      const handles = [
-        { pos: 'tl', x: cropArea.x - halfHandle, y: cropArea.y - halfHandle },
-        {
-          pos: 'tr',
-          x: cropArea.x + cropArea.width - halfHandle,
-          y: cropArea.y - halfHandle,
-        },
-        {
-          pos: 'br',
-          x: cropArea.x + cropArea.width - halfHandle,
-          y: cropArea.y + cropArea.height - halfHandle,
-        },
-        {
-          pos: 'bl',
-          x: cropArea.x - halfHandle,
-          y: cropArea.y + cropArea.height - halfHandle,
-        },
-      ];
-
-      for (const handle of handles) {
-        if (
-          x >= handle.x &&
-          x <= handle.x + handleSize &&
-          y >= handle.y &&
-          y <= handle.y + handleSize
-        ) {
-          setCropArea((prev) => ({
-            ...prev,
-            resizing: true,
-            resizeHandle: handle.pos,
-            startX: x,
-            startY: y,
-          }));
-          return;
-        }
+  // Manejar fin de arrastre
+  const handleMouseUp = useCallback(
+    (e: React.MouseEvent<HTMLCanvasElement> | MouseEvent) => {
+      if (e instanceof MouseEvent) {
+        e.preventDefault();
+        e.stopPropagation();
       }
-
-      // Verificar si se está haciendo clic dentro del área de recorte
-      if (
-        x >= cropArea.x &&
-        x <= cropArea.x + cropArea.width &&
-        y >= cropArea.y &&
-        y <= cropArea.y + cropArea.height
-      ) {
-        setCropArea((prev) => ({
-          ...prev,
-          dragging: true,
-          startX: x,
-          startY: y,
-        }));
-      }
+      setCropArea((prev) => ({
+        ...prev,
+        dragging: false,
+        resizing: false,
+      }));
     },
-    [cropArea]
+    []
   );
 
   // Manejar movimiento de ratón
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLCanvasElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
       if (!canvasRef.current || (!cropArea.dragging && !cropArea.resizing))
         return;
 
@@ -513,14 +463,75 @@ export function ImageCropModal({
     [cropArea, containerSize.width, containerSize.height]
   );
 
-  // Manejar fin de arrastre
-  const handleMouseUp = useCallback(() => {
-    setCropArea((prev) => ({
-      ...prev,
-      dragging: false,
-      resizing: false,
-    }));
-  }, []);
+  // Manejar inicio de arrastre
+  const handleMouseDown = useCallback(
+    (e: React.MouseEvent<HTMLCanvasElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (!canvasRef.current) return;
+
+      const canvas = canvasRef.current;
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      // Verificar si se está haciendo clic en un handle de redimensionamiento
+      const handleSize = 12;
+      const halfHandle = handleSize / 2;
+      const handles = [
+        { pos: 'tl', x: cropArea.x - halfHandle, y: cropArea.y - halfHandle },
+        {
+          pos: 'tr',
+          x: cropArea.x + cropArea.width - halfHandle,
+          y: cropArea.y - halfHandle,
+        },
+        {
+          pos: 'br',
+          x: cropArea.x + cropArea.width - halfHandle,
+          y: cropArea.y + cropArea.height - halfHandle,
+        },
+        {
+          pos: 'bl',
+          x: cropArea.x - halfHandle,
+          y: cropArea.y + cropArea.height - halfHandle,
+        },
+      ];
+
+      for (const handle of handles) {
+        if (
+          x >= handle.x &&
+          x <= handle.x + handleSize &&
+          y >= handle.y &&
+          y <= handle.y + handleSize
+        ) {
+          setCropArea((prev) => ({
+            ...prev,
+            resizing: true,
+            resizeHandle: handle.pos,
+            startX: x,
+            startY: y,
+          }));
+          return;
+        }
+      }
+
+      // Verificar si se está haciendo clic dentro del área de recorte
+      if (
+        x >= cropArea.x &&
+        x <= cropArea.x + cropArea.width &&
+        y >= cropArea.y &&
+        y <= cropArea.y + cropArea.height
+      ) {
+        setCropArea((prev) => ({
+          ...prev,
+          dragging: true,
+          startX: x,
+          startY: y,
+        }));
+      }
+    },
+    [cropArea]
+  );
 
   // Rotar imagen en 90 grados
   const handleRotate = useCallback(() => {
@@ -528,140 +539,146 @@ export function ImageCropModal({
   }, []);
 
   // Aplicar recorte final
-  const handleCropApply = useCallback(() => {
-    if (!originalImage || !canvasRef.current) return;
+  const handleCropApply = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.preventDefault();
+      e.stopPropagation();
 
-    try {
-      // Crear un canvas para la imagen final recortada
-      const finalCanvas = document.createElement('canvas');
+      if (!originalImage || !canvasRef.current) return;
 
-      // Calcular escala para aplicar al tamaño real de la imagen
-      const scaleX = originalImage.width / containerSize.width;
-      const scaleY = originalImage.height / containerSize.height;
+      try {
+        // Crear un canvas para la imagen final recortada
+        const finalCanvas = document.createElement('canvas');
 
-      // Configurar tamaño del canvas final
-      finalCanvas.width = cropArea.width * scaleX;
-      finalCanvas.height = cropArea.height * scaleY;
+        // Calcular escala para aplicar al tamaño real de la imagen
+        const scaleX = originalImage.width / containerSize.width;
+        const scaleY = originalImage.height / containerSize.height;
 
-      const finalCtx = finalCanvas.getContext('2d');
-      if (!finalCtx) return;
+        // Configurar tamaño del canvas final
+        finalCanvas.width = cropArea.width * scaleX;
+        finalCanvas.height = cropArea.height * scaleY;
 
-      // Si hay rotación, necesitamos un enfoque diferente
-      if (rotation !== 0) {
-        // Crear canvas temporal para toda la imagen rotada
-        const tempCanvas = document.createElement('canvas');
-        const tempSize =
-          Math.max(originalImage.width, originalImage.height) * 1.5;
-        tempCanvas.width = tempSize;
-        tempCanvas.height = tempSize;
+        const finalCtx = finalCanvas.getContext('2d');
+        if (!finalCtx) return;
 
-        const tempCtx = tempCanvas.getContext('2d');
-        if (!tempCtx) return;
+        // Si hay rotación, necesitamos un enfoque diferente
+        if (rotation !== 0) {
+          // Crear canvas temporal para toda la imagen rotada
+          const tempCanvas = document.createElement('canvas');
+          const tempSize =
+            Math.max(originalImage.width, originalImage.height) * 1.5;
+          tempCanvas.width = tempSize;
+          tempCanvas.height = tempSize;
 
-        // Centrar y rotar la imagen original
-        tempCtx.save();
-        tempCtx.translate(tempSize / 2, tempSize / 2);
-        tempCtx.rotate((rotation * Math.PI) / 180);
-        tempCtx.drawImage(
-          originalImage,
-          -originalImage.width / 2,
-          -originalImage.height / 2
+          const tempCtx = tempCanvas.getContext('2d');
+          if (!tempCtx) return;
+
+          // Centrar y rotar la imagen original
+          tempCtx.save();
+          tempCtx.translate(tempSize / 2, tempSize / 2);
+          tempCtx.rotate((rotation * Math.PI) / 180);
+          tempCtx.drawImage(
+            originalImage,
+            -originalImage.width / 2,
+            -originalImage.height / 2
+          );
+          tempCtx.restore();
+
+          // Calcular posición equivalente en la imagen original rotada
+          const centerCanvasX = containerSize.width / 2;
+          const centerCanvasY = containerSize.height / 2;
+
+          // Calcular el offset desde el centro de la imagen canvas
+          const offsetX = cropArea.x + cropArea.width / 2 - centerCanvasX;
+          const offsetY = cropArea.y + cropArea.height / 2 - centerCanvasY;
+
+          // Escalar este offset al tamaño real
+          const scaledOffsetX = offsetX * scaleX;
+          const scaledOffsetY = offsetY * scaleY;
+
+          // Posición para extraer en la imagen temporal rotada
+          const cropX = tempSize / 2 + scaledOffsetX - finalCanvas.width / 2;
+          const cropY = tempSize / 2 + scaledOffsetY - finalCanvas.height / 2;
+
+          // Copiar área recortada al canvas final
+          finalCtx.drawImage(
+            tempCanvas,
+            cropX,
+            cropY,
+            finalCanvas.width,
+            finalCanvas.height,
+            0,
+            0,
+            finalCanvas.width,
+            finalCanvas.height
+          );
+        } else {
+          // Si no hay rotación, es más sencillo
+          finalCtx.drawImage(
+            originalImage,
+            cropArea.x * scaleX,
+            cropArea.y * scaleY,
+            cropArea.width * scaleX,
+            cropArea.height * scaleY,
+            0,
+            0,
+            finalCanvas.width,
+            finalCanvas.height
+          );
+        }
+
+        // Convertir canvas a blob
+        finalCanvas.toBlob(
+          (blob) => {
+            if (!blob) {
+              console.error('No se pudo crear el blob');
+              return;
+            }
+
+            // Determinar tipo MIME
+            let mimeType = 'image/jpeg';
+            if (imageUrl.includes('.png') || imageUrl.includes('image/png')) {
+              mimeType = 'image/png';
+            } else if (
+              imageUrl.includes('.webp') ||
+              imageUrl.includes('image/webp')
+            ) {
+              mimeType = 'image/webp';
+            } else if (
+              imageUrl.includes('.gif') ||
+              imageUrl.includes('image/gif')
+            ) {
+              mimeType = 'image/gif';
+            }
+
+            // Crear nombre de archivo
+            const fileExtension = mimeType.split('/')[1];
+            const fileName = `cropped-image-${new Date().getTime()}.${fileExtension}`;
+
+            // Crear archivo final
+            const croppedFile = new File([blob], fileName, { type: mimeType });
+
+            // Enviar resultado
+            onCropComplete(croppedFile);
+            onClose();
+          },
+          'image/jpeg',
+          0.95
         );
-        tempCtx.restore();
-
-        // Calcular posición equivalente en la imagen original rotada
-        const centerCanvasX = containerSize.width / 2;
-        const centerCanvasY = containerSize.height / 2;
-
-        // Calcular el offset desde el centro de la imagen canvas
-        const offsetX = cropArea.x + cropArea.width / 2 - centerCanvasX;
-        const offsetY = cropArea.y + cropArea.height / 2 - centerCanvasY;
-
-        // Escalar este offset al tamaño real
-        const scaledOffsetX = offsetX * scaleX;
-        const scaledOffsetY = offsetY * scaleY;
-
-        // Posición para extraer en la imagen temporal rotada
-        const cropX = tempSize / 2 + scaledOffsetX - finalCanvas.width / 2;
-        const cropY = tempSize / 2 + scaledOffsetY - finalCanvas.height / 2;
-
-        // Copiar área recortada al canvas final
-        finalCtx.drawImage(
-          tempCanvas,
-          cropX,
-          cropY,
-          finalCanvas.width,
-          finalCanvas.height,
-          0,
-          0,
-          finalCanvas.width,
-          finalCanvas.height
-        );
-      } else {
-        // Si no hay rotación, es más sencillo
-        finalCtx.drawImage(
-          originalImage,
-          cropArea.x * scaleX,
-          cropArea.y * scaleY,
-          cropArea.width * scaleX,
-          cropArea.height * scaleY,
-          0,
-          0,
-          finalCanvas.width,
-          finalCanvas.height
-        );
+      } catch (error) {
+        console.error('Error al aplicar el recorte:', error);
       }
-
-      // Convertir canvas a blob
-      finalCanvas.toBlob(
-        (blob) => {
-          if (!blob) {
-            console.error('No se pudo crear el blob');
-            return;
-          }
-
-          // Determinar tipo MIME
-          let mimeType = 'image/jpeg';
-          if (imageUrl.includes('.png') || imageUrl.includes('image/png')) {
-            mimeType = 'image/png';
-          } else if (
-            imageUrl.includes('.webp') ||
-            imageUrl.includes('image/webp')
-          ) {
-            mimeType = 'image/webp';
-          } else if (
-            imageUrl.includes('.gif') ||
-            imageUrl.includes('image/gif')
-          ) {
-            mimeType = 'image/gif';
-          }
-
-          // Crear nombre de archivo
-          const fileExtension = mimeType.split('/')[1];
-          const fileName = `cropped-image-${new Date().getTime()}.${fileExtension}`;
-
-          // Crear archivo final
-          const croppedFile = new File([blob], fileName, { type: mimeType });
-
-          // Enviar resultado
-          onCropComplete(croppedFile);
-          onClose();
-        },
-        'image/jpeg',
-        0.95
-      );
-    } catch (error) {
-      console.error('Error al aplicar el recorte:', error);
-    }
-  }, [
-    originalImage,
-    containerSize,
-    cropArea,
-    rotation,
-    imageUrl,
-    onCropComplete,
-    onClose,
-  ]);
+    },
+    [
+      originalImage,
+      containerSize,
+      cropArea,
+      rotation,
+      imageUrl,
+      onCropComplete,
+      onClose,
+    ]
+  );
 
   // Habilitar movimiento en dispositivos móviles
   useEffect(() => {
@@ -670,6 +687,7 @@ export function ImageCropModal({
 
     const handleTouchStart = (e: TouchEvent) => {
       e.preventDefault();
+      e.stopPropagation();
       if (e.touches.length !== 1) return;
 
       // Simular evento de ratón
@@ -677,12 +695,15 @@ export function ImageCropModal({
       const mouseEvent = new MouseEvent('mousedown', {
         clientX: touch.clientX,
         clientY: touch.clientY,
+        bubbles: false,
+        cancelable: true,
       });
       canvas.dispatchEvent(mouseEvent);
     };
 
     const handleTouchMove = (e: TouchEvent) => {
       e.preventDefault();
+      e.stopPropagation();
       if (e.touches.length !== 1) return;
 
       // Simular evento de ratón
@@ -690,13 +711,20 @@ export function ImageCropModal({
       const mouseEvent = new MouseEvent('mousemove', {
         clientX: touch.clientX,
         clientY: touch.clientY,
+        bubbles: false,
+        cancelable: true,
       });
       canvas.dispatchEvent(mouseEvent);
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
       e.preventDefault();
-      const mouseEvent = new MouseEvent('mouseup');
+      e.stopPropagation();
+      // Simular evento de mouseup sin aplicar el recorte
+      const mouseEvent = new MouseEvent('mouseup', {
+        bubbles: false,
+        cancelable: true,
+      });
       canvas.dispatchEvent(mouseEvent);
     };
 
@@ -716,8 +744,20 @@ export function ImageCropModal({
   if (!isOpen) return null;
 
   return (
-    <div className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'>
-      <div className='bg-white rounded-lg shadow-md max-w-3xl mx-auto'>
+    <div
+      className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+      }}
+    >
+      <div
+        className='bg-white rounded-lg shadow-md max-w-3xl mx-auto'
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }}
+      >
         <div className='flex justify-between items-center px-4 py-2 border-b'>
           <h2 className='text-lg font-medium'>Recortar imagen</h2>
           <button
@@ -798,7 +838,11 @@ export function ImageCropModal({
             <div className='flex justify-center gap-2 mt-auto'>
               <button
                 type='button'
-                onClick={onClose}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  onClose();
+                }}
                 className='px-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:bg-gray-50'
               >
                 Cancelar
