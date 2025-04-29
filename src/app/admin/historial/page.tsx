@@ -140,6 +140,7 @@ export default function HistorialPage() {
   const eliminarVenta = async () => {
     if (!ventaAEliminar) return;
 
+    setEliminando(ventaAEliminar.id);
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(
@@ -188,6 +189,8 @@ export default function HistorialPage() {
         message:
           error instanceof Error ? error.message : 'Error al eliminar la venta',
       });
+    } finally {
+      setEliminando(null);
     }
   };
 
