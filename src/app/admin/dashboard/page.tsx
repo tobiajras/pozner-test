@@ -37,6 +37,7 @@ import {
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+import { useRouter } from 'next/navigation';
 
 // Interfaz para los datos del formulario de autos
 interface AutoFormData {
@@ -329,6 +330,7 @@ const SortableAutoCard = ({
 };
 
 export default function DashboardPage() {
+  const router = useRouter();
   const [autos, setAutos] = useState<Auto[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedAuto, setSelectedAuto] = useState<Auto | undefined>();
@@ -373,6 +375,13 @@ export default function DashboardPage() {
     })
   );
 
+  const handleUnauthorized = () => {
+    // Remover el token
+    Cookies.remove('admin-auth');
+    // Redirigir al login
+    router.push('/admin/login');
+  };
+
   const fetchAutos = async (page = 1, append = false) => {
     if (page === 1) {
       setLoading(true);
@@ -391,6 +400,11 @@ export default function DashboardPage() {
           },
         }
       );
+
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
 
       if (!response.ok) {
         throw new Error(
@@ -488,6 +502,11 @@ export default function DashboardPage() {
         }
       );
 
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
+
       if (!response.ok) {
         throw new Error('Error al eliminar el auto');
       }
@@ -531,7 +550,8 @@ export default function DashboardPage() {
       setNotification({
         isOpen: true,
         type: 'error',
-        message: 'Error al eliminar el auto',
+        message:
+          error instanceof Error ? error.message : 'Error al eliminar el auto',
       });
     }
   };
@@ -550,6 +570,11 @@ export default function DashboardPage() {
           },
         }
       );
+
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
 
       if (!response.ok) {
         throw new Error('Error al cambiar el estado del auto');
@@ -633,6 +658,11 @@ export default function DashboardPage() {
           },
         }
       );
+
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
 
       if (!response.ok) {
         const errorText = await response.text();
@@ -718,6 +748,11 @@ export default function DashboardPage() {
           },
         }
       );
+
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
 
       if (!response.ok) {
         const errorText = await response.text();
@@ -1061,6 +1096,11 @@ export default function DashboardPage() {
         }
       );
 
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(
@@ -1106,8 +1146,6 @@ export default function DashboardPage() {
       setAutoToSell(null);
     } catch (error) {
       console.error('Error al marcar el auto como vendido:', error);
-
-      // Mostrar notificación de error
       setNotification({
         isOpen: true,
         type: 'error',
@@ -1187,6 +1225,11 @@ export default function DashboardPage() {
         body: JSON.stringify({ updates }),
       });
 
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
+
       if (!response.ok) {
         throw new Error(
           `Error ${response.status}: No se pudo actualizar el orden`
@@ -1225,6 +1268,11 @@ export default function DashboardPage() {
           Accept: 'application/json',
         },
       });
+
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
 
       if (!response.ok) {
         throw new Error('Error al cargar los autos destacados');
@@ -1268,6 +1316,11 @@ export default function DashboardPage() {
           Accept: 'application/json',
         },
       });
+
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
 
       if (!response.ok) {
         throw new Error('Error al cargar los autos favoritos');

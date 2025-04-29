@@ -1,12 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Cookies from 'js-cookie';
 import { RefreshCw, Trash2 } from 'lucide-react';
 import { ConfirmModal } from '../components/ConfirmModal';
 import { Notification } from '../components/Notification';
+import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
+import { useRouter } from 'next/navigation';
 
 // URL base del API
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
@@ -23,7 +25,15 @@ interface AutoVendido {
   updatedAt: string;
 }
 
+interface ApiResponse {
+  total: number;
+  totalPages: number;
+  currentPage: number;
+  sells: AutoVendido[];
+}
+
 export default function HistorialPage() {
+  const router = useRouter();
   const [autosVendidos, setAutosVendidos] = useState<AutoVendido[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -32,23 +42,46 @@ export default function HistorialPage() {
     null
   );
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [totalAutos, setTotalAutos] = useState(0);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [notification, setNotification] = useState({
     isOpen: false,
     message: '',
     type: 'success' as 'success' | 'error',
   });
 
-  const fetchAutosVendidos = async () => {
-    setLoading(true);
+  const handleUnauthorized = () => {
+    // Remover el token
+    Cookies.remove('admin-auth');
+    // Redirigir al login
+    router.push('/admin/login');
+  };
+
+  const fetchAutosVendidos = async (page = 1, append = false) => {
+    if (page === 1) {
+      setLoading(true);
+    } else {
+      setLoadingMore(true);
+    }
     setError(null);
     try {
       const token = Cookies.get('admin-auth');
-      const response = await fetch(`${API_BASE_URL}/api/sells`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-      });
+      const response = await fetch(
+        `${API_BASE_URL}/api/sells?page=${page}&limit=10`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
 
       if (!response.ok) {
         throw new Error(
@@ -56,8 +89,14 @@ export default function HistorialPage() {
         );
       }
 
-      const data: AutoVendido[] = await response.json();
-      setAutosVendidos(data);
+      const data: ApiResponse = await response.json();
+
+      setAutosVendidos((prev) =>
+        append ? [...prev, ...data.sells] : data.sells
+      );
+      setCurrentPage(data.currentPage);
+      setTotalPages(data.totalPages);
+      setTotalAutos(data.total);
     } catch (error) {
       console.error('Error al cargar los autos vendidos:', error);
       setError(
@@ -67,8 +106,31 @@ export default function HistorialPage() {
       );
     } finally {
       setLoading(false);
+      setLoadingMore(false);
     }
   };
+
+  const loadMore = () => {
+    if (currentPage < totalPages && !loadingMore) {
+      fetchAutosVendidos(currentPage + 1, true);
+    }
+  };
+
+  const observer = useInfiniteScroll({
+    onLoadMore: loadMore,
+    hasMore: currentPage < totalPages,
+    loading: loadingMore,
+  });
+
+  // Crear una referencia para el elemento observado
+  const observerRef = useCallback(
+    (node: HTMLDivElement | null) => {
+      if (node !== null && currentPage < totalPages && !loadingMore) {
+        observer.current?.observe(node);
+      }
+    },
+    [currentPage, totalPages, loadingMore]
+  );
 
   const confirmarEliminarVenta = (auto: AutoVendido) => {
     setVentaAEliminar(auto);
@@ -78,42 +140,54 @@ export default function HistorialPage() {
   const eliminarVenta = async () => {
     if (!ventaAEliminar) return;
 
-    const id = ventaAEliminar.id;
-    setEliminando(id);
     try {
       const token = Cookies.get('admin-auth');
-      const response = await fetch(`${API_BASE_URL}/api/sells/${id}`, {
-        method: 'DELETE',
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-      });
+      const response = await fetch(
+        `${API_BASE_URL}/api/sells/${ventaAEliminar.id}`,
+        {
+          method: 'DELETE',
+          headers: {
+            Authorization: `Bearer ${token}`,
+            Accept: 'application/json',
+          },
+        }
+      );
 
-      if (!response.ok) {
-        throw new Error(
-          `Error ${response.status}: No se pudo eliminar la venta`
-        );
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
       }
 
-      // Actualizar la lista después de eliminar
-      setAutosVendidos(autosVendidos.filter((auto) => auto.id !== id));
+      if (!response.ok) {
+        throw new Error('Error al eliminar la venta');
+      }
+
+      // Eliminar la venta de la lista
+      setAutosVendidos((prev) =>
+        prev.filter((auto) => auto.id !== ventaAEliminar.id)
+      );
+
+      // Actualizar el contador total
+      setTotalAutos((prev) => prev - 1);
+
+      // Mostrar notificación de éxito
       setNotification({
         isOpen: true,
-        message: `La venta del ${ventaAEliminar.model} ha sido eliminada correctamente.`,
         type: 'success',
+        message: 'Venta eliminada con éxito',
       });
+
+      // Cerrar el modal
+      setDeleteModalOpen(false);
+      setVentaAEliminar(null);
     } catch (error) {
       console.error('Error al eliminar la venta:', error);
       setNotification({
         isOpen: true,
+        type: 'error',
         message:
           error instanceof Error ? error.message : 'Error al eliminar la venta',
-        type: 'error',
       });
-    } finally {
-      setEliminando(null);
-      setVentaAEliminar(null);
     }
   };
 
@@ -132,12 +206,17 @@ export default function HistorialPage() {
   return (
     <div className='max-w-7xl my-10'>
       <div className='flex justify-between items-center mb-6'>
-        <h1 className='text-2xl font-semibold text-color-text'>
-          Historial de Ventas{' '}
-          {loading && (
-            <RefreshCw className='inline ml-2 h-5 w-5 animate-spin' />
-          )}
-        </h1>
+        <div className='flex flex-col'>
+          <h1 className='text-2xl font-semibold text-color-text'>
+            Historial de Ventas{' '}
+            {loading && (
+              <RefreshCw className='inline ml-2 h-5 w-5 animate-spin' />
+            )}
+          </h1>
+          <p className='text-gray-500'>
+            Total: <span className='font-medium'>{totalAutos}</span> ventas
+          </p>
+        </div>
       </div>
 
       {error && (
@@ -228,6 +307,15 @@ export default function HistorialPage() {
               </div>
             </motion.div>
           ))}
+          {currentPage < totalPages && !loadingMore && (
+            <div ref={observerRef} className='h-10'></div>
+          )}
+          {loadingMore && (
+            <div className='py-6 flex justify-center items-center'>
+              <div className='animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-color-primary'></div>
+              <span className='ml-3 text-gray-600'>Cargando más ventas...</span>
+            </div>
+          )}
         </div>
       )}
 
