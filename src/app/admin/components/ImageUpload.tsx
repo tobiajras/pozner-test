@@ -85,6 +85,7 @@ const SortableImage = ({
       className={`relative border rounded-md overflow-hidden ${
         isDragging ? 'shadow-lg border-red-400 opacity-80' : ''
       }`}
+      onClick={onClick}
     >
       <div
         className='absolute top-2 left-2 p-1.5 bg-white/80 rounded-full shadow-sm cursor-grab z-10 hover:bg-white'
@@ -96,14 +97,17 @@ const SortableImage = ({
       <div className='w-[110px] h-[88px] relative'>
         <Image
           src={image.thumbnailUrl}
-          alt={`Imagen ${index + 1}`}
+          alt='Imagen'
           fill
           className='object-cover'
         />
       </div>
       <button
         className='absolute top-2 right-2 p-1.5 bg-white rounded-full shadow-sm text-red-500 hover:text-red-700 z-10'
-        onClick={onRemove}
+        onClick={(e) => {
+          e.stopPropagation();
+          onRemove();
+        }}
         type='button'
         title='Eliminar imagen'
       >
@@ -123,8 +127,8 @@ interface SortableNewImageProps {
 }
 
 const SortableNewImage = ({
+  id,
   src,
-  index,
   onEdit,
   onRemove,
   onClick,
@@ -137,7 +141,7 @@ const SortableNewImage = ({
     transition,
     isDragging,
   } = useSortable({
-    id: `new-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`,
+    id,
   });
 
   const style = {
@@ -153,6 +157,7 @@ const SortableNewImage = ({
       className={`relative border rounded-md overflow-hidden ${
         isDragging ? 'shadow-lg border-red-400 opacity-80' : ''
       }`}
+      onClick={onClick}
     >
       <div
         className='absolute top-2 left-2 p-1.5 bg-white/80 rounded-full shadow-sm cursor-grab z-10 hover:bg-white'
@@ -173,7 +178,10 @@ const SortableNewImage = ({
       <div className='absolute top-2 right-2 flex gap-1'>
         <button
           className='bg-white rounded-full p-1.5 shadow-sm text-blue-500 hover:text-blue-700 z-10'
-          onClick={onEdit}
+          onClick={(e) => {
+            e.stopPropagation();
+            onEdit();
+          }}
           type='button'
           title='Editar imagen'
         >
@@ -181,7 +189,10 @@ const SortableNewImage = ({
         </button>
         <button
           className='bg-white rounded-full p-1.5 shadow-sm text-red-500 hover:text-red-700 z-10'
-          onClick={onRemove}
+          onClick={(e) => {
+            e.stopPropagation();
+            onRemove();
+          }}
           type='button'
           title='Eliminar imagen'
         >
