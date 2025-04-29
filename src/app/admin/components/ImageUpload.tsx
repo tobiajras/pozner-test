@@ -24,35 +24,43 @@ import { CSS } from '@dnd-kit/utilities';
 
 interface ImageUploadProps {
   onImagesSelected: (files: File[]) => void;
-  maxFiles?: number;
-  accept?: string;
+  onImagesUpdate: (data: {
+    newImages: File[];
+    imagesToDelete: string[];
+    imageOrder: Array<{ id: string; order: number }>;
+  }) => void;
   defaultImages?: Array<{
     id: string;
     imageUrl: string;
     thumbnailUrl: string;
     order: number;
   }>;
-  onImagesUpdate?: (data: {
-    newImages: File[];
-    imagesToDelete: string[];
-    imageOrder: Array<{ id: string; order: number }>;
-  }) => void;
+  maxFiles?: number;
+  accept?: string;
+  onImageClick?: (url: string, index: number, orientation?: number) => void;
 }
 
 interface FileWithOrientation extends File {
   orientation?: number;
 }
 
-// Componente para una imagen individual que se puede arrastrar
+interface SortableImageProps {
+  image: {
+    id: string;
+    imageUrl: string;
+    thumbnailUrl: string;
+  };
+  index: number;
+  onRemove: () => void;
+  onClick?: () => void;
+}
+
 const SortableImage = ({
   image,
   index,
   onRemove,
-}: {
-  image: { id: string; thumbnailUrl: string };
-  index: number;
-  onRemove: () => void;
-}) => {
+  onClick,
+}: SortableImageProps) => {
   const {
     attributes,
     listeners,
@@ -105,19 +113,22 @@ const SortableImage = ({
   );
 };
 
-// Componente para una imagen nueva (ahora también se puede arrastrar)
-const SortableNewImage = ({
-  id,
-  src,
-  onEdit,
-  onRemove,
-}: {
+interface SortableNewImageProps {
   id: string;
   src: string;
   index: number;
   onEdit: () => void;
   onRemove: () => void;
-}) => {
+  onClick?: () => void;
+}
+
+const SortableNewImage = ({
+  src,
+  index,
+  onEdit,
+  onRemove,
+  onClick,
+}: SortableNewImageProps) => {
   const {
     attributes,
     listeners,
@@ -126,7 +137,7 @@ const SortableNewImage = ({
     transition,
     isDragging,
   } = useSortable({
-    id,
+    id: `new-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`,
   });
 
   const style = {
@@ -257,6 +268,7 @@ export function ImageUpload({
   accept = 'image/*',
   defaultImages = [],
   onImagesUpdate,
+  onImageClick,
 }: ImageUploadProps) {
   const [previewImages, setPreviewImages] = useState<string[]>([]);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -549,6 +561,7 @@ export function ImageUpload({
                       image={image}
                       index={index}
                       onRemove={() => removeImage(index, true)}
+                      onClick={() => onImageClick?.(image.imageUrl, index)}
                     />
                   ))}
                 </div>
@@ -603,6 +616,7 @@ export function ImageUpload({
                     index={index}
                     onEdit={() => handleEditImage(index)}
                     onRemove={() => removeImage(index)}
+                    onClick={() => onImageClick?.(src, index)}
                   />
                 ))}
               </div>

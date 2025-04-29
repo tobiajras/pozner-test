@@ -880,6 +880,7 @@ const AutoModal = ({
                         defaultImages={formData.imagenes}
                         maxFiles={20}
                         accept='image/*'
+                        onImageClick={handleImageClick}
                       />
                     </div>
 
