@@ -97,7 +97,7 @@ const SortableImage = ({
       <div className='w-[110px] h-[88px] relative'>
         <Image
           src={image.thumbnailUrl}
-          alt='Imagen'
+          alt={`Imagen ${index + 1}`}
           fill
           className='object-cover'
         />
