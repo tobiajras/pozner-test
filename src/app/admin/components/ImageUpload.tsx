@@ -24,7 +24,7 @@ import { CSS } from '@dnd-kit/utilities';
 
 interface ImageUploadProps {
   onImagesSelected: (files: File[]) => void;
-  onImagesUpdate: (data: {
+  onImagesUpdate?: (data: {
     newImages: File[];
     imagesToDelete: string[];
     imageOrder: Array<{ id: string; order: number }>;
@@ -387,7 +387,7 @@ export function ImageUpload({
     setEditingIndex(-1);
     setCropModalOpen(false);
 
-    // Notificar cambios
+    // Notificar cambios si hay un handler
     if (onImagesUpdate) {
       onImagesUpdate({
         newImages: newFiles,
@@ -407,7 +407,7 @@ export function ImageUpload({
       setImagesToDelete(updatedImagesToDelete);
       setExistingImages(existingImages.filter((_, i) => i !== index));
 
-      // Notificar cambios inmediatamente con el array actualizado
+      // Notificar cambios inmediatamente con el array actualizado si hay un handler
       if (onImagesUpdate) {
         const updatedExistingImages = existingImages.filter(
           (_, i) => i !== index
@@ -434,7 +434,7 @@ export function ImageUpload({
       setNewImageIds(newIds);
       onImagesSelected(newFiles);
 
-      // Notificar cambios con los archivos actualizados
+      // Notificar cambios con los archivos actualizados si hay un handler
       if (onImagesUpdate) {
         onImagesUpdate({
           newImages: newFiles,
@@ -461,7 +461,7 @@ export function ImageUpload({
 
         const newArray = arrayMove(items, oldIndex, newIndex);
 
-        // Notificar cambios
+        // Notificar cambios si hay un handler
         if (onImagesUpdate) {
           const newOrder = newArray.map((img, idx) => ({
             id: img.id,
@@ -506,7 +506,7 @@ export function ImageUpload({
       // Notificar el cambio en las imágenes seleccionadas
       onImagesSelected(newFiles);
 
-      // Notificar cambios al componente padre si es necesario
+      // Notificar cambios al componente padre si hay un handler
       if (onImagesUpdate) {
         onImagesUpdate({
           newImages: newFiles,
