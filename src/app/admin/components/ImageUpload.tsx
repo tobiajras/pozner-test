@@ -39,6 +39,10 @@ interface ImageUploadProps {
   }) => void;
 }
 
+interface FileWithOrientation extends File {
+  orientation?: number;
+}
+
 // Componente para una imagen individual que se puede arrastrar
 const SortableImage = ({
   image,
@@ -190,7 +194,8 @@ const correctImageOrientation = async (file: File): Promise<File> => {
       }
 
       // Obtener la orientación EXIF
-      const orientation = (file as any).orientation || 1;
+      const fileWithOrientation = file as FileWithOrientation;
+      const orientation = fileWithOrientation.orientation || 1;
 
       // Ajustar el canvas según la orientación
       if (orientation > 4) {
