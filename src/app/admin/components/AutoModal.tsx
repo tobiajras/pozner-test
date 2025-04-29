@@ -6,9 +6,14 @@ import { ImageUpload } from './ImageUpload';
 import { Auto } from '@/types/auto';
 import Cookies from 'js-cookie';
 import { ChevronDown } from 'lucide-react';
+import ImageCropModal from './image-crop-modal';
 
 // URL base del API
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
+
+interface FileWithOrientation extends File {
+  orientation?: number;
+}
 
 interface AutoFormData {
   id?: string;
@@ -78,7 +83,7 @@ const AutoModal = ({
         }
   );
 
-  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [selectedFiles, setSelectedFiles] = useState<FileWithOrientation[]>([]);
   const [submitting, setSubmitting] = useState(false);
   const [loading, setLoading] = useState(false);
   const [imagesToDelete, setImagesToDelete] = useState<string[]>([]);
@@ -99,6 +104,11 @@ const AutoModal = ({
   const puertasInputRef = useRef<HTMLInputElement>(null);
   const [showErrorModal, setShowErrorModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const [selectedImageForCrop, setSelectedImageForCrop] = useState<{
+    url: string;
+    index: number;
+    orientation?: number;
+  } | null>(null);
 
   // Opciones para los selectores
   const transmisionOptions = ['Manual', 'Automática', 'CVT'];
@@ -268,6 +278,71 @@ const AutoModal = ({
     setImageOrder(data.imageOrder);
   };
 
+  // Función para obtener la orientación EXIF de una imagen
+  const getImageOrientation = async (file: File): Promise<number> => {
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        if (!e.target?.result) {
+          resolve(1);
+          return;
+        }
+
+        const view = new DataView(e.target.result as ArrayBuffer);
+        if (view.getUint16(0, false) !== 0xffd8) {
+          resolve(1);
+          return;
+        }
+
+        const length = view.byteLength;
+        let offset = 2;
+
+        while (offset < length) {
+          const marker = view.getUint16(offset, false);
+          offset += 2;
+
+          if (marker === 0xffe1) {
+            if (view.getUint32((offset += 2), false) !== 0x45786966) {
+              resolve(1);
+              return;
+            }
+            const little = view.getUint16((offset += 6), false) === 0x4949;
+            offset += view.getUint32(offset + 4, little);
+            const tags = view.getUint16(offset, little);
+            offset += 2;
+
+            for (let i = 0; i < tags; i++) {
+              if (view.getUint16(offset + i * 12, little) === 0x0112) {
+                resolve(view.getUint16(offset + i * 12 + 8, little));
+                return;
+              }
+            }
+          } else if ((marker & 0xff00) !== 0xff00) {
+            break;
+          } else {
+            offset += view.getUint16(offset, false);
+          }
+        }
+        resolve(1);
+      };
+      reader.readAsArrayBuffer(file.slice(0, 64 * 1024));
+    });
+  };
+
+  const handleImagesSelected = async (files: File[]) => {
+    const filesWithOrientation: FileWithOrientation[] = [];
+
+    for (const file of files) {
+      const orientation = await getImageOrientation(file);
+      const fileWithOrientation = file as FileWithOrientation;
+      fileWithOrientation.orientation = orientation;
+      filesWithOrientation.push(fileWithOrientation);
+    }
+
+    setSelectedFiles(filesWithOrientation);
+    setFormData((prev) => ({ ...prev, imagenes: [] }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (submitting) return;
@@ -334,17 +409,27 @@ const AutoModal = ({
     }
   };
 
-  const handleImagesSelected = (files: File[]) => {
-    // Guardar los archivos de imagen para enviar al servidor
-    setSelectedFiles(files);
-    // No necesitamos crear URLs de objeto, solo mantener los archivos
-    setFormData((prev) => ({ ...prev, imagenes: [] }));
-  };
-
   const inputStyles =
     'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
   const textareaStyles =
     'mt-1 block w-full px-4 py-2.5 bg-white border border-gray-300 rounded-lg text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-color-secondary focus:ring-1 focus:ring-color-secondary transition-colors';
+
+  const handleImageClick = (
+    url: string,
+    index: number,
+    orientation?: number
+  ) => {
+    setSelectedImageForCrop({ url, index, orientation });
+  };
+
+  const handleCroppedImage = (croppedImage: File, index: number) => {
+    // Actualizar el archivo en selectedFiles con la versión recortada
+    setSelectedFiles((prevFiles) => {
+      const newFiles = [...prevFiles];
+      newFiles[index] = croppedImage;
+      return newFiles;
+    });
+  };
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -906,6 +991,18 @@ const AutoModal = ({
           </div>
         </Dialog>
       </Transition>
+      {selectedImageForCrop && (
+        <ImageCropModal
+          isOpen={true}
+          onClose={() => setSelectedImageForCrop(null)}
+          imageUrl={selectedImageForCrop.url}
+          orientation={selectedImageForCrop.orientation}
+          onCropComplete={(croppedImage) => {
+            handleCroppedImage(croppedImage, selectedImageForCrop.index);
+            setSelectedImageForCrop(null);
+          }}
+        />
+      )}
     </Transition>
   );
 };

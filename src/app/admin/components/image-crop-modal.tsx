@@ -7,6 +7,7 @@ interface ImageCropModalProps {
   onClose: () => void;
   imageUrl: string;
   onCropComplete: (croppedImage: File) => void;
+  orientation?: number;
 }
 
 export function ImageCropModal({
@@ -14,6 +15,7 @@ export function ImageCropModal({
   onClose,
   imageUrl,
   onCropComplete,
+  orientation = 1,
 }: ImageCropModalProps) {
   const [originalImage, setOriginalImage] = useState<HTMLImageElement | null>(
     null
@@ -47,8 +49,16 @@ export function ImageCropModal({
         // Calcular dimensiones de contenedor
         if (containerRef.current) {
           // Ajustar tamaño para el área de recorte - reducido para mejor ajuste
-          const containerWidth = Math.min(450, window.innerWidth * 0.5);
-          const containerHeight = Math.min(300, window.innerHeight * 0.4);
+          let containerWidth = Math.min(450, window.innerWidth * 0.5);
+          let containerHeight = Math.min(300, window.innerHeight * 0.4);
+
+          // Si la orientación indica rotación de 90 o 270 grados, intercambiar dimensiones
+          if (orientation === 6 || orientation === 8) {
+            [containerWidth, containerHeight] = [
+              containerHeight,
+              containerWidth,
+            ];
+          }
 
           // Calcular escala para ajustar la imagen al contenedor
           const scale = Math.min(
@@ -99,7 +109,7 @@ export function ImageCropModal({
       setRotation(0);
       setOriginalImage(null);
     }
-  }, [isOpen, imageUrl]);
+  }, [isOpen, imageUrl, orientation]);
 
   // Actualizar canvas de vista previa
   const updatePreview = useCallback(() => {
@@ -561,7 +571,45 @@ export function ImageCropModal({
         const finalCtx = finalCanvas.getContext('2d');
         if (!finalCtx) return;
 
-        // Si hay rotación, necesitamos un enfoque diferente
+        // Aplicar transformaciones según la orientación EXIF
+        if (orientation > 1) {
+          finalCtx.save();
+
+          // Centrar el punto de transformación
+          finalCtx.translate(finalCanvas.width / 2, finalCanvas.height / 2);
+
+          // Aplicar transformaciones según el valor de orientación
+          switch (orientation) {
+            case 2: // horizontal flip
+              finalCtx.scale(-1, 1);
+              break;
+            case 3: // 180° rotate left
+              finalCtx.rotate(Math.PI);
+              break;
+            case 4: // vertical flip
+              finalCtx.scale(1, -1);
+              break;
+            case 5: // vertical flip + 90 rotate right
+              finalCtx.rotate(Math.PI / 2);
+              finalCtx.scale(1, -1);
+              break;
+            case 6: // 90° rotate right
+              finalCtx.rotate(Math.PI / 2);
+              break;
+            case 7: // horizontal flip + 90 rotate right
+              finalCtx.rotate(Math.PI / 2);
+              finalCtx.scale(-1, 1);
+              break;
+            case 8: // 90° rotate left
+              finalCtx.rotate(-Math.PI / 2);
+              break;
+          }
+
+          // Volver al punto de origen
+          finalCtx.translate(-finalCanvas.width / 2, -finalCanvas.height / 2);
+        }
+
+        // Si hay rotación manual adicional, aplicarla
         if (rotation !== 0) {
           // Crear canvas temporal para toda la imagen rotada
           const tempCanvas = document.createElement('canvas');
@@ -613,7 +661,7 @@ export function ImageCropModal({
             finalCanvas.height
           );
         } else {
-          // Si no hay rotación, es más sencillo
+          // Si no hay rotación manual, dibujar directamente
           finalCtx.drawImage(
             originalImage,
             cropArea.x * scaleX,
@@ -625,6 +673,10 @@ export function ImageCropModal({
             finalCanvas.width,
             finalCanvas.height
           );
+        }
+
+        if (orientation > 1) {
+          finalCtx.restore();
         }
 
         // Convertir canvas a blob
@@ -677,6 +729,7 @@ export function ImageCropModal({
       imageUrl,
       onCropComplete,
       onClose,
+      orientation,
     ]
   );
 
