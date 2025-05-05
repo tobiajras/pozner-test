@@ -400,7 +400,7 @@ export default function DashboardPage() {
     try {
       const token = Cookies.get('admin-auth');
 
-      let url = `${API_BASE_URL}/api/admin/cars?page=${page}&limit=12`;
+      const url = `${API_BASE_URL}/api/admin/cars?page=${page}&limit=12`;
 
       const response = await fetch(url, {
         headers: {
