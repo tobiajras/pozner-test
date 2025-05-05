@@ -38,20 +38,6 @@ export function ImageCropModal({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const previewCanvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Guardar los datos del cuadrado máximo dentro de la imagen escalada
-  const [cropBox, setCropBox] = useState({
-    x: 0,
-    y: 0,
-    size: 0,
-  });
-
-  const [imageBox, setImageBox] = useState({
-    offsetX: 0,
-    offsetY: 0,
-    scaledWidth: 0,
-    scaledHeight: 0,
-  });
-
   // Cargar la imagen cuando se abre el modal
   useEffect(() => {
     if (isOpen && imageUrl) {
@@ -84,13 +70,10 @@ export function ImageCropModal({
             height: containerSize,
           });
 
-          setImageBox({ offsetX, offsetY, scaledWidth, scaledHeight });
-
           // Calcular el cuadrado máximo posible dentro de la imagen escalada
           const cropSize = Math.min(scaledWidth, scaledHeight);
           const cropX = offsetX + (scaledWidth - cropSize) / 2;
           const cropY = offsetY + (scaledHeight - cropSize) / 2;
-          setCropBox({ x: cropX, y: cropY, size: cropSize });
 
           // Inicializar el área de recorte con un tamaño más pequeño que el máximo
           const initialCropSize = cropSize * 0.85; // 85% del tamaño máximo
@@ -135,8 +118,6 @@ export function ImageCropModal({
       containerSize.width / originalImage.width,
       containerSize.height / originalImage.height
     );
-    const offsetX = (containerSize.width - originalImage.width * scale) / 2;
-    const offsetY = (containerSize.height - originalImage.height * scale) / 2;
 
     // Crear un canvas temporal para la imagen rotada
     const tempCanvas = document.createElement('canvas');
@@ -205,10 +186,6 @@ export function ImageCropModal({
 
     const scaledWidth = originalImage.width * scale;
     const scaledHeight = originalImage.height * scale;
-
-    // Calcular posición para centrar la imagen
-    const offsetX = (containerSize.width - scaledWidth) / 2;
-    const offsetY = (containerSize.height - scaledHeight) / 2;
 
     // Dibujar con rotación
     ctx.save();
