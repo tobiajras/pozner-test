@@ -47,7 +47,7 @@ export function ImageCropModal({
         setOriginalImage(img);
 
         if (containerRef.current) {
-          let containerSize = Math.min(
+          const containerSize = Math.min(
             450,
             Math.min(window.innerWidth * 0.5, window.innerHeight * 0.4)
           );
@@ -380,9 +380,6 @@ export function ImageCropModal({
           let newY = prev.y;
           let newWidth = prev.width;
           let newHeight = prev.height;
-
-          // Mantener proporción 1:1
-          const aspectRatio = 1;
 
           switch (prev.resizeHandle) {
             case 'tl': {
