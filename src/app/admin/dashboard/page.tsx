@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
@@ -502,12 +501,9 @@ export default function DashboardPage() {
     try {
       const token = Cookies.get('admin-auth');
 
-      let url = `${API_BASE_URL}/api/admin/cars?page=${page}&limit=12`;
-
-      // Agregar parámetro de búsqueda
-      if (search) {
-        url += `&model=${encodeURIComponent(search)}`;
-      }
+      const url = `${API_BASE_URL}/api/admin/cars?page=${page}&limit=12${
+        search ? `&model=${encodeURIComponent(search)}` : ''
+      }`;
 
       const response = await fetch(url, {
         headers: {
