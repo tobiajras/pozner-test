@@ -175,7 +175,7 @@ export default function AutoDetailPage() {
                 <button
                   key={index}
                   onClick={() => setShowModal(true)}
-                  className='relative w-full aspect-[4/3] flex-[0_0_100%] rounded-lg overflow-hidden cursor-zoom-in'
+                  className='relative w-full aspect-square flex-[0_0_100%] rounded-lg overflow-hidden cursor-zoom-in'
                 >
                   <Image
                     src={image.imageUrl}
@@ -185,6 +185,13 @@ export default function AutoDetailPage() {
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     priority={index === 0}
                   />
+                  {!car.active && (
+                    <div className='absolute inset-0 bg-black/70 flex items-center justify-center'>
+                      <span className='bg-yellow-100 text-yellow-700 text-xl md:text-2xl font-medium px-6 py-4 md:px-10 md:py-5 rounded-full'>
+                        Pausado
+                      </span>
+                    </div>
+                  )}
                 </button>
               ))}
             </div>
@@ -224,7 +231,7 @@ export default function AutoDetailPage() {
               <button
                 key={index}
                 onClick={() => scrollTo(index)}
-                className={`relative w-32 aspect-[4/3] flex-shrink-0 rounded overflow-hidden outline-none ${
+                className={`relative w-32 aspect-square flex-shrink-0 rounded overflow-hidden outline-none ${
                   selectedIndex === index ? 'ring-2 ring-color-primary' : ''
                 }`}
               >
@@ -295,21 +302,23 @@ export default function AutoDetailPage() {
             </div>
 
             {/* Botón de WhatsApp en versión móvil */}
-            <div className='flex mt-3'>
-              <Link
-                href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
-                target='_blank'
-                rel='noopener noreferrer'
-                className={`${
-                  company.dark
-                    ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
-                    : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
-                } flex gap-2 font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]`}
-              >
-                <WhatsappIcon className='w-6 h-6' />
-                <span>Consultar</span>
-              </Link>
-            </div>
+            {car.active && (
+              <div className='flex mt-3'>
+                <Link
+                  href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={`${
+                    company.dark
+                      ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
+                      : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
+                  } flex gap-2 font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]`}
+                >
+                  <WhatsappIcon className='w-6 h-6' />
+                  <span>Consultar</span>
+                </Link>
+              </div>
+            )}
 
             {/* Descripción en móvil, ahora entre el botón de WhatsApp y la sección de checkmarks */}
             {car.description && (
@@ -419,21 +428,23 @@ export default function AutoDetailPage() {
           </div>
 
           {/* Botón de WhatsApp */}
-          <div className='flex mt-3'>
-            <Link
-              href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
-              target='_blank'
-              rel='noopener noreferrer'
-              className={`${
-                company.dark
-                  ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
-                  : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
-              } flex gap-2 font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]`}
-            >
-              <WhatsappIcon className='w-6 h-6' />
-              <span>Consultar</span>
-            </Link>
-          </div>
+          {car.active && (
+            <div className='flex mt-3'>
+              <Link
+                href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
+                target='_blank'
+                rel='noopener noreferrer'
+                className={`${
+                  company.dark
+                    ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
+                    : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
+                } flex gap-2 font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]`}
+              >
+                <WhatsappIcon className='w-6 h-6' />
+                <span>Consultar</span>
+              </Link>
+            </div>
+          )}
           <hr className='mt-8 mb-5' />
           <div className='flex flex-col gap-3'>
             <div className='text-color-text flex items-center'>

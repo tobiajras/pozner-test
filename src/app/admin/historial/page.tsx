@@ -243,7 +243,7 @@ export default function HistorialPage() {
               className='bg-white rounded-lg [box-shadow:0_0_10px_rgba(0,0,0,0.07)] p-6'
             >
               <div className='flex flex-col md:flex-row gap-6'>
-                <div className='relative w-[145px] h-[116px] md:w-[170px] md:h-[136px] flex-shrink-0'>
+                <div className='relative w-[135px] h-[135px] md:w-[150px] md:h-[150px] flex-shrink-0'>
                   {auto.thumbnailUrl ? (
                     <Image
                       priority={idx < 4 ? true : false}

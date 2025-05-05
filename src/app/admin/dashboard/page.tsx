@@ -175,7 +175,7 @@ const SortableAutoCard = ({
     >
       <div className='p-4 sm:p-6'>
         <div className='flex flex-col sm:flex-row gap-4'>
-          <div className='relative w-full sm:w-[145px] h-[116px] md:w-[170px] md:h-[136px] flex-shrink-0'>
+          <div className='relative w-full sm:w-[135px] h-[135px] md:w-[155px] md:h-[155px] flex-shrink-0'>
             {auto.imagenes && auto.imagenes.length > 0 ? (
               <Image
                 priority={index < 4 ? true : false}

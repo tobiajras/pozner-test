@@ -160,10 +160,10 @@ const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
                 )}
 
                 {/* Imagen con overlay */}
-                <div className='relative overflow-hidden h-44 sm:h-48 md:h-52 xl:h-56'>
+                <div className='relative overflow-hidden aspect-square'>
                   <Image
                     priority
-                    width={451}
+                    width={600}
                     height={600}
                     className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
                     src={

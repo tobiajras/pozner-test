@@ -171,10 +171,10 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                 )}
 
                 {/* Imagen con overlay */}
-                <div className='relative aspect-[4/3] overflow-hidden'>
+                <div className='relative aspect-square overflow-hidden'>
                   <Image
                     priority
-                    width={451}
+                    width={600}
                     height={600}
                     className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
                     src={

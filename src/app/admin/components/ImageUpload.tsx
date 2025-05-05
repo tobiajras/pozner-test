@@ -94,7 +94,7 @@ const SortableImage = ({
       >
         <GripVertical size={16} className='text-gray-600' />
       </div>
-      <div className='w-[110px] h-[88px] relative'>
+      <div className='w-[110px] h-[110px] relative'>
         <Image
           src={image.thumbnailUrl}
           alt={`Imagen ${index + 1}`}
@@ -166,7 +166,7 @@ const SortableNewImage = ({
       >
         <GripVertical size={16} className='text-gray-600' />
       </div>
-      <div className='w-[110px] h-[88px] relative'>
+      <div className='w-[110px] h-[110px] relative'>
         <Image
           priority
           src={src}
@@ -610,7 +610,7 @@ export function ImageUpload({
                   imagesToDelete.length <
                   maxFiles && (
                   <div
-                    className='border-2 border-dashed border-gray-300 rounded-md w-[110px] h-[88px] flex flex-col items-center justify-center cursor-pointer hover:border-red-400 transition-colors'
+                    className='border-2 border-dashed border-gray-300 rounded-md w-[110px] h-[110px] flex flex-col items-center justify-center cursor-pointer hover:border-red-400 transition-colors'
                     onClick={triggerFileInput}
                   >
                     <Plus className='h-8 w-8 text-gray-400 mb-2' />

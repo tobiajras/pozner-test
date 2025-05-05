@@ -38,6 +38,20 @@ export function ImageCropModal({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const previewCanvasRef = useRef<HTMLCanvasElement>(null);
 
+  // Guardar los datos del cuadrado máximo dentro de la imagen escalada
+  const [cropBox, setCropBox] = useState({
+    x: 0,
+    y: 0,
+    size: 0,
+  });
+
+  const [imageBox, setImageBox] = useState({
+    offsetX: 0,
+    offsetY: 0,
+    scaledWidth: 0,
+    scaledHeight: 0,
+  });
+
   // Cargar la imagen cuando se abre el modal
   useEffect(() => {
     if (isOpen && imageUrl) {
@@ -46,54 +60,47 @@ export function ImageCropModal({
       img.onload = () => {
         setOriginalImage(img);
 
-        // Calcular dimensiones de contenedor
         if (containerRef.current) {
-          // Ajustar tamaño para el área de recorte - reducido para mejor ajuste
-          let containerWidth = Math.min(450, window.innerWidth * 0.5);
-          let containerHeight = Math.min(300, window.innerHeight * 0.4);
+          let containerSize = Math.min(
+            450,
+            Math.min(window.innerWidth * 0.5, window.innerHeight * 0.4)
+          );
 
-          // Si la orientación indica rotación de 90 o 270 grados, intercambiar dimensiones
-          if (orientation === 6 || orientation === 8) {
-            [containerWidth, containerHeight] = [
-              containerHeight,
-              containerWidth,
-            ];
-          }
-
-          // Calcular escala para ajustar la imagen al contenedor
+          // Calcular escala para ajustar la imagen al contenedor manteniendo aspect ratio
           const scale = Math.min(
-            containerWidth / img.width,
-            containerHeight / img.height
+            containerSize / img.width,
+            containerSize / img.height
           );
 
           const scaledWidth = img.width * scale;
           const scaledHeight = img.height * scale;
 
+          // Calcular posición para centrar la imagen
+          const offsetX = (containerSize - scaledWidth) / 2;
+          const offsetY = (containerSize - scaledHeight) / 2;
+
           setContainerSize({
-            width: scaledWidth,
-            height: scaledHeight,
+            width: containerSize,
+            height: containerSize,
           });
 
-          // Calcular dimensiones para evitar espacios en blanco
-          // Determinar el tamaño máximo disponible para el área de recorte
-          let maxCropWidth = scaledWidth * 0.85;
-          let maxCropHeight = maxCropWidth * (3 / 4); // Aspecto 4:3
+          setImageBox({ offsetX, offsetY, scaledWidth, scaledHeight });
 
-          // Si la altura calculada excede la altura de la imagen, recalcular basado en altura
-          if (maxCropHeight > scaledHeight * 0.85) {
-            maxCropHeight = scaledHeight * 0.85;
-            maxCropWidth = maxCropHeight * (4 / 3); // Aspecto 4:3
-          }
+          // Calcular el cuadrado máximo posible dentro de la imagen escalada
+          const cropSize = Math.min(scaledWidth, scaledHeight);
+          const cropX = offsetX + (scaledWidth - cropSize) / 2;
+          const cropY = offsetY + (scaledHeight - cropSize) / 2;
+          setCropBox({ x: cropX, y: cropY, size: cropSize });
 
-          // Centrar el área de recorte
-          const cropX = (scaledWidth - maxCropWidth) / 2;
-          const cropY = (scaledHeight - maxCropHeight) / 2;
-
+          // Inicializar el área de recorte con un tamaño más pequeño que el máximo
+          const initialCropSize = cropSize * 0.85; // 85% del tamaño máximo
+          const initialCropX = cropX + (cropSize - initialCropSize) / 2;
+          const initialCropY = cropY + (cropSize - initialCropSize) / 2;
           setCropArea({
-            x: cropX,
-            y: cropY,
-            width: maxCropWidth,
-            height: maxCropHeight,
+            x: initialCropX,
+            y: initialCropY,
+            width: initialCropSize,
+            height: initialCropSize,
             dragging: false,
             resizing: false,
             resizeHandle: '',
@@ -102,10 +109,8 @@ export function ImageCropModal({
           });
         }
       };
-
       img.src = imageUrl;
     } else {
-      // Reset al cerrar
       setRotation(0);
       setOriginalImage(null);
     }
@@ -120,43 +125,60 @@ export function ImageCropModal({
     const ctx = previewCanvas.getContext('2d');
     if (!ctx) return;
 
-    // Establecer tamaño de la vista previa (mantener aspecto 4:3)
-    const previewWidth = 220;
-    const previewHeight = previewWidth * (3 / 4);
-    previewCanvas.width = previewWidth;
-    previewCanvas.height = previewHeight;
+    // Establecer tamaño de la vista previa (mantener aspecto 1:1)
+    const previewSize = 220;
+    previewCanvas.width = previewSize;
+    previewCanvas.height = previewSize;
 
-    // Crear un canvas temporal para la rotación
+    // Calcular escala y offset de la imagen en el canvas cuadrado
+    const scale = Math.min(
+      containerSize.width / originalImage.width,
+      containerSize.height / originalImage.height
+    );
+    const offsetX = (containerSize.width - originalImage.width * scale) / 2;
+    const offsetY = (containerSize.height - originalImage.height * scale) / 2;
+
+    // Crear un canvas temporal para la imagen rotada
     const tempCanvas = document.createElement('canvas');
     tempCanvas.width = containerSize.width;
     tempCanvas.height = containerSize.height;
     const tempCtx = tempCanvas.getContext('2d');
     if (!tempCtx) return;
 
-    // Dibujar con rotación en el canvas temporal
+    // Dibujar la imagen rotada en el canvas temporal
     tempCtx.save();
-    tempCtx.translate(tempCanvas.width / 2, tempCanvas.height / 2);
+    tempCtx.translate(containerSize.width / 2, containerSize.height / 2);
     tempCtx.rotate((rotation * Math.PI) / 180);
     tempCtx.drawImage(
       originalImage,
-      -containerSize.width / 2,
-      -containerSize.height / 2,
-      containerSize.width,
-      containerSize.height
+      (-originalImage.width * scale) / 2,
+      (-originalImage.height * scale) / 2,
+      originalImage.width * scale,
+      originalImage.height * scale
     );
     tempCtx.restore();
 
-    // Extraer área recortada y dibujarla en la vista previa
+    // Área de recorte en el canvas
+    const cropX = cropArea.x;
+    const cropY = cropArea.y;
+    const cropW = cropArea.width;
+    const cropH = cropArea.height;
+
+    // Limpiar la vista previa (rellenar de blanco)
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, previewSize, previewSize);
+
+    // Extraer la región recortada del canvas temporal y dibujarla en la vista previa
     ctx.drawImage(
       tempCanvas,
-      cropArea.x,
-      cropArea.y,
-      cropArea.width,
-      cropArea.height,
+      cropX,
+      cropY,
+      cropW,
+      cropH,
       0,
       0,
-      previewWidth,
-      previewHeight
+      previewSize,
+      previewSize
     );
   }, [originalImage, containerSize, cropArea, rotation]);
 
@@ -175,20 +197,31 @@ export function ImageCropModal({
     // Limpiar canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Calcular escala para ajustar la imagen al contenedor manteniendo aspect ratio
+    const scale = Math.min(
+      containerSize.width / originalImage.width,
+      containerSize.height / originalImage.height
+    );
+
+    const scaledWidth = originalImage.width * scale;
+    const scaledHeight = originalImage.height * scale;
+
+    // Calcular posición para centrar la imagen
+    const offsetX = (containerSize.width - scaledWidth) / 2;
+    const offsetY = (containerSize.height - scaledHeight) / 2;
+
     // Dibujar con rotación
     ctx.save();
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.rotate((rotation * Math.PI) / 180);
 
-    // Centrar imagen
-    const drawWidth = containerSize.width;
-    const drawHeight = containerSize.height;
+    // Dibujar imagen centrada
     ctx.drawImage(
       originalImage,
-      -drawWidth / 2,
-      -drawHeight / 2,
-      drawWidth,
-      drawHeight
+      -scaledWidth / 2,
+      -scaledHeight / 2,
+      scaledWidth,
+      scaledHeight
     );
 
     ctx.restore();
@@ -365,98 +398,91 @@ export function ImageCropModal({
           };
         });
       } else if (cropArea.resizing) {
-        // Redimensionar desde la esquina o borde correspondiente
         setCropArea((prev) => {
           let newX = prev.x;
           let newY = prev.y;
           let newWidth = prev.width;
           let newHeight = prev.height;
 
-          // Mantener proporción 4:3
-          const aspectRatio = 4 / 3;
+          // Mantener proporción 1:1
+          const aspectRatio = 1;
 
-          // Calcular cambios basados en qué esquina se está arrastrando
           switch (prev.resizeHandle) {
-            case 'tl': // top-left
-              // Determinar qué dimensión cambia más para mantener aspect ratio
+            case 'tl': {
               const tlDeltaXRatio = Math.abs(deltaX) / prev.width;
               const tlDeltaYRatio = Math.abs(deltaY) / prev.height;
-
               if (tlDeltaXRatio > tlDeltaYRatio) {
-                // Si el cambio horizontal es mayor
                 newX = Math.min(prev.x + deltaX, prev.x + prev.width - 30);
                 newWidth = prev.width - (newX - prev.x);
-                newHeight = newWidth / aspectRatio;
+                newHeight = newWidth;
                 newY = prev.y + prev.height - newHeight;
               } else {
-                // Si el cambio vertical es mayor
                 newY = Math.min(prev.y + deltaY, prev.y + prev.height - 30);
                 newHeight = prev.height - (newY - prev.y);
-                newWidth = newHeight * aspectRatio;
+                newWidth = newHeight;
                 newX = prev.x + prev.width - newWidth;
               }
               break;
-            case 'tr': // top-right
-              // Si se mueve horizontalmente
+            }
+            case 'tr': {
               if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 newWidth = Math.max(30, prev.width + deltaX);
-                newHeight = newWidth / aspectRatio;
+                newHeight = newWidth;
                 newY = prev.y + prev.height - newHeight;
               } else {
-                // Si se mueve verticalmente
                 newY = Math.min(prev.y + deltaY, prev.y + prev.height - 30);
                 newHeight = prev.height - (newY - prev.y);
-                newWidth = newHeight * aspectRatio;
+                newWidth = newHeight;
               }
               break;
-            case 'br': // bottom-right
-              // Si se mueve horizontalmente
+            }
+            case 'br': {
               if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 newWidth = Math.max(30, prev.width + deltaX);
-                newHeight = newWidth / aspectRatio;
+                newHeight = newWidth;
               } else {
-                // Si se mueve verticalmente
                 newHeight = Math.max(30, prev.height + deltaY);
-                newWidth = newHeight * aspectRatio;
+                newWidth = newHeight;
               }
               break;
-            case 'bl': // bottom-left
-              // Si se mueve horizontalmente
+            }
+            case 'bl': {
               if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 newX = Math.min(prev.x + deltaX, prev.x + prev.width - 30);
                 newWidth = prev.width - (newX - prev.x);
-                newHeight = newWidth / aspectRatio;
+                newHeight = newWidth;
               } else {
-                // Si se mueve verticalmente
                 newHeight = Math.max(30, prev.height + deltaY);
-                newWidth = newHeight * aspectRatio;
+                newWidth = newHeight;
                 newX = prev.x + prev.width - newWidth;
               }
               break;
+            }
           }
 
-          // Verificar límites
+          // Limitar dentro del canvas
           if (newX < 0) {
-            newWidth += newX;
+            newWidth -= 0 - newX;
+            newHeight = newWidth;
             newX = 0;
-            newHeight = newWidth / aspectRatio;
           }
-
           if (newY < 0) {
-            newHeight += newY;
+            newHeight -= 0 - newY;
+            newWidth = newHeight;
             newY = 0;
-            newWidth = newHeight * aspectRatio;
           }
-
           if (newX + newWidth > containerSize.width) {
             newWidth = containerSize.width - newX;
-            newHeight = newWidth / aspectRatio;
+            newHeight = newWidth;
           }
-
           if (newY + newHeight > containerSize.height) {
             newHeight = containerSize.height - newY;
-            newWidth = newHeight * aspectRatio;
+            newWidth = newHeight;
           }
+
+          // Limitar tamaño mínimo
+          newWidth = Math.max(30, newWidth);
+          newHeight = newWidth;
 
           return {
             ...prev,
@@ -557,150 +583,88 @@ export function ImageCropModal({
       if (!originalImage || !canvasRef.current) return;
 
       try {
+        // Calcular escala y offset de la imagen en el canvas cuadrado
+        const scale = Math.min(
+          containerSize.width / originalImage.width,
+          containerSize.height / originalImage.height
+        );
+        const offsetX = (containerSize.width - originalImage.width * scale) / 2;
+        const offsetY =
+          (containerSize.height - originalImage.height * scale) / 2;
+
         // Crear un canvas para la imagen final recortada
         const finalCanvas = document.createElement('canvas');
-
-        // Calcular escala para aplicar al tamaño real de la imagen
-        const scaleX = originalImage.width / containerSize.width;
-        const scaleY = originalImage.height / containerSize.height;
-
-        // Configurar tamaño del canvas final
-        finalCanvas.width = cropArea.width * scaleX;
-        finalCanvas.height = cropArea.height * scaleY;
-
+        // Usar el tamaño original de la imagen en lugar de escalarlo
+        finalCanvas.width = originalImage.width;
+        finalCanvas.height = originalImage.height;
         const finalCtx = finalCanvas.getContext('2d');
         if (!finalCtx) return;
 
-        // Aplicar transformaciones según la orientación EXIF
-        if (orientation > 1) {
-          finalCtx.save();
+        // Rellenar de blanco
+        finalCtx.fillStyle = '#fff';
+        finalCtx.fillRect(0, 0, finalCanvas.width, finalCanvas.height);
 
-          // Centrar el punto de transformación
-          finalCtx.translate(finalCanvas.width / 2, finalCanvas.height / 2);
+        // Dibujar la imagen original con la rotación aplicada
+        finalCtx.save();
+        finalCtx.translate(finalCanvas.width / 2, finalCanvas.height / 2);
+        finalCtx.rotate((rotation * Math.PI) / 180);
+        finalCtx.drawImage(
+          originalImage,
+          -originalImage.width / 2,
+          -originalImage.height / 2,
+          originalImage.width,
+          originalImage.height
+        );
+        finalCtx.restore();
 
-          // Aplicar transformaciones según el valor de orientación
-          switch (orientation) {
-            case 2: // horizontal flip
-              finalCtx.scale(-1, 1);
-              break;
-            case 3: // 180° rotate left
-              finalCtx.rotate(Math.PI);
-              break;
-            case 4: // vertical flip
-              finalCtx.scale(1, -1);
-              break;
-            case 5: // vertical flip + 90 rotate right
-              finalCtx.rotate(Math.PI / 2);
-              finalCtx.scale(1, -1);
-              break;
-            case 6: // 90° rotate right
-              finalCtx.rotate(Math.PI / 2);
-              break;
-            case 7: // horizontal flip + 90 rotate right
-              finalCtx.rotate(Math.PI / 2);
-              finalCtx.scale(-1, 1);
-              break;
-            case 8: // 90° rotate left
-              finalCtx.rotate(-Math.PI / 2);
-              break;
-          }
+        // Calcular las coordenadas de recorte en el canvas original
+        const originalCropX = (cropArea.x - offsetX) / scale;
+        const originalCropY = (cropArea.y - offsetY) / scale;
+        const originalCropW = cropArea.width / scale;
+        const originalCropH = cropArea.height / scale;
 
-          // Volver al punto de origen
-          finalCtx.translate(-finalCanvas.width / 2, -finalCanvas.height / 2);
-        }
+        // Crear un canvas temporal para el recorte final
+        const croppedCanvas = document.createElement('canvas');
+        croppedCanvas.width = originalCropW;
+        croppedCanvas.height = originalCropH;
+        const croppedCtx = croppedCanvas.getContext('2d');
+        if (!croppedCtx) return;
 
-        // Si hay rotación manual adicional, aplicarla
-        if (rotation !== 0) {
-          // Crear canvas temporal para toda la imagen rotada
-          const tempCanvas = document.createElement('canvas');
-          const tempSize =
-            Math.max(originalImage.width, originalImage.height) * 1.5;
-          tempCanvas.width = tempSize;
-          tempCanvas.height = tempSize;
+        // Extraer la región recortada del canvas final
+        croppedCtx.drawImage(
+          finalCanvas,
+          originalCropX,
+          originalCropY,
+          originalCropW,
+          originalCropH,
+          0,
+          0,
+          originalCropW,
+          originalCropH
+        );
 
-          const tempCtx = tempCanvas.getContext('2d');
-          if (!tempCtx) return;
-
-          // Centrar y rotar la imagen original
-          tempCtx.save();
-          tempCtx.translate(tempSize / 2, tempSize / 2);
-          tempCtx.rotate((rotation * Math.PI) / 180);
-          tempCtx.drawImage(
-            originalImage,
-            -originalImage.width / 2,
-            -originalImage.height / 2
-          );
-          tempCtx.restore();
-
-          // Calcular posición equivalente en la imagen original rotada
-          const centerCanvasX = containerSize.width / 2;
-          const centerCanvasY = containerSize.height / 2;
-
-          // Calcular el offset desde el centro de la imagen canvas
-          const offsetX = cropArea.x + cropArea.width / 2 - centerCanvasX;
-          const offsetY = cropArea.y + cropArea.height / 2 - centerCanvasY;
-
-          // Escalar este offset al tamaño real
-          const scaledOffsetX = offsetX * scaleX;
-          const scaledOffsetY = offsetY * scaleY;
-
-          // Posición para extraer en la imagen temporal rotada
-          const cropX = tempSize / 2 + scaledOffsetX - finalCanvas.width / 2;
-          const cropY = tempSize / 2 + scaledOffsetY - finalCanvas.height / 2;
-
-          // Copiar área recortada al canvas final
-          finalCtx.drawImage(
-            tempCanvas,
-            cropX,
-            cropY,
-            finalCanvas.width,
-            finalCanvas.height,
-            0,
-            0,
-            finalCanvas.width,
-            finalCanvas.height
-          );
-        } else {
-          // Si no hay rotación manual, dibujar directamente
-          finalCtx.drawImage(
-            originalImage,
-            cropArea.x * scaleX,
-            cropArea.y * scaleY,
-            cropArea.width * scaleX,
-            cropArea.height * scaleY,
-            0,
-            0,
-            finalCanvas.width,
-            finalCanvas.height
-          );
-        }
-
-        if (orientation > 1) {
-          finalCtx.restore();
+        // Determinar tipo MIME
+        let mimeType = 'image/jpeg';
+        if (imageUrl.includes('.png') || imageUrl.includes('image/png')) {
+          mimeType = 'image/png';
+        } else if (
+          imageUrl.includes('.webp') ||
+          imageUrl.includes('image/webp')
+        ) {
+          mimeType = 'image/webp';
+        } else if (
+          imageUrl.includes('.gif') ||
+          imageUrl.includes('image/gif')
+        ) {
+          mimeType = 'image/gif';
         }
 
         // Convertir canvas a blob
-        finalCanvas.toBlob(
+        croppedCanvas.toBlob(
           (blob) => {
             if (!blob) {
               console.error('No se pudo crear el blob');
               return;
-            }
-
-            // Determinar tipo MIME
-            let mimeType = 'image/jpeg';
-            if (imageUrl.includes('.png') || imageUrl.includes('image/png')) {
-              mimeType = 'image/png';
-            } else if (
-              imageUrl.includes('.webp') ||
-              imageUrl.includes('image/webp')
-            ) {
-              mimeType = 'image/webp';
-            } else if (
-              imageUrl.includes('.gif') ||
-              imageUrl.includes('image/gif')
-            ) {
-              mimeType = 'image/gif';
             }
 
             // Crear nombre de archivo
@@ -714,8 +678,8 @@ export function ImageCropModal({
             onCropComplete(croppedFile);
             onClose();
           },
-          'image/jpeg',
-          0.95
+          mimeType,
+          1.0 // Calidad máxima (sin optimización)
         );
       } catch (error) {
         console.error('Error al aplicar el recorte:', error);
@@ -729,7 +693,6 @@ export function ImageCropModal({
       imageUrl,
       onCropComplete,
       onClose,
-      orientation,
     ]
   );
 
@@ -884,7 +847,7 @@ export function ImageCropModal({
                 ref={previewCanvasRef}
                 className='border border-gray-300 rounded-md'
                 width={220}
-                height={165}
+                height={220}
               />
             </div>
 

@@ -453,7 +453,7 @@ const CatalogoPage = () => {
                         </div>
 
                         {/* Imagen con overlay */}
-                        <div className='relative overflow-hidden '>
+                        <div className='relative overflow-hidden aspect-square'>
                           <Image
                             className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
                             src={
@@ -461,7 +461,7 @@ const CatalogoPage = () => {
                               '/assets/catalogo/placeholder.webp'
                             }
                             alt={`${car.model}`}
-                            width={451}
+                            width={600}
                             height={600}
                           />
                           {/* Overlay con degradado */}
