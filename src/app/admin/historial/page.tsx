@@ -69,7 +69,7 @@ export default function HistorialPage() {
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(
-        `${API_BASE_URL}/api/sells?page=${page}&limit=10`,
+        `${API_BASE_URL}/api/sells?page=${page}&limit=12`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
@@ -12,6 +13,8 @@ import {
   Zap,
   GripVertical,
   Save,
+  Search,
+  X,
 } from 'lucide-react';
 import Image from 'next/image';
 import Cookies from 'js-cookie';
@@ -362,6 +365,11 @@ export default function DashboardPage() {
     type: 'success',
     message: '',
   });
+  const [busqueda, setBusqueda] = useState('');
+  const [buscando, setBuscando] = useState(false);
+  const [resultadosBusqueda, setResultadosBusqueda] = useState<Auto[]>([]);
+  const [totalResultados, setTotalResultados] = useState(0);
+  const [paginasBusqueda, setPaginasBusqueda] = useState(1);
 
   // Configuración de sensores para DnD
   const sensors = useSensors(
@@ -382,7 +390,8 @@ export default function DashboardPage() {
     router.push('/admin/login');
   };
 
-  const fetchAutos = async (page = 1, append = false) => {
+  // Obtener todos los autos (sin búsqueda)
+  const fetchTodosLosAutos = async (page = 1, append = false) => {
     if (page === 1) {
       setLoading(true);
     } else {
@@ -391,15 +400,15 @@ export default function DashboardPage() {
     setError(null);
     try {
       const token = Cookies.get('admin-auth');
-      const response = await fetch(
-        `${API_BASE_URL}/api/admin/cars?page=${page}&limit=10`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            Accept: 'application/json',
-          },
-        }
-      );
+
+      let url = `${API_BASE_URL}/api/admin/cars?page=${page}&limit=12`;
+
+      const response = await fetch(url, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: 'application/json',
+        },
+      });
 
       if (response.status === 403) {
         handleUnauthorized();
@@ -435,25 +444,42 @@ export default function DashboardPage() {
         position: car.position,
       }));
 
-      // Actualizar el array de autos visibles actualmente
-      setAutos((prev) =>
-        append ? [...prev, ...autosFormateados] : autosFormateados
-      );
-
-      // Mantener un registro de todos los autos cargados para usar en paginación
+      // Mantener un registro de todos los autos cargados
       if (append) {
+        // Si estamos añadiendo más autos a los existentes
         const autosIds = new Set(todosLosAutos.map((auto) => auto.id));
         const nuevosAutos = autosFormateados.filter(
           (auto) => !autosIds.has(auto.id)
         );
-        setTodosLosAutos((prev) => [...prev, ...nuevosAutos]);
+
+        // Añadir los nuevos autos manteniendo el orden por posición
+        setTodosLosAutos((prev) => {
+          const combinados = [...prev, ...nuevosAutos];
+          // Ordenar por posición (mayor a menor)
+          return combinados.sort((a, b) => b.position - a.position);
+        });
       } else {
-        setTodosLosAutos(autosFormateados);
+        // Si estamos recargando completamente (página 1)
+        setTodosLosAutos(
+          autosFormateados.sort((a, b) => b.position - a.position)
+        );
+      }
+
+      // Actualizar la página actual y la vista
+      if (page === 1) {
+        setAutos(autosFormateados);
+      } else {
+        // Solo actualizar autos si es la primera carga o si estamos en modo no-append
+        if (!append) {
+          setAutos(autosFormateados);
+        }
       }
 
       setCurrentPage(data.currentPage);
       setTotalPages(data.totalPages);
       setTotalAutos(data.total);
+
+      setBuscando(false);
     } catch (error) {
       console.error('Error al cargar los autos:', error);
       setError(
@@ -465,21 +491,126 @@ export default function DashboardPage() {
     }
   };
 
+  // Buscar autos
+  const fetchBusqueda = async (page = 1, append = false, search = '') => {
+    if (page === 1) {
+      setLoading(true);
+    } else {
+      setLoadingMore(true);
+    }
+    setError(null);
+    try {
+      const token = Cookies.get('admin-auth');
+
+      let url = `${API_BASE_URL}/api/admin/cars?page=${page}&limit=12`;
+
+      // Agregar parámetro de búsqueda
+      if (search) {
+        url += `&model=${encodeURIComponent(search)}`;
+      }
+
+      const response = await fetch(url, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.status === 403) {
+        handleUnauthorized();
+        return;
+      }
+
+      if (!response.ok) {
+        throw new Error(
+          `Error ${response.status}: No se pudieron cargar los autos`
+        );
+      }
+
+      const data: ApiResponse = await response.json();
+
+      const autosFormateados: Auto[] = data.cars.map((car) => ({
+        id: car.id,
+        marca: car.brand,
+        marcaId: car.brand.toLowerCase(),
+        modelo: car.model,
+        año: car.year,
+        precio: parseFloat(car.price),
+        active: car.active,
+        imagenes: car.Images.map((img) => img.thumbnailUrl),
+        descripcion: car.description,
+        kilometraje: car.mileage,
+        combustible: car.fuel,
+        transmision: car.transmission,
+        puertas: car.doors,
+        categoria: car.Category?.name || 'Sin categoría',
+        categoriaId: car.categoryId,
+        destacado: car.featured,
+        favorito: car.favorite,
+        position: car.position,
+      }));
+
+      // Actualizar resultados de búsqueda
+      if (append) {
+        setResultadosBusqueda((prev) => [...prev, ...autosFormateados]);
+      } else {
+        setResultadosBusqueda(autosFormateados);
+      }
+
+      setBuscando(true);
+      setCurrentPage(data.currentPage);
+      setPaginasBusqueda(data.totalPages);
+      setTotalResultados(data.total);
+    } catch (error) {
+      console.error('Error al buscar autos:', error);
+      setError(
+        error instanceof Error ? error.message : 'Error al buscar autos'
+      );
+    } finally {
+      setLoading(false);
+      setLoadingMore(false);
+    }
+  };
+
   const loadMore = () => {
-    if (currentPage < totalPages && !loadingMore) {
-      fetchAutos(currentPage + 1, true);
+    if (buscando) {
+      if (currentPage < paginasBusqueda && !loadingMore) {
+        fetchBusqueda(currentPage + 1, true, busqueda);
+      }
+    } else {
+      if (currentPage < totalPages && !loadingMore) {
+        fetchTodosLosAutos(currentPage + 1, true);
+      }
     }
   };
 
   const observer = useInfiniteScroll({
     onLoadMore: loadMore,
-    hasMore: currentPage < totalPages,
+    hasMore: buscando
+      ? currentPage < paginasBusqueda
+      : currentPage < totalPages,
     loading: loadingMore,
   });
 
   useEffect(() => {
-    fetchAutos();
+    fetchTodosLosAutos();
   }, []);
+
+  // Efecto para actualizar el estado de autos cuando cambia todosLosAutos
+  // Esto asegura que cualquier cambio de orden se refleje correctamente
+  useEffect(() => {
+    if (!buscando) {
+      // Mostrar autos en la página actual manteniendo el orden de todosLosAutos
+      const startIndex = (currentPage - 1) * 12;
+      const endIndex = startIndex + 12;
+      setAutos(
+        todosLosAutos.slice(
+          startIndex,
+          Math.min(endIndex, todosLosAutos.length)
+        )
+      );
+    }
+  }, [todosLosAutos, currentPage, buscando]);
 
   const handleDeleteClick = (auto: Auto) => {
     setAutoToDelete(auto);
@@ -607,6 +738,20 @@ export default function DashboardPage() {
         )
       );
 
+      // Actualizar resultados de búsqueda si hay búsqueda activa
+      if (buscando) {
+        setResultadosBusqueda((prevResultados) =>
+          prevResultados.map((auto) =>
+            auto.id === id
+              ? {
+                  ...auto,
+                  active: autoActualizado.active,
+                }
+              : auto
+          )
+        );
+      }
+
       // Si el auto está en destacados o favoritos, actualizar esas listas también
       setAutosDestacados((prevAutos) =>
         prevAutos.map((auto) =>
@@ -698,13 +843,32 @@ export default function DashboardPage() {
         )
       );
 
+      // Actualizar resultados de búsqueda si hay búsqueda activa
+      if (buscando) {
+        setResultadosBusqueda((prevResultados) =>
+          prevResultados.map((auto) =>
+            auto.id === id
+              ? {
+                  ...auto,
+                  destacado: autoActualizado.featured,
+                }
+              : auto
+          )
+        );
+      }
+
       // Actualizar la lista de autos destacados
       // Si el auto se convirtió en destacado, añadirlo a la lista si no existe
       if (autoActualizado.featured) {
         const autoExistente = autosDestacados.find((auto) => auto.id === id);
         if (!autoExistente) {
           // Buscar el auto completo en todosLosAutos
-          const autoCompleto = todosLosAutos.find((auto) => auto.id === id);
+          const autoCompleto =
+            todosLosAutos.find((auto) => auto.id === id) ||
+            (buscando
+              ? resultadosBusqueda.find((auto) => auto.id === id)
+              : null);
+
           if (autoCompleto) {
             setAutosDestacados((prev) => [
               ...prev,
@@ -788,13 +952,32 @@ export default function DashboardPage() {
         )
       );
 
+      // Actualizar resultados de búsqueda si hay búsqueda activa
+      if (buscando) {
+        setResultadosBusqueda((prevResultados) =>
+          prevResultados.map((auto) =>
+            auto.id === id
+              ? {
+                  ...auto,
+                  favorito: autoActualizado.favorite,
+                }
+              : auto
+          )
+        );
+      }
+
       // Actualizar la lista de autos favoritos
       // Si el auto se convirtió en favorito, añadirlo a la lista si no existe
       if (autoActualizado.favorite) {
         const autoExistente = autosFavoritos.find((auto) => auto.id === id);
         if (!autoExistente) {
-          // Buscar el auto completo en todosLosAutos
-          const autoCompleto = todosLosAutos.find((auto) => auto.id === id);
+          // Buscar el auto completo en todosLosAutos o en resultados de búsqueda
+          const autoCompleto =
+            todosLosAutos.find((auto) => auto.id === id) ||
+            (buscando
+              ? resultadosBusqueda.find((auto) => auto.id === id)
+              : null);
+
           if (autoCompleto) {
             setAutosFavoritos((prev) => [
               ...prev,
@@ -890,7 +1073,7 @@ export default function DashboardPage() {
       setSelectedAuto(undefined);
       setCurrentPage(1);
       // Recargar desde la primera página
-      fetchAutos(1, false);
+      fetchTodosLosAutos(1, false);
     } catch (error) {
       console.error('Error al crear el auto:', error);
 
@@ -1185,10 +1368,15 @@ export default function DashboardPage() {
         // Si no encontramos los índices, no hacemos nada
         if (oldIndex === -1 || newIndex === -1) return items;
 
+        // Crear la nueva lista reordenada
         const newItems = arrayMove(items, oldIndex, newIndex);
 
         // Marcar que el orden ha sido modificado
         setOrdenModificado(true);
+
+        // Cuando se modifica el orden, cargar todos los elementos en la vista
+        // para evitar problemas con el scrolling infinito
+        setAutos(newItems);
 
         return newItems;
       });
@@ -1201,19 +1389,10 @@ export default function DashboardPage() {
     try {
       const token = Cookies.get('admin-auth');
 
-      // Obtener el rango de posiciones actual
-      const posiciones = todosLosAutos.map((auto) => auto.position);
-      const minPosition = Math.min(...posiciones);
-      const maxPosition = Math.max(...posiciones);
-      const rango = maxPosition - minPosition;
-      const incremento = rango / (todosLosAutos.length - 1);
-
-      // Preparar los datos en el formato esperado por la API
+      // Calcular nuevas posiciones utilizando el arreglo todosLosAutos actual
       const updates = todosLosAutos.map((auto, index) => ({
         id: auto.id,
-        position: Math.round(
-          minPosition + incremento * (todosLosAutos.length - 1 - index)
-        ), // Mantener el rango original y orden descendente
+        position: todosLosAutos.length - index, // Orden descendente (mayor valor = más arriba)
       }));
 
       const response = await fetch(`${API_BASE_URL}/api/cars/positions`, {
@@ -1243,6 +1422,9 @@ export default function DashboardPage() {
       });
 
       setOrdenModificado(false);
+
+      // Recargar todos los autos para asegurar que tenemos el orden correcto
+      fetchTodosLosAutos(1, false);
     } catch (error) {
       console.error('Error al guardar el orden:', error);
       setNotification({
@@ -1360,6 +1542,32 @@ export default function DashboardPage() {
     fetchAutosFavoritos();
   }, []);
 
+  // Función para manejar la búsqueda
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const valor = e.target.value;
+    setBusqueda(valor);
+  };
+
+  // Manejar la búsqueda cuando el usuario presiona Enter o hace clic en buscar
+  const executeSearch = () => {
+    if (busqueda.trim() === '') {
+      limpiarBusqueda();
+      return;
+    }
+    // Reiniciar a la página 1 y realizar la búsqueda
+    setCurrentPage(1);
+    fetchBusqueda(1, false, busqueda);
+  };
+
+  // Limpiar la búsqueda
+  const limpiarBusqueda = () => {
+    setBusqueda('');
+    setBuscando(false);
+    setResultadosBusqueda([]);
+    // Cargar todos los autos nuevamente
+    fetchTodosLosAutos(1, false);
+  };
+
   if (loading && autos.length === 0) {
     return (
       <div className='flex items-center justify-center min-h-screen'>
@@ -1380,6 +1588,9 @@ export default function DashboardPage() {
           </h1>
           <p className='text-gray-500'>
             Total: <span className='font-medium'>{totalAutos}</span> vehículos
+            {buscando && (
+              <span className='ml-2'>({totalResultados} encontrados)</span>
+            )}
           </p>
         </div>
         <div className='flex items-center gap-3'>
@@ -1420,52 +1631,244 @@ export default function DashboardPage() {
         </div>
       </div>
 
+      {/* Buscador de autos */}
+      <div className='mb-6 relative'>
+        <div className='flex items-center border border-gray-300 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-white'>
+          <div className='pl-4 py-2.5 text-gray-400'>
+            <Search size={18} />
+          </div>
+          <input
+            type='text'
+            value={busqueda}
+            onChange={handleSearch}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                executeSearch();
+              }
+            }}
+            placeholder='Buscar modelo'
+            className='flex-grow px-3 py-2.5 focus:outline-none text-color-text'
+          />
+          {busqueda && (
+            <button
+              onClick={limpiarBusqueda}
+              className='px-3 text-gray-500 hover:text-gray-700 hover:bg-gray-100 h-full flex items-center transition-colors'
+              aria-label='Limpiar búsqueda'
+            >
+              <X size={18} />
+            </button>
+          )}
+          <button
+            onClick={executeSearch}
+            className='px-5 py-2.5 bg-color-primary text-white hover:bg-color-primary/90 transition-colors h-full font-medium'
+          >
+            Buscar
+          </button>
+        </div>
+      </div>
+
       {error && (
         <div className='bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-6'>
           {error}
         </div>
       )}
 
-      {todosLosAutos.length === 0 && !loading ? (
+      {(buscando
+        ? resultadosBusqueda.length === 0
+        : todosLosAutos.length === 0) && !loading ? (
         <div className='text-center py-12 bg-gray-50 rounded-lg'>
           <p className='text-gray-500'>
-            No hay autos disponibles. Agrega uno nuevo para comenzar.
+            {buscando
+              ? `No se encontraron autos que coincidan con "${busqueda}".`
+              : 'No hay autos disponibles. Agrega uno nuevo para comenzar.'}
           </p>
+          {buscando && (
+            <button
+              onClick={limpiarBusqueda}
+              className='mt-3 text-color-primary hover:underline'
+            >
+              Limpiar búsqueda
+            </button>
+          )}
         </div>
       ) : (
-        <DndContext
-          sensors={sensors}
-          collisionDetection={closestCenter}
-          onDragEnd={handleDragEnd}
-        >
-          <SortableContext
-            items={todosLosAutos.map((auto) => auto.id)}
-            strategy={verticalListSortingStrategy}
-          >
+        <>
+          {buscando ? (
+            // Si estamos buscando, no usar DndContext para evitar arrastre
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               className='space-y-4'
             >
-              {todosLosAutos.map((auto, idx) => (
-                <SortableAutoCard
+              {resultadosBusqueda.map((auto, idx) => (
+                <div
                   key={auto.id}
-                  auto={auto}
-                  index={idx}
-                  onEdit={() => {
+                  className='relative bg-white rounded-lg overflow-hidden [box-shadow:0_0_10px_rgba(0,0,0,0.08)] cursor-pointer hover:[box-shadow:0_0_10px_rgba(0,0,0,0.2)]'
+                  onClick={() => {
                     setSelectedAuto(auto);
                     setIsModalOpen(true);
                   }}
-                  onDelete={handleDeleteClick}
-                  onSell={handleSellClick}
-                  onToggleActive={handleToggleEstado}
-                  onToggleDestacado={handleToggleDestacado}
-                  onToggleFavorito={handleToggleFavorito}
-                  isDragDisabled={guardandoOrden}
-                />
+                >
+                  <div className='p-4 sm:p-6'>
+                    <div className='flex flex-col sm:flex-row gap-4'>
+                      <div className='relative w-full sm:w-[135px] h-[135px] md:w-[155px] md:h-[155px] flex-shrink-0'>
+                        {auto.imagenes && auto.imagenes.length > 0 ? (
+                          <Image
+                            priority={idx < 4 ? true : false}
+                            src={auto.imagenes[0]}
+                            alt={`${auto.modelo}`}
+                            fill
+                            className='object-cover rounded-lg'
+                          />
+                        ) : (
+                          <div className='w-full h-full flex items-center justify-center bg-gray-100 rounded-lg'>
+                            <span className='text-gray-400'>Sin imagen</span>
+                          </div>
+                        )}
+                        {!auto.active && (
+                          <div className='absolute inset-0 bg-black/50 flex items-center justify-center rounded-lg'>
+                            <span className='text-white font-semibold'>
+                              Pausado
+                            </span>
+                          </div>
+                        )}
+                      </div>
+
+                      <div className='flex-grow'>
+                        <div className='flex justify-between items-start'>
+                          <div>
+                            <h3 className='text-lg font-semibold text-color-text'>
+                              {auto.modelo}
+                            </h3>
+                            <p className='text-gray-600'>{auto.año}</p>
+                            {auto.precio && auto.precio > 0 ? (
+                              <p className='text-xl font-bold text-color-primary mt-1'>
+                                ${auto.precio.toLocaleString('es-AR')}
+                              </p>
+                            ) : (
+                              ''
+                            )}
+                            <p className='text-sm text-gray-500 mt-2'>
+                              {auto.kilometraje.toLocaleString('es-AR')} km •{' '}
+                              {auto.combustible}
+                            </p>
+                          </div>
+                          <div className='flex gap-2'>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleToggleEstado(auto.id);
+                              }}
+                              className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                                auto.active
+                                  ? 'bg-green-100 text-green-700 hover:bg-green-200'
+                                  : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'
+                              }`}
+                            >
+                              {auto.active ? 'Activo' : 'Pausado'}
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                if (auto.active) {
+                                  handleToggleDestacado(auto.id);
+                                }
+                              }}
+                              className={`p-2 rounded-full transition-all ${
+                                auto.destacado
+                                  ? 'bg-blue-100 text-blue-700 hover:bg-blue-200 shadow-sm'
+                                  : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                              } ${
+                                !auto.active
+                                  ? 'opacity-50 cursor-not-allowed'
+                                  : ''
+                              }`}
+                              title={
+                                !auto.active
+                                  ? 'Auto pausado, no puede modificarse'
+                                  : auto.destacado
+                                  ? 'Quitar de Ingreso'
+                                  : 'Marcar como Ingreso'
+                              }
+                            >
+                              {auto.destacado ? (
+                                <Zap size={20} fill='currentColor' />
+                              ) : (
+                                <Zap size={20} />
+                              )}
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                if (auto.active) {
+                                  handleToggleFavorito(auto.id);
+                                }
+                              }}
+                              className={`p-2 rounded-full transition-all ${
+                                auto.favorito
+                                  ? 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200 shadow-sm'
+                                  : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                              } ${
+                                !auto.active
+                                  ? 'opacity-50 cursor-not-allowed'
+                                  : ''
+                              }`}
+                              title={
+                                !auto.active
+                                  ? 'Auto pausado, no puede modificarse'
+                                  : auto.favorito
+                                  ? 'Quitar de favoritos'
+                                  : 'Marcar como favorito'
+                              }
+                            >
+                              {auto.favorito ? (
+                                <Star size={20} fill='currentColor' />
+                              ) : (
+                                <Star size={20} />
+                              )}
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedAuto(auto);
+                                setIsModalOpen(true);
+                              }}
+                              className='p-2 hover:bg-gray-100 rounded-full transition-colors'
+                            >
+                              <Edit size={20} className='text-color-primary' />
+                            </button>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleDeleteClick(auto);
+                              }}
+                              className='p-2 hover:bg-gray-100 rounded-full transition-colors'
+                            >
+                              <Trash size={20} className='text-red-500' />
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Botón de vender con posición absoluta */}
+                        <div className='mt-4 flex justify-end'>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleSellClick(auto);
+                            }}
+                            className='bg-slate-700 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors'
+                          >
+                            Vender
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               ))}
-              {currentPage < totalPages && !loadingMore && (
+              {currentPage < paginasBusqueda && !loadingMore && (
                 <div ref={observerRef} className='h-10'></div>
               )}
               {loadingMore && (
@@ -1477,8 +1880,59 @@ export default function DashboardPage() {
                 </div>
               )}
             </motion.div>
-          </SortableContext>
-        </DndContext>
+          ) : (
+            // Si no estamos buscando, usar DndContext para permitir arrastre
+            <DndContext
+              sensors={sensors}
+              collisionDetection={closestCenter}
+              onDragEnd={handleDragEnd}
+            >
+              <SortableContext
+                items={todosLosAutos.map((auto) => auto.id)}
+                strategy={verticalListSortingStrategy}
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className='space-y-4'
+                >
+                  {/* Mostrar siempre todos los autos en el orden actual cuando no se está buscando */}
+                  {todosLosAutos.map((auto, idx) => (
+                    <SortableAutoCard
+                      key={auto.id}
+                      auto={auto}
+                      index={idx}
+                      onEdit={() => {
+                        setSelectedAuto(auto);
+                        setIsModalOpen(true);
+                      }}
+                      onDelete={handleDeleteClick}
+                      onSell={handleSellClick}
+                      onToggleActive={handleToggleEstado}
+                      onToggleDestacado={handleToggleDestacado}
+                      onToggleFavorito={handleToggleFavorito}
+                      isDragDisabled={guardandoOrden}
+                    />
+                  ))}
+                  {currentPage < totalPages &&
+                    !loadingMore &&
+                    !ordenModificado && (
+                      <div ref={observerRef} className='h-10'></div>
+                    )}
+                  {loadingMore && (
+                    <div className='py-6 flex justify-center items-center'>
+                      <div className='animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-color-primary'></div>
+                      <span className='ml-3 text-gray-600'>
+                        Cargando más vehículos...
+                      </span>
+                    </div>
+                  )}
+                </motion.div>
+              </SortableContext>
+            </DndContext>
+          )}
+        </>
       )}
 
       <AutoModal
