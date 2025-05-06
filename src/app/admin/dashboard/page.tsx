@@ -1120,30 +1120,42 @@ export default function DashboardPage() {
       formData.append('color', 'sin color');
 
       // Agregar imágenes nuevas si existen
-      if (data.images && data.images.length > 0) {
+      const tieneImagenesNuevas = data.images && data.images.length > 0;
+      if (tieneImagenesNuevas) {
         data.images.forEach((image: File) => {
           formData.append('images', image);
         });
       }
 
-      // Agregar imageOrder si existe
-      if (data.imageOrder && data.imageOrder.length > 0) {
-        const jsonImageOrder = JSON.stringify(data.imageOrder);
-        formData.append('imageOrder', jsonImageOrder);
-      }
-
-      // Agregar imagesToDelete si existe
-      if (data.imagesToDelete && data.imagesToDelete.length > 0) {
+      // Agregar imágenes a eliminar si existen
+      const tieneImagenesAEliminar =
+        data.imagesToDelete && data.imagesToDelete.length > 0;
+      if (tieneImagenesAEliminar) {
         const jsonImagesToDelete = JSON.stringify(data.imagesToDelete);
         formData.append('imagesToDelete', jsonImagesToDelete);
       }
 
-      // Manera alternativa de mostrar el FormData sin usar iteradores directamente
-      const formDataEntries: string[] = [];
+      // Agregar orden de imágenes solo si hay cambios en las imágenes
+      if (
+        data.imageOrder &&
+        data.imageOrder.length > 0 &&
+        (tieneImagenesNuevas || tieneImagenesAEliminar)
+      ) {
+        const jsonImageOrder = JSON.stringify(data.imageOrder);
+        formData.append('imageOrder', jsonImageOrder);
+      }
+
+      console.log('Datos que se enviarán al servidor:');
       formData.forEach((value, key) => {
-        formDataEntries.push(
-          `${key}: ${value instanceof File ? value.name : value}`
-        );
+        if (key === 'images') {
+          console.log(
+            `${key}: ${
+              value instanceof File ? value.name : '[Objeto no imprimible]'
+            }`
+          );
+        } else {
+          console.log(`${key}: ${value instanceof File ? value.name : value}`);
+        }
       });
 
       const response = await fetch(
@@ -1219,6 +1231,15 @@ export default function DashboardPage() {
               auto.id === selectedAuto.id ? autoActualizado : auto
             )
           );
+
+          // Actualizar también en resultados de búsqueda si está activa una búsqueda
+          if (buscando) {
+            setResultadosBusqueda((prev) =>
+              prev.map((auto) =>
+                auto.id === selectedAuto.id ? autoActualizado : auto
+              )
+            );
+          }
         } else {
           console.error('Error al obtener el auto actualizado');
         }
