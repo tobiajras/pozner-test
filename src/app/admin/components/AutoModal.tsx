@@ -193,6 +193,16 @@ const AutoModal = ({
     };
   }, []);
 
+  // Resetear el estado cuando el modal se abre o se cierra
+  useEffect(() => {
+    if (!isOpen) {
+      // Limpiar el estado solo cuando se cierra el modal
+      setSelectedFiles([]);
+      setImagesToDelete([]);
+      setImageOrder([]);
+    }
+  }, [isOpen]);
+
   // Cargar los datos del auto cuando se está editando
   useEffect(() => {
     const fetchCarDetails = async () => {
@@ -236,6 +246,11 @@ const AutoModal = ({
             imagenes: sortedImages,
             categoria: data.Category.name,
           });
+
+          // Asegurarnos de que no hay imágenes anteriores seleccionadas
+          setSelectedFiles([]);
+          setImagesToDelete([]);
+          setImageOrder([]);
         } catch (error) {
           console.error('Error al cargar los detalles del auto:', error);
         } finally {
@@ -264,7 +279,10 @@ const AutoModal = ({
         imagenes: [],
         categoria: '',
       });
+      // Limpiar completamente el estado de imágenes al crear un auto nuevo
       setSelectedFiles([]);
+      setImagesToDelete([]);
+      setImageOrder([]);
     }
   }, [isOpen, initialData]);
 
