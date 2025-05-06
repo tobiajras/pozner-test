@@ -231,7 +231,7 @@ export default function AutoDetailPage() {
               <button
                 key={index}
                 onClick={() => scrollTo(index)}
-                className={`relative w-32 aspect-square flex-shrink-0 rounded overflow-hidden outline-none ${
+                className={`relative w-28 aspect-square flex-shrink-0 rounded overflow-hidden outline-none ${
                   selectedIndex === index ? 'ring-2 ring-color-primary' : ''
                 }`}
               >

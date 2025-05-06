@@ -1146,7 +1146,6 @@ export default function DashboardPage() {
         formData.append('imageOrder', jsonImageOrder);
       }
 
-      console.log('Datos que se enviarán al servidor:');
       formData.forEach((value, key) => {
         if (key === 'images') {
           console.log(
