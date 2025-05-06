@@ -1026,9 +1026,10 @@ export default function DashboardPage() {
       formData.append('doors', data.puertas.toString());
       formData.append('color', 'sin color');
 
-      // Agregar las imágenes si existen
-      if (data.images && data.images.length > 0) {
-        data.images.forEach((image: File) => {
+      // Agregar imágenes nuevas si existen
+      const tieneImagenesNuevas = data.images && data.images.length > 0;
+      if (tieneImagenesNuevas) {
+        data.images?.forEach((image: File) => {
           formData.append('images', image);
         });
       }
@@ -1122,7 +1123,7 @@ export default function DashboardPage() {
       // Agregar imágenes nuevas si existen
       const tieneImagenesNuevas = data.images && data.images.length > 0;
       if (tieneImagenesNuevas) {
-        data.images.forEach((image: File) => {
+        data.images?.forEach((image: File) => {
           formData.append('images', image);
         });
       }
