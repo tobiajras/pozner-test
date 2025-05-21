@@ -17,7 +17,7 @@ const HeroHome = () => {
             {/* Columna izquierda - Texto */}
             <div className='flex-1 flex flex-col items-center lg:items-start justify-center mb-8 lg:mb-0 z-20'>
               <div className='flex flex-col items-center lg:items-start gap-1'>
-                <div className='flex flex-col items-center lg:items-start md:gap-3'>
+                <div className='hidden lg:flex flex-col items-center lg:items-start md:gap-3'>
                   <h1 className='text-color-primary-light text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl font-extrabold break-words max-w-xs sm:max-w-none text-center lg:text-left'>
                     {company.name.toUpperCase()}
                   </h1>
