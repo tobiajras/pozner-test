@@ -114,7 +114,7 @@ const Header = () => {
         </nav>
       </section>
       {/* Mobile: igual que antes */}
-      <section className='flex md:hidden justify-between items-center gap-3 py-3 lg:py-5 max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+      <section className='flex md:hidden justify-between items-center h-20 gap-3 py-3 lg:py-5 max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         <article className='flex w-full'>
           <Link
             className='flex items-center gap-2 md:gap-3'
@@ -168,7 +168,7 @@ const Header = () => {
             )}
           </button>
         </article>
-        <div className='md:hidden overflow-hidden absolute top-24 right-0 h-svh w-full pointer-events-none'>
+        <div className='md:hidden overflow-hidden absolute top-20 right-0 h-svh w-full pointer-events-none'>
           <nav
             className={`${
               isMenuOpen ? 'right-0' : '-right-full'
