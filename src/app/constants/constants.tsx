@@ -27,6 +27,8 @@ export const company = {
   footer: 'Compra y Venta de Autos: Las mejores opciones, calidad garantizada.',
 };
 
+export const API_BASE_URL = 'https://microcentro.agenciagrvity.com';
+
 export const metadataCompany = {
   metadataBase: 'https://microcentro-motors.vercel.app/',
   title: 'Microcentro Motors - Compra y Venta de Autos',
