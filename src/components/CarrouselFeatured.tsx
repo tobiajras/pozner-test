@@ -126,7 +126,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
 
   return (
     <section className='flex justify-center w-full'>
-      <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden pb-6 md:pb-10'>
+      <div className='max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden pb-6 md:pb-10'>
         <h3 className='mb-3 font-medium text-xl sm:text-2xl sm:mb-5 text-color-title-light'>
           {title}
         </h3>

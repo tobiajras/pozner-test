@@ -4,7 +4,7 @@ import CarrouselFeatured from '@/components/CarrouselFeatured';
 import CarrouselFavorites from '@/components/CarrouselFavorites';
 import HeroHome from '@/components/HeroHome';
 import Gallery from '@/components/Gallery';
-import WhyChooseUs from '@/components/WhyChooseUs';
+import CategoriesHome from '@/components/CategoriesHome';
 import PreguntasHome from '@/components/PreguntasHome';
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
           <HeroHome />
           <CarrouselFeatured title='Ingresos' />
           <CarrouselFavorites title='Destacados' />
-          <WhyChooseUs />
+          <CategoriesHome />
           <Gallery />
           <PreguntasHome />
         </main>

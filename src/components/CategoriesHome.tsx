@@ -1,92 +1,88 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import useEmblaCarousel from 'embla-carousel-react';
 
-interface Category {
-  id: string;
-  name: string;
-  createdAt: string;
-  updatedAt: string;
-}
+const CATEGORIES = [
+  {
+    name: 'Sedán',
+    image: '/assets/categories/sedan.webp',
+    url: '/catalogo?categoria=sedán',
+  },
+  {
+    name: 'Pickup',
+    image: '/assets/categories/pickup.webp',
+    url: '/catalogo?categoria=pick-up',
+  },
+  {
+    name: 'SUV',
+    image: '/assets/categories/suv.webp',
+    url: '/catalogo?categoria=suv',
+  },
+  {
+    name: 'Hatchback',
+    image: '/assets/categories/hatchback.webp',
+    url: '/catalogo?categoria=hatchback',
+  },
+];
 
 const CategoriesHome = () => {
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await fetch(
-          'https://api.fratelliautomotores.com.ar/api/categories'
-        );
-        if (!response.ok) {
-          throw new Error('Error al cargar las categorías');
-        }
-        const data = await response.json();
-        setCategories(data);
-      } catch (error) {
-        console.error('Error al cargar las categorías:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchCategories();
-  }, []);
-
-  if (loading) {
-    return (
-      <section className='flex justify-center w-full'>
-        <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden pb-6 md:pb-10'>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
-            {[...Array(4)].map((_, i) => (
-              <div
-                key={i}
-                className='aspect-[4/3] bg-neutral-800/50 rounded-lg animate-pulse'
-              ></div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
-  }
+  const [emblaRef] = useEmblaCarousel({ dragFree: true });
 
   return (
     <section className='flex justify-center w-full'>
-      <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden pb-6 md:pb-10'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
-          {categories.map((category) => (
-            <Link
-              key={category.id}
-              href={`/catalogo?categoria=${category.name.toLowerCase()}`}
-              className='group relative aspect-[4/3] rounded-lg overflow-hidden'
-            >
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, ease: 'easeOut' }}
-                className='w-full h-full'
+      <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden mt-10 mb-10 md:mt-16 md:mb-16'>
+        <div className='flex items-center mb-5'>
+          <div className='w-1 h-14 sm:h-16 md:h-20 bg-color-primary rounded mr-4'></div>
+          <div>
+            <h2 className='lg:mb-1 text-xl sm:text-2xl md:text-3xl font-semibold text-white drop-shadow-md'>
+              Elegi tu estilo
+            </h2>
+            <p className='mb-0 sm:text-lg md:text-xl text-white drop-shadow-md'>
+              Estas son las algunas de las categorías que tenemos para vos
+            </p>
+          </div>
+        </div>
+        {/* Carrusel responsivo siempre activo */}
+        <div ref={emblaRef} className='overflow-x-hidden'>
+          <div className='flex gap-4 lg:gap-6'>
+            {CATEGORIES.map((category) => (
+              <Link
+                key={category.name}
+                href={category.url}
+                className='group relative aspect-[3/4] rounded-lg overflow-hidden border border-neutral-800 flex-[0_0_80%] max-w-[80%] sm:flex-[0_0_48%] sm:max-w-[48%] lg:flex-[0_0_23%] lg:max-w-[23%]'
               >
-                <Image
-                  src={`/assets/categories/${category.name.toLowerCase()}.webp`}
-                  alt={category.name}
-                  fill
-                  className='object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out'
-                />
-                {/* Overlay con degradado */}
-                <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                {/* Nombre de la categoría */}
-                <div className='absolute inset-0 flex items-center justify-center'>
-                  <h3 className='text-2xl font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                    {category.name}
-                  </h3>
-                </div>
-              </motion.div>
-            </Link>
-          ))}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5, ease: 'easeOut' }}
+                  className='w-full h-full'
+                >
+                  <Image
+                    src={category.image}
+                    alt={category.name}
+                    fill
+                    className='object-cover transition-transform duration-700 ease-in-out'
+                  />
+                  {/* Gradiente base siempre visible */}
+                  <div className='absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent'></div>
+                  {/* Gradiente hover más fuerte */}
+                  <div className='absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                  {/* Nombre de la categoría y Ver más animados */}
+                  <div className='absolute left-4 bottom-3 flex flex-col items-start justify-end h-[60px] z-10 w-auto'>
+                    <h3 className='text-xl font-semibold text-white drop-shadow-md transform transition-all duration-300 translate-y-0 group-hover:-translate-y-5'>
+                      {category.name.toUpperCase()}
+                    </h3>
+                    <span className='flex items-center gap-1 text-white text-base font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-5 group-hover:translate-y-0'>
+                      Ver más <span className='text-lg'>→</span>
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
