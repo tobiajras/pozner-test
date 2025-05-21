@@ -5,7 +5,6 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import ArrowIcon from '@/components/icons/ArrowIcon';
-import CheckIcon from '@/components/icons/CheckIcon';
 import WhatsappIcon from '@/components/icons/WhatsappIcon';
 import { company } from '@/app/constants/constants';
 import ImageGalleryModal from '@/components/ImageGalleryModal';

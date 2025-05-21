@@ -4,7 +4,7 @@ import SearchIcon from '@/components/icons/SearchIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { Suspense, useEffect, useState, useRef } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { company } from '@/app/constants/constants';
 import ArrowIcon from '@/components/icons/ArrowIcon';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -81,38 +81,6 @@ const CatalogoPage = () => {
   const [loading, setLoading] = useState(true);
   const [todasLasMarcas, setTodasLasMarcas] = useState<string[]>([]);
   const [categorias, setCategorias] = useState<Category[]>([]);
-
-  // Estados para controlar los dropdowns
-  const [showMarcaDropdown, setShowMarcaDropdown] = useState(false);
-  const [showCategoriaDropdown, setShowCategoriaDropdown] = useState(false);
-
-  // Referencias para detectar clics fuera de los dropdowns
-  const marcaInputRef = useRef<HTMLDivElement>(null);
-  const categoriaInputRef = useRef<HTMLDivElement>(null);
-
-  // Cerrar los dropdowns cuando se hace clic fuera
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        marcaInputRef.current &&
-        !marcaInputRef.current.contains(event.target as Node)
-      ) {
-        setShowMarcaDropdown(false);
-      }
-
-      if (
-        categoriaInputRef.current &&
-        !categoriaInputRef.current.contains(event.target as Node)
-      ) {
-        setShowCategoriaDropdown(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
 
   // Función para obtener todas las marcas disponibles
   const fetchMarcas = async () => {

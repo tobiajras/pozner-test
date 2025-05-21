@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import SearchIcon from './icons/SearchIcon';
-import { company } from '@/app/constants/constants';
 import { motion } from 'framer-motion';
 
 interface Imagen {
