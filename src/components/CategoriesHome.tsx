@@ -35,7 +35,7 @@ const CategoriesHome = () => {
     <section className='flex justify-center w-full'>
       <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden mt-10 mb-10 md:mt-16 md:mb-16'>
         <div className='flex items-center mb-5'>
-          <div className='w-1 h-14 sm:h-16 md:h-20 bg-color-primary rounded mr-4'></div>
+          <div className='w-1 h-16 md:h-20 bg-color-primary rounded mr-3 lg:mr-4'></div>
           <div>
             <h2 className='lg:mb-1 text-xl sm:text-2xl md:text-3xl font-semibold text-white drop-shadow-md'>
               Elegi tu estilo
@@ -52,7 +52,7 @@ const CategoriesHome = () => {
               <Link
                 key={category.name}
                 href={category.url}
-                className='group relative aspect-[3/4] rounded-lg overflow-hidden border border-neutral-800 flex-[0_0_80%] max-w-[80%] sm:flex-[0_0_48%] sm:max-w-[48%] lg:flex-[0_0_23%] lg:max-w-[23%]'
+                className='group relative aspect-[3/4] rounded-lg overflow-hidden border border-neutral-800 flex-[0_0_65%] min-[500px]:flex-[0_0_50%] sm:flex-[0_0_40%] md:flex-[0_0_35%] lg:flex-[0_0_30%] xl:flex-[0_0_23%]'
               >
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -71,7 +71,7 @@ const CategoriesHome = () => {
                   {/* Gradiente hover más fuerte */}
                   <div className='absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                   {/* Nombre de la categoría y Ver más animados */}
-                  <div className='absolute left-4 bottom-3 flex flex-col items-start justify-end h-[60px] z-10 w-auto'>
+                  <div className='absolute left-4 bottom-0 lg:bottom-3 flex flex-col items-start justify-end h-[60px] z-10 w-auto'>
                     <h3 className='text-xl font-semibold text-white drop-shadow-md transform transition-all duration-300 translate-y-0 group-hover:-translate-y-5'>
                       {category.name.toUpperCase()}
                     </h3>

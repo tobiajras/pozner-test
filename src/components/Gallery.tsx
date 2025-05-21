@@ -12,7 +12,7 @@ const Gallery = () => {
 
       <div className='max-w-6xl mx-auto px-4 sm:px-6 relative z-10'>
         <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
-          <div className='h-10 w-1 bg-color-primary mr-4'></div>
+          <div className='h-10 w-1 bg-color-primary mr-3 lg:mr-4'></div>
           <h3 className='font-medium text-2xl sm:text-3xl lg:text-4xl uppercase text-color-title-light tracking-wide'>
             Galería
           </h3>
