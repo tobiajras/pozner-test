@@ -136,7 +136,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
           ref={emblaRef}
           className={` ${clicked ? 'cursor-grabbing' : 'cursor-grab'}`}
         >
-          <div className='flex gap-3 sm:gap-5 lg:gap-6'>
+          <div className='flex gap-5 lg:gap-6'>
             {favoritos.map((auto) => (
               <Link
                 href={`/catalogo/${auto.id}`}

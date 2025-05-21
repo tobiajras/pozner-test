@@ -15,21 +15,21 @@ const HeroHome = () => {
         <div className='flex justify-center max-w-lg md:max-w-xl lg:max-w-7xl w-full'>
           <article className='mx-4 sm:mx-6 md:mx-8 lg:mx-10 pt-6 sm:pt-8 pb-8 md:pt-16 md:pb-10 lg:pt-20 lg:pb-12 relative w-full flex flex-col lg:flex-row md:gap-5 items-center justify-between md:min-w-[430px] lg:min-w-[540px] z-20'>
             {/* Columna izquierda - Texto */}
-            <div className='flex-1 flex flex-col items-start justify-center mb-8 lg:mb-0 z-20'>
-              <div className='flex flex-col items-start gap-1'>
-                <div className='flex flex-col items-start md:gap-3'>
-                  <h1 className='text-color-primary-light text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl font-extrabold break-words max-w-xs sm:max-w-none text-left'>
+            <div className='flex-1 flex flex-col items-center lg:items-start justify-center mb-8 lg:mb-0 z-20'>
+              <div className='flex flex-col items-center lg:items-start gap-1'>
+                <div className='flex flex-col items-center lg:items-start md:gap-3'>
+                  <h1 className='text-color-primary-light text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl font-extrabold break-words max-w-xs sm:max-w-none text-center lg:text-left'>
                     {company.name.toUpperCase()}
                   </h1>
                 </div>
                 <div className='md:gap-3 max-w-[300px] sm:max-w-sm md:max-w-md xl:max-w-xl'>
-                  <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-color-title-light'>
+                  <h2 className='text-center lg:text-left text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-color-title-light'>
                     Encontrá el auto que buscas, usados y 0km
                   </h2>
                 </div>
               </div>
               <div className='w-48 md:w-64 my-1 md:my-2'></div>
-              <p className='sm:text-lg lg:text-xl xl:text-2xl text-left text-color-title-light max-w-sm sm:max-w-md lg:max-w-[500px] xl:max-w-xl'>
+              <p className='text-center lg:text-left text-lg lg:text-xl xl:text-2xl text-color-title-light max-w-sm sm:max-w-md lg:max-w-[500px] xl:max-w-xl'>
                 Explorá nuestro stock y encontrá el modelo que más se ajusta a
                 tus necesidades. ¡Consultanos!
               </p>

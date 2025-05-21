@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
 
       <div className='max-w-6xl flex relative z-10'>
         <div className='mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-          <div className='text-center mb-16'>
+          <div className='text-center mb-10 lg:mb-16'>
             <h3 className='text-sm text-color-primary uppercase tracking-[0.3em] mb-3'>
               Experiencia
             </h3>

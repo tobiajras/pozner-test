@@ -25,7 +25,7 @@ const Footer = () => {
       >
         <div className='flex flex-col items-center w-full relative z-10'>
           <section className='flex md:justify-center text-color-text-light w-full '>
-            <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-6 sm:mx-8 md:mx-10 py-10'>
+            <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10 py-10'>
               <article className='flex w-full flex-col'>
                 {company.favicon ? (
                   <div className='flex items-center gap-2 lg:gap-3'>

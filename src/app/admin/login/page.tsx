@@ -69,66 +69,100 @@ export default function LoginPage() {
   };
 
   return (
-    <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-      <div className='w-full max-w-md'>
-        <div className='bg-white rounded-md [box-shadow:0_0_10px_rgba(0,0,0,0.1)] px-10 py-14'>
-          <h2 className='text-2xl font-semibold text-gray-800 mb-8'>
-            Panel de Administración
-          </h2>
+    <>
+      {/* Fondo con efecto grilla */}
+      <div
+        className='fixed inset-0 -z-10 pointer-events-none'
+        style={{
+          backgroundColor: '#000000',
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px',
+          backgroundPosition: '0 0, 0 0',
+        }}
+      ></div>
+      {/* Máscara de gradiente suave a los costados */}
+      <div
+        className='fixed inset-0 -z-10 pointer-events-none'
+        style={{
+          background: `
+            linear-gradient(90deg,
+              #000 0%,
+              rgba(0,0,0,0.85) 10%,
+              rgba(0,0,0,0.2) 30%,
+              rgba(0,0,0,0) 45%,
+              rgba(0,0,0,0) 55%,
+              rgba(0,0,0,0.2) 70%,
+              rgba(0,0,0,0.85) 90%,
+              #000 100%
+            )`,
+        }}
+      ></div>
+      <div className='min-h-screen flex items-center justify-center'>
+        <div className='w-full max-w-md'>
+          <div className='bg-white rounded-md [box-shadow:0_0_10px_rgba(0,0,0,0.1)] px-10 py-14'>
+            <h2 className='text-2xl font-semibold text-gray-800 mb-8'>
+              Panel de Administración
+            </h2>
 
-          <form onSubmit={handleSubmit}>
-            <div className='space-y-5'>
-              <div>
-                <label
-                  htmlFor='username'
-                  className='block text-sm font-medium text-gray-700 mb-2'
-                >
-                  Usuario
-                </label>
-                <input
-                  id='username'
-                  name='username'
-                  type='text'
-                  autoComplete='username'
-                  required
-                  className='w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-color-primary focus:border-color-primary text-base'
-                  placeholder='Ingresa tu usuario'
-                />
+            <form onSubmit={handleSubmit}>
+              <div className='space-y-5'>
+                <div>
+                  <label
+                    htmlFor='username'
+                    className='block text-sm font-medium text-gray-700 mb-2'
+                  >
+                    Usuario
+                  </label>
+                  <input
+                    id='username'
+                    name='username'
+                    type='text'
+                    autoComplete='username'
+                    required
+                    className='w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-color-primary focus:border-color-primary text-base'
+                    placeholder='Ingresa tu usuario'
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor='password'
+                    className='block text-sm font-medium text-gray-700 mb-2'
+                  >
+                    Contraseña
+                  </label>
+                  <input
+                    id='password'
+                    name='password'
+                    type='password'
+                    autoComplete='current-password'
+                    required
+                    className='w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-color-primary focus:border-color-primary text-base'
+                    placeholder='Ingresa tu contraseña'
+                  />
+                </div>
               </div>
 
-              <div>
-                <label
-                  htmlFor='password'
-                  className='block text-sm font-medium text-gray-700 mb-2'
+              {error && (
+                <div className='mt-5 text-sm text-red-600'>{error}</div>
+              )}
+
+              <div className='mt-8'>
+                <button
+                  type='submit'
+                  disabled={loading}
+                  className='w-full py-3 bg-color-primary hover:bg-color-primary-dark text-white font-medium rounded-md transition-colors text-base disabled:opacity-70'
                 >
-                  Contraseña
-                </label>
-                <input
-                  id='password'
-                  name='password'
-                  type='password'
-                  autoComplete='current-password'
-                  required
-                  className='w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-color-primary focus:border-color-primary text-base'
-                  placeholder='Ingresa tu contraseña'
-                />
+                  {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
+                </button>
               </div>
-            </div>
-
-            {error && <div className='mt-5 text-sm text-red-600'>{error}</div>}
-
-            <div className='mt-8'>
-              <button
-                type='submit'
-                disabled={loading}
-                className='w-full py-3 bg-color-primary hover:bg-color-primary-dark text-white font-medium rounded-md transition-colors text-base disabled:opacity-70'
-              >
-                {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
