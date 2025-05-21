@@ -1,5 +1,5 @@
 {
-  "name": "fratelli-automotores",
+  "name": "microcentro-motors",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,15 +13,18 @@
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
     "@headlessui/react": "^2.2.0",
+    "@radix-ui/react-select": "^2.2.4",
     "@types/js-cookie": "^3.0.6",
     "@types/react-beautiful-dnd": "^13.1.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "cropperjs": "^2.0.0",
     "embla-carousel": "^8.3.1",
     "embla-carousel-auto-scroll": "^8.3.1",
     "embla-carousel-autoplay": "^8.3.1",
     "embla-carousel-fade": "^8.3.1",
     "embla-carousel-react": "^8.3.1",
-    "framer-motion": "^11.5.6",
+    "framer-motion": "^11.18.2",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.485.0",
     "next": "^14.2.22",
@@ -35,6 +38,8 @@
     "react-image-crop": "^11.0.7",
     "react-scroll": "^1.9.0",
     "react-type-animation": "^3.2.0",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss-animate": "^1.0.7",
     "zustand": "^5.0.0-rc.2"
   },
   "devDependencies": {

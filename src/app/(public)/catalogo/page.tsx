@@ -8,7 +8,14 @@ import { Suspense, useEffect, useState, useRef } from 'react';
 import { company } from '@/app/constants/constants';
 import ArrowIcon from '@/components/icons/ArrowIcon';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from '@/components/ui/select';
+import CloseIcon from '@/components/icons/CloseIcon';
 
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
 
@@ -251,178 +258,337 @@ const CatalogoPage = () => {
     updateFilters('search', value);
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    executeSearch(searchValue);
+  };
+
+  const filteredProducts = cars.filter((car) => {
+    const normalizedProductName = car.model
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+
+    const matchesSearch = normalizedProductName
+      .toLowerCase()
+      .includes(searchFilter.toLowerCase());
+
+    const matchesMarca = !marcaFilter || car.brand === marcaFilter;
+    const matchesCategoria =
+      !categoriaFilter || car.Category.name === categoriaFilter;
+
+    return matchesSearch && matchesMarca && matchesCategoria;
+  });
+
   return (
     <>
+      {/* Fondo con efecto grilla */}
+      <div
+        className='fixed inset-0 -z-10 pointer-events-none'
+        style={{
+          backgroundColor: '#000000',
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px',
+          backgroundPosition: '0 0, 0 0',
+        }}
+      ></div>
+      {/* Máscara de gradiente suave a los costados */}
+      <div
+        className='fixed inset-0 -z-10 pointer-events-none'
+        style={{
+          background: `
+            linear-gradient(90deg,
+              #000 0%,
+              rgba(0,0,0,0.85) 10%,
+              rgba(0,0,0,0.2) 30%,
+              rgba(0,0,0,0) 45%,
+              rgba(0,0,0,0) 55%,
+              rgba(0,0,0,0.2) 70%,
+              rgba(0,0,0,0.85) 90%,
+              #000 100%
+            )`,
+        }}
+      ></div>
       <section className='flex flex-col items-center w-full mb-16 md:mb-20'>
-        <section className='w-full max-w-[1920px] h-[160px] sm:h-[200px] md:h-[240px] lg:h-[300px] relative'>
-          <div className='w-full h-full'>
-            <Image
-              priority
-              className='w-full h-full object-cover'
-              src='/assets/catalogo/catalogo-banner.webp'
-              alt='products'
-              width={1500}
-              height={400}
-            />
-          </div>
-          <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
-            <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-              <div className='text-center'>
-                <h3 className='text-2xl sm:text-4xl lg:text-5xl font-bold text-color-primary-light'>
-                  ¡CATÁLOGO ONLINE!
-                </h3>
-                <p className='flex flex-col sm:text-lg md:text-2xl mt-1 text-color-text-light max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-none'>
-                  Explorá nuestro stock disponible y encontrá tu vehículo ideal
-                </p>
+        {/* Sección de filtros modernizada */}
+        <div className='w-full flex justify-center mt-8 md:mt-10'>
+          <div className='max-w-md sm:max-w-2xl lg:max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-0'>
+            {/* Contenedor principal con fondo oscuro y sombra */}
+            <div className='bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
+              {/* Título de la sección de filtros */}
+              <div className='mb-5 flex items-center justify-between'>
+                <div className='flex items-center'>
+                  <div
+                    className={`${
+                      company.dark
+                        ? 'bg-color-primary-light'
+                        : 'bg-color-primary'
+                    } w-1 h-5 rounded mr-3`}
+                  ></div>
+                  <h4 className='text-white font-medium'>Filtrar vehículos</h4>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary-dark/70 to-color-bg-secondary-dark/70'></div>
-        </section>
 
-        {/* Filtros y Buscador */}
-        <div className='flex justify-center w-full max-w-6xl'>
-          <div className='max-w-[320px] sm:max-w-none md:max-w-[724px] lg:max-w-none w-full flex flex-col sm:flex-row gap-3 sm:gap-5 mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-0 mt-8'>
-            {/* Buscador */}
-            <div className='relative w-full'>
-              <input
-                type='text'
-                placeholder='Buscar vehículo...'
-                value={searchValue}
-                onChange={handleSearch}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
-                    e.preventDefault();
-                    executeSearch(searchValue);
-                  }
-                }}
-                className='w-full px-4 py-2.5 rounded [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
-              />
-              <button
-                onClick={() => executeSearch(searchValue)}
-                className='absolute right-3 top-1/2 -translate-y-1/2'
-              >
-                <SearchIcon className='size-5' />
-              </button>
-            </div>
-
-            <div className='flex flex-row sm:flex-row gap-3 sm:gap-5'>
-              {/* Filtro de Marca - Nuevo estilo dropdown */}
-              <div className='relative w-full sm:w-[180px]' ref={marcaInputRef}>
-                <div className='flex items-center relative'>
+              {/* Vista móvil - Buscador y filtros en acordeón */}
+              <div className='sm:hidden space-y-4'>
+                {/* Buscador móvil */}
+                <form onSubmit={handleSubmit} className='relative'>
                   <input
                     type='text'
-                    value={marcaFilter}
-                    readOnly
-                    placeholder='Marcas'
-                    onClick={() => setShowMarcaDropdown(!showMarcaDropdown)}
-                    className='w-full px-4 py-2.5 rounded cursor-pointer [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
+                    placeholder='Buscar vehículo...'
+                    value={searchValue}
+                    onChange={handleSearch}
+                    className='w-full pl-10 pr-4 py-3 border border-neutral-700 rounded-md bg-black outline-none text-white placeholder-white/40 focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all'
                   />
-                  <button
-                    type='button'
-                    className='absolute right-3 top-1/2 -translate-y-1/2'
-                    onClick={() => setShowMarcaDropdown(!showMarcaDropdown)}
-                  >
-                    <ChevronDown className='h-4 w-4 text-gray-500' />
-                  </button>
-                </div>
-
-                {showMarcaDropdown && (
-                  <div className='absolute z-20 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto [box-shadow:0px_5px_15px_rgba(0,0,0,0.15)]'>
-                    <div
-                      className='px-4 py-2 hover:bg-gray-100 cursor-pointer font-medium'
-                      onClick={() => {
-                        updateFilters('marca', '');
-                        setShowMarcaDropdown(false);
-                      }}
-                    >
-                      Todas las marcas
-                    </div>
-                    {todasLasMarcas.map((marca) => (
-                      <div
-                        key={marca}
-                        className={`px-4 py-2 hover:bg-gray-100 cursor-pointer ${
-                          marca === marcaFilter ? 'bg-gray-100' : ''
-                        }`}
-                        onClick={() => {
-                          updateFilters('marca', marca);
-                          setShowMarcaDropdown(false);
-                        }}
-                      >
-                        {marca}
-                      </div>
-                    ))}
+                  <div className='absolute left-0 top-0 h-full px-3 flex items-center text-white/50'>
+                    <SearchIcon className='w-5 h-5' />
                   </div>
-                )}
+                  <button
+                    type='submit'
+                    className={`${
+                      company.dark
+                        ? 'hover:text-color-primary-light'
+                        : 'hover:text-color-primary'
+                    } absolute right-0 top-0 h-full px-4 text-white/50 transition-colors`}
+                  >
+                    Buscar
+                  </button>
+                </form>
+
+                {/* Filtros en línea para móvil */}
+                <div className='flex gap-2'>
+                  <Select
+                    value={marcaFilter || 'all'}
+                    onValueChange={(value) => {
+                      updateFilters('marca', value);
+                    }}
+                  >
+                    <SelectTrigger className='h-10 flex-1 px-3 py-2 border border-neutral-700 rounded-md bg-black text-white text-sm outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
+                      <SelectValue placeholder='Marca' />
+                    </SelectTrigger>
+                    <SelectContent className='bg-black border border-neutral-700 text-white rounded-lg shadow-lg max-h-60 overflow-y-auto'>
+                      <SelectItem
+                        value='all'
+                        className='text-neutral-400 hover:text-white hover:bg-black'
+                      >
+                        Marcas
+                      </SelectItem>
+                      {todasLasMarcas.map((marca) => (
+                        <SelectItem
+                          key={marca}
+                          value={marca}
+                          className='hover:text-color-primary hover:bg-black'
+                        >
+                          {marca}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+
+                  <Select
+                    value={categoriaFilter || 'all'}
+                    onValueChange={(value) => {
+                      updateFilters('categoria', value);
+                    }}
+                  >
+                    <SelectTrigger className='h-10 flex-1 px-3 py-2 border border-neutral-700 rounded-md bg-black text-white text-sm outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
+                      <SelectValue placeholder='Categoría' />
+                    </SelectTrigger>
+                    <SelectContent className='bg-black border border-neutral-700 text-white rounded-lg shadow-lg max-h-60 overflow-y-auto'>
+                      <SelectItem
+                        value='all'
+                        className='text-neutral-400 hover:text-white hover:bg-black'
+                      >
+                        Categorías
+                      </SelectItem>
+                      {categorias.map((categoria) => (
+                        <SelectItem
+                          key={categoria.id}
+                          value={categoria.name}
+                          className='hover:text-color-primary hover:bg-black'
+                        >
+                          {categoria.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
 
-              {/* Filtro de Categoría - Nuevo estilo dropdown */}
-              <div
-                className='relative w-full sm:w-[180px]'
-                ref={categoriaInputRef}
-              >
-                <div className='flex items-center relative'>
-                  <input
-                    type='text'
-                    value={categoriaFilter}
-                    readOnly
-                    placeholder='Categorías'
-                    onClick={() =>
-                      setShowCategoriaDropdown(!showCategoriaDropdown)
-                    }
-                    className='w-full px-4 py-2.5 rounded cursor-pointer [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)] outline-none'
-                  />
-                  <button
-                    type='button'
-                    className='absolute right-3 top-1/2 -translate-y-1/2'
-                    onClick={() =>
-                      setShowCategoriaDropdown(!showCategoriaDropdown)
-                    }
-                  >
-                    <ChevronDown className='h-4 w-4 text-gray-500' />
-                  </button>
+              {/* Vista desktop - Filtros completos */}
+              <div className='hidden sm:flex sm:flex-row gap-4 sm:gap-6'>
+                {/* Buscador mejorado */}
+                <div className='relative flex-grow'>
+                  <label className='block text-xs text-white/70 uppercase tracking-wider mb-1.5'>
+                    Buscar por nombre
+                  </label>
+                  <form onSubmit={handleSubmit} className='relative'>
+                    <input
+                      type='text'
+                      placeholder='Ej: Mercedes Benz, Ford...'
+                      value={searchValue}
+                      onChange={handleSearch}
+                      className='w-full px-4 py-3 border border-neutral-700 rounded-md bg-black outline-none text-white placeholder-white/40 focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all'
+                    />
+                    <button
+                      type='submit'
+                      className={`${
+                        company.dark
+                          ? 'hover:text-color-primary-light'
+                          : 'hover:text-color-primary'
+                      } absolute right-0 top-0 h-full px-4 text-white/50 transition-colors`}
+                    >
+                      <SearchIcon className='w-5 h-5' />
+                    </button>
+                  </form>
                 </div>
 
-                {showCategoriaDropdown && (
-                  <div className='absolute z-20 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto [box-shadow:0px_5px_15px_rgba(0,0,0,0.15)]'>
-                    <div
-                      className='px-4 py-2 hover:bg-gray-100 cursor-pointer font-medium'
-                      onClick={() => {
-                        updateFilters('categoria', '');
-                        setShowCategoriaDropdown(false);
-                      }}
-                    >
-                      Todas las categorías
-                    </div>
-                    {categorias.map((categoria) => (
-                      <div
-                        key={categoria.id}
-                        className={`px-4 py-2 hover:bg-gray-100 cursor-pointer ${
-                          categoria.name === categoriaFilter
-                            ? 'bg-gray-100'
-                            : ''
-                        }`}
-                        onClick={() => {
-                          updateFilters('categoria', categoria.name);
-                          setShowCategoriaDropdown(false);
+                {/* Filtros en columna en móvil, fila en escritorio */}
+                <div className='flex flex-col sm:flex-row gap-4 sm:gap-6'>
+                  {/* Filtro de Marca */}
+                  <div>
+                    <label className='block text-xs text-white/70 uppercase tracking-wider mb-1.5'>
+                      Marca
+                    </label>
+                    <div className='relative'>
+                      <Select
+                        value={marcaFilter || 'all'}
+                        onValueChange={(value) => {
+                          updateFilters('marca', value);
                         }}
                       >
-                        {categoria.name}
-                      </div>
-                    ))}
+                        <SelectTrigger className='h-full w-full sm:w-44 px-4 py-3 pr-10 border border-neutral-700 rounded-md bg-black text-white outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
+                          <SelectValue placeholder='Todas las marcas' />
+                        </SelectTrigger>
+                        <SelectContent className='bg-black border border-neutral-700 text-white rounded-lg shadow-lg'>
+                          <SelectItem
+                            value='all'
+                            className='text-neutral-400 hover:text-white hover:bg-black'
+                          >
+                            Todas las marcas
+                          </SelectItem>
+                          {todasLasMarcas.map((marca) => (
+                            <SelectItem
+                              key={marca}
+                              value={marca}
+                              className={`${
+                                company.dark
+                                  ? 'hover:text-color-primary-light'
+                                  : 'hover:text-color-primary'
+                              } hover:bg-black`}
+                            >
+                              {marca}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
                   </div>
-                )}
+
+                  {/* Filtro de Categoría */}
+                  <div>
+                    <label className='block text-xs text-white/70 uppercase tracking-wider mb-1.5'>
+                      Categoría
+                    </label>
+                    <div className='relative'>
+                      <Select
+                        value={categoriaFilter || 'all'}
+                        onValueChange={(value) => {
+                          updateFilters('categoria', value);
+                        }}
+                      >
+                        <SelectTrigger className='h-full w-full sm:w-44 px-4 py-3 pr-10 border border-neutral-700 rounded-md bg-black text-white outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
+                          <SelectValue placeholder='Todas las categorías' />
+                        </SelectTrigger>
+                        <SelectContent className='bg-black border border-neutral-700 text-white rounded-lg shadow-lg'>
+                          <SelectItem
+                            value='all'
+                            className='text-neutral-400 hover:text-white hover:bg-black'
+                          >
+                            Todas las categorías
+                          </SelectItem>
+                          {categorias.map((categoria) => (
+                            <SelectItem
+                              key={categoria.id}
+                              value={categoria.name}
+                              className={`${
+                                company.dark
+                                  ? 'hover:text-color-primary-light'
+                                  : 'hover:text-color-primary'
+                              } hover:bg-black`}
+                            >
+                              {categoria.name}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              {/* Filtros activos */}
+              {(searchFilter || marcaFilter || categoriaFilter) && (
+                <div className='mt-4 flex flex-wrap gap-2'>
+                  {searchFilter && (
+                    <div className='flex items-center gap-2 px-3 py-2 rounded-full bg-black/90 border border-neutral-700 text-white'>
+                      <span>Búsqueda: {searchFilter}</span>
+                      <button
+                        onClick={() => updateFilters('search', '')}
+                        className='text-neutral-400 hover:text-white transition-colors'
+                      >
+                        <CloseIcon className='w-4 h-4 stroke-[2]' />
+                      </button>
+                    </div>
+                  )}
+                  {marcaFilter && (
+                    <div className='flex items-center gap-2 px-3 py-2 rounded-full bg-black/90 border border-neutral-700 text-white'>
+                      <span>Marca: {marcaFilter}</span>
+                      <button
+                        onClick={() => updateFilters('marca', '')}
+                        className='text-neutral-400 hover:text-white transition-colors'
+                      >
+                        <CloseIcon className='w-4 h-4 stroke-[2]' />
+                      </button>
+                    </div>
+                  )}
+                  {categoriaFilter && (
+                    <div className='flex items-center gap-2 px-3 py-2 rounded-full bg-black/90 border border-neutral-700 text-white'>
+                      <span>Categoría: {categoriaFilter}</span>
+                      <button
+                        onClick={() => updateFilters('categoria', '')}
+                        className='text-neutral-400 hover:text-white transition-colors'
+                      >
+                        <CloseIcon className='w-4 h-4 stroke-[2]' />
+                      </button>
+                    </div>
+                  )}
+                  {(searchFilter || marcaFilter || categoriaFilter) && (
+                    <button
+                      onClick={() => {
+                        setSearchValue('');
+                        router.push('/catalogo');
+                      }}
+                      className='flex items-center gap-2 px-3 py-2 rounded-full bg-color-primary hover:bg-color-primary-dark text-white transition-colors'
+                    >
+                      <span>Limpiar filtros</span>
+                      <CloseIcon className='w-4 h-4 stroke-[2]' />
+                    </button>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
 
         <>
-          {loading && cars.length === 0 ? (
+          {loading && filteredProducts.length === 0 ? (
             <div className='flex justify-center items-center min-h-[600px]'>
               <div className='animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-color-primary'></div>
             </div>
-          ) : cars.length > 0 ? (
+          ) : filteredProducts.length > 0 ? (
             <>
               <AnimatePresence mode='wait'>
                 <motion.div
@@ -433,7 +599,7 @@ const CatalogoPage = () => {
                   transition={{ duration: 0.2 }}
                   className='max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:w-full gap-y-10 lg:gap-y-20 gap-x-4 sm:gap-x-6 lg:gap-x-12 mt-10 min-h-[600px] place-content-start mx-4 sm:mx-6 md:mx-8 lg:mx-10'
                 >
-                  {cars.map((car) => (
+                  {filteredProducts.map((car) => (
                     <motion.div
                       key={car.id}
                       initial={{ opacity: 0 }}
@@ -443,85 +609,96 @@ const CatalogoPage = () => {
                     >
                       <Link
                         href={`/catalogo/${car.id}`}
-                        className='group w-full h-full max-w-[320px] md:max-w-[350px] lg:max-w-none overflow-hidden rounded-xl bg-white border-2 border-gray-300 hover:border-color-primary transition-all duration-300 relative block'
+                        className='group w-full h-full overflow-hidden rounded-xl bg-transparent transition-all duration-300 relative block'
                       >
-                        {/* Badge de marca */}
-                        <div className='absolute top-3 left-3 z-10'>
-                          <span className='bg-color-primary/90 text-color-title-light text-xs font-medium px-2.5 py-1 rounded-full backdrop-blur-sm'>
-                            {car.brand}
-                          </span>
-                        </div>
+                        {/* Badge de estado (si no está activo) */}
+                        {!car.active && (
+                          <div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-20'>
+                            <span className='bg-red-500 text-white text-sm font-medium px-3 py-1.5 rounded'>
+                              Pausado
+                            </span>
+                          </div>
+                        )}
 
                         {/* Imagen con overlay */}
-                        <div className='relative overflow-hidden aspect-square'>
-                          <Image
-                            className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
-                            src={
-                              car.Images[0]?.thumbnailUrl ||
-                              '/assets/catalogo/placeholder.webp'
-                            }
-                            alt={`${car.model}`}
-                            width={600}
-                            height={600}
-                          />
+                        <div className='relative overflow-hidden aspect-[4/3] rounded-lg'>
+                          <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5, ease: 'easeOut' }}
+                            className='w-full h-full'
+                          >
+                            <Image
+                              priority
+                              width={600}
+                              height={600}
+                              className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
+                              src={
+                                car.Images[0]?.thumbnailUrl ||
+                                '/assets/placeholder.webp'
+                              }
+                              alt={`${car.model}`}
+                            />
+                          </motion.div>
                           {/* Overlay con degradado */}
                           <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-
-                          {/* Botón de búsqueda */}
-                          <div className='absolute right-3 bottom-0 translate-y-[-12px] transition-transform duration-300 ease-out'>
-                            <div
-                              className={`${
-                                company.dark
-                                  ? 'bg-color-primary hover:bg-color-primary-dark text-color-title-light'
-                                  : 'bg-color-primary hover:bg-color-primary-dark text-color-title-light'
-                              } p-2 rounded-full shadow-lg transition-colors`}
-                            >
-                              <SearchIcon className='size-5 md:size-6 stroke-[3]' />
-                            </div>
-                          </div>
                         </div>
 
                         {/* Contenido */}
-                        <div className='w-full px-4 py-4'>
-                          {/* Nombre del vehículo */}
-                          <h3 className='text-lg md:text-xl text-color-title font-semibold line-clamp-2 mb-2 min-h-[3.5rem]'>
-                            {`${car.model}`}
-                          </h3>
+                        <div className='w-full px-4 py-4 relative'>
+                          {/* Gradiente base */}
+                          <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-primary/20'></div>
+                          {/* Gradiente hover */}
+                          <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'></div>
+                          {/* Contenido */}
+                          <div className='relative z-10'>
+                            {/* Nombre del vehículo */}
+                            <h3 className='text-lg md:text-xl text-color-title-light font-semibold line-clamp-2 mb-2 min-h-[3.5rem]'>
+                              {car.model}
+                            </h3>
 
-                          {/* Línea separadora */}
-                          <div className='w-12 md:w-16 h-0.5 bg-color-primary mb-3'></div>
+                            {/* Línea separadora */}
+                            <div className='w-12 md:w-16 h-0.5 bg-color-primary mb-3'></div>
 
-                          {/* Precio */}
-                          {car.price && parseFloat(car.price) > 0 ? (
-                            <div className='mb-2'>
-                              <span className='text-color-primary font-bold text-lg'>
-                                ${' '}
-                                {parseFloat(car.price).toLocaleString('es-AR')}
-                              </span>
-                            </div>
-                          ) : (
-                            ''
-                          )}
-
-                          {/* Especificaciones */}
-                          <div className='flex flex-col gap-1.5'>
-                            <div className='flex items-center gap-2'>
-                              <span className='text-color-primary font-medium'>
-                                {car.year}
-                              </span>
-                              <span className='text-xs text-color-text'>•</span>
-                              <span className='text-color-text text-sm'>
-                                {car.mileage.toLocaleString('es-ES')} km
-                              </span>
-                            </div>
-                            <div className='flex items-center gap-2'>
-                              <span className='text-color-text text-sm'>
-                                {car.transmission}
-                              </span>
-                              <span className='text-xs text-color-text'>•</span>
-                              <span className='text-color-text text-sm'>
-                                {car.fuel}
-                              </span>
+                            {/* Precio y especificaciones + SearchIcon */}
+                            <div className='flex items-end justify-between'>
+                              <div>
+                                {/* Precio */}
+                                {car.price && parseFloat(car.price) > 0 ? (
+                                  <div className='mb-2'>
+                                    <span className='text-color-title-light font-bold text-lg'>
+                                      ${' '}
+                                      {parseFloat(car.price).toLocaleString(
+                                        'es-AR'
+                                      )}
+                                    </span>
+                                  </div>
+                                ) : (
+                                  ''
+                                )}
+                                {/* Especificaciones */}
+                                <div className='flex items-center gap-2'>
+                                  <span className='text-color-text'>
+                                    {car.year}
+                                  </span>
+                                  <span className='text-xs text-color-text'>
+                                    •
+                                  </span>
+                                  <span className='text-color-text text-sm'>
+                                    {car.mileage.toLocaleString('es-ES')} km
+                                  </span>
+                                </div>
+                              </div>
+                              {/* SearchIcon al final, abajo a la derecha */}
+                              <div
+                                className={`${
+                                  company.dark
+                                    ? 'bg-color-primary hover:bg-color-primary-dark text-color-title-light'
+                                    : 'bg-color-primary hover:bg-color-primary-dark text-color-title-light'
+                                } p-2 rounded-full shadow-lg transition-colors ml-2 mb-1 bg-color-primary text-color-text-light`}
+                              >
+                                <SearchIcon className='size-5 md:size-6 stroke-[3]' />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -542,14 +719,14 @@ const CatalogoPage = () => {
                     className={`px-4 py-2 rounded ${
                       currentPage === 1
                         ? 'bg-color-primary/50 text-color-title-light cursor-not-allowed'
-                        : 'bg-color-primary text-color-title-light hover:bg-color-primary-light hover:text-color-title'
+                        : 'bg-color-primary text-color-title-light hover:bg-color-primary-dark hover:text-color-title'
                     } transition-colors`}
                   >
                     <ArrowIcon
                       className={`w-4 h-4 rotate-180 ${
                         company.dark
                           ? 'text-color-title-light'
-                          : 'text-color-title'
+                          : 'text-color-title-light'
                       }`}
                     />
                   </button>
@@ -564,14 +741,14 @@ const CatalogoPage = () => {
                     className={`px-4 py-2 rounded ${
                       currentPage === totalPages
                         ? 'bg-color-primary/50 text-color-title-light cursor-not-allowed'
-                        : 'bg-color-primary text-color-title-light hover:bg-color-primary-light hover:text-color-title'
+                        : 'bg-color-primary text-color-title-light hover:bg-color-primary-dark hover:text-color-title'
                     } transition-colors`}
                   >
                     <ArrowIcon
                       className={`w-4 h-4 ${
                         company.dark
                           ? 'text-color-title-light'
-                          : 'text-color-title'
+                          : 'text-color-title-light'
                       }`}
                     />
                   </button>

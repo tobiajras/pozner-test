@@ -1,107 +1,103 @@
 'use client';
 
-import Image from 'next/image';
 import { preguntas } from '@/app/constants/constants';
 import { useState } from 'react';
 import DropDownIcon from './icons/DropDownIcon';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+
 const PreguntasHome = () => {
-  const [activeAnswer, setActiveAnswer] = useState<string>('preg-1');
+  const [activeAnswer, setActiveAnswer] = useState<string | null>('preg-1');
 
-  const handleClick = (id: string) => {
-    if (activeAnswer === id) {
-      return;
+  const toggleAnswer = (id: string) => {
+    if (activeAnswer !== id) {
+      setActiveAnswer(id);
     }
-
-    setActiveAnswer(id);
   };
 
   return (
     <section
       id='preguntasSection'
-      className='flex justify-center my-10 md:my-16 lg:my-20'
+      className='flex justify-center mt-10 mb-16 md:mt-16 md:mb-24 relative overflow-hidden'
     >
-      <div className=' flex flex-col md:flex-row gap-5 md:gap-8 max-w-6xl mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-        <motion.article
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, margin: '-100px' }}
-        >
-          <div className='flex justify-center'>
-            <Image
-              className='w-72 sm:w-80 md:w-[400px] rounded md:rounded-md [box-shadow:0px_0px_19px_3px_rgba(0,0,0,0.2)]'
-              src='/assets/preguntas/preguntas-image.webp'
-              width={500}
-              height={500}
-              alt='preguntas imagen'
-            />
-          </div>
-        </motion.article>
-        <motion.article
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true, margin: '-100px' }}
-        >
-          <h4 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-color-primary'>
+      {/* Patrón decorativo */}
+      <div className='absolute inset-0 opacity-5 bg-grid-pattern'></div>
+
+      <div className='max-w-4xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 relative z-10'>
+        <div className='text-center mb-12'>
+          <h3 className='text-sm text-color-primary uppercase tracking-[0.3em] mb-3'>
+            Información
+          </h3>
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold uppercase text-color-title-light mb-5'>
             Preguntas Frecuentes
-          </h4>
-          <article className=''>
-            <ul className='flex flex-col'>
-              {preguntas.map((pregunta) => {
-                const isActive = activeAnswer === pregunta.id;
-                return (
-                  <li
-                    onClick={() => handleClick(pregunta.id)}
-                    key={pregunta.id}
-                    className='border-b border-gray-200 last:border-b-0'
+          </h2>
+          <div className='w-16 md:w-24 h-0.5 bg-color-primary mx-auto'></div>
+        </div>
+
+        <div className='grid gap-6'>
+          {preguntas.map((pregunta) => (
+            <div
+              key={pregunta.id}
+              onClick={() => toggleAnswer(pregunta.id)}
+              className={`group bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded transition-all duration-500 
+                ${
+                  activeAnswer === pregunta.id
+                    ? 'shadow-[0_8px_30px_-15px_rgba(233,0,2,0.5)]'
+                    : 'shadow-[0_5px_15px_-10px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_30px_-15px_rgba(233,0,2,0.2)] cursor-pointer'
+                }`}
+            >
+              <div className='p-5 md:p-6'>
+                <div className='flex justify-between items-center'>
+                  <h4 className='text-lg md:text-xl max-w-[250px] sm:max-w-none font-medium text-white'>
+                    {pregunta.question}
+                  </h4>
+                  <div
+                    className={`group-hover:bg-color-primary h-8 w-8 rounded-full flex items-center justify-center transition-all duration-500 ${
+                      activeAnswer === pregunta.id
+                        ? 'bg-color-primary'
+                        : 'bg-neutral-800'
+                    }`}
                   >
-                    <div
-                      className={`min-h-8 md:min-h-10 max-w-md sm:max-w-lg pt-5 pb-3 ${
-                        isActive ? 'cursor-default' : 'cursor-pointer group'
-                      }`}
+                    <motion.div
+                      animate={{
+                        rotate: activeAnswer === pregunta.id ? 0 : -90,
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
                     >
-                      <div className='flex justify-between gap-4 items-center px-2'>
-                        <h6
-                          className={`sm:text-lg ${
-                            isActive
-                              ? 'text-color-secondary-dark'
-                              : 'text-color-secondary group-hover:text-color-secondary-dark transition-colors'
-                          } font-semibold`}
-                        >
-                          {pregunta.question}
-                        </h6>
-                        <div
-                          className={`${
-                            isActive
-                              ? 'bg-color-primary-dark'
-                              : 'bg-color-primary group-hover:bg-color-primary-dark transition-colors'
-                          } flex justify-center items-center w-8 h-8 rounded-full shrink-0`}
-                        >
-                          <DropDownIcon className='text-color-title-light w-3.5 h-3.5' />
-                        </div>
-                      </div>
-                      <motion.div
-                        initial={false}
-                        animate={{
-                          height: isActive ? 'auto' : 0,
-                          opacity: isActive ? 1 : 0,
-                        }}
-                        transition={{ duration: 0.3 }}
-                        className='overflow-hidden'
-                      >
-                        <p className='text-color-text mt-4 px-2 text-sm sm:text-base'>
+                      <DropDownIcon className='w-4 h-4 text-white' />
+                    </motion.div>
+                  </div>
+                </div>
+
+                <AnimatePresence>
+                  {activeAnswer === pregunta.id && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{
+                        height: 'auto',
+                        opacity: 1,
+                      }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{
+                        duration: 0.5,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className='overflow-hidden'
+                    >
+                      <div className='mt-4 pt-4 border-t border-white/10'>
+                        <p className='text-white/70 leading-relaxed'>
                           {pregunta.answer}
                         </p>
-                      </motion.div>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          </article>
-        </motion.article>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

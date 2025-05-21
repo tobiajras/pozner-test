@@ -12,6 +12,7 @@ import ImageGalleryModal from '@/components/ImageGalleryModal';
 import useEmblaCarousel from 'embla-carousel-react';
 import DropDownIcon from '@/components/icons/DropDownIcon';
 import CarrouselRelated from '@/components/CarrouselRelated';
+import { motion } from 'framer-motion';
 const API_BASE_URL = 'https://api.fratelliautomotores.com.ar/api';
 
 interface ApiCar {
@@ -128,142 +129,289 @@ export default function AutoDetailPage() {
 
   if (loading) {
     return (
-      <div className='flex justify-center items-center min-h-screen'>
-        <div className='animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-color-primary'></div>
-      </div>
+      <section className='flex flex-col items-center mx-auto mt-10 md:mt-16 mb-16 md:mb-20'>
+        {/* Fondo con efecto grilla */}
+        <div
+          className='fixed inset-0 -z-10 pointer-events-none'
+          style={{
+            backgroundColor: '#000000',
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px',
+            backgroundPosition: '0 0, 0 0',
+          }}
+        ></div>
+        {/* Máscara de gradiente suave a los costados */}
+        <div
+          className='fixed inset-0 -z-10 pointer-events-none'
+          style={{
+            background: `
+              linear-gradient(90deg,
+                #000 0%,
+                rgba(0,0,0,0.85) 10%,
+                rgba(0,0,0,0.2) 30%,
+                rgba(0,0,0,0) 45%,
+                rgba(0,0,0,0) 55%,
+                rgba(0,0,0,0.2) 70%,
+                rgba(0,0,0,0.85) 90%,
+                #000 100%
+              )`,
+          }}
+        ></div>
+
+        {/* Botón volver */}
+        <div className='w-full flex justify-center'>
+          <div className='w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mb-6 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+            <div className='flex gap-2 font-medium items-center'>
+              <div className='h-5 w-20 bg-neutral-800/50 rounded animate-pulse'></div>
+              <div className='h-5 w-5 bg-neutral-800/50 rounded animate-pulse'></div>
+              <div className='h-5 w-24 bg-neutral-800/50 rounded animate-pulse'></div>
+            </div>
+          </div>
+        </div>
+
+        <div className='flex flex-col lg:flex-row gap-8 md:gap-12 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0'>
+          {/* Galería de imágenes - Skeleton */}
+          <div className='space-y-4 w-full lg:w-3/5'>
+            <div className=''>
+              <div className='aspect-[4/3] bg-neutral-800/50 rounded-lg animate-pulse'></div>
+            </div>
+          </div>
+
+          {/* Detalles del auto - Skeleton */}
+          <div className='w-full lg:w-2/5'>
+            <div className='bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
+              <div className='h-6 w-32 bg-neutral-800/50 rounded animate-pulse mb-4'></div>
+              <div className='h-8 w-48 bg-neutral-800/50 rounded animate-pulse mb-6'></div>
+              <div className='grid grid-cols-2 gap-4 mb-6'>
+                {[...Array(6)].map((_, i) => (
+                  <div key={i} className='space-y-2'>
+                    <div className='h-4 w-20 bg-neutral-800/50 rounded animate-pulse'></div>
+                    <div className='h-6 w-24 bg-neutral-800/50 rounded animate-pulse'></div>
+                  </div>
+                ))}
+              </div>
+              <div className='h-12 w-full bg-neutral-800/50 rounded animate-pulse'></div>
+            </div>
+          </div>
+        </div>
+      </section>
     );
   }
 
   if (error || !car) {
     return (
-      <div className='flex flex-col items-center justify-center min-h-screen'>
-        <p className='text-red-500 mb-4'>{error || 'Vehículo no encontrado'}</p>
-        <Link
-          href='/catalogo'
-          className='text-color-primary hover:text-color-primary-dark'
-        >
-          Volver al catálogo
-        </Link>
-      </div>
+      <section className='flex flex-col items-center mx-auto mt-10 md:mt-16 mb-16 md:mb-20'>
+        {/* Fondo con efecto grilla */}
+        <div
+          className='fixed inset-0 -z-10 pointer-events-none'
+          style={{
+            backgroundColor: '#000000',
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px',
+            backgroundPosition: '0 0, 0 0',
+          }}
+        ></div>
+        {/* Máscara de gradiente suave a los costados */}
+        <div
+          className='fixed inset-0 -z-10 pointer-events-none'
+          style={{
+            background: `
+              linear-gradient(90deg,
+                #000 0%,
+                rgba(0,0,0,0.85) 10%,
+                rgba(0,0,0,0.2) 30%,
+                rgba(0,0,0,0) 45%,
+                rgba(0,0,0,0) 55%,
+                rgba(0,0,0,0.2) 70%,
+                rgba(0,0,0,0.85) 90%,
+                #000 100%
+              )`,
+          }}
+        ></div>
+
+        <div className='flex flex-col items-center justify-center min-h-[60vh]'>
+          <div className='bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-8 text-center'>
+            <p className='text-red-500 mb-4'>
+              {error || 'Vehículo no encontrado'}
+            </p>
+            <Link
+              href='/catalogo'
+              className='text-color-primary hover:text-color-primary-dark'
+            >
+              Volver al catálogo
+            </Link>
+          </div>
+        </div>
+      </section>
     );
   }
 
   return (
     <section className='flex flex-col items-center mx-auto mt-10 md:mt-16 mb-16 md:mb-20'>
-      {/* Botón volver */}
+      {/* Fondo con efecto grilla */}
+      <div
+        className='fixed inset-0 -z-10 pointer-events-none'
+        style={{
+          backgroundColor: '#000000',
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px',
+          backgroundPosition: '0 0, 0 0',
+        }}
+      ></div>
+      {/* Máscara de gradiente suave a los costados */}
+      <div
+        className='fixed inset-0 -z-10 pointer-events-none'
+        style={{
+          background: `
+            linear-gradient(90deg,
+              #000 0%,
+              rgba(0,0,0,0.85) 10%,
+              rgba(0,0,0,0.2) 30%,
+              rgba(0,0,0,0) 45%,
+              rgba(0,0,0,0) 55%,
+              rgba(0,0,0,0.2) 70%,
+              rgba(0,0,0,0.85) 90%,
+              #000 100%
+            )`,
+        }}
+      ></div>
+
+      {/* Navegación */}
       <div className='w-full flex justify-center'>
         <div className='w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mb-6 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-          <Link
-            href='/catalogo'
-            className={`${
-              company.dark
-                ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
-                : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
-            } inline-flex items-center gap-2 px-4 py-2 rounded transition-colors`}
-          >
-            <ArrowIcon className='w-4 h-4 rotate-180' />
-            <span>Volver al catálogo</span>
-          </Link>
+          <div className='flex gap-2 font-medium items-center'>
+            <Link href={`/catalogo`}>
+              <p className='text-color-text-light/60 hover:text-color-primary transition-colors'>
+                catálogo
+              </p>
+            </Link>
+            <DropDownIcon className='w-2.5 h-2.5 -rotate-90 text-color-text-light/60' />
+            <Link
+              href={`/catalogo?categoria=${car.Category.name.toLowerCase()}`}
+            >
+              <p className='text-color-text-light/60 hover:text-color-primary transition-colors'>
+                {car.Category.name}
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
+
       <div className='flex flex-col lg:flex-row gap-8 md:gap-12 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0'>
         {/* Galería de imágenes */}
         <div className='space-y-4 w-full lg:w-3/5'>
-          <div className='overflow-hidden relative group' ref={mainViewportRef}>
-            <div className='flex'>
+          <div className=''>
+            <div
+              className='overflow-hidden relative group'
+              ref={mainViewportRef}
+            >
+              <div className='flex'>
+                {orderedImages.map((image, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setShowModal(true)}
+                    className='relative w-full aspect-[4/3] flex-[0_0_100%] rounded-lg overflow-hidden cursor-zoom-in'
+                  >
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.5, ease: 'easeOut' }}
+                      className='w-full h-full'
+                    >
+                      <Image
+                        src={image.imageUrl}
+                        alt={`${car.model} - Imagen ${index + 1}`}
+                        fill
+                        className='object-cover'
+                        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                        priority={index === 0}
+                      />
+                    </motion.div>
+                    {!car.active && (
+                      <div className='absolute inset-0 bg-black/70 flex items-center justify-center'>
+                        <span className='bg-red-500 text-white text-xl md:text-2xl font-medium px-6 py-4 md:px-10 md:py-5 rounded-full'>
+                          Pausado
+                        </span>
+                      </div>
+                    )}
+                  </button>
+                ))}
+              </div>
+              {/* Botones de navegación */}
+              <button
+                onClick={scrollPrev}
+                className={`absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all ${
+                  selectedIndex === 0
+                    ? 'opacity-0'
+                    : 'opacity-100 cursor-pointer'
+                }`}
+                disabled={selectedIndex === 0}
+                aria-label='Anterior'
+              >
+                <ArrowIcon className='w-4 h-4 rotate-180' />
+              </button>
+              <button
+                onClick={scrollNext}
+                className={`absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all ${
+                  selectedIndex === car.Images.length - 1
+                    ? 'opacity-0'
+                    : 'opacity-100 cursor-pointer'
+                }`}
+                disabled={selectedIndex === car.Images.length - 1}
+                aria-label='Siguiente'
+              >
+                <ArrowIcon className='w-4 h-4' />
+              </button>
+
+              {/* Indicador de posición */}
+              <div className='absolute bottom-2 right-2 bg-black/60 text-white px-2 py-1 rounded text-sm'>
+                {selectedIndex + 1}/{car.Images.length}
+              </div>
+            </div>
+
+            {/* Miniaturas - ocultas en móvil */}
+            <div className='hidden md:flex flex-wrap gap-2 mt-4'>
               {orderedImages.map((image, index) => (
                 <button
                   key={index}
-                  onClick={() => setShowModal(true)}
-                  className='relative w-full aspect-square flex-[0_0_100%] rounded-lg overflow-hidden cursor-zoom-in'
+                  onClick={() => scrollTo(index)}
+                  className={`relative w-36 aspect-[4/3] flex-shrink-0 rounded overflow-hidden outline-none ${
+                    selectedIndex === index ? 'ring-2 ring-color-primary' : ''
+                  }`}
                 >
-                  <Image
-                    src={image.imageUrl}
-                    alt={`${car.model} - Imagen ${index + 1}`}
-                    fill
-                    className='object-cover'
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                    priority={index === 0}
-                  />
-                  {!car.active && (
-                    <div className='absolute inset-0 bg-black/70 flex items-center justify-center'>
-                      <span className='bg-yellow-100 text-yellow-700 text-xl md:text-2xl font-medium px-6 py-4 md:px-10 md:py-5 rounded-full'>
-                        Pausado
-                      </span>
-                    </div>
-                  )}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    className='w-full h-full'
+                  >
+                    <Image
+                      src={image.thumbnailUrl}
+                      alt={`${car.model} - Miniatura ${index + 1}`}
+                      fill
+                      sizes='96px'
+                      className='object-cover'
+                    />
+                  </motion.div>
                 </button>
               ))}
             </div>
-            {/* Botones de navegación */}
-            <button
-              onClick={scrollPrev}
-              className={`absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all ${
-                selectedIndex === 0 ? 'opacity-0' : 'opacity-100 cursor-pointer'
-              }`}
-              disabled={selectedIndex === 0}
-              aria-label='Anterior'
-            >
-              <ArrowIcon className='w-4 h-4 rotate-180' />
-            </button>
-            <button
-              onClick={scrollNext}
-              className={`absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all ${
-                selectedIndex === car.Images.length - 1
-                  ? 'opacity-0'
-                  : 'opacity-100 cursor-pointer'
-              }`}
-              disabled={selectedIndex === car.Images.length - 1}
-              aria-label='Siguiente'
-            >
-              <ArrowIcon className='w-4 h-4' />
-            </button>
-
-            {/* Indicador de posición */}
-            <div className='absolute bottom-2 right-2 bg-black/60 text-white px-2 py-1 rounded text-sm'>
-              {selectedIndex + 1}/{car.Images.length}
-            </div>
           </div>
+        </div>
 
-          {/* Miniaturas - ocultas en móvil */}
-          <div className='hidden md:flex flex-wrap gap-2'>
-            {orderedImages.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => scrollTo(index)}
-                className={`relative w-28 aspect-square flex-shrink-0 rounded overflow-hidden outline-none ${
-                  selectedIndex === index ? 'ring-2 ring-color-primary' : ''
-                }`}
-              >
-                <Image
-                  src={image.thumbnailUrl}
-                  alt={`${car.model} - Miniatura ${index + 1}`}
-                  fill
-                  sizes='96px'
-                  className='object-cover'
-                />
-              </button>
-            ))}
-          </div>
-
-          {/* Detalles del auto en versión móvil */}
-          <div className='lg:hidden'>
-            <div className='flex gap-2 font-medium items-center'>
-              <Link href={`/catalogo`}>
-                <p className='text-color-primary/60 hover:text-color-primary transition-colors'>
-                  catálogo
-                </p>
-              </Link>
-              <DropDownIcon className='w-2.5 h-2.5 -rotate-90 text-color-primary/60' />
-              <Link
-                href={`/catalogo?categoria=${car.Category.name.toLowerCase()}`}
-              >
-                <p className='text-color-primary/60 hover:text-color-primary transition-colors'>
-                  {car.Category.name}
-                </p>
-              </Link>
-            </div>
-            <h1 className='text-3xl font-bold text-color-primary mb-2'>
+        {/* Detalles del auto */}
+        <div className='w-full lg:w-2/5'>
+          <div className='bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
+            <h1 className='text-3xl font-bold text-color-text-light mb-2'>
               {car.model}
             </h1>
             {car.price && parseFloat(car.price) > 0 ? (
@@ -274,45 +422,43 @@ export default function AutoDetailPage() {
               ''
             )}
 
-            <div className='flex flex-col gap-3 text-color-text'>
+            <div className='grid grid-cols-2 gap-4 text-color-text-light mb-6'>
               <div className='flex flex-col gap-1'>
-                <p className='text-color-title font-semibold'>Año</p>
-                <p>{car.year}</p>
+                <p className='text-color-text-light/70 text-sm'>Año</p>
+                <p className='font-medium'>{car.year}</p>
               </div>
               <div>
-                <p className='text-color-title font-semibold'>Kilometraje</p>
-                <p>{car.mileage.toLocaleString('es-AR')} km</p>
+                <p className='text-color-text-light/70 text-sm'>Kilometraje</p>
+                <p className='font-medium'>
+                  {car.mileage.toLocaleString('es-AR')} km
+                </p>
               </div>
               <div>
-                <p className='text-color-title font-semibold'>Transmisión</p>
-                <p>{car.transmission}</p>
+                <p className='text-color-text-light/70 text-sm'>Transmisión</p>
+                <p className='font-medium'>{car.transmission}</p>
               </div>
               <div>
-                <p className='text-color-title font-semibold'>Combustible</p>
-                <p>{car.fuel}</p>
+                <p className='text-color-text-light/70 text-sm'>Combustible</p>
+                <p className='font-medium'>{car.fuel}</p>
               </div>
               <div>
-                <p className='text-color-title font-semibold'>Puertas</p>
-                <p>{car.doors}</p>
+                <p className='text-color-text-light/70 text-sm'>Puertas</p>
+                <p className='font-medium'>{car.doors}</p>
               </div>
               <div>
-                <p className='text-color-title font-semibold'>Marca</p>
-                <p>{car.brand}</p>
+                <p className='text-color-text-light/70 text-sm'>Marca</p>
+                <p className='font-medium'>{car.brand}</p>
               </div>
             </div>
 
-            {/* Botón de WhatsApp en versión móvil */}
+            {/* Botón de WhatsApp */}
             {car.active && (
               <div className='flex mt-3'>
                 <Link
                   href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={`${
-                    company.dark
-                      ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
-                      : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
-                  } flex gap-2 font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]`}
+                  className='bg-color-primary hover:bg-color-primary-dark text-color-title-light flex gap-2 font-medium py-3 px-8 rounded text-center transition-colors w-full justify-center'
                 >
                   <WhatsappIcon className='w-6 h-6' />
                   <span>Consultar</span>
@@ -320,153 +466,17 @@ export default function AutoDetailPage() {
               </div>
             )}
 
-            {/* Descripción en móvil, ahora entre el botón de WhatsApp y la sección de checkmarks */}
+            {/* Descripción */}
             {car.description && (
-              <div className='mt-6 mb-2'>
-                <h2 className='text-xl font-medium mb-2 text-color-title'>
+              <div className='mt-6'>
+                <h2 className='text-xl font-medium mb-2 text-color-text-light'>
                   Descripción
                 </h2>
-                <p className='text-color-text whitespace-pre-line'>
+                <p className='text-color-text-light/80 whitespace-pre-line'>
                   {car.description}
                 </p>
               </div>
             )}
-
-            <hr className='mt-8 mb-5' />
-            <div className='flex flex-col gap-3'>
-              <div className='text-color-text flex items-center'>
-                <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-                <span>Excelente estado, listo para transferir.</span>
-              </div>
-              <div className='text-color-text flex items-center'>
-                <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-                <span>Documentación completa y al día.</span>
-              </div>
-              <div className='text-color-text flex items-center'>
-                <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-                <span>Tomamos tu usado como parte de pago.</span>
-              </div>
-              <div className='text-color-text flex items-center'>
-                <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-                <span>Financiación accesible, cuotas fijas y en pesos.</span>
-              </div>
-              <div className='text-color-text flex items-center'>
-                <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-                <span>Trámite rápido y sencillo.</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Descripción - Solo para desktop, ya que en móvil se muestra en otro lugar */}
-          {car.description && (
-            <div className='flex lg:block hidden'>
-              <div className='mt-6 md:mt-8 pr-8 md:pr-10 lg:pr-20'>
-                <h2 className='text-xl font-medium mb-2 text-color-title'>
-                  Descripción
-                </h2>
-                <p className='text-color-text whitespace-pre-line'>
-                  {car.description}
-                </p>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Detalles del auto en desktop */}
-        <div className='hidden lg:flex lg:flex-col w-full lg:w-2/5'>
-          <div className='flex gap-2 font-medium items-center'>
-            <Link href={`/catalogo`}>
-              <p className='text-color-primary/60 hover:text-color-primary transition-colors'>
-                catálogo
-              </p>
-            </Link>
-            <DropDownIcon className='w-2.5 h-2.5 -rotate-90 text-color-primary/60' />
-            <Link
-              href={`/catalogo?categoria=${car.Category.name.toLowerCase()}`}
-            >
-              <p className='text-color-primary/60 hover:text-color-primary transition-colors'>
-                {car.Category.name}
-              </p>
-            </Link>
-          </div>
-          <h1 className='text-3xl font-bold text-color-primary mb-2'>
-            {car.model}
-          </h1>
-          {car.price && parseFloat(car.price) > 0 ? (
-            <p className='text-2xl font-semibold text-color-primary mb-4'>
-              ${parseFloat(car.price).toLocaleString('es-AR')}
-            </p>
-          ) : (
-            ''
-          )}
-
-          <div className='flex flex-col gap-3 text-color-text'>
-            <div className='flex flex-col gap-1'>
-              <p className='text-color-title font-semibold'>Año</p>
-              <p>{car.year}</p>
-            </div>
-            <div>
-              <p className='text-color-title font-semibold'>Kilometraje</p>
-              <p>{car.mileage.toLocaleString('es-AR')} km</p>
-            </div>
-            <div>
-              <p className='text-color-title font-semibold'>Transmisión</p>
-              <p>{car.transmission}</p>
-            </div>
-            <div>
-              <p className='text-color-title font-semibold'>Combustible</p>
-              <p>{car.fuel}</p>
-            </div>
-            <div>
-              <p className='text-color-title font-semibold'>Puertas</p>
-              <p>{car.doors}</p>
-            </div>
-            <div>
-              <p className='text-color-title font-semibold'>Marca</p>
-              <p>{car.brand}</p>
-            </div>
-          </div>
-
-          {/* Botón de WhatsApp */}
-          {car.active && (
-            <div className='flex mt-3'>
-              <Link
-                href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
-                target='_blank'
-                rel='noopener noreferrer'
-                className={`${
-                  company.dark
-                    ? 'bg-color-primary text-color-title-light hover:bg-color-primary-dark'
-                    : 'bg-color-primary-light text-color-title hover:bg-color-primary-dark'
-                } flex gap-2 font-medium hover:bg-color-primary-dark py-3 px-8 rounded text-center transition-colors [box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.1)] md:[box-shadow:0px_0px_10px_2px_rgba(0,0,0,0.2)]`}
-              >
-                <WhatsappIcon className='w-6 h-6' />
-                <span>Consultar</span>
-              </Link>
-            </div>
-          )}
-          <hr className='mt-8 mb-5' />
-          <div className='flex flex-col gap-3'>
-            <div className='text-color-text flex items-center'>
-              <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-              <span>Excelente estado, listo para transferir.</span>
-            </div>
-            <div className='text-color-text flex items-center'>
-              <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-              <span>Documentación completa y al día.</span>
-            </div>
-            <div className='text-color-text flex items-center'>
-              <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-              <span>Tomamos tu usado como parte de pago.</span>
-            </div>
-            <div className='text-color-text flex items-center'>
-              <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-              <span>Financiación accesible, cuotas fijas y en pesos.</span>
-            </div>
-            <div className='text-color-text flex items-center'>
-              <CheckIcon className='w-6 h-6 p-1 mr-2 bg-green-600 text-color-title-light rounded-full' />
-              <span>Trámite rápido y sencillo.</span>
-            </div>
           </div>
         </div>
       </div>
