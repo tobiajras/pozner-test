@@ -12,7 +12,7 @@ export default function Home() {
     <>
       {/* Fondo con efecto grilla */}
       <div
-        className='fixed inset-0 -z-10 pointer-events-none min-h-[100vh] h-[120vh]'
+        className='fixed inset-0 -z-10 pointer-events-none'
         style={{
           backgroundColor: '#000000',
           backgroundImage: `
@@ -21,13 +21,13 @@ export default function Home() {
           `,
           backgroundSize: '40px 40px',
           backgroundPosition: '0 0, 0 0',
-          height: '120vh',
-          minHeight: '100vh',
+          height: '100dvh',
+          minHeight: '100dvh',
         }}
       ></div>
       {/* Máscara de gradiente suave a los costados */}
       <div
-        className='fixed inset-0 -z-10 pointer-events-none min-h-[100vh] h-[120vh]'
+        className='fixed inset-0 -z-10 pointer-events-none'
         style={{
           background: `
             linear-gradient(90deg,
@@ -40,8 +40,8 @@ export default function Home() {
               rgba(0,0,0,0.85) 90%,
               #000 100%
             )`,
-          height: '120vh',
-          minHeight: '100vh',
+          height: '100dvh',
+          minHeight: '100dvh',
         }}
       ></div>
 
