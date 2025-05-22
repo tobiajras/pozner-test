@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
+import { API_BASE_URL } from '@/app/constants/constants';
 
 // URL base del API
-const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -102,8 +102,8 @@ export default function LoginPage() {
       ></div>
       <div className='min-h-screen flex items-center justify-center'>
         <div className='w-full max-w-md'>
-          <div className='bg-white rounded-md [box-shadow:0_0_10px_rgba(0,0,0,0.1)] px-10 py-14'>
-            <h2 className='text-2xl font-semibold text-gray-800 mb-8'>
+          <div className='bg-gradient-to-b from-neutral-900 to-black rounded-md border border-neutral-800 [box-shadow:0_0_10px_rgba(0,0,0,0.1)] px-10 py-14'>
+            <h2 className='text-2xl font-semibold text-color-title-light mb-8'>
               Panel de Administración
             </h2>
 
@@ -112,7 +112,7 @@ export default function LoginPage() {
                 <div>
                   <label
                     htmlFor='username'
-                    className='block text-sm font-medium text-gray-700 mb-2'
+                    className='block text-sm font-medium text-color-text-light mb-2'
                   >
                     Usuario
                   </label>
@@ -122,7 +122,7 @@ export default function LoginPage() {
                     type='text'
                     autoComplete='username'
                     required
-                    className='w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-color-primary focus:border-color-primary text-base'
+                    className='w-full px-4 py-3 bg-black border border-neutral-800 rounded-md text-color-text-light focus:outline-none focus:ring-1 focus:ring-color-primary focus:border-color-primary text-base'
                     placeholder='Ingresa tu usuario'
                   />
                 </div>
@@ -130,7 +130,7 @@ export default function LoginPage() {
                 <div>
                   <label
                     htmlFor='password'
-                    className='block text-sm font-medium text-gray-700 mb-2'
+                    className='block text-sm font-medium text-color-text-light mb-2'
                   >
                     Contraseña
                   </label>
@@ -140,7 +140,7 @@ export default function LoginPage() {
                     type='password'
                     autoComplete='current-password'
                     required
-                    className='w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-color-primary focus:border-color-primary text-base'
+                    className='w-full px-4 py-3 bg-black border border-neutral-800 rounded-md text-color-text-light focus:outline-none focus:ring-1 focus:ring-color-primary focus:border-color-primary text-base'
                     placeholder='Ingresa tu contraseña'
                   />
                 </div>

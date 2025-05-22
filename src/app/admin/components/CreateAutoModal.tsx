@@ -15,6 +15,7 @@ interface FormFields {
   precio: number;
   descripcion: string;
   categoria: string;
+  color: string;
 }
 
 interface CreateAutoModalProps {
@@ -33,12 +34,13 @@ const CreateAutoModal = ({
     modelo: '',
     año: new Date().getFullYear(),
     kilometraje: 0,
-    transmision: '',
+    transmision: 'Manual',
     combustible: '',
     puertas: 0,
     precio: 0,
     descripcion: '',
     categoria: 'Auto',
+    color: '',
   });
 
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -75,10 +77,10 @@ const CreateAutoModal = ({
       submitFormData.append('description', formData.descripcion);
       submitFormData.append('category', formData.categoria);
       submitFormData.append('mileage', formData.kilometraje.toString());
-      submitFormData.append('transmission', formData.transmision);
+      submitFormData.append('transmission', 'Manual');
       submitFormData.append('fuel', formData.combustible);
       submitFormData.append('doors', formData.puertas.toString());
-      submitFormData.append('color', 'sin color');
+      submitFormData.append('color', formData.color);
 
       // Agregar imágenes si existen
       if (selectedFiles.length > 0) {
@@ -96,12 +98,13 @@ const CreateAutoModal = ({
         modelo: '',
         año: new Date().getFullYear(),
         kilometraje: 0,
-        transmision: '',
+        transmision: 'Manual',
         combustible: '',
         puertas: 0,
         precio: 0,
         descripcion: '',
         categoria: 'Auto',
+        color: '',
       });
       setSelectedFiles([]);
     } catch (error) {
@@ -283,6 +286,25 @@ const CreateAutoModal = ({
 
                     <div>
                       <label className='block text-sm font-medium text-gray-700'>
+                        Color
+                      </label>
+                      <input
+                        type='text'
+                        value={formData.color}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            color: e.target.value,
+                          }))
+                        }
+                        className={inputStyles}
+                        placeholder='Ej: Negro, Blanco, Rojo'
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label className='block text-sm font-medium text-gray-700'>
                         Combustible
                       </label>
                       <select
@@ -324,6 +346,7 @@ const CreateAutoModal = ({
                         <option value=''>
                           Seleccionar cantidad de puertas
                         </option>
+                        <option value='2'>2 puertas</option>
                         <option value='3'>3 puertas</option>
                         <option value='4'>4 puertas</option>
                         <option value='5'>5 puertas</option>

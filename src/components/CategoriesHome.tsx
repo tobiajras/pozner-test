@@ -75,7 +75,7 @@ const CategoriesHome = () => {
                     <h3 className='text-xl font-semibold text-white drop-shadow-md transform transition-all duration-300 translate-y-0 group-hover:-translate-y-5'>
                       {category.name.toUpperCase()}
                     </h3>
-                    <span className='flex items-center gap-1 text-white text-base font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-5 group-hover:translate-y-0'>
+                    <span className='flex items-center gap-1 text-white hover:text-color-primary-dark text-base font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-5 group-hover:translate-y-0'>
                       Ver más <span className='text-lg'>→</span>
                     </span>
                   </div>

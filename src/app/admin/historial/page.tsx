@@ -9,9 +9,7 @@ import { ConfirmModal } from '../components/ConfirmModal';
 import { Notification } from '../components/Notification';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import { useRouter } from 'next/navigation';
-
-// URL base del API
-const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
+import { API_BASE_URL } from '@/app/constants/constants';
 
 interface AutoVendido {
   id: string;
@@ -243,7 +241,7 @@ export default function HistorialPage() {
               className='bg-white rounded-lg [box-shadow:0_0_10px_rgba(0,0,0,0.07)] p-6'
             >
               <div className='flex flex-col md:flex-row gap-6'>
-                <div className='relative w-[135px] h-[135px] md:w-[150px] md:h-[150px] flex-shrink-0'>
+                <div className='relative w-[135px] aspect-[4/3] md:w-[150px] flex-shrink-0'>
                   {auto.thumbnailUrl ? (
                     <Image
                       priority={idx < 4 ? true : false}

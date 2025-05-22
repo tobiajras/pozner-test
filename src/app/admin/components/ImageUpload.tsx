@@ -91,10 +91,11 @@ const SortableImage = ({
         className='absolute top-2 left-2 p-1.5 bg-white/80 rounded-full shadow-sm cursor-grab z-10 hover:bg-white'
         {...attributes}
         {...listeners}
+        onClick={(e) => e.stopPropagation()}
       >
         <GripVertical size={16} className='text-gray-600' />
       </div>
-      <div className='w-[110px] h-[110px] relative'>
+      <div className='w-[110px] aspect-[4/3] relative'>
         <Image
           src={image.thumbnailUrl}
           alt={`Imagen ${index + 1}`}
@@ -163,10 +164,11 @@ const SortableNewImage = ({
         className='absolute top-2 left-2 p-1.5 bg-white/80 rounded-full shadow-sm cursor-grab z-10 hover:bg-white'
         {...attributes}
         {...listeners}
+        onClick={(e) => e.stopPropagation()}
       >
         <GripVertical size={16} className='text-gray-600' />
       </div>
-      <div className='w-[110px] h-[110px] relative'>
+      <div className='w-[110px] aspect-[4/3] relative'>
         <Image
           priority
           src={src}
@@ -610,7 +612,7 @@ export function ImageUpload({
                   imagesToDelete.length <
                   maxFiles && (
                   <div
-                    className='border-2 border-dashed border-gray-300 rounded-md w-[110px] h-[110px] flex flex-col items-center justify-center cursor-pointer hover:border-red-400 transition-colors'
+                    className='border-2 border-dashed border-gray-300 rounded-md w-[110px] aspect-[4/3] flex flex-col items-center justify-center cursor-pointer hover:border-red-400 transition-colors'
                     onClick={triggerFileInput}
                   >
                     <Plus className='h-8 w-8 text-gray-400 mb-2' />

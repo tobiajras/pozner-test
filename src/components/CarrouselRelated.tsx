@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import SearchIcon from './icons/SearchIcon';
 import { company } from '@/app/constants/constants';
 import { motion } from 'framer-motion';
-
+import { API_BASE_URL } from '@/app/constants/constants';
 interface Imagen {
   id: string;
   carId: string;
@@ -67,7 +67,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
       try {
         // Usamos el nuevo endpoint de recomendados
         const response = await fetch(
-          `https://api.fratelliautomotores.com.ar/api/cars/${currentCarId}/recommended`
+          `${API_BASE_URL}/api/cars/${currentCarId}/recommended`
         );
 
         if (!response.ok) {

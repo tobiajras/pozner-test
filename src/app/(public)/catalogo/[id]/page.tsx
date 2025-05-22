@@ -12,7 +12,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import DropDownIcon from '@/components/icons/DropDownIcon';
 import CarrouselRelated from '@/components/CarrouselRelated';
 import { motion } from 'framer-motion';
-const API_BASE_URL = 'https://api.fratelliautomotores.com.ar/api';
+import { API_BASE_URL } from '@/app/constants/constants';
 
 interface ApiCar {
   id: string;
@@ -105,7 +105,7 @@ export default function AutoDetailPage() {
   useEffect(() => {
     const fetchCar = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/cars/${id}`);
+        const response = await fetch(`${API_BASE_URL}/api/cars/${id}`);
         if (!response.ok) {
           throw new Error('Error al cargar el vehículo');
         }

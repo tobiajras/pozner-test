@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { company } from '../constants/constants';
 
 const Header = () => {
   const pathname = usePathname();
@@ -22,7 +23,7 @@ const Header = () => {
           <div className='flex'>
             <div className='flex-shrink-0 flex items-center'>
               <Link href='/' className='text-2xl font-bold text-gray-900'>
-                Fratelli Autos
+                {company.name}
               </Link>
             </div>
             <div className='hidden sm:ml-6 sm:flex sm:space-x-8'>

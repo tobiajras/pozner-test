@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import SearchIcon from './icons/SearchIcon';
 import { motion } from 'framer-motion';
-
+import { API_BASE_URL } from '@/app/constants/constants';
 interface Imagen {
   id: string;
   carId: string;
@@ -62,9 +62,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
     const obtenerDestacados = async () => {
       setCargando(true);
       try {
-        const response = await fetch(
-          'https://api.fratelliautomotores.com.ar/api/cars/featured'
-        );
+        const response = await fetch(`${API_BASE_URL}/api/cars/featured`);
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }

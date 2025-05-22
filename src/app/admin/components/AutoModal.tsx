@@ -7,9 +7,7 @@ import { Auto } from '@/types/auto';
 import Cookies from 'js-cookie';
 import { ChevronDown } from 'lucide-react';
 import ImageCropModal from './image-crop-modal';
-
-// URL base del API
-const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
+import { API_BASE_URL } from '@/app/constants/constants';
 
 interface FileWithOrientation extends File {
   orientation?: number;
@@ -34,6 +32,7 @@ interface AutoFormData {
     order: number;
   }>;
   categoria: string;
+  color: string;
 }
 
 interface AutoModalProps {
@@ -66,6 +65,7 @@ const AutoModal = ({
           ...initialData,
           año: initialData.año?.toString() || '',
           imagenes: [],
+          color: '',
         }
       : {
           marca: '',
@@ -73,13 +73,14 @@ const AutoModal = ({
           modelo: '',
           año: '',
           kilometraje: 0,
-          transmision: '',
+          transmision: 'Manual',
           combustible: '',
           puertas: 0,
           precio: 0,
           descripcion: '',
           imagenes: [],
           categoria: '',
+          color: '',
         }
   );
 
@@ -94,12 +95,10 @@ const AutoModal = ({
   const [marcas, setMarcas] = useState<string[]>([]);
   const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
   const [showMarcaDropdown, setShowMarcaDropdown] = useState(false);
-  const [showTransmisionDropdown, setShowTransmisionDropdown] = useState(false);
   const [showCombustibleDropdown, setShowCombustibleDropdown] = useState(false);
   const [showPuertasDropdown, setShowPuertasDropdown] = useState(false);
   const categoryInputRef = useRef<HTMLInputElement>(null);
   const marcaInputRef = useRef<HTMLInputElement>(null);
-  const transmisionInputRef = useRef<HTMLInputElement>(null);
   const combustibleInputRef = useRef<HTMLInputElement>(null);
   const puertasInputRef = useRef<HTMLInputElement>(null);
   const [showErrorModal, setShowErrorModal] = useState(false);
@@ -111,9 +110,8 @@ const AutoModal = ({
   } | null>(null);
 
   // Opciones para los selectores
-  const transmisionOptions = ['Manual', 'Automática', 'CVT'];
   const combustibleOptions = ['Nafta', 'Diesel', 'GNC', 'Eléctrico'];
-  const puertasOptions = ['3', '4', '5'];
+  const puertasOptions = ['2', '3', '4', '5'];
 
   // Cargar categorías del API
   useEffect(() => {
@@ -166,13 +164,6 @@ const AutoModal = ({
       }
 
       if (
-        transmisionInputRef.current &&
-        !transmisionInputRef.current.contains(event.target as Node)
-      ) {
-        setShowTransmisionDropdown(false);
-      }
-
-      if (
         combustibleInputRef.current &&
         !combustibleInputRef.current.contains(event.target as Node)
       ) {
@@ -211,7 +202,7 @@ const AutoModal = ({
         try {
           const token = Cookies.get('admin-auth');
           const response = await fetch(
-            `https://api.fratelliautomotores.com.ar/api/cars/${initialData.id}`,
+            `${API_BASE_URL}/api/cars/${initialData.id}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -238,13 +229,14 @@ const AutoModal = ({
             modelo: data.model,
             año: data.year.toString(),
             kilometraje: data.mileage,
-            transmision: data.transmission,
+            transmision: 'Manual',
             combustible: data.fuel,
             puertas: data.doors,
             precio: parseFloat(data.price),
             descripcion: data.description,
             imagenes: sortedImages,
             categoria: data.Category.name,
+            color: data.color || '',
           });
 
           // Asegurarnos de que no hay imágenes anteriores seleccionadas
@@ -271,13 +263,14 @@ const AutoModal = ({
         modelo: '',
         año: '',
         kilometraje: 0,
-        transmision: '',
+        transmision: 'Manual',
         combustible: '',
         puertas: 0,
         precio: 0,
         descripcion: '',
         imagenes: [],
         categoria: '',
+        color: '',
       });
       // Limpiar completamente el estado de imágenes al crear un auto nuevo
       setSelectedFiles([]);
@@ -375,9 +368,9 @@ const AutoModal = ({
         !formData.año ||
         isNaN(parseInt(formData.año)) ||
         !formData.categoria ||
-        !formData.transmision ||
         !formData.combustible ||
-        !formData.puertas
+        !formData.puertas ||
+        !formData.color
       ) {
         alert('Por favor, complete todos los campos requeridos');
         setSubmitting(false);
@@ -400,8 +393,19 @@ const AutoModal = ({
 
       // Preparar los datos para enviar al componente padre
       const dataToSubmit = {
-        ...formData,
+        marca: formData.marca,
+        marcaId: formData.marcaId,
+        modelo: formData.modelo,
+        año: formData.año,
+        kilometraje: formData.kilometraje,
+        transmision: 'Manual',
+        combustible: formData.combustible,
+        puertas: formData.puertas,
         precio: precioValidado,
+        descripcion: formData.descripcion,
+        categoria: formData.categoria,
+        color: formData.color,
+        imagenes: formData.imagenes,
         images: selectedFiles,
         imagesToDelete,
         imageOrder,
@@ -666,57 +670,21 @@ const AutoModal = ({
 
                       <div>
                         <label className='block text-sm font-medium text-gray-700'>
-                          Transmisión
+                          Motor
                         </label>
-                        <div className='relative' ref={transmisionInputRef}>
-                          <div className='flex items-center relative'>
-                            <input
-                              type='text'
-                              value={formData.transmision}
-                              onChange={(e) =>
-                                setFormData((prev) => ({
-                                  ...prev,
-                                  transmision: e.target.value,
-                                }))
-                              }
-                              onFocus={() => setShowTransmisionDropdown(true)}
-                              className={inputStyles}
-                              placeholder='Seleccionar tipo de transmisión'
-                              required
-                            />
-                            <button
-                              type='button'
-                              className='absolute right-2 p-1'
-                              onClick={() =>
-                                setShowTransmisionDropdown(
-                                  !showTransmisionDropdown
-                                )
-                              }
-                            >
-                              <ChevronDown className='h-4 w-4 text-gray-500' />
-                            </button>
-                          </div>
-
-                          {showTransmisionDropdown && (
-                            <div className='absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto'>
-                              {transmisionOptions.map((option) => (
-                                <div
-                                  key={option}
-                                  className='px-4 py-2 hover:bg-gray-100 cursor-pointer'
-                                  onClick={() => {
-                                    setFormData((prev) => ({
-                                      ...prev,
-                                      transmision: option,
-                                    }));
-                                    setShowTransmisionDropdown(false);
-                                  }}
-                                >
-                                  {option}
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
+                        <input
+                          type='text'
+                          value={formData.color}
+                          onChange={(e) =>
+                            setFormData((prev) => ({
+                              ...prev,
+                              color: e.target.value,
+                            }))
+                          }
+                          className={inputStyles}
+                          placeholder='Ej: 1.6, 2.0, V8'
+                          required
+                        />
                       </div>
 
                       <div>

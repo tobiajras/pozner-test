@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import SearchIcon from './icons/SearchIcon';
 import { motion } from 'framer-motion';
+import { API_BASE_URL } from '@/app/constants/constants';
 
 interface Imagen {
   id: string;
@@ -62,9 +63,7 @@ const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
     const fetchFavoritos = async () => {
       setLoading(true);
       try {
-        const response = await fetch(
-          'https://api.fratelliautomotores.com.ar/api/cars/favorites'
-        );
+        const response = await fetch(`${API_BASE_URL}/api/cars/favorites`);
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }

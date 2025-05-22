@@ -16,8 +16,7 @@ import {
   SelectItem,
 } from '@/components/ui/select';
 import CloseIcon from '@/components/icons/CloseIcon';
-
-const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
+import { API_BASE_URL } from '@/app/constants/constants';
 
 interface ApiCar {
   id: string;

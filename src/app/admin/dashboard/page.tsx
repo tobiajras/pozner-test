@@ -56,10 +56,11 @@ interface AutoFormData {
   images?: File[];
   imagesToDelete?: string[];
   imageOrder?: Array<{ id: string; order: number }>;
+  color: string;
 }
 
 // URL base del API
-const API_BASE_URL = 'https://api.fratelliautomotores.com.ar';
+import { API_BASE_URL } from '@/app/constants/constants';
 
 interface Imagen {
   thumbnailUrl: string;
@@ -177,7 +178,7 @@ const SortableAutoCard = ({
     >
       <div className='p-4 sm:p-6'>
         <div className='flex flex-col sm:flex-row gap-4'>
-          <div className='relative w-full sm:w-[135px] h-[135px] md:w-[155px] md:h-[155px] flex-shrink-0'>
+          <div className='relative w-full sm:w-[135px] aspect-[4/3] md:w-[155px] flex-shrink-0'>
             {auto.imagenes && auto.imagenes.length > 0 ? (
               <Image
                 priority={index < 4 ? true : false}
@@ -209,7 +210,7 @@ const SortableAutoCard = ({
           <div className='flex-grow'>
             <div className='flex justify-between items-start'>
               <div>
-                <h3 className='text-lg font-semibold text-color-text'>
+                <h3 className='text-lg font-semibold text-color-primary'>
                   {auto.modelo}
                 </h3>
                 <p className='text-gray-600'>{auto.año}</p>
@@ -1024,7 +1025,7 @@ export default function DashboardPage() {
       formData.append('transmission', data.transmision);
       formData.append('fuel', data.combustible);
       formData.append('doors', data.puertas.toString());
-      formData.append('color', 'sin color');
+      formData.append('color', data.color);
 
       // Agregar imágenes nuevas si existen
       const tieneImagenesNuevas = data.images && data.images.length > 0;
@@ -1118,7 +1119,7 @@ export default function DashboardPage() {
       formData.append('transmission', data.transmision);
       formData.append('fuel', data.combustible);
       formData.append('doors', data.puertas.toString());
-      formData.append('color', 'sin color');
+      formData.append('color', data.color);
 
       // Agregar imágenes nuevas si existen
       const tieneImagenesNuevas = data.images && data.images.length > 0;
@@ -1730,7 +1731,7 @@ export default function DashboardPage() {
                 >
                   <div className='p-4 sm:p-6'>
                     <div className='flex flex-col sm:flex-row gap-4'>
-                      <div className='relative w-full sm:w-[135px] h-[135px] md:w-[155px] md:h-[155px] flex-shrink-0'>
+                      <div className='relative w-full sm:w-[135px] aspect-[4/3] md:w-[155px] flex-shrink-0'>
                         {auto.imagenes && auto.imagenes.length > 0 ? (
                           <Image
                             priority={idx < 4 ? true : false}
@@ -1756,7 +1757,7 @@ export default function DashboardPage() {
                       <div className='flex-grow'>
                         <div className='flex justify-between items-start'>
                           <div>
-                            <h3 className='text-lg font-semibold text-color-text'>
+                            <h3 className='text-lg font-semibold text-color-primary'>
                               {auto.modelo}
                             </h3>
                             <p className='text-gray-600'>{auto.año}</p>
