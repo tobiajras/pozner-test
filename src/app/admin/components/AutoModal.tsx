@@ -983,7 +983,6 @@ const AutoModal = ({
           isOpen={true}
           onClose={() => setSelectedImageForCrop(null)}
           imageUrl={selectedImageForCrop.url}
-          orientation={selectedImageForCrop.orientation}
           onCropComplete={(croppedImage) => {
             handleCroppedImage(croppedImage, selectedImageForCrop.index);
             setSelectedImageForCrop(null);
