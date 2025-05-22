@@ -61,6 +61,7 @@ const CategoriesHome = () => {
                   className='w-full h-full'
                 >
                   <Image
+                    priority
                     src={category.image}
                     alt={category.name}
                     fill
