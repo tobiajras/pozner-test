@@ -33,9 +33,7 @@ export default function PublicLayout({
           />
         </a>
       )}
-      <Header />
       {children}
-      <Footer />
     </>
   );
 }

@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 left-0 z-30 w-full backdrop-blur bg-black/70 border-b border-color-primary transition-all duration-300`}
+      className={`sticky top-0 left-0 z-30 w-full backdrop-blur bg-black border-b border-color-primary transition-all duration-300`}
     >
       <section className='hidden md:grid grid-cols-3 items-center max-w-6xl w-full mx-auto py-5 px-4 sm:px-6 md:px-8 lg:px-10'>
         {/* Menú izquierdo */}

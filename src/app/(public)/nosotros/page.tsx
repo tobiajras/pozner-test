@@ -5,15 +5,19 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { company } from '@/app/constants/constants';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const NosotrosPage = () => {
   return (
-    <>
-      {/* Fondo con efecto grilla */}
+    <div className='relative'>
+      <Header />
+
+      {/* Fondo absoluto que crece con el contenido */}
       <div
-        className='fixed inset-0 -z-10 pointer-events-none'
+        className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
         style={{
-          backgroundColor: '#000000',
+          backgroundColor: '#000',
           backgroundImage: `
             linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
@@ -21,10 +25,9 @@ const NosotrosPage = () => {
           backgroundSize: '40px 40px',
           backgroundPosition: '0 0, 0 0',
         }}
-      ></div>
-      {/* Máscara de gradiente suave a los costados */}
+      />
       <div
-        className='fixed inset-0 -z-10 pointer-events-none'
+        className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
         style={{
           background: `
             linear-gradient(90deg,
@@ -38,7 +41,8 @@ const NosotrosPage = () => {
               #000 100%
             )`,
         }}
-      ></div>
+      />
+
       <section className='flex flex-col items-center w-full mb-10 md:mb-20'>
         <section className='w-full py-8 md:py-14 lg:py-16 flex justify-center items-center'>
           <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
@@ -128,7 +132,8 @@ const NosotrosPage = () => {
           </motion.div>
         </div>
       </section>
-    </>
+      <Footer />
+    </div>
   );
 };
 

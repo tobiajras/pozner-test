@@ -5,17 +5,19 @@ import ClockIcon from '@/components/icons/ClockIcon';
 import LocationIcon from '@/components/icons/LocationIcon';
 import InstagramIcon from '@/components/icons/InstagramIcon';
 import WhatsappFillIcon from '@/components/icons/WhatsappFillIcon';
-
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 
 const ContactoPage = () => {
   return (
-    <>
-      {/* Fondo con efecto grilla */}
+    <div className='relative'>
+      <Header />
+      {/* Fondo absoluto que crece con el contenido */}
       <div
-        className='fixed inset-0 -z-10 pointer-events-none'
+        className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
         style={{
-          backgroundColor: '#000000',
+          backgroundColor: '#000',
           backgroundImage: `
             linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
@@ -23,10 +25,9 @@ const ContactoPage = () => {
           backgroundSize: '40px 40px',
           backgroundPosition: '0 0, 0 0',
         }}
-      ></div>
-      {/* Máscara de gradiente suave a los costados */}
+      />
       <div
-        className='fixed inset-0 -z-10 pointer-events-none'
+        className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
         style={{
           background: `
             linear-gradient(90deg,
@@ -40,7 +41,7 @@ const ContactoPage = () => {
               #000 100%
             )`,
         }}
-      ></div>
+      />
       <section className='flex flex-col items-center'>
         <section className='w-full py-8 md:py-14 lg:py-16 flex justify-center items-center'>
           <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
@@ -276,7 +277,8 @@ const ContactoPage = () => {
           </div>
         </motion.article>
       </section>
-    </>
+      <Footer />
+    </div>
   );
 };
 

@@ -17,6 +17,8 @@ import {
 } from '@/components/ui/select';
 import CloseIcon from '@/components/icons/CloseIcon';
 import { API_BASE_URL } from '@/app/constants/constants';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
 interface ApiCar {
   id: string;
@@ -247,12 +249,12 @@ const CatalogoPage = () => {
   });
 
   return (
-    <>
-      {/* Fondo con efecto grilla */}
+    <div className='relative'>
+      {/* Fondo absoluto que crece con el contenido */}
       <div
-        className='fixed inset-0 -z-10 pointer-events-none'
+        className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
         style={{
-          backgroundColor: '#000000',
+          backgroundColor: '#000',
           backgroundImage: `
             linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
@@ -260,10 +262,9 @@ const CatalogoPage = () => {
           backgroundSize: '40px 40px',
           backgroundPosition: '0 0, 0 0',
         }}
-      ></div>
-      {/* Máscara de gradiente suave a los costados */}
+      />
       <div
-        className='fixed inset-0 -z-10 pointer-events-none'
+        className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
         style={{
           background: `
             linear-gradient(90deg,
@@ -277,7 +278,7 @@ const CatalogoPage = () => {
               #000 100%
             )`,
         }}
-      ></div>
+      />
       <section className='flex flex-col items-center w-full mb-16 md:mb-20'>
         {/* Sección de filtros modernizada */}
         <div className='w-full flex justify-center mt-8 md:mt-10'>
@@ -786,14 +787,50 @@ const CatalogoPage = () => {
           )}
         </>
       </section>
-    </>
+    </div>
   );
 };
 
-const CatalogoPageWithSuspense = () => (
-  <Suspense fallback={<div>Cargando...</div>}>
-    <CatalogoPage />
-  </Suspense>
-);
+const CatalogoPageWithSuspense = () => {
+  return (
+    <div className='relative min-h-screen w-full'>
+      {/* Fondo absoluto que crece con el contenido */}
+      <div
+        className='absolute inset-0 w-full min-h-full -z-10 pointer-events-none'
+        style={{
+          backgroundColor: '#000',
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px',
+          backgroundPosition: '0 0, 0 0',
+        }}
+      />
+      <div
+        className='absolute inset-0 w-full min-h-full -z-10 pointer-events-none'
+        style={{
+          background: `
+            linear-gradient(90deg,
+              #000 0%,
+              rgba(0,0,0,0.85) 10%,
+              rgba(0,0,0,0.2) 30%,
+              rgba(0,0,0,0) 45%,
+              rgba(0,0,0,0) 55%,
+              rgba(0,0,0,0.2) 70%,
+              rgba(0,0,0,0.85) 90%,
+              #000 100%
+            )`,
+        }}
+      />
+      {/* Contenido principal */}
+      <Header />
+      <Suspense fallback={<div>Cargando...</div>}>
+        <CatalogoPage />
+      </Suspense>
+      <Footer />
+    </div>
+  );
+};
 
 export default CatalogoPageWithSuspense;
