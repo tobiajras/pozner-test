@@ -9,25 +9,22 @@ import PreguntasHome from '@/components/PreguntasHome';
 
 export default function Home() {
   return (
-    <>
-      {/* Fondo con efecto grilla */}
+    <div className='relative min-h-screen w-full'>
+      {/* Fondo absoluto que crece con el contenido */}
       <div
-        className='fixed inset-0 -z-10 pointer-events-none'
+        className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
         style={{
-          backgroundColor: '#000000',
+          backgroundColor: '#000',
           backgroundImage: `
             linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
             linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
           `,
           backgroundSize: '40px 40px',
           backgroundPosition: '0 0, 0 0',
-          height: '100svh',
-          minHeight: '100svh',
         }}
-      ></div>
-      {/* Máscara de gradiente suave a los costados */}
+      />
       <div
-        className='fixed inset-0 -z-10 pointer-events-none'
+        className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
         style={{
           background: `
             linear-gradient(90deg,
@@ -40,11 +37,9 @@ export default function Home() {
               rgba(0,0,0,0.85) 90%,
               #000 100%
             )`,
-          height: '100svh',
-          minHeight: '100svh',
         }}
-      ></div>
-
+      />
+      {/* Contenido principal */}
       <div className='flex justify-center min-h-screen'>
         <main className='flex flex-col w-full'>
           <HeroHome />
@@ -55,6 +50,6 @@ export default function Home() {
           <PreguntasHome />
         </main>
       </div>
-    </>
+    </div>
   );
 }
