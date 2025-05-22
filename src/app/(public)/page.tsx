@@ -21,8 +21,8 @@ export default function Home() {
           `,
           backgroundSize: '40px 40px',
           backgroundPosition: '0 0, 0 0',
-          height: '100dvh',
-          minHeight: '100dvh',
+          height: '100svh',
+          minHeight: '100svh',
         }}
       ></div>
       {/* Máscara de gradiente suave a los costados */}
@@ -40,8 +40,8 @@ export default function Home() {
               rgba(0,0,0,0.85) 90%,
               #000 100%
             )`,
-          height: '100dvh',
-          minHeight: '100dvh',
+          height: '100svh',
+          minHeight: '100svh',
         }}
       ></div>
 

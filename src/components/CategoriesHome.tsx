@@ -7,24 +7,24 @@ import useEmblaCarousel from 'embla-carousel-react';
 
 const CATEGORIES = [
   {
-    name: 'Sedán',
-    image: '/assets/categories/sedan.webp',
-    url: '/catalogo?categoria=sedán',
-  },
-  {
-    name: 'Pickup',
-    image: '/assets/categories/pickup.webp',
-    url: '/catalogo?categoria=pick-up',
-  },
-  {
     name: 'SUV',
     image: '/assets/categories/suv.webp',
     url: '/catalogo?categoria=suv',
   },
   {
+    name: 'Pickup',
+    image: '/assets/categories/pickup.webp',
+    url: '/catalogo?categoria=pickup',
+  },
+  {
     name: 'Hatchback',
     image: '/assets/categories/hatchback.webp',
     url: '/catalogo?categoria=hatchback',
+  },
+  {
+    name: 'Sedán',
+    image: '/assets/categories/sedan.webp',
+    url: '/catalogo?categoria=sedán',
   },
 ];
 
@@ -38,16 +38,16 @@ const CategoriesHome = () => {
           <div className='w-1 h-16 md:h-20 bg-color-primary rounded mr-3 lg:mr-4'></div>
           <div>
             <h2 className='lg:mb-1 text-xl sm:text-2xl md:text-3xl font-semibold text-white drop-shadow-md'>
-              Elegi tu estilo
+              Elegí tu estilo
             </h2>
             <p className='mb-0 sm:text-lg md:text-xl text-white drop-shadow-md'>
-              Estas son las algunas de las categorías que tenemos para vos
+              Estas son algunas de las categorías que tenemos para vos
             </p>
           </div>
         </div>
         {/* Carrusel responsivo siempre activo */}
         <div ref={emblaRef} className='overflow-x-hidden'>
-          <div className='flex gap-4 lg:gap-6'>
+          <div className='flex gap-4 lg:gap-6 py-1'>
             {CATEGORIES.map((category) => (
               <Link
                 key={category.name}
