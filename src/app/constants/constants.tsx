@@ -1,39 +1,55 @@
 export const company = {
-  dark: false,
+  dark: true,
   darkmode: true,
   shortAdress: true,
   favicon: false,
-  id: 'microcentro-motors',
-  name: 'Microcentro Motors',
-  adress: 'Bartolomé Mitre 711',
-  city: 'Microcentro',
-  email: 'microcentromotors@microcentromotors.com',
-  instagram: 'microcentromotors',
-  facebook:
-    'https://www.facebook.com/people/Microcentro-Motors/61552494278277/',
-  whatsapp: ['1126470994'],
-  googlemapsLink: 'https://maps.app.goo.gl/VMLuudGZCn1MrFqNA',
-  googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104980.75044980465!2d-58.483467944526645!3d-34.6888039323826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb233f34030d%3A0x9f9b1ed7d2dae6a4!2sMicrocentro%20Motors!5e0!3m2!1sen!2sar!4v1747234281610!5m2!1sen!2sar',
-  openDays: [
-    { day: 'Lunes', hours: ['08:00 a 18:00'] },
-    { day: 'Martes', hours: ['08:00 a 18:00'] },
-    { day: 'Miércoles', hours: ['08:00 a 18:00'] },
-    { day: 'Jueves', hours: ['08:00 a 18:00'] },
-    { day: 'Viernes', hours: ['08:00 a 18:00'] },
-    { day: 'Sábado', hours: ['08:00 a 13:00'] },
-    // { day: 'Domingo', hours: ['10:00 a 19:00'] },
-  ],
-  footer: 'Compra y Venta de Autos: Las mejores opciones, calidad garantizada.',
+  id: 'speed-motors',
+  name: 'Speed Motors',
+  adress: null,
+  city: null,
+  email: 'ventas@speed-motors.com.ar',
+  instagram: 'speed.motors',
+  facebook: 'https://www.facebook.com/speedmotorsconcesionaria/',
+  whatsapp: ['1123225179', '1170964444'],
+  googlemapsLink: null,
+  googlemaps: null,
+  openDays: null,
+  footer:
+    'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
 
-export const API_BASE_URL = 'https://microcentro.agenciagrvity.com';
+export const API_BASE_URL = 'https://speedmotors.agenciagrvity.com';
+
+export const sedes = [
+  {
+    id: 1,
+    title: 'Speed Motors Puerto Madero',
+    adress: 'Aimé Painé 1280',
+    city: 'Puerto Madero',
+    tel: '1170964444',
+    whatsapp: '1170964444',
+    schedule: ['Lunes a Viernes 10:00 a 19:00hs', 'Sábados 10:00 a 14:00hs'],
+    appointment: 'https://maps.app.goo.gl/jHfmymCGeq2FjSeMA',
+    image: 'sede-1.webp',
+  },
+  {
+    id: 2,
+    title: 'Speed Motors Villa Luro',
+    adress: 'Av. Rivadavia 10424',
+    city: 'Villa Luro',
+    tel: '1123225179',
+    whatsapp: '1123225179',
+    schedule: ['Lunes a Viernes 10:00 a 19:00hs', 'Sábados 10:00 a 14:00hs'],
+    appointment: 'https://maps.app.goo.gl/8US1V9M6Hk9JUFS68',
+    image: 'sede-2.webp',
+  },
+];
 
 export const metadataCompany = {
-  metadataBase: 'https://microcentro-motors.vercel.app/',
-  title: 'Microcentro Motors - Compra y Venta de Autos',
+  metadataBase: 'https://speedmotors-one.vercel.app/',
+  title: 'Speed Motors - Compra y Venta de Autos',
   description:
-    'Compra y Venta de Autos: Las mejores opciones, calidad garantizada.',
+    'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
 
 export const preguntas = [
@@ -63,9 +79,9 @@ export const preguntas = [
   },
   {
     id: 'preg-5',
-    question: '¿Qué opciones de financiación ofrecen?',
+    question: '¿Qué garantía ofrecen con los vehículos?',
     answer:
-      'Ofrecemos distintas opciones de financiación adaptadas a tus necesidades. Trabajamos con varias entidades financieras para conseguirte la mejor tasa y plazo que se ajuste a tu presupuesto. Consultanos por los planes disponibles actualmente.',
+      'Todos nuestros vehículos cuentan con garantía mecánica que cubre los componentes principales del auto. Realizamos una inspección técnica exhaustiva antes de la entrega para asegurar el óptimo funcionamiento del vehículo.',
   },
 ];
 
@@ -82,11 +98,21 @@ export const navigation = [
   },
   {
     id: '2',
+    title: 'Vendé',
+    url: '/venta',
+  },
+  {
+    id: '3',
+    title: 'Consigná',
+    url: '/consignacion',
+  },
+  {
+    id: '4',
     title: 'Nosotros',
     url: '/nosotros',
   },
   {
-    id: '3',
+    id: '5',
     title: 'Contacto',
     url: '/contacto',
     button: true,

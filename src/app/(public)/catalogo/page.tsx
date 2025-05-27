@@ -250,35 +250,6 @@ const CatalogoPage = () => {
 
   return (
     <div className='relative'>
-      {/* Fondo absoluto que crece con el contenido */}
-      <div
-        className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
-        style={{
-          backgroundColor: '#000',
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
-          `,
-          backgroundSize: '40px 40px',
-          backgroundPosition: '0 0, 0 0',
-        }}
-      />
-      <div
-        className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
-        style={{
-          background: `
-            linear-gradient(90deg,
-              #000 0%,
-              rgba(0,0,0,0.85) 10%,
-              rgba(0,0,0,0.2) 30%,
-              rgba(0,0,0,0) 45%,
-              rgba(0,0,0,0) 55%,
-              rgba(0,0,0,0.2) 70%,
-              rgba(0,0,0,0.85) 90%,
-              #000 100%
-            )`,
-        }}
-      />
       <section className='flex flex-col items-center w-full mb-16 md:mb-20'>
         {/* Sección de filtros modernizada */}
         <div className='w-full flex justify-center mt-8 md:mt-10'>
@@ -577,95 +548,98 @@ const CatalogoPage = () => {
                     >
                       <Link
                         href={`/catalogo/${car.id}`}
-                        className='group w-full h-full overflow-hidden rounded-xl bg-transparent transition-all duration-300 relative block'
+                        className='group w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%]'
                       >
-                        {/* Badge de estado (si no está activo) */}
-                        {!car.active && (
-                          <div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-20'>
-                            <span className='bg-red-500 text-white text-sm font-medium px-3 py-1.5 rounded'>
-                              Pausado
-                            </span>
+                        <div className='relative bg-black overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
+                          {!car.active && (
+                            <div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-20'>
+                              <span className='bg-red-500 text-white text-sm font-medium px-3 py-1.5 rounded'>
+                                Pausado
+                              </span>
+                            </div>
+                          )}
+
+                          <div className='relative overflow-hidden aspect-[4/3]'>
+                            <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent z-10'></div>
+                            <motion.div
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              transition={{ duration: 0.5, ease: 'easeOut' }}
+                              className='w-full h-full'
+                            >
+                              <Image
+                                priority
+                                width={600}
+                                height={600}
+                                className='object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out'
+                                src={
+                                  car.Images[0]?.thumbnailUrl ||
+                                  '/assets/placeholder.webp'
+                                }
+                                alt={`${car.model}`}
+                              />
+                            </motion.div>
+                            <div className='absolute top-0 left-0 w-0 h-1 bg-color-primary group-hover:w-full transition-all duration-500 z-20'></div>
                           </div>
-                        )}
 
-                        {/* Imagen con overlay */}
-                        <div className='relative overflow-hidden aspect-[4/3] rounded-lg'>
-                          <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.5, ease: 'easeOut' }}
-                            className='w-full h-full'
-                          >
-                            <Image
-                              priority
-                              width={600}
-                              height={600}
-                              className='object-cover w-full h-full overflow-hidden group-hover:scale-110 transition-transform duration-700 ease-in-out'
-                              src={
-                                car.Images[0]?.thumbnailUrl ||
-                                '/assets/placeholder.webp'
-                              }
-                              alt={`${car.model}`}
-                            />
-                          </motion.div>
-                          {/* Overlay con degradado */}
-                          <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-                        </div>
-
-                        {/* Contenido */}
-                        <div className='w-full px-4 py-4 relative'>
-                          {/* Gradiente base */}
-                          <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-primary/20'></div>
-                          {/* Gradiente hover */}
-                          <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'></div>
-                          {/* Contenido */}
-                          <div className='relative z-10'>
-                            {/* Nombre del vehículo */}
-                            <h3 className='text-lg md:text-xl text-color-title-light font-semibold line-clamp-2 mb-2 min-h-[3.5rem]'>
+                          <div className='px-5 py-5'>
+                            <h3
+                              className={`${
+                                company.dark
+                                  ? 'group-hover:text-color-primary-light'
+                                  : 'group-hover:text-color-primary'
+                              } text-white text-lg md:text-xl font-medium tracking-tight truncate mb-5 transition-colors duration-300`}
+                            >
                               {car.model}
                             </h3>
 
-                            {/* Línea separadora */}
-                            <div className='w-12 md:w-16 h-0.5 bg-color-primary mb-3'></div>
-
-                            {/* Precio y especificaciones + SearchIcon */}
-                            <div className='flex items-end justify-between'>
-                              <div>
-                                {/* Precio */}
-                                {car.price && parseFloat(car.price) > 0 ? (
-                                  <div className='mb-2'>
-                                    <span className='text-color-title-light font-bold text-lg'>
-                                      ${' '}
-                                      {parseFloat(car.price).toLocaleString(
-                                        'es-AR'
-                                      )}
-                                    </span>
-                                  </div>
-                                ) : (
-                                  ''
-                                )}
-                                {/* Especificaciones */}
-                                <div className='flex items-center gap-2'>
-                                  <span className='text-color-text'>
-                                    {car.year}
-                                  </span>
-                                  <span className='text-xs text-color-text'>
-                                    •
-                                  </span>
-                                  <span className='text-color-text text-sm'>
-                                    {car.mileage.toLocaleString('es-ES')} km
-                                  </span>
-                                </div>
-                              </div>
-                              {/* SearchIcon al final, abajo a la derecha */}
-                              <div
+                            <div className='flex flex-wrap items-center text-sm text-white/80'>
+                              <span className='font-medium'>{car.brand}</span>
+                              <span
                                 className={`${
                                   company.dark
-                                    ? 'bg-color-primary hover:bg-color-primary-dark text-color-title-light'
-                                    : 'bg-color-primary hover:bg-color-primary-dark text-color-title-light'
-                                } p-2 rounded-full shadow-lg transition-colors ml-2 mb-1 bg-color-primary text-color-text-light`}
+                                    ? 'text-color-primary-light'
+                                    : 'text-color-primary'
+                                } mx-2`}
                               >
-                                <SearchIcon className='size-5 md:size-6 stroke-[3]' />
+                                |
+                              </span>
+                              <span>{car.year}</span>
+                            </div>
+
+                            <div className='w-full h-[1px] bg-neutral-800 group-hover:bg-neutral-700 my-5 transition-colors duration-300'></div>
+
+                            <div className='flex justify-between items-center'>
+                              {car.mileage === 0 ? (
+                                <span className='text-sm bg-color-primary hover:bg-color-primary-dark transition-colors border border-white/15 text-neutral-100 rounded-sm py-1 px-3 uppercase tracking-wider'>
+                                  Nuevo
+                                </span>
+                              ) : (
+                                <span className='text-xs text-white/60 uppercase tracking-wider'>
+                                  Usado • {car.mileage.toLocaleString('es-ES')}{' '}
+                                  km
+                                </span>
+                              )}
+
+                              <div className='flex items-center'>
+                                <span className='text-white/60 text-xs uppercase mr-2 tracking-wider'>
+                                  Ver
+                                </span>
+                                <div
+                                  className={`${
+                                    company.dark
+                                      ? 'group-hover:border-color-primary-light'
+                                      : 'group-hover:border-color-primary'
+                                  } w-10 h-10 rounded-full flex items-center justify-center border border-neutral-400 transition-all duration-300`}
+                                >
+                                  <SearchIcon
+                                    className={`${
+                                      company.dark
+                                        ? 'group-hover:text-color-primary-light'
+                                        : 'group-hover:text-color-primary'
+                                    } w-full h-full p-2 text-neutral-400 transition-colors stroke-[1.5] duration-300`}
+                                  />
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -794,35 +768,6 @@ const CatalogoPage = () => {
 const CatalogoPageWithSuspense = () => {
   return (
     <div className='relative min-h-screen w-full'>
-      {/* Fondo absoluto que crece con el contenido */}
-      <div
-        className='absolute inset-0 w-full min-h-full -z-10 pointer-events-none'
-        style={{
-          backgroundColor: '#000',
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
-          `,
-          backgroundSize: '40px 40px',
-          backgroundPosition: '0 0, 0 0',
-        }}
-      />
-      <div
-        className='absolute inset-0 w-full min-h-full -z-10 pointer-events-none'
-        style={{
-          background: `
-            linear-gradient(90deg,
-              #000 0%,
-              rgba(0,0,0,0.85) 10%,
-              rgba(0,0,0,0.2) 30%,
-              rgba(0,0,0,0) 45%,
-              rgba(0,0,0,0) 55%,
-              rgba(0,0,0,0.2) 70%,
-              rgba(0,0,0,0.85) 90%,
-              #000 100%
-            )`,
-        }}
-      />
       {/* Contenido principal */}
       <Header />
       <Suspense fallback={<div>Cargando...</div>}>

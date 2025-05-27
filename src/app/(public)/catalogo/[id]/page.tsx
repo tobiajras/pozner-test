@@ -147,24 +147,24 @@ export default function AutoDetailPage() {
             {/* Galería de imágenes - Skeleton */}
             <div className='space-y-4 w-full lg:w-3/5'>
               <div className=''>
-                <div className='aspect-[4/3] bg-neutral-800/50 rounded-lg animate-pulse'></div>
+                <div className='aspect-[4/3] bg-neutral-800/40 rounded-lg animate-pulse'></div>
               </div>
             </div>
 
             {/* Detalles del auto - Skeleton */}
             <div className='w-full lg:w-2/5'>
-              <div className='bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
-                <div className='h-6 w-32 bg-neutral-800/50 rounded animate-pulse mb-4'></div>
-                <div className='h-8 w-48 bg-neutral-800/50 rounded animate-pulse mb-6'></div>
+              <div className='bg-neutral-800/30 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
+                <div className='h-6 w-32 bg-neutral-800/30 rounded animate-pulse mb-4'></div>
+                <div className='h-8 w-48 bg-neutral-800/30 rounded animate-pulse mb-6'></div>
                 <div className='grid grid-cols-2 gap-4 mb-6'>
                   {[...Array(6)].map((_, i) => (
                     <div key={i} className='space-y-2'>
-                      <div className='h-4 w-20 bg-neutral-800/50 rounded animate-pulse'></div>
-                      <div className='h-6 w-24 bg-neutral-800/50 rounded animate-pulse'></div>
+                      <div className='h-4 w-20 bg-neutral-800/30 rounded animate-pulse'></div>
+                      <div className='h-6 w-24 bg-neutral-800/30 rounded animate-pulse'></div>
                     </div>
                   ))}
                 </div>
-                <div className='h-12 w-full bg-neutral-800/50 rounded animate-pulse'></div>
+                <div className='h-12 w-full bg-neutral-800/30 rounded animate-pulse'></div>
               </div>
             </div>
           </div>
@@ -199,15 +199,15 @@ export default function AutoDetailPage() {
           <div className='w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-6xl mb-6 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
             <div className='flex gap-2 font-medium items-center'>
               <Link href={`/catalogo`}>
-                <p className='text-color-text-light/60 hover:text-color-primary transition-colors'>
+                <p className='text-color-text hover:text-color-primary transition-colors'>
                   catálogo
                 </p>
               </Link>
-              <DropDownIcon className='w-2.5 h-2.5 -rotate-90 text-color-text-light/60' />
+              <DropDownIcon className='w-2.5 h-2.5 -rotate-90 text-color-text' />
               <Link
                 href={`/catalogo?categoria=${car.Category.name.toLowerCase()}`}
               >
-                <p className='text-color-text-light/60 hover:text-color-primary transition-colors'>
+                <p className='text-color-text hover:text-color-primary transition-colors'>
                   {car.Category.name}
                 </p>
               </Link>
@@ -319,10 +319,21 @@ export default function AutoDetailPage() {
 
           {/* Detalles del auto */}
           <div className='w-full lg:w-2/5'>
-            <div className='bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
-              <h1 className='text-3xl font-bold text-color-text-light mb-2'>
-                {car.model}
-              </h1>
+            <div className='bg-white/20 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
+              <div className='border-l-4 border-color-primary pl-4 mb-6'>
+                <h1 className='text-2xl md:text-3xl font-semibold text-color-title'>
+                  {car.model}
+                </h1>
+                <div className='flex flex-wrap items-center gap-2 text-sm text-color-text mt-2'>
+                  <span className='font-medium text-color-title'>
+                    {car.brand}
+                  </span>
+                  <span className='text-color-secondary'>•</span>
+                  <span>{car.year}</span>
+                  <span className='text-color-secondary'>•</span>
+                  <span>{car.Category.name}</span>
+                </div>
+              </div>
               {car.price && parseFloat(car.price) > 0 ? (
                 <p className='text-2xl font-semibold text-color-primary mb-4'>
                   ${parseFloat(car.price).toLocaleString('es-AR')}
@@ -331,39 +342,44 @@ export default function AutoDetailPage() {
                 ''
               )}
 
-              <div className='grid grid-cols-2 gap-4 text-color-text-light mb-6'>
-                <div className='flex flex-col gap-1'>
-                  <p className='text-color-text-light/70 text-sm'>Año</p>
-                  <p className='font-medium'>{car.year}</p>
-                </div>
+              <div className='grid grid-cols-2 md:grid-cols-3 gap-4 text-color-text mb-6'>
                 <div>
-                  <p className='text-color-text-light/70 text-sm'>
-                    Kilometraje
-                  </p>
-                  <p className='font-medium'>
+                  <p className='text-color-text text-sm'>Kilometraje</p>
+                  <p className='text-color-title'>
                     {car.mileage.toLocaleString('es-AR')} km
                   </p>
                 </div>
-                <div>
-                  <p className='text-color-text-light/70 text-sm'>
-                    Transmisión
-                  </p>
-                  <p className='font-medium'>{car.transmission}</p>
+                {car.color && (
+                  <div className='flex flex-col gap-1'>
+                    <p className='text-color-text text-sm'>Motor</p>
+                    <p className='text-color-title'>{car.color}</p>
+                  </div>
+                )}
+                <div className='flex flex-col gap-1'>
+                  <p className='text-color-text text-sm'>Año</p>
+                  <p className='text-color-title'>{car.year}</p>
                 </div>
                 <div>
-                  <p className='text-color-text-light/70 text-sm'>
-                    Combustible
-                  </p>
-                  <p className='font-medium'>{car.fuel}</p>
+                  <p className='text-color-text text-sm'>Transmisión</p>
+                  <p className='text-color-title'>{car.transmission}</p>
                 </div>
                 <div>
-                  <p className='text-color-text-light/70 text-sm'>Puertas</p>
-                  <p className='font-medium'>{car.doors}</p>
+                  <p className='text-color-text text-sm'>Combustible</p>
+                  <p className='text-color-title'>{car.fuel}</p>
                 </div>
-                <div>
-                  <p className='text-color-text-light/70 text-sm'>Marca</p>
-                  <p className='font-medium'>{car.brand}</p>
-                </div>
+                {car.doors && (
+                  <div>
+                    <p className='text-color-text text-sm'>Puertas</p>
+                    <p className='text-color-title'>{car.doors}</p>
+                  </div>
+                )}
+                {car.mileage == 0 && (
+                  <div className='flex justify-start items-center'>
+                    <span className='text-sm bg-color-primary hover:bg-color-primary-dark transition-colors border border-white/15 text-neutral-100 rounded-sm py-1 px-3 uppercase tracking-wider'>
+                      Nuevo
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Botón de WhatsApp */}
@@ -373,7 +389,7 @@ export default function AutoDetailPage() {
                     href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='bg-color-primary hover:bg-color-primary-dark text-color-title-light flex gap-2 font-medium py-3 px-8 rounded text-center transition-colors w-full justify-center'
+                    className='bg-color-secondary hover:bg-color-secondary-dark text-color-title-light flex gap-2 font-medium py-3 px-8 rounded text-center transition-colors w-full justify-center'
                   >
                     <WhatsappIcon className='w-6 h-6' />
                     <span>Consultar</span>
@@ -384,10 +400,10 @@ export default function AutoDetailPage() {
               {/* Descripción */}
               {car.description && (
                 <div className='mt-6'>
-                  <h2 className='text-xl font-medium mb-2 text-color-text-light'>
+                  <h2 className='text-xl font-medium mb-2 text-color-title'>
                     Descripción
                   </h2>
-                  <p className='text-color-text-light/80 whitespace-pre-line'>
+                  <p className='text-color-text whitespace-pre-line'>
                     {car.description}
                   </p>
                 </div>
@@ -422,37 +438,7 @@ export default function AutoDetailPage() {
   return (
     <>
       <Header />
-      <div className='relative '>
-        <div
-          className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
-          style={{
-            backgroundColor: '#000',
-            backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
-          `,
-            backgroundSize: '40px 40px',
-            backgroundPosition: '0 0, 0 0',
-          }}
-        />
-        <div
-          className='absolute inset-0 w-full h-full -z-10 pointer-events-none'
-          style={{
-            background: `
-            linear-gradient(90deg,
-              #000 0%,
-              rgba(0,0,0,0.85) 10%,
-              rgba(0,0,0,0.2) 30%,
-              rgba(0,0,0,0) 45%,
-              rgba(0,0,0,0) 55%,
-              rgba(0,0,0,0.2) 70%,
-              rgba(0,0,0,0.85) 90%,
-              #000 100%
-            )`,
-          }}
-        />{' '}
-        {renderContent()}
-      </div>
+      <div className='relative '>{renderContent()}</div>
       <Footer />
     </>
   );

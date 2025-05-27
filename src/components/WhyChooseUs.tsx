@@ -18,38 +18,40 @@ const WhyChooseUs = () => {
     },
     {
       id: 3,
-      title: 'Financiación Accesible',
+      title: 'Extensa Experiencia',
       description:
-        'Opciones de financiación flexibles y planes de pago adaptados a tu presupuesto, facilitando la compra de tu vehículo.',
+        'Más de 20 años de experiencia en el mercado automotriz, brindando asesoramiento experto y servicio profesional a nuestros clientes.',
       icon: '/assets/icons/finance.svg',
     },
   ];
 
   return (
-    <section className='flex justify-center py-16 md:py-24 bg-color-bg-primary relative overflow-hidden'>
+    <section className='flex justify-center py-16 md:py-24 relative overflow-hidden'>
       {/* Gradiente de fondo */}
-      <div className='absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black'></div>
+      <div className='absolute inset-0'></div>
 
       {/* Patrón decorativo */}
       <div className='absolute inset-0 opacity-10 bg-grid-pattern'></div>
 
       <div className='max-w-6xl flex relative z-10'>
         <div className='mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-          <div className='text-center mb-10 lg:mb-16'>
+          <div className='text-center mb-16'>
             <h3 className='text-sm text-color-primary uppercase tracking-[0.3em] mb-3'>
               Experiencia
             </h3>
-            <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold uppercase text-color-title-light mb-5'>
+            <h2 className='text-3xl md:text-4xl lg:text-5xl text-color-title mb-5'>
               ¿Por qué elegirnos?
             </h2>
-            <div className='w-16 md:w-24 h-0.5 bg-color-primary mx-auto'></div>
+            <div className='flex items-center justify-center w-full max-w-xs md:max-w-sm mx-auto px-4 lg:px-10'>
+              <div className='h-0.5 flex-grow bg-gradient-to-r from-transparent via-color-primary to-color-trasparent'></div>
+            </div>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {benefits.map((benefit) => (
               <div
                 key={benefit.id}
-                className='bg-gradient-to-b from-black to-neutral-900 rounded border border-white/15'
+                className='bg-gradient-to-b from-color-primary-dark to-color-secondary rounded border border-neutral-600'
               >
                 <div className='flex flex-col w-80 h-96 p-5 md:p-7'>
                   <div className='mb-6 w-12 h-12 flex items-center justify-center rounded-full bg-color-primary transition-colors'>
@@ -61,7 +63,7 @@ const WhyChooseUs = () => {
                   <h3 className='text-white text-xl mb-4 font-medium text-nowrap'>
                     {benefit.title}
                   </h3>
-                  <p className='text-white/70 leading-relaxed flex-grow'>
+                  <p className='text-white/70 leading-relaxed flex-grow mb-6'>
                     {benefit.description}
                   </p>
 

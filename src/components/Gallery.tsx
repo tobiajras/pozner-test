@@ -6,14 +6,14 @@ import { motion } from 'framer-motion';
 
 const Gallery = () => {
   return (
-    <section className='mt-10 mb-16 md:mt-16 md:mb-24 relative overflow-hidden'>
+    <section className='mt-10 mb-16 md:mt-16 md:mb-24 bg-color-bg-primary relative overflow-hidden'>
       {/* Patrón de fondo sutil */}
       <div className='absolute inset-0 bg-grid-pattern opacity-5'></div>
 
       <div className='max-w-6xl mx-auto px-4 sm:px-6 relative z-10'>
         <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
-          <div className='h-10 w-1 bg-color-primary mr-3 lg:mr-4'></div>
-          <h3 className='font-medium text-2xl sm:text-3xl lg:text-4xl uppercase text-color-title-light tracking-wide'>
+          <div className='h-10 w-1 bg-color-primary mr-4'></div>
+          <h3 className='font-light text-2xl sm:text-3xl text-color-title tracking-wide'>
             Galería
           </h3>
         </div>
@@ -43,7 +43,7 @@ const Gallery = () => {
                 />
               </div>
               {/* Borde con sombra fija */}
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-800'></div>
+              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
             </motion.div>
 
             <motion.div
@@ -65,7 +65,7 @@ const Gallery = () => {
                   className='w-full h-auto object-cover'
                 />
               </div>
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-800'></div>
+              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
             </motion.div>
 
             <motion.div
@@ -87,11 +87,11 @@ const Gallery = () => {
                   className='w-full h-auto object-cover'
                 />
               </div>
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-800'></div>
+              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
             </motion.div>
           </div>
 
-          <div className='flex flex-col gap-6 md:gap-10 lg:gap-16'>
+          <div className='flex flex-col gap-10 md:gap-16'>
             <motion.div
               className='relative'
               initial={{ opacity: 0, y: 30 }}
@@ -111,7 +111,7 @@ const Gallery = () => {
                   className='w-full h-auto object-cover'
                 />
               </div>
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-800'></div>
+              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
             </motion.div>
             <motion.div
               className='relative'
@@ -132,7 +132,7 @@ const Gallery = () => {
                   className='w-full h-auto object-cover'
                 />
               </div>
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-800'></div>
+              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
             </motion.div>
             <motion.div
               className='relative'
@@ -153,7 +153,7 @@ const Gallery = () => {
                   className='w-full h-auto object-cover'
                 />
               </div>
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-800'></div>
+              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
             </motion.div>
           </div>
         </div>

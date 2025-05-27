@@ -369,7 +369,6 @@ const AutoModal = ({
         isNaN(parseInt(formData.año)) ||
         !formData.categoria ||
         !formData.combustible ||
-        !formData.puertas ||
         !formData.color
       ) {
         alert('Por favor, complete todos los campos requeridos');
@@ -765,7 +764,6 @@ const AutoModal = ({
                               onFocus={() => setShowPuertasDropdown(true)}
                               className={inputStyles}
                               placeholder='Seleccionar cantidad de puertas'
-                              required
                             />
                             <button
                               type='button'
