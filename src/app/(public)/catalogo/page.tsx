@@ -255,7 +255,7 @@ const CatalogoPage = () => {
         <div className='w-full flex justify-center mt-8 md:mt-10'>
           <div className='max-w-md sm:max-w-2xl lg:max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-0'>
             {/* Contenedor principal con fondo oscuro y sombra */}
-            <div className='bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
+            <div className='bg-color-secondary rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
               {/* Título de la sección de filtros */}
               <div className='mb-5 flex items-center justify-between'>
                 <div className='flex items-center'>
@@ -301,7 +301,7 @@ const CatalogoPage = () => {
                   <Select
                     value={marcaFilter || 'all'}
                     onValueChange={(value) => {
-                      updateFilters('marca', value);
+                      updateFilters('marca', value === 'all' ? '' : value);
                     }}
                   >
                     <SelectTrigger className='h-10 flex-1 px-3 py-2 border border-neutral-700 rounded-md bg-black text-white text-sm outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
@@ -312,7 +312,7 @@ const CatalogoPage = () => {
                         value='all'
                         className='text-neutral-400 hover:text-white hover:bg-black'
                       >
-                        Marcas
+                        Todas las marcas
                       </SelectItem>
                       {todasLasMarcas.map((marca) => (
                         <SelectItem
@@ -329,7 +329,7 @@ const CatalogoPage = () => {
                   <Select
                     value={categoriaFilter || 'all'}
                     onValueChange={(value) => {
-                      updateFilters('categoria', value);
+                      updateFilters('categoria', value === 'all' ? '' : value);
                     }}
                   >
                     <SelectTrigger className='h-10 flex-1 px-3 py-2 border border-neutral-700 rounded-md bg-black text-white text-sm outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
@@ -340,7 +340,7 @@ const CatalogoPage = () => {
                         value='all'
                         className='text-neutral-400 hover:text-white hover:bg-black'
                       >
-                        Categorías
+                        Todas las categorías
                       </SelectItem>
                       {categorias.map((categoria) => (
                         <SelectItem
@@ -395,7 +395,7 @@ const CatalogoPage = () => {
                       <Select
                         value={marcaFilter || 'all'}
                         onValueChange={(value) => {
-                          updateFilters('marca', value);
+                          updateFilters('marca', value === 'all' ? '' : value);
                         }}
                       >
                         <SelectTrigger className='h-full w-full sm:w-44 px-4 py-3 pr-10 border border-neutral-700 rounded-md bg-black text-white outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
@@ -435,7 +435,10 @@ const CatalogoPage = () => {
                       <Select
                         value={categoriaFilter || 'all'}
                         onValueChange={(value) => {
-                          updateFilters('categoria', value);
+                          updateFilters(
+                            'categoria',
+                            value === 'all' ? '' : value
+                          );
                         }}
                       >
                         <SelectTrigger className='h-full w-full sm:w-44 px-4 py-3 pr-10 border border-neutral-700 rounded-md bg-black text-white outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
@@ -550,7 +553,7 @@ const CatalogoPage = () => {
                         href={`/catalogo/${car.id}`}
                         className='group w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%]'
                       >
-                        <div className='relative bg-black overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
+                        <div className='relative bg-color-secondary overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
                           {!car.active && (
                             <div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-20'>
                               <span className='bg-red-500 text-white text-sm font-medium px-3 py-1.5 rounded'>
@@ -560,7 +563,7 @@ const CatalogoPage = () => {
                           )}
 
                           <div className='relative overflow-hidden aspect-[4/3]'>
-                            <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent z-10'></div>
+                            <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-color-secondary to-transparent z-10'></div>
                             <motion.div
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}

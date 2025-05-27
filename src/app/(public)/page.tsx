@@ -19,7 +19,7 @@ export default function Home() {
           <main className='flex flex-col w-full'>
             <HeroHome />
             <ActionButtons />
-            <section className='flex flex-col gap-8 md:gap-10 lg:gap-12 mt-10 mb-16 md:mt-16 md:mb-24'>
+            <section className='flex flex-col gap-8 md:gap-10 lg:gap-12 mt-10 mb-10 md:mt-16 md:mb-16'>
               <CarrouselFeatured title='Ingresos' />
               <CarrouselFavorites title='Destacados' />
             </section>

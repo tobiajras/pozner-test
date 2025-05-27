@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className='flex justify-center py-16 md:py-24 relative overflow-hidden'>
+    <section className='flex justify-center py-10 md:py-16 relative overflow-hidden'>
       {/* Gradiente de fondo */}
       <div className='absolute inset-0'></div>
 

@@ -12,7 +12,7 @@ const HeroHome = () => {
     >
       <div className={`max-w-[1920px] w-full flex flex-col items-center z-10`}>
         <div className='flex justify-center max-w-6xl lg:max-w-[1920px] w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-          <article className='pt-8 pb-32 sm:pt-12 sm:pb-32 md:pt-16 md:pb-36 lg:pt-28 lg:pb-48 relative w-full flex flex-col items-center justify-center md:min-w-[430px] lg:min-w-[540px] z-20'>
+          <article className='pt-8 pb-32 sm:pt-12 sm:pb-32 md:pt-16 md:pb-36 lg:pt-28 lg:pb-52 relative w-full flex flex-col items-center justify-center md:min-w-[430px] lg:min-w-[540px] z-20'>
             <HeroCarousel />
             <div className='absolute w-3 sm:w-5 md:w-20 lg:w-20 h-full top-0 -left-0 bg-gradient-to-r from-black to-transparent -z-10'></div>
             <div className='absolute w-3 sm:w-5 md:w-20 lg:w-20 h-full top-0 -right-0 bg-gradient-to-l from-black to-transparent -z-10'></div>

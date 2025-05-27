@@ -78,7 +78,7 @@ const NosotrosPage = () => {
               once: true,
               margin: '0px 0px -100px 0px',
             }}
-            className='bg-gradient-to-b from-neutral-900 to-black rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-6 md:p-8 border border-neutral-800 mx-4 sm:mx-6 md:mx-8 lg:mx-10 text-center'
+            className='bg-color-secondary rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-6 md:p-8 border border-neutral-800 mx-4 sm:mx-6 md:mx-8 lg:mx-10 text-center'
           >
             <h3 className='text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4'>
               ¿Estás listo para encontrar tu próximo vehículo?

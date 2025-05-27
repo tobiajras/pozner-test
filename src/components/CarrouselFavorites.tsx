@@ -157,7 +157,7 @@ const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
                 key={auto.id}
               >
                 {/* Card container con borde que se ilumina */}
-                <div className='relative bg-black overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
+                <div className='relative bg-color-secondary overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
                   {!auto.active && (
                     <div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-20'>
                       <span className='bg-red-500 text-white text-sm font-medium px-3 py-1.5 rounded'>
@@ -168,7 +168,7 @@ const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
 
                   {/* Contenedor de la imagen */}
                   <div className='relative overflow-hidden aspect-[4/3]'>
-                    <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent z-10'></div>
+                    <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-color-secondary to-transparent z-10'></div>
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}

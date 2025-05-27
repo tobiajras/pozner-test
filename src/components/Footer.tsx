@@ -17,7 +17,7 @@ const Footer = () => {
     <div className='relative'>
       <footer
         id='contactoSection'
-        className={`flex justify-center pt-10 shadow-top-lg relative ${
+        className={`flex justify-center shadow-top-lg relative ${
           company.darkmode
             ? 'bg-color-bg-secondary-dark'
             : 'bg-color-bg-secondary'
@@ -39,7 +39,7 @@ const Footer = () => {
                     />
                   </div>
                 ) : (
-                  <div className='w-52 sm:w-52 md:w-56 lg:w-64 h-14 md:h-16'>
+                  <div className='w-60 sm:w-60 md:w-64 lg:w-80 h-14 md:h-16'>
                     <SpeedmotorsLogo className='w-full h-full text-color-title-light' />
                   </div>
                 )}
