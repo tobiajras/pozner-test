@@ -70,37 +70,7 @@ export default function LoginPage() {
 
   return (
     <>
-      {/* Fondo con efecto grilla */}
-      <div
-        className='fixed inset-0 -z-10 pointer-events-none'
-        style={{
-          backgroundColor: '#000000',
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)
-          `,
-          backgroundSize: '40px 40px',
-          backgroundPosition: '0 0, 0 0',
-        }}
-      ></div>
-      {/* Máscara de gradiente suave a los costados */}
-      <div
-        className='fixed inset-0 -z-10 pointer-events-none'
-        style={{
-          background: `
-            linear-gradient(90deg,
-              #000 0%,
-              rgba(0,0,0,0.85) 10%,
-              rgba(0,0,0,0.2) 30%,
-              rgba(0,0,0,0) 45%,
-              rgba(0,0,0,0) 55%,
-              rgba(0,0,0,0.2) 70%,
-              rgba(0,0,0,0.85) 90%,
-              #000 100%
-            )`,
-        }}
-      ></div>
-      <div className='min-h-screen flex items-center justify-center'>
+      <div className='min-h-screen flex items-center justify-center bg-gray-300'>
         <div className='w-full max-w-md'>
           <div className='bg-gradient-to-b from-neutral-900 to-black rounded-md border border-neutral-800 [box-shadow:0_0_10px_rgba(0,0,0,0.1)] px-10 py-14'>
             <h2 className='text-2xl font-semibold text-color-title-light mb-8'>
@@ -154,7 +124,7 @@ export default function LoginPage() {
                 <button
                   type='submit'
                   disabled={loading}
-                  className='w-full py-3 bg-color-primary hover:bg-color-primary-dark text-white font-medium rounded-md transition-colors text-base disabled:opacity-70'
+                  className='w-full py-3 bg-color-primary-admin hover:bg-color-primary-admin-dark text-white font-medium rounded-md transition-colors text-base disabled:opacity-70'
                 >
                   {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
                 </button>

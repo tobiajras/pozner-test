@@ -879,7 +879,7 @@ const AutoModal = ({
                       </button>
                       <button
                         type='submit'
-                        className='px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-color-primary hover:bg-color-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color-secondary flex items-center'
+                        className='px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-color-primary-admin hover:bg-color-primary-admin/90 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-color-secondary flex items-center'
                         disabled={submitting}
                       >
                         {submitting ? (
@@ -964,7 +964,7 @@ const AutoModal = ({
                   <div className='mt-4'>
                     <button
                       type='button'
-                      className='inline-flex justify-center rounded-md border border-transparent bg-color-primary px-4 py-2 text-sm font-medium text-white hover:bg-color-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-color-primary focus-visible:ring-offset-2'
+                      className='inline-flex justify-center rounded-md border border-transparent bg-color-primary-admin px-4 py-2 text-sm font-medium text-white hover:bg-color-primary-admin/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-color-primary focus-visible:ring-offset-2'
                       onClick={() => setShowErrorModal(false)}
                     >
                       Entendido

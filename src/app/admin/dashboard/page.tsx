@@ -1641,7 +1641,7 @@ export default function DashboardPage() {
               setSelectedAuto(undefined);
               setIsModalOpen(true);
             }}
-            className='flex items-center gap-2 bg-color-primary hover:bg-color-primary/90 text-white px-4 py-2 rounded-md transition-colors'
+            className='flex items-center gap-2 bg-color-primary-admin hover:bg-color-primary-admin/90 text-white px-4 py-2 rounded-md transition-colors'
           >
             <Plus size={18} />
             Agregar Auto
@@ -1679,7 +1679,7 @@ export default function DashboardPage() {
           )}
           <button
             onClick={executeSearch}
-            className='px-5 py-2.5 bg-color-primary text-white hover:bg-color-primary/90 transition-colors h-full font-medium'
+            className='px-5 py-2.5 bg-color-primary-admin text-white hover:bg-color-primary-admin/90 transition-colors h-full font-medium'
           >
             Buscar
           </button>
