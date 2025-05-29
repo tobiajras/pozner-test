@@ -25,7 +25,7 @@ const config: Config = {
         'color-tertiary-light': '#FFE39C',
         'color-bg-primary': '#E0E0E0',
         'color-bg-secondary': '#141517',
-        'color-bg-secondary-dark': '#000000',
+        'color-bg-secondary-dark': '#121212',
         'color-bg-secondary-light': '#1E1E1E',
         'color-title': '#000000',
         'color-title-light': '#ffff',
