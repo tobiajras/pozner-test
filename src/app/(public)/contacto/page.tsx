@@ -1,17 +1,13 @@
 'use client';
 
 import { company, sedes } from '@/app/constants/constants';
-import ClockIcon from '@/components/icons/ClockIcon';
-import LocationIcon from '@/components/icons/LocationIcon';
 import InstagramIcon from '@/components/icons/InstagramIcon';
 import WhatsappFillIcon from '@/components/icons/WhatsappFillIcon';
-
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
 import EmailFillIcon from '@/components/icons/EmailFillIcon';
+import { motion } from 'framer-motion';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import SedeCard from '@/components/SedeCard';
 
 const ContactoPage = () => {
   return (
@@ -36,58 +32,7 @@ const ContactoPage = () => {
         <section className='w-full max-w-6xl mb-16'>
           <div className='flex flex-wrap justify-center gap-x-6 gap-y-6 md:gap-x-10 md:gap-y-16 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
             {sedes.map((sede) => (
-              <motion.div
-                key={sede.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5 },
-                }}
-                viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-                className='max-w-md md:max-w-lg rounded-xl group overflow-hidden shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] hover:shadow-[0_5px_30px_-15px_rgba(0,0,0,2)] transition-shadow'
-              >
-                <Link
-                  href={`${sede.appointment}`}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <div className='overflow-hidden aspect-video'>
-                    <Image
-                      priority
-                      className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-700'
-                      src={`/assets/sedes/${sede.image}`}
-                      alt={sede.title}
-                      width={600}
-                      height={350}
-                    />
-                  </div>
-                  <div className='p-5 md:p-7 bg-gradient-to-b from-black to-neutral-900'>
-                    <h3 className='text-color-title-light text-xl md:text-2xl font-semibold text-center'>
-                      {sede.title}
-                    </h3>
-                    <div className='flex flex-col items-center gap-1 mt-2'>
-                      <div className='flex items-center gap-2'>
-                        <LocationIcon className='w-[22px] h-[22px] text-color-primary-light' />
-                        <p className='text-color-text-light'>{sede.adress}</p>
-                      </div>
-                      <div className='flex items-start gap-2'>
-                        <ClockIcon className='w-5 h-5 text-color-primary-light' />
-                        <p className='text-color-text-light flex flex-col items-center'>
-                          {sede.schedule.map((schedule) => (
-                            <span key={schedule}>{schedule}</span>
-                          ))}
-                        </p>
-                      </div>
-                      <div className='flex justify-center mt-2'>
-                        <span className='bg-color-primary hover:bg-color-primary-dark transition-colors text-white px-5 py-3 rounded-md'>
-                          Ver en Google Maps
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
+              <SedeCard key={sede.id} sede={sede} />
             ))}
           </div>
         </section>
@@ -180,7 +125,7 @@ const ContactoPage = () => {
               </div>
             </motion.a>
 
-            {/* Tarjeta de Ubicación */}
+            {/* Tarjeta de Email */}
             <motion.a
               href={`mailto:${company.email}`}
               target='_blank'

@@ -30,7 +30,7 @@ export const sedes = [
     whatsapp: '1170964444',
     schedule: ['Lunes a Viernes 10:00 a 19:00hs', 'Sábados 10:00 a 14:00hs'],
     appointment: 'https://maps.app.goo.gl/jHfmymCGeq2FjSeMA',
-    image: 'sede-1.webp',
+    images: ['sede-1-1.webp', 'sede-1-2.webp', 'sede-1-3.webp'],
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ export const sedes = [
     whatsapp: '1123225179',
     schedule: ['Lunes a Viernes 10:00 a 19:00hs', 'Sábados 10:00 a 14:00hs'],
     appointment: 'https://maps.app.goo.gl/8US1V9M6Hk9JUFS68',
-    image: 'sede-2.webp',
+    images: ['sede-2-1.webp', 'sede-2-2.webp', 'sede-2-3.webp'],
   },
 ];
 

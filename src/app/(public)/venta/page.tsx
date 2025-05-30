@@ -1,36 +1,129 @@
+'use client';
+
+import { company } from '@/app/constants/constants';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const VentaPage = () => {
+  const pasos = [
+    {
+      numero: '01',
+      titulo: 'Evaluación Inicial',
+      descripcion:
+        'Realizamos una inspección detallada de tu vehículo para determinar su estado y valor de mercado.',
+    },
+    {
+      numero: '02',
+      titulo: 'Documentación',
+      descripcion:
+        'Firmamos el contrato de consignación y recopilamos toda la documentación necesaria.',
+    },
+    {
+      numero: '03',
+      titulo: 'Marketing',
+      descripcion:
+        'Preparamos tu vehículo para la venta y creamos una estrategia de marketing personalizada.',
+    },
+    {
+      numero: '04',
+      titulo: 'Venta y Entrega',
+      descripcion:
+        'Nos encargamos de la negociación, venta y transferencia del vehículo.',
+    },
+  ];
+
   return (
     <>
       <Header />
-      <section className='min-h-[60vh] flex items-center justify-center px-4'>
-        <div className='text-center space-y-4'>
-          <h1 className='text-3xl font-semibold text-gray-800'>
-            Página de Venta en desarrollo
-          </h1>
-          <div className='flex justify-center py-4'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              className='h-16 w-16 text-color-bg-secondary'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={1}
-                d='M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z'
-              />
-            </svg>
+      <main className='bg-gradient-to-b '>
+        {/* Hero Section */}
+        <section className='m-auto w-full max-w-[1920px] h-[130px] sm:h-[150px] md:h-[200px] lg:h-[260px] relative'>
+          <div className='w-full h-full'>
+            <Image
+              priority
+              className='w-full h-full object-cover'
+              src='/assets/venta/banner-venta.webp'
+              alt='banner-venta'
+              width={1500}
+              height={400}
+            />
           </div>
-          <p className='text-xl text-gray-600 max-w-md mx-auto'>
-            Esta sección está en proceso.
-          </p>
+          <div className='absolute bottom-0 left-0 w-full h-full flex justify-center items-center z-10'>
+            <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+              <div className='text-center'>
+                <h3 className='text-2xl sm:text-4xl lg:text-5xl font-bold text-color-text-light'>
+                  VENDÉ TU VEHÍCULO
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-color-bg-secondary-dark/75 to-color-bg-secondary-dark/75'></div>
+        </section>
+
+        <section className='mt-8 md:mt-12'>
+          <div className='max-w-6xl mx-auto px-4 sm:px-6'>
+            <div className='flex justify-center text-center mb-16'>
+              <p className='text-xl lg:text-2xl text-color-text max-w-xl lg:max-w-2xl text-center'>
+                Te guiamos en cada paso del camino para que puedas vender tu
+                vehículo de manera fácil y rápida.
+              </p>
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center'>
+              {pasos.map((paso, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className='relative'
+                >
+                  <div className='text-6xl font-bold text-color-primary-light mb-4'>
+                    {paso.numero}
+                  </div>
+                  <h3 className='text-xl font-semibold text-color-title mb-2'>
+                    {paso.titulo}
+                  </h3>
+                  <p className='text-color-text max-w-sm'>{paso.descripcion}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <div className='flex justify-center pt-10 md:pt-16 pb-10 md:pb-16'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+            viewport={{
+              once: true,
+              margin: '0px 0px -100px 0px',
+            }}
+            className='max-w-2xl lg:max-w-6xl w-full bg-color-secondary rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-6 md:p-8 border border-neutral-800 mx-4 sm:mx-6 md:mx-8 lg:mx-10 text-center'
+          >
+            <h3 className='text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-2 md:mb-4'>
+              ¿Estás listo para vender tu vehículo?
+            </h3>
+            <p className='text-white/70 max-w-2xl mx-auto mb-3 md:mb-5 lg:text-lg'>
+              Nuestro equipo está listo para asesorarte y concretar la venta de
+              tu auto. Contáctanos para obtener más información.
+            </p>
+            <div className='flex gap-4 justify-center'>
+              <a
+                href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quiero vender mi vehículo`}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='lg:text-lg bg-color-primary hover:bg-color-primary-dark text-white py-3 px-8 rounded-md font-medium transition-all duration-300'
+              >
+                Vender
+              </a>
+            </div>
+          </motion.div>
         </div>
-      </section>
+      </main>
       <Footer />
     </>
   );

@@ -2,11 +2,12 @@
 
 import Image from 'next/image';
 
-import { company } from '@/app/constants/constants';
+import { company, sedes } from '@/app/constants/constants';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import SedeCard from '@/components/SedeCard';
 
 const NosotrosPage = () => {
   return (
@@ -38,7 +39,7 @@ const NosotrosPage = () => {
             className='flex flex-col lg:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'
           >
             {/* Imagen principal */}
-            <div className='w-full max-w-[330px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] aspect-[4/3] relative overflow-hidden rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'>
+            <div className='w-full max-w-[330px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] aspect-[4/3] relative overflow-hidden rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)]'>
               <Image
                 priority
                 className='w-full h-auto object-cover'
@@ -71,32 +72,13 @@ const NosotrosPage = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-            viewport={{
-              once: true,
-              margin: '0px 0px -100px 0px',
-            }}
-            className='bg-color-secondary rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-6 md:p-8 border border-neutral-800 mx-4 sm:mx-6 md:mx-8 lg:mx-10 text-center'
-          >
-            <h3 className='text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4'>
-              ¿Estás listo para encontrar tu próximo vehículo?
-            </h3>
-            <p className='text-white/70 max-w-2xl mx-auto mb-3 md:mb-5'>
-              Nuestro equipo está listo para asesorarte y ayudarte a encontrar
-              el auto perfecto para tus necesidades. Visita nuestro catálogo o
-              contáctanos directamente.
-            </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contacto'
-                className='bg-color-primary hover:bg-color-primary-dark text-white py-3 px-8 rounded-md font-medium transition-all duration-300'
-              >
-                Contactar
-              </Link>
+          <section className='w-full max-w-6xl mb-16'>
+            <div className='flex flex-wrap justify-center gap-x-6 gap-y-6 md:gap-x-10 md:gap-y-16 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+              {sedes.map((sede) => (
+                <SedeCard key={sede.id} sede={sede} />
+              ))}
             </div>
-          </motion.div>
+          </section>
         </div>
       </section>
       <Footer />
