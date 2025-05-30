@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 import { company, sedes } from '@/app/constants/constants';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SedeCard from '@/components/SedeCard';
