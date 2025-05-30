@@ -98,21 +98,11 @@ export const navigation = [
   },
   {
     id: '2',
-    title: 'Vendé',
-    url: '/venta',
-  },
-  {
-    id: '3',
-    title: 'Consigná',
-    url: '/consignacion',
-  },
-  {
-    id: '4',
     title: 'Nosotros',
     url: '/nosotros',
   },
   {
-    id: '5',
+    id: '3',
     title: 'Contacto',
     url: '/contacto',
     button: true,

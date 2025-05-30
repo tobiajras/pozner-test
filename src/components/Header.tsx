@@ -60,14 +60,14 @@ const Header = () => {
                 </div>
               </>
             ) : (
-              <div className='h-14 md:h-16 w-64 sm:w-72 md:w-80 lg:w-[350px]'>
+              <div className='h-14 md:h-16 w-72 sm:w-80 md:w-96 lg:w-[400px]'>
                 <SpeedmotorsLogo className='h-full w-full object-contain object-left text-color-title-light hover:text-color-secondary-light transition-colors' />
               </div>
             )}
           </Link>
         </article>
         <nav className='hidden md:block'>
-          <ul className='flex items-center gap-8'>
+          <ul className='flex items-center gap-8 lg:gap-10'>
             {navigation.map((nav) => {
               const isActive = pathname === nav.url;
               return (
@@ -77,9 +77,9 @@ const Header = () => {
                       nav.button
                         ? `${
                             company.dark
-                              ? 'text-color-title-light hover:bg-color-primary-dark'
-                              : 'text-color-title-light hover:bg-color-primary-dark'
-                          }  bg-color-primary p-3 rounded-md`
+                              ? 'text-color-title-light hover:bg-color-primary'
+                              : 'text-color-title-light hover:bg-color-primary'
+                          }  bg-color-primary-light p-3 rounded-md`
                         : company.darkmode
                         ? `text-color-text-light hover:text-color-title-light ${
                             !nav.button && isActive && 'text-color-title-light'
