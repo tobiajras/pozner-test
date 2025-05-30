@@ -46,7 +46,7 @@ export const sedes = [
 ];
 
 export const metadataCompany = {
-  metadataBase: 'https://speedmotors-one.vercel.app/',
+  metadataBase: 'https://www.speedmotors.com.ar/',
   title: 'Speed Motors - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
