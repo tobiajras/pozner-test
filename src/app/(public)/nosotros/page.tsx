@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-import { company, sedes } from '@/app/constants/constants';
+import { sedes } from '@/app/constants/constants';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
