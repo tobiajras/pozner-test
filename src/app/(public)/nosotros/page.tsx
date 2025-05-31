@@ -35,7 +35,7 @@ const NosotrosPage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            className='flex flex-col lg:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'
+            className='flex flex-col lg:flex-row items-start gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'
           >
             {/* Imagen principal */}
             <div className='w-full max-w-[330px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] aspect-[4/3] relative overflow-hidden rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)]'>
@@ -51,22 +51,31 @@ const NosotrosPage = () => {
 
             {/* Texto descriptivo */}
             <div className='max-w-[450px] xl:max-w-lg'>
-              <h3 className='text-center lg:text-left text-2xl sm:text-3xl font-semibold text-color-title mb-3'>
-                Nuestra <span className='text-color-primary'>pasión</span> por
-                los automóviles
-              </h3>
               <p className='text-center lg:text-left text-color-text mb-2 md:text-lg'>
-                En {company.name} nos mueve una profunda pasión por los
-                automóviles y el compromiso de ofrecer una experiencia de compra
-                excepcional. Nos distinguimos por nuestra atención
-                personalizada, donde cada cliente es único y cada vehículo es
-                seleccionado con los más altos estándares de calidad y
-                desempeño.
+                <h2 className='text-color-primary-dark font-semibold inline-block'>
+                  SPEED MOTORS
+                </h2>{' '}
+                es una empresa con 23 años de experiencia en el mercado,
+                dedicada a la comercialización de las principales marcas de
+                vehículos y motos de media y alta gama. Desde nuestros inicios
+                nuestro compromiso es brindar calidad, confianza y atención
+                personalizada a cada uno de nuestros clientes. confianza y
+                atención personalizada a cada uno de nuestros clientes.
+              </p>
+              <p className='text-center lg:text-left text-color-text mb-2 md:text-lg'>
+                Contamos con un equipo altamente capacitado que entiende las
+                necesidades del cliente y trabaja para ofrecer con transparencia
+                y acompañamiento cada parte del proceso de compra con soluciones
+                integrales en financiamiento, gestoría y seguros.
               </p>
               <p className='text-center lg:text-left text-color-text md:text-lg'>
-                Nuestro equipo está formado por verdaderos entusiastas del mundo
-                automotor que entienden tus necesidades específicas, brindándote
-                asesoramiento honesto y transparente en cada paso del proceso.
+                En{' '}
+                <h2 className='text-color-primary-dark font-semibold inline-block'>
+                  SPEED MOTORS
+                </h2>{' '}
+                mas que vender autos, construimos relaciones duraderas. Te
+                invitamos a conocernos y descubrir por que miles de clientes han
+                confiado en nosotros durante mas de 2 décadas.
               </p>
             </div>
           </motion.div>

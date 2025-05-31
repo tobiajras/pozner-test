@@ -4,7 +4,7 @@ export const company = {
   shortAdress: true,
   favicon: false,
   id: 'speed-motors',
-  name: 'Speed Motors',
+  name: 'SPEED MOTORS',
   adress: null,
   city: null,
   email: 'ventas@speed-motors.com.ar',

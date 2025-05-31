@@ -44,7 +44,7 @@ const Footer = () => {
                   </div>
                 )}
 
-                <p className='text-color-text-light text-sm lg:text-base mt-3 max-w-96'>
+                <p className='text-color-text-light mt-1 md:mt-3 max-w-96'>
                   {company.footer}
                 </p>
                 <div className='flex gap-4 mt-4'>
@@ -160,7 +160,7 @@ const Footer = () => {
                 : 'border-color-primary'
             } flex justify-center w-full pb-16 pt-8 border-t`}
           >
-            <article className='flex flex-col md:flex-row justify-between items-center text-sm sm:text-base gap-3 sm:gap-5 w-full max-w-6xl mx-6 sm:mx-8 md:mx-10'>
+            <article className='flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-5 w-full max-w-6xl mx-6 sm:mx-8 md:mx-10'>
               <div className='flex items-center gap-1 sm:gap-2 text-color-text-light'>
                 <span>© Copyright {new Date().getFullYear()}</span>
                 <span>-</span>
@@ -173,7 +173,7 @@ const Footer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <GravityLogo className='w-32 text-white hover:text-[#D1FA2D] transition-colors' />
+                  <GravityLogo className='w-28 md:w-32 text-white hover:text-[#D1FA2D] transition-colors' />
                 </a>
               </div>
             </article>
