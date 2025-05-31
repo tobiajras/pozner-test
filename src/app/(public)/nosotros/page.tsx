@@ -35,7 +35,7 @@ const NosotrosPage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            className='flex flex-col lg:flex-row items-start gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'
+            className='flex flex-col lg:flex-row items-center lg:items-start gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'
           >
             {/* Imagen principal */}
             <div className='w-full max-w-[330px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] aspect-[4/3] relative overflow-hidden rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)]'>
