@@ -319,7 +319,7 @@ export default function AutoDetailPage() {
 
           {/* Detalles del auto */}
           <div className='w-full lg:w-2/5'>
-            <div className='bg-white/20 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
+            <div className='bg-white/70 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
               <div className='border-l-4 border-color-primary pl-4 mb-6'>
                 <h1 className='text-2xl md:text-3xl font-semibold text-color-title'>
                   {car.model}

@@ -73,7 +73,7 @@ const AutoModal = ({
           modelo: '',
           año: '',
           kilometraje: 0,
-          transmision: 'Manual',
+          transmision: '',
           combustible: '',
           puertas: 0,
           precio: 0,
@@ -97,10 +97,12 @@ const AutoModal = ({
   const [showMarcaDropdown, setShowMarcaDropdown] = useState(false);
   const [showCombustibleDropdown, setShowCombustibleDropdown] = useState(false);
   const [showPuertasDropdown, setShowPuertasDropdown] = useState(false);
+  const [showTransmisionDropdown, setShowTransmisionDropdown] = useState(false);
   const categoryInputRef = useRef<HTMLInputElement>(null);
   const marcaInputRef = useRef<HTMLInputElement>(null);
   const combustibleInputRef = useRef<HTMLInputElement>(null);
   const puertasInputRef = useRef<HTMLInputElement>(null);
+  const transmisionInputRef = useRef<HTMLInputElement>(null);
   const [showErrorModal, setShowErrorModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [selectedImageForCrop, setSelectedImageForCrop] = useState<{
@@ -112,6 +114,7 @@ const AutoModal = ({
   // Opciones para los selectores
   const combustibleOptions = ['Nafta', 'Diesel', 'GNC', 'Eléctrico'];
   const puertasOptions = ['2', '3', '4', '5'];
+  const transmisionOptions = ['Manual', 'Automática', 'CVT'];
 
   // Cargar categorías del API
   useEffect(() => {
@@ -176,6 +179,13 @@ const AutoModal = ({
       ) {
         setShowPuertasDropdown(false);
       }
+
+      if (
+        transmisionInputRef.current &&
+        !transmisionInputRef.current.contains(event.target as Node)
+      ) {
+        setShowTransmisionDropdown(false);
+      }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -229,7 +239,7 @@ const AutoModal = ({
             modelo: data.model,
             año: data.year.toString(),
             kilometraje: data.mileage,
-            transmision: 'Manual',
+            transmision: data.transmission,
             combustible: data.fuel,
             puertas: data.doors,
             precio: parseFloat(data.price),
@@ -263,7 +273,7 @@ const AutoModal = ({
         modelo: '',
         año: '',
         kilometraje: 0,
-        transmision: 'Manual',
+        transmision: '',
         combustible: '',
         puertas: 0,
         precio: 0,
@@ -369,7 +379,8 @@ const AutoModal = ({
         isNaN(parseInt(formData.año)) ||
         !formData.categoria ||
         !formData.combustible ||
-        !formData.color
+        !formData.color ||
+        !formData.transmision
       ) {
         alert('Por favor, complete todos los campos requeridos');
         setSubmitting(false);
@@ -397,7 +408,7 @@ const AutoModal = ({
         modelo: formData.modelo,
         año: formData.año,
         kilometraje: formData.kilometraje,
-        transmision: 'Manual',
+        transmision: formData.transmision,
         combustible: formData.combustible,
         puertas: formData.puertas,
         precio: precioValidado,
@@ -791,6 +802,61 @@ const AutoModal = ({
                                   }}
                                 >
                                   {option} puertas
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Transmisión
+                        </label>
+                        <div className='relative' ref={transmisionInputRef}>
+                          <div className='flex items-center relative'>
+                            <input
+                              type='text'
+                              value={formData.transmision}
+                              onChange={(e) =>
+                                setFormData((prev) => ({
+                                  ...prev,
+                                  transmision: e.target.value,
+                                }))
+                              }
+                              onFocus={() => setShowTransmisionDropdown(true)}
+                              className={inputStyles}
+                              placeholder='Seleccionar tipo de transmisión'
+                              required
+                            />
+                            <button
+                              type='button'
+                              className='absolute right-2 p-1'
+                              onClick={() =>
+                                setShowTransmisionDropdown(
+                                  !showTransmisionDropdown
+                                )
+                              }
+                            >
+                              <ChevronDown className='h-4 w-4 text-gray-500' />
+                            </button>
+                          </div>
+
+                          {showTransmisionDropdown && (
+                            <div className='absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-sm max-h-60 overflow-y-auto'>
+                              {transmisionOptions.map((option) => (
+                                <div
+                                  key={option}
+                                  className='px-4 py-2 hover:bg-gray-100 cursor-pointer'
+                                  onClick={() => {
+                                    setFormData((prev) => ({
+                                      ...prev,
+                                      transmision: option,
+                                    }));
+                                    setShowTransmisionDropdown(false);
+                                  }}
+                                >
+                                  {option}
                                 </div>
                               ))}
                             </div>
