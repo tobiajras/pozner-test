@@ -1042,7 +1042,8 @@ export default function DashboardPage() {
 
       // Agregar imageOrder si existe
       if (data.imageOrder && data.imageOrder.length > 0) {
-        formData.append('imageOrder', JSON.stringify(data.imageOrder));
+        const jsonImageOrder = JSON.stringify(data.imageOrder);
+        formData.append('imageOrder', jsonImageOrder);
       }
 
       const response = await fetch(`${API_BASE_URL}/api/cars`, {
@@ -1137,27 +1138,11 @@ export default function DashboardPage() {
         formData.append('imagesToDelete', jsonImagesToDelete);
       }
 
-      // Agregar orden de imágenes solo si hay cambios en las imágenes
-      if (
-        data.imageOrder &&
-        data.imageOrder.length > 0 &&
-        (tieneImagenesNuevas || tieneImagenesAEliminar)
-      ) {
+      // Agregar orden de imágenes si existe
+      if (data.imageOrder && data.imageOrder.length > 0) {
         const jsonImageOrder = JSON.stringify(data.imageOrder);
         formData.append('imageOrder', jsonImageOrder);
       }
-
-      formData.forEach((value, key) => {
-        if (key === 'images') {
-          console.log(
-            `${key}: ${
-              value instanceof File ? value.name : '[Objeto no imprimible]'
-            }`
-          );
-        } else {
-          console.log(`${key}: ${value instanceof File ? value.name : value}`);
-        }
-      });
 
       const response = await fetch(
         `${API_BASE_URL}/api/cars/${selectedAuto.id}`,

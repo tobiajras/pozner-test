@@ -58,7 +58,6 @@ const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
   const [favoritos, setFavoritos] = useState<Auto[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  console.log(favoritos);
 
   useEffect(() => {
     const fetchFavoritos = async () => {

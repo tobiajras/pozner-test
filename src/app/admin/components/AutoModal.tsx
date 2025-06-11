@@ -116,6 +116,8 @@ const AutoModal = ({
   const puertasOptions = ['2', '3', '4', '5'];
   const transmisionOptions = ['Manual', 'Automática', 'CVT'];
 
+  console.log(formData);
+
   // Cargar categorías del API
   useEffect(() => {
     const fetchCategories = async () => {
@@ -297,6 +299,26 @@ const AutoModal = ({
     setSelectedFiles(data.newImages);
     setImagesToDelete(data.imagesToDelete);
     setImageOrder(data.imageOrder);
+
+    // Actualizar el orden de las imágenes en formData
+    setFormData((prev) => {
+      const updatedImagenes = [...prev.imagenes];
+      data.imageOrder.forEach(({ id, order }) => {
+        const imageIndex = updatedImagenes.findIndex((img) => img.id === id);
+        if (imageIndex !== -1) {
+          updatedImagenes[imageIndex] = {
+            ...updatedImagenes[imageIndex],
+            order,
+          };
+        }
+      });
+      // Ordenar las imágenes según el nuevo orden
+      updatedImagenes.sort((a, b) => a.order - b.order);
+      return {
+        ...prev,
+        imagenes: updatedImagenes,
+      };
+    });
   };
 
   // Función para obtener la orientación EXIF de una imagen
