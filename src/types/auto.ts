@@ -11,18 +11,20 @@ export interface Auto {
   marcaId: string;
   modelo: string;
   año: number;
-  kilometraje: number;
-  transmision: string;
-  combustible: string;
-  puertas: number;
   precio: number;
-  descripcion: string;
+  currency: 'USD' | 'ARS';
+  active: boolean;
   imagenes: string[];
+  descripcion: string;
+  kilometraje: number;
+  combustible: string;
+  transmision: string;
+  puertas: number;
   categoria: string;
   categoriaId: string;
   destacado: boolean;
   favorito: boolean;
-  active: boolean;
+  position: number;
 }
 
 export interface FormData {

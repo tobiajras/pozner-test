@@ -47,6 +47,7 @@ interface AutoFormData {
   modelo: string;
   año: string;
   precio: number;
+  currency: 'USD' | 'ARS';
   descripcion: string;
   categoria: string;
   kilometraje: number;
@@ -80,6 +81,7 @@ interface Auto {
   modelo: string;
   año: number;
   precio: number;
+  currency: 'USD' | 'ARS';
   active: boolean;
   imagenes: string[];
   descripcion: string;
@@ -102,6 +104,7 @@ interface ApiCar {
   year: number;
   color: string;
   price: string;
+  currency: 'USD' | 'ARS';
   description: string;
   position: number;
   featured: boolean;
@@ -210,13 +213,13 @@ const SortableAutoCard = ({
           <div className='flex-grow'>
             <div className='flex justify-between items-start'>
               <div>
-                <h3 className='text-lg font-semibold text-color-primary'>
-                  {auto.modelo}
+                <h3 className='text-lg font-semibold text-gray-900'>
+                  {auto.marca} {auto.modelo}
                 </h3>
                 <p className='text-gray-600'>{auto.año}</p>
                 {auto.precio && auto.precio > 0 ? (
                   <p className='text-xl font-bold text-color-primary mt-1'>
-                    ${auto.precio.toLocaleString('es-AR')}
+                    ${auto.precio.toLocaleString('es-AR')} {auto.currency}
                   </p>
                 ) : (
                   ''
@@ -430,6 +433,7 @@ export default function DashboardPage() {
         modelo: car.model,
         año: car.year,
         precio: parseFloat(car.price),
+        currency: car.currency || 'USD',
         active: car.active,
         imagenes: car.Images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
@@ -533,6 +537,7 @@ export default function DashboardPage() {
         modelo: car.model,
         año: car.year,
         precio: parseFloat(car.price),
+        currency: car.currency || 'USD',
         active: car.active,
         imagenes: car.Images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
@@ -1007,6 +1012,7 @@ export default function DashboardPage() {
       formData.append('model', data.modelo);
       formData.append('year', data.año);
       formData.append('price', data.precio.toString());
+      formData.append('currency', data.currency);
 
       // Tratamiento especial para la descripción
       try {
@@ -1102,6 +1108,7 @@ export default function DashboardPage() {
       formData.append('model', data.modelo);
       formData.append('year', data.año);
       formData.append('price', data.precio.toString());
+      formData.append('currency', data.currency);
 
       // Tratamiento especial para la descripción
       try {
@@ -1190,6 +1197,7 @@ export default function DashboardPage() {
             modelo: autoCompleto.model,
             año: autoCompleto.year,
             precio: parseFloat(autoCompleto.price),
+            currency: autoCompleto.currency || 'USD',
             active: autoCompleto.active,
             imagenes: imagenesOrdenadas.map((img) => img.thumbnailUrl),
             descripcion: autoCompleto.description,
@@ -1471,6 +1479,7 @@ export default function DashboardPage() {
         modelo: car.model,
         año: car.year,
         precio: parseFloat(car.price),
+        currency: car.currency || 'USD',
         active: car.active,
         imagenes: car.Images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
@@ -1519,6 +1528,7 @@ export default function DashboardPage() {
         modelo: car.model,
         año: car.year,
         precio: parseFloat(car.price),
+        currency: car.currency || 'USD',
         active: car.active,
         imagenes: car.Images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
@@ -1742,13 +1752,14 @@ export default function DashboardPage() {
                       <div className='flex-grow'>
                         <div className='flex justify-between items-start'>
                           <div>
-                            <h3 className='text-lg font-semibold text-color-primary'>
-                              {auto.modelo}
+                            <h3 className='text-lg font-semibold text-gray-900'>
+                              {auto.marca} {auto.modelo}
                             </h3>
                             <p className='text-gray-600'>{auto.año}</p>
                             {auto.precio && auto.precio > 0 ? (
                               <p className='text-xl font-bold text-color-primary mt-1'>
-                                ${auto.precio.toLocaleString('es-AR')}
+                                ${auto.precio.toLocaleString('es-AR')}{' '}
+                                {auto.currency}
                               </p>
                             ) : (
                               ''

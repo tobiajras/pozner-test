@@ -24,6 +24,7 @@ interface AutoFormData {
   combustible: string;
   puertas: number;
   precio: number;
+  currency: 'USD' | 'ARS';
   descripcion: string;
   imagenes: Array<{
     id: string;
@@ -66,6 +67,7 @@ const AutoModal = ({
           año: initialData.año?.toString() || '',
           imagenes: [],
           color: '',
+          currency: initialData.currency || 'USD',
         }
       : {
           marca: '',
@@ -77,6 +79,7 @@ const AutoModal = ({
           combustible: '',
           puertas: 0,
           precio: 0,
+          currency: 'USD',
           descripcion: '',
           imagenes: [],
           categoria: '',
@@ -245,6 +248,7 @@ const AutoModal = ({
             combustible: data.fuel,
             puertas: data.doors,
             precio: parseFloat(data.price),
+            currency: data.currency || 'USD',
             descripcion: data.description,
             imagenes: sortedImages,
             categoria: data.Category.name,
@@ -279,6 +283,7 @@ const AutoModal = ({
         combustible: '',
         puertas: 0,
         precio: 0,
+        currency: 'USD',
         descripcion: '',
         imagenes: [],
         categoria: '',
@@ -434,6 +439,7 @@ const AutoModal = ({
         combustible: formData.combustible,
         puertas: formData.puertas,
         precio: precioValidado,
+        currency: formData.currency,
         descripcion: formData.descripcion,
         categoria: formData.categoria,
         color: formData.color,
@@ -890,33 +896,52 @@ const AutoModal = ({
                         <label className='block text-sm font-medium text-gray-700'>
                           Precio
                         </label>
-                        <input
-                          type='text'
-                          value={
-                            isNaN(formData.precio)
-                              ? ''
-                              : formData.precio.toLocaleString('es-AR')
-                          }
-                          onChange={(e) => {
-                            const value = e.target.value.replace(/\./g, '');
-                            if (value === '') {
+                        <div className='flex items-center space-x-1.5'>
+                          <button
+                            type='button'
+                            onClick={() =>
                               setFormData((prev) => ({
                                 ...prev,
-                                precio: 0,
-                              }));
-                            } else {
-                              const numValue = Number(value);
-                              if (!isNaN(numValue)) {
+                                currency:
+                                  prev.currency === 'USD' ? 'ARS' : 'USD',
+                              }))
+                            }
+                            className={`w-20 py-2.5 text-sm font-medium rounded-lg border ${
+                              formData.currency === 'USD'
+                                ? 'bg-green-600/20 text-green-600 border-green-600/60'
+                                : 'bg-sky-500/20 text-sky-500 border-sky-500/60'
+                            }`}
+                          >
+                            {formData.currency}
+                          </button>
+                          <input
+                            type='text'
+                            value={
+                              isNaN(formData.precio)
+                                ? ''
+                                : formData.precio.toLocaleString('es-AR')
+                            }
+                            onChange={(e) => {
+                              const value = e.target.value.replace(/\./g, '');
+                              if (value === '') {
                                 setFormData((prev) => ({
                                   ...prev,
-                                  precio: Math.max(0, numValue),
+                                  precio: 0,
                                 }));
+                              } else {
+                                const numValue = Number(value);
+                                if (!isNaN(numValue)) {
+                                  setFormData((prev) => ({
+                                    ...prev,
+                                    precio: Math.max(0, numValue),
+                                  }));
+                                }
                               }
-                            }
-                          }}
-                          className={inputStyles}
-                          placeholder='0'
-                        />
+                            }}
+                            className={inputStyles}
+                            placeholder='0'
+                          />
+                        </div>
                       </div>
                     </div>
 

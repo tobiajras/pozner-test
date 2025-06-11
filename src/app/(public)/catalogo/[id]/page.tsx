@@ -23,6 +23,7 @@ interface ApiCar {
   year: number;
   color: string;
   price: string;
+  currency: 'USD' | 'ARS';
   description: string;
   categoryId: string;
   mileage: number;
@@ -336,7 +337,8 @@ export default function AutoDetailPage() {
               </div>
               {car.price && parseFloat(car.price) > 0 ? (
                 <p className='text-2xl font-semibold text-color-primary mb-4'>
-                  ${parseFloat(car.price).toLocaleString('es-AR')}
+                  ${parseFloat(car.price).toLocaleString('es-AR')}{' '}
+                  {car.currency}
                 </p>
               ) : (
                 ''

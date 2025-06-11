@@ -32,6 +32,7 @@ interface Auto {
   year: number;
   color: string;
   price: string;
+  currency: 'USD' | 'ARS';
   description: string;
   position: number;
   featured: boolean;
@@ -208,6 +209,14 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                     >
                       {auto.model}
                     </h3>
+
+                    {/* Precio */}
+                    {auto.price && parseFloat(auto.price) > 0 && (
+                      <p className='text-xl font-semibold text-color-primary-light mb-2 lg:mb-3'>
+                        ${parseFloat(auto.price).toLocaleString('es-AR')}{' '}
+                        {auto.currency}
+                      </p>
+                    )}
 
                     <div className='flex flex-wrap items-center text-sm text-white/80'>
                       <span className='font-medium'>{auto.brand}</span>

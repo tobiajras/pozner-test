@@ -27,6 +27,7 @@ interface ApiCar {
   year: number;
   color: string;
   price: string;
+  currency: 'USD' | 'ARS';
   description: string;
   categoryId: string;
   mileage: number;
@@ -595,6 +596,14 @@ const CatalogoPage = () => {
                             >
                               {car.model}
                             </h3>
+
+                            {/* Precio */}
+                            {car.price && parseFloat(car.price) > 0 && (
+                              <p className='text-xl font-semibold text-color-primary-light mb-2 lg:mb-3'>
+                                ${parseFloat(car.price).toLocaleString('es-AR')}{' '}
+                                {car.currency}
+                              </p>
+                            )}
 
                             <div className='flex flex-wrap items-center text-sm text-white/80'>
                               <span className='font-medium'>{car.brand}</span>
