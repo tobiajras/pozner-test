@@ -68,6 +68,7 @@ const AutoModal = ({
           imagenes: [],
           color: '',
           currency: initialData.currency || 'USD',
+          puertas: initialData.puertas || 0,
         }
       : {
           marca: '',
@@ -428,6 +429,9 @@ const AutoModal = ({
         precioValidado = 0;
       }
 
+      // Asegurar que puertas sea un número válido
+      const puertasValidado = formData.puertas === null ? 0 : formData.puertas;
+
       // Preparar los datos para enviar al componente padre
       const dataToSubmit = {
         marca: formData.marca,
@@ -437,7 +441,7 @@ const AutoModal = ({
         kilometraje: formData.kilometraje,
         transmision: formData.transmision,
         combustible: formData.combustible,
-        puertas: formData.puertas,
+        puertas: puertasValidado,
         precio: precioValidado,
         currency: formData.currency,
         descripcion: formData.descripcion,
@@ -789,16 +793,24 @@ const AutoModal = ({
                             <input
                               type='text'
                               value={
-                                formData.puertas
-                                  ? formData.puertas.toString()
-                                  : ''
+                                formData.puertas === null ? 0 : formData.puertas
                               }
                               onChange={(e) => {
-                                const value = parseInt(e.target.value);
-                                setFormData((prev) => ({
-                                  ...prev,
-                                  puertas: isNaN(value) ? 0 : value,
-                                }));
+                                const value =
+                                  e.target.value === ''
+                                    ? 0
+                                    : parseInt(e.target.value);
+                                // Solo permitir valores válidos (2,3,4,5) o 0
+                                if (
+                                  isNaN(value) ||
+                                  value === 0 ||
+                                  [2, 3, 4, 5].includes(value)
+                                ) {
+                                  setFormData((prev) => ({
+                                    ...prev,
+                                    puertas: value,
+                                  }));
+                                }
                               }}
                               onFocus={() => setShowPuertasDropdown(true)}
                               className={inputStyles}

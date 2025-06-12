@@ -21,6 +21,7 @@ interface AutoVendido {
   sellDate: string;
   createdAt: string;
   updatedAt: string;
+  currency: string;
 }
 
 interface ApiResponse {
@@ -288,9 +289,14 @@ export default function HistorialPage() {
                           <p className='text-sm text-gray-500'>
                             Precio de venta
                           </p>
-                          <p className='text-2xl font-bold text-color-primary mt-1'>
-                            ${parseFloat(auto.price).toLocaleString('es-AR')}
-                          </p>
+                          {auto.price && parseFloat(auto.price) > 0 ? (
+                            <p className='text-xl font-bold text-color-primary mt-1'>
+                              ${parseFloat(auto.price).toLocaleString('es-AR')}{' '}
+                              {auto.currency}
+                            </p>
+                          ) : (
+                            ''
+                          )}
                         </div>
                       ) : (
                         ''

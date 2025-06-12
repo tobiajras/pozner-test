@@ -457,11 +457,16 @@ export function ImageUpload({
     if (!over) return;
 
     if (active.id !== over.id) {
-      setExistingImages((items) => {
-        const oldIndex = items.findIndex((item) => item.id === active.id);
-        const newIndex = items.findIndex((item) => item.id === over.id);
+      const oldIndex = existingImages.findIndex(
+        (item) => item.id === active.id
+      );
+      const newIndex = existingImages.findIndex((item) => item.id === over.id);
 
-        const newArray = arrayMove(items, oldIndex, newIndex);
+      const newArray = arrayMove(existingImages, oldIndex, newIndex);
+
+      // Actualizar el estado después del renderizado
+      setTimeout(() => {
+        setExistingImages(newArray);
 
         // Notificar cambios si hay un handler
         if (onImagesUpdate) {
@@ -476,9 +481,7 @@ export function ImageUpload({
             imageOrder: newOrder,
           });
         }
-
-        return newArray;
-      });
+      }, 0);
     }
   };
 
@@ -500,25 +503,27 @@ export function ImageUpload({
       const newPreviews = arrayMove(previewImages, oldIndex, newIndex);
       const newFiles = arrayMove(selectedFiles, oldIndex, newIndex);
 
-      // Actualizar el estado
-      setNewImageIds(newIds);
-      setPreviewImages(newPreviews);
-      setSelectedFiles(newFiles);
+      // Actualizar el estado después del renderizado
+      setTimeout(() => {
+        setNewImageIds(newIds);
+        setPreviewImages(newPreviews);
+        setSelectedFiles(newFiles);
 
-      // Notificar el cambio en las imágenes seleccionadas
-      onImagesSelected(newFiles);
+        // Notificar el cambio en las imágenes seleccionadas
+        onImagesSelected(newFiles);
 
-      // Notificar cambios al componente padre si hay un handler
-      if (onImagesUpdate) {
-        onImagesUpdate({
-          newImages: newFiles,
-          imagesToDelete,
-          imageOrder: existingImages.map((img, idx) => ({
-            id: img.id,
-            order: idx,
-          })),
-        });
-      }
+        // Notificar cambios al componente padre si hay un handler
+        if (onImagesUpdate) {
+          onImagesUpdate({
+            newImages: newFiles,
+            imagesToDelete,
+            imageOrder: existingImages.map((img, idx) => ({
+              id: img.id,
+              order: idx,
+            })),
+          });
+        }
+      }, 0);
     }
   };
 
