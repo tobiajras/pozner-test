@@ -219,7 +219,7 @@ const SortableAutoCard = ({
                 <p className='text-gray-600'>{auto.año}</p>
                 {auto.precio && auto.precio > 0 ? (
                   <p className='text-xl font-bold text-color-primary mt-1'>
-                    ${auto.precio.toLocaleString('es-AR')} {auto.currency}
+                    {auto.currency} {auto.precio.toLocaleString('es-AR')}
                   </p>
                 ) : (
                   ''

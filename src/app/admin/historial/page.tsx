@@ -291,8 +291,8 @@ export default function HistorialPage() {
                           </p>
                           {auto.price && parseFloat(auto.price) > 0 ? (
                             <p className='text-xl font-bold text-color-primary mt-1'>
-                              ${parseFloat(auto.price).toLocaleString('es-AR')}{' '}
-                              {auto.currency}
+                              {auto.currency}{' '}
+                              {parseFloat(auto.price).toLocaleString('es-AR')}
                             </p>
                           ) : (
                             ''

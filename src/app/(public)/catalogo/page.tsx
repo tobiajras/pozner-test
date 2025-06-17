@@ -600,8 +600,8 @@ const CatalogoPage = () => {
                             {/* Precio */}
                             {car.price && parseFloat(car.price) > 0 && (
                               <p className='text-xl font-semibold text-color-primary-light mb-2 lg:mb-3'>
-                                ${parseFloat(car.price).toLocaleString('es-AR')}{' '}
-                                {car.currency}
+                                {car.currency}{' '}
+                                {parseFloat(car.price).toLocaleString('es-AR')}
                               </p>
                             )}
 

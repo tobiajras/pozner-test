@@ -213,8 +213,8 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                     {/* Precio */}
                     {auto.price && parseFloat(auto.price) > 0 && (
                       <p className='text-xl font-semibold text-color-primary-light mb-2 lg:mb-3'>
-                        ${parseFloat(auto.price).toLocaleString('es-AR')}{' '}
-                        {auto.currency}
+                        {auto.currency}{' '}
+                        {parseFloat(auto.price).toLocaleString('es-AR')}
                       </p>
                     )}
 
