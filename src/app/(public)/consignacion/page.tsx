@@ -11,7 +11,7 @@ const ConsignacionPage = () => {
     {
       titulo: 'Gestión de Documentación',
       descripcion:
-        'Nos encargamos de todos los trámites y papeles necesarios para la venta de tu vehículo.',
+        'Nos encargamos de toda la documentación y trámites necesarios para la venta de tu vehículo.',
       icono: (
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -32,7 +32,7 @@ const ConsignacionPage = () => {
     {
       titulo: 'Exposición Garantizada',
       descripcion:
-        'Tu vehículo estará expuesto en nuestras sedes y plataformas digitales para máxima visibilidad.',
+        'Tu vehículo estará expuesto en nuestras redes y plataformas digitales para máxima visibilidad.',
       icono: (
         <svg
           xmlns='http://www.w3.org/2000/svg'

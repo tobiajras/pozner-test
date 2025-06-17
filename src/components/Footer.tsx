@@ -79,7 +79,6 @@ const Footer = () => {
               </article>
               <article className='flex md:justify-center'>
                 <div>
-                  <h4 className='text-color-title-light'>Menú</h4>
                   <ul className='flex flex-col'>
                     {navigation.map((link) => (
                       <li key={link.id}>
@@ -126,19 +125,6 @@ const Footer = () => {
                       ))}
                   </div>
                 </div>
-                {company.instagram && (
-                  <div>
-                    <h4 className='text-color-title-light'>Instagram</h4>
-                    <a
-                      href={`https://www.instagram.com/${company.instagram}/`}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='text-color-text-light hover:text-color-title-light transition-colors'
-                    >
-                      @{company.instagram}
-                    </a>
-                  </div>
-                )}
                 {company.email && (
                   <div>
                     <h4 className='text-color-title-light'>Email</h4>
@@ -160,7 +146,7 @@ const Footer = () => {
                 : 'border-color-primary'
             } flex justify-center w-full pb-16 pt-8 border-t`}
           >
-            <article className='flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-5 w-full max-w-6xl mx-6 sm:mx-8 md:mx-10'>
+            <article className='text-sm md:text-base flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-5 w-full max-w-6xl mx-6 sm:mx-8 md:mx-10'>
               <div className='flex items-center gap-1 sm:gap-2 text-color-text-light'>
                 <span>© Copyright {new Date().getFullYear()}</span>
                 <span>-</span>
@@ -173,7 +159,7 @@ const Footer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <GravityLogo className='w-28 md:w-32 text-white hover:text-[#D1FA2D] transition-colors' />
+                  <GravityLogo className='w-24 md:w-28 text-white hover:text-[#D1FA2D] transition-colors' />
                 </a>
               </div>
             </article>

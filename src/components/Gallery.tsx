@@ -15,7 +15,7 @@ const Gallery = () => {
         <div className='flex items-center mb-2 md:mb-3 lg:mb-5'>
           <div className='h-10 w-1 bg-color-primary mr-4'></div>
           <h3 className='font-light text-2xl sm:text-3xl text-color-title tracking-wide'>
-            Galería
+            Sedes
           </h3>
         </div>
 

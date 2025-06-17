@@ -5,6 +5,7 @@ import Link from 'next/link';
 import LocationIcon from './icons/LocationIcon';
 import ClockIcon from './icons/ClockIcon';
 import ImageCarousel from './ImageCarousel';
+import WhatsappIcon from './icons/WhatsappIcon';
 
 interface SedeCardProps {
   sede: {
@@ -14,6 +15,7 @@ interface SedeCardProps {
     schedule: string[];
     appointment: string;
     images: string[];
+    whatsapp: string;
   };
 }
 
@@ -57,10 +59,25 @@ const SedeCard = ({ sede }: SedeCardProps) => {
                 ))}
               </p>
             </div>
-            <div className='flex justify-center mt-2'>
-              <span className='bg-color-primary hover:bg-color-primary-dark transition-colors text-white px-5 py-3 rounded-md'>
-                Ver en Google Maps
-              </span>
+            <div className='flex justify-center gap-3 md:gap-4 mt-2'>
+              <Link
+                href={`https://wa.me/${sede.whatsapp}`}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='bg-[#0DC151] hover:bg-[#01AA41] transition-colors text-white w-40 text-center py-3 rounded-md flex items-center justify-center gap-2'
+              >
+                <WhatsappIcon className='w-5 h-5 text-white' />
+                <span>WhatsApp</span>
+              </Link>
+              <Link
+                href={sede.appointment}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='bg-color-primary hover:bg-color-primary-dark transition-colors text-white w-40 text-center py-3 rounded-md flex items-center justify-center gap-2'
+              >
+                <LocationIcon className='w-5 h-5 text-white' />
+                <span>Google Maps</span>
+              </Link>
             </div>
           </div>
         </div>

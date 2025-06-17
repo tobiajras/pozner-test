@@ -10,7 +10,7 @@ export const company = {
   email: 'ventas@speed-motors.com.ar',
   instagram: 'speed.motors',
   facebook: 'https://www.facebook.com/speedmotorsconcesionaria/',
-  whatsapp: ['1123225179', '1170964444'],
+  whatsapp: ['1170964444'],
   googlemapsLink: null,
   googlemaps: null,
   openDays: null,
@@ -55,33 +55,39 @@ export const metadataCompany = {
 export const preguntas = [
   {
     id: 'preg-1',
-    question: '¿Consignan vehículos?',
+    question: '¿Aceptan autos usados como parte de pago?',
     answer:
-      'Sí, consignamos tu vehículo sin costo. Nos encargamos de todo el proceso para que no tengas que preocuparte por nada. Te ofrecemos asesoramiento profesional y la tranquilidad de que tu auto estará en buenas manos.',
+      'Sí, recibimos autos usados como parte de pago, siempre que estén en condiciones aptas para la venta o consignación.',
   },
   {
     id: 'preg-2',
-    question: '¿Cómo preparan los vehículos para la venta?',
+    question: '¿Que es la consignación y cómo funciona?',
     answer:
-      'Nos encargamos de preparar profesionalmente tu vehículo para la venta. Realizamos una revisión técnica completa, limpieza detallada, y presentamos tu auto de la mejor manera para maximizar su valor en el mercado.',
+      'La consignación es un servicio donde nos entregas tu auto para que nosotros nos encarguemos de venderlo. Cuando se venda, te entregamos el valor acordado.',
   },
   {
     id: 'preg-3',
-    question: '¿Cómo manejan las transferencias de vehículos?',
+    question: '¿Cuánto tiempo tarda la venta en consignación?',
     answer:
-      'Una vez vendido el vehículo, nos encargamos personalmente de que se transfiera de la manera correcta, en tiempo y forma. Gestionamos toda la documentación necesaria y trámites legales para que tanto vendedor como comprador tengan total tranquilidad.',
+      'El tiempo depende del modelo y la demanda, pero normalmente puede variar entre 15 y 60 días. Te mantendremos informado durante todo el proceso.',
   },
   {
     id: 'preg-4',
-    question: '¿Toman vehículos usados como parte de pago?',
+    question: '¿Cómo se realiza la transferencia del vehículo?',
     answer:
-      'Sí, tomamos tu usado como parte de pago por un vehículo de nuestra selección. Realizamos una tasación justa de tu auto actual y te ofrecemos las mejores condiciones para facilitar tu nueva compra.',
+      'Nos encargamos de todo el trámite de transferencia para que sea un proceso rápido y sin complicaciones de principio a fin.',
   },
   {
     id: 'preg-5',
-    question: '¿Qué garantía ofrecen con los vehículos?',
+    question: '¿Qué documentos necesito para consignar o vender mi auto?',
     answer:
-      'Todos nuestros vehículos cuentan con garantía mecánica que cubre los componentes principales del auto. Realizamos una inspección técnica exhaustiva antes de la entrega para asegurar el óptimo funcionamiento del vehículo.',
+      'Necesitarás presentar la documentación del vehículo (título de propiedad, cédula, comprobantes de pago de impuestos y patente al día).',
+  },
+  {
+    id: 'preg-6',
+    question: '¿Qué pasa si el auto no se vende en consignación?',
+    answer:
+      'Si el auto no se vende en el tiempo acordado, podemos devolverlo o renovar el plazo de consignación.',
   },
 ];
 

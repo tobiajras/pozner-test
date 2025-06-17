@@ -40,7 +40,7 @@ const PreguntasHome = () => {
             <div
               key={pregunta.id}
               onClick={() => toggleAnswer(pregunta.id)}
-              className={`group bg-gradient-to-b from-color-secondary to-color-secondary border border-neutral-600 rounded transition-all duration-500 
+              className={`group bg-gradient-to-b from-color-primary-dark to-color-secondary border to-70% border-neutral-600 rounded transition-all duration-500 
                 ${activeAnswer === pregunta.id ? '' : 'cursor-pointer'}`}
             >
               <div className='p-5 md:p-6'>
@@ -51,8 +51,8 @@ const PreguntasHome = () => {
                   <div
                     className={`group-hover:bg-color-primary h-8 w-8 rounded-full flex items-center justify-center transition-all duration-500 ${
                       activeAnswer === pregunta.id
-                        ? 'bg-color-primary'
-                        : 'bg-neutral-800'
+                        ? 'bg-color-primary-light'
+                        : 'bg-color-primary-dark'
                     }`}
                   >
                     <motion.div
