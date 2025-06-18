@@ -53,13 +53,7 @@ const WhyChooseUs = () => {
                 key={benefit.id}
                 className='bg-gradient-to-b from-color-primary-dark to-color-secondary rounded border border-neutral-600'
               >
-                <div className='flex flex-col w-80 h-96 p-5 md:p-7'>
-                  <div className='mb-6 w-12 h-12 flex items-center justify-center rounded-full bg-color-primary transition-colors'>
-                    <div className='text-color-title-light text-xl  transition-colors'>
-                      {benefit.id}
-                    </div>
-                  </div>
-
+                <div className='flex flex-col w-80 h-72 lg:h-80 p-5 md:p-7 lg:p-8'>
                   <h3 className='text-white text-xl mb-4 font-medium text-nowrap'>
                     {benefit.title}
                   </h3>

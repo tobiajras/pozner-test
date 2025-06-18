@@ -17,7 +17,7 @@ const ContactoPage = () => {
         <section className='w-full py-8 md:py-14 lg:py-16 flex justify-center items-center'>
           <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
             <div className='text-center'>
-              <h3 className='text-sm sm:text-base text-color-primary uppercase tracking-wider mb-1 md:mb-2'>
+              <h3 className='text-sm sm:text-base text-color-primary uppercase tracking-wider mb-1'>
                 Vení a visitarnos
               </h3>
               <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-color-title mb-2 md:mb-4'>
