@@ -20,8 +20,7 @@ const VentaPage = () => {
     verificacionTecnica: '',
     observaciones: '',
     // Datos de contacto
-    nombre: '',
-    apellido: '',
+    nombreCompleto: '',
     telefono: '',
     email: '',
     localidad: '',
@@ -59,7 +58,7 @@ const VentaPage = () => {
         ? `Observaciones: ${formData.observaciones}\n\n`
         : '\n') +
       `*Datos de contacto:*\n` +
-      `Nombre: ${formData.nombre} ${formData.apellido}\n` +
+      `Nombre: ${formData.nombreCompleto}\n` +
       `Teléfono: ${formData.telefono}\n` +
       `Email: ${formData.email}\n` +
       `Localidad: ${formData.localidad}`;
@@ -107,7 +106,7 @@ const VentaPage = () => {
 
             <form
               onSubmit={handleSubmit}
-              className='space-y-8 bg-white/50 p-3 rounded-xl [box-shadow:0_0_10px_rgba(0,0,0,0.08)] border border-color-primary-light/50'
+              className='space-y-5 bg-white/50 p-3 rounded-xl [box-shadow:0_0_10px_rgba(0,0,0,0.08)] border border-color-primary-light/50'
             >
               {/* Datos del vehículo */}
               <div className='p-6 space-y-6 '>
@@ -266,33 +265,20 @@ const VentaPage = () => {
               </div>
 
               {/* Datos de contacto */}
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 space-y-6'>
+              <div className='p-6 space-y-6'>
                 <h3 className='text-xl font-semibold text-color-title mb-4'>
                   Datos de contacto
                 </h3>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div>
                     <label className='block text-sm font-medium text-color-text mb-2'>
-                      Nombre *
+                      Nombre completo *
                     </label>
                     <input
                       type='text'
-                      name='nombre'
+                      name='nombreCompleto'
                       required
-                      value={formData.nombre}
-                      onChange={handleChange}
-                      className='w-full px-4 py-2 rounded-lg bg-white/50 border border-color-primary-light/30 text-color-text focus:outline-none focus:ring-2 focus:ring-color-primary-light'
-                    />
-                  </div>
-                  <div>
-                    <label className='block text-sm font-medium text-color-text mb-2'>
-                      Apellido *
-                    </label>
-                    <input
-                      type='text'
-                      name='apellido'
-                      required
-                      value={formData.apellido}
+                      value={formData.nombreCompleto}
                       onChange={handleChange}
                       className='w-full px-4 py-2 rounded-lg bg-white/50 border border-color-primary-light/30 text-color-text focus:outline-none focus:ring-2 focus:ring-color-primary-light'
                     />
@@ -323,7 +309,7 @@ const VentaPage = () => {
                       className='w-full px-4 py-2 rounded-lg bg-white/50 border border-color-primary-light/30 text-color-text focus:outline-none focus:ring-2 focus:ring-color-primary-light'
                     />
                   </div>
-                  <div className='md:col-span-2'>
+                  <div>
                     <label className='block text-sm font-medium text-color-text mb-2'>
                       Localidad *
                     </label>
