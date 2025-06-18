@@ -3,7 +3,6 @@
 import { company } from '@/app/constants/constants';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const VentaPage = () => {

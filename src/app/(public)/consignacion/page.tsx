@@ -4,7 +4,6 @@ import { company } from '@/app/constants/constants';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const ConsignacionPage = () => {
   const beneficios = [
