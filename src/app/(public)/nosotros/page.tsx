@@ -51,7 +51,7 @@ const NosotrosPage = () => {
 
             {/* Texto descriptivo */}
             <div className='max-w-[450px] xl:max-w-lg'>
-              <p className='text-center lg:text-left text-color-text mb-2 md:text-lg'>
+              <div className='text-center lg:text-left text-color-text mb-2 md:text-lg'>
                 <h2 className='text-color-primary-dark font-semibold inline-block'>
                   SPEED MOTORS
                 </h2>{' '}
@@ -61,14 +61,14 @@ const NosotrosPage = () => {
                 nuestro compromiso es brindar calidad, confianza y atención
                 personalizada a cada uno de nuestros clientes. confianza y
                 atención personalizada a cada uno de nuestros clientes.
-              </p>
+              </div>
               <p className='text-center lg:text-left text-color-text mb-2 md:text-lg'>
                 Contamos con un equipo altamente capacitado que entiende las
                 necesidades del cliente y trabaja para ofrecer con transparencia
                 y acompañamiento cada parte del proceso de compra con soluciones
                 integrales en financiamiento, gestoría y seguros.
               </p>
-              <p className='text-center lg:text-left text-color-text md:text-lg'>
+              <div className='text-center lg:text-left text-color-text md:text-lg'>
                 En{' '}
                 <h2 className='text-color-primary-dark font-semibold inline-block'>
                   SPEED MOTORS
@@ -76,7 +76,7 @@ const NosotrosPage = () => {
                 mas que vender autos, construimos relaciones duraderas. Te
                 invitamos a conocernos y descubrir por que miles de clientes han
                 confiado en nosotros durante mas de 2 décadas.
-              </p>
+              </div>
             </div>
           </motion.div>
 
