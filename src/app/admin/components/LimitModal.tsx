@@ -66,10 +66,10 @@ export function LimitModal({ isOpen, onClose, type }: LimitModalProps) {
                         : 'Límite de destacados alcanzado'}
                     </Dialog.Title>
                     <p className='mt-2 text-sm text-gray-500'>
-                      Ya tienes 10/10 vehículos{' '}
+                      Ya tenés 10/10 vehículos{' '}
                       {type === 'destacado' ? 'en ingresos' : 'destacados'}.
-                      Para agregar uno nuevo, primero debes quitar otro de la
-                      lista.
+                      Para agregar uno nuevo, primero tenés que quitar otro de
+                      la lista.
                     </p>
                   </div>
                 </div>
