@@ -144,9 +144,9 @@ const Footer = () => {
               company.dark
                 ? 'border-color-primary-light'
                 : 'border-color-primary'
-            } flex justify-center w-full pb-16 pt-8 border-t`}
+            } flex justify-center w-full pt-4 pb-6 md:pt-6 md:pb-8 border-t`}
           >
-            <article className='text-sm md:text-base flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-5 w-full max-w-6xl mx-6 sm:mx-8 md:mx-10'>
+            <article className='text-sm flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-5 w-full max-w-6xl mx-6 sm:mx-8 md:mx-10'>
               <div className='flex items-center gap-1 sm:gap-2 text-color-text-light'>
                 <span>© Copyright {new Date().getFullYear()}</span>
                 <span>-</span>
@@ -159,7 +159,7 @@ const Footer = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <GravityLogo className='w-24 md:w-28 text-white hover:text-[#D1FA2D] transition-colors' />
+                  <GravityLogo className='w-20 md:w-[85px] text-white hover:text-[#D1FA2D] transition-colors' />
                 </a>
               </div>
             </article>

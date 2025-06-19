@@ -29,10 +29,10 @@ const HeroHome = () => {
               </div>
               <div className='flex flex-col items-center md:gap-2 text-nowrap'>
                 <h2 className='text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-color-title-light'>
-                  COMPRA/VENTA
+                  CONCESIONARIA
                 </h2>
                 <h2 className='text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-color-title-light'>
-                  DE VEHÍCULOS
+                  PREMIUM
                 </h2>
               </div>
               <div className='flex items-center justify-center w-full max-w-xl md:max-w-4xl mx-auto pt-2 pb-3 lg:pt-3 lg:pb-4'>
@@ -40,9 +40,8 @@ const HeroHome = () => {
               </div>
             </div>
             <div className='md:my-1'></div>
-            <p className='sm:text-lg lg:text-xl text-center text-color-text-light mx-4 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl'>
-              Te acompañamos en cada paso para que hagas una operación rápida,
-              simple y segura. ¡Esperamos tu consulta!
+            <p className='text-xl sm:text-2xl lg:text-3xl text-center text-color-text-light mx-4 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl'>
+              !Tu próximo vehículo te espera!
             </p>
             {company.adress ||
               (company.city && (
