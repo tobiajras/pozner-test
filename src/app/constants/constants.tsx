@@ -14,8 +14,7 @@ export const company = {
   googlemapsLink: null,
   googlemaps: null,
   openDays: null,
-  footer:
-    'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
+  footer: 'Concesionaria Premium: !Tu próximo vehículo te espera!',
 };
 
 export const API_BASE_URL = 'https://speedmotors.agenciagrvity.com';
@@ -47,9 +46,9 @@ export const sedes = [
 
 export const metadataCompany = {
   metadataBase: 'https://www.speedmotors.com.ar/',
-  title: 'Speed Motors - Compra y Venta de Autos',
-  description:
-    'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
+  title:
+    'Speed Motors - Concesionaria Premium: !Tu próximo vehículo te espera!',
+  description: 'Concesionaria Premium: Compra y Venta de Autos Seleccionados',
 };
 
 export const preguntas = [
