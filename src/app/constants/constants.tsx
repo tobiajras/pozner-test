@@ -8,7 +8,7 @@ export const company = {
   adress: null,
   city: null,
   email: 'ventas@speed-motors.com.ar',
-  instagram: 'speed.motors',
+  instagram: 'speedmotorsok',
   facebook: 'https://www.facebook.com/speedmotorsconcesionaria/',
   whatsapp: ['1170964444'],
   googlemapsLink: null,
