@@ -27,7 +27,7 @@ const Gallery = () => {
               Sede Puerto Madero
             </h4>
             <h4 className='text-lg lg:text-xl md:text-base text-color-primary'>
-              Aimé Painé 1280, CABA
+              Aimé Painé 1320, CABA
             </h4>
           </div>
         </div>

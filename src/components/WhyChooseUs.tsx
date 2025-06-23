@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
       id: 3,
       title: 'Extensa Experiencia',
       description:
-        'Más de 20 años de experiencia en el mercado automotriz, brindando asesoramiento experto y servicio profesional a nuestros clientes.',
+        'Contamos con 22 años de experiencia en el mercado automotriz, brindando asesoramiento experto y servicio profesional a nuestros clientes.',
       icon: '/assets/icons/finance.svg',
     },
   ];
@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
                 key={benefit.id}
                 className='bg-gradient-to-b from-color-primary-dark to-color-secondary rounded border border-neutral-600'
               >
-                <div className='flex flex-col w-80 h-72 lg:h-80 p-5 md:p-7 lg:p-8'>
+                <div className='flex flex-col max-w-80  p-5 md:p-7 lg:px-8'>
                   <h3 className='text-white text-xl mb-4 font-medium text-nowrap'>
                     {benefit.title}
                   </h3>

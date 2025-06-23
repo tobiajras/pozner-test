@@ -25,7 +25,7 @@ const Footer = () => {
         style={{ boxShadow: '0 -4px 6px rgba(0, 0, 0, 0.1)' }}
       >
         <div className='flex flex-col items-center w-full relative z-10'>
-          <section className='flex md:justify-center text-color-text-light w-full '>
+          <section className='flex md:justify-center text-color-text-light w-full pb-3 md:pb-5'>
             <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-6 sm:mx-8 md:mx-10 py-10'>
               <article className='flex w-full flex-col'>
                 {company.favicon ? (
@@ -139,7 +139,7 @@ const Footer = () => {
               </article>
             </div>
           </section>
-          <section
+          {/* <section
             className={`${
               company.dark
                 ? 'border-color-primary-light'
@@ -163,7 +163,7 @@ const Footer = () => {
                 </a>
               </div>
             </article>
-          </section>
+          </section> */}
         </div>
       </footer>
     </div>

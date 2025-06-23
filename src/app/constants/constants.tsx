@@ -10,7 +10,7 @@ export const company = {
   email: 'ventas@speed-motors.com.ar',
   instagram: 'speedmotorsok',
   facebook: 'https://www.facebook.com/speedmotorsconcesionaria/',
-  whatsapp: ['1170964444'],
+  whatsapp: ['1123225179'],
   googlemapsLink: null,
   googlemaps: null,
   openDays: null,
@@ -23,7 +23,7 @@ export const sedes = [
   {
     id: 1,
     title: 'Speed Motors Puerto Madero',
-    adress: 'Aimé Painé 1280',
+    adress: 'Aimé Painé 1320',
     city: 'Puerto Madero',
     tel: '1170964444',
     whatsapp: '1170964444',

@@ -13,7 +13,7 @@ const ActionButtons = () => {
     {
       id: 2,
       title: 'Vendé',
-      subtitle: 'tu usado',
+      subtitle: 'tu vehículo',
       image: '/assets/images/inicio-venta.webp',
       href: '/venta',
     },

@@ -41,7 +41,7 @@ const HeroHome = () => {
             </div>
             <div className='md:my-1'></div>
             <p className='text-xl sm:text-2xl lg:text-3xl text-center text-color-text-light mx-4 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl'>
-              !Tu próximo vehículo te espera!
+              Tu próximo vehículo te espera
             </p>
             {company.adress ||
               (company.city && (

@@ -55,12 +55,11 @@ const NosotrosPage = () => {
                 <h2 className='text-color-primary-dark font-semibold inline-block'>
                   SPEED MOTORS
                 </h2>{' '}
-                es una empresa con 23 años de experiencia en el mercado,
+                es una empresa con 22 años de experiencia en el mercado,
                 dedicada a la comercialización de las principales marcas de
                 vehículos y motos de media y alta gama. Desde nuestros inicios
                 nuestro compromiso es brindar calidad, confianza y atención
-                personalizada a cada uno de nuestros clientes. confianza y
-                atención personalizada a cada uno de nuestros clientes.
+                personalizada a cada uno de nuestros clientes.
               </div>
               <p className='text-center lg:text-left text-color-text mb-2 md:text-lg'>
                 Contamos con un equipo altamente capacitado que entiende las
