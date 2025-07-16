@@ -8,7 +8,6 @@ import Image from 'next/image';
 
 import HamburguerIcon from './icons/HamburguerIcon';
 import CloseIcon from './icons/CloseIcon';
-import SpeedmotorsLogo from '@/components/icons/SpeedmotorsLogo';
 
 const Header = () => {
   const { isMenuOpen, setIsMenuOpen } = useNavbarStore();
@@ -16,7 +15,7 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 left-0 z-50 flex justify-center h-24 ${
+      className={`sticky top-0 left-0 z-30 flex justify-center h-24 ${
         company.darkmode
           ? 'bg-color-bg-secondary-dark'
           : company.dark
@@ -60,14 +59,21 @@ const Header = () => {
                 </div>
               </>
             ) : (
-              <div className='h-14 md:h-16 w-72 sm:w-80 md:w-96 lg:w-[400px]'>
-                <SpeedmotorsLogo className='h-full w-full object-contain object-left text-color-title-light hover:text-color-secondary-light transition-colors' />
+              <div className='h-8 md:h-10 w-56 sm:w-64 md:w-80'>
+                <Image
+                  priority
+                  className='h-full w-full object-contain object-left'
+                  src='/assets/company/logo.webp'
+                  alt={`${company.name} logo`}
+                  width={116}
+                  height={56}
+                />
               </div>
             )}
           </Link>
         </article>
         <nav className='hidden md:block'>
-          <ul className='flex items-center gap-8 lg:gap-10'>
+          <ul className='flex items-center gap-8'>
             {navigation.map((nav) => {
               const isActive = pathname === nav.url;
               return (
@@ -77,9 +83,9 @@ const Header = () => {
                       nav.button
                         ? `${
                             company.dark
-                              ? 'text-color-title-light hover:bg-color-primary'
-                              : 'text-color-title-light hover:bg-color-primary'
-                          }  bg-color-primary-light p-3 rounded-md`
+                              ? 'text-color-title-light hover:bg-color-primary-dark'
+                              : 'text-color-title-light hover:bg-color-primary-dark'
+                          }  bg-color-primary p-3 rounded-md`
                         : company.darkmode
                         ? `text-color-text-light hover:text-color-title-light ${
                             !nav.button && isActive && 'text-color-title-light'

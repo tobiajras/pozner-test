@@ -24,15 +24,13 @@ const PreguntasHome = () => {
 
       <div className='max-w-4xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 relative z-10'>
         <div className='text-center mb-12'>
-          <h3 className='text-sm text-neutral-500 uppercase tracking-[0.3em] mb-3'>
+          <h3 className='text-xs text-neutral-500 uppercase tracking-[0.3em] mb-3'>
             Información
           </h3>
-          <h2 className='text-3xl md:text-4xl lg:text-5xl text-color-title mb-5'>
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-light text-color-title mb-5'>
             Preguntas Frecuentes
           </h2>
-          <div className='flex items-center justify-center w-full max-w-xs md:max-w-sm mx-auto px-4 lg:px-10'>
-            <div className='h-0.5 flex-grow bg-gradient-to-r from-transparent via-color-primary to-color-trasparent'></div>
-          </div>
+          <div className='w-16 md:w-24 h-0.5 bg-color-primary mx-auto'></div>
         </div>
 
         <div className='grid gap-6'>
@@ -40,8 +38,12 @@ const PreguntasHome = () => {
             <div
               key={pregunta.id}
               onClick={() => toggleAnswer(pregunta.id)}
-              className={`group bg-gradient-to-b from-color-primary-dark to-color-secondary border to-70% border-neutral-600 rounded transition-all duration-500 
-                ${activeAnswer === pregunta.id ? '' : 'cursor-pointer'}`}
+              className={`group bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded transition-all duration-500 
+                ${
+                  activeAnswer === pregunta.id
+                    ? 'shadow-[0_8px_30px_-15px_rgba(233,0,2,0.5)]'
+                    : 'shadow-[0_5px_15px_-10px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_30px_-15px_rgba(233,0,2,0.2)] cursor-pointer'
+                }`}
             >
               <div className='p-5 md:p-6'>
                 <div className='flex justify-between items-center'>
@@ -51,8 +53,8 @@ const PreguntasHome = () => {
                   <div
                     className={`group-hover:bg-color-primary h-8 w-8 rounded-full flex items-center justify-center transition-all duration-500 ${
                       activeAnswer === pregunta.id
-                        ? 'bg-color-primary-light'
-                        : 'bg-color-primary-dark'
+                        ? 'bg-color-primary'
+                        : 'bg-neutral-800'
                     }`}
                   >
                     <motion.div

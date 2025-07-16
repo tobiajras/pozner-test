@@ -349,7 +349,8 @@ const CatalogoPage = () => {
                           value={categoria.name}
                           className='hover:text-color-primary hover:bg-black'
                         >
-                          {categoria.name}
+                          {categoria.name.charAt(0).toUpperCase() +
+                            categoria.name.slice(1)}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -462,7 +463,8 @@ const CatalogoPage = () => {
                                   : 'hover:text-color-primary'
                               } hover:bg-black`}
                             >
-                              {categoria.name}
+                              {categoria.name.charAt(0).toUpperCase() +
+                                categoria.name.slice(1)}
                             </SelectItem>
                           ))}
                         </SelectContent>
@@ -554,7 +556,7 @@ const CatalogoPage = () => {
                         href={`/catalogo/${car.id}`}
                         className='group w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%]'
                       >
-                        <div className='relative bg-color-secondary overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
+                        <div className='relative bg-color-bg-secondary-dark overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
                           {!car.active && (
                             <div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-20'>
                               <span className='bg-red-500 text-white text-sm font-medium px-3 py-1.5 rounded'>
@@ -564,7 +566,7 @@ const CatalogoPage = () => {
                           )}
 
                           <div className='relative overflow-hidden aspect-[4/3]'>
-                            <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-color-secondary to-transparent z-10'></div>
+                            <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-color-bg-secondary-dark to-transparent z-10'></div>
                             <motion.div
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
@@ -598,11 +600,15 @@ const CatalogoPage = () => {
                             </h3>
 
                             {/* Precio */}
-                            {car.price && parseFloat(car.price) > 0 && (
+                            {car.price && parseFloat(car.price) > 0 ? (
                               <p className='text-xl font-semibold text-color-primary-light mb-2 lg:mb-3'>
-                                {car.currency}{' '}
-                                {parseFloat(car.price).toLocaleString('es-AR')}
+                                {car.currency === 'ARS' ? '$' : 'US$'}
+                                {parseFloat(car.price).toLocaleString(
+                                  car.currency === 'ARS' ? 'es-AR' : 'en-US'
+                                )}
                               </p>
+                            ) : (
+                              ''
                             )}
 
                             <div className='flex flex-wrap items-center text-sm text-white/80'>
@@ -617,6 +623,19 @@ const CatalogoPage = () => {
                                 |
                               </span>
                               <span>{car.year}</span>
+                              <span
+                                className={`${
+                                  company.dark
+                                    ? 'text-color-primary-light'
+                                    : 'text-color-primary'
+                                } mx-2`}
+                              >
+                                |
+                              </span>
+                              <span>
+                                {car.Category.name.charAt(0).toUpperCase() +
+                                  car.Category.name.slice(1)}
+                              </span>
                             </div>
 
                             <div className='w-full h-[1px] bg-neutral-800 group-hover:bg-neutral-700 my-5 transition-colors duration-300'></div>

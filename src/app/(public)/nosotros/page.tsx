@@ -2,11 +2,11 @@
 
 import Image from 'next/image';
 
-import { sedes } from '@/app/constants/constants';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { company } from '@/app/constants/constants';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SedeCard from '@/components/SedeCard';
 
 const NosotrosPage = () => {
   return (
@@ -19,11 +19,13 @@ const NosotrosPage = () => {
               <h3 className='text-sm sm:text-base text-color-primary uppercase tracking-wider mb-1'>
                 Sobre Nosotros
               </h3>
-              <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-color-title mb-2 md:mb-4'>
+              <h2 className='text-3xl sm:text-4xl lg:text-5xl font-medium text-color-title mb-2 md:mb-4'>
                 NOSOTROS
               </h2>
-              <div className='flex items-center justify-center w-full max-w-sm md:max-w-md mx-auto px-4'>
-                <div className='h-0.5 flex-grow bg-gradient-to-r from-transparent via-color-primary to-color-trasparent'></div>
+              <div className='flex items-center justify-center gap-2 w-full max-w-sm md:max-w-md mx-auto px-4'>
+                <div className='h-0.5 flex-grow bg-gradient-to-r from-transparent to-color-primary'></div>
+                <div className='w-2.5 h-2.5 bg-color-primary rotate-45'></div>
+                <div className='h-0.5 flex-grow bg-gradient-to-l from-transparent to-color-primary'></div>
               </div>
             </div>
           </div>
@@ -35,10 +37,10 @@ const NosotrosPage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            className='flex flex-col lg:flex-row items-center lg:items-start gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'
+            className='flex flex-col lg:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'
           >
             {/* Imagen principal */}
-            <div className='w-full max-w-[330px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] aspect-[4/3] relative overflow-hidden rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)]'>
+            <div className='w-full max-w-[330px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] relative overflow-hidden rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'>
               <Image
                 priority
                 className='w-full h-auto object-cover'
@@ -51,41 +53,52 @@ const NosotrosPage = () => {
 
             {/* Texto descriptivo */}
             <div className='max-w-[450px] xl:max-w-lg'>
-              <div className='text-center lg:text-left text-color-text mb-2 md:text-lg'>
-                <h2 className='text-color-primary-dark font-semibold inline-block'>
-                  SPEED MOTORS
-                </h2>{' '}
-                es una empresa con 22 años de experiencia en el mercado,
-                dedicada a la comercialización de las principales marcas de
-                vehículos y motos de media y alta gama. Desde nuestros inicios
-                nuestro compromiso es brindar calidad, confianza y atención
-                personalizada a cada uno de nuestros clientes.
-              </div>
+              <h3 className='text-center lg:text-left text-2xl sm:text-3xl font-semibold text-color-title mb-3'>
+                Nuestra <span className='text-color-primary'>pasión</span> por
+                los automóviles
+              </h3>
               <p className='text-center lg:text-left text-color-text mb-2 md:text-lg'>
-                Contamos con un equipo altamente capacitado que entiende las
-                necesidades del cliente y trabaja para ofrecer con transparencia
-                y acompañamiento cada parte del proceso de compra con soluciones
-                integrales en financiamiento, gestoría y seguros.
+                En {company.name} nos mueve una profunda pasión por los
+                automóviles y el compromiso de ofrecer una experiencia de compra
+                excepcional. Nos distinguimos por nuestra atención
+                personalizada, donde cada cliente es único y cada vehículo es
+                seleccionado con los más altos estándares de calidad y
+                desempeño.
               </p>
-              <div className='text-center lg:text-left text-color-text md:text-lg'>
-                En{' '}
-                <h2 className='text-color-primary-dark font-semibold inline-block'>
-                  SPEED MOTORS
-                </h2>{' '}
-                mas que vender autos, construimos relaciones duraderas. Te
-                invitamos a conocernos y descubrir por que miles de clientes han
-                confiado en nosotros durante mas de 2 décadas.
-              </div>
+              <p className='text-center lg:text-left text-color-text md:text-lg'>
+                Nuestro equipo está formado por verdaderos entusiastas del mundo
+                automotor que entienden tus necesidades específicas, brindándote
+                asesoramiento honesto y transparente en cada paso del proceso.
+              </p>
             </div>
           </motion.div>
 
-          <section className='w-full max-w-6xl mb-16'>
-            <div className='flex flex-wrap justify-center gap-x-6 gap-y-6 md:gap-x-10 md:gap-y-16 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-              {sedes.map((sede) => (
-                <SedeCard key={sede.id} sede={sede} />
-              ))}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+            viewport={{
+              once: true,
+              margin: '0px 0px -100px 0px',
+            }}
+            className='bg-gradient-to-b from-neutral-900 to-black rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-6 md:p-8 border border-neutral-800 mx-4 sm:mx-6 md:mx-8 lg:mx-10 text-center'
+          >
+            <h3 className='text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4'>
+              ¿Estás listo para encontrar tu próximo vehículo?
+            </h3>
+            <p className='text-white/70 max-w-2xl mx-auto mb-3 md:mb-5'>
+              Nuestro equipo está listo para asesorarte y ayudarte a encontrar
+              el auto perfecto para tus necesidades. Visita nuestro catálogo o
+              contáctanos directamente.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <Link
+                href='/contacto'
+                className='bg-color-primary hover:bg-color-primary-dark text-white py-3 px-8 rounded-md font-medium transition-all duration-300'
+              >
+                Contactar
+              </Link>
             </div>
-          </section>
+          </motion.div>
         </div>
       </section>
       <Footer />

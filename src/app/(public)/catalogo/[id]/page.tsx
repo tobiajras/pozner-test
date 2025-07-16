@@ -209,7 +209,8 @@ export default function AutoDetailPage() {
                 href={`/catalogo?categoria=${car.Category.name.toLowerCase()}`}
               >
                 <p className='text-color-text hover:text-color-primary transition-colors'>
-                  {car.Category.name}
+                  {car.Category.name.charAt(0).toUpperCase() +
+                    car.Category.name.slice(1)}
                 </p>
               </Link>
             </div>
@@ -329,15 +330,21 @@ export default function AutoDetailPage() {
                   <span className='font-medium text-color-title'>
                     {car.brand}
                   </span>
-                  <span className='text-color-secondary'>•</span>
+                  <span className='text-color-primary'>•</span>
                   <span>{car.year}</span>
-                  <span className='text-color-secondary'>•</span>
-                  <span>{car.Category.name}</span>
+                  <span className='text-color-primary'>•</span>
+                  <span>
+                    {car.Category.name.charAt(0).toUpperCase() +
+                      car.Category.name.slice(1)}
+                  </span>
                 </div>
               </div>
               {car.price && parseFloat(car.price) > 0 ? (
                 <p className='text-2xl font-semibold text-color-primary mb-4'>
-                  {car.currency} {parseFloat(car.price).toLocaleString('es-AR')}
+                  {car.currency === 'ARS' ? '$' : 'US$'}
+                  {parseFloat(car.price).toLocaleString(
+                    car.currency === 'ARS' ? 'es-AR' : 'en-US'
+                  )}
                 </p>
               ) : (
                 ''
@@ -390,7 +397,7 @@ export default function AutoDetailPage() {
                     href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='bg-color-secondary hover:bg-color-secondary-dark text-color-title-light flex gap-2 font-medium py-3 px-8 rounded text-center transition-colors w-full justify-center'
+                    className='bg-color-primary hover:bg-color-primary-dark text-color-title-light flex gap-2 font-medium py-3 px-8 rounded text-center transition-colors w-full justify-center'
                   >
                     <WhatsappIcon className='w-6 h-6' />
                     <span>Consultar</span>

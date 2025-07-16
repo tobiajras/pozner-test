@@ -136,7 +136,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
               {title}
             </h3>
           </div>
-          <div className='text-center py-8 text-white/60'>
+          <div className='text-center py-8 text-color-text'>
             No hay vehículos relacionados disponibles
           </div>
         </div>
@@ -167,7 +167,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                 className='group w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%]'
                 key={auto.id}
               >
-                <div className='relative bg-color-secondary overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
+                <div className='relative bg-color-bg-secondary-dark overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
                   {!auto.active && (
                     <div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-20'>
                       <span className='bg-red-500 text-white text-sm font-medium px-3 py-1.5 rounded'>
@@ -177,7 +177,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                   )}
 
                   <div className='relative overflow-hidden aspect-[4/3]'>
-                    <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-color-secondary to-transparent z-10'></div>
+                    <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-color-bg-secondary-dark to-transparent z-10'></div>
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -213,8 +213,10 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                     {/* Precio */}
                     {auto.price && parseFloat(auto.price) > 0 && (
                       <p className='text-xl font-semibold text-color-primary-light mb-2 lg:mb-3'>
-                        {auto.currency}{' '}
-                        {parseFloat(auto.price).toLocaleString('es-AR')}
+                        {auto.currency === 'ARS' ? '$' : 'US$'}
+                        {parseFloat(auto.price).toLocaleString(
+                          auto.currency === 'ARS' ? 'es-AR' : 'en-US'
+                        )}
                       </p>
                     )}
 
@@ -230,6 +232,19 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                         |
                       </span>
                       <span>{auto.year}</span>
+                      <span
+                        className={`${
+                          company.dark
+                            ? 'text-color-primary-light'
+                            : 'text-color-primary'
+                        } mx-2`}
+                      >
+                        |
+                      </span>
+                      <span>
+                        {auto.Category.name.charAt(0).toUpperCase() +
+                          auto.Category.name.slice(1)}
+                      </span>
                     </div>
 
                     <div className='w-full h-[1px] bg-neutral-800 group-hover:bg-neutral-700 my-5 transition-colors duration-300'></div>
