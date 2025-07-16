@@ -202,13 +202,15 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                     </h3>
 
                     {/* Precio */}
-                    {auto.price && parseFloat(auto.price) > 0 && (
+                    {auto.price && parseFloat(auto.price) > 0 ? (
                       <p className='text-xl font-semibold text-color-primary-light mb-2 lg:mb-3'>
                         {auto.currency === 'ARS' ? '$' : 'US$'}
                         {parseFloat(auto.price).toLocaleString(
                           auto.currency === 'ARS' ? 'es-AR' : 'en-US'
                         )}
                       </p>
+                    ) : (
+                      ''
                     )}
 
                     <div className='flex flex-wrap items-center text-sm text-white/80'>

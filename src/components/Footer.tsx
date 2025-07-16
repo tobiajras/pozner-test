@@ -38,7 +38,7 @@ const Footer = () => {
                     />
                   </div>
                 ) : (
-                  <div className='w-56 sm:w-56 md:w-64 lg:w-72 h-8 md:h-10'>
+                  <div className='w-72 sm:w-80 md:w-96 h-12 md:h-14'>
                     <Image
                       className='w-full h-full object-contain object-left'
                       src='/assets/company/logo.webp'

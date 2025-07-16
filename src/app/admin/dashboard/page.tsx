@@ -64,7 +64,7 @@ interface AutoFormData {
 import { API_BASE_URL, TENANT } from '@/app/constants/constants';
 
 interface Imagen {
-  thumbnailPath: string;
+  thumbnailUrl: string;
 }
 
 interface Categoria {
@@ -377,6 +377,8 @@ export default function DashboardPage() {
   const [totalResultados, setTotalResultados] = useState(0);
   const [paginasBusqueda, setPaginasBusqueda] = useState(1);
 
+  console.log(autos);
+
   // Configuración de sensores para DnD
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -440,7 +442,7 @@ export default function DashboardPage() {
         active: car.active,
         imagenes:
           car.images && car.images.length > 0
-            ? car.images.map((img) => img.thumbnailPath)
+            ? car.images.map((img) => img.thumbnailUrl)
             : [],
         descripcion: car.description,
         kilometraje: car.mileage,
@@ -545,7 +547,7 @@ export default function DashboardPage() {
         precio: parseFloat(car.price),
         currency: car.currency || 'USD',
         active: car.active,
-        imagenes: car.images.map((img) => img.thumbnailPath),
+        imagenes: car.images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
         kilometraje: car.mileage,
         combustible: car.fuel,
@@ -1208,7 +1210,7 @@ export default function DashboardPage() {
             precio: parseFloat(autoCompleto.price),
             currency: autoCompleto.currency || 'USD',
             active: autoCompleto.active,
-            imagenes: imagenesOrdenadas.map((img) => img.thumbnailPath),
+            imagenes: imagenesOrdenadas.map((img) => img.thumbnailUrl),
             descripcion: autoCompleto.description,
             kilometraje: autoCompleto.mileage,
             combustible: autoCompleto.fuel,
@@ -1496,7 +1498,7 @@ export default function DashboardPage() {
         precio: parseFloat(car.price),
         currency: car.currency || 'USD',
         active: car.active,
-        imagenes: car.images.map((img) => img.thumbnailPath),
+        imagenes: car.images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
         kilometraje: car.mileage,
         combustible: car.fuel,
@@ -1548,7 +1550,7 @@ export default function DashboardPage() {
         precio: parseFloat(car.price),
         currency: car.currency || 'USD',
         active: car.active,
-        imagenes: car.images.map((img) => img.thumbnailPath),
+        imagenes: car.images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
         kilometraje: car.mileage,
         combustible: car.fuel,
