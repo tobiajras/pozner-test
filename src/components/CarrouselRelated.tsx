@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import SearchIcon from './icons/SearchIcon';
 import { motion } from 'framer-motion';
-import { API_BASE_URL, company } from '@/app/constants/constants';
+import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
 
 interface Imagen {
   id: string;
@@ -45,7 +45,7 @@ interface Auto {
   doors: number;
   createdAt: string;
   updatedAt: string;
-  Images: Imagen[];
+  images: Imagen[];
   Category: Categoria;
 }
 
@@ -67,7 +67,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
       setCargando(true);
       try {
         const response = await fetch(
-          `${API_BASE_URL}/api/cars/${currentCarId}/recommended`
+          `${API_BASE_URL}/api/cars/${currentCarId}/recommended?tenant=${TENANT}`
         );
 
         if (!response.ok) {
@@ -190,7 +190,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                         height={600}
                         className='object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out'
                         src={
-                          auto.Images[0]?.thumbnailUrl ||
+                          auto.images[0]?.thumbnailUrl ||
                           '/assets/placeholder.webp'
                         }
                         alt={`${auto.model}`}

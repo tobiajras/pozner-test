@@ -12,7 +12,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import DropDownIcon from '@/components/icons/DropDownIcon';
 import CarrouselRelated from '@/components/CarrouselRelated';
 import { motion } from 'framer-motion';
-import { API_BASE_URL } from '@/app/constants/constants';
+import { API_BASE_URL, TENANT } from '@/app/constants/constants';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -42,7 +42,7 @@ interface ApiCar {
     createdAt: string;
     updatedAt: string;
   };
-  Images: {
+  images: {
     thumbnailUrl: string;
     imageUrl: string;
     order: number;
@@ -57,7 +57,7 @@ export default function AutoDetailPage() {
   const [mainViewportRef, embla] = useEmblaCarousel();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
-  const [orderedImages, setOrderedImages] = useState<ApiCar['Images']>([]);
+  const [orderedImages, setOrderedImages] = useState<ApiCar['images']>([]);
 
   const scrollTo = useCallback(
     (index: number) => {
@@ -76,7 +76,7 @@ export default function AutoDetailPage() {
   }, [embla, selectedIndex, scrollTo]);
 
   const scrollNext = useCallback(() => {
-    if (embla && car && selectedIndex < car.Images.length - 1) {
+    if (embla && car && selectedIndex < car.images.length - 1) {
       scrollTo(selectedIndex + 1);
     }
   }, [embla, selectedIndex, car, scrollTo]);
@@ -108,15 +108,17 @@ export default function AutoDetailPage() {
   useEffect(() => {
     const fetchCar = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/api/cars/${id}`);
+        const response = await fetch(
+          `${API_BASE_URL}/api/cars/${id}?tenant=${TENANT}`
+        );
         if (!response.ok) {
           throw new Error('Error al cargar el vehículo');
         }
         const data = await response.json();
         // Ordenar las imágenes por el campo order
-        const sortedImages = [...data.Images].sort((a, b) => a.order - b.order);
+        const sortedImages = [...data.images].sort((a, b) => a.order - b.order);
         setOrderedImages(sortedImages);
-        setCar({ ...data, Images: sortedImages });
+        setCar({ ...data, images: sortedImages });
       } catch (error) {
         setError(
           error instanceof Error ? error.message : 'Error al cargar el vehículo'
@@ -273,11 +275,11 @@ export default function AutoDetailPage() {
                 <button
                   onClick={scrollNext}
                   className={`absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-3 rounded-full transition-all ${
-                    selectedIndex === car.Images.length - 1
+                    selectedIndex === car.images.length - 1
                       ? 'opacity-0'
                       : 'opacity-100 cursor-pointer'
                   }`}
-                  disabled={selectedIndex === car.Images.length - 1}
+                  disabled={selectedIndex === car.images.length - 1}
                   aria-label='Siguiente'
                 >
                   <ArrowIcon className='w-4 h-4' />
@@ -285,7 +287,7 @@ export default function AutoDetailPage() {
 
                 {/* Indicador de posición */}
                 <div className='absolute bottom-2 right-2 bg-black/60 text-white px-2 py-1 rounded text-sm'>
-                  {selectedIndex + 1}/{car.Images.length}
+                  {selectedIndex + 1}/{car.images.length}
                 </div>
               </div>
 

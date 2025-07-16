@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import SearchIcon from './icons/SearchIcon';
 import { motion } from 'framer-motion';
-import { API_BASE_URL, company } from '@/app/constants/constants';
+import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
 
 interface Imagen {
   id: string;
@@ -45,7 +45,7 @@ interface Auto {
   doors: number;
   createdAt: string;
   updatedAt: string;
-  Images: Imagen[];
+  images: Imagen[];
   Category: Categoria;
 }
 
@@ -64,7 +64,9 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
     const obtenerDestacados = async () => {
       setCargando(true);
       try {
-        const response = await fetch(`${API_BASE_URL}/api/cars/featured`);
+        const response = await fetch(
+          `${API_BASE_URL}/api/cars/featured?tenant=${TENANT}`
+        );
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
@@ -179,7 +181,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                         height={600}
                         className='object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out'
                         src={
-                          auto.Images.sort((a, b) => a.order - b.order)[0]
+                          auto.images.sort((a, b) => a.order - b.order)[0]
                             ?.thumbnailUrl || '/assets/placeholder.webp'
                         }
                         alt={`${auto.model}`}

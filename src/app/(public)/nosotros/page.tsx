@@ -55,15 +55,14 @@ const NosotrosPage = () => {
             <div className='max-w-[450px] xl:max-w-lg'>
               <h3 className='text-center lg:text-left text-2xl sm:text-3xl font-semibold text-color-title mb-3'>
                 Nuestra <span className='text-color-primary'>pasión</span> por
-                los automóviles
+                las motos
               </h3>
               <p className='text-center lg:text-left text-color-text mb-2 md:text-lg'>
-                En {company.name} nos mueve una profunda pasión por los
-                automóviles y el compromiso de ofrecer una experiencia de compra
-                excepcional. Nos distinguimos por nuestra atención
-                personalizada, donde cada cliente es único y cada vehículo es
-                seleccionado con los más altos estándares de calidad y
-                desempeño.
+                En {company.name} nos mueve una profunda pasión por las motos y
+                el compromiso de ofrecer una experiencia de compra excepcional.
+                Nos distinguimos por nuestra atención personalizada, donde cada
+                cliente es único y cada vehículo es seleccionado con los más
+                altos estándares de calidad y desempeño.
               </p>
               <p className='text-center lg:text-left text-color-text md:text-lg'>
                 Nuestro equipo está formado por verdaderos entusiastas del mundo
@@ -87,7 +86,7 @@ const NosotrosPage = () => {
             </h3>
             <p className='text-white/70 max-w-2xl mx-auto mb-3 md:mb-5'>
               Nuestro equipo está listo para asesorarte y ayudarte a encontrar
-              el auto perfecto para tus necesidades. Visita nuestro catálogo o
+              la moto perfecta para tus necesidades. Visita nuestro catálogo o
               contáctanos directamente.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

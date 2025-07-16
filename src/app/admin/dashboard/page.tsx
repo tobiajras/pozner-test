@@ -61,7 +61,7 @@ interface AutoFormData {
 }
 
 // URL base del API
-import { API_BASE_URL } from '@/app/constants/constants';
+import { API_BASE_URL, TENANT } from '@/app/constants/constants';
 
 interface Imagen {
   thumbnailUrl: string;
@@ -118,7 +118,7 @@ interface ApiCar {
   createdAt: string;
   updatedAt: string;
   Category: Categoria;
-  Images: Imagen[];
+  images: Imagen[];
 }
 
 interface ApiResponse {
@@ -407,7 +407,7 @@ export default function DashboardPage() {
     try {
       const token = Cookies.get('admin-auth');
 
-      const url = `${API_BASE_URL}/api/admin/cars?page=${page}&limit=12`;
+      const url = `${API_BASE_URL}/api/admin/cars?page=${page}&limit=12&tenant=${TENANT}`;
 
       const response = await fetch(url, {
         headers: {
@@ -438,7 +438,7 @@ export default function DashboardPage() {
         precio: parseFloat(car.price),
         currency: car.currency || 'USD',
         active: car.active,
-        imagenes: car.Images.map((img) => img.thumbnailUrl),
+        imagenes: car.images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
         kilometraje: car.mileage,
         combustible: car.fuel,
@@ -511,7 +511,7 @@ export default function DashboardPage() {
 
       const url = `${API_BASE_URL}/api/admin/cars?page=${page}&limit=12${
         search ? `&model=${encodeURIComponent(search)}` : ''
-      }`;
+      }&tenant=${TENANT}`;
 
       const response = await fetch(url, {
         headers: {
@@ -542,7 +542,7 @@ export default function DashboardPage() {
         precio: parseFloat(car.price),
         currency: car.currency || 'USD',
         active: car.active,
-        imagenes: car.Images.map((img) => img.thumbnailUrl),
+        imagenes: car.images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
         kilometraje: car.mileage,
         combustible: car.fuel,
@@ -628,7 +628,7 @@ export default function DashboardPage() {
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(
-        `${API_BASE_URL}/api/cars/${autoToDelete.id}`,
+        `${API_BASE_URL}/api/cars/${autoToDelete.id}?tenant=${TENANT}`,
         {
           method: 'DELETE',
           headers: {
@@ -696,7 +696,7 @@ export default function DashboardPage() {
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(
-        `${API_BASE_URL}/api/cars/${id}/toggle-active`,
+        `${API_BASE_URL}/api/cars/${id}/toggle-active?tenant=${TENANT}`,
         {
           method: 'PATCH',
           headers: {
@@ -799,7 +799,7 @@ export default function DashboardPage() {
       }
 
       const response = await fetch(
-        `${API_BASE_URL}/api/cars/${id}/toggle-featured`,
+        `${API_BASE_URL}/api/cars/${id}/toggle-featured?tenant=${TENANT}`,
         {
           method: 'PATCH',
           headers: {
@@ -908,7 +908,7 @@ export default function DashboardPage() {
       }
 
       const response = await fetch(
-        `${API_BASE_URL}/api/cars/${id}/toggle-favorite`,
+        `${API_BASE_URL}/api/cars/${id}/toggle-favorite?tenant=${TENANT}`,
         {
           method: 'PATCH',
           headers: {
@@ -1055,13 +1055,16 @@ export default function DashboardPage() {
         formData.append('imageOrder', jsonImageOrder);
       }
 
-      const response = await fetch(`${API_BASE_URL}/api/cars`, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        body: formData,
-      });
+      const response = await fetch(
+        `${API_BASE_URL}/api/cars?tenant=${TENANT}`,
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          body: formData,
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();
@@ -1155,7 +1158,7 @@ export default function DashboardPage() {
       }
 
       const response = await fetch(
-        `${API_BASE_URL}/api/cars/${selectedAuto.id}`,
+        `${API_BASE_URL}/api/cars/${selectedAuto.id}?tenant=${TENANT}`,
         {
           method: 'PUT',
           headers: {
@@ -1175,7 +1178,7 @@ export default function DashboardPage() {
       // para asegurarnos de tener las imágenes ordenadas correctamente
       try {
         const getResponse = await fetch(
-          `${API_BASE_URL}/api/cars/${selectedAuto.id}`,
+          `${API_BASE_URL}/api/cars/${selectedAuto.id}?tenant=${TENANT}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -1188,8 +1191,8 @@ export default function DashboardPage() {
           const autoCompleto = await getResponse.json();
 
           // Ordenar las imágenes según el orden devuelto por el API
-          const imagenesOrdenadas = autoCompleto.Images
-            ? [...autoCompleto.Images].sort((a, b) => a.order - b.order)
+          const imagenesOrdenadas = autoCompleto.images
+            ? [...autoCompleto.images].sort((a, b) => a.order - b.order)
             : [];
 
           // Crear el objeto actualizado con las imágenes ordenadas
@@ -1280,7 +1283,7 @@ export default function DashboardPage() {
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(
-        `${API_BASE_URL}/api/sells/${autoToSell.id}/sell`,
+        `${API_BASE_URL}/api/sells/${autoToSell.id}/sell?tenant=${TENANT}`,
         {
           method: 'POST',
           headers: {
@@ -1409,14 +1412,17 @@ export default function DashboardPage() {
         position: todosLosAutos.length - index, // Orden descendente (mayor valor = más arriba)
       }));
 
-      const response = await fetch(`${API_BASE_URL}/api/cars/positions`, {
-        method: 'PATCH',
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ updates }),
-      });
+      const response = await fetch(
+        `${API_BASE_URL}/api/cars/positions?tenant=${TENANT}`,
+        {
+          method: 'PATCH',
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ updates }),
+        }
+      );
 
       if (response.status === 403) {
         handleUnauthorized();
@@ -1458,12 +1464,15 @@ export default function DashboardPage() {
   const fetchAutosDestacados = async () => {
     try {
       const token = Cookies.get('admin-auth');
-      const response = await fetch(`${API_BASE_URL}/api/cars/featured`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          Accept: 'application/json',
-        },
-      });
+      const response = await fetch(
+        `${API_BASE_URL}/api/cars/featured?tenant=${TENANT}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            Accept: 'application/json',
+          },
+        }
+      );
 
       if (response.status === 403) {
         handleUnauthorized();
@@ -1484,7 +1493,7 @@ export default function DashboardPage() {
         precio: parseFloat(car.price),
         currency: car.currency || 'USD',
         active: car.active,
-        imagenes: car.Images.map((img) => img.thumbnailUrl),
+        imagenes: car.images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
         kilometraje: car.mileage,
         combustible: car.fuel,
@@ -1507,12 +1516,15 @@ export default function DashboardPage() {
   const fetchAutosFavoritos = async () => {
     try {
       const token = Cookies.get('admin-auth');
-      const response = await fetch(`${API_BASE_URL}/api/cars/favorites`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          Accept: 'application/json',
-        },
-      });
+      const response = await fetch(
+        `${API_BASE_URL}/api/cars/favorites?tenant=${TENANT}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            Accept: 'application/json',
+          },
+        }
+      );
 
       if (response.status === 403) {
         handleUnauthorized();
@@ -1533,7 +1545,7 @@ export default function DashboardPage() {
         precio: parseFloat(car.price),
         currency: car.currency || 'USD',
         active: car.active,
-        imagenes: car.Images.map((img) => img.thumbnailUrl),
+        imagenes: car.images.map((img) => img.thumbnailUrl),
         descripcion: car.description,
         kilometraje: car.mileage,
         combustible: car.fuel,

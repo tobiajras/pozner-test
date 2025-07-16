@@ -16,7 +16,7 @@ import {
   SelectItem,
 } from '@/components/ui/select';
 import CloseIcon from '@/components/icons/CloseIcon';
-import { API_BASE_URL } from '@/app/constants/constants';
+import { API_BASE_URL, TENANT } from '@/app/constants/constants';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
@@ -46,7 +46,7 @@ interface ApiCar {
     createdAt: string;
     updatedAt: string;
   };
-  Images: {
+  images: {
     thumbnailUrl: string;
   }[];
 }
@@ -87,7 +87,9 @@ const CatalogoPage = () => {
   // Función para obtener todas las marcas disponibles
   const fetchMarcas = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/cars/brands`);
+      const response = await fetch(
+        `${API_BASE_URL}/api/cars/brands?tenant=${TENANT}`
+      );
       if (!response.ok) {
         throw new Error('Error al cargar las marcas');
       }
@@ -101,7 +103,9 @@ const CatalogoPage = () => {
   // Función para obtener las categorías del API
   const fetchCategories = async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/categories`);
+      const response = await fetch(
+        `${API_BASE_URL}/api/categories?tenant=${TENANT}`
+      );
       if (!response.ok) {
         throw new Error('Error al cargar las categorías');
       }
@@ -119,7 +123,7 @@ const CatalogoPage = () => {
   ) => {
     setLoading(true);
     try {
-      let url = `${API_BASE_URL}/api/cars?page=${page}&limit=${ITEMS_PER_PAGE}&sort=position:desc`;
+      let url = `${API_BASE_URL}/api/cars?page=${page}&limit=${ITEMS_PER_PAGE}&sort=position:desc&tenant=${TENANT}`;
 
       if (filters?.search) {
         url += `&model=${encodeURIComponent(filters.search)}`;
@@ -579,7 +583,7 @@ const CatalogoPage = () => {
                                 height={600}
                                 className='object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out'
                                 src={
-                                  car.Images[0]?.thumbnailUrl ||
+                                  car.images[0]?.thumbnailUrl ||
                                   '/assets/placeholder.webp'
                                 }
                                 alt={`${car.model}`}

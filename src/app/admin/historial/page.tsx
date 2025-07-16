@@ -9,7 +9,7 @@ import { ConfirmModal } from '../components/ConfirmModal';
 import { Notification } from '../components/Notification';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import { useRouter } from 'next/navigation';
-import { API_BASE_URL } from '@/app/constants/constants';
+import { API_BASE_URL, TENANT } from '@/app/constants/constants';
 
 interface AutoVendido {
   id: string;
@@ -68,7 +68,7 @@ export default function HistorialPage() {
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(
-        `${API_BASE_URL}/api/sells?page=${page}&limit=12`,
+        `${API_BASE_URL}/api/sells?page=${page}&limit=12&tenant=${TENANT}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -143,7 +143,7 @@ export default function HistorialPage() {
     try {
       const token = Cookies.get('admin-auth');
       const response = await fetch(
-        `${API_BASE_URL}/api/sells/${ventaAEliminar.id}`,
+        `${API_BASE_URL}/api/sells/${ventaAEliminar.id}?tenant=${TENANT}`,
         {
           method: 'DELETE',
           headers: {

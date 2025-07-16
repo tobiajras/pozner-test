@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
-import { API_BASE_URL } from '@/app/constants/constants';
+import { API_BASE_URL, TENANT } from '@/app/constants/constants';
 
 // URL base del API
 
@@ -24,15 +24,18 @@ export default function LoginPage() {
 
     try {
       // URL correcta del endpoint de login
-      const response = await fetch(`${API_BASE_URL}/api/admin/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        // Enviar username y password exactamente como espera el API
-        body: JSON.stringify({ username, password }),
-      });
+      const response = await fetch(
+        `${API_BASE_URL}/api/admin/login?tenant=${TENANT}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          // Enviar username y password exactamente como espera el API
+          body: JSON.stringify({ username, password }),
+        }
+      );
 
       // Obtener la respuesta como texto para depuración
       const responseText = await response.text();

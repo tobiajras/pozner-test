@@ -7,7 +7,7 @@ import { Auto } from '@/types/auto';
 import Cookies from 'js-cookie';
 import { ChevronDown } from 'lucide-react';
 import ImageCropModal from './image-crop-modal';
-import { API_BASE_URL } from '@/app/constants/constants';
+import { API_BASE_URL, TENANT } from '@/app/constants/constants';
 
 interface FileWithOrientation extends File {
   orientation?: number;
@@ -126,7 +126,9 @@ const AutoModal = ({
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/api/categories`);
+        const response = await fetch(
+          `${API_BASE_URL}/api/categories?tenant=${TENANT}`
+        );
         if (response.ok) {
           const data = await response.json();
           setCategories(data);
@@ -139,7 +141,9 @@ const AutoModal = ({
     // Cargar marcas del API
     const fetchMarcas = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/api/cars/brands`);
+        const response = await fetch(
+          `${API_BASE_URL}/api/cars/brands?tenant=${TENANT}`
+        );
         if (response.ok) {
           const data = await response.json();
           setMarcas(data.sort());
@@ -218,7 +222,7 @@ const AutoModal = ({
         try {
           const token = Cookies.get('admin-auth');
           const response = await fetch(
-            `${API_BASE_URL}/api/cars/${initialData.id}`,
+            `${API_BASE_URL}/api/cars/${initialData.id}?tenant=${TENANT}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -234,7 +238,7 @@ const AutoModal = ({
           const data = await response.json();
 
           // Ordenar las imágenes por el campo order
-          const sortedImages = [...data.Images].sort(
+          const sortedImages = [...data.images].sort(
             (a, b) => a.order - b.order
           );
 

@@ -37,13 +37,13 @@ const HeroHome = () => {
               </div>
               <div className='md:gap-3 text-nowrap'>
                 <h2 className='text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-color-title-light'>
-                  VEHÍCULOS PREMIUM
+                  VENTA DE MOTOS
                 </h2>
               </div>
             </div>
             <div className='border-t-2 md:border-t-4  border-color-primary-dark w-48 md:w-64 my-2 md:my-4'></div>
             <p className='sm:text-lg lg:text-xl text-center text-color-text-light mx-4 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl'>
-              Modelos exclusivos, calidad garantizada y planes de financiación a
+              Variedad de motos, calidad garantizada y planes de financiación a
               tu medida. ¡Esperamos tu consulta!
             </p>
             <div className='flex mt-4 md:mt-3 lg:mt-4 gap-5'>
@@ -53,7 +53,7 @@ const HeroHome = () => {
                   company.dark
                     ? 'text-color-title-light bg-color-primary hover:bg-color-primary-dark hover:ring-color-primary-dark ring ring-color-primary'
                     : 'text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary'
-                } transition-colors py-4 px-6 md:px-8 rounded-full font-medium`}
+                } transition-colors py-3 px-6 md:px-8 rounded-lg font-medium lg:text-lg`}
               >
                 Ver Catálogo
               </Link>
@@ -73,7 +73,7 @@ const HeroHome = () => {
                   company.dark
                     ? 'text-color-title-light bg-black/30 backdrop-blur-[2px] ring ring-color-primary-dark hover:bg-color-primary-dark hover:text-color-title-light'
                     : 'text-color-title-light bg-black/30 backdrop-blur-[2px] ring ring-color-primary-dark hover:bg-color-primary-dark hover:text-color-title-light'
-                } transition-colors py-4 px-6 md:px-8 rounded-full font-medium`}
+                } transition-colors py-3 px-5 md:px-7 rounded-lg font-medium lg:text-lg`}
               >
                 Contactanos
               </Link>

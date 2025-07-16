@@ -3,36 +3,38 @@ export const company = {
   darkmode: true,
   shortAdress: true,
   favicon: false,
-  id: 'pazcar',
-  name: 'Pazcar',
-  adress: 'José María Paz 1373',
-  city: 'Ituzaingó',
-  email: null,
-  instagram: 'pazcar.ok',
-  facebook: 'https://www.facebook.com/p/Paz-Car-61564547240572/',
-  whatsapp: ['1164577531'],
-  googlemapsLink: 'https://maps.app.goo.gl/Wnm8n5CXbPQDTnyK8',
+  id: 'custommotors',
+  name: 'Custom Motors',
+  adress: 'Bolívar 1740',
+  city: 'CABA',
+  email: 'custommotorsok@gmail.com',
+  instagram: 'cmotors_ok',
+  facebook: 'https://www.facebook.com/profile.php?id=61560687316397',
+  whatsapp: ['1135105482'],
+  googlemapsLink: 'https://maps.app.goo.gl/thL4ENPVKoJsetu77',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105041.85135631665!2d-58.67469544106399!3d-34.64061203182661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbf003f6e13c9%3A0xa6edb8c8d44b93f2!2sPazcar%20Concesionaria!5e0!3m2!1ses!2sar!4v1747507416898!5m2!1ses!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26264.243341933325!2d-58.37220725444661!3d-34.62867160465521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb0054e1a545%3A0xf854c8af0280a266!2sCustom%20Motors!5e0!3m2!1sen!2sar!4v1747496324993!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:00'] },
-    { day: 'Martes', hours: ['09:00 a 18:00'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:00'] },
-    { day: 'Jueves', hours: ['09:00 a 18:00'] },
-    { day: 'Viernes', hours: ['09:00 a 18:00'] },
-    { day: 'Sábado', hours: ['10:00 a 15:30'] },
+    { day: 'Lunes', hours: ['11:00 a 18:00'] },
+    { day: 'Martes', hours: ['11:00 a 18:00'] },
+    { day: 'Miércoles', hours: ['11:00 a 18:00'] },
+    { day: 'Jueves', hours: ['11:00 a 18:00'] },
+    { day: 'Viernes', hours: ['11:00 a 18:00'] },
+    { day: 'Sábado', hours: ['11:00 a 14:00'] },
     // { day: 'Domingo', hours: ['10:00 a 19:00'] },
   ],
-  footer: 'Compra y Venta de Autos: Las mejores opciones, calidad garantizada.',
+  footer:
+    'Compra y Venta de Motos: Vehículos seleccionados, atención personalizada.',
 };
 
-export const API_BASE_URL = 'https://pazcar.agenciagrvity.com';
+export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
+export const TENANT = 'custommotors';
 
 export const metadataCompany = {
-  metadataBase: 'https://pazcar.vercel.app/',
-  title: 'Pazcar - Compra y Venta de Autos',
+  metadataBase: 'https://custommotors.vercel.app/',
+  title: 'Custom Motors - Compra y Venta de Motos',
   description:
-    'Compra y Venta de Autos: Las mejores opciones, calidad garantizada.',
+    'Compra y Venta de Motos: Vehículos seleccionados, atención personalizada.',
 };
 
 export const preguntas = [
@@ -46,7 +48,7 @@ export const preguntas = [
     id: 'preg-2',
     question: '¿Cómo preparan los vehículos para la venta?',
     answer:
-      'Nos encargamos de preparar profesionalmente tu vehículo para la venta. Realizamos una revisión técnica completa, limpieza detallada, y presentamos tu auto de la mejor manera para maximizar su valor en el mercado.',
+      'Nos encargamos de preparar profesionalmente tu vehículo para la venta. Realizamos una revisión técnica completa, limpieza detallada, y presentamos tu moto de la mejor manera para maximizar su valor en el mercado.',
   },
   {
     id: 'preg-3',
@@ -58,7 +60,7 @@ export const preguntas = [
     id: 'preg-4',
     question: '¿Toman vehículos usados como parte de pago?',
     answer:
-      'Sí, tomamos tu usado como parte de pago por un vehículo de nuestra selección. Realizamos una tasación justa de tu auto actual y te ofrecemos las mejores condiciones para facilitar tu nueva compra.',
+      'Sí, tomamos tu usado como parte de pago por un vehículo de nuestra selección. Realizamos una tasación justa de tu moto actual y te ofrecemos las mejores condiciones para facilitar tu nueva compra.',
   },
   {
     id: 'preg-5',
