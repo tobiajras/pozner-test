@@ -10,15 +10,14 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['var(--font-inter)', 'sans-serif'],
-        poppins: ['var(--font-poppins)'],
+        manrope: ['var(--font-manrope)', 'sans-serif'],
       },
       colors: {
-        'color-primary': '#E80A0C',
-        'color-primary-dark': '#FD0002',
-        'color-primary-light': '#FF8383',
-        'color-primary-admin': '#E80A0C',
-        'color-primary-dark-admin': '#FD0002',
+        'color-primary': '#E9262C',
+        'color-primary-dark': '#F5080E',
+        'color-primary-light': '#FF7679',
+        'color-primary-admin': '#E9262C',
+        'color-primary-dark-admin': '#F0161C',
         'color-secondary': '#1E1E1E',
         'color-secondary-dark': '#222222',
         'color-secondary-light': '#E4E4E4',

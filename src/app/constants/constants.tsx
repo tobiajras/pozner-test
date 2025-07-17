@@ -1,26 +1,26 @@
 export const company = {
-  dark: false,
+  dark: true,
   darkmode: true,
   shortAdress: true,
   favicon: false,
-  id: 'custommotors',
-  name: 'Custom Motors',
-  adress: 'Bolívar 1740',
-  city: 'CABA',
-  email: 'custommotorsok@gmail.com',
-  instagram: 'cmotors_ok',
-  facebook: 'https://www.facebook.com/profile.php?id=61560687316397',
-  whatsapp: ['1135105482'],
-  googlemapsLink: 'https://maps.app.goo.gl/thL4ENPVKoJsetu77',
+  id: 'vitacars',
+  name: 'VITA CARS',
+  adress: 'Ledesma 3120',
+  city: 'Saladillo',
+  email: null,
+  instagram: 'vitacarsm',
+  facebook: 'https://www.facebook.com/matias.N.vita/',
+  whatsapp: ['2345458113'],
+  googlemapsLink: 'https://maps.app.goo.gl/Q8bduW2v1cNPS6VV7',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26264.243341933325!2d-58.37220725444661!3d-34.62867160465521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb0054e1a545%3A0xf854c8af0280a266!2sCustom%20Motors!5e0!3m2!1sen!2sar!4v1747496324993!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1018305.7015445657!2d-59.95761477369754!3d-35.46323443543396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bde1300b59b33f%3A0xe4308df4f66e6fb!2sVitaCars!5e0!3m2!1ses-419!2sar!4v1752200379288!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['11:00 a 18:00'] },
-    { day: 'Martes', hours: ['11:00 a 18:00'] },
-    { day: 'Miércoles', hours: ['11:00 a 18:00'] },
-    { day: 'Jueves', hours: ['11:00 a 18:00'] },
-    { day: 'Viernes', hours: ['11:00 a 18:00'] },
-    { day: 'Sábado', hours: ['11:00 a 14:00'] },
+    { day: 'Lunes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Martes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Miércoles', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Jueves', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Viernes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Sábado', hours: ['9 a 13hs'] },
     // { day: 'Domingo', hours: ['10:00 a 19:00'] },
   ],
   footer:
@@ -28,11 +28,11 @@ export const company = {
 };
 
 export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
-export const TENANT = 'custommotors';
+export const TENANT = 'vitacars';
 
 export const metadataCompany = {
-  metadataBase: 'https://custommotors.vercel.app/',
-  title: 'Custom Motors - Compra y Venta de Motos',
+  metadataBase: 'https://vitacars.vercel.app/',
+  title: 'VITA CARS - Compra y Venta de Motos',
   description:
     'Compra y Venta de Motos: Vehículos seleccionados, atención personalizada.',
 };
@@ -40,33 +40,33 @@ export const metadataCompany = {
 export const preguntas = [
   {
     id: 'preg-1',
-    question: '¿Consignan vehículos?',
+    question: '¿Qué opciones de pago ofrecen?',
     answer:
-      'Sí, consignamos tu vehículo sin costo. Nos encargamos de todo el proceso para que no tengas que preocuparte por nada. Te ofrecemos asesoramiento profesional y la tranquilidad de que tu auto estará en buenas manos.',
+      'Ofrecemos diferentes opciones de pago para adaptarnos a tus necesidades. Consultanos sobre las alternativas disponibles y te asesoramos para encontrar la mejor opción para ti.',
   },
   {
     id: 'preg-2',
-    question: '¿Cómo preparan los vehículos para la venta?',
+    question: '¿Cómo verifican el estado de los vehículos?',
     answer:
-      'Nos encargamos de preparar profesionalmente tu vehículo para la venta. Realizamos una revisión técnica completa, limpieza detallada, y presentamos tu moto de la mejor manera para maximizar su valor en el mercado.',
+      'Todos nuestros vehículos son revisados antes de ser ofrecidos. Realizamos las verificaciones necesarias para asegurar que estén en las mejores condiciones para nuestros clientes.',
   },
   {
     id: 'preg-3',
-    question: '¿Cómo manejan las transferencias de vehículos?',
+    question: '¿Incluyen algún tipo de garantía?',
     answer:
-      'Una vez vendido el vehículo, nos encargamos personalmente de que se transfiera de la manera correcta, en tiempo y forma. Gestionamos toda la documentación necesaria y trámites legales para que tanto vendedor como comprador tengan total tranquilidad.',
+      'Sí, nuestros vehículos incluyen garantía según corresponda. Te informamos sobre los términos y condiciones al momento de la compra para tu tranquilidad.',
   },
   {
     id: 'preg-4',
-    question: '¿Toman vehículos usados como parte de pago?',
+    question: '¿Puedo ver el vehículo antes de decidir?',
     answer:
-      'Sí, tomamos tu usado como parte de pago por un vehículo de nuestra selección. Realizamos una tasación justa de tu moto actual y te ofrecemos las mejores condiciones para facilitar tu nueva compra.',
+      'Por supuesto, te invitamos a conocer nuestros vehículos personalmente. Coordina una visita con nuestro equipo y te mostramos todo lo que necesites saber.',
   },
   {
     id: 'preg-5',
-    question: '¿Qué opciones de financiación ofrecen?',
+    question: '¿Brindan asesoramiento después de la compra?',
     answer:
-      'Ofrecemos distintas opciones de financiación adaptadas a tus necesidades. Trabajamos con varias entidades financieras para conseguirte la mejor tasa y plazo que se ajuste a tu presupuesto. Consultanos por los planes disponibles actualmente.',
+      'Sí, nuestro compromiso continúa después de la compra. Estamos disponibles para resolver tus dudas y brindarte el apoyo que necesites con tu vehículo.',
   },
 ];
 

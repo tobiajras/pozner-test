@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
       id: 1,
       title: 'Amplia Variedad',
       description:
-        'Gran selección de vehículos usados y nuevos de diferentes marcas y modelos para encontrar la moto que mejor se adapte a tus necesidades.',
+        'Gran selección de vehículos usados y nuevos de diferentes marcas y modelos para encontrar el auto que mejor se adapte a tus necesidades.',
       icon: '/assets/icons/selection.svg',
     },
     {

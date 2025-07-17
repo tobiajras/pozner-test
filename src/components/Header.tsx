@@ -21,12 +21,12 @@ const Header = () => {
           : company.dark
           ? 'bg-color-bg-primary'
           : 'bg-color-bg-secondary-dark'
-      }  shadow-md`}
+      } `}
     >
-      <section className='flex justify-between items-center gap-3 md:gap-8 lg:gap-20 py-5 max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
+      <section className='flex justify-between items-center gap-3 md:gap-8 lg:gap-20 py-5 max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
         <article className='flex w-full'>
           <Link
-            className='flex items-center gap-2 md:gap-3'
+            className='flex items-center gap-3 md:gap-4'
             href='/'
             onClick={() => setIsMenuOpen(false)}
           >
@@ -34,7 +34,7 @@ const Header = () => {
               <>
                 <Image
                   priority
-                  className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px]'
+                  className='w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] object-contain'
                   // className={`w-[65px] h-[65px] sm:w-[70px] sm:h-[70px] lg:w-[75px] lg:h-[75px] ring-[1.5px] ${
                   //   company.darkmode
                   //     ? 'ring-color-bg-primary'
@@ -59,7 +59,7 @@ const Header = () => {
                 </div>
               </>
             ) : (
-              <div className='h-12 md:h-14 w-72 sm:w-80 md:w-96'>
+              <div className='h-14 md:h-16 w-48 sm:w-56 md:w-64'>
                 <Image
                   priority
                   className='h-full w-full object-contain object-left'
@@ -73,7 +73,7 @@ const Header = () => {
           </Link>
         </article>
         <nav className='hidden md:block'>
-          <ul className='flex items-center gap-8'>
+          <ul className='flex items-center gap-8 lg:gap-12'>
             {navigation.map((nav) => {
               const isActive = pathname === nav.url;
               return (
@@ -85,7 +85,7 @@ const Header = () => {
                             company.dark
                               ? 'text-color-title-light hover:bg-color-primary-dark'
                               : 'text-color-title-light hover:bg-color-primary-dark'
-                          }  bg-color-primary p-3 rounded-md`
+                          }  bg-color-primary px-5 py-3 rounded-md`
                         : company.darkmode
                         ? `text-color-text-light hover:text-color-title-light ${
                             !nav.button && isActive && 'text-color-title-light'

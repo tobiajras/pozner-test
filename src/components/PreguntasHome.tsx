@@ -17,85 +17,119 @@ const PreguntasHome = () => {
   return (
     <section
       id='preguntasSection'
-      className='flex justify-center mt-10 mb-16 md:mt-16 md:mb-24 bg-color-bg-primary relative overflow-hidden'
+      className='mt-10 mb-16 md:mt-16 md:mb-24 relative overflow-hidden'
     >
-      {/* Patrón decorativo */}
-      <div className='absolute inset-0 opacity-5 bg-grid-pattern'></div>
+      {/* Patrón de fondo decorativo */}
+      <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.03)_1px,transparent_0)] bg-[length:20px_20px]'></div>
 
-      <div className='max-w-4xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 relative z-10'>
-        <div className='text-center mb-12'>
-          <h3 className='text-xs text-neutral-500 uppercase tracking-[0.3em] mb-3'>
-            Información
-          </h3>
-          <h2 className='text-3xl md:text-4xl lg:text-5xl font-light text-color-title mb-5'>
+      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+        {/* Título y subtítulo */}
+        <div className='text-center mb-3 md:mb-5 lg:mb-10'>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: '0px 0px -100px 0px' }}
+            className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-title mb-2'
+          >
             Preguntas Frecuentes
-          </h2>
-          <div className='w-16 md:w-24 h-0.5 bg-color-primary mx-auto'></div>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: '0px 0px -100px 0px' }}
+            className='text-color-text max-w-2xl mx-auto md:text-lg font-medium'
+          >
+            Resolvemos todas tus dudas sobre nuestros servicios y procesos
+          </motion.p>
         </div>
 
+        {/* Grid de preguntas */}
         <div className='grid gap-6'>
-          {preguntas.map((pregunta) => (
-            <div
+          {preguntas.map((pregunta, index) => (
+            <motion.div
               key={pregunta.id}
-              onClick={() => toggleAnswer(pregunta.id)}
-              className={`group bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded transition-all duration-500 
-                ${
-                  activeAnswer === pregunta.id
-                    ? 'shadow-[0_8px_30px_-15px_rgba(233,0,2,0.5)]'
-                    : 'shadow-[0_5px_15px_-10px_rgba(0,0,0,0.3)] hover:shadow-[0_8px_30px_-15px_rgba(233,0,2,0.2)] cursor-pointer'
-                }`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '0px 0px -100px 0px' }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className='group'
             >
-              <div className='p-5 md:p-6'>
-                <div className='flex justify-between items-center'>
-                  <h4 className='text-lg md:text-xl max-w-[250px] sm:max-w-none font-medium text-white'>
-                    {pregunta.question}
-                  </h4>
-                  <div
-                    className={`group-hover:bg-color-primary h-8 w-8 rounded-full flex items-center justify-center transition-all duration-500 ${
-                      activeAnswer === pregunta.id
-                        ? 'bg-color-primary'
-                        : 'bg-neutral-800'
-                    }`}
-                  >
-                    <motion.div
-                      animate={{
-                        rotate: activeAnswer === pregunta.id ? 0 : -90,
-                      }}
-                      transition={{
-                        duration: 0.5,
-                        ease: [0.22, 1, 0.36, 1],
-                      }}
-                    >
-                      <DropDownIcon className='w-4 h-4 text-white' />
-                    </motion.div>
-                  </div>
-                </div>
+              <div
+                onClick={() => toggleAnswer(pregunta.id)}
+                className={`relative bg-color-bg-secondary rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition-colors duration-300 cursor-pointer overflow-hidden
+                  ${
+                    activeAnswer === pregunta.id
+                      ? 'ring-2 ring-color-primary/20 shadow-lg'
+                      : 'hover:border-gray-300'
+                  }`}
+              >
+                {/* Línea decorativa superior */}
+                <div
+                  className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-color-primary to-color-primary/60 transition-colors duration-300
+                  ${
+                    activeAnswer === pregunta.id ? 'opacity-100' : 'opacity-0'
+                  }`}
+                ></div>
 
-                <AnimatePresence>
-                  {activeAnswer === pregunta.id && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{
-                        height: 'auto',
-                        opacity: 1,
-                      }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{
-                        duration: 0.5,
-                        ease: [0.22, 1, 0.36, 1],
-                      }}
-                      className='overflow-hidden'
-                    >
-                      <div className='mt-4 pt-4 border-t border-white/10'>
-                        <p className='text-white/70 leading-relaxed'>
-                          {pregunta.answer}
-                        </p>
+                <div className='p-6 md:p-8'>
+                  <div className='flex items-start justify-between gap-4'>
+                    <div className='flex-1'>
+                      <h4 className='text-lg md:text-xl font-semibold text-color-title-light mb-2 group-hover:text-color-primary-light transition-colors duration-300'>
+                        {pregunta.question}
+                      </h4>
+                    </div>
+
+                    {/* Botón de toggle */}
+                    <div className='flex-shrink-0'>
+                      <div
+                        className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300
+                        ${
+                          activeAnswer === pregunta.id
+                            ? 'bg-color-primary text-white shadow-lg'
+                            : 'bg-gray-100 text-gray-600 group-hover:bg-color-primary group-hover:text-color-title-light'
+                        }`}
+                      >
+                        <motion.div
+                          animate={{
+                            rotate: activeAnswer === pregunta.id ? 180 : 0,
+                          }}
+                          transition={{
+                            duration: 0.3,
+                            ease: 'easeInOut',
+                          }}
+                        >
+                          <DropDownIcon className='w-5 h-5' />
+                        </motion.div>
                       </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                    </div>
+                  </div>
+
+                  {/* Contenido expandible */}
+                  <AnimatePresence>
+                    {activeAnswer === pregunta.id && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{
+                          duration: 0.4,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
+                        className='overflow-hidden'
+                      >
+                        <div className='mt-6 pt-6 border-t border-gray-100'>
+                          <p className='text-color-text-light leading-relaxed text-base md:text-lg'>
+                            {pregunta.answer}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

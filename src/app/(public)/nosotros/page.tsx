@@ -1,105 +1,170 @@
 'use client';
 
 import Image from 'next/image';
-
-import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { company } from '@/app/constants/constants';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { motion } from 'framer-motion';
 
 const NosotrosPage = () => {
   return (
     <>
       <Header />
-      <section className='flex flex-col items-center w-full mb-10 md:mb-20'>
-        <section className='w-full py-8 md:py-14 lg:py-16 flex justify-center items-center'>
-          <div className='max-w-6xl w-full flex justify-center mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-            <div className='text-center'>
-              <h3 className='text-sm sm:text-base text-color-primary uppercase tracking-wider mb-1'>
-                Sobre Nosotros
-              </h3>
-              <h2 className='text-3xl sm:text-4xl lg:text-5xl font-medium text-color-title mb-2 md:mb-4'>
-                NOSOTROS
-              </h2>
-              <div className='flex items-center justify-center gap-2 w-full max-w-sm md:max-w-md mx-auto px-4'>
-                <div className='h-0.5 flex-grow bg-gradient-to-r from-transparent to-color-primary'></div>
-                <div className='w-2.5 h-2.5 bg-color-primary rotate-45'></div>
-                <div className='h-0.5 flex-grow bg-gradient-to-l from-transparent to-color-primary'></div>
-              </div>
-            </div>
+      {/* Título y subtítulo al estilo Proceso */}
+      <div className='py-8 md:py-14 lg:py-16'>
+        <section className='flex flex-col items-center w-full'>
+          <div className='text-center mb-3 sm:mb-4 md:mb-5 lg:mb-10'>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-title mb-2'
+            >
+              <span className='text-color-primary'>Sobre {company.name}</span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='text-color-text max-w-sm sm:max-w-lg lg:max-w-2xl mx-auto md:text-lg font-medium'
+            >
+              En {company.name} nos dedicamos a ofrecer la mejor experiencia de
+              compra de autos usados, con la mejor calidad y el mejor servicio.
+            </motion.p>
           </div>
         </section>
 
-        <div className='max-w-6xl flex flex-col gap-10 md:gap-20'>
-          {/* Imagen principal y texto descriptivo */}
+        {/* Imagen y texto descriptivo en fila en desktop */}
+        <section className='flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-10 mx-auto px-4 mb-10'>
+          {/* Imagen a la izquierda */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-            viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            className='flex flex-col lg:flex-row items-center gap-5 md:gap-10 mx-4 sm:mx-6 md:mx-8 lg:mx-10'
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className='w-full max-w-md xl:max-w-lg overflow-hidden [box-shadow:0px_0px_19px_5px_rgba(0,0,0,0.15)] rounded-xl mb-6 md:mb-0 '
           >
-            {/* Imagen principal */}
-            <div className='w-full max-w-[330px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] relative overflow-hidden rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'>
-              <Image
-                priority
-                className='w-full h-auto object-cover'
-                src='/assets/nosotros/nosotros-1.webp'
-                alt='Equipo de GO CARS'
-                width={1200}
-                height={600}
-              />
-            </div>
-
-            {/* Texto descriptivo */}
-            <div className='max-w-[450px] xl:max-w-lg'>
-              <h3 className='text-center lg:text-left text-2xl sm:text-3xl font-semibold text-color-title mb-3'>
-                Nuestra <span className='text-color-primary'>pasión</span> por
-                las motos
-              </h3>
-              <p className='text-center lg:text-left text-color-text mb-2 md:text-lg'>
-                En {company.name} nos mueve una profunda pasión por las motos y
-                el compromiso de ofrecer una experiencia de compra excepcional.
-                Nos distinguimos por nuestra atención personalizada, donde cada
-                cliente es único y cada vehículo es seleccionado con los más
-                altos estándares de calidad y desempeño.
-              </p>
-              <p className='text-center lg:text-left text-color-text md:text-lg'>
-                Nuestro equipo está formado por verdaderos entusiastas del mundo
-                automotor que entienden tus necesidades específicas, brindándote
-                asesoramiento honesto y transparente en cada paso del proceso.
-              </p>
-            </div>
+            <Image
+              src='/assets/nosotros/nosotros-1.webp'
+              alt={`Equipo de ${company.name}`}
+              width={1000}
+              height={600}
+              className='object-cover w-full h-auto'
+              priority
+            />
           </motion.div>
-
+          {/* Texto a la derecha */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-            viewport={{
-              once: true,
-              margin: '0px 0px -100px 0px',
-            }}
-            className='bg-gradient-to-b from-neutral-900 to-black rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-6 md:p-8 border border-neutral-800 mx-4 sm:mx-6 md:mx-8 lg:mx-10 text-center'
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className='text-center lg:text-left max-w-lg'
           >
-            <h3 className='text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4'>
-              ¿Estás listo para encontrar tu próximo vehículo?
+            <h3 className='text-2xl lg:text-3xl font-semibold text-color-title mb-3'>
+              Experiencia y compromiso
             </h3>
-            <p className='text-white/70 max-w-2xl mx-auto mb-3 md:mb-5'>
-              Nuestro equipo está listo para asesorarte y ayudarte a encontrar
-              la moto perfecta para tus necesidades. Visita nuestro catálogo o
-              contáctanos directamente.
+            <p className='text-color-text mb-2 lg:text-lg font-medium'>
+              Nuestra experiencia en el mercado nos permite ofrecer la mejor
+              calidad y el mejor servicio. Desde la selección de los autos hasta
+              la entrega, te acompañamos en cada paso.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contacto'
-                className='bg-color-primary hover:bg-color-primary-dark text-white py-3 px-8 rounded-md font-medium transition-all duration-300'
-              >
-                Contactar
-              </Link>
-            </div>
+            <p className='text-color-text lg:text-lg font-medium'>
+              Contamos con un equipo de profesionales especializados en el
+              sector automotriz. Nuestro objetivo es convertir tu sueño de tener
+              un auto en una realidad, ofreciendo opciones de financiamiento
+              flexibles y asesoramiento integral en cada etapa de tu compra.
+            </p>
           </motion.div>
-        </div>
-      </section>
+        </section>
+
+        {/* Cards de valores */}
+        <section className='max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 place-items-center gap-6 mb-16 md:mt-16'>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className='max-w-xs h-full bg-white rounded-2xl shadow-md px-6 py-8 flex flex-col items-center text-center border-t-4 border-color-primary/70'
+          >
+            {/* Icono de variedad/estrellas */}
+            <svg
+              className='text-color-primary text-3xl mb-2'
+              width='32'
+              height='32'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            >
+              <polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' />
+            </svg>
+            <h4 className='font-bold text-lg mb-1 text-color-title'>
+              Variedad y calidad
+            </h4>
+            <p className='text-color-text text-sm lg:text-base'>
+              Catálogo seleccionado de autos de todas las marcas y modelos, con
+              altos estándares de calidad.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className='max-w-xs h-full bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center border-t-4 border-color-primary/70'
+          >
+            {/* Icono de atención personalizada */}
+            <svg
+              className='text-color-primary text-3xl mb-2'
+              width='32'
+              height='32'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            >
+              <path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2' />
+              <circle cx='12' cy='7' r='4' />
+            </svg>
+            <h4 className='font-bold text-lg mb-1 text-color-title'>
+              Atención personalizada
+            </h4>
+            <p className='text-color-text text-sm lg:text-base'>
+              Acompañamiento profesional y asesoramiento honesto en todo el
+              proceso de compra.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className='max-w-xs h-full bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center border-t-4 border-color-primary/70'
+          >
+            {/* Icono de garantía */}
+            <svg
+              className='text-color-primary text-3xl mb-2'
+              width='32'
+              height='32'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke='currentColor'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            >
+              <path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' />
+              <path d='m9 12 2 2 4-4' />
+            </svg>
+            <h4 className='font-bold text-lg mb-1 text-color-title'>
+              Compromiso y confianza
+            </h4>
+            <p className='text-color-text text-sm lg:text-base'>
+              Garantía, servicio postventa y transparencia en cada operación.
+            </p>
+          </motion.div>
+        </section>
+      </div>
       <Footer />
     </>
   );

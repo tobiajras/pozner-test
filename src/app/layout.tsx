@@ -1,14 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import './globals.css';
 import { metadataCompany } from './constants/constants';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins',
-});
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(metadataCompany.metadataBase),
@@ -24,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang='es'>
       <body
-        className={`${poppins.variable} ${inter.variable} font-inter font bg-color-bg-primary text-color-text antialiased`}
+        className={`${manrope.variable} font-manrope font bg-color-bg-primary text-color-text antialiased`}
       >
         {children}
       </body>

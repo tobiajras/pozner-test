@@ -1,162 +1,101 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { company } from '@/app/constants/constants';
+
+const galleryImages = [
+  {
+    src: '/assets/gallery/gallery-1000-1.webp',
+    alt: 'Imagen 1 Galería',
+  },
+  {
+    src: '/assets/gallery/gallery-1000-2.webp',
+    alt: 'Imagen 2 Galería',
+  },
+  {
+    src: '/assets/gallery/gallery-1000-3.webp',
+    alt: 'Imagen 3 Galería',
+  },
+];
 
 const Gallery = () => {
+  const autoplayOptions = {
+    delay: 3500,
+    stopOnInteraction: false,
+    stopOnMouseEnter: false,
+  };
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+    Autoplay(autoplayOptions),
+  ]);
+  const [clicked, setClicked] = useState(false);
+
   return (
-    <section className='mt-10 mb-16 md:mt-16 md:mb-24 bg-color-bg-primary relative overflow-hidden'>
+    <section className='mt-10 mb-16 md:mt-16 md:mb-24 relative overflow-hidden'>
       {/* Patrón de fondo sutil */}
       <div className='absolute inset-0 bg-grid-pattern opacity-5'></div>
-
-      <div className='max-w-6xl mx-auto px-4 sm:px-6 relative z-10'>
-        <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
-          <div className='h-10 w-1 bg-color-primary mr-4'></div>
-          <h3 className='font-light text-2xl sm:text-3xl text-color-title tracking-wide'>
-            Galería
-          </h3>
+      <div className='max-w-4xl mx-auto px-4 sm:px-6 relative z-10'>
+        {/* Título y subtítulo */}
+        <div className='text-center mb-5 md:mb-8 lg:mb-10'>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: '0px 0px -100px 0px' }}
+            className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-title mb-2 max-w-xl mx-auto'
+          >
+            En <span className='text-color-primary'>{company.name}</span>{' '}
+            encontrás el auto que buscas
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, margin: '0px 0px -100px 0px' }}
+            className='text-color-text max-w-2xl mx-auto md:text-lg font-medium'
+          >
+            Tenemos una amplia gama de vehículos para que encuentres el que
+            buscas.
+          </motion.p>
         </div>
-
-        {/* Collage de imágenes */}
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8'>
-          <div className='flex flex-col gap-6 md:gap-10 lg:gap-16'>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-              className='relative'
-            >
-              <div className='overflow-hidden rounded-lg relative'>
-                {/* Línea decorativa superior fija */}
-                <div className='absolute top-0 left-0 h-1 w-full bg-color-primary z-20'></div>
-
-                {/* Overlay con gradiente sutil siempre visible */}
-                <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10'></div>
-                <Image
-                  src='/assets/gallery/gallery-1350-1.webp'
-                  alt='Imagen 1'
-                  width={1350}
-                  height={1000}
-                  className='w-full h-auto object-cover'
-                />
+        <motion.article
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: '0px 0px -100px 0px' }}
+          onMouseUp={() => setClicked(false)}
+          onMouseDown={() => setClicked(true)}
+          className={`overflow-hidden relative ${
+            clicked ? 'cursor-grabbing' : 'cursor-grab'
+          }`}
+          ref={emblaRef}
+        >
+          <div className='flex'>
+            {galleryImages.map((img, idx) => (
+              <div
+                key={idx}
+                className='flex-[0_0_75%] sm:flex-[0_0_65%] md:flex-[0_0_60%] lg:flex-[0_0_65%] mr-3 sm:mr-5 md:mr-8 lg:mr-10'
+              >
+                <div className='relative w-full rounded-lg md:rounded-xl overflow-hidden'>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={1000}
+                    height={800}
+                    className='object-cover w-full h-full'
+                    priority
+                  />
+                  <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10'></div>
+                </div>
               </div>
-              {/* Borde con sombra fija */}
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-              className='relative'
-            >
-              <div className='overflow-hidden rounded-lg relative'>
-                <div className='absolute top-0 left-0 h-1 w-full bg-color-primary z-20'></div>
-
-                <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10'></div>
-                <Image
-                  src='/assets/gallery/gallery-1350-2.webp'
-                  alt='Imagen 2'
-                  width={1350}
-                  height={1000}
-                  className='w-full h-auto object-cover'
-                />
-              </div>
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-              className='relative'
-            >
-              <div className='overflow-hidden rounded-lg relative'>
-                <div className='absolute top-0 left-0 h-1 w-full bg-color-primary z-20'></div>
-
-                <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10'></div>
-                <Image
-                  src='/assets/gallery/gallery-1080-2.webp'
-                  alt='Imagen 3'
-                  width={1080}
-                  height={1350}
-                  className='w-full h-auto object-cover'
-                />
-              </div>
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
-            </motion.div>
+            ))}
           </div>
-
-          <div className='flex flex-col gap-10 md:gap-16'>
-            <motion.div
-              className='relative'
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            >
-              <div className='overflow-hidden rounded-lg relative'>
-                <div className='absolute top-0 left-0 h-1 w-full bg-color-primary z-20'></div>
-
-                <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10'></div>
-                <Image
-                  src='/assets/gallery/gallery-1080-1.webp'
-                  alt='Imagen 4'
-                  width={1080}
-                  height={1350}
-                  className='w-full h-auto object-cover'
-                />
-              </div>
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
-            </motion.div>
-            <motion.div
-              className='relative'
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            >
-              <div className='overflow-hidden rounded-lg relative'>
-                <div className='absolute top-0 left-0 h-1 w-full bg-color-primary z-20'></div>
-
-                <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10'></div>
-                <Image
-                  src='/assets/gallery/gallery-1350-3.webp'
-                  alt='Imagen 5'
-                  width={1350}
-                  height={1000}
-                  className='w-full h-auto object-cover'
-                />
-              </div>
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
-            </motion.div>
-            <motion.div
-              className='relative'
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            >
-              <div className='overflow-hidden rounded-lg relative'>
-                <div className='absolute top-0 left-0 h-1 w-full bg-color-primary z-20'></div>
-
-                <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-10'></div>
-                <Image
-                  src='/assets/gallery/gallery-1350-4.webp'
-                  alt='Imagen 6'
-                  width={1350}
-                  height={1000}
-                  className='w-full h-auto object-cover'
-                />
-              </div>
-              <div className='absolute inset-0 rounded-lg shadow-[0_5px_30px_-15px_rgba(0,0,0,0.5)] border border-neutral-200'></div>
-            </motion.div>
-          </div>
-        </div>
+          <div className='absolute w-3 sm:w-5 md:w-10 h-full top-0 left-0 bg-gradient-to-r from-color-bg-primary'></div>
+          <div className='absolute w-3 sm:w-5 md:w-10 h-full top-0 right-0 bg-gradient-to-l from-color-bg-primary'></div>
+        </motion.article>
       </div>
     </section>
   );
