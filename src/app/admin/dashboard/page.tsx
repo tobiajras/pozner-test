@@ -214,7 +214,7 @@ const SortableAutoCard = ({
             <div className='flex justify-between items-start'>
               <div>
                 <h3 className='text-lg font-semibold text-gray-900'>
-                  {auto.marca} {auto.modelo}
+                  {auto.modelo}
                 </h3>
                 <p className='text-gray-600'>{auto.año}</p>
                 {auto.precio && auto.precio > 0 ? (
