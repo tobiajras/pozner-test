@@ -213,12 +213,12 @@ const SortableAutoCard = ({
           <div className='flex-grow'>
             <div className='flex justify-between items-start'>
               <div>
-                <h3 className='text-lg font-semibold text-gray-900'>
+                <h3 className='text-lg lg:text-xl font-semibold text-gray-900'>
                   {auto.modelo}
                 </h3>
-                <p className='text-gray-600'>{auto.año}</p>
+                <p className='text-gray-600 lg:text-lg'>{auto.año}</p>
                 {auto.precio && auto.precio > 0 ? (
-                  <p className='text-xl font-bold text-color-primary mt-1'>
+                  <p className='text-xl lg:text-2xl font-bold text-color-primary mt-1'>
                     {auto.currency === 'ARS' ? '$' : 'US$'}
                     {auto.precio.toLocaleString(
                       auto.currency === 'ARS' ? 'es-AR' : 'en-US'
@@ -227,7 +227,7 @@ const SortableAutoCard = ({
                 ) : (
                   ''
                 )}
-                <p className='text-sm text-gray-500 mt-2'>
+                <p className='text-sm lg:text-base text-gray-500 mt-2'>
                   {auto.kilometraje.toLocaleString('es-AR')} km •{' '}
                   {auto.combustible}
                 </p>
@@ -1744,13 +1744,14 @@ export default function DashboardPage() {
                 >
                   <div className='p-4 sm:p-6'>
                     <div className='flex flex-col sm:flex-row gap-4'>
-                      <div className='relative w-full sm:w-[135px] aspect-[4/3] md:w-[155px] flex-shrink-0'>
+                      <div className='relative w-full sm:w-[155px] aspect-[4/3] md:w-[200px] flex-shrink-0'>
                         {auto.imagenes && auto.imagenes.length > 0 ? (
                           <Image
-                            priority={idx < 4 ? true : false}
+                            priority
                             src={auto.imagenes[0]}
                             alt={`${auto.modelo}`}
-                            fill
+                            width={400}
+                            height={320}
                             className='object-cover rounded-lg'
                           />
                         ) : (
@@ -1770,12 +1771,14 @@ export default function DashboardPage() {
                       <div className='flex-grow'>
                         <div className='flex justify-between items-start'>
                           <div>
-                            <h3 className='text-lg font-semibold text-gray-900'>
+                            <h3 className='text-lg lg:text-xl font-semibold text-gray-900'>
                               {auto.marca} {auto.modelo}
                             </h3>
-                            <p className='text-gray-600'>{auto.año}</p>
+                            <p className='text-gray-600 lg:text-lg'>
+                              {auto.año}
+                            </p>
                             {auto.precio && auto.precio > 0 ? (
-                              <p className='text-xl font-bold text-color-primary mt-1'>
+                              <p className='text-xl lg:text-2xl font-bold text-color-primary mt-1'>
                                 {auto.currency === 'ARS' ? '$' : 'US$'}
                                 {auto.precio.toLocaleString(
                                   auto.currency === 'ARS' ? 'es-AR' : 'en-US'
@@ -1784,7 +1787,7 @@ export default function DashboardPage() {
                             ) : (
                               ''
                             )}
-                            <p className='text-sm text-gray-500 mt-2'>
+                            <p className='text-sm lg:text-base text-gray-500 mt-2'>
                               {auto.kilometraje.toLocaleString('es-AR')} km •{' '}
                               {auto.combustible}
                             </p>
