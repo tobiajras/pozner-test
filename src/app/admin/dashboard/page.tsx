@@ -143,7 +143,6 @@ interface SortableAutoCardProps {
 
 const SortableAutoCard = ({
   auto,
-  index,
   onEdit,
   onDelete,
   onSell,
