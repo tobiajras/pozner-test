@@ -1733,7 +1733,7 @@ export default function DashboardPage() {
               transition={{ duration: 0.3 }}
               className='space-y-4'
             >
-              {resultadosBusqueda.map((auto, idx) => (
+              {resultadosBusqueda.map((auto) => (
                 <div
                   key={auto.id}
                   className='relative bg-white rounded-lg overflow-hidden [box-shadow:0_0_10px_rgba(0,0,0,0.08)] cursor-pointer hover:[box-shadow:0_0_10px_rgba(0,0,0,0.2)]'
