@@ -15,6 +15,7 @@ import { motion } from 'framer-motion';
 import { API_BASE_URL, TENANT } from '@/app/constants/constants';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ShareMenu from '@/components/ShareMenu';
 
 interface ApiCar {
   id: string;
@@ -394,18 +395,28 @@ export default function AutoDetailPage() {
                 )}
               </div>
 
-              {/* Botón de WhatsApp */}
+              {/* Botones de acción */}
               {car.active && (
-                <div className='flex mt-3'>
+                <div className='flex flex-col sm:flex-row gap-3 mt-3 '>
                   <Link
                     href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='bg-color-primary hover:bg-color-primary-dark text-color-title-light flex gap-2 font-medium py-3 px-8 rounded text-center transition-colors w-full justify-center'
+                    className='w-full h-12 bg-color-primary hover:bg-color-primary-dark text-color-title-light flex gap-2 font-medium rounded text-center transition-colors justify-center items-center'
                   >
                     <WhatsappIcon className='w-6 h-6' />
                     <span>Consultar</span>
                   </Link>
+                  <div className='w-full h-12 relative'>
+                    <ShareMenu
+                      url={
+                        typeof window !== 'undefined'
+                          ? window.location.href
+                          : ''
+                      }
+                      title={`${car.model} ${car.year}`}
+                    />
+                  </div>
                 </div>
               )}
 
