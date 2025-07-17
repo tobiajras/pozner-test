@@ -181,13 +181,14 @@ const SortableAutoCard = ({
     >
       <div className='p-4 sm:p-6'>
         <div className='flex flex-col sm:flex-row gap-4'>
-          <div className='relative w-full sm:w-[135px] aspect-[4/3] md:w-[155px] flex-shrink-0'>
+          <div className='relative w-full sm:w-[155px] aspect-[4/3] md:w-[200px] flex-shrink-0'>
             {auto.imagenes && auto.imagenes.length > 0 ? (
               <Image
-                priority={index < 4 ? true : false}
+                priority
                 src={auto.imagenes[0]}
                 alt={`${auto.modelo}`}
-                fill
+                width={400}
+                height={320}
                 className='object-cover rounded-lg'
               />
             ) : (

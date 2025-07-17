@@ -377,11 +377,13 @@ export default function AutoDetailPage() {
                   <p className='text-color-text text-sm'>Combustible</p>
                   <p className='text-color-title'>{car.fuel}</p>
                 </div>
-                {car.doors && (
+                {car.doors ? (
                   <div>
                     <p className='text-color-text text-sm'>Puertas</p>
                     <p className='text-color-title'>{car.doors}</p>
                   </div>
+                ) : (
+                  ''
                 )}
                 {car.mileage == 0 && (
                   <div className='flex justify-start items-center'>
