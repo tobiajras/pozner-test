@@ -378,8 +378,6 @@ export default function DashboardPage() {
   const [totalResultados, setTotalResultados] = useState(0);
   const [paginasBusqueda, setPaginasBusqueda] = useState(1);
 
-  console.log(autos);
-
   // Configuración de sensores para DnD
   const sensors = useSensors(
     useSensor(PointerSensor, {

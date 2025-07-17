@@ -120,8 +120,6 @@ const AutoModal = ({
   const puertasOptions = ['2', '3', '4', '5'];
   const transmisionOptions = ['Manual', 'Automática', 'CVT'];
 
-  console.log(formData);
-
   // Cargar categorías del API
   useEffect(() => {
     const fetchCategories = async () => {
