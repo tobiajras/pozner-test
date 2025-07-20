@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
+import useEmblaCarousel from 'embla-carousel-react';
 import ArrowIcon from './icons/ArrowIcon';
 import CloseIcon from './icons/CloseIcon';
 
@@ -18,32 +19,74 @@ const ImageGalleryModal = ({
   currentIndex,
   onClose,
 }: ImageGalleryModalProps) => {
-  const [index, setIndex] = useState(currentIndex);
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: 'center',
+    skipSnaps: false,
+    startIndex: currentIndex, // Establecer la posición inicial directamente
+  });
 
-  const handlePrevious = () => {
-    setIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
+  const [selectedIndex, setSelectedIndex] = useState(currentIndex);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
-  const handleNext = () => {
-    setIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  const scrollTo = useCallback(
+    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi]
+  );
+
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  );
+
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  );
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onSelect();
+    setScrollSnaps(emblaApi.scrollSnapList());
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
+
+    return () => {
+      emblaApi.off('select', onSelect);
+      emblaApi.off('reInit', onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowLeft') handlePrevious();
-      if (e.key === 'ArrowRight') handleNext();
+      if (e.key === 'ArrowLeft') scrollPrev();
+      if (e.key === 'ArrowRight') scrollNext();
     };
 
     window.addEventListener('keydown', handleKeyDown);
+
     // Prevenir el scroll cuando el modal está abierto
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    const originalPaddingRight = document.body.style.paddingRight;
+
     document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = originalStyle;
+      document.body.style.paddingRight = originalPaddingRight;
     };
-  }, [onClose]);
+  }, [onClose, scrollPrev, scrollNext]);
 
   return (
     <div
@@ -62,43 +105,64 @@ const ImageGalleryModal = ({
           <CloseIcon className='w-6 h-6 lg:w-8 lg:h-8' />
         </button>
 
-        {/* Imagen actual */}
-        <div className='relative w-full aspect-[4/3] flex items-center justify-center'>
-          <Image
-            src={`${images[index]}`}
-            alt={`Imagen ${index + 1}`}
-            fill
-            className='object-cover'
-            sizes='(max-width: 1024px) 90vw, 1024px'
-            priority
-          />
+        {/* Contenedor del carrusel */}
+        <div className='overflow-hidden' ref={emblaRef}>
+          <div className='flex'>
+            {images.map((image, index) => (
+              <div key={index} className='relative min-w-full aspect-[4/3]'>
+                <Image
+                  src={image}
+                  alt={`Imagen ${index + 1}`}
+                  fill
+                  className='object-cover'
+                  draggable={false}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Botones de navegación */}
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            handlePrevious();
-          }}
-          className='absolute left-2 top-1/2 -translate-y-1/2 text-white transition-colors bg-black/40 hover:bg-black/80 p-2 rounded-full'
-        >
-          <ArrowIcon className='w-6 h-6 rotate-180' />
-        </button>
+        {images.length > 1 && (
+          <>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                scrollPrev();
+              }}
+              className={`absolute left-2 top-1/2 -translate-y-1/2 text-white transition-colors bg-black/40 hover:bg-black/80 p-2 rounded-full ${
+                selectedIndex === 0
+                  ? 'opacity-0 pointer-events-none'
+                  : 'opacity-100 cursor-pointer'
+              }`}
+              disabled={selectedIndex === 0}
+            >
+              <ArrowIcon className='w-6 h-6 rotate-180' />
+            </button>
 
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            handleNext();
-          }}
-          className='absolute right-2 top-1/2 -translate-y-1/2 text-white transition-colors bg-black/40 hover:bg-black/80 p-2 rounded-full'
-        >
-          <ArrowIcon className='w-6 h-6' />
-        </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                scrollNext();
+              }}
+              className={`absolute right-2 top-1/2 -translate-y-1/2 text-white transition-colors bg-black/40 hover:bg-black/80 p-2 rounded-full ${
+                selectedIndex === images.length - 1
+                  ? 'opacity-0 pointer-events-none'
+                  : 'opacity-100 cursor-pointer'
+              }`}
+              disabled={selectedIndex === images.length - 1}
+            >
+              <ArrowIcon className='w-6 h-6' />
+            </button>
+          </>
+        )}
 
         {/* Contador de imágenes */}
-        <div className='absolute bottom-2 left-1/2 -translate-x-1/2 text-white bg-black/50 px-3 py-1 rounded-full text-sm'>
-          {index + 1} / {images.length}
-        </div>
+        {images.length > 1 && (
+          <div className='absolute bottom-2 left-1/2 -translate-x-1/2 text-white bg-black/50 px-3 py-1 rounded-full text-sm'>
+            {selectedIndex + 1} / {images.length}
+          </div>
+        )}
       </div>
     </div>
   );

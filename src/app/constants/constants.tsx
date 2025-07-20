@@ -3,24 +3,25 @@ export const company = {
   darkmode: true,
   shortAdress: true,
   favicon: false,
-  id: 'vitacars',
-  name: 'VITA CARS',
-  adress: 'Ledesma 3120',
-  city: 'Saladillo',
-  email: null,
-  instagram: 'vitacarsm',
-  facebook: 'https://www.facebook.com/matias.N.vita/',
-  whatsapp: ['2345458113'],
-  googlemapsLink: 'https://maps.app.goo.gl/Q8bduW2v1cNPS6VV7',
+  price: true,
+  id: 'maddalenaautomotores',
+  name: 'Maddalena Automotores',
+  adress: 'Figueroa Alcorta 360',
+  city: 'Bell Ville - Cba',
+  email: 'maddalenaautomotores@hotmail.com',
+  instagram: 'maddalenaautomotores',
+  facebook: 'https://www.facebook.com/madalenaautomomotores/',
+  whatsapp: ['3537654068'],
+  googlemapsLink: 'https://maps.app.goo.gl/VowARv5kqtf137wq9',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1018305.7015445657!2d-59.95761477369754!3d-35.46323443543396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bde1300b59b33f%3A0xe4308df4f66e6fb!2sVitaCars!5e0!3m2!1ses-419!2sar!4v1752200379288!5m2!1ses-419!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.951245113914!2d-62.68486!3d-32.634121799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cbfbce0d4e80c7%3A0x456c71c4c09c8463!2sMADDALENA%20AUTOMOTORES!5e0!3m2!1ses-419!2sar!4v1752844361411!5m2!1ses-419!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
-    { day: 'Martes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
-    { day: 'Miércoles', hours: ['8:30 a 12:30 y 16 a 20hs'] },
-    { day: 'Jueves', hours: ['8:30 a 12:30 y 16 a 20hs'] },
-    { day: 'Viernes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
-    { day: 'Sábado', hours: ['9 a 13hs'] },
+    { day: 'Lunes', hours: ['8:00 a 12:00 y 16 a 20hs'] },
+    { day: 'Martes', hours: ['8:00 a 12:00 y 16 a 20hs'] },
+    { day: 'Miércoles', hours: ['8:00 a 12:00 y 16 a 20hs'] },
+    { day: 'Jueves', hours: ['8:00 a 12:00 y 16 a 20hs'] },
+    { day: 'Viernes', hours: ['8:00 a 12:00 y 16 a 20hs'] },
+    { day: 'Sábado', hours: ['9 a 12hs'] },
     // { day: 'Domingo', hours: ['10:00 a 19:00'] },
   ],
   footer:
@@ -31,11 +32,13 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'vitacars';
 
 export const metadataCompany = {
-  metadataBase: 'https://vitacars.vercel.app/',
-  title: 'VITA CARS - Compra y Venta de Motos',
+  metadataBase: 'https://maddalenaautomotores.vercel.app/',
+  title: 'Maddalena Automotores - Compra y Venta de Motos',
   description:
     'Compra y Venta de Motos: Vehículos seleccionados, atención personalizada.',
 };
+
+// Reemplaza los vehiculos del 1 al 12 en el orden que te paso acontinuacion. Esos textos tiene que ir tal cual en la descripcion de cada uno. El name del vehiculo tiene que estar en Title Case. No agregues ni quites ningun atributo, unicamente tenes que actualizar los valores para que coincidan con el vehiculo. Si no te paso precio o kilometraje pone 999999:
 
 export const preguntas = [
   {

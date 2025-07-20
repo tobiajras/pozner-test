@@ -74,7 +74,7 @@ const ShareMenu = ({ url, title }: ShareMenuProps) => {
     return (
       <button
         onClick={handleNativeShare}
-        className='flex items-center justify-center gap-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg transition-colors h-full w-full'
+        className='flex items-center justify-center gap-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded transition-colors h-full w-full'
       >
         <ShareIcon className='w-5 h-5' />
         <span>Compartir</span>
@@ -86,7 +86,7 @@ const ShareMenu = ({ url, title }: ShareMenuProps) => {
     <div className='relative h-full' ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className='flex items-center justify-center gap-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg transition-colors h-full w-full'
+        className='flex items-center justify-center gap-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded transition-colors h-full w-full'
       >
         <ShareIcon className='w-5 h-5' />
         <span>Compartir</span>

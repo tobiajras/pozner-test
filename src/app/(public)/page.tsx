@@ -7,7 +7,7 @@ import Gallery from '@/components/Gallery';
 import PreguntasHome from '@/components/PreguntasHome';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import WhyChooseUs from '@/components/WhyChooseUs';
+import Proceso from '@/components/Proceso';
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
               <CarrouselFeatured title='Ingresos' />
               <CarrouselFavorites title='Destacados' />
             </section>
-            <WhyChooseUs />
+            <Proceso />
             <Gallery />
             <PreguntasHome />
           </main>

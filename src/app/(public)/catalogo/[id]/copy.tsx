@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -62,6 +62,10 @@ export default function AutoDetailPage() {
   const [showModal, setShowModal] = useState(false);
   const [modalStartIndex, setModalStartIndex] = useState(0);
   const [orderedImages, setOrderedImages] = useState<ApiCar['Images']>([]);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState(0);
+  const [dragOffset, setDragOffset] = useState(0);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = useCallback(
     (index: number) => {
@@ -84,6 +88,47 @@ export default function AutoDetailPage() {
       scrollTo(selectedIndex + 1);
     }
   }, [embla, selectedIndex, car, scrollTo]);
+
+  // Funciones para el drag
+  const handleDragStart = useCallback(
+    (e: React.MouseEvent | React.TouchEvent) => {
+      setIsDragging(true);
+      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+      setDragStart(clientX);
+      setDragOffset(0);
+    },
+    []
+  );
+
+  const handleDragMove = useCallback(
+    (e: React.MouseEvent | React.TouchEvent) => {
+      if (!isDragging) return;
+
+      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+      const offset = clientX - dragStart;
+      setDragOffset(offset);
+    },
+    [isDragging, dragStart]
+  );
+
+  const handleDragEnd = useCallback(() => {
+    if (!isDragging) return;
+
+    const threshold = 50; // Umbral mínimo para cambiar de imagen
+
+    if (dragOffset > threshold && selectedIndex > 0) {
+      scrollTo(selectedIndex - 1);
+    } else if (
+      dragOffset < -threshold &&
+      car &&
+      selectedIndex < car.Images.length - 1
+    ) {
+      scrollTo(selectedIndex + 1);
+    }
+
+    setIsDragging(false);
+    setDragOffset(0);
+  }, [isDragging, dragOffset, selectedIndex, car, scrollTo]);
 
   // Manejar las teclas de flecha
   useEffect(() => {
@@ -185,7 +230,7 @@ export default function AutoDetailPage() {
             </div>
           </div>
 
-          <div className='flex flex-col lg:flex-row gap-1 md:gap-12 w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0'>
+          <div className='flex flex-col lg:flex-row gap-8 md:gap-12 w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0'>
             {/* Galería de imágenes - Skeleton */}
             <div className='space-y-6 w-full lg:w-2/3'>
               <div className=''>
@@ -265,12 +310,87 @@ export default function AutoDetailPage() {
           </div>
         </div>
 
-        <div className='flex flex-col lg:flex-row gap-1 md:gap-12 w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0'>
+        <div className='flex flex-col lg:flex-row gap-8 md:gap-12 w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:px-10 xl:px-0'>
           {/* Galería de imágenes */}
           <div className='space-y-6 w-full lg:w-3/5'>
             <div className=''>
               {/* Imagen principal */}
-              <div className='relative mb-3'>
+              <div className='relative mb-6'>
+                <div
+                  ref={imageRef}
+                  onMouseDown={handleDragStart}
+                  onMouseMove={handleDragMove}
+                  onMouseUp={handleDragEnd}
+                  onMouseLeave={handleDragEnd}
+                  onTouchStart={handleDragStart}
+                  onTouchMove={handleDragMove}
+                  onTouchEnd={handleDragEnd}
+                  className='relative w-full aspect-[4/3] rounded-xl overflow-hidden cursor-grab active:cursor-grabbing group bg-gray-50'
+                  style={{
+                    transform: isDragging
+                      ? `translateX(${dragOffset}px)`
+                      : 'translateX(0)',
+                    transition: isDragging ? 'none' : 'transform 0.3s ease-out',
+                  }}
+                >
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    className='w-full h-full flex items-center justify-center'
+                  >
+                    <Image
+                      src={
+                        orderedImages[selectedIndex]?.imageUrl ||
+                        '/assets/placeholder.webp'
+                      }
+                      alt={`${car.model} - Imagen ${selectedIndex + 1}`}
+                      fill
+                      className='object-contain'
+                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                      priority
+                    />
+                  </motion.div>
+
+                  {/* Botón invisible para abrir modal */}
+                  <button
+                    onClick={() => {
+                      setModalStartIndex(selectedIndex);
+                      setShowModal(true);
+                    }}
+                    className='absolute inset-0 z-10 cursor-zoom-in'
+                    style={{ pointerEvents: isDragging ? 'none' : 'auto' }}
+                  />
+
+                  {/* Overlay de zoom al hacer hover */}
+                  <div className='absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+                    <div className='bg-white/90 rounded-full p-3 shadow-lg'>
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        className='w-6 h-6 text-gray-800'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth={2}
+                          d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7'
+                        />
+                      </svg>
+                    </div>
+                  </div>
+
+                  {!car.active && (
+                    <div className='absolute inset-0 bg-black/70 flex items-center justify-center'>
+                      <span className='bg-red-500 text-white text-xl md:text-2xl font-medium px-6 py-4 md:px-10 md:py-5 rounded-full'>
+                        Pausado
+                      </span>
+                    </div>
+                  )}
+                </div>
+
                 {/* Botones de navegación para la imagen principal */}
                 {car.Images.length > 1 && (
                   <>
@@ -278,7 +398,7 @@ export default function AutoDetailPage() {
                       onClick={scrollPrev}
                       className={`absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-800 p-3 rounded-full transition-all shadow-lg ${
                         selectedIndex === 0
-                          ? 'opacity-0 pointer-events-none'
+                          ? 'opacity-0'
                           : 'opacity-100 cursor-pointer'
                       }`}
                       disabled={selectedIndex === 0}
@@ -290,7 +410,7 @@ export default function AutoDetailPage() {
                       onClick={scrollNext}
                       className={`absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-800 p-3 rounded-full transition-all shadow-lg ${
                         selectedIndex === car.Images.length - 1
-                          ? 'opacity-0 pointer-events-none'
+                          ? 'opacity-0'
                           : 'opacity-100 cursor-pointer'
                       }`}
                       disabled={selectedIndex === car.Images.length - 1}
@@ -307,69 +427,34 @@ export default function AutoDetailPage() {
                     {selectedIndex + 1}/{car.Images.length}
                   </div>
                 )}
-                <button
-                  onClick={() => {
-                    setModalStartIndex(0);
-                    setShowModal(true);
-                  }}
-                  className='relative w-full aspect-[4/3] rounded-xl overflow-hidden group bg-gray-50 cursor-zoom-in'
-                >
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5, ease: 'easeOut' }}
-                    className='w-full h-full flex items-center justify-center'
-                  >
-                    <Image
-                      src={
-                        orderedImages[0]?.imageUrl || '/assets/placeholder.webp'
-                      }
-                      alt={`${car.model} - Imagen principal`}
-                      fill
-                      className='object-contain'
-                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                      priority
-                    />
-                  </motion.div>
-
-                  {/* Overlay de sombra al hacer hover */}
-                  <div className='absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-
-                  {!car.active && (
-                    <div className='absolute inset-0 bg-black/70 flex items-center justify-center'>
-                      <span className='bg-red-500 text-white text-xl md:text-2xl font-medium px-6 py-4 md:px-10 md:py-5 rounded-full'>
-                        Pausado
-                      </span>
-                    </div>
-                  )}
-                </button>
               </div>
 
               {/* Miniaturas - grid de 3 columnas, ocultas en mobile */}
               {car.Images.length > 1 && (
                 <div className='hidden md:grid grid-cols-3 gap-3'>
-                  {orderedImages.slice(1, 4).map((image, index) => {
-                    const actualIndex = index + 1; // Índice real en el array (1, 2, 3)
+                  {orderedImages.slice(0, 3).map((image, index) => {
                     const isLastThumbnail = index === 2;
-                    const hasMoreImages = car.Images.length > 4;
+                    const hasMoreImages = car.Images.length > 3;
                     const shouldShowBlur = isLastThumbnail && hasMoreImages;
 
                     return (
                       <button
-                        key={actualIndex}
+                        key={index}
                         onClick={() => {
                           if (shouldShowBlur) {
-                            // Si es la última miniatura con blur, abrir modal desde la imagen 4
-                            setModalStartIndex(3);
+                            // Si es la última miniatura con blur, abrir modal desde la imagen 3
+                            setModalStartIndex(2);
                             setShowModal(true);
                           } else {
-                            // Para las miniaturas 1, 2 y 3, abrir modal desde esa imagen
-                            setModalStartIndex(actualIndex);
+                            // Para las miniaturas 1 y 2, abrir modal desde esa imagen
+                            setModalStartIndex(index);
                             setShowModal(true);
                           }
                         }}
-                        className={`relative aspect-[4/3] rounded-lg overflow-hidden outline-none transition-all bg-gray-50 cursor-zoom-in group ${
-                          selectedIndex === actualIndex ? '' : ''
+                        className={`relative aspect-[4/3] rounded-lg overflow-hidden outline-none transition-all bg-gray-50 ${
+                          selectedIndex === index
+                            ? 'ring-2 ring-color-primary scale-105'
+                            : 'hover:scale-105 hover:ring-1 hover:ring-gray-300'
                         }`}
                       >
                         <motion.div
@@ -380,7 +465,7 @@ export default function AutoDetailPage() {
                         >
                           <Image
                             src={image.thumbnailUrl}
-                            alt={`${car.model} - Miniatura ${actualIndex + 1}`}
+                            alt={`${car.model} - Miniatura ${index + 1}`}
                             fill
                             sizes='(max-width: 768px) 33vw, 200px'
                             className={`object-contain ${
@@ -389,15 +474,12 @@ export default function AutoDetailPage() {
                           />
                         </motion.div>
 
-                        {/* Overlay de sombra al hacer hover */}
-                        <div className='absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-
                         {/* Overlay con contador en la última miniatura si hay más imágenes */}
                         {shouldShowBlur && (
                           <div className='absolute inset-0 bg-black/40 flex items-center justify-center'>
                             <div className='text-center text-white'>
                               <div className='text-lg font-bold'>
-                                +{car.Images.length - 4}
+                                +{car.Images.length - 3}
                               </div>
                             </div>
                           </div>

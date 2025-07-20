@@ -47,8 +47,7 @@ const Gallery = () => {
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
             className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-title mb-2 max-w-xl mx-auto'
           >
-            En <span className='text-color-primary'>{company.name}</span>{' '}
-            encontrás el auto que buscas
+            Somos <span className='text-color-primary'>{company.name}</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -57,8 +56,8 @@ const Gallery = () => {
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
             className='text-color-text max-w-2xl mx-auto md:text-lg font-medium'
           >
-            Tenemos una amplia gama de vehículos para que encuentres el que
-            buscas.
+            Cada vehículo seleccionado con el cuidado y la calidad que nos
+            caracteriza.
           </motion.p>
         </div>
         <motion.article

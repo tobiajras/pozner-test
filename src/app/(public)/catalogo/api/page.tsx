@@ -16,9 +16,9 @@ import {
   SelectItem,
 } from '@/components/ui/select';
 import CloseIcon from '@/components/icons/CloseIcon';
+import { API_BASE_URL, TENANT } from '@/app/constants/constants';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import catalogo from '@/data/catalogo.json';
 
 interface ApiCar {
   id: string;
@@ -26,10 +26,8 @@ interface ApiCar {
   model: string;
   year: number;
   color: string;
-  price: {
-    valor: number;
-    moneda: string;
-  };
+  price: string;
+  currency: 'USD' | 'ARS';
   description: string;
   categoryId: string;
   mileage: number;
@@ -48,11 +46,16 @@ interface ApiCar {
     createdAt: string;
     updatedAt: string;
   };
-  Images: {
+  images: {
     thumbnailUrl: string;
-    imageUrl: string;
-    order: number;
   }[];
+}
+
+interface ApiResponse {
+  total: number;
+  totalPages: number;
+  currentPage: number;
+  cars: ApiCar[];
 }
 
 interface Category {
@@ -82,113 +85,63 @@ const CatalogoPage = () => {
   const [categorias, setCategorias] = useState<Category[]>([]);
 
   // Función para obtener todas las marcas disponibles
-  const fetchMarcas = () => {
+  const fetchMarcas = async () => {
     try {
-      // Obtener marcas únicas del catálogo
-      const marcas = Array.from(
-        new Set(catalogo.map((car) => car.marca))
-      ).sort();
-      setTodasLasMarcas(marcas);
+      const response = await fetch(
+        `${API_BASE_URL}/api/cars/brands?tenant=${TENANT}`
+      );
+      if (!response.ok) {
+        throw new Error('Error al cargar las marcas');
+      }
+      const data: string[] = await response.json();
+      setTodasLasMarcas(data.sort());
     } catch (error) {
       console.error('Error al cargar las marcas:', error);
     }
   };
 
-  // Función para obtener las categorías del catálogo
-  const fetchCategories = () => {
+  // Función para obtener las categorías del API
+  const fetchCategories = async () => {
     try {
-      // Obtener categorías únicas del catálogo
-      const categoriasUnicas = Array.from(
-        new Set(catalogo.map((car) => car.categoria))
+      const response = await fetch(
+        `${API_BASE_URL}/api/categories?tenant=${TENANT}`
       );
-      const categoriasProcesadas = categoriasUnicas.map((cat) => ({
-        id: cat.toLowerCase(),
-        name: cat,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      }));
-      setCategorias(categoriasProcesadas);
+      if (!response.ok) {
+        throw new Error('Error al cargar las categorías');
+      }
+      const data: Category[] = await response.json();
+      setCategorias(data);
     } catch (error) {
       console.error('Error al cargar las categorías:', error);
     }
   };
 
   // Función para obtener los autos con filtros
-  const fetchCars = (
+  const fetchCars = async (
     page: number,
     filters?: { search?: string; marca?: string; categoria?: string }
   ) => {
     setLoading(true);
     try {
-      let filteredCars = [...catalogo];
+      let url = `${API_BASE_URL}/api/cars?page=${page}&limit=${ITEMS_PER_PAGE}&sort=position:desc&tenant=${TENANT}`;
 
-      // Aplicar filtros
       if (filters?.search) {
-        const searchTerm = filters.search.toLowerCase();
-        filteredCars = filteredCars.filter(
-          (car) =>
-            car.name.toLowerCase().includes(searchTerm) ||
-            car.marca.toLowerCase().includes(searchTerm)
-        );
+        url += `&model=${encodeURIComponent(filters.search)}`;
       }
       if (filters?.marca) {
-        filteredCars = filteredCars.filter(
-          (car) => car.marca.toLowerCase() === filters.marca?.toLowerCase()
-        );
+        url += `&brand=${encodeURIComponent(filters.marca)}`;
       }
       if (filters?.categoria) {
-        filteredCars = filteredCars.filter(
-          (car) =>
-            car.categoria.toLowerCase() === filters.categoria?.toLowerCase()
-        );
+        url += `&category=${encodeURIComponent(filters.categoria)}`;
       }
 
-      // Calcular paginación
-      const total = filteredCars.length;
-      const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
-      const start = (page - 1) * ITEMS_PER_PAGE;
-      const end = start + ITEMS_PER_PAGE;
-
-      // Obtener autos de la página actual
-      const paginatedCars: ApiCar[] = filteredCars
-        .slice(start, end)
-        .map((car) => ({
-          id: car.id,
-          brand: car.marca,
-          model: car.name,
-          year: car.ano,
-          color: '',
-          price: {
-            valor: car.precio.valor,
-            moneda: car.precio.moneda,
-          },
-          description: car.descripcion,
-          categoryId: car.categoria,
-          mileage: car.kilometraje,
-          transmission: car.transmision,
-          fuel: car.combustible,
-          doors: car.puertas,
-          position: 0,
-          featured: false,
-          favorite: false,
-          active: true,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-          Category: {
-            id: car.categoria.toLowerCase(),
-            name: car.categoria,
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
-          },
-          Images: car.images.map((img, index) => ({
-            thumbnailUrl: `/assets/catalogo/${img}`,
-            imageUrl: `/assets/catalogo/${img}`,
-            order: index,
-          })),
-        }));
-
-      setCars(paginatedCars);
-      setTotalPages(totalPages);
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Error al cargar los vehículos');
+      }
+      const data: ApiResponse = await response.json();
+      setCars(data.cars);
+      setTotalPages(data.totalPages);
     } catch (error) {
       console.error('Error al cargar los vehículos:', error);
     } finally {
@@ -307,7 +260,7 @@ const CatalogoPage = () => {
         <div className='w-full flex justify-center mt-8 md:mt-10'>
           <div className='max-w-md sm:max-w-2xl lg:max-w-6xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 xl:mx-0'>
             {/* Contenedor principal con fondo oscuro y sombra */}
-            <div className='bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
+            <div className='bg-color-secondary rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-5'>
               {/* Título de la sección de filtros */}
               <div className='mb-5 flex items-center justify-between'>
                 <div className='flex items-center'>
@@ -331,7 +284,7 @@ const CatalogoPage = () => {
                     placeholder='Buscar vehículo...'
                     value={searchValue}
                     onChange={handleSearch}
-                    className='w-full pl-10 pr-4 py-3 border border-neutral-700 rounded-md bg-neutral-800/80 outline-none text-white placeholder-white/40 focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all'
+                    className='w-full pl-10 pr-4 py-3 border border-neutral-700 rounded-md bg-black outline-none text-white placeholder-white/40 focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all'
                   />
                   <div className='absolute left-0 top-0 h-full px-3 flex items-center text-white/50'>
                     <SearchIcon className='w-5 h-5' />
@@ -341,7 +294,7 @@ const CatalogoPage = () => {
                     className={`${
                       company.dark
                         ? 'hover:text-color-primary-light'
-                        : 'hover:text-color-primary-dark'
+                        : 'hover:text-color-primary'
                     } absolute right-0 top-0 h-full px-4 text-white/50 transition-colors`}
                   >
                     Buscar
@@ -356,13 +309,13 @@ const CatalogoPage = () => {
                       updateFilters('marca', value === 'all' ? '' : value);
                     }}
                   >
-                    <SelectTrigger className='h-10 flex-1 px-3 py-2 border border-neutral-700 rounded-md bg-neutral-800/80 text-white text-sm outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
+                    <SelectTrigger className='h-10 flex-1 px-3 py-2 border border-neutral-700 rounded-md bg-black text-white text-sm outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
                       <SelectValue placeholder='Marca' />
                     </SelectTrigger>
-                    <SelectContent className='bg-neutral-800 border border-neutral-700 text-white rounded-lg shadow-lg max-h-60 overflow-y-auto'>
+                    <SelectContent className='bg-black border border-neutral-700 text-white rounded-lg shadow-lg max-h-60 overflow-y-auto'>
                       <SelectItem
                         value='all'
-                        className='text-neutral-400 hover:text-white hover:bg-neutral-700'
+                        className='text-neutral-400 hover:text-white hover:bg-black'
                       >
                         Todas las marcas
                       </SelectItem>
@@ -370,7 +323,7 @@ const CatalogoPage = () => {
                         <SelectItem
                           key={marca}
                           value={marca}
-                          className='hover:text-color-primary hover:bg-neutral-700'
+                          className='hover:text-color-primary hover:bg-black'
                         >
                           {marca}
                         </SelectItem>
@@ -384,13 +337,13 @@ const CatalogoPage = () => {
                       updateFilters('categoria', value === 'all' ? '' : value);
                     }}
                   >
-                    <SelectTrigger className='h-10 flex-1 px-3 py-2 border border-neutral-700 rounded-md bg-neutral-800/80 text-white text-sm outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
+                    <SelectTrigger className='h-10 flex-1 px-3 py-2 border border-neutral-700 rounded-md bg-black text-white text-sm outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
                       <SelectValue placeholder='Categoría' />
                     </SelectTrigger>
-                    <SelectContent className='bg-neutral-800 border border-neutral-700 text-white rounded-lg shadow-lg max-h-60 overflow-y-auto'>
+                    <SelectContent className='bg-black border border-neutral-700 text-white rounded-lg shadow-lg max-h-60 overflow-y-auto'>
                       <SelectItem
                         value='all'
-                        className='text-neutral-400 hover:text-white hover:bg-neutral-700'
+                        className='text-neutral-400 hover:text-white hover:bg-black'
                       >
                         Todas las categorías
                       </SelectItem>
@@ -398,9 +351,10 @@ const CatalogoPage = () => {
                         <SelectItem
                           key={categoria.id}
                           value={categoria.name}
-                          className='hover:text-color-primary hover:bg-neutral-700'
+                          className='hover:text-color-primary hover:bg-black'
                         >
-                          {categoria.name}
+                          {categoria.name.charAt(0).toUpperCase() +
+                            categoria.name.slice(1)}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -421,7 +375,7 @@ const CatalogoPage = () => {
                       placeholder='Ej: Mercedes Benz, Ford...'
                       value={searchValue}
                       onChange={handleSearch}
-                      className='w-full px-4 py-3 border border-neutral-700 rounded-md bg-neutral-800/80 outline-none text-white placeholder-white/40 focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all'
+                      className='w-full px-4 py-3 border border-neutral-700 rounded-md bg-black outline-none text-white placeholder-white/40 focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all'
                     />
                     <button
                       type='submit'
@@ -450,13 +404,13 @@ const CatalogoPage = () => {
                           updateFilters('marca', value === 'all' ? '' : value);
                         }}
                       >
-                        <SelectTrigger className='h-full w-full sm:w-44 px-4 py-3 pr-10 border border-neutral-700 rounded-md bg-neutral-800/80 text-white outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
+                        <SelectTrigger className='h-full w-full sm:w-44 px-4 py-3 pr-10 border border-neutral-700 rounded-md bg-black text-white outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
                           <SelectValue placeholder='Todas las marcas' />
                         </SelectTrigger>
-                        <SelectContent className='bg-neutral-800 border border-neutral-700 text-white rounded-lg shadow-lg'>
+                        <SelectContent className='bg-black border border-neutral-700 text-white rounded-lg shadow-lg'>
                           <SelectItem
                             value='all'
-                            className='text-neutral-400 hover:text-white hover:bg-neutral-700'
+                            className='text-neutral-400 hover:text-white hover:bg-black'
                           >
                             Todas las marcas
                           </SelectItem>
@@ -468,7 +422,7 @@ const CatalogoPage = () => {
                                 company.dark
                                   ? 'hover:text-color-primary-light'
                                   : 'hover:text-color-primary'
-                              } hover:bg-neutral-700`}
+                              } hover:bg-black`}
                             >
                               {marca}
                             </SelectItem>
@@ -493,13 +447,13 @@ const CatalogoPage = () => {
                           );
                         }}
                       >
-                        <SelectTrigger className='h-full w-full sm:w-44 px-4 py-3 pr-10 border border-neutral-700 rounded-md bg-neutral-800/80 text-white outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
+                        <SelectTrigger className='h-full w-full sm:w-44 px-4 py-3 pr-10 border border-neutral-700 rounded-md bg-black text-white outline-none focus:border-color-primary focus:ring-1 focus:ring-color-primary/40 transition-all appearance-none'>
                           <SelectValue placeholder='Todas las categorías' />
                         </SelectTrigger>
-                        <SelectContent className='bg-neutral-800 border border-neutral-700 text-white rounded-lg shadow-lg'>
+                        <SelectContent className='bg-black border border-neutral-700 text-white rounded-lg shadow-lg'>
                           <SelectItem
                             value='all'
-                            className='text-neutral-400 hover:text-white hover:bg-neutral-700'
+                            className='text-neutral-400 hover:text-white hover:bg-black'
                           >
                             Todas las categorías
                           </SelectItem>
@@ -511,9 +465,10 @@ const CatalogoPage = () => {
                                 company.dark
                                   ? 'hover:text-color-primary-light'
                                   : 'hover:text-color-primary'
-                              } hover:bg-neutral-700`}
+                              } hover:bg-black`}
                             >
-                              {categoria.name}
+                              {categoria.name.charAt(0).toUpperCase() +
+                                categoria.name.slice(1)}
                             </SelectItem>
                           ))}
                         </SelectContent>
@@ -527,7 +482,7 @@ const CatalogoPage = () => {
               {(searchFilter || marcaFilter || categoriaFilter) && (
                 <div className='mt-4 flex flex-wrap gap-2'>
                   {searchFilter && (
-                    <div className='flex items-center gap-2 px-3 py-2 rounded-full bg-neutral-800/80 border border-neutral-700 text-white'>
+                    <div className='flex items-center gap-2 px-3 py-2 rounded-full bg-black/90 border border-neutral-700 text-white'>
                       <span>Búsqueda: {searchFilter}</span>
                       <button
                         onClick={() => updateFilters('search', '')}
@@ -538,7 +493,7 @@ const CatalogoPage = () => {
                     </div>
                   )}
                   {marcaFilter && (
-                    <div className='flex items-center gap-2 px-3 py-2 rounded-full bg-neutral-800/80 border border-neutral-700 text-white'>
+                    <div className='flex items-center gap-2 px-3 py-2 rounded-full bg-black/90 border border-neutral-700 text-white'>
                       <span>Marca: {marcaFilter}</span>
                       <button
                         onClick={() => updateFilters('marca', '')}
@@ -549,7 +504,7 @@ const CatalogoPage = () => {
                     </div>
                   )}
                   {categoriaFilter && (
-                    <div className='flex items-center gap-2 px-3 py-2 rounded-full bg-neutral-800/80 border border-neutral-700 text-white'>
+                    <div className='flex items-center gap-2 px-3 py-2 rounded-full bg-black/90 border border-neutral-700 text-white'>
                       <span>Categoría: {categoriaFilter}</span>
                       <button
                         onClick={() => updateFilters('categoria', '')}
@@ -605,9 +560,9 @@ const CatalogoPage = () => {
                         href={`/catalogo/${car.id}`}
                         className='group w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%]'
                       >
-                        <div className='relative bg-black overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
+                        <div className='relative bg-color-bg-secondary-dark overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
                           {!car.active && (
-                            <div className='absolute top-0 left-0 w-full h-full bg-neutral-800/80 flex items-center justify-center z-20'>
+                            <div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-20'>
                               <span className='bg-red-500 text-white text-sm font-medium px-3 py-1.5 rounded'>
                                 Pausado
                               </span>
@@ -615,7 +570,7 @@ const CatalogoPage = () => {
                           )}
 
                           <div className='relative overflow-hidden aspect-[4/3]'>
-                            <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent z-10'></div>
+                            <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-color-bg-secondary-dark to-transparent z-10'></div>
                             <motion.div
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
@@ -628,7 +583,7 @@ const CatalogoPage = () => {
                                 height={600}
                                 className='object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out'
                                 src={
-                                  car.Images[0]?.thumbnailUrl ||
+                                  car.images[0]?.thumbnailUrl ||
                                   '/assets/placeholder.webp'
                                 }
                                 alt={`${car.model}`}
@@ -642,20 +597,23 @@ const CatalogoPage = () => {
                               className={`${
                                 company.dark
                                   ? 'group-hover:text-color-primary-light'
-                                  : 'group-hover:text-color-primary-dark'
+                                  : 'group-hover:text-color-primary'
                               } text-white text-lg md:text-xl font-medium tracking-tight truncate mb-5 transition-colors duration-300`}
                             >
                               {car.model}
                             </h3>
 
-                            <div
-                              className={`${
-                                company.price ? '' : 'hidden'
-                              } text-color-primary-light text-lg md:text-xl font-medium tracking-tight truncate mb-5  transition-colors duration-300`}
-                            >
-                              {car.price.moneda === 'ARS' ? '$' : 'US$'}
-                              {car.price.valor.toLocaleString('es-ES')}
-                            </div>
+                            {/* Precio */}
+                            {car.price && parseFloat(car.price) > 0 ? (
+                              <p className='text-xl font-semibold text-color-primary-light mb-2 lg:mb-3'>
+                                {car.currency === 'ARS' ? '$' : 'US$'}
+                                {parseFloat(car.price).toLocaleString(
+                                  car.currency === 'ARS' ? 'es-AR' : 'en-US'
+                                )}
+                              </p>
+                            ) : (
+                              ''
+                            )}
 
                             <div className='flex flex-wrap items-center text-sm text-white/80'>
                               <span className='font-medium'>{car.brand}</span>
@@ -669,6 +627,19 @@ const CatalogoPage = () => {
                                 |
                               </span>
                               <span>{car.year}</span>
+                              <span
+                                className={`${
+                                  company.dark
+                                    ? 'text-color-primary-light'
+                                    : 'text-color-primary'
+                                } mx-2`}
+                              >
+                                |
+                              </span>
+                              <span>
+                                {car.Category.name.charAt(0).toUpperCase() +
+                                  car.Category.name.slice(1)}
+                              </span>
                             </div>
 
                             <div className='w-full h-[1px] bg-neutral-800 group-hover:bg-neutral-700 my-5 transition-colors duration-300'></div>

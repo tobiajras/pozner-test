@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import SearchIcon from './icons/SearchIcon';
 import { motion } from 'framer-motion';
-import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
+import { company } from '@/app/constants/constants';
+import catalogo from '@/data/catalogo.json';
 
 interface Imagen {
   id: string;
@@ -31,8 +32,10 @@ interface Auto {
   model: string;
   year: number;
   color: string;
-  price: string;
-  currency: 'USD' | 'ARS';
+  price: {
+    valor: number;
+    moneda: string;
+  };
   description: string;
   position: number;
   featured: boolean;
@@ -45,7 +48,7 @@ interface Auto {
   doors: number;
   createdAt: string;
   updatedAt: string;
-  images: Imagen[];
+  Images: Imagen[];
   Category: Categoria;
 }
 
@@ -56,24 +59,56 @@ interface CarrouselFeaturedProps {
 const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
   const [emblaRef] = useEmblaCarousel({ dragFree: true });
   const [clicked, setClicked] = useState(false);
-  const [favoritos, setFavoritos] = useState<Auto[]>([]);
+  const [destacados, setDestacados] = useState<Auto[]>([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const obtenerDestacados = async () => {
+    const obtenerDestacados = () => {
       setCargando(true);
       try {
-        const response = await fetch(
-          `${API_BASE_URL}/api/cars/featured?tenant=${TENANT}`
-        );
-        if (!response.ok) {
-          throw new Error(`Error ${response.status}: ${response.statusText}`);
-        }
-        const data = await response.json();
-        setFavoritos(data);
+        const destacadosSimulados = catalogo.slice(0, 6).map((auto) => ({
+          id: auto.id,
+          brand: auto.marca,
+          model: auto.name,
+          year: auto.ano,
+          color: '',
+          price: {
+            valor: auto.precio.valor,
+            moneda: auto.precio.moneda,
+          },
+          description: auto.descripcion,
+          position: 0,
+          featured: true,
+          favorite: false,
+          active: true,
+          categoryId: auto.categoria,
+          mileage: auto.kilometraje,
+          transmission: auto.transmision,
+          fuel: auto.combustible,
+          doors: auto.puertas,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          Images: auto.images.map((img, index) => ({
+            id: `${auto.id}-img-${index}`,
+            carId: auto.id,
+            imageUrl: `/assets/catalogo/${img}`,
+            thumbnailUrl: `/assets/catalogo/${img}`,
+            order: index,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+          })),
+          Category: {
+            id: auto.categoria.toLowerCase(),
+            name: auto.categoria,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+          },
+        }));
+
+        setDestacados(destacadosSimulados);
       } catch (err) {
-        console.error('Error al obtener destacados:', err);
+        console.error('Error al cargar destacados del catálogo:', err);
         setError('No se pudieron cargar los vehículos destacados');
       } finally {
         setCargando(false);
@@ -89,7 +124,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
         <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
-            <h3 className='font-light text-2xl sm:text-3xl text-color-title tracking-wide'>
+            <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
               {title}
             </h3>
           </div>
@@ -107,7 +142,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
         <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
-            <h3 className='font-light text-2xl sm:text-3xl text-color-title tracking-wide'>
+            <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
               {title}
             </h3>
           </div>
@@ -117,13 +152,13 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
     );
   }
 
-  if (favoritos.length === 0) {
+  if (destacados.length === 0) {
     return (
       <section className='flex justify-center w-full bg-color-bg-primary'>
         <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
-            <h3 className='font-light text-2xl sm:text-3xl text-color-title tracking-wide'>
+            <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
               {title}
             </h3>
           </div>
@@ -140,7 +175,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
       <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
         <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
           <div className='h-10 w-1 bg-color-primary mr-4'></div>
-          <h3 className='font-light text-2xl sm:text-3xl text-color-title tracking-wide'>
+          <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
             {title}
           </h3>
         </div>
@@ -152,13 +187,14 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
           className={`${clicked ? 'cursor-grabbing' : 'cursor-grab'}`}
         >
           <div className='flex gap-6 sm:gap-7 md:gap-8'>
-            {favoritos.map((auto) => (
+            {destacados.map((auto) => (
               <Link
                 href={`/catalogo/${auto.id}`}
-                className='group w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%]'
+                className='w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%]'
                 key={auto.id}
               >
-                <div className='relative bg-color-bg-secondary-dark overflow-hidden rounded-lg group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
+                {/* Card container con borde que se ilumina */}
+                <div className='relative overflow-hidden group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
                   {!auto.active && (
                     <div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-20'>
                       <span className='bg-red-500 text-white text-sm font-medium px-3 py-1.5 rounded'>
@@ -167,112 +203,123 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                     </div>
                   )}
 
-                  <div className='relative overflow-hidden aspect-[4/3]'>
-                    <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-color-bg-secondary-dark to-transparent z-10'></div>
+                  {/* Contenedor de la imagen */}
+                  <div className='relative overflow-hidden aspect-[4/3] rounded-xl group'>
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.5, ease: 'easeOut' }}
-                      className='w-full h-full'
+                      className='w-full h-full '
                     >
                       <Image
                         priority
                         width={600}
                         height={600}
-                        className='object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out'
+                        className='object-cover w-full h-full transition-transform duration-700'
                         src={
-                          auto.images.sort((a, b) => a.order - b.order)[0]
+                          auto.Images.sort((a, b) => a.order - b.order)[0]
                             ?.thumbnailUrl || '/assets/placeholder.webp'
                         }
                         alt={`${auto.model}`}
                       />
                     </motion.div>
-                    <div className='absolute top-0 left-0 w-0 h-1 bg-color-primary group-hover:w-full transition-all duration-500 z-20'></div>
+
+                    {/* Overlay con "Ver más" al hacer hover */}
+                    <div className='absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                    <div className='absolute inset-0 opacity-0 group-hover:opacity-100 flex items-center justify-center'>
+                      <div className='flex flex-col items-center gap-2 text-white'>
+                        <div className='w-12 h-12 rounded-full bg-white/20 hover:bg-white/30 transition-colors flex items-center justify-center border border-white/30 [backdrop-filter:blur(4px)]'>
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            className='w-6 h-6'
+                            fill='none'
+                            viewBox='0 0 24 24'
+                            stroke='currentColor'
+                          >
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              strokeWidth={2}
+                              d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
+                            />
+                            <path
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              strokeWidth={2}
+                              d='M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z'
+                            />
+                          </svg>
+                        </div>
+                        <span className='text-sm font-medium tracking-wide'>
+                          Ver más
+                        </span>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className='px-5 py-5'>
+                  {/* Información del vehículo */}
+                  <div className='py-3 relative group'>
                     <h3
                       className={`${
                         company.dark
-                          ? 'group-hover:text-color-primary-light'
-                          : 'group-hover:text-color-primary'
-                      } text-white text-lg md:text-xl font-medium tracking-tight truncate mb-5 transition-colors duration-300`}
+                          ? 'group-hover:text-color-primary'
+                          : 'group-hover:text-color-primary-dark'
+                      } text-color-title text-lg md:text-xl font-bold tracking-tight truncate mb-2 transition-colors duration-300`}
                     >
                       {auto.model}
                     </h3>
 
-                    {/* Precio */}
-                    {auto.price && parseFloat(auto.price) > 0 ? (
-                      <p className='text-xl font-semibold text-color-primary-light mb-2 lg:mb-3'>
-                        {auto.currency === 'ARS' ? '$' : 'US$'}
-                        {parseFloat(auto.price).toLocaleString(
-                          auto.currency === 'ARS' ? 'es-AR' : 'en-US'
-                        )}
-                      </p>
-                    ) : (
-                      ''
-                    )}
+                    <div
+                      className={`${
+                        company.price ? '' : 'hidden'
+                      } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate mb-2 transition-colors duration-300`}
+                    >
+                      {auto.price.moneda === 'ARS' ? '$' : 'US$'}
+                      {auto.price.valor.toLocaleString('es-ES')}
+                    </div>
 
-                    <div className='flex flex-wrap items-center text-sm text-white/80'>
-                      <span className='font-medium'>{auto.brand}</span>
+                    {/* Diseño minimalista con separadores tipo | */}
+                    <div className='flex flex-wrap items-center text-color-text font-medium'>
+                      <span className=''>{auto.brand}</span>
                       <span
                         className={`${
                           company.dark
-                            ? 'text-color-primary-light'
+                            ? 'text-color-primary'
                             : 'text-color-primary'
                         } mx-2`}
                       >
                         |
                       </span>
                       <span>{auto.year}</span>
-                      <span
-                        className={`${
-                          company.dark
-                            ? 'text-color-primary-light'
-                            : 'text-color-primary'
-                        } mx-2`}
-                      >
-                        |
-                      </span>
-                      <span>
-                        {auto.Category.name.charAt(0).toUpperCase() +
-                          auto.Category.name.slice(1)}
-                      </span>
                     </div>
 
-                    <div className='w-full h-[1px] bg-neutral-800 group-hover:bg-neutral-700 my-5 transition-colors duration-300'></div>
-
-                    <div className='flex justify-between items-center'>
+                    {/* Precio o etiqueta destacada */}
+                    <div className='flex justify-between items-center text-color-text mt-0.5'>
                       {auto.mileage === 0 ? (
-                        <span className='text-sm bg-color-primary hover:bg-color-primary-dark transition-colors border border-white/15 text-neutral-100 rounded-sm py-1 px-3 uppercase tracking-wider'>
+                        <span className='bg-color-primary hover:bg-color-primary-dark transition-colors border border-white/15 text-neutral-100 rounded-sm py-1 px-3 uppercase tracking-wider'>
                           Nuevo
                         </span>
                       ) : (
-                        <span className='text-xs text-white/60 uppercase tracking-wider'>
-                          Usado • {auto.mileage.toLocaleString('es-ES')} km
+                        <span className='text-sm text-color-text font-medium uppercase tracking-wider'>
+                          Usado <span className='text-color-primary'>•</span>{' '}
+                          {auto.mileage.toLocaleString('es-ES')} km
                         </span>
                       )}
+                    </div>
 
-                      <div className='flex items-center'>
-                        <span className='text-white/60 text-xs uppercase mr-2 tracking-wider'>
-                          Ver
+                    <div className='mt-2'>
+                      <span
+                        className={`${
+                          company.dark
+                            ? 'text-color-primary group-hover:text-color-primary-dark'
+                            : 'text-color-primary group-hover:text-color-primary-dark'
+                        } inline-flex items-center  transition-colors font-semibold`}
+                      >
+                        Ver más
+                        <span className='inline-block transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300 ml-1'>
+                          →
                         </span>
-                        <div
-                          className={`${
-                            company.dark
-                              ? 'group-hover:border-color-primary-light'
-                              : 'group-hover:border-color-primary'
-                          } w-10 h-10 rounded-full flex items-center justify-center border border-neutral-400 transition-all duration-300`}
-                        >
-                          <SearchIcon
-                            className={`${
-                              company.dark
-                                ? 'group-hover:text-color-primary-light'
-                                : 'group-hover:text-color-primary'
-                            } w-full h-full p-2 text-neutral-400 transition-colors stroke-[1.5] duration-300`}
-                          />
-                        </div>
-                      </div>
+                      </span>
                     </div>
                   </div>
                 </div>
