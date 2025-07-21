@@ -4,8 +4,8 @@ import { useScrollToTop } from '../hooks/useScrollToTop';
 
 export const ScrollToTopProvider = () => {
   useScrollToTop({
-    behavior: 'smooth',
-    delay: 100,
+    behavior: 'auto',
+    delay: 0,
     enabled: true,
   });
 
