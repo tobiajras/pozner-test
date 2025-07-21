@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Manrope } from 'next/font/google';
 import './globals.css';
 import { metadataCompany } from './constants/constants';
+import { ScrollToTopProvider } from '../components/ScrollToTopProvider';
 
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} font-manrope font bg-color-bg-primary text-color-text antialiased`}
       >
+        <ScrollToTopProvider />
         {children}
       </body>
     </html>
