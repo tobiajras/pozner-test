@@ -27,7 +27,6 @@ const ImageGalleryModal = ({
   });
 
   const [selectedIndex, setSelectedIndex] = useState(currentIndex);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const [mousePressedInContent, setMousePressedInContent] = useState(false);
 
@@ -35,11 +34,6 @@ const ImageGalleryModal = ({
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
-
-  const scrollTo = useCallback(
-    (index: number) => emblaApi && emblaApi.scrollTo(index),
-    [emblaApi]
-  );
 
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),

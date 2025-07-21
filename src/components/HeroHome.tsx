@@ -1,9 +1,8 @@
-'use client';
+"use client";
 
-import { company } from '@/app/constants/constants';
-import Link from 'next/link';
-import HeroCarousel from './HeroCarousel';
-import LogosCarousel from './LogosCarousel';
+import { company } from "@/app/constants/constants";
+import Link from "next/link";
+import HeroCarousel from "./HeroCarousel";
 
 const HeroHome = () => {
   return (
@@ -40,8 +39,8 @@ const HeroHome = () => {
                 href='/catalogo'
                 className={`${
                   company.dark
-                    ? 'text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark'
-                    : 'text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark'
+                    ? "text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark"
+                    : "text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark"
                 } lg:text-lg transition-colors py-2.5 md:py-3.5 px-5 md:px-8 rounded-full font-medium`}
               >
                 Ver Catálogo

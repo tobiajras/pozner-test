@@ -4,7 +4,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import SearchIcon from "./icons/SearchIcon";
 import { motion } from "framer-motion";
 import { company } from "@/app/constants/constants";
 import catalogo from "@/data/catalogo.json";
