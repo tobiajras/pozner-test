@@ -711,8 +711,10 @@ const CatalogoPage = () => {
                             {/* Precio o etiqueta destacada */}
                             <div className='flex justify-between items-center text-color-text mt-0.5'>
                               {car.mileage === 0 ? (
-                                <span className='bg-color-primary hover:bg-color-primary-dark transition-colors border border-white/15 text-neutral-100 rounded-sm py-1 px-3 uppercase tracking-wider'>
-                                  Nuevo
+                                <span className='text-sm font-semibold uppercase tracking-wider text-color-primary'>
+                                  Nuevo{" "}
+                                  <span className='text-color-primary'>•</span>{" "}
+                                  {car.mileage.toLocaleString("es-ES")} km
                                 </span>
                               ) : (
                                 <span className='text-sm text-color-text font-medium uppercase tracking-wider'>

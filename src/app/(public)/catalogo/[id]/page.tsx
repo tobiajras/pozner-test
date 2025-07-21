@@ -473,7 +473,13 @@ export default function AutoDetailPage() {
                     <p className='text-color-text text-sm font-medium'>
                       Kilometraje
                     </p>
-                    <p className='text-color-title font-medium'>
+                    <p
+                      className={`font-medium ${
+                        car.mileage === 0
+                          ? "text-color-primary font-semibold"
+                          : "text-color-title"
+                      }`}
+                    >
                       {car.mileage.toLocaleString("es-AR")} km
                     </p>
                   </div>
@@ -513,13 +519,6 @@ export default function AutoDetailPage() {
                       <p className='text-color-title font-medium'>
                         {car.doors}
                       </p>
-                    </div>
-                  )}
-                  {car.mileage == 0 && (
-                    <div className='flex justify-start items-center'>
-                      <span className='text-sm bg-color-primary hover:bg-color-primary-dark transition-colors border border-white/15 text-neutral-100 rounded-sm py-1 px-3 uppercase tracking-wider'>
-                        Nuevo
-                      </span>
                     </div>
                   )}
                 </div>
