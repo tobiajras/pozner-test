@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import useEmblaCarousel from 'embla-carousel-react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import SearchIcon from './icons/SearchIcon';
-import { motion } from 'framer-motion';
-import { company } from '@/app/constants/constants';
-import catalogo from '@/data/catalogo.json';
+import useEmblaCarousel from "embla-carousel-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import SearchIcon from "./icons/SearchIcon";
+import { motion } from "framer-motion";
+import { company } from "@/app/constants/constants";
+import catalogo from "@/data/catalogo.json";
 
 interface Imagen {
   id: string;
@@ -72,7 +72,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
           brand: auto.marca,
           model: auto.name,
           year: auto.ano,
-          color: '',
+          color: "",
           price: {
             valor: auto.precio.valor,
             moneda: auto.precio.moneda,
@@ -108,8 +108,8 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
 
         setDestacados(destacadosSimulados);
       } catch (err) {
-        console.error('Error al cargar destacados del catálogo:', err);
-        setError('No se pudieron cargar los vehículos destacados');
+        console.error("Error al cargar destacados del catálogo:", err);
+        setError("No se pudieron cargar los vehículos destacados");
       } finally {
         setCargando(false);
       }
@@ -121,7 +121,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
   if (cargando) {
     return (
       <section className='flex justify-center w-full bg-color-bg-primary'>
-        <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
+        <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
             <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
@@ -139,7 +139,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
   if (error) {
     return (
       <section className='flex justify-center w-full bg-color-bg-primary'>
-        <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
+        <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
             <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
@@ -155,7 +155,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
   if (destacados.length === 0) {
     return (
       <section className='flex justify-center w-full bg-color-bg-primary'>
-        <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
+        <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
             <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
@@ -172,7 +172,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
 
   return (
     <section className='flex justify-center w-full bg-color-bg-primary'>
-      <div className='max-w-6xl w-full px-2 mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
+      <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
         <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
           <div className='h-10 w-1 bg-color-primary mr-4'></div>
           <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
@@ -184,13 +184,13 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
           onMouseUp={() => setClicked(false)}
           onMouseDown={() => setClicked(true)}
           ref={emblaRef}
-          className={`${clicked ? 'cursor-grabbing' : 'cursor-grab'}`}
+          className={`${clicked ? "cursor-grabbing" : "cursor-grab"}`}
         >
           <div className='flex gap-6 sm:gap-7 md:gap-8'>
             {destacados.map((auto) => (
               <Link
                 href={`/catalogo/${auto.id}`}
-                className='w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%]'
+                className='w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] xl:flex-[0_0_26%]'
                 key={auto.id}
               >
                 {/* Card container con borde que se ilumina */}
@@ -208,7 +208,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ duration: 0.5, ease: 'easeOut' }}
+                      transition={{ duration: 0.5, ease: "easeOut" }}
                       className='w-full h-full '
                     >
                       <Image
@@ -218,7 +218,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                         className='object-cover w-full h-full transition-transform duration-700'
                         src={
                           auto.Images.sort((a, b) => a.order - b.order)[0]
-                            ?.thumbnailUrl || '/assets/placeholder.webp'
+                            ?.thumbnailUrl || "/assets/placeholder.webp"
                         }
                         alt={`${auto.model}`}
                       />
@@ -262,8 +262,8 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                     <h3
                       className={`${
                         company.dark
-                          ? 'group-hover:text-color-primary'
-                          : 'group-hover:text-color-primary-dark'
+                          ? "group-hover:text-color-primary"
+                          : "group-hover:text-color-primary-dark"
                       } text-color-title text-lg md:text-xl font-bold tracking-tight truncate mb-2 transition-colors duration-300`}
                     >
                       {auto.model}
@@ -271,11 +271,11 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
 
                     <div
                       className={`${
-                        company.price ? '' : 'hidden'
+                        company.price ? "" : "hidden"
                       } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate mb-2 transition-colors duration-300`}
                     >
-                      {auto.price.moneda === 'ARS' ? '$' : 'US$'}
-                      {auto.price.valor.toLocaleString('es-ES')}
+                      {auto.price.moneda === "ARS" ? "$" : "US$"}
+                      {auto.price.valor.toLocaleString("es-ES")}
                     </div>
 
                     {/* Diseño minimalista con separadores tipo | */}
@@ -284,8 +284,8 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                       <span
                         className={`${
                           company.dark
-                            ? 'text-color-primary'
-                            : 'text-color-primary'
+                            ? "text-color-primary"
+                            : "text-color-primary"
                         } mx-2`}
                       >
                         |
@@ -301,8 +301,8 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                         </span>
                       ) : (
                         <span className='text-sm text-color-text font-medium uppercase tracking-wider'>
-                          Usado <span className='text-color-primary'>•</span>{' '}
-                          {auto.mileage.toLocaleString('es-ES')} km
+                          Usado <span className='text-color-primary'>•</span>{" "}
+                          {auto.mileage.toLocaleString("es-ES")} km
                         </span>
                       )}
                     </div>
@@ -311,8 +311,8 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                       <span
                         className={`${
                           company.dark
-                            ? 'text-color-primary group-hover:text-color-primary-dark'
-                            : 'text-color-primary group-hover:text-color-primary-dark'
+                            ? "text-color-primary group-hover:text-color-primary-dark"
+                            : "text-color-primary group-hover:text-color-primary-dark"
                         } inline-flex items-center  transition-colors font-semibold`}
                       >
                         Ver más

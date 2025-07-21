@@ -15,16 +15,7 @@
     "motor": "2.0",
     "combustible": "Diésel",
     "puertas": 4,
-    "images": [
-      "1-1.webp",
-      "2-1.webp",
-      "3-1.webp",
-      "4-1.webp",
-      "5-1.webp",
-      "6-1.webp",
-      "7-1.webp",
-      "8-1.webp"
-    ],
+    "images": ["1-1.webp"],
     "descripcion": "VOLKSWAGEN AMAROK HIGHLINE 4X2 MANUAL MOD 2019 CON 119,000KM."
   },
   {
