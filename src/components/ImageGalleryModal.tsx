@@ -96,7 +96,6 @@ const ImageGalleryModal = ({
     if (!emblaApi) return;
 
     onSelect();
-    setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on("select", onSelect);
     emblaApi.on("reInit", onSelect);
 
