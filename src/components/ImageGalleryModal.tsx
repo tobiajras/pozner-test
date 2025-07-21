@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useEffect, useState, useCallback } from "react";
-import Image from "next/image";
-import useEmblaCarousel from "embla-carousel-react";
-import ArrowIcon from "./icons/ArrowIcon";
-import CloseIcon from "./icons/CloseIcon";
+import { useEffect, useState, useCallback } from 'react';
+import Image from 'next/image';
+import useEmblaCarousel from 'embla-carousel-react';
+import ArrowIcon from './icons/ArrowIcon';
+import CloseIcon from './icons/CloseIcon';
 
 interface ImageGalleryModalProps {
   images: string[];
@@ -21,7 +21,7 @@ const ImageGalleryModal = ({
 }: ImageGalleryModalProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
-    align: "center",
+    align: 'center',
     skipSnaps: false,
     startIndex: currentIndex, // Establecer la posición inicial directamente
   });
@@ -29,6 +29,22 @@ const ImageGalleryModal = ({
   const [selectedIndex, setSelectedIndex] = useState(currentIndex);
   const [isDragging, setIsDragging] = useState(false);
   const [mousePressedInContent, setMousePressedInContent] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  // Animación de entrada
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 10);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Función para cerrar con animación
+  const handleClose = useCallback(() => {
+    setIsClosing(true);
+    setTimeout(() => {
+      onClose();
+    }, 200); // Duración de la animación de salida
+  }, [onClose]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -86,22 +102,22 @@ const ImageGalleryModal = ({
     (e: React.MouseEvent) => {
       // Solo cerrar si el click fue directamente en el backdrop y no se presionó el mouse en el contenido
       if (e.target === e.currentTarget && !mousePressedInContent) {
-        onClose();
+        handleClose();
       }
     },
-    [mousePressedInContent, onClose]
+    [mousePressedInContent, handleClose]
   );
 
   useEffect(() => {
     if (!emblaApi) return;
 
     onSelect();
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
 
     return () => {
-      emblaApi.off("select", onSelect);
-      emblaApi.off("reInit", onSelect);
+      emblaApi.off('select', onSelect);
+      emblaApi.off('reInit', onSelect);
     };
   }, [emblaApi, onSelect]);
 
@@ -112,12 +128,12 @@ const ImageGalleryModal = ({
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-      if (e.key === "ArrowLeft") scrollPrev();
-      if (e.key === "ArrowRight") scrollNext();
+      if (e.key === 'Escape') handleClose();
+      if (e.key === 'ArrowLeft') scrollPrev();
+      if (e.key === 'ArrowRight') scrollNext();
     };
 
-    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown);
 
     // Prevenir el scroll cuando el modal está abierto
     const scrollbarWidth =
@@ -125,28 +141,36 @@ const ImageGalleryModal = ({
     const originalStyle = window.getComputedStyle(document.body).overflow;
     const originalPaddingRight = document.body.style.paddingRight;
 
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden';
     document.body.style.paddingRight = `${scrollbarWidth}px`;
 
     return () => {
-      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = originalStyle;
       document.body.style.paddingRight = originalPaddingRight;
     };
-  }, [onClose, scrollPrev, scrollNext]);
+  }, [handleClose, scrollPrev, scrollNext]);
 
   return (
     <div
-      className='fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 md:p-8'
+      className={`fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 transition-all duration-200 ease-out ${
+        isVisible && !isClosing
+          ? 'bg-black/60 opacity-100'
+          : 'bg-black/0 opacity-0'
+      }`}
       onClick={handleBackdropClick}
     >
       <div
-        className='relative bg-color-bg-secondary rounded-lg overflow-hidden max-w-5xl w-full max-h-[85vh] shadow-2xl'
+        className={`relative bg-color-bg-secondary rounded-lg overflow-hidden max-w-5xl w-full max-h-[85vh] shadow-2xl transition-all duration-200 ease-out transform ${
+          isVisible && !isClosing
+            ? 'opacity-100 scale-100'
+            : 'opacity-0 scale-95'
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Botón cerrar */}
         <button
-          onClick={onClose}
+          onClick={handleClose}
           className='absolute top-2 right-2 text-color-title-light transition-colors z-50 bg-black/40 hover:bg-black/80 p-1.5 rounded-full'
         >
           <CloseIcon className='w-6 h-6 lg:w-8 lg:h-8' />
