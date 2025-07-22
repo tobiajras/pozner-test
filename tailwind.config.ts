@@ -13,9 +13,9 @@ const config: Config = {
         manrope: ['var(--font-manrope)', 'sans-serif'],
       },
       colors: {
-        'color-primary': '#EA4428',
-        'color-primary-dark': '#EE3414',
-        'color-primary-light': '#FF8570',
+        'color-primary': '#2A86C7',
+        'color-primary-dark': '#1D6BB5',
+        'color-primary-light': '#56C0F8',
         'color-primary-admin': '#E9262C',
         'color-primary-dark-admin': '#F0161C',
         'color-secondary': '#1E1E1E',

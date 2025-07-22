@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { company } from "@/app/constants/constants";
-import Link from "next/link";
-import HeroCarousel from "./HeroCarousel";
+import { company } from '@/app/constants/constants';
+import Link from 'next/link';
+import HeroCarousel from './HeroCarousel';
 
 const HeroHome = () => {
   return (
@@ -20,7 +20,7 @@ const HeroHome = () => {
 
             <div className='flex flex-col items-center mb-1'>
               <div className='md:gap-3 text-nowrap'>
-                <h2 className='text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-title-light'>
+                <h2 className='text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-primary-light'>
                   Vehículos Seleccionados,
                 </h2>
               </div>
@@ -39,8 +39,8 @@ const HeroHome = () => {
                 href='/catalogo'
                 className={`${
                   company.dark
-                    ? "text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark"
-                    : "text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark"
+                    ? 'text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark'
+                    : 'text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark'
                 } lg:text-lg transition-colors py-2.5 md:py-3.5 px-5 md:px-8 rounded-full font-medium`}
               >
                 Ver Catálogo

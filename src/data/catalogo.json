@@ -1,230 +1,356 @@
 [
   {
-    "id": "volkswagen-amarok-highline-4x2-manual-1",
-    "name": "Volkswagen Amarok Highline 4x2 Manual",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2019,
-    "kilometraje": 119000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": ["1-1.webp"],
-    "descripcion": "VOLKSWAGEN AMAROK HIGHLINE 4X2 MANUAL MOD 2019 CON 119,000KM."
-  },
-  {
-    "id": "chevrolet-s10-ls-2",
-    "name": "Chevrolet S-10 LS",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2021,
-    "kilometraje": 68000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "2.5",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": ["2-1.webp"],
-    "descripcion": "CHEVROLET S-10 LS MOD 2021 CON 68,000KM."
-  },
-  {
-    "id": "peugeot-2008-allure-1-6-3",
-    "name": "Peugeot 2008 Allure 1.6",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2016,
-    "kilometraje": 125000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": ["3-1.webp"],
-    "descripcion": "PEUGEOT 2008 ALLURE 1,6 MOD 2016 CON 125,000KM."
-  },
-  {
-    "id": "volkswagen-vento-highline-at-4",
-    "name": "Volkswagen Vento Highline AT",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2019,
-    "kilometraje": 58000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 4,
-    "images": ["4-1.webp"],
-    "descripcion": "VOLKSWAGEN VENTO HIGHLINE AT 2019 CON 58,000KM."
-  },
-  {
-    "id": "chevrolet-s10-wt-4x4-at-5",
-    "name": "Chevrolet S-10 WT 4x4 AT",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2024,
-    "kilometraje": 0,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "2.8",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": ["5-1.webp"],
-    "descripcion": "CHEVROLET S-10 WT 4X4 AT OKM."
-  },
-  {
-    "id": "fiat-cronos-drive-s-design-1-3l-6",
-    "name": "Fiat Cronos Drive S-Design 1.3L",
-    "marca": "Fiat",
-    "marcaId": "fiat",
-    "ano": 2022,
-    "kilometraje": 80000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Sedán",
-    "transmision": "Manual",
-    "motor": "1.3",
-    "combustible": "Nafta",
-    "puertas": 4,
-    "images": ["6-1.webp"],
-    "descripcion": "FIAT CRONOS DRIVE S-DESING 1,3L MOD 2022 C/ 80,000KM."
-  },
-  {
-    "id": "mercedes-benz-gla-200-7",
-    "name": "Mercedes Benz GLA 200",
-    "marca": "Mercedes Benz",
-    "marcaId": "mercedes-benz",
+    "id": "audi-q5-3-0-tfsi-quattro-1",
+    "name": "Audi Q5 3.0 TFSI Quattro",
+    "marca": "Audi",
+    "marcaId": "audi",
     "ano": 2017,
     "kilometraje": 98000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 33900,
+      "moneda": "USD"
     },
     "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "2.0",
+    "motor": "3.0",
     "combustible": "Nafta",
     "puertas": 5,
-    "images": ["7-1.webp"],
-    "descripcion": "MERCEDES BENZ GLA 200 MOD 2017 CON 98,000KM."
+    "images": [
+      "1-1.webp",
+      "1-2.webp",
+      "1-3.webp",
+      "1-4.webp",
+      "1-5.webp",
+      "1-6.webp",
+      "1-7.webp",
+      "1-8.webp",
+      "1-9.webp"
+    ],
+    "descripcion": "✨ ¡Llega la elegancia y la potencia que buscas! ✨\nCon el Audi Q5 3.0 TFSI Quattro , cada viaje se transforma en una experiencia premium:\n\n📅 Año: 2017\n📏 Kilómetros: 98.000\n🛋️ Interiores de cuero con detalles en símil madera\n☀️ Techo corredizo y asientos regulables eléctricos\n🔥 Climatización en ambas filas de asientos\n🎯 Sensores de estacionamiento delanteros y traseros\n🚀 Potente motor \"V6\" y velocidad crucero\n\nConfort y potencia se unen en este vehículo diseñado para quienes buscan lo mejor al volante.\n\n💵 Precio USD 33.900\n📩 Escribinos por mensaje privado y viví la experiencia Audi.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
   },
   {
-    "id": "chevrolet-s10-lt-4x4-manual-8",
-    "name": "Chevrolet S-10 LT 4x4 Manual",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2017,
-    "kilometraje": 197000,
+    "id": "honda-civic-lxs-2",
+    "name": "Honda Civic LXS",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 2012,
+    "kilometraje": 174000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "2.8",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": ["8-1.webp"],
-    "descripcion": "CHEVROLET S-10 LT 4X4 MANUAL 2017 CON 197,000KM."
-  },
-  {
-    "id": "fiat-cronos-drive-9",
-    "name": "Fiat Cronos Drive",
-    "marca": "Fiat",
-    "marcaId": "fiat",
-    "ano": 2022,
-    "kilometraje": 140000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 11200,
+      "moneda": "USD"
     },
     "categoria": "Sedán",
     "transmision": "Manual",
     "motor": "1.8",
     "combustible": "Nafta",
     "puertas": 4,
-    "images": ["9-1.webp"],
-    "descripcion": "FIAT CRONOS DRIVE MOD 2022 CON 140,000KM."
+    "images": [
+      "2-1.webp",
+      "2-2.webp",
+      "2-3.webp",
+      "2-4.webp",
+      "2-5.webp",
+      "2-6.webp",
+      "2-7.webp",
+      "2-8.webp",
+      "2-9.webp"
+    ],
+    "descripcion": "💥 ¡Clásico, confiable y listo para vos! 💥\nEl Honda Civic LXS es la combinación perfecta de estilo y practicidad:\n\n📅 Año: 2012\n📏 Kilómetros: 174.000\n✨ Pantalla multimedia y sensores de estacionamiento\n🚘 4 cubiertas en excelente estado\n📜 Papeles al día, listo para transferir\n\n¡Un sedán que nunca pasa de moda!\n\n💵 Precio USD 11.200\n📲 Escribinos por mensaje privado para más info.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
   },
   {
-    "id": "renault-sandero-life-10",
-    "name": "Renault Sandero Life",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2020,
-    "kilometraje": 38000,
+    "id": "volkswagen-tiguan-3",
+    "name": "Volkswagen Tiguan",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2011,
+    "kilometraje": 247000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 12900,
+      "moneda": "USD"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 5,
-    "images": ["10-1.webp"],
-    "descripcion": "RENAULT SANDERO LIFE MOD 2020 CON 38000KM."
+    "images": [
+      "3-1.webp",
+      "3-2.webp",
+      "3-3.webp",
+      "3-4.webp",
+      "3-5.webp",
+      "3-6.webp",
+      "3-7.webp",
+      "3-8.webp",
+      "3-9.webp"
+    ],
+    "descripcion": "🚗 ¡Tu Tiguan te espera! 🚗\nConfiabilidad, potencia y practicidad: esta Volkswagen Tiguan lo tiene todo:\n\n📅 Año: 2011\n📏 Kilómetros: 247.000\n🎯 Sensores de estacionamiento trasero\n✨ 4 cubiertas en excelente estado\n📜 Papeles al día, lista para transferir\n\n¡Un clásico listo para acompañarte en todas tus aventuras!\n\n💸 Precio USD 12.900\n📩 Mandanos un mensaje privado y hacela tuya.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
   },
   {
-    "id": "chevrolet-captiva-lt-nafta-7-asientos-11",
-    "name": "Chevrolet Captiva LT Nafta 7 Asientos",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2016,
-    "kilometraje": 138000,
+    "id": "geely-emgrand-gs-4",
+    "name": "Geely Emgrand GS",
+    "marca": "Geely",
+    "marcaId": "geely",
+    "ano": 2019,
+    "kilometraje": 80200,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 13500,
+      "moneda": "USD"
+    },
+    "categoria": "SUV",
+    "transmision": "Manual",
+    "motor": "1.8",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "4-1.webp",
+      "4-2.webp",
+      "4-3.webp",
+      "4-4.webp",
+      "4-5.webp",
+      "4-6.webp",
+      "4-7.webp",
+      "4-8.webp",
+      "4-9.webp"
+    ],
+    "descripcion": "🚙✨ ¡Descubrí el Geely Emgrand GS del 2019! Con solo 80.200 km, este vehículo es ideal para quienes buscan innovación y rendimiento en cada trayecto. 🌟\n\n🔑 Detalles:\n\nAño: 2019\nKilometraje: 80.200 km\nPrecio: USD 13.500\n¿Queres saber más? 💬 Envíanos un mensaje privado y te brindaremos toda la información que necesitas para que este Emgrand GS sea tuyo.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+  },
+  {
+    "id": "toyota-86-ft-mt-5",
+    "name": "Toyota 86 FT M/T",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2016,
+    "kilometraje": 70127,
+    "precio": {
+      "valor": 26900,
+      "moneda": "USD"
+    },
+    "categoria": "Deportivo",
+    "transmision": "Manual",
+    "motor": "2.0",
+    "combustible": "Nafta",
+    "puertas": 2,
+    "images": [
+      "5-1.webp",
+      "5-2.webp",
+      "5-3.webp",
+      "5-4.webp",
+      "5-5.webp",
+      "5-6.webp",
+      "5-7.webp",
+      "5-8.webp",
+      "5-9.webp",
+      "5-10.webp",
+      "5-11.webp",
+      "5-12.webp",
+      "5-13.webp",
+      "5-14.webp",
+      "5-15.webp",
+      "5-16.webp"
+    ],
+    "descripcion": "🚗✨ ¡Deportivo y único! ✨🚗\n\n¿Buscas una experiencia de manejo al siguiente nivel? ¡Este Toyota 86 FT M/T es todo lo que necesitas! 💥\n\nAño: 2016\nKilometraje: 70,127 km\nManual de caja de 6ta\nInteriores intactos\nDuplicado de llave 🔑\nTodo funcionando en perfectas condiciones 🔧\n\nPrecio: USD 26.900 💵\n¡Lista para transferir!\n\n🔴 No te pierdas esta oportunidad de tener un clásico deportivo en tu garaje. ¡Consultanos por más información y detalles por mensaje privado! 🚗💨\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+  },
+  {
+    "id": "kia-sorento-ex-2-4-at-4x2-6",
+    "name": "Kia Sorento EX 2.4 A/T 4X2",
+    "marca": "Kia",
+    "marcaId": "kia",
+    "ano": 2018,
+    "kilometraje": 71000,
+    "precio": {
+      "valor": 26900,
+      "moneda": "USD"
     },
     "categoria": "SUV",
     "transmision": "Automática",
     "motor": "2.4",
     "combustible": "Nafta",
     "puertas": 5,
-    "images": ["11-1.webp"],
-    "descripcion": "CHEVROLET CAPTIVA LT NAFTA 7 ASIENTOS MOD 2016 CON 138,000KM."
+    "images": [
+      "6-1.webp",
+      "6-2.webp",
+      "6-3.webp",
+      "6-4.webp",
+      "6-5.webp",
+      "6-6.webp",
+      "6-7.webp",
+      "6-8.webp",
+      "6-9.webp"
+    ],
+    "descripcion": "🚗 ¡Tu próximo SUV te espera! 🚗\n\nSi estás buscando potencia, estilo y comodidad, esta Kia Sorento EX 2.4 A/T 4X2 es para vos. Con 71.000 km, cubiertas nuevas, y en excelente estado, este SUV te ofrece una experiencia de manejo impecable.\n\n💰 Precio: USD 26.900\n\n¡No dejes pasar esta oportunidad! Consulta por financiación y más detalles por mensaje privado. ¡Tu aventura comienza acá! 🌟\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
   },
   {
-    "id": "vw-amarok-confort-v6-4x4-at-12",
-    "name": "VW Amarok Confort V6 4x4 AT",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2022,
-    "kilometraje": 61000,
+    "id": "ford-focus-mt-se-7",
+    "name": "Ford Focus MT SE",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2019,
+    "kilometraje": 85000,
+    "precio": {
+      "valor": 13900,
+      "moneda": "USD"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "2.0",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "7-1.webp",
+      "7-2.webp",
+      "7-3.webp",
+      "7-4.webp",
+      "7-5.webp",
+      "7-6.webp",
+      "7-7.webp",
+      "7-8.webp",
+      "7-9.webp"
+    ],
+    "descripcion": "🚗 ¡Destaca en la ruta con el Ford Focus MT SE del 2019!\n\n🌟 Con 85.000 kilómetros y un precio irresistible de USD 13.900, esta belleza te llevará a donde quieras ir con estilo y rendimiento.\n\nEquipado con lo último en tecnología y comodidades, el Focus es la elección perfecta para tus aventuras diarias.\n\n¡Contactanos ahora y hacelo tuyo! 🛣️💨\nComunicate vía WhatsApp al +54 11 3019-8128\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+  },
+  {
+    "id": "toyota-yaris-cvt-s-8",
+    "name": "Toyota Yaris CVT S",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2018,
+    "kilometraje": 109662,
+    "precio": {
+      "valor": 14900,
+      "moneda": "USD"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Automática",
+    "motor": "1.5",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "8-1.webp",
+      "8-2.webp",
+      "8-3.webp",
+      "8-4.webp",
+      "8-5.webp",
+      "8-6.webp",
+      "8-7.webp",
+      "8-8.webp",
+      "8-9.webp"
+    ],
+    "descripcion": "🏁 Toyota Yaris CVT S 2018 🏁\nCompacto, moderno y lleno de estilo. ¡Listo para acompañarte en cada kilómetro! 🚗\n\nKilometraje: 109.662 km\nExtras: Volante multimedia, pantalla, sensores de estacionamiento adelante/atrás. Servicios oficiales y en perfectas condiciones, ¡listo para transferir!\nEste Toyota Yaris versión \"S\" tiene todo lo que necesitas para hacer tus días más fáciles y divertidos. 🎯\n\n💸 Precio: USD 14.900\n\n¿Qué esperas? 🌟 Envía un mensaje y reserva tu visita ahora mismo. ¡Tu próximo auto te está esperando!\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+  },
+  {
+    "id": "jeep-cherokee-trailhawk-9",
+    "name": "Jeep Cherokee Trailhawk",
+    "marca": "Jeep",
+    "marcaId": "jeep",
+    "ano": 2018,
+    "kilometraje": 33000,
     "precio": {
       "valor": 999999,
-      "moneda": "ARS"
+      "moneda": "USD"
     },
-    "categoria": "Pickup",
+    "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "3.0",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": ["12-1.webp"],
-    "descripcion": "VW AMAROK CONFORT V6 4X4 AT MOD 2022 CON 61,000KM."
+    "motor": "2.4",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "9-1.webp",
+      "9-2.webp",
+      "9-3.webp",
+      "9-4.webp",
+      "9-5.webp",
+      "9-6.webp",
+      "9-7.webp",
+      "9-8.webp"
+    ],
+    "descripcion": "🏞️ Jeep Cherokee Trailhawk Automático 2018 🏞️\n¡Explora el mundo con el poder y estilo que solo un Jeep puede ofrecer! 🚙 Con solo 33.000 km, esta Cherokee Trailhawk está lista para llevarte a la aventura de tu vida, con la garantía de un rendimiento excepcional y una experiencia de manejo incomparable.\n\n🔧 Año: 2018\n📏 Kilometraje: 33.000 km\n\n💬 Consultar Precio: ¡Envíanos un mensaje privado para conocer más detalles!\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+  },
+  {
+    "id": "honda-cr-v-exl-10",
+    "name": "Honda CR-V EXL",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 2016,
+    "kilometraje": 149000,
+    "precio": {
+      "valor": 24900,
+      "moneda": "USD"
+    },
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "2.4",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "10-1.webp",
+      "10-2.webp",
+      "10-3.webp",
+      "10-4.webp",
+      "10-5.webp",
+      "10-6.webp",
+      "10-7.webp",
+      "10-8.webp",
+      "10-9.webp"
+    ],
+    "descripcion": "🚙 Honda CR-V EXL 2016 🚙\n¿Listo para llevar tu conducción a otro nivel? 🌟 Con 149.000 km de experiencias recorridas, esta Honda CR-V está en impecable estado y lista para seguir sumando kilómetros con vos. Si buscas comodidad, estilo y confiabilidad, ¡esta SUV lo tiene todo!\n\n💰 Precio efectivo: U$S 24.900\n\n¡No pierdas la oportunidad de conocerla! 📩 Envíanos un mensaje privado para más detalles y agenda tu visita hoy mismo.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+  },
+  {
+    "id": "kia-sorento-ex-2-4-at-4x2-2018-11",
+    "name": "Kia Sorento EX 2.4 A/T 4x2",
+    "marca": "Kia",
+    "marcaId": "kia",
+    "ano": 2018,
+    "kilometraje": 71000,
+    "precio": {
+      "valor": 24900,
+      "moneda": "USD"
+    },
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "2.4",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "11-1.webp",
+      "11-2.webp",
+      "11-3.webp",
+      "11-4.webp",
+      "11-5.webp",
+      "11-6.webp",
+      "11-7.webp",
+      "11-8.webp",
+      "11-9.webp"
+    ],
+    "descripcion": "🚙 Kia Sorento EX 2.4 A/T 4x2 🚙\n¡Tu próxima aventura empieza acá! Descubrí el Kia Sorento EX 2.4 A/T 4x2, año 2018, con solo 71.000 km. 🛣️✨\n\n🔧 Detalles:\nAño: 2018\nKilometraje: 71.000 km\nEstado: Cubiertas Nuevas\nTransmisión: Automática\n🏷️ Precio: USD 24.900\n\nNo pierdas esta oportunidad única. ¡Contáctanos por mensaje privado para más información! 📩\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+  },
+  {
+    "id": "geely-emgrand-gs-2019-12",
+    "name": "Geely Emgrand GS",
+    "marca": "Geely",
+    "marcaId": "geely",
+    "ano": 2019,
+    "kilometraje": 80200,
+    "precio": {
+      "valor": 12900,
+      "moneda": "USD"
+    },
+    "categoria": "SUV",
+    "transmision": "Manual",
+    "motor": "1.8",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "12-1.webp",
+      "12-2.webp",
+      "12-3.webp",
+      "12-4.webp",
+      "12-5.webp",
+      "12-6.webp",
+      "12-7.webp",
+      "12-8.webp",
+      "12-9.webp"
+    ],
+    "descripcion": "🚙✨ ¡Descubrí el Geely Emgrand GS del 2019! Con solo 80.200 km, este vehículo es ideal para quienes buscan innovación y rendimiento en cada trayecto. 🌟\n\n🔑 Detalles:\n\nAño: 2019\nKilometraje: 80.200 km\nPrecio: USD 12.900\n¿Queres saber más? 💬 Envíanos un mensaje privado y te brindaremos toda la información que necesitas para que este Emgrand GS sea tuyo.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
   }
 ]
