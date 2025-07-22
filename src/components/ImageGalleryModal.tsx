@@ -194,6 +194,7 @@ const ImageGalleryModal = ({
                 onMouseUp={handleMouseUp}
               >
                 <Image
+                  priority
                   src={image}
                   alt={`Imagen ${index + 1}`}
                   fill
