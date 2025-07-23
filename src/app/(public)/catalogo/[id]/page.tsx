@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
-import { useEffect, useState, useCallback } from "react";
-import { useParams } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import ArrowIcon from "@/components/icons/ArrowIcon";
-import WhatsappIcon from "@/components/icons/WhatsappIcon";
-import { company } from "@/app/constants/constants";
-import ImageGalleryModal from "@/components/ImageGalleryModal";
-import useEmblaCarousel from "embla-carousel-react";
-import DropDownIcon from "@/components/icons/DropDownIcon";
-import CarrouselRelated from "@/components/CarrouselRelated";
-import { motion } from "framer-motion";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import catalogo from "@/data/catalogo.json";
-import ShareMenu from "@/components/ShareMenu";
+import { useEffect, useState, useCallback } from 'react';
+import { useParams } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+import ArrowIcon from '@/components/icons/ArrowIcon';
+import WhatsappIcon from '@/components/icons/WhatsappIcon';
+import { company } from '@/app/constants/constants';
+import ImageGalleryModal from '@/components/ImageGalleryModal';
+import useEmblaCarousel from 'embla-carousel-react';
+import DropDownIcon from '@/components/icons/DropDownIcon';
+import CarrouselRelated from '@/components/CarrouselRelated';
+import { motion } from 'framer-motion';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import catalogo from '@/data/catalogo.json';
+import ShareMenu from '@/components/ShareMenu';
 
 interface ApiCar {
   id: string;
@@ -59,13 +59,13 @@ export default function AutoDetailPage() {
   const [error, setError] = useState<string | null>(null);
   const [mainViewportRef, embla] = useEmblaCarousel({
     loop: true,
-    align: "center",
+    align: 'center',
     skipSnaps: false,
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [modalStartIndex, setModalStartIndex] = useState(0);
-  const [orderedImages, setOrderedImages] = useState<ApiCar["Images"]>([]);
+  const [orderedImages, setOrderedImages] = useState<ApiCar['Images']>([]);
 
   const scrollTo = useCallback(
     (index: number) => {
@@ -94,20 +94,20 @@ export default function AutoDetailPage() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (showModal) return; // No manejar las teclas si el modal está abierto
 
-      if (e.key === "ArrowLeft") {
+      if (e.key === 'ArrowLeft') {
         scrollPrev();
-      } else if (e.key === "ArrowRight") {
+      } else if (e.key === 'ArrowRight') {
         scrollNext();
       }
     };
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [scrollPrev, scrollNext, showModal]);
 
   useEffect(() => {
     if (embla) {
-      embla.on("select", () => {
+      embla.on('select', () => {
         setSelectedIndex(embla.selectedScrollSnap());
       });
     }
@@ -119,7 +119,7 @@ export default function AutoDetailPage() {
         const carData = catalogo.find((car) => car.id === id);
 
         if (!carData) {
-          throw new Error("Vehículo no encontrado");
+          throw new Error('Vehículo no encontrado');
         }
 
         // Transformar los datos al formato esperado
@@ -128,7 +128,7 @@ export default function AutoDetailPage() {
           brand: carData.marca,
           model: carData.name,
           year: carData.ano,
-          color: "",
+          color: '',
           price: {
             valor: carData.precio.valor,
             moneda: carData.precio.moneda,
@@ -164,7 +164,7 @@ export default function AutoDetailPage() {
         setCar({ ...auto, Images: sortedImages });
       } catch (error) {
         setError(
-          error instanceof Error ? error.message : "Error al cargar el vehículo"
+          error instanceof Error ? error.message : 'Error al cargar el vehículo'
         );
       } finally {
         setLoading(false);
@@ -232,7 +232,7 @@ export default function AutoDetailPage() {
           <div className='flex flex-col items-center justify-center min-h-[60vh]'>
             <div className='bg-gradient-to-b from-black to-neutral-900 border border-neutral-800 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] p-8 text-center'>
               <p className='text-red-500 mb-4'>
-                {error || "Vehículo no encontrado"}
+                {error || 'Vehículo no encontrado'}
               </p>
               <Link
                 href='/catalogo'
@@ -324,7 +324,7 @@ export default function AutoDetailPage() {
                           <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            transition={{ duration: 0.5, ease: 'easeOut' }}
                             className='w-full h-full flex items-center justify-center'
                           >
                             <Image
@@ -333,7 +333,7 @@ export default function AutoDetailPage() {
                               fill
                               className='object-contain'
                               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                              priority={index === 0}
+                              priority
                             />
                           </motion.div>
 
@@ -378,13 +378,13 @@ export default function AutoDetailPage() {
                           }
                         }}
                         className={`relative aspect-[4/3] rounded-lg overflow-hidden outline-none transition-all bg-gray-50 cursor-zoom-in group ${
-                          selectedIndex === actualIndex ? "" : ""
+                          selectedIndex === actualIndex ? '' : ''
                         }`}
                       >
                         <motion.div
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
-                          transition={{ duration: 0.5, ease: "easeOut" }}
+                          transition={{ duration: 0.5, ease: 'easeOut' }}
                           className='w-full h-full flex items-center justify-center'
                         >
                           <Image
@@ -393,7 +393,7 @@ export default function AutoDetailPage() {
                             fill
                             sizes='(max-width: 768px) 33vw, 200px'
                             className={`object-contain ${
-                              shouldShowBlur ? "blur-sm" : ""
+                              shouldShowBlur ? 'blur-sm' : ''
                             }`}
                           />
                         </motion.div>
@@ -405,7 +405,7 @@ export default function AutoDetailPage() {
                         {shouldShowBlur && (
                           <div className='absolute inset-0 bg-black/40 flex items-center justify-center'>
                             <div className='text-center text-white'>
-                              <div className='text-lg font-bold'>
+                              <div className='text-3xl font-bold'>
                                 +{car.Images.length - 4}
                               </div>
                             </div>
@@ -435,7 +435,7 @@ export default function AutoDetailPage() {
           <div className='w-full lg:w-2/5'>
             <div className='lg:sticky lg:top-28'>
               <div className='bg-white lg:border lg:border-gray-200 lg:rounded-lg lg:shadow-lg lg:p-8'>
-                <div className=' mb-6'>
+                <div className=' mb-3 md:mb-4 lg:mb-6'>
                   <h1 className='text-xl md:text-2xl font-semibold text-color-title line-clamp-3'>
                     {car.model}
                   </h1>
@@ -458,14 +458,14 @@ export default function AutoDetailPage() {
                 {car.price && car.price.valor > 0 ? (
                   <div
                     className={`${
-                      company.price ? "" : "hidden"
-                    } text-2xl font-bold text-color-primary mb-4`}
+                      company.price ? '' : 'hidden'
+                    } text-2xl font-bold text-color-primary mb-2 md:mb-4`}
                   >
-                    {car.price.moneda === "ARS" ? "$" : "US$"}
-                    {car.price.valor.toLocaleString("es-ES")}
+                    {car.price.moneda === 'ARS' ? '$' : 'US$'}
+                    {car.price.valor.toLocaleString('es-ES')}
                   </div>
                 ) : (
-                  ""
+                  ''
                 )}
 
                 <div className='grid grid-cols-2 md:grid-cols-3 gap-4 text-color-text mb-6'>
@@ -476,11 +476,11 @@ export default function AutoDetailPage() {
                     <p
                       className={`font-medium ${
                         car.mileage === 0
-                          ? "text-color-primary font-semibold"
-                          : "text-color-title"
+                          ? 'text-color-primary font-semibold'
+                          : 'text-color-title'
                       }`}
                     >
-                      {car.mileage.toLocaleString("es-AR")} km
+                      {car.mileage.toLocaleString('es-AR')} km
                     </p>
                   </div>
                   {car.color && (
@@ -538,9 +538,9 @@ export default function AutoDetailPage() {
                     <div className='w-full h-12 relative'>
                       <ShareMenu
                         url={
-                          typeof window !== "undefined"
+                          typeof window !== 'undefined'
                             ? window.location.href
-                            : ""
+                            : ''
                         }
                         title={`${car.model} ${car.year}`}
                       />

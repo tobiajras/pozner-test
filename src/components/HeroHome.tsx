@@ -20,17 +20,17 @@ const HeroHome = () => {
 
             <div className='flex flex-col items-center mb-1'>
               <div className='md:gap-3 text-nowrap'>
-                <h2 className='text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-primary-light'>
+                <h2 className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-primary-light'>
                   Vehículos Seleccionados,
                 </h2>
               </div>
               <div className='md:gap-3 text-nowrap lg:mb-1'>
-                <h2 className='text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-title-light'>
+                <h2 className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-title-light'>
                   Usados y 0km
                 </h2>
               </div>
             </div>
-            <p className='sm:text-lg lg:text-xl xl:text-2xl text-center text-color-text-light mx-4 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-2xl'>
+            <p className='text-lg lg:text-xl xl:text-2xl text-center text-color-text-light mx-4 max-w-md sm:max-w-md lg:max-w-lg xl:max-w-2xl'>
               Autos multimarca, calidad garantizada y planes de financiación a
               tu medida. ¡Contactanos!
             </p>
