@@ -1,20 +1,20 @@
 [
   {
-    "id": "audi-q5-3-0-tfsi-quattro-1",
-    "name": "Audi Q5 3.0 TFSI Quattro",
-    "marca": "Audi",
-    "marcaId": "audi",
-    "ano": 2017,
-    "kilometraje": 98000,
+    "id": "bmw-m3-sedan-competition-1",
+    "name": "BMW M3 Sedan Competition",
+    "marca": "BMW",
+    "marcaId": "bmw",
+    "ano": 2020,
+    "kilometraje": 12000,
     "precio": {
-      "valor": 33900,
+      "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "SUV",
+    "categoria": "Deportivo",
     "transmision": "Automática",
     "motor": "3.0",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -24,26 +24,27 @@
       "1-6.webp",
       "1-7.webp",
       "1-8.webp",
-      "1-9.webp"
+      "1-9.webp",
+      "1-10.webp"
     ],
-    "descripcion": "✨ ¡Llega la elegancia y la potencia que buscas! ✨\nCon el Audi Q5 3.0 TFSI Quattro , cada viaje se transforma en una experiencia premium:\n\n📅 Año: 2017\n📏 Kilómetros: 98.000\n🛋️ Interiores de cuero con detalles en símil madera\n☀️ Techo corredizo y asientos regulables eléctricos\n🔥 Climatización en ambas filas de asientos\n🎯 Sensores de estacionamiento delanteros y traseros\n🚀 Potente motor \"V6\" y velocidad crucero\n\nConfort y potencia se unen en este vehículo diseñado para quienes buscan lo mejor al volante.\n\n💵 Precio USD 33.900\n📩 Escribinos por mensaje privado y viví la experiencia Audi.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "BMW M3 SEDAN COMPETITION 💣💣💣💣💣\n\n- 2020\n- 12.000KM\n- MOTOR 3.0 6 CILINDROS BITURBO 500CV\n- TRACCIÓN TRASERA\n- AUTOMATICO 7 VELOCIDADES DOBLE EMBRAGUE MODELO MKG CON FUNCION LAUNCH CONTROL\n- ENCENDIDO AUTO START/STOP\n- LLANTAS RODADO 19\n- BUTACAS EN CARBONO\n- ALERON DE CARBONO\n- TOMÁS DE AIRE DE CARBONO\n- ESPEJOS DE CARBONO\n- SEGURIDAD: FRENOS M DE CARBONO REFORZADO\nSILICONADO\n- FILTRO DE AIRE EVENTURI CARBONO\n- ESCAPE MPERFORMANCE\n- CÁMARA 360 3D\n- GARANTÍA 200.000KM\n\nTOMAMOS PERMUTAS\nFINANCIAMOS CON DNI\n\n📲 1158362901 WHATSAPP \n📍 AV BALBIN 1767, SAN MIGUEL"
   },
   {
-    "id": "honda-civic-lxs-2",
-    "name": "Honda Civic LXS",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2012,
-    "kilometraje": 174000,
+    "id": "mercedes-benz-a200-progressive-2",
+    "name": "Mercedes Benz A200 Progressive",
+    "marca": "Mercedes Benz",
+    "marcaId": "mercedes-benz",
+    "ano": 2019,
+    "kilometraje": 40000,
     "precio": {
-      "valor": 11200,
+      "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Sedán",
-    "transmision": "Manual",
-    "motor": "1.8",
+    "categoria": "Hatchback",
+    "transmision": "Automática",
+    "motor": "1.3",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "2-1.webp",
       "2-2.webp",
@@ -53,24 +54,25 @@
       "2-6.webp",
       "2-7.webp",
       "2-8.webp",
-      "2-9.webp"
+      "2-9.webp",
+      "2-10.webp"
     ],
-    "descripcion": "💥 ¡Clásico, confiable y listo para vos! 💥\nEl Honda Civic LXS es la combinación perfecta de estilo y practicidad:\n\n📅 Año: 2012\n📏 Kilómetros: 174.000\n✨ Pantalla multimedia y sensores de estacionamiento\n🚘 4 cubiertas en excelente estado\n📜 Papeles al día, listo para transferir\n\n¡Un sedán que nunca pasa de moda!\n\n💵 Precio USD 11.200\n📲 Escribinos por mensaje privado para más info.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "MERCEDES BENZ A200 🙌🫶🫰👌✅\n\n- A200\n- VERSION PROGRESSIVE \n- 2019\n- 1.3 TURBO\n- 40.000KM\n- AUTOMATICO \n\nTOMAMOS PERMUTAS\nFINANCIAMOS CON DNI\n\n☎️ 60660537\n📲 1158362901\n📍 AV BALBIN 1767, SAN MIGUEL"
   },
   {
-    "id": "volkswagen-tiguan-3",
-    "name": "Volkswagen Tiguan",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2011,
-    "kilometraje": 247000,
+    "id": "bmw-x6-3",
+    "name": "BMW X6",
+    "marca": "BMW",
+    "marcaId": "bmw",
+    "ano": 2017,
+    "kilometraje": 55000,
     "precio": {
-      "valor": 12900,
+      "valor": 999999,
       "moneda": "USD"
     },
     "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "2.0",
+    "transmision": "Automática",
+    "motor": "3.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -84,53 +86,50 @@
       "3-8.webp",
       "3-9.webp"
     ],
-    "descripcion": "🚗 ¡Tu Tiguan te espera! 🚗\nConfiabilidad, potencia y practicidad: esta Volkswagen Tiguan lo tiene todo:\n\n📅 Año: 2011\n📏 Kilómetros: 247.000\n🎯 Sensores de estacionamiento trasero\n✨ 4 cubiertas en excelente estado\n📜 Papeles al día, lista para transferir\n\n¡Un clásico listo para acompañarte en todas tus aventuras!\n\n💸 Precio USD 12.900\n📩 Mandanos un mensaje privado y hacela tuya.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "BMW X6 😂😍🥂✅\n\n- 2017\n- 55.000KM\n- 3.0 306CV\n- PURÉ EXTRAVAGANCE\n- TRACCIÓN INTEGRAL\n- CAJA AUTOMÁTICA 8 VELOCIDADES\n\nTOMAMOS PERMUTAS\nFINANCIAMOS CON DNI\n\n☎️ 60660537\n📲 1158362901\n📍 AV BALBIN 1767, SAN MIGUEL"
   },
   {
-    "id": "geely-emgrand-gs-4",
-    "name": "Geely Emgrand GS",
-    "marca": "Geely",
-    "marcaId": "geely",
-    "ano": 2019,
-    "kilometraje": 80200,
+    "id": "bmw-m2-4",
+    "name": "BMW M2",
+    "marca": "BMW",
+    "marcaId": "bmw",
+    "ano": 2017,
+    "kilometraje": 59000,
     "precio": {
-      "valor": 13500,
+      "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "SUV",
+    "categoria": "Deportivo",
     "transmision": "Manual",
-    "motor": "1.8",
+    "motor": "3.0",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 2,
     "images": [
       "4-1.webp",
       "4-2.webp",
       "4-3.webp",
       "4-4.webp",
       "4-5.webp",
-      "4-6.webp",
-      "4-7.webp",
-      "4-8.webp",
-      "4-9.webp"
+      "4-6.webp"
     ],
-    "descripcion": "🚙✨ ¡Descubrí el Geely Emgrand GS del 2019! Con solo 80.200 km, este vehículo es ideal para quienes buscan innovación y rendimiento en cada trayecto. 🌟\n\n🔑 Detalles:\n\nAño: 2019\nKilometraje: 80.200 km\nPrecio: USD 13.500\n¿Queres saber más? 💬 Envíanos un mensaje privado y te brindaremos toda la información que necesitas para que este Emgrand GS sea tuyo.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "BMW M2 👑🤩🤯✅\n\n- 2017 \n- 59.000KM\n- MOTOR 6 CILINDROS 3.0 TURBO \n- ESCAPE AKRAPOVIC\n\nTOMAMOS PERMUTAS\nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍 AV BALBIN 1759/67, SAN MIGUEL"
   },
   {
-    "id": "toyota-86-ft-mt-5",
-    "name": "Toyota 86 FT M/T",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2016,
-    "kilometraje": 70127,
+    "id": "chevrolet-cruze-premier-5",
+    "name": "Chevrolet Cruze Premier",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2020,
+    "kilometraje": 80000,
     "precio": {
-      "valor": 26900,
+      "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Deportivo",
-    "transmision": "Manual",
-    "motor": "2.0",
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "1.4",
     "combustible": "Nafta",
-    "puertas": 2,
+    "puertas": 4,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -140,33 +139,26 @@
       "5-6.webp",
       "5-7.webp",
       "5-8.webp",
-      "5-9.webp",
-      "5-10.webp",
-      "5-11.webp",
-      "5-12.webp",
-      "5-13.webp",
-      "5-14.webp",
-      "5-15.webp",
-      "5-16.webp"
+      "5-9.webp"
     ],
-    "descripcion": "🚗✨ ¡Deportivo y único! ✨🚗\n\n¿Buscas una experiencia de manejo al siguiente nivel? ¡Este Toyota 86 FT M/T es todo lo que necesitas! 💥\n\nAño: 2016\nKilometraje: 70,127 km\nManual de caja de 6ta\nInteriores intactos\nDuplicado de llave 🔑\nTodo funcionando en perfectas condiciones 🔧\n\nPrecio: USD 26.900 💵\n¡Lista para transferir!\n\n🔴 No te pierdas esta oportunidad de tener un clásico deportivo en tu garaje. ¡Consultanos por más información y detalles por mensaje privado! 🚗💨\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "CHEVROLET CRUZE 🙌👏🫶✅\n\n- 2020\n- VERSION PREMIER\n- CAJA AUTOMÁTICA\n- 80.000KM\n- MOTOR 1.4 TURBO\n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍 AV BALBIN 1759/67 SAN MIGUEL"
   },
   {
-    "id": "kia-sorento-ex-2-4-at-4x2-6",
-    "name": "Kia Sorento EX 2.4 A/T 4X2",
-    "marca": "Kia",
-    "marcaId": "kia",
-    "ano": 2018,
-    "kilometraje": 71000,
+    "id": "peugeot-207-xt-premium-6",
+    "name": "Peugeot 207 XT Premium",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2009,
+    "kilometraje": 999999,
     "precio": {
-      "valor": 26900,
+      "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.4",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 3,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -175,27 +167,26 @@
       "6-5.webp",
       "6-6.webp",
       "6-7.webp",
-      "6-8.webp",
-      "6-9.webp"
+      "6-8.webp"
     ],
-    "descripcion": "🚗 ¡Tu próximo SUV te espera! 🚗\n\nSi estás buscando potencia, estilo y comodidad, esta Kia Sorento EX 2.4 A/T 4X2 es para vos. Con 71.000 km, cubiertas nuevas, y en excelente estado, este SUV te ofrece una experiencia de manejo impecable.\n\n💰 Precio: USD 26.900\n\n¡No dejes pasar esta oportunidad! Consulta por financiación y más detalles por mensaje privado. ¡Tu aventura comienza acá! 🌟\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "PEUGEOT 207 👏👑🙌✅\n\n- 2009\n- VERSION XT PREMIUN \n- MOTOR 1.6 NAFTA\n- 3 PUERTAS \n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍 AV BALBIN 1759/67, SAN MIGUEL"
   },
   {
-    "id": "ford-focus-mt-se-7",
-    "name": "Ford Focus MT SE",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2019,
-    "kilometraje": 85000,
+    "id": "volkswagen-virtus-comfortline-7",
+    "name": "Volkswagen Virtus Comfortline",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2024,
+    "kilometraje": 40000,
     "precio": {
-      "valor": 13900,
+      "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Hatchback",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "2.0",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "7-1.webp",
       "7-2.webp",
@@ -207,24 +198,24 @@
       "7-8.webp",
       "7-9.webp"
     ],
-    "descripcion": "🚗 ¡Destaca en la ruta con el Ford Focus MT SE del 2019!\n\n🌟 Con 85.000 kilómetros y un precio irresistible de USD 13.900, esta belleza te llevará a donde quieras ir con estilo y rendimiento.\n\nEquipado con lo último en tecnología y comodidades, el Focus es la elección perfecta para tus aventuras diarias.\n\n¡Contactanos ahora y hacelo tuyo! 🛣️💨\nComunicate vía WhatsApp al +54 11 3019-8128\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "VW VIRTUS 🙌👑👏✅\n\n- 2024\n- 40.000KM\n- VERSION COMFORTLINE \n- MOTOR 1.6 \n- CAJA MANUAL \n\nTOMAMOS PERMUTAS\nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍AV BALBIN 1759/67, SAN MIGUEL"
   },
   {
-    "id": "toyota-yaris-cvt-s-8",
-    "name": "Toyota Yaris CVT S",
+    "id": "toyota-hilux-dx-8",
+    "name": "Toyota Hilux DX",
     "marca": "Toyota",
     "marcaId": "toyota",
-    "ano": 2018,
-    "kilometraje": 109662,
+    "ano": 2015,
+    "kilometraje": 170000,
     "precio": {
-      "valor": 14900,
+      "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "1.5",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "categoria": "Utilitario",
+    "transmision": "Manual",
+    "motor": "2.5",
+    "combustible": "Diesel",
+    "puertas": 4,
     "images": [
       "8-1.webp",
       "8-2.webp",
@@ -233,25 +224,24 @@
       "8-5.webp",
       "8-6.webp",
       "8-7.webp",
-      "8-8.webp",
-      "8-9.webp"
+      "8-8.webp"
     ],
-    "descripcion": "🏁 Toyota Yaris CVT S 2018 🏁\nCompacto, moderno y lleno de estilo. ¡Listo para acompañarte en cada kilómetro! 🚗\n\nKilometraje: 109.662 km\nExtras: Volante multimedia, pantalla, sensores de estacionamiento adelante/atrás. Servicios oficiales y en perfectas condiciones, ¡listo para transferir!\nEste Toyota Yaris versión \"S\" tiene todo lo que necesitas para hacer tus días más fáciles y divertidos. 🎯\n\n💸 Precio: USD 14.900\n\n¿Qué esperas? 🌟 Envía un mensaje y reserva tu visita ahora mismo. ¡Tu próximo auto te está esperando!\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "TOYOTA HILUX 🤩😍🤯✅\n\n- 2015\n- 4X4\n- 170.000KM\n- VERSION DX CON PACK ELÉCTRICO \n- MOTOR 2.5 DIESEL\n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901 \n📍 AV BALBIN 1759/67, SAN MIGUEL"
   },
   {
-    "id": "jeep-cherokee-trailhawk-9",
-    "name": "Jeep Cherokee Trailhawk",
-    "marca": "Jeep",
-    "marcaId": "jeep",
-    "ano": 2018,
-    "kilometraje": 33000,
+    "id": "renault-sandero-stepway-intens-9",
+    "name": "Renault Sandero Stepway Intens",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2023,
+    "kilometraje": 9500,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
     "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "2.4",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -262,24 +252,25 @@
       "9-5.webp",
       "9-6.webp",
       "9-7.webp",
-      "9-8.webp"
+      "9-8.webp",
+      "9-9.webp"
     ],
-    "descripcion": "🏞️ Jeep Cherokee Trailhawk Automático 2018 🏞️\n¡Explora el mundo con el poder y estilo que solo un Jeep puede ofrecer! 🚙 Con solo 33.000 km, esta Cherokee Trailhawk está lista para llevarte a la aventura de tu vida, con la garantía de un rendimiento excepcional y una experiencia de manejo incomparable.\n\n🔧 Año: 2018\n📏 Kilometraje: 33.000 km\n\n💬 Consultar Precio: ¡Envíanos un mensaje privado para conocer más detalles!\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "SANDERO STEPWAY 🙌👑💪🫶✅\n\n- 2023 \n- 9.500KM\n- VERSION INTENS \n- CAJA AUTOMÁTICA CVT\n- MOTOR 1.6 NAFTA CADENERO \n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI\n\n📲 1158362901\n📍 AV BALBIN 1759, SAN MIGUEL"
   },
   {
-    "id": "honda-cr-v-exl-10",
-    "name": "Honda CR-V EXL",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2016,
-    "kilometraje": 149000,
+    "id": "fiat-palio-essence-10",
+    "name": "Fiat Palio Essence",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2014,
+    "kilometraje": 999999,
     "precio": {
-      "valor": 24900,
+      "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.4",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -293,24 +284,24 @@
       "10-8.webp",
       "10-9.webp"
     ],
-    "descripcion": "🚙 Honda CR-V EXL 2016 🚙\n¿Listo para llevar tu conducción a otro nivel? 🌟 Con 149.000 km de experiencias recorridas, esta Honda CR-V está en impecable estado y lista para seguir sumando kilómetros con vos. Si buscas comodidad, estilo y confiabilidad, ¡esta SUV lo tiene todo!\n\n💰 Precio efectivo: U$S 24.900\n\n¡No pierdas la oportunidad de conocerla! 📩 Envíanos un mensaje privado para más detalles y agenda tu visita hoy mismo.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "FIAT PALIO 🙌🤩🫶✅\n\n- 2014\n- VERSION ESSENCE\n- MOTOR 1.6 16V NAFTA 115CV\n- CAJA MANUAL \n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍 AV BALBIN 1759/67, SAN MIGUEL"
   },
   {
-    "id": "kia-sorento-ex-2-4-at-4x2-2018-11",
-    "name": "Kia Sorento EX 2.4 A/T 4x2",
-    "marca": "Kia",
-    "marcaId": "kia",
-    "ano": 2018,
-    "kilometraje": 71000,
+    "id": "ford-ranger-limited-11",
+    "name": "Ford Ranger Limited",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2012,
+    "kilometraje": 999999,
     "precio": {
-      "valor": 24900,
+      "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "SUV",
+    "categoria": "Utilitario",
     "transmision": "Automática",
-    "motor": "2.4",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "3.2",
+    "combustible": "Diesel",
+    "puertas": 4,
     "images": [
       "11-1.webp",
       "11-2.webp",
@@ -322,35 +313,25 @@
       "11-8.webp",
       "11-9.webp"
     ],
-    "descripcion": "🚙 Kia Sorento EX 2.4 A/T 4x2 🚙\n¡Tu próxima aventura empieza acá! Descubrí el Kia Sorento EX 2.4 A/T 4x2, año 2018, con solo 71.000 km. 🛣️✨\n\n🔧 Detalles:\nAño: 2018\nKilometraje: 71.000 km\nEstado: Cubiertas Nuevas\nTransmisión: Automática\n🏷️ Precio: USD 24.900\n\nNo pierdas esta oportunidad única. ¡Contáctanos por mensaje privado para más información! 📩\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "descripcion": "FORD RANGER 🫶🙏💪🙌👑✅\n\n- 2012\n- VERSION LIMITED\n- 4X4\n- AUTOMÁTICA \n- TAPIZADO DE CUERO \n- PANTALLA CON CARPLAY, CÁMARA\n- SENSORES \n- PARRILLA RAPTOR \n- ACCESORIOS: ESTRIBOS, PARAGOLPES OFF ROAD, KIT ALTURA, BARRA LED, DEFLECTORES, TAPA CAJA RETRÁCTIL, COBERTOR DE CAJA \n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍 AV BALBIN 1759/67 SAN MIGUEL"
   },
   {
-    "id": "geely-emgrand-gs-2019-12",
-    "name": "Geely Emgrand GS",
-    "marca": "Geely",
-    "marcaId": "geely",
-    "ano": 2019,
-    "kilometraje": 80200,
+    "id": "ford-ka-fly-viral-12",
+    "name": "Ford Ka Fly Viral",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2009,
+    "kilometraje": 999999,
     "precio": {
-      "valor": 12900,
+      "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "SUV",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.8",
+    "motor": "1.0",
     "combustible": "Nafta",
-    "puertas": 5,
-    "images": [
-      "12-1.webp",
-      "12-2.webp",
-      "12-3.webp",
-      "12-4.webp",
-      "12-5.webp",
-      "12-6.webp",
-      "12-7.webp",
-      "12-8.webp",
-      "12-9.webp"
-    ],
-    "descripcion": "🚙✨ ¡Descubrí el Geely Emgrand GS del 2019! Con solo 80.200 km, este vehículo es ideal para quienes buscan innovación y rendimiento en cada trayecto. 🌟\n\n🔑 Detalles:\n\nAño: 2019\nKilometraje: 80.200 km\nPrecio: USD 12.900\n¿Queres saber más? 💬 Envíanos un mensaje privado y te brindaremos toda la información que necesitas para que este Emgrand GS sea tuyo.\n\n𝗕𝗿𝗲𝗻𝘁𝗮𝗖𝗮𝗿𝘀𝗕𝗔\nTu concesionario de confianza."
+    "puertas": 3,
+    "images": ["12-1.webp", "12-2.webp", "12-3.webp", "12-4.webp", "12-5.webp"],
+    "descripcion": "FORD KA 👑🤯🫶✅\n\n- 2009\n- 1.0 FLY VIRAL \n- AIRE ACONDICIONADO \n- DIRECCIÓN HIDRÁULICA \n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901 \n📍 AV BALBIN 1759/67, SAN MIGUEL"
   }
 ]
