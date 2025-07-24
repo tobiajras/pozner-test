@@ -67,44 +67,47 @@ const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
     const loadFavoritos = () => {
       setLoading(true);
       try {
-        const favoritosSimulados = catalogo.slice(6, 12).map((auto) => ({
-          id: auto.id,
-          brand: auto.marca,
-          model: auto.name,
-          year: auto.ano,
-          color: '',
-          price: {
-            valor: auto.precio.valor,
-            moneda: auto.precio.moneda,
-          },
-          description: auto.descripcion,
-          position: 0,
-          featured: false,
-          favorite: true,
-          active: true,
-          categoryId: auto.categoria,
-          mileage: auto.kilometraje,
-          transmission: auto.transmision,
-          fuel: auto.combustible,
-          doors: auto.puertas,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-          Images: auto.images.map((img, index) => ({
-            id: `${auto.id}-img-${index}`,
-            carId: auto.id,
-            imageUrl: `/assets/catalogo/${img}`,
-            thumbnailUrl: `/assets/catalogo/${img}`,
-            order: index,
+        const favoritosSimulados = catalogo
+          .slice(0, 6)
+          .reverse()
+          .map((auto) => ({
+            id: auto.id,
+            brand: auto.marca,
+            model: auto.name,
+            year: auto.ano,
+            color: '',
+            price: {
+              valor: auto.precio.valor,
+              moneda: auto.precio.moneda,
+            },
+            description: auto.descripcion,
+            position: 0,
+            featured: false,
+            favorite: true,
+            active: true,
+            categoryId: auto.categoria,
+            mileage: auto.kilometraje,
+            transmission: auto.transmision,
+            fuel: auto.combustible,
+            doors: auto.puertas,
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString(),
-          })),
-          Category: {
-            id: auto.categoria.toLowerCase(),
-            name: auto.categoria,
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
-          },
-        }));
+            Images: auto.images.map((img, index) => ({
+              id: `${auto.id}-img-${index}`,
+              carId: auto.id,
+              imageUrl: `/assets/catalogo/${img}`,
+              thumbnailUrl: `/assets/catalogo/${img}`,
+              order: index,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString(),
+            })),
+            Category: {
+              id: auto.categoria.toLowerCase(),
+              name: auto.categoria,
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString(),
+            },
+          }));
 
         setFavoritos(favoritosSimulados);
       } catch (err) {

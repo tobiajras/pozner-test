@@ -19,7 +19,7 @@ const Header = () => {
         company.darkmode
           ? 'bg-color-bg-secondary-dark'
           : company.dark
-          ? 'bg-color-bg-primary'
+          ? 'bg-color-bg-primary shadow-md'
           : 'bg-color-bg-secondary-dark'
       } `}
     >
@@ -91,7 +91,7 @@ const Header = () => {
                             !nav.button && isActive && 'text-color-title-light'
                           }`
                         : `text-color-text hover:text-color-title ${
-                            !nav.button && isActive && 'text-color-title-light'
+                            !nav.button && isActive && 'text-color-title'
                           }`
                     } font-medium transition-all duration-300`}
                     href={nav.url}

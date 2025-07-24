@@ -1,20 +1,20 @@
 [
   {
-    "id": "bmw-m3-sedan-competition-1",
-    "name": "BMW M3 Sedan Competition",
-    "marca": "BMW",
-    "marcaId": "bmw",
-    "ano": 2020,
-    "kilometraje": 12000,
+    "id": "volkswagen-tiguan-2-0-tsi-elegance-aut-1",
+    "name": "Volkswagen Tiguan 2.0 TSi Elegance Aut",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2013,
+    "kilometraje": 177000,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Deportivo",
+    "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "3.0",
+    "motor": "2.0",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -27,22 +27,22 @@
       "1-9.webp",
       "1-10.webp"
     ],
-    "descripcion": "BMW M3 SEDAN COMPETITION 💣💣💣💣💣\n\n- 2020\n- 12.000KM\n- MOTOR 3.0 6 CILINDROS BITURBO 500CV\n- TRACCIÓN TRASERA\n- AUTOMATICO 7 VELOCIDADES DOBLE EMBRAGUE MODELO MKG CON FUNCION LAUNCH CONTROL\n- ENCENDIDO AUTO START/STOP\n- LLANTAS RODADO 19\n- BUTACAS EN CARBONO\n- ALERON DE CARBONO\n- TOMÁS DE AIRE DE CARBONO\n- ESPEJOS DE CARBONO\n- SEGURIDAD: FRENOS M DE CARBONO REFORZADO\nSILICONADO\n- FILTRO DE AIRE EVENTURI CARBONO\n- ESCAPE MPERFORMANCE\n- CÁMARA 360 3D\n- GARANTÍA 200.000KM\n\nTOMAMOS PERMUTAS\nFINANCIAMOS CON DNI\n\n📲 1158362901 WHATSAPP \n📍 AV BALBIN 1767, SAN MIGUEL"
+    "descripcion": "🚘Volkswagen Tiguan 2.0 TSi Elegance Aut 2013\n⚙️177 MilKm\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
   },
   {
-    "id": "mercedes-benz-a200-progressive-2",
-    "name": "Mercedes Benz A200 Progressive",
-    "marca": "Mercedes Benz",
-    "marcaId": "mercedes-benz",
-    "ano": 2019,
-    "kilometraje": 40000,
+    "id": "chevrolet-tracker-premier-4x2-2",
+    "name": "Chevrolet Tracker Premier 4x2",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2020,
+    "kilometraje": 94000,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "1.3",
+    "motor": "1.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -57,23 +57,23 @@
       "2-9.webp",
       "2-10.webp"
     ],
-    "descripcion": "MERCEDES BENZ A200 🙌🫶🫰👌✅\n\n- A200\n- VERSION PROGRESSIVE \n- 2019\n- 1.3 TURBO\n- 40.000KM\n- AUTOMATICO \n\nTOMAMOS PERMUTAS\nFINANCIAMOS CON DNI\n\n☎️ 60660537\n📲 1158362901\n📍 AV BALBIN 1767, SAN MIGUEL"
+    "descripcion": "🚘Chevrolet Tracker Premier 4x2 2020\n⚙️94 MilKm\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
   },
   {
-    "id": "bmw-x6-3",
-    "name": "BMW X6",
-    "marca": "BMW",
-    "marcaId": "bmw",
-    "ano": 2017,
-    "kilometraje": 55000,
+    "id": "peugeot-307-5p-2-0-xs-premium-hdi-3",
+    "name": "Peugeot 307 5P 2.0 XS Premium HDi",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2010,
+    "kilometraje": 270000,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "3.0",
-    "combustible": "Nafta",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "2.0",
+    "combustible": "Diesel",
     "puertas": 5,
     "images": [
       "3-1.webp",
@@ -86,24 +86,24 @@
       "3-8.webp",
       "3-9.webp"
     ],
-    "descripcion": "BMW X6 😂😍🥂✅\n\n- 2017\n- 55.000KM\n- 3.0 306CV\n- PURÉ EXTRAVAGANCE\n- TRACCIÓN INTEGRAL\n- CAJA AUTOMÁTICA 8 VELOCIDADES\n\nTOMAMOS PERMUTAS\nFINANCIAMOS CON DNI\n\n☎️ 60660537\n📲 1158362901\n📍 AV BALBIN 1767, SAN MIGUEL"
+    "descripcion": "🚘Peugeot 307 5P 2.0 XS Premium HDi 2010\n⚙️270 MilKm\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
   },
   {
-    "id": "bmw-m2-4",
-    "name": "BMW M2",
-    "marca": "BMW",
-    "marcaId": "bmw",
-    "ano": 2017,
-    "kilometraje": 59000,
+    "id": "peugeot-308-allure-4",
+    "name": "Peugeot 308 Allure",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2015,
+    "kilometraje": 124000,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Deportivo",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "3.0",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 2,
+    "puertas": 5,
     "images": [
       "4-1.webp",
       "4-2.webp",
@@ -112,24 +112,24 @@
       "4-5.webp",
       "4-6.webp"
     ],
-    "descripcion": "BMW M2 👑🤩🤯✅\n\n- 2017 \n- 59.000KM\n- MOTOR 6 CILINDROS 3.0 TURBO \n- ESCAPE AKRAPOVIC\n\nTOMAMOS PERMUTAS\nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍 AV BALBIN 1759/67, SAN MIGUEL"
+    "descripcion": "🚘Peugeot 308 Allure 2015\n⚙️124 MilKm\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
   },
   {
-    "id": "chevrolet-cruze-premier-5",
-    "name": "Chevrolet Cruze Premier",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2020,
-    "kilometraje": 80000,
+    "id": "renault-duster-dynamique-5",
+    "name": "Renault Duster Dynamique",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2017,
+    "kilometraje": 68000,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "1.4",
+    "categoria": "SUV",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -141,24 +141,24 @@
       "5-8.webp",
       "5-9.webp"
     ],
-    "descripcion": "CHEVROLET CRUZE 🙌👏🫶✅\n\n- 2020\n- VERSION PREMIER\n- CAJA AUTOMÁTICA\n- 80.000KM\n- MOTOR 1.4 TURBO\n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍 AV BALBIN 1759/67 SAN MIGUEL"
+    "descripcion": "🚘Renault Duster Dynamique 2017\n⚙️68 MilKm\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
   },
   {
-    "id": "peugeot-207-xt-premium-6",
-    "name": "Peugeot 207 XT Premium",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2009,
-    "kilometraje": 999999,
+    "id": "renault-kwid-iconic-bitono-6",
+    "name": "Renault Kwid Iconic Bitono",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2025,
+    "kilometraje": 21,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.0",
     "combustible": "Nafta",
-    "puertas": 3,
+    "puertas": 5,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -169,169 +169,6 @@
       "6-7.webp",
       "6-8.webp"
     ],
-    "descripcion": "PEUGEOT 207 👏👑🙌✅\n\n- 2009\n- VERSION XT PREMIUN \n- MOTOR 1.6 NAFTA\n- 3 PUERTAS \n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍 AV BALBIN 1759/67, SAN MIGUEL"
-  },
-  {
-    "id": "volkswagen-virtus-comfortline-7",
-    "name": "Volkswagen Virtus Comfortline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2024,
-    "kilometraje": 40000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "USD"
-    },
-    "categoria": "Sedán",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 4,
-    "images": [
-      "7-1.webp",
-      "7-2.webp",
-      "7-3.webp",
-      "7-4.webp",
-      "7-5.webp",
-      "7-6.webp",
-      "7-7.webp",
-      "7-8.webp",
-      "7-9.webp"
-    ],
-    "descripcion": "VW VIRTUS 🙌👑👏✅\n\n- 2024\n- 40.000KM\n- VERSION COMFORTLINE \n- MOTOR 1.6 \n- CAJA MANUAL \n\nTOMAMOS PERMUTAS\nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍AV BALBIN 1759/67, SAN MIGUEL"
-  },
-  {
-    "id": "toyota-hilux-dx-8",
-    "name": "Toyota Hilux DX",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2015,
-    "kilometraje": 170000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "USD"
-    },
-    "categoria": "Utilitario",
-    "transmision": "Manual",
-    "motor": "2.5",
-    "combustible": "Diesel",
-    "puertas": 4,
-    "images": [
-      "8-1.webp",
-      "8-2.webp",
-      "8-3.webp",
-      "8-4.webp",
-      "8-5.webp",
-      "8-6.webp",
-      "8-7.webp",
-      "8-8.webp"
-    ],
-    "descripcion": "TOYOTA HILUX 🤩😍🤯✅\n\n- 2015\n- 4X4\n- 170.000KM\n- VERSION DX CON PACK ELÉCTRICO \n- MOTOR 2.5 DIESEL\n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901 \n📍 AV BALBIN 1759/67, SAN MIGUEL"
-  },
-  {
-    "id": "renault-sandero-stepway-intens-9",
-    "name": "Renault Sandero Stepway Intens",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2023,
-    "kilometraje": 9500,
-    "precio": {
-      "valor": 999999,
-      "moneda": "USD"
-    },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": [
-      "9-1.webp",
-      "9-2.webp",
-      "9-3.webp",
-      "9-4.webp",
-      "9-5.webp",
-      "9-6.webp",
-      "9-7.webp",
-      "9-8.webp",
-      "9-9.webp"
-    ],
-    "descripcion": "SANDERO STEPWAY 🙌👑💪🫶✅\n\n- 2023 \n- 9.500KM\n- VERSION INTENS \n- CAJA AUTOMÁTICA CVT\n- MOTOR 1.6 NAFTA CADENERO \n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI\n\n📲 1158362901\n📍 AV BALBIN 1759, SAN MIGUEL"
-  },
-  {
-    "id": "fiat-palio-essence-10",
-    "name": "Fiat Palio Essence",
-    "marca": "Fiat",
-    "marcaId": "fiat",
-    "ano": 2014,
-    "kilometraje": 999999,
-    "precio": {
-      "valor": 999999,
-      "moneda": "USD"
-    },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": [
-      "10-1.webp",
-      "10-2.webp",
-      "10-3.webp",
-      "10-4.webp",
-      "10-5.webp",
-      "10-6.webp",
-      "10-7.webp",
-      "10-8.webp",
-      "10-9.webp"
-    ],
-    "descripcion": "FIAT PALIO 🙌🤩🫶✅\n\n- 2014\n- VERSION ESSENCE\n- MOTOR 1.6 16V NAFTA 115CV\n- CAJA MANUAL \n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍 AV BALBIN 1759/67, SAN MIGUEL"
-  },
-  {
-    "id": "ford-ranger-limited-11",
-    "name": "Ford Ranger Limited",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2012,
-    "kilometraje": 999999,
-    "precio": {
-      "valor": 999999,
-      "moneda": "USD"
-    },
-    "categoria": "Utilitario",
-    "transmision": "Automática",
-    "motor": "3.2",
-    "combustible": "Diesel",
-    "puertas": 4,
-    "images": [
-      "11-1.webp",
-      "11-2.webp",
-      "11-3.webp",
-      "11-4.webp",
-      "11-5.webp",
-      "11-6.webp",
-      "11-7.webp",
-      "11-8.webp",
-      "11-9.webp"
-    ],
-    "descripcion": "FORD RANGER 🫶🙏💪🙌👑✅\n\n- 2012\n- VERSION LIMITED\n- 4X4\n- AUTOMÁTICA \n- TAPIZADO DE CUERO \n- PANTALLA CON CARPLAY, CÁMARA\n- SENSORES \n- PARRILLA RAPTOR \n- ACCESORIOS: ESTRIBOS, PARAGOLPES OFF ROAD, KIT ALTURA, BARRA LED, DEFLECTORES, TAPA CAJA RETRÁCTIL, COBERTOR DE CAJA \n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901\n📍 AV BALBIN 1759/67 SAN MIGUEL"
-  },
-  {
-    "id": "ford-ka-fly-viral-12",
-    "name": "Ford Ka Fly Viral",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2009,
-    "kilometraje": 999999,
-    "precio": {
-      "valor": 999999,
-      "moneda": "USD"
-    },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.0",
-    "combustible": "Nafta",
-    "puertas": 3,
-    "images": ["12-1.webp", "12-2.webp", "12-3.webp", "12-4.webp", "12-5.webp"],
-    "descripcion": "FORD KA 👑🤯🫶✅\n\n- 2009\n- 1.0 FLY VIRAL \n- AIRE ACONDICIONADO \n- DIRECCIÓN HIDRÁULICA \n\nTOMAMOS PERMUTAS \nFINANCIAMOS CON DNI \n\n📲 1158362901 \n📍 AV BALBIN 1759/67, SAN MIGUEL"
+    "descripcion": "🚘Renault Kwid Iconic Bitono 2025\n⚙️21 Km\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
   }
 ]

@@ -74,47 +74,62 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
           throw new Error('Auto no encontrado');
         }
 
-        // Obtener autos de la misma categoría, excluyendo el actual
-        const autosRelacionados = catalogo
-          .filter((auto, index) => index >= 5 && index <= 11) // Seleccionar autos del 6 al 12
-          .map((auto) => ({
-            id: auto.id,
-            brand: auto.marca,
-            model: auto.name,
-            year: auto.ano,
-            color: '',
-            price: {
-              valor: auto.precio.valor,
-              moneda: auto.precio.moneda,
-            },
-            description: auto.descripcion,
-            position: 0,
-            featured: false,
-            favorite: false,
-            active: true,
-            categoryId: auto.categoria,
-            mileage: auto.kilometraje,
-            transmission: auto.transmision,
-            fuel: auto.combustible,
-            doors: auto.puertas,
+        // Función para mezclar array aleatoriamente (Fisher-Yates shuffle)
+        const shuffleArray = (array: any[]) => {
+          const shuffled = [...array];
+          for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+          }
+          return shuffled;
+        };
+
+        // Obtener todos los autos excepto el actual
+        const autosDisponibles = catalogo.filter(
+          (auto) => auto.id !== currentCarId
+        );
+
+        // Mezclar aleatoriamente y tomar máximo 10
+        const autosAleatorios = shuffleArray(autosDisponibles).slice(0, 10);
+
+        const autosRelacionados = autosAleatorios.map((auto) => ({
+          id: auto.id,
+          brand: auto.marca,
+          model: auto.name,
+          year: auto.ano,
+          color: '',
+          price: {
+            valor: auto.precio.valor,
+            moneda: auto.precio.moneda,
+          },
+          description: auto.descripcion,
+          position: 0,
+          featured: false,
+          favorite: false,
+          active: true,
+          categoryId: auto.categoria,
+          mileage: auto.kilometraje,
+          transmission: auto.transmision,
+          fuel: auto.combustible,
+          doors: auto.puertas,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          Images: auto.images.map((img: string, index: number) => ({
+            id: `${auto.id}-img-${index}`,
+            carId: auto.id,
+            imageUrl: `/assets/catalogo/${img}`,
+            thumbnailUrl: `/assets/catalogo/${img}`,
+            order: index,
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString(),
-            Images: auto.images.map((img, index) => ({
-              id: `${auto.id}-img-${index}`,
-              carId: auto.id,
-              imageUrl: `/assets/catalogo/${img}`,
-              thumbnailUrl: `/assets/catalogo/${img}`,
-              order: index,
-              createdAt: new Date().toISOString(),
-              updatedAt: new Date().toISOString(),
-            })),
-            Category: {
-              id: auto.categoria.toLowerCase(),
-              name: auto.categoria,
-              createdAt: new Date().toISOString(),
-              updatedAt: new Date().toISOString(),
-            },
-          }));
+          })),
+          Category: {
+            id: auto.categoria.toLowerCase(),
+            name: auto.categoria,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+          },
+        }));
 
         setRelatedCars(autosRelacionados);
       } catch (err) {

@@ -17,9 +17,7 @@ const Footer = () => {
       <footer
         id='contactoSection'
         className={`flex justify-center pt-10 shadow-top-lg relative ${
-          company.darkmode
-            ? 'bg-color-bg-secondary-dark'
-            : 'bg-color-bg-secondary'
+          company.darkmode ? 'bg-color-bg-secondary-dark' : 'bg-zinc-900'
         } `}
         style={{ boxShadow: '0 -4px 6px rgba(0, 0, 0, 0.1)' }}
       >

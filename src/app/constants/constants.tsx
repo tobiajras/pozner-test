@@ -1,27 +1,27 @@
 export const company = {
   dark: true,
-  darkmode: true,
+  darkmode: false,
   shortAdress: true,
   favicon: false,
   price: false,
-  id: 'oasisautomotores',
-  name: 'Oasis Automotores',
-  adress: 'Balbín 1767',
-  city: 'San Miguel',
-  email: null,
-  instagram: 'oasisautomotores',
-  facebook: 'https://www.facebook.com/oasisautomotor/',
-  whatsapp: ['1158362901', '1136614289'],
-  googlemapsLink: 'https://maps.app.goo.gl/PyHe9h8zMSP96yw9A',
+  id: 'borsottoautos',
+  name: 'Borsotto Autos',
+  adress: 'Mendoza 1359',
+  city: 'Gral Roca-Rio Negro',
+  email: 'autosborsotto@gmail.com',
+  instagram: 'borsottoautos',
+  facebook: 'https://www.facebook.com/BorsottoAutos/',
+  whatsapp: ['2984642420', '2984420677'],
+  googlemapsLink: 'https://maps.app.goo.gl/F4XP6iJzh8DxRUej6',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3286.301013650847!2d-58.7159976!3d-34.5459332!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aac85c7434527%3A0x56b3f9edf07593e6!2sOasis!5e0!3m2!1sen!2sar!4v1753308068731!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6198.5091487304!2d-67.56448526572188!3d-39.03231468751525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a03b6e557f5f3%3A0x12d8450b122823d5!2sBorsotto%20Autos!5e0!3m2!1sen!2sar!4v1753319228496!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:30 a 18:30hs'] },
-    { day: 'Martes', hours: ['09:30 a 18:30hs'] },
-    { day: 'Miércoles', hours: ['09:30 a 18:30hs'] },
-    { day: 'Jueves', hours: ['09:30 a 18:30hs'] },
-    { day: 'Viernes', hours: ['09:30 a 18:30hs'] },
-    { day: 'Sábado', hours: ['09:30 a 13:00hs'] },
+    { day: 'Lunes', hours: ['9:30 a 12:30 y 17 a 20hs'] },
+    { day: 'Martes', hours: ['9:30 a 12:30 y 17 a 20hs'] },
+    { day: 'Miércoles', hours: ['9:30 a 12:30 y 17 a 20hs'] },
+    { day: 'Jueves', hours: ['9:30 a 12:30 y 17 a 20hs'] },
+    { day: 'Viernes', hours: ['9:30 a 12:30 y 17 a 20hs'] },
+    { day: 'Sábado', hours: ['9 a 13hs'] },
     // { day: 'Domingo', hours: ['10:00 a 19:00'] },
   ],
   footer:
@@ -32,13 +32,13 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'vitacars';
 
 export const metadataCompany = {
-  metadataBase: 'https://oasisautomotores.vercel.app/',
-  title: 'Oasis Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://borsottoautos.vercel.app/',
+  title: 'Borsotto Autos - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
 
-// Necesito que actualices la informacion de catalogo.json. Las images tomalas de images de data.json, la descripcion tomala tal cual de caption de data.json. En name pone la marca y el modelo del vehiculo en title case, marca, marcaId todo esto acorde a la informacion de caption. Si en caption no se dice kilometraje o precio pone 999999, categoria estimala para el vehiculo (categorias tipicas de vehiculos en argentina. como utilitario, deportivo, suv, hatchback, etc). Transmision, motor, combustible y puertas estimalas acorde al vehiculo
+// Reemplaza los vehiculos del 1 al 6 en el orden que te paso acontinuacion. Esos textos tiene que ir tal cual en la descripcion de cada uno. El name del vehiculo tiene que estar en Title Case. No agregues ni quites ningun atributo, unicamente tenes que actualizar los valores para que coincidan con el vehiculo. Si no te paso precio o kilometraje pone 999999:
 
 export const preguntas = [
   {
