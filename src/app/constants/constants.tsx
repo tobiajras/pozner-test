@@ -4,24 +4,24 @@ export const company = {
   shortAdress: true,
   favicon: false,
   price: false,
-  id: 'puntobellavista',
-  name: 'Punto Bellavista',
-  adress: 'Senador Morón 319',
-  city: 'Bella Vista',
-  email: 'puntobellavista@gmail.com',
-  instagram: 'puntobellavista',
-  facebook: null,
-  whatsapp: ['1141802278', '1160009939', '1166931613', '1135866129'],
-  googlemapsLink: 'https://maps.app.goo.gl/rb2DjUo9jEo6WpL59',
+  id: 'toiaautomoviles',
+  name: 'Toia Automoviles',
+  adress: 'Fuerza Aerea 2194',
+  city: 'Funes',
+  email: 'ventas@ezequieltoiaautomoviles.com',
+  instagram: 'toiaautomoviles',
+  facebook: 'https://www.facebook.com/ToiaAutomoviles/',
+  whatsapp: ['3413604132', '3414930720'],
+  googlemapsLink: 'https://maps.app.goo.gl/r854KYbsmQHeuuDk8',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6571.772920827097!2d-58.67481980647275!3d-34.55643002280315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd0002f08b29%3A0x789e0250e7d9c2a0!2sPunto%20Bellavista!5e0!3m2!1sen!2sar!4v1753324148314!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.82678745517!2d-60.81899685020851!3d-32.92917433246759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b64cff3d9c194b%3A0xc3de1de51012b05b!2sEzequiel%20Toia!5e0!3m2!1sen!2sar!4v1753357542256!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['9 a 13 y 16 a 19hs'] },
-    { day: 'Martes', hours: ['9 a 13 y 16 a 19hs'] },
-    { day: 'Miércoles', hours: ['9 a 13 y 16 a 19hs'] },
-    { day: 'Jueves', hours: ['9 a 13 y 16 a 19hs'] },
-    { day: 'Viernes', hours: ['9 a 13 y 16 a 19hs'] },
-    { day: 'Sábado', hours: ['9 a 13hs'] },
+    { day: 'Lunes', hours: ['9 a 13 y 15 a 19hs'] },
+    { day: 'Martes', hours: ['9 a 13 y 15 a 19hs'] },
+    { day: 'Miércoles', hours: ['9 a 13 y 15 a 19hs'] },
+    { day: 'Jueves', hours: ['9 a 13 y 15 a 19hs'] },
+    { day: 'Viernes', hours: ['9 a 13 y 15 a 19hs'] },
+    { day: 'Sábado', hours: ['9 a 17hs'] },
     // { day: 'Domingo', hours: ['10:00 a 19:00'] },
   ],
   footer:
@@ -32,13 +32,13 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'vitacars';
 
 export const metadataCompany = {
-  metadataBase: 'https://puntobellavista.vercel.app/',
-  title: 'Punto Bellavista - Compra y Venta de Autos',
+  metadataBase: 'https://toiaautomoviles.vercel.app/',
+  title: 'Toia Automoviles - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
 
-// Reemplaza los vehiculos del 1 al 6 en el orden que te paso acontinuacion. Esos textos tiene que ir tal cual en la descripcion de cada uno. El name del vehiculo tiene que estar en Title Case. No agregues ni quites ningun atributo, unicamente tenes que actualizar los valores para que coincidan con el vehiculo. Si no te paso precio o kilometraje pone 999999:
+// Reemplaza los vehiculos del 1 al 6 en el orden que te paso acontinuacion, si hay mas eliminalos. Esos textos tiene que ir tal cual en la descripcion de cada uno. El name del vehiculo tiene que estar en Title Case. No agregues ni quites ningun atributo, unicamente tenes que actualizar los valores para que coincidan con el vehiculo. Si no te paso precio o kilometraje pone 999999:
 
 export const preguntas = [
   {
