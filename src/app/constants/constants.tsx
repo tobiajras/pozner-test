@@ -1,26 +1,26 @@
 export const company = {
   dark: true,
-  darkmode: false,
+  darkmode: true,
   shortAdress: true,
   favicon: false,
   price: false,
-  id: 'borsottoautos',
-  name: 'Borsotto Autos',
-  adress: 'Mendoza 1359',
-  city: 'Gral Roca-Rio Negro',
-  email: 'autosborsotto@gmail.com',
-  instagram: 'borsottoautos',
-  facebook: 'https://www.facebook.com/BorsottoAutos/',
-  whatsapp: ['2984642420', '2984420677'],
-  googlemapsLink: 'https://maps.app.goo.gl/F4XP6iJzh8DxRUej6',
+  id: 'puntobellavista',
+  name: 'Punto Bellavista',
+  adress: 'Senador Morón 319',
+  city: 'Bella Vista',
+  email: 'puntobellavista@gmail.com',
+  instagram: 'puntobellavista',
+  facebook: null,
+  whatsapp: ['1141802278', '1160009939', '1166931613', '1135866129'],
+  googlemapsLink: 'https://maps.app.goo.gl/rb2DjUo9jEo6WpL59',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6198.5091487304!2d-67.56448526572188!3d-39.03231468751525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a03b6e557f5f3%3A0x12d8450b122823d5!2sBorsotto%20Autos!5e0!3m2!1sen!2sar!4v1753319228496!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6571.772920827097!2d-58.67481980647275!3d-34.55643002280315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd0002f08b29%3A0x789e0250e7d9c2a0!2sPunto%20Bellavista!5e0!3m2!1sen!2sar!4v1753324148314!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['9:30 a 12:30 y 17 a 20hs'] },
-    { day: 'Martes', hours: ['9:30 a 12:30 y 17 a 20hs'] },
-    { day: 'Miércoles', hours: ['9:30 a 12:30 y 17 a 20hs'] },
-    { day: 'Jueves', hours: ['9:30 a 12:30 y 17 a 20hs'] },
-    { day: 'Viernes', hours: ['9:30 a 12:30 y 17 a 20hs'] },
+    { day: 'Lunes', hours: ['9 a 13 y 16 a 19hs'] },
+    { day: 'Martes', hours: ['9 a 13 y 16 a 19hs'] },
+    { day: 'Miércoles', hours: ['9 a 13 y 16 a 19hs'] },
+    { day: 'Jueves', hours: ['9 a 13 y 16 a 19hs'] },
+    { day: 'Viernes', hours: ['9 a 13 y 16 a 19hs'] },
     { day: 'Sábado', hours: ['9 a 13hs'] },
     // { day: 'Domingo', hours: ['10:00 a 19:00'] },
   ],
@@ -32,8 +32,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'vitacars';
 
 export const metadataCompany = {
-  metadataBase: 'https://borsottoautos.vercel.app/',
-  title: 'Borsotto Autos - Compra y Venta de Autos',
+  metadataBase: 'https://puntobellavista.vercel.app/',
+  title: 'Punto Bellavista - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

@@ -1,20 +1,20 @@
 [
   {
-    "id": "volkswagen-tiguan-2-0-tsi-elegance-aut-1",
-    "name": "Volkswagen Tiguan 2.0 TSi Elegance Aut",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2013,
-    "kilometraje": 177000,
+    "id": "toyota-hilux-srv-at-4x4-1",
+    "name": "Toyota Hilux Srv At 4x4",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2017,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "SUV",
+    "categoria": "Pick Up",
     "transmision": "Automática",
-    "motor": "2.0",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "2.8",
+    "combustible": "Diesel",
+    "puertas": 4,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -23,28 +23,26 @@
       "1-5.webp",
       "1-6.webp",
       "1-7.webp",
-      "1-8.webp",
-      "1-9.webp",
-      "1-10.webp"
+      "1-8.webp"
     ],
-    "descripcion": "🚘Volkswagen Tiguan 2.0 TSi Elegance Aut 2013\n⚙️177 MilKm\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
+    "descripcion": "HOLA! Tenemos la Pick Up que estás buscando, apúrate que vuela 💨\n\n🛻 TOYOTA HILUX SRV AT 4x4\n- 2017\n\n\n\nPick Up 4x4 del segmento mediano de la marca Toyota , con un motor diesel 2.8 Turbo diesel, 177cv, de 4 cilindros en línea, inyección directa, cadenera.\nTrae caja automatica de 6 velocidades .\n\nCONOCE ESTA UNIDAD Y MAS.. en Punto Bella vista Automóviles, donde tus SUEÑOS ARRANCAN 🚀🚀🚀\n\nTe esperamos en Av.Senador Morón 319 o en nuestro BOX, Av.Senador Moron 489, Bella vista - Buenos Aires 📌"
   },
   {
-    "id": "chevrolet-tracker-premier-4x2-2",
-    "name": "Chevrolet Tracker Premier 4x2",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2020,
-    "kilometraje": 94000,
+    "id": "ford-fiesta-se-plus-mt-2",
+    "name": "Ford Fiesta Se Plus Mt",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2014,
+    "kilometraje": 148000,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.0",
+    "categoria": "Sedan",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "2-1.webp",
       "2-2.webp",
@@ -53,28 +51,26 @@
       "2-5.webp",
       "2-6.webp",
       "2-7.webp",
-      "2-8.webp",
-      "2-9.webp",
-      "2-10.webp"
+      "2-8.webp"
     ],
-    "descripcion": "🚘Chevrolet Tracker Premier 4x2 2020\n⚙️94 MilKm\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
+    "descripcion": "HOLA! Tenemos el auto. que estás buscando, apúrate que vuela 💨\n\n🛻 FORD FIESTA SE PLUS MT\n- 2014\n- 148.000 km\n- Único dueño\n\n- Auto sedan del segmento B, con un motor 1.6L 16v DOHC, con sistema de distrinución variable y 120cv.\n\nCONOCE ESTA UNIDAD Y MAS.. en Punto Bella vista Automóviles, donde tus SUEÑOS ARRANCAN 🚀🚀🚀\n\nTe esperamos en Av.Senador Morón 319 o en nuestro BOX, Av.Senador Moron 489, Bella vista - Buenos Aires"
   },
   {
-    "id": "peugeot-307-5p-2-0-xs-premium-hdi-3",
-    "name": "Peugeot 307 5P 2.0 XS Premium HDi",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2010,
-    "kilometraje": 270000,
+    "id": "volkswagen-amarok-highline-4x2-manual-3",
+    "name": "Volkswagen Amarok Highline 4x2 Manual",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2017,
+    "kilometraje": 144000,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Hatchback",
+    "categoria": "Pick Up",
     "transmision": "Manual",
     "motor": "2.0",
     "combustible": "Diesel",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "3-1.webp",
       "3-2.webp",
@@ -83,53 +79,54 @@
       "3-5.webp",
       "3-6.webp",
       "3-7.webp",
-      "3-8.webp",
-      "3-9.webp"
+      "3-8.webp"
     ],
-    "descripcion": "🚘Peugeot 307 5P 2.0 XS Premium HDi 2010\n⚙️270 MilKm\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
+    "descripcion": "HOLA! Tenemos la Pick Up que estás buscando, apúrate que vuela 💨\n\n🛻 VOLKSWAGEN AMAROK HIGHLINE 4x2 MANUAL\n- 2017\n- 144.000KM\n\n\nPick Up 4x4 del segmento mediano de la marca Volkswagen, con un motor diesel 2.0 Turbo diesel, 180cv , y de 4 cilindros en línea, inyección directa.\nTrae caja manual de 6 velocidades .\n\nCONOCE ESTA UNIDAD Y MAS.. en Punto Bella vista Automóviles, donde tus SUEÑOS ARRANCAN 🚀🚀🚀\n\nTe esperamos en Av.Senador Morón 319 o en nuestro BOX, Av.Senador Moron 489, Bella vista - Buenos Aires 📌"
   },
   {
-    "id": "peugeot-308-allure-4",
-    "name": "Peugeot 308 Allure",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2015,
-    "kilometraje": 124000,
+    "id": "chevrolet-s10-lt-4x2-manual-4",
+    "name": "Chevrolet S10 Lt 4x2 Manual",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2017,
+    "kilometraje": 115000,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Hatchback",
+    "categoria": "Pick Up",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "2.8",
+    "combustible": "Diesel",
+    "puertas": 4,
     "images": [
       "4-1.webp",
       "4-2.webp",
       "4-3.webp",
       "4-4.webp",
       "4-5.webp",
-      "4-6.webp"
+      "4-6.webp",
+      "4-7.webp",
+      "4-8.webp"
     ],
-    "descripcion": "🚘Peugeot 308 Allure 2015\n⚙️124 MilKm\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
+    "descripcion": "HOLA! Tenemos la Pick Up que estás buscando, apúrate que vuela 💨\n\n🛻 CHEVROLET S10 LT 4X2 MANUAL\n- 2017\n- 115.000KM\n- Único dueño\n\n\nPick Up 4x4 del segmento mediano de la marca Chevrolet, con un motor diesel 2.8L duramax, 200cv turbo, y de 4 cilindros.\nTrae caja manual de 6 velocidades .\n\nCONOCE ESTA UNIDAD Y MAS.. en Punto Bella vista Automóviles, donde tus SUEÑOS ARRANCAN 🚀🚀🚀\n\nTe esperamos en Av.Senador Morón 319 o en nuestro BOX, Av.Senador Moron 489, Bella vista - Buenos Aires 📌"
   },
   {
-    "id": "renault-duster-dynamique-5",
-    "name": "Renault Duster Dynamique",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2017,
-    "kilometraje": 68000,
+    "id": "volkswagen-saveiro-1-6-d-c-5",
+    "name": "Volkswagen Saveiro 1.6 D/C",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 999999,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "SUV",
+    "categoria": "Pick Up",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 2,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -141,24 +138,24 @@
       "5-8.webp",
       "5-9.webp"
     ],
-    "descripcion": "🚘Renault Duster Dynamique 2017\n⚙️68 MilKm\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
+    "descripcion": "HOLA! Tenemos la Pick Up que estás buscando, apúrate que vuela 💨\n\n🛻 VOLKSWAGEN SAVEIRO 1.6 D/C\n\n\nLa mini Pick de Volkswagen, que es sumamente elegida a la hora de usarla para trabajar, fiel, económica e indestructible.\nTenemos esta opción lista para vos!\n\nCONOCE ESTA UNIDAD Y MAS.. en Punto Bella vista Automóviles, donde tus SUEÑOS ARRANCAN 🚀🚀🚀\n\nTe esperamos en Av.Senador Morón 319 o en nuestro BOX, Av.Senador Moron 489, Bella vista - Buenos Aires 📌"
   },
   {
-    "id": "renault-kwid-iconic-bitono-6",
-    "name": "Renault Kwid Iconic Bitono",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2025,
-    "kilometraje": 21,
+    "id": "ram-rampage-rt-272cv-6",
+    "name": "Ram Rampage Rt 272cv",
+    "marca": "Ram",
+    "marcaId": "ram",
+    "ano": 2024,
+    "kilometraje": 8000,
     "precio": {
       "valor": 999999,
       "moneda": "USD"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.0",
+    "categoria": "Pick Up",
+    "transmision": "Automática",
+    "motor": "2.0",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -169,6 +166,178 @@
       "6-7.webp",
       "6-8.webp"
     ],
-    "descripcion": "🚘Renault Kwid Iconic Bitono 2025\n⚙️21 Km\n☎️ https://wa.me/+5492984642420\n.\n.\n💰Financiación en cuotas fijas.\n📩Precios y formas de pago por privado."
+    "descripcion": "HOLA! Tenemos la Pick Up que estás buscando, apúrate que vuela 💨\n\n🛻 RAM RAMPAGE RT 272CV\n- 2024\n- 8.000km\n- Único dueño\n- Servicios oficiales\n\nPick Up 4x4 del segmento chico, una Pick pequeña, pero con fuerza y potencia de sobra, 272cv en un motor 2.0turbo naftero de 4 cilindros.\n\nCONOCE ESTA UNIDAD Y MAS.. en Punto Bella vista Automóviles, donde tus SUEÑOS ARRANCAN 🚀🚀🚀\n\nTe esperamos en Av.Senador Morón 319 o en nuestro BOX, Av.Senador Moron 489, Bella vista - Buenos Aires 📌"
+  },
+  {
+    "id": "chevrolet-corsa-lt-1-4n-3p-7",
+    "name": "Chevrolet Corsa Lt 1.4n 3p",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2010,
+    "kilometraje": 165000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "USD"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.4",
+    "combustible": "Nafta",
+    "puertas": 3,
+    "images": [
+      "7-1.webp",
+      "7-2.webp",
+      "7-3.webp",
+      "7-4.webp",
+      "7-5.webp",
+      "7-6.webp",
+      "7-7.webp",
+      "7-8.webp"
+    ],
+    "descripcion": "CHEVROLET CORSA LT 1.4N 3P\n- 2010\n- 165xxx km\n\nVehículo del segmento chico, en un gran estado, pocos detalles estéticos.\nEsta unidad cuenta con escape y suspensión progresiva, y está listo para que vengas a buscarlo.\nCONOCE ESTA UNIDAD Y MAS.. en Punto Bella vista Automóviles, donde tus SUEÑOS ARRANCAN 🚀🚀🚀\n\nTe esperamos en Av.Senador Morón 319 o en nuestro BOX, Av.Senador Moron 489, Bella vista - Buenos Aires 📌"
+  },
+  {
+    "id": "volkswagen-amarok-v6-comfortline-0km-8",
+    "name": "Volkswagen Amarok V6 Comfortline 0km",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2025,
+    "kilometraje": 0,
+    "precio": {
+      "valor": 999999,
+      "moneda": "USD"
+    },
+    "categoria": "Pick Up",
+    "transmision": "Automática",
+    "motor": "3.0",
+    "combustible": "Diesel",
+    "puertas": 4,
+    "images": [
+      "8-1.webp",
+      "8-2.webp",
+      "8-3.webp",
+      "8-4.webp",
+      "8-5.webp",
+      "8-6.webp",
+      "8-7.webp",
+      "8-8.webp"
+    ],
+    "descripcion": "SUMAMOS UN 0KM MÁS, A LA LISTA DE VENDIDOS🙌🏼\n\nVolkswagen Amarok V6 Comfortline 0KM 2025 🚀🚀🚀🚀\n\nPedido exclusivo de un gran amigo de la institución!, quería renovar de pick up y que fuese 0km, el equipo de Punto Bella vista puso manos a la obra y en cuestión de unos pocos días, estuvo física y lista para entregar en nuestro concesionario. ☑️☑️☑️\n\nSi estás en búsqueda de un 0km, no dudes en consultarnos, seguramente tengamos la solución para lo que estás buscando, somos Punto Bella vista Automóviles, donde tus sueños arrancan 🏁🙌🏼🤜🏼🤛🏼"
+  },
+  {
+    "id": "ford-f150-lariat-hibrida-v6-9",
+    "name": "Ford F150 Lariat Híbrida V6",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2022,
+    "kilometraje": 82000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "USD"
+    },
+    "categoria": "Pick Up",
+    "transmision": "Automática",
+    "motor": "3.5",
+    "combustible": "Híbrido",
+    "puertas": 4,
+    "images": [
+      "9-1.webp",
+      "9-2.webp",
+      "9-3.webp",
+      "9-4.webp",
+      "9-5.webp",
+      "9-6.webp",
+      "9-7.webp",
+      "9-8.webp",
+      "9-9.webp"
+    ],
+    "descripcion": "Ford F150 Lariat Híbrida V6\n| 2022\n| Segundo dueño\n| 82.000km - Servicios oficiales\n\nPick up del segmento grande, con toda la tecnología que se puede pedir y en un color que le queda una locura, la tenemos disponible y en stock físico en nuestro concesionario, te invitamos y esperamos en Punto Bella vista Automóviles, donde tus sueños arrancan 🤝🏼🚀\n\nAv Senador Morón 319 | Av Senador Moron 489 ( BOX ) - Bella vista , Buenos Aires 📍"
+  },
+  {
+    "id": "ford-ranger-xlt-manual-4x4-10",
+    "name": "Ford Ranger Xlt Manual 4x4",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2017,
+    "kilometraje": 165000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "USD"
+    },
+    "categoria": "Pick Up",
+    "transmision": "Manual",
+    "motor": "3.2",
+    "combustible": "Diesel",
+    "puertas": 4,
+    "images": [
+      "10-1.webp",
+      "10-2.webp",
+      "10-3.webp",
+      "10-4.webp",
+      "10-5.webp",
+      "10-6.webp",
+      "10-7.webp",
+      "10-8.webp",
+      "10-9.webp"
+    ],
+    "descripcion": "FORD RANGER XLT MANUAL 4X4 | 2017 | 165.000KM 🚀🚀🚀\n\nPick Up lista para aventurarse, no tardes que vuela 🚀🚀\n\nNo dudes en consultarnos, nuestro equipo está a disposición las 24hs del día para responderte.\n\nEn Punto Bella vista Automóviles, tus sueños arrancan 🤝🏼"
+  },
+  {
+    "id": "jeep-renegade-sport-at6-11",
+    "name": "Jeep Renegade Sport At6",
+    "marca": "Jeep",
+    "marcaId": "jeep",
+    "ano": 2017,
+    "kilometraje": 130000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "USD"
+    },
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "1.8",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "11-1.webp",
+      "11-2.webp",
+      "11-3.webp",
+      "11-4.webp",
+      "11-5.webp",
+      "11-6.webp",
+      "11-7.webp",
+      "11-8.webp",
+      "11-9.webp"
+    ],
+    "descripcion": "JEEP RENEGADE SPORT AT6 | 2017 | 130.000KM 🚀🚀🚀\n\nSi estás en búsqueda de una Suv, te ofrecemos esta opción, una Suv robusta, espaciosa y con mucho confort, y en un estado excepcional. 🤝🏼🤝🏼🤝🏼\n\nNo dudes en consultarnos, nuestro equipo está a disposición las 24hs del día para responderte.\n\nEn Punto Bella vista Automóviles, tus sueños arrancan 🤝🏼"
+  },
+  {
+    "id": "bmw-x3-28l-12",
+    "name": "Bmw X3 28l",
+    "marca": "BMW",
+    "marcaId": "bmw",
+    "ano": 2016,
+    "kilometraje": 74000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "USD"
+    },
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "2.0",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "12-1.webp",
+      "12-2.webp",
+      "12-3.webp",
+      "12-4.webp",
+      "12-5.webp",
+      "12-6.webp",
+      "12-7.webp",
+      "12-8.webp",
+      "12-9.webp"
+    ],
+    "descripcion": "BMW X3 28L | 2016 | ÚNICO DUEÑO | SERVICIOS OFICIALES | 74.000KM | NEUMÁTICOS NUEVOS 🏁🚀\n\nContamos con financiamiento en cuotas fijas en pesos ☑️\nTomamos tu vehículo en parte de pago ☑️\nTe entregamos esta unidad, transferida y libre de cualquier tipo de deuda ☑️\n\nCONOCENOS 🤜🏼🤛🏼\n\nPunto Bella vista Automóviles | Donde tus sueños arrancan 🚀"
   }
 ]

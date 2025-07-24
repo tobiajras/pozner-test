@@ -66,7 +66,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
     const obtenerDestacados = () => {
       setCargando(true);
       try {
-        const destacadosSimulados = catalogo.slice(0, 6).map((auto) => ({
+        const destacadosSimulados = catalogo.slice(0, 12).map((auto) => ({
           id: auto.id,
           brand: auto.marca,
           model: auto.name,
@@ -186,7 +186,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
           className={`${clicked ? 'cursor-grabbing' : 'cursor-grab'}`}
         >
           <div className='flex gap-6 sm:gap-7 md:gap-8'>
-            {destacados.map((auto) => (
+            {destacados.slice(0, 10).map((auto) => (
               <Link
                 href={`/catalogo/${auto.id}`}
                 className='w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] xl:flex-[0_0_26%]'
