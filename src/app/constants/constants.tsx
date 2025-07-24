@@ -4,24 +4,24 @@ export const company = {
   shortAdress: true,
   favicon: false,
   price: false,
-  id: 'toiaautomoviles',
-  name: 'Toia Automoviles',
-  adress: 'Fuerza Aerea 2194',
-  city: 'Funes',
-  email: 'ventas@ezequieltoiaautomoviles.com',
-  instagram: 'toiaautomoviles',
-  facebook: 'https://www.facebook.com/ToiaAutomoviles/',
-  whatsapp: ['3413604132', '3414930720'],
-  googlemapsLink: 'https://maps.app.goo.gl/r854KYbsmQHeuuDk8',
+  id: 'accottoautomotores',
+  name: 'Accotto Automotores',
+  adress: 'Córdoba esq. Pellegrini',
+  city: 'Bell Ville',
+  email: 'accottoautomotores@gmail.com',
+  instagram: 'accottoautomotores',
+  facebook: 'https://www.facebook.com/accottoautomotores',
+  whatsapp: ['3537607979', '3537606577', '3537447821'],
+  googlemapsLink: 'https://maps.app.goo.gl/8JNcqdUDxR7jgvcm6',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.82678745517!2d-60.81899685020851!3d-32.92917433246759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b64cff3d9c194b%3A0xc3de1de51012b05b!2sEzequiel%20Toia!5e0!3m2!1sen!2sar!4v1753357542256!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3360.110625316049!2d-62.697025923465944!3d-32.62987735596146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cbfa516a5d3c11%3A0x7b61f64ec99e2df8!2sAccotto%20Automotores!5e0!3m2!1sen!2sar!4v1753363413603!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['9 a 13 y 15 a 19hs'] },
-    { day: 'Martes', hours: ['9 a 13 y 15 a 19hs'] },
-    { day: 'Miércoles', hours: ['9 a 13 y 15 a 19hs'] },
-    { day: 'Jueves', hours: ['9 a 13 y 15 a 19hs'] },
-    { day: 'Viernes', hours: ['9 a 13 y 15 a 19hs'] },
-    { day: 'Sábado', hours: ['9 a 17hs'] },
+    { day: 'Lunes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Martes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Miércoles', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Jueves', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Viernes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Sábado', hours: ['9:30 a 12:30'] },
     // { day: 'Domingo', hours: ['10:00 a 19:00'] },
   ],
   footer:
@@ -29,11 +29,11 @@ export const company = {
 };
 
 export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
-export const TENANT = 'vitacars';
+export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://toiaautomoviles.vercel.app/',
-  title: 'Toia Automoviles - Compra y Venta de Autos',
+  metadataBase: 'https://accottoautomotores.vercel.app/',
+  title: 'Accotto Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

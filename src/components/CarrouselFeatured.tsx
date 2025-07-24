@@ -5,8 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { company } from '@/app/constants/constants';
-import catalogo from '@/data/catalogo.json';
+import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
 
 interface Imagen {
   id: string;
@@ -31,10 +30,8 @@ interface Auto {
   model: string;
   year: number;
   color: string;
-  price: {
-    valor: number;
-    moneda: string;
-  };
+  price: string;
+  currency: 'USD' | 'ARS';
   description: string;
   position: number;
   featured: boolean;
@@ -47,7 +44,7 @@ interface Auto {
   doors: number;
   createdAt: string;
   updatedAt: string;
-  Images: Imagen[];
+  images: Imagen[];
   Category: Categoria;
 }
 
@@ -63,51 +60,19 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const obtenerDestacados = () => {
+    const obtenerDestacados = async () => {
       setCargando(true);
       try {
-        const destacadosSimulados = catalogo.slice(0, 12).map((auto) => ({
-          id: auto.id,
-          brand: auto.marca,
-          model: auto.name,
-          year: auto.ano,
-          color: '',
-          price: {
-            valor: auto.precio.valor,
-            moneda: auto.precio.moneda,
-          },
-          description: auto.descripcion,
-          position: 0,
-          featured: true,
-          favorite: false,
-          active: true,
-          categoryId: auto.categoria,
-          mileage: auto.kilometraje,
-          transmission: auto.transmision,
-          fuel: auto.combustible,
-          doors: auto.puertas,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-          Images: auto.images.map((img, index) => ({
-            id: `${auto.id}-img-${index}`,
-            carId: auto.id,
-            imageUrl: `/assets/catalogo/${img}`,
-            thumbnailUrl: `/assets/catalogo/${img}`,
-            order: index,
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
-          })),
-          Category: {
-            id: auto.categoria.toLowerCase(),
-            name: auto.categoria,
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
-          },
-        }));
-
-        setDestacados(destacadosSimulados);
+        const response = await fetch(
+          `${API_BASE_URL}/api/cars/featured?tenant=${TENANT}`
+        );
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
+        }
+        const data = await response.json();
+        setDestacados(data);
       } catch (err) {
-        console.error('Error al cargar destacados del catálogo:', err);
+        console.error('Error al obtener destacados:', err);
         setError('No se pudieron cargar los vehículos destacados');
       } finally {
         setCargando(false);
@@ -216,7 +181,7 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                         height={600}
                         className='object-cover w-full h-full transition-transform duration-700'
                         src={
-                          auto.Images.sort((a, b) => a.order - b.order)[0]
+                          auto.images.sort((a, b) => a.order - b.order)[0]
                             ?.thumbnailUrl || '/assets/placeholder.webp'
                         }
                         alt={`${auto.model}`}
@@ -273,8 +238,10 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
                         company.price ? '' : 'hidden'
                       } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                     >
-                      {auto.price.moneda === 'ARS' ? '$' : 'US$'}
-                      {auto.price.valor.toLocaleString('es-ES')}
+                      {auto.currency === 'ARS' ? '$' : 'US$'}
+                      {parseFloat(auto.price).toLocaleString(
+                        auto.currency === 'ARS' ? 'es-AR' : 'en-US'
+                      )}
                     </div>
 
                     {/* Diseño minimalista con separadores tipo | */}
