@@ -380,6 +380,7 @@ export default function AutoDetailPage() {
                           className='w-full h-full flex items-center justify-center'
                         >
                           <Image
+                            priority
                             src={image.thumbnailUrl}
                             alt={`${car.model} - Miniatura ${actualIndex + 1}`}
                             fill
