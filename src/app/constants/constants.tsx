@@ -4,24 +4,24 @@ export const company = {
   shortAdress: true,
   favicon: false,
   price: false,
-  id: 'stylecars',
-  name: 'Style Cars',
-  adress: 'Av. 72 e/ 23 y 24 nº1436',
-  city: 'La Plata',
-  email: 'style-cars@hotmail.com',
-  instagram: 'stylecarslaplata',
-  facebook: 'https://www.facebook.com/stylecarslaplata/',
-  whatsapp: ['2215452002', '2214533063'],
-  googlemapsLink: 'https://maps.app.goo.gl/TnkT5ZPZm1qHorbu9',
+  id: 'automotoresmitre',
+  name: 'Automotores Mitre',
+  adress: 'Av. Néstor Kirchner 1914',
+  city: 'Berazategui',
+  email: 'automotores-mitre@hotmail.com',
+  instagram: 'automotores_mitre',
+  facebook: 'https://www.facebook.com/p/Automotores-Mitre-100027128182833/',
+  whatsapp: ['1141408647', '1142267067'],
+  googlemapsLink: 'https://maps.app.goo.gl/whzNKWe2ayE5srjcA',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.386201946571!2d-57.94450729251803!3d-34.94692779459851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e8eb537ea6bf%3A0xc6c843779b795b1a!2sSTYLE%20CARS%20automotores!5e0!3m2!1sen!2sar!4v1753722964944!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.676755443185!2d-58.20220422289189!3d-34.763734665969025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f52b49a0ded%3A0x7367c96d165f6712!2sAutomotores%20Mitre!5e0!3m2!1sen!2sar!4v1753726708145!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['9 a 13 y 15:30 a 19hs'] },
-    { day: 'Martes', hours: ['9 a 13 y 15:30 a 19hs'] },
-    { day: 'Miércoles', hours: ['9 a 13 y 15:30 a 19hs'] },
-    { day: 'Jueves', hours: ['9 a 13 y 15:30 a 19hs'] },
-    { day: 'Viernes', hours: ['9 a 13 y 15:30 a 19hs'] },
-    // { day: 'Sábado', hours: ['09:30 a 12:30hs'] },
+    { day: 'Lunes', hours: ['9 a 13 y 15:00 a 19hs'] },
+    { day: 'Martes', hours: ['9 a 13 y 15:00 a 19hs'] },
+    { day: 'Miércoles', hours: ['9 a 13 y 15:00 a 19hs'] },
+    { day: 'Jueves', hours: ['9 a 13 y 15:00 a 19hs'] },
+    { day: 'Viernes', hours: ['9 a 13 y 15:00 a 19hs'] },
+    { day: 'Sábado', hours: ['9 a 14hs'] },
     // { day: 'Domingo', hours: ['10:00 a 19:00'] },
   ],
   footer:
@@ -32,8 +32,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://stylecars.vercel.app/',
-  title: 'Style Cars - Compra y Venta de Autos',
+  metadataBase: 'https://automotoresmitre.vercel.app/',
+  title: 'Automotores Mitre - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

@@ -23,7 +23,7 @@ const Footer = () => {
       >
         <div className='flex flex-col items-center w-full relative z-10'>
           <section className='flex md:justify-center text-color-text-light w-full '>
-            <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-6xl mx-6 sm:mx-8 md:mx-10 py-10'>
+            <div className='flex flex-col md:flex-row gap-8 lg:gap-32 w-full justify-between max-w-7xl mx-6 sm:mx-8 md:mx-10 py-10'>
               <article className='flex w-full flex-col'>
                 {company.favicon ? (
                   <div className='w-48 sm:w-52 md:w-52 lg:w-56 h-12 sm:h-14'>
@@ -163,7 +163,7 @@ const Footer = () => {
                 : 'border-color-primary'
             } flex justify-center w-full pb-16 pt-8 border-t`}
           >
-            <article className='flex flex-col md:flex-row justify-between items-center text-sm sm:text-base gap-3 sm:gap-5 w-full max-w-6xl mx-6 sm:mx-8 md:mx-10'>
+            <article className='flex flex-col md:flex-row justify-between items-center text-sm sm:text-base gap-3 sm:gap-5 w-full max-w-7xl mx-6 sm:mx-8 md:mx-10'>
               <div className='flex items-center gap-1 sm:gap-2 text-color-text-light'>
                 <span>© Copyright {new Date().getFullYear()}</span>
                 <span>-</span>
