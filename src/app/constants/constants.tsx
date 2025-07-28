@@ -11,7 +11,7 @@ export const company = {
   email: 'automotores-mitre@hotmail.com',
   instagram: 'automotores_mitre',
   facebook: 'https://www.facebook.com/p/Automotores-Mitre-100027128182833/',
-  whatsapp: ['1141408647', '1142267067'],
+  whatsapp: ['1141408647'],
   googlemapsLink: 'https://maps.app.goo.gl/whzNKWe2ayE5srjcA',
   googlemaps:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.676755443185!2d-58.20220422289189!3d-34.763734665969025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f52b49a0ded%3A0x7367c96d165f6712!2sAutomotores%20Mitre!5e0!3m2!1sen!2sar!4v1753726708145!5m2!1sen!2sar',
