@@ -5,8 +5,7 @@
 // import Link from 'next/link';
 // import { useState, useEffect } from 'react';
 // import { motion } from 'framer-motion';
-// import { company } from '@/app/constants/constants';
-// import catalogo from '@/data/catalogo.json';
+// import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
 
 // interface Imagen {
 //   id: string;
@@ -31,10 +30,8 @@
 //   model: string;
 //   year: number;
 //   color: string;
-//   price: {
-//     valor: number;
-//     moneda: string;
-//   };
+//   price: string;
+//   currency: 'USD' | 'ARS';
 //   description: string;
 //   position: number;
 //   featured: boolean;
@@ -47,81 +44,45 @@
 //   doors: number;
 //   createdAt: string;
 //   updatedAt: string;
-//   Images: Imagen[];
+//   images: Imagen[];
 //   Category: Categoria;
 // }
 
-// interface CarrouselFavoritesProps {
+// interface CarrouselFeaturedProps {
 //   title: string;
 // }
 
-// const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
+// const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
 //   const [emblaRef] = useEmblaCarousel({ dragFree: true });
 //   const [clicked, setClicked] = useState(false);
-//   const [favoritos, setFavoritos] = useState<Auto[]>([]);
-//   const [loading, setLoading] = useState(true);
+//   const [destacados, setDestacados] = useState<Auto[]>([]);
+//   const [cargando, setCargando] = useState(true);
 //   const [error, setError] = useState<string | null>(null);
-//   console.log(favoritos);
 
 //   useEffect(() => {
-//     const loadFavoritos = () => {
-//       setLoading(true);
+//     const obtenerDestacados = async () => {
+//       setCargando(true);
 //       try {
-//         const favoritosSimulados = catalogo
-//           .slice(0, 12)
-//           .reverse()
-//           .map((auto) => ({
-//             id: auto.id,
-//             brand: auto.marca,
-//             model: auto.name,
-//             year: auto.ano,
-//             color: '',
-//             price: {
-//               valor: auto.precio.valor,
-//               moneda: auto.precio.moneda,
-//             },
-//             description: auto.descripcion,
-//             position: 0,
-//             featured: false,
-//             favorite: true,
-//             active: true,
-//             categoryId: auto.categoria,
-//             mileage: auto.kilometraje,
-//             transmission: auto.transmision,
-//             fuel: auto.combustible,
-//             doors: auto.puertas,
-//             createdAt: new Date().toISOString(),
-//             updatedAt: new Date().toISOString(),
-//             Images: auto.images.map((img, index) => ({
-//               id: `${auto.id}-img-${index}`,
-//               carId: auto.id,
-//               imageUrl: `/assets/catalogo/${img}`,
-//               thumbnailUrl: `/assets/catalogo/${img}`,
-//               order: index,
-//               createdAt: new Date().toISOString(),
-//               updatedAt: new Date().toISOString(),
-//             })),
-//             Category: {
-//               id: auto.categoria.toLowerCase(),
-//               name: auto.categoria,
-//               createdAt: new Date().toISOString(),
-//               updatedAt: new Date().toISOString(),
-//             },
-//           }));
-
-//         setFavoritos(favoritosSimulados);
+//         const response = await fetch(
+//           `${API_BASE_URL}/api/cars/featured?tenant=${TENANT}`
+//         );
+//         if (!response.ok) {
+//           throw new Error(`Error ${response.status}: ${response.statusText}`);
+//         }
+//         const data = await response.json();
+//         setDestacados(data);
 //       } catch (err) {
-//         console.error('Error al cargar favoritos del catálogo:', err);
-//         setError('No se pudieron cargar los vehículos favoritos');
+//         console.error('Error al obtener destacados:', err);
+//         setError('No se pudieron cargar los vehículos destacados');
 //       } finally {
-//         setLoading(false);
+//         setCargando(false);
 //       }
 //     };
 
-//     loadFavoritos();
+//     obtenerDestacados();
 //   }, []);
 
-//   if (loading) {
+//   if (cargando) {
 //     return (
 //       <section className='flex justify-center w-full bg-color-bg-primary'>
 //         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
@@ -155,7 +116,7 @@
 //     );
 //   }
 
-//   if (favoritos.length === 0) {
+//   if (destacados.length === 0) {
 //     return (
 //       <section className='flex justify-center w-full bg-color-bg-primary'>
 //         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
@@ -166,7 +127,7 @@
 //             </h3>
 //           </div>
 //           <div className='text-center py-8 text-color-text'>
-//             No hay vehículos favoritos disponibles
+//             No hay vehículos destacados disponibles
 //           </div>
 //         </div>
 //       </section>
@@ -190,7 +151,7 @@
 //           className={`${clicked ? 'cursor-grabbing' : 'cursor-grab'}`}
 //         >
 //           <div className='flex gap-6 sm:gap-7 md:gap-8'>
-//             {favoritos.slice(0, 10).map((auto) => (
+//             {destacados.slice(0, 10).map((auto) => (
 //               <Link
 //                 href={`/catalogo/${auto.id}`}
 //                 className='w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] xl:flex-[0_0_26%]'
@@ -220,7 +181,7 @@
 //                         height={600}
 //                         className='object-cover w-full h-full transition-transform duration-700'
 //                         src={
-//                           auto.Images.sort((a, b) => a.order - b.order)[0]
+//                           auto.images.sort((a, b) => a.order - b.order)[0]
 //                             ?.thumbnailUrl || '/assets/placeholder.webp'
 //                         }
 //                         alt={`${auto.model}`}
@@ -277,8 +238,10 @@
 //                         company.price ? '' : 'hidden'
 //                       } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
 //                     >
-//                       {auto.price.moneda === 'ARS' ? '$' : 'US$'}
-//                       {auto.price.valor.toLocaleString('es-ES')}
+//                       {auto.currency === 'ARS' ? '$' : 'US$'}
+//                       {parseFloat(auto.price).toLocaleString(
+//                         auto.currency === 'ARS' ? 'es-AR' : 'en-US'
+//                       )}
 //                     </div>
 
 //                     {/* Diseño minimalista con separadores tipo | */}
@@ -336,4 +299,4 @@
 //   );
 // };
 
-// export default CarrouselFavorites;
+// export default CarrouselFeatured;

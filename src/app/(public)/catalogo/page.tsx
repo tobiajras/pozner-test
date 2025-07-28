@@ -16,9 +16,9 @@ import {
   SelectItem,
 } from '@/components/ui/select';
 import CloseIcon from '@/components/icons/CloseIcon';
-import { API_BASE_URL, TENANT } from '@/app/constants/constants';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import catalogo from '@/data/catalogo.json';
 
 interface ApiCar {
   id: string;
@@ -26,8 +26,10 @@ interface ApiCar {
   model: string;
   year: number;
   color: string;
-  price: string;
-  currency: 'USD' | 'ARS';
+  price: {
+    valor: number;
+    moneda: string;
+  };
   description: string;
   categoryId: string;
   mileage: number;
@@ -46,16 +48,11 @@ interface ApiCar {
     createdAt: string;
     updatedAt: string;
   };
-  images: {
+  Images: {
     thumbnailUrl: string;
+    imageUrl: string;
+    order: number;
   }[];
-}
-
-interface ApiResponse {
-  total: number;
-  totalPages: number;
-  currentPage: number;
-  cars: ApiCar[];
 }
 
 interface Category {
@@ -85,63 +82,113 @@ const CatalogoPage = () => {
   const [categorias, setCategorias] = useState<Category[]>([]);
 
   // Función para obtener todas las marcas disponibles
-  const fetchMarcas = async () => {
+  const fetchMarcas = () => {
     try {
-      const response = await fetch(
-        `${API_BASE_URL}/api/cars/brands?tenant=${TENANT}`
-      );
-      if (!response.ok) {
-        throw new Error('Error al cargar las marcas');
-      }
-      const data: string[] = await response.json();
-      setTodasLasMarcas(data.sort());
+      // Obtener marcas únicas del catálogo
+      const marcas = Array.from(
+        new Set(catalogo.map((car) => car.marca))
+      ).sort();
+      setTodasLasMarcas(marcas);
     } catch (error) {
       console.error('Error al cargar las marcas:', error);
     }
   };
 
-  // Función para obtener las categorías del API
-  const fetchCategories = async () => {
+  // Función para obtener las categorías del catálogo
+  const fetchCategories = () => {
     try {
-      const response = await fetch(
-        `${API_BASE_URL}/api/categories?tenant=${TENANT}`
+      // Obtener categorías únicas del catálogo
+      const categoriasUnicas = Array.from(
+        new Set(catalogo.map((car) => car.categoria))
       );
-      if (!response.ok) {
-        throw new Error('Error al cargar las categorías');
-      }
-      const data: Category[] = await response.json();
-      setCategorias(data);
+      const categoriasProcesadas = categoriasUnicas.map((cat) => ({
+        id: cat.toLowerCase(),
+        name: cat,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      }));
+      setCategorias(categoriasProcesadas);
     } catch (error) {
       console.error('Error al cargar las categorías:', error);
     }
   };
 
   // Función para obtener los autos con filtros
-  const fetchCars = async (
+  const fetchCars = (
     page: number,
     filters?: { search?: string; marca?: string; categoria?: string }
   ) => {
     setLoading(true);
     try {
-      let url = `${API_BASE_URL}/api/cars?page=${page}&limit=${ITEMS_PER_PAGE}&sort=position:desc&tenant=${TENANT}`;
+      let filteredCars = [...catalogo];
 
+      // Aplicar filtros
       if (filters?.search) {
-        url += `&model=${encodeURIComponent(filters.search)}`;
+        const searchTerm = filters.search.toLowerCase();
+        filteredCars = filteredCars.filter(
+          (car) =>
+            car.name.toLowerCase().includes(searchTerm) ||
+            car.marca.toLowerCase().includes(searchTerm)
+        );
       }
       if (filters?.marca) {
-        url += `&brand=${encodeURIComponent(filters.marca)}`;
+        filteredCars = filteredCars.filter(
+          (car) => car.marca.toLowerCase() === filters.marca?.toLowerCase()
+        );
       }
       if (filters?.categoria) {
-        url += `&category=${encodeURIComponent(filters.categoria)}`;
+        filteredCars = filteredCars.filter(
+          (car) =>
+            car.categoria.toLowerCase() === filters.categoria?.toLowerCase()
+        );
       }
 
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error('Error al cargar los vehículos');
-      }
-      const data: ApiResponse = await response.json();
-      setCars(data.cars);
-      setTotalPages(data.totalPages);
+      // Calcular paginación
+      const total = filteredCars.length;
+      const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
+      const start = (page - 1) * ITEMS_PER_PAGE;
+      const end = start + ITEMS_PER_PAGE;
+
+      // Obtener autos de la página actual
+      const paginatedCars: ApiCar[] = filteredCars
+        .slice(start, end)
+        .map((car) => ({
+          id: car.id,
+          brand: car.marca,
+          model: car.name,
+          year: car.ano,
+          color: '',
+          price: {
+            valor: car.precio.valor,
+            moneda: car.precio.moneda,
+          },
+          description: car.descripcion,
+          categoryId: car.categoria,
+          mileage: car.kilometraje,
+          transmission: car.transmision,
+          fuel: car.combustible,
+          doors: car.puertas,
+          position: 0,
+          featured: false,
+          favorite: false,
+          active: true,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          Category: {
+            id: car.categoria.toLowerCase(),
+            name: car.categoria,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+          },
+          Images: car.images.map((img, index) => ({
+            thumbnailUrl: `/assets/catalogo/${img}`,
+            imageUrl: `/assets/catalogo/${img}`,
+            order: index,
+          })),
+        }));
+
+      setCars(paginatedCars);
+      setTotalPages(totalPages);
     } catch (error) {
       console.error('Error al cargar los vehículos:', error);
     } finally {
@@ -583,7 +630,9 @@ const CatalogoPage = () => {
                                 height={600}
                                 className='object-cover w-full h-full transition-transform duration-700'
                                 src={
-                                  car.images[0]?.thumbnailUrl ||
+                                  car.Images.sort(
+                                    (a, b) => a.order - b.order
+                                  )[0]?.thumbnailUrl ||
                                   '/assets/placeholder.webp'
                                 }
                                 alt={`${car.model}`}
@@ -640,10 +689,8 @@ const CatalogoPage = () => {
                                 company.price ? '' : 'hidden'
                               } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                             >
-                              {car.currency === 'ARS' ? '$' : 'US$'}
-                              {parseFloat(car.price).toLocaleString(
-                                car.currency === 'ARS' ? 'es-AR' : 'en-US'
-                              )}
+                              {car.price.moneda === 'ARS' ? '$' : 'US$'}
+                              {car.price.valor.toLocaleString('es-ES')}
                             </div>
 
                             {/* Diseño minimalista con separadores tipo | */}

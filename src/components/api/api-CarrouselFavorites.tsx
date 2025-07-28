@@ -5,8 +5,7 @@
 // import Link from 'next/link';
 // import { useState, useEffect } from 'react';
 // import { motion } from 'framer-motion';
-// import { company } from '@/app/constants/constants';
-// import catalogo from '@/data/catalogo.json';
+// import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
 
 // interface Imagen {
 //   id: string;
@@ -31,10 +30,8 @@
 //   model: string;
 //   year: number;
 //   color: string;
-//   price: {
-//     valor: number;
-//     moneda: string;
-//   };
+//   price: string;
+//   currency: 'USD' | 'ARS';
 //   description: string;
 //   position: number;
 //   featured: boolean;
@@ -47,106 +44,45 @@
 //   doors: number;
 //   createdAt: string;
 //   updatedAt: string;
-//   Images: Imagen[];
+//   images: Imagen[];
 //   Category: Categoria;
 // }
 
-// interface CarrouselRelatedProps {
+// interface CarrouselFavoritesProps {
 //   title: string;
-//   currentCarId: string;
-//   categoryId: string;
 // }
 
-// const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
+// const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
 //   const [emblaRef] = useEmblaCarousel({ dragFree: true });
 //   const [clicked, setClicked] = useState(false);
-//   const [relatedCars, setRelatedCars] = useState<Auto[]>([]);
-//   const [cargando, setCargando] = useState(true);
+//   const [favoritos, setFavoritos] = useState<Auto[]>([]);
+//   const [loading, setLoading] = useState(true);
 //   const [error, setError] = useState<string | null>(null);
 
 //   useEffect(() => {
-//     const obtenerRelacionados = () => {
-//       setCargando(true);
+//     const fetchFavoritos = async () => {
+//       setLoading(true);
 //       try {
-//         // Encontrar el auto actual y su categoría
-//         const autoActual = catalogo.find((auto) => auto.id === currentCarId);
-//         if (!autoActual) {
-//           throw new Error('Auto no encontrado');
+//         const response = await fetch(
+//           `${API_BASE_URL}/api/cars/favorites?tenant=${TENANT}`
+//         );
+//         if (!response.ok) {
+//           throw new Error(`Error ${response.status}: ${response.statusText}`);
 //         }
-
-//         // Función para mezclar array aleatoriamente (Fisher-Yates shuffle)
-//         const shuffleArray = <T,>(array: T[]): T[] => {
-//           const shuffled = [...array];
-//           for (let i = shuffled.length - 1; i > 0; i--) {
-//             const j = Math.floor(Math.random() * (i + 1));
-//             [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-//           }
-//           return shuffled;
-//         };
-
-//         // Obtener todos los autos excepto el actual
-//         const autosDisponibles = catalogo.filter(
-//           (auto) => auto.id !== currentCarId
-//         );
-
-//         // Mezclar aleatoriamente y tomar máximo 10
-//         const autosAleatorios = shuffleArray(autosDisponibles).slice(0, 10);
-
-//         const autosRelacionados = autosAleatorios.map((auto) => ({
-//           id: auto.id,
-//           brand: auto.marca,
-//           model: auto.name,
-//           year: auto.ano,
-//           color: '',
-//           price: {
-//             valor: auto.precio.valor,
-//             moneda: auto.precio.moneda,
-//           },
-//           description: auto.descripcion,
-//           position: 0,
-//           featured: false,
-//           favorite: false,
-//           active: true,
-//           categoryId: auto.categoria,
-//           mileage: auto.kilometraje,
-//           transmission: auto.transmision,
-//           fuel: auto.combustible,
-//           doors: auto.puertas,
-//           createdAt: new Date().toISOString(),
-//           updatedAt: new Date().toISOString(),
-//           Images: auto.images.map((img: string, index: number) => ({
-//             id: `${auto.id}-img-${index}`,
-//             carId: auto.id,
-//             imageUrl: `/assets/catalogo/${img}`,
-//             thumbnailUrl: `/assets/catalogo/${img}`,
-//             order: index,
-//             createdAt: new Date().toISOString(),
-//             updatedAt: new Date().toISOString(),
-//           })),
-//           Category: {
-//             id: auto.categoria.toLowerCase(),
-//             name: auto.categoria,
-//             createdAt: new Date().toISOString(),
-//             updatedAt: new Date().toISOString(),
-//           },
-//         }));
-
-//         setRelatedCars(autosRelacionados);
+//         const data = await response.json();
+//         setFavoritos(data);
 //       } catch (err) {
-//         console.error(
-//           'Error al cargar vehículos relacionados del catálogo:',
-//           err
-//         );
-//         setError('No se pudieron cargar los vehículos relacionados');
+//         console.error('Error al obtener favoritos:', err);
+//         setError('No se pudieron cargar los vehículos favoritos');
 //       } finally {
-//         setCargando(false);
+//         setLoading(false);
 //       }
 //     };
 
-//     obtenerRelacionados();
-//   }, [currentCarId]);
+//     fetchFavoritos();
+//   }, []);
 
-//   if (cargando) {
+//   if (loading) {
 //     return (
 //       <section className='flex justify-center w-full bg-color-bg-primary'>
 //         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
@@ -180,7 +116,7 @@
 //     );
 //   }
 
-//   if (relatedCars.length === 0) {
+//   if (favoritos.length === 0) {
 //     return (
 //       <section className='flex justify-center w-full bg-color-bg-primary'>
 //         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
@@ -191,7 +127,7 @@
 //             </h3>
 //           </div>
 //           <div className='text-center py-8 text-color-text'>
-//             No hay vehículos relacionados disponibles
+//             No hay vehículos favoritos disponibles
 //           </div>
 //         </div>
 //       </section>
@@ -215,7 +151,7 @@
 //           className={`${clicked ? 'cursor-grabbing' : 'cursor-grab'}`}
 //         >
 //           <div className='flex gap-6 sm:gap-7 md:gap-8'>
-//             {relatedCars.map((auto) => (
+//             {favoritos.slice(0, 10).map((auto) => (
 //               <Link
 //                 href={`/catalogo/${auto.id}`}
 //                 className='w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] xl:flex-[0_0_26%]'
@@ -245,7 +181,7 @@
 //                         height={600}
 //                         className='object-cover w-full h-full transition-transform duration-700'
 //                         src={
-//                           auto.Images.sort((a, b) => a.order - b.order)[0]
+//                           auto.images.sort((a, b) => a.order - b.order)[0]
 //                             ?.thumbnailUrl || '/assets/placeholder.webp'
 //                         }
 //                         alt={`${auto.model}`}
@@ -302,8 +238,10 @@
 //                         company.price ? '' : 'hidden'
 //                       } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
 //                     >
-//                       {auto.price.moneda === 'ARS' ? '$' : 'US$'}
-//                       {auto.price.valor.toLocaleString('es-ES')}
+//                       {auto.currency === 'ARS' ? '$' : 'US$'}
+//                       {parseFloat(auto.price).toLocaleString(
+//                         auto.currency === 'ARS' ? 'es-AR' : 'en-US'
+//                       )}
 //                     </div>
 
 //                     {/* Diseño minimalista con separadores tipo | */}
@@ -361,4 +299,4 @@
 //   );
 // };
 
-// export default CarrouselRelated;
+// export default CarrouselFavorites;

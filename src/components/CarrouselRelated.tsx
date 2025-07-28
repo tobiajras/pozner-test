@@ -5,7 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
+import { company } from '@/app/constants/constants';
+import catalogo from '@/data/catalogo.json';
 
 interface Imagen {
   id: string;
@@ -30,8 +31,10 @@ interface Auto {
   model: string;
   year: number;
   color: string;
-  price: string;
-  currency: 'USD' | 'ARS';
+  price: {
+    valor: number;
+    moneda: string;
+  };
   description: string;
   position: number;
   featured: boolean;
@@ -44,7 +47,7 @@ interface Auto {
   doors: number;
   createdAt: string;
   updatedAt: string;
-  images: Imagen[];
+  Images: Imagen[];
   Category: Categoria;
 }
 
@@ -62,27 +65,79 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const obtenerRelacionados = async () => {
+    const obtenerRelacionados = () => {
       setCargando(true);
       try {
-        const response = await fetch(
-          `${API_BASE_URL}/api/cars/${currentCarId}/recommended?tenant=${TENANT}`
+        // Encontrar el auto actual y su categoría
+        const autoActual = catalogo.find((auto) => auto.id === currentCarId);
+        if (!autoActual) {
+          throw new Error('Auto no encontrado');
+        }
+
+        // Función para mezclar array aleatoriamente (Fisher-Yates shuffle)
+        const shuffleArray = <T,>(array: T[]): T[] => {
+          const shuffled = [...array];
+          for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+          }
+          return shuffled;
+        };
+
+        // Obtener todos los autos excepto el actual
+        const autosDisponibles = catalogo.filter(
+          (auto) => auto.id !== currentCarId
         );
 
-        if (!response.ok) {
-          throw new Error(`Error ${response.status}: ${response.statusText}`);
-        }
+        // Mezclar aleatoriamente y tomar máximo 10
+        const autosAleatorios = shuffleArray(autosDisponibles).slice(0, 10);
 
-        const data = await response.json();
+        const autosRelacionados = autosAleatorios.map((auto) => ({
+          id: auto.id,
+          brand: auto.marca,
+          model: auto.name,
+          year: auto.ano,
+          color: '',
+          price: {
+            valor: auto.precio.valor,
+            moneda: auto.precio.moneda,
+          },
+          description: auto.descripcion,
+          position: 0,
+          featured: false,
+          favorite: false,
+          active: true,
+          categoryId: auto.categoria,
+          mileage: auto.kilometraje,
+          transmission: auto.transmision,
+          fuel: auto.combustible,
+          doors: auto.puertas,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          Images: auto.images.map((img: string, index: number) => ({
+            id: `${auto.id}-img-${index}`,
+            carId: auto.id,
+            imageUrl: `/assets/catalogo/${img}`,
+            thumbnailUrl: `/assets/catalogo/${img}`,
+            order: index,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+          })),
+          Category: {
+            id: auto.categoria.toLowerCase(),
+            name: auto.categoria,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString(),
+          },
+        }));
 
-        if (!Array.isArray(data)) {
-          throw new Error('Formato de respuesta inválido');
-        }
-
-        setRelatedCars(data);
+        setRelatedCars(autosRelacionados);
       } catch (err) {
-        console.error('Error al obtener vehículos recomendados:', err);
-        setError('No se pudieron cargar los vehículos recomendados');
+        console.error(
+          'Error al cargar vehículos relacionados del catálogo:',
+          err
+        );
+        setError('No se pudieron cargar los vehículos relacionados');
       } finally {
         setCargando(false);
       }
@@ -190,7 +245,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                         height={600}
                         className='object-cover w-full h-full transition-transform duration-700'
                         src={
-                          auto.images.sort((a, b) => a.order - b.order)[0]
+                          auto.Images.sort((a, b) => a.order - b.order)[0]
                             ?.thumbnailUrl || '/assets/placeholder.webp'
                         }
                         alt={`${auto.model}`}
@@ -247,10 +302,8 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                         company.price ? '' : 'hidden'
                       } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                     >
-                      {auto.currency === 'ARS' ? '$' : 'US$'}
-                      {parseFloat(auto.price).toLocaleString(
-                        auto.currency === 'ARS' ? 'es-AR' : 'en-US'
-                      )}
+                      {auto.price.moneda === 'ARS' ? '$' : 'US$'}
+                      {auto.price.valor.toLocaleString('es-ES')}
                     </div>
 
                     {/* Diseño minimalista con separadores tipo | */}
