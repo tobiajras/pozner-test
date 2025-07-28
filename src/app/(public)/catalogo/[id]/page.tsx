@@ -323,7 +323,7 @@ export default function AutoDetailPage() {
                               src={image.imageUrl}
                               alt={`${car.model} - Imagen ${index + 1}`}
                               fill
-                              className='object-contain'
+                              className='object-cover'
                               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                               priority
                             />
@@ -384,7 +384,7 @@ export default function AutoDetailPage() {
                             alt={`${car.model} - Miniatura ${actualIndex + 1}`}
                             fill
                             sizes='(max-width: 768px) 33vw, 200px'
-                            className={`object-contain ${
+                            className={`object-cover ${
                               shouldShowBlur ? 'blur-sm' : ''
                             }`}
                           />
