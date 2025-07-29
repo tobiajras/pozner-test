@@ -1,20 +1,20 @@
 [
   {
-    "id": "honda-fit-lx-1-5-2010",
-    "name": "Honda Fit Lx 1.5",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2010,
-    "kilometraje": 95813,
+    "id": "toyota-hilux-3-0-srv-4x4-at-2012",
+    "name": "Toyota Hilux 3.0 Srv 4x4 At",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2012,
+    "kilometraje": 168000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.5",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "categoria": "Pickup",
+    "transmision": "Automática",
+    "motor": "3.0",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -23,53 +23,51 @@
       "1-5.webp",
       "1-6.webp",
       "1-7.webp",
-      "1-8.webp"
+      "1-8.webp",
+      "1-9.webp"
     ],
-    "descripcion": "🚘 HONDA FIT LX 1.5 – 📅 Año: 2010 KM: 95.813\n\n🚨🔧 Confiable, económico y súper cómodo para ciudad o ruta\n\n💰 Tomamos tu usado o te lo financiamos hasta un 50%\n\n📍 Visitanos en Pablo Ricchieri 553, Pilar."
+    "descripcion": "‼️ TOYOTA HILUX 3.0 SRV 4x4 AT ‼️\n\n• AÑO 2012\n\n• 168.000 KM\n\n• TAPIZADO CUERO EXCELENTE ESTADO !!"
   },
   {
-    "id": "peugeot-boxer-350-2-3-hdi-confort-2012",
-    "name": "Peugeot Boxer 350 2.3 Hdi Confort",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2012,
-    "kilometraje": 302984,
+    "id": "ford-ranger-xl-2022",
+    "name": "Ford Ranger Xl",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2022,
+    "kilometraje": 90000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
+    "categoria": "Pickup",
     "transmision": "Manual",
-    "motor": "2.3",
+    "motor": "2.2",
     "combustible": "Diésel",
-    "puertas": 3,
+    "puertas": 4,
     "images": [
       "2-1.webp",
       "2-2.webp",
       "2-3.webp",
       "2-4.webp",
       "2-5.webp",
-      "2-6.webp",
-      "2-7.webp",
-      "2-8.webp",
-      "2-9.webp"
+      "2-6.webp"
     ],
-    "descripcion": "🌍 Tu próxima aventura sobre ruedas está acá\n\n🚐 Peugeot Boxer 350 2.3 HDI Confort – 2012\n\n🔧 302.984 KM bien recorridos y listos para muchos más\n\n✅ Espacio y comodidad para convertirla en tu motorhome\n\n💸 Tomamos tu usado o te la financiamos hasta un 50%\n\n📍 Estamos en Pablo Ricchieri 553, Pilar\n\n💬 Querés verla? Mandanos un mensaje y coordinamos 📲"
+    "descripcion": "‼️ Ford ranger xl ‼️\n\n• año: 2022\n\n• 90.000km\n\n• 4 cubiertas nuevas\n\n• MT ✅ excelente estado ✅"
   },
   {
-    "id": "volkswagen-gol-trend-1-6-2010",
-    "name": "Volkswagen Gol Trend 1.6",
+    "id": "volkswagen-tiguan-exclusive-2012",
+    "name": "Volkswagen Tiguan Exclusive",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2010,
-    "kilometraje": 174532,
+    "ano": 2012,
+    "kilometraje": 120000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -80,69 +78,69 @@
       "3-5.webp",
       "3-6.webp"
     ],
-    "descripcion": "Volkswagen Gol Trend 1.6 – 2010 | 174.532 KM\n\nUn clásico que nunca pasa de moda!\n\n📌 Tomamos tu usado como parte de pago\n\n💸 Podés financiarlo hasta un 50%\n\n📍 Estamos en Pilar, acercate a Bautimotors y conocelo en persona."
+    "descripcion": "☑️ vendida ☑️\n\n‼️ Volkswagen Tiguan exclusive ‼️\n\n• año: 2012\n\n• 120.000km\n\n• 2.0t MT\n\n• 4motion ✅ excelente estado ✅"
   },
   {
-    "id": "renault-clio-mio-1-3-expression-pack-ii-2013",
-    "name": "Renault Clio Mio 1.3 Expression Pack Ii",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2013,
-    "kilometraje": 66325,
+    "id": "nissan-sentra-sr-2014",
+    "name": "Nissan Sentra Sr",
+    "marca": "Nissan",
+    "marcaId": "nissan",
+    "ano": 2014,
+    "kilometraje": 145000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.3",
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "2.0",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "4-1.webp",
       "4-2.webp",
       "4-3.webp",
       "4-4.webp",
       "4-5.webp",
-      "4-6.webp",
-      "4-7.webp",
-      "4-8.webp"
+      "4-6.webp"
     ],
-    "descripcion": "Renault Clio Mío 1.3 Expression Pack II – 2013\n\n📍 Solo 66.325 km reales\n\n✔️ Excelente estado, ideal para moverte todos los días\n\n💸 Tomamos tu usado en parte de pago\n\n📊 Podemos financiarte hasta un 50%"
+    "descripcion": "‼️ Nissan Sentra SR ‼️\n\n• año: 2014\n\n• 145.000km\n\n• 2.0 AT cvt\n\n• pure drive ✅ excelente estado ✅"
   },
   {
-    "id": "renault-sandero-privilege-1-6-2017",
-    "name": "Renault Sandero Privilege 1.6",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2017,
-    "kilometraje": 999999,
+    "id": "volkswagen-passat-cc-vr6-2010",
+    "name": "Volkswagen Passat Cc Vr6",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2010,
+    "kilometraje": 150000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "3.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "5-1.webp",
       "5-2.webp",
       "5-3.webp",
       "5-4.webp",
       "5-5.webp",
-      "5-6.webp"
+      "5-6.webp",
+      "5-7.webp",
+      "5-8.webp"
     ],
-    "descripcion": "🌟 Tu próximo auto confiable y canchero: Renault Sandero Privilege 1.6 2017 🌟\n\n🔹 Motor 1.6 con excelente rendimiento\n\n🔹 Aire, dirección, levantavidrios eléctricos\n\n🔹 Pantalla táctil, Bluetooth y sensor de estacionamiento\n\nTomamos tu usado o te lo financiamos hasta un 50%"
+    "descripcion": "‼️ Volkswagen Passat cc vr6 ‼️\n\n• año: 2010\n\n• 150.000km\n\n• tracción integral ✅ excelente estado ✅"
   },
   {
-    "id": "volkswagen-suran-1-6-2017",
-    "name": "Volkswagen Suran 1.6",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
+    "id": "renault-kangoo-furgon-mixto-2017",
+    "name": "Renault Kangoo Furgón Mixto",
+    "marca": "Renault",
+    "marcaId": "renault",
     "ano": 2017,
-    "kilometraje": 999999,
+    "kilometraje": 100000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -151,7 +149,7 @@
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 3,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -160,41 +158,48 @@
       "6-5.webp",
       "6-6.webp"
     ],
-    "descripcion": "🚗 Volkswagen Suran 1.6 2017\n\nConfort, espacio y confianza 🚗\n\n✔️ Gran capacidad de baúl\n\nTomamos tu usado como parte de pago!\n\n📍 Vení a verla a Pablo Ricchieri 553, Pilar\n\n📲 Consultanos por financiación hasta el 50%"
+    "descripcion": "‼️ Renault kangoo furgón mixto ‼️\n\n• año: 2017\n\n• 100.000km\n\n• 1.6 nafta\n\n• levanta cristales, cierre centralizado\n\n• doble portón lateral ✅ excelente estado ✅"
   },
   {
-    "id": "ford-ranger-dc-4x4-xl",
-    "name": "Ford Ranger Dc 4x4 Xl",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 999999,
-    "kilometraje": 153801,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "2.2",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": ["7-1.webp", "7-2.webp", "7-3.webp", "7-4.webp", "7-5.webp"],
-    "descripcion": "💥 Potencia, espacio y aventura en una sola camioneta💥\n\n📍 Ford Ranger DC 4x4 XL\n\n🔧 153.801 KM reales y lista para lo que venga\n\n✅ Ideal para el laburo o para escaparte el finde\n\n✅ Tomamos tu usado en parte de pago!\n\n✅ O te la financiamos hasta un 50% 💸\n\n📍 Estamos en Pablo Ricchieri 553, Pilar"
-  },
-  {
-    "id": "renault-sandero-confort-1-6-2011",
-    "name": "Renault Sandero Confort 1.6",
+    "id": "renault-kwid-intens-2018",
+    "name": "Renault Kwid Intens",
     "marca": "Renault",
     "marcaId": "renault",
-    "ano": 2011,
-    "kilometraje": 999999,
+    "ano": 2018,
+    "kilometraje": 70000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.0",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "7-1.webp",
+      "7-2.webp",
+      "7-3.webp",
+      "7-4.webp",
+      "7-5.webp",
+      "7-6.webp"
+    ],
+    "descripcion": "‼️ Renault kwid intens ‼️\n\n• año: 2018\n\n• 70.000km\n\n• motor: 1.0\n\n• aire, dirección, levanta cristales ✅ excelente estado ✅"
+  },
+  {
+    "id": "ford-focus-se-plus-at-2014",
+    "name": "Ford Focus Se Plus At",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2014,
+    "kilometraje": 100000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Automática",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -203,27 +208,24 @@
       "8-3.webp",
       "8-4.webp",
       "8-5.webp",
-      "8-6.webp",
-      "8-7.webp",
-      "8-8.webp",
-      "8-9.webp"
+      "8-6.webp"
     ],
-    "descripcion": "🚘 RENAULT SANDERO CONFORT 1.6 – 2011\n\n📍 En excelente estado!\n\nSi queres un auto que te lleve y te traiga sin dramas, este Sandero es ese clásico rendidor que nunca falla 👇\n\n📍 Pablo Ricchieri 553 – Pilar\n\n📲 Mandanos un WhatsApp y vení a verlo."
+    "descripcion": "‼️ Ford focus SE PLUS AT ‼️\n\n• año: 2014\n\n• 100.000km\n\n• 2.0\n\n• cuero, techo, espejos eléctricos\n\n• ✅ excelente estado ✅"
   },
   {
-    "id": "toyota-etios-x-1-5-mt-2023",
-    "name": "Toyota Etios X 1.5 Mt",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2023,
-    "kilometraje": 29776,
+    "id": "audi-q5-quattro-2012",
+    "name": "Audi Q5 Quattro",
+    "marca": "Audi",
+    "marcaId": "audi",
+    "ano": 2012,
+    "kilometraje": 158000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "1.5",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -232,28 +234,26 @@
       "9-3.webp",
       "9-4.webp",
       "9-5.webp",
-      "9-6.webp",
-      "9-7.webp",
-      "9-8.webp"
+      "9-6.webp"
     ],
-    "descripcion": "🚗 TOYOTA ETIOS X 1.5 MT – 2023\n\n📍 29.776 KM\n\nTodos sabemos que este Etios es todo lo que necesitás 👇\n\n✔️ Prácticamente nuevo: menos de 30.000 km!\n\n✔️ Perfecto como primer auto o para renovar el tuyo.\n\n💳 Financiamos hasta un 50%\n\n♻️ Tomamos tu usado como parte de pago"
+    "descripcion": "‼️ AUDI Q5 QUATTRO ‼️\n\n• año: 2012\n\n• 158.000km\n\n• MT\n\n• 2.0T\n\n• 4 cubiertas nuevas ✅ excelente estado ✅"
   },
   {
-    "id": "volkswagen-golf-tfsi-bluemotion",
-    "name": "Volkswagen Golf Tfsi Bluemotion",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 999999,
-    "kilometraje": 153219,
+    "id": "renault-logan-intens-2022",
+    "name": "Renault Logan Intens",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2022,
+    "kilometraje": 90000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -261,24 +261,27 @@
       "10-4.webp",
       "10-5.webp",
       "10-6.webp",
-      "10-7.webp"
+      "10-7.webp",
+      "10-8.webp",
+      "10-9.webp",
+      "10-10.webp"
     ],
-    "descripcion": "🔹 Volkswagen Golf TFSI BlueMotion\n\n📍 153.219 KM\n\nAuto con diseño, tecnología y rendimiento.\n\n💳 Financiamos hasta un 50%\n\n♻️ Tomamos tu usado como parte de pago\n\n📍 Pablo Ricchieri 553 – Pilar"
+    "descripcion": "‼️ Renault Logan instens ‼️\n\n• año: 2022\n\n• 90.000km\n\n• 1.6 nafta/gnc de 5ta gen.\n\n• cuero-pantalla ✅ excelente estado ✅"
   },
   {
-    "id": "fiat-qubo-1-4-dynamic-2012",
-    "name": "Fiat Qubo 1.4 Dynamic",
-    "marca": "Fiat",
-    "marcaId": "fiat",
+    "id": "volkswagen-suran-trendline-2012",
+    "name": "Volkswagen Suran Trendline",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
     "ano": 2012,
-    "kilometraje": 202470,
+    "kilometraje": 140000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Utilitario",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -288,27 +291,26 @@
       "11-4.webp",
       "11-5.webp",
       "11-6.webp",
-      "11-7.webp",
-      "11-8.webp"
+      "11-7.webp"
     ],
-    "descripcion": "🚗 FIAT QUBO 1.4 DYNAMIC – 2012\n\n📍 202.470 KM\n\nNecesitás un vehículo espacioso, económico y versátil?\n\n💳 Financiamos hasta un 50%\n\n♻️ Tomamos tu usado como parte de pago\n\n📍 Pablo Ricchieri 553 – Pilar"
+    "descripcion": "‼️ Volkswagen suran trendline ‼️\n\n• año: 2012\n\n• 140.000km\n\n• 1.6 nafta/gnc de 4ta gen. ✅ excelente estado ✅"
   },
   {
-    "id": "chevrolet-cruze-turbo-2018",
-    "name": "Chevrolet Cruze Turbo",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2018,
-    "kilometraje": 999999,
+    "id": "renault-kangoo-furgon-2016",
+    "name": "Renault Kangoo Furgón",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2016,
+    "kilometraje": 110000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "Utilitario",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 3,
     "images": [
       "12-1.webp",
       "12-2.webp",
@@ -319,6 +321,6 @@
       "12-7.webp",
       "12-8.webp"
     ],
-    "descripcion": "🚀 CHEVROLET CRUZE TURBO 2018.\n\n💥 Motor 1.4 Turbo\n\n🛞 Sedán 4 puertas\n\n🎯 Ideal para quien busca elegancia, tecnología y rendimiento en un solo auto!\n\n♻️ Tomamos tu usado en parte de pago\n\n📍 Te esperamos en Pilar"
+    "descripcion": "‼️ Renault kangoo furgón ‼️\n\n• año: 2016\n\n• 110.000km\n\n• 1.6 nafta/gnc de 5ta gen.\n\n• vtv vigente ✅ excelente estado ✅"
   }
 ]
