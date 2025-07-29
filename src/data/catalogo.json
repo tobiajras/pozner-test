@@ -1,11 +1,49 @@
 [
   {
-    "id": "fiat-grand-siena-1-4-attractive-87cv-2013",
-    "name": "Fiat Grand Siena 1.4 Attractive 87cv",
+    "id": "peugeot-208-feline-2022",
+    "name": "Peugeot 208 Feline",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2022,
+    "kilometraje": 25000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Sedán",
+    "transmision": "Manual",
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": ["1-1.webp", "1-2.webp", "1-3.webp"],
+    "descripcion": "🚘 Peugeot 208 Feline\n\n📋 FICHA TÉCNICA:\n• Marca: Peugeot\n• Modelo: 208\n• Año: 2022\n• Versión: Feline\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Tipo de carrocería: Sedán\n• Kilómetros: 25.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
+  },
+  {
+    "id": "citroen-berlingo-business-2018",
+    "name": "Citroen Berlingo Business",
+    "marca": "Citroën",
+    "marcaId": "citroen",
+    "ano": 2018,
+    "kilometraje": 97000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Utilitario",
+    "transmision": "Manual",
+    "motor": "1.6",
+    "combustible": "Diésel",
+    "puertas": 2,
+    "images": ["2-1.webp", "2-2.webp", "2-3.webp"],
+    "descripcion": "🚘 Citroen Berlingo Business\n\n📋 FICHA TÉCNICA:\n• Marca: Citroën\n• Modelo: Berlingo\n• Año: 2018\n• Versión: Business\n• Tipo de combustible: Diésel\n• Puertas: 2\n• Transmisión: Manual\n• Tipo de carrocería: Furgón\n• Kilómetros: 97.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
+  },
+  {
+    "id": "fiat-siena-1-4-el-85cv-2017",
+    "name": "Fiat Siena 1.4 El 85cv",
     "marca": "Fiat",
     "marcaId": "fiat",
-    "ano": 2013,
-    "kilometraje": 213000,
+    "ano": 2017,
+    "kilometraje": 69000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -13,59 +51,18 @@
     "categoria": "Sedán",
     "transmision": "Manual",
     "motor": "1.4",
-    "combustible": "Nafta/GNC",
-    "puertas": 4,
-    "images": [
-      "1-1.webp",
-      "1-2.webp",
-      "1-3.webp",
-      "1-4.webp",
-      "1-5.webp",
-      "1-6.webp",
-      "1-7.webp",
-      "1-8.webp",
-      "1-9.webp",
-      "1-10.webp"
-    ],
-    "descripcion": "🚘 Fiat Grand Siena 1.4 Attractive 87cv\n\n📋 FICHA TÉCNICA:\n• Marca: Fiat\n• Modelo: Grand Siena\n• Año: 2013\n• Versión: 1.4 Attractive 87cv\n• Color: Dorado\n• Tipo de combustible: Nafta/GNC\n• Puertas: 4\n• Transmisión: Manual\n• Motor: 1.4\n• Tipo de carrocería: Sedán\n• Kilómetros: 213.000 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
-  },
-  {
-    "id": "peugeot-208-1-6-allure-2017",
-    "name": "Peugeot 208 1.6 Allure",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2017,
-    "kilometraje": 108000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
-    "images": [
-      "2-1.webp",
-      "2-2.webp",
-      "2-3.webp",
-      "2-4.webp",
-      "2-5.webp",
-      "2-6.webp",
-      "2-7.webp",
-      "2-8.webp",
-      "2-9.webp",
-      "2-10.webp"
-    ],
-    "descripcion": "🚘 Peugeot 208 1.6 Allure\n\n📋 FICHA TÉCNICA:\n• Marca: Peugeot\n• Modelo: 208\n• Año: 2017\n• Versión: 1.6 Allure\n• Color: Gris\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Motor: 1.6\n• Tipo de carrocería: Hatchback\n• Kilómetros: 108.000 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
+    "images": ["3-1.webp", "3-2.webp", "3-3.webp"],
+    "descripcion": "🚘 Fiat Siena 1.4 EL 85cv\n\n📋 FICHA TÉCNICA:\n• Marca: Fiat\n• Modelo: Siena\n• Año: 2017\n• Versión: 1.4 EL 85cv\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Tipo de carrocería: Sedán\n• Kilómetros: 69.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
   },
   {
-    "id": "renault-kwid-1-0-sce-66cv-iconic-outsider-2025",
-    "name": "Renault Kwid 1.0 Sce 66Cv Iconic Outsider",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2025,
-    "kilometraje": 0,
+    "id": "fiat-mobi-1-0-easy-2017",
+    "name": "Fiat Mobi 1.0 Easy",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2017,
+    "kilometraje": 55000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -75,287 +72,159 @@
     "motor": "1.0",
     "combustible": "Nafta",
     "puertas": 5,
-    "images": [
-      "3-1.webp",
-      "3-2.webp",
-      "3-3.webp",
-      "3-4.webp",
-      "3-5.webp",
-      "3-6.webp",
-      "3-7.webp",
-      "3-8.webp",
-      "3-9.webp",
-      "3-10.webp"
-    ],
-    "descripcion": "🚘 Renault Kwid 1.0 Sce 66Cv Iconic Outsider\n\n📋 FICHA TÉCNICA:\n• Marca: Renault\n• Modelo: Kwid\n• Año: 2025\n• Versión: 1.0 Sce 66Cv Iconic Outsider\n• Color: Blanco\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Motor: 1.0\n• Tipo de carrocería: Hatchback\n• Kilómetros: 0 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
+    "images": ["4-1.webp", "4-2.webp", "4-3.webp"],
+    "descripcion": "🚘 Fiat Mobi 1.0 Easy\n\n📋 FICHA TÉCNICA:\n• Marca: Fiat\n• Modelo: Mobi\n• Año: 2017\n• Versión: 1.0 Easy\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Tipo de carrocería: Hatchback\n• Kilómetros: 55.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
   },
   {
-    "id": "peugeot-208-1-6-allure-2017-2",
-    "name": "Peugeot 208 1.6 Allure",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2017,
-    "kilometraje": 108000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": [
-      "4-1.webp",
-      "4-2.webp",
-      "4-3.webp",
-      "4-4.webp",
-      "4-5.webp",
-      "4-6.webp",
-      "4-7.webp",
-      "4-8.webp",
-      "4-9.webp"
-    ],
-    "descripcion": "🚘 Peugeot 208 1.6 Allure\n\n📋 FICHA TÉCNICA:\n• Marca: Peugeot\n• Modelo: 208\n• Año: 2017\n• Versión: 1.6 Allure\n• Color: Gris\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Motor: 1.6\n• Tipo de carrocería: Hatchback\n• Kilómetros: 108.000 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
-  },
-  {
-    "id": "ford-fiesta-kinetic-1-6-design-120cv-titanium-2011",
-    "name": "Ford Fiesta Kinetic 1.6 Design 120cv Titanium",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2011,
-    "kilometraje": 132000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": [
-      "5-1.webp",
-      "5-2.webp",
-      "5-3.webp",
-      "5-4.webp",
-      "5-5.webp",
-      "5-6.webp",
-      "5-7.webp",
-      "5-8.webp",
-      "5-9.webp",
-      "5-10.webp"
-    ],
-    "descripcion": "🚘 Ford Fiesta Kinetic 1.6 Design 120cv Titanium\n\n📋 FICHA TÉCNICA:\n• Marca: Ford\n• Modelo: Fiesta Kinetic\n• Año: 2011\n• Versión: 1.6 Design 120cv Titanium\n• Color: Amarillo\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Motor: 1.6\n• Tipo de carrocería: Hatchback\n• Kilómetros: 132.000 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ANTICIPO EL RESTO EN CUOTAS FIJAS.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
-  },
-  {
-    "id": "fiat-cronos-1-3-gse-drive-2022",
-    "name": "Fiat Cronos 1.3 Gse Drive",
-    "marca": "Fiat",
-    "marcaId": "fiat",
-    "ano": 2022,
-    "kilometraje": 19000,
+    "id": "citroen-c-elysee-1-6-feel-vti-115-2018",
+    "name": "Citroën C-Elysee 1.6 Feel Vti 115",
+    "marca": "Citroën",
+    "marcaId": "citroen",
+    "ano": 2018,
+    "kilometraje": 67000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.3",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 4,
-    "images": [
-      "6-1.webp",
-      "6-2.webp",
-      "6-3.webp",
-      "6-4.webp",
-      "6-5.webp",
-      "6-6.webp",
-      "6-7.webp",
-      "6-8.webp",
-      "6-9.webp",
-      "6-10.webp"
-    ],
-    "descripcion": "🚘 Fiat Cronos 1.3 Gse Drive\n\n📋 FICHA TÉCNICA:\n• Marca: Fiat\n• Modelo: Cronos\n• Año: 2022\n• Versión: 1.3 Gse Drive\n• Color: Rojo\n• Tipo de combustible: Nafta\n• Puertas: 4\n• Transmisión: Manual\n• Motor: 1.3\n• Tipo de carrocería: Sedán\n• Kilómetros: 19.000 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
+    "images": ["5-1.webp", "5-2.webp", "5-3.webp"],
+    "descripcion": "🚘 Citroën C-Elysee 1.6 Feel Vti 115\n\n📋 FICHA TÉCNICA:\n• Marca: Citroën\n• Modelo: C-Elysee\n• Año: 2018\n• Versión: 1.6 Feel Vti 115\n• Tipo de combustible: Nafta\n• Puertas: 4\n• Transmisión: Manual\n• Tipo de carrocería: Sedán\n• Kilómetros: 67.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
   },
   {
-    "id": "chevrolet-onix-1-4-activ-98cv-2017",
-    "name": "Chevrolet Onix 1.4 Activ 98cv",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2017,
-    "kilometraje": 117000,
+    "id": "fiat-palio-1-6-essence-115cv-2015",
+    "name": "Fiat Palio 1.6 Essence 115cv",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2015,
+    "kilometraje": 80000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.4",
-    "combustible": "Nafta/GNC",
+    "motor": "1.6",
+    "combustible": "Nafta",
     "puertas": 5,
-    "images": [
-      "7-1.webp",
-      "7-2.webp",
-      "7-3.webp",
-      "7-4.webp",
-      "7-5.webp",
-      "7-6.webp",
-      "7-7.webp",
-      "7-8.webp",
-      "7-9.webp",
-      "7-10.webp"
-    ],
-    "descripcion": "🚘 Chevrolet Onix 1.4 Activ 98cv\n\n📋 FICHA TÉCNICA:\n• Marca: Chevrolet\n• Modelo: Onix\n• Año: 2017\n• Versión: 1.4 Activ 98cv\n• Color: Gris\n• Tipo de combustible: Nafta/GNC\n• Puertas: 5\n• Transmisión: Manual\n• Motor: 1.4\n• Tipo de carrocería: Hatchback\n• Kilómetros: 117.000 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
+    "images": ["6-1.webp", "6-2.webp", "6-3.webp"],
+    "descripcion": "🚘 Fiat Palio 1.6 Essence 115cv\n\n📋 FICHA TÉCNICA:\n• Marca: Fiat\n• Modelo: Palio\n• Año: 2015\n• Versión: 1.6 Essence 115cv\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Tipo de carrocería: Hatchback\n• Kilómetros: 80.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
   },
   {
-    "id": "peugeot-2008-1-6-feline-2022",
-    "name": "Peugeot 2008 1.6 Feline",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2022,
-    "kilometraje": 75000,
+    "id": "volkswagen-vento-2-5-luxury-170cv-2013",
+    "name": "Volkswagen Vento 2.5 Luxury 170cv",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2013,
+    "kilometraje": 130000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Sedán",
+    "transmision": "Manual",
+    "motor": "2.5",
+    "combustible": "Nafta",
+    "puertas": 4,
+    "images": ["7-1.webp", "7-2.webp", "7-3.webp"],
+    "descripcion": "🚘 Volkswagen Vento 2.5 Luxury 170cv\n\n📋 FICHA TÉCNICA:\n• Marca: Volkswagen\n• Modelo: Vento\n• Año: 2013\n• Versión: 2.5 Luxury 170cv\n• Tipo de combustible: Nafta\n• Puertas: 4\n• Transmisión: Manual\n• Tipo de carrocería: Sedán\n• Kilómetros: 130.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
+  },
+  {
+    "id": "toyota-etios-1-5-xls-at-2023",
+    "name": "Toyota Etios 1.5 Xls At",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2023,
+    "kilometraje": 28000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Automática",
+    "motor": "1.5",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": ["8-1.webp", "8-2.webp", "8-3.webp"],
+    "descripcion": "🚘 Toyota Etios 1.5 Xls At\n\n📋 FICHA TÉCNICA:\n• Marca: Toyota\n• Modelo: Etios\n• Año: 2023\n• Versión: 1.5 Xls At\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Automática\n• Tipo de carrocería: Hatchback\n• Kilómetros: 28.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
+  },
+  {
+    "id": "ford-ecosport-1-5-se-123cv-4x2-2020",
+    "name": "Ford Ecosport 1.5 Se 123cv 4x2",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2020,
+    "kilometraje": 65000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "transmision": "Automática",
+    "motor": "1.5",
     "combustible": "Nafta",
     "puertas": 5,
-    "images": [
-      "8-1.webp",
-      "8-2.webp",
-      "8-3.webp",
-      "8-4.webp",
-      "8-5.webp",
-      "8-6.webp",
-      "8-7.webp",
-      "8-8.webp",
-      "8-9.webp",
-      "8-10.webp"
-    ],
-    "descripcion": "🚘 Peugeot 2008 1.6 Feline\n\n📋 FICHA TÉCNICA:\n• Marca: Peugeot\n• Modelo: 2008\n• Año: 2022\n• Versión: 1.6 Feline\n• Color: Gris\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Motor: 1.6\n• Tipo de carrocería: SUV\n• Kilómetros: 75.000 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
+    "images": ["9-1.webp", "9-2.webp", "9-3.webp"],
+    "descripcion": "🚘 Ford Ecosport 1.5 Se 123cv 4x2\n\n📋 FICHA TÉCNICA:\n• Marca: Ford\n• Modelo: Ecosport\n• Año: 2020\n• Versión: 1.5 Se 123cv 4x2\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Automática\n• Tipo de carrocería: SUV\n• Kilómetros: 65.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
   },
   {
-    "id": "citroen-c4-lounge-1-6-thp-165-at6-feel-2017",
-    "name": "Citroën C4 Lounge 1.6 Thp 165 At6 Feel",
+    "id": "citroen-ds3-2018",
+    "name": "Citroen Ds3",
     "marca": "Citroën",
     "marcaId": "citroen",
-    "ano": 2017,
-    "kilometraje": 101000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 4,
-    "images": [
-      "9-1.webp",
-      "9-2.webp",
-      "9-3.webp",
-      "9-4.webp",
-      "9-5.webp",
-      "9-6.webp",
-      "9-7.webp",
-      "9-8.webp",
-      "9-9.webp",
-      "9-10.webp"
-    ],
-    "descripcion": "🚘 Citroën C4 Lounge 1.6 Thp 165 At6 Feel\n\n📋 FICHA TÉCNICA:\n• Marca: Citroën\n• Modelo: C4 Lounge\n• Año: 2017\n• Versión: 1.6 Thp 165 At6 Feel\n• Color: Gris\n• Tipo de combustible: Nafta\n• Puertas: 4\n• Transmisión: Automática\n• Motor: 1.6\n• Tipo de carrocería: Sedán\n• Kilómetros: 101.000 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
-  },
-  {
-    "id": "peugeot-208-1-6-active-tiptronic-2023",
-    "name": "Peugeot 208 1.6 Active Tiptronic",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2023,
-    "kilometraje": 12000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": [
-      "10-1.webp",
-      "10-2.webp",
-      "10-3.webp",
-      "10-4.webp",
-      "10-5.webp",
-      "10-6.webp",
-      "10-7.webp",
-      "10-8.webp",
-      "10-9.webp",
-      "10-10.webp"
-    ],
-    "descripcion": "🚘 Peugeot 208 1.6 Active Tiptronic\n\n📋 FICHA TÉCNICA:\n• Marca: Peugeot\n• Modelo: 208\n• Año: 2023\n• Versión: 1.6 Active Tiptronic\n• Color: Blanco\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Automática\n• Motor: 1.6\n• Tipo de carrocería: Hatchback\n• Kilómetros: 12.000 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
-  },
-  {
-    "id": "citroen-c3-1-6-vti-115-feel-2021",
-    "name": "Citroën C3 1.6 Vti 115 Feel",
-    "marca": "Citroën",
-    "marcaId": "citroen",
-    "ano": 2021,
+    "ano": 2018,
     "kilometraje": 58000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
-    "transmision": "Manual",
+    "transmision": "Automática",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
-    "images": [
-      "11-1.webp",
-      "11-2.webp",
-      "11-3.webp",
-      "11-4.webp",
-      "11-5.webp",
-      "11-6.webp",
-      "11-7.webp",
-      "11-8.webp",
-      "11-9.webp",
-      "11-10.webp"
-    ],
-    "descripcion": "🚘 Citroën C3 1.6 Vti 115 Feel\n\n📋 FICHA TÉCNICA:\n• Marca: Citroën\n• Modelo: C3\n• Año: 2021\n• Versión: 1.6 Vti 115 Feel\n• Color: Rojo\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Motor: 1.6\n• Tipo de carrocería: Hatchback\n• Kilómetros: 58.000 km\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
+    "puertas": 3,
+    "images": ["10-1.webp", "10-2.webp", "10-3.webp"],
+    "descripcion": "🚘 Citroen Ds3\n\n📋 FICHA TÉCNICA:\n• Marca: Citroën\n• Modelo: DS3\n• Año: 2018\n• Versión: DS3\n• Tipo de combustible: Nafta\n• Puertas: 3\n• Transmisión: Automática\n• Kilómetros: 58.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
   },
   {
-    "id": "renault-logan-1-6-authentique-plus-85cv-gnc-2018",
-    "name": "Renault Logan 1.6 Authentique Plus 85cv gnc",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2018,
-    "kilometraje": 999999,
+    "id": "peugeot-208-1-6-active-pack-tiptronic-2024",
+    "name": "Peugeot 208 1.6 Active Pack Tiptronic",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2024,
+    "kilometraje": 33000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Manual",
+    "categoria": "Hatchback",
+    "transmision": "Automática",
     "motor": "1.6",
-    "combustible": "Nafta/GNC",
-    "puertas": 4,
-    "images": [
-      "12-1.webp",
-      "12-2.webp",
-      "12-3.webp",
-      "12-4.webp",
-      "12-5.webp",
-      "12-6.webp",
-      "12-7.webp",
-      "12-8.webp",
-      "12-9.webp",
-      "12-10.webp"
-    ],
-    "descripcion": "🚘 Renault Logan 1.6 Authentique Plus 85cv gnc\n\n📋 FICHA TÉCNICA:\n• Marca: Renault\n• Modelo: Logan\n• Año: 2018\n• Versión: 1.6 Authentique Plus 85cv Nac\n• Color: Blanco\n• Tipo de combustible: Nafta/GNC\n• Puertas: 4\n• Transmisión: Manual\n• Motor: 1.6\n• Tipo de carrocería: Sedán\n\n💰 EL VALOR TOTAL DEL VEHÍCULO ES EL PUBLICADO.\n\n🏢 ESTAMOS EN EL MERCADO HACE MÁS DE 25 AÑOS.\n📍 ÚNICA SUCURSAL EN BERAZATEGUI, ZONA SUR BS AS.\n\n💳 ENTREGUE UN ANTICIPO Y EL RESTO EN CUOTAS FIJAS, CRÉDITO UVA FINANCIADO POR SANTANDER.\n\n🔄 TOMAMOS PERMUTAS.\n\n📞 CONSULTAS AL 42267067 O WHATSAPP AL +54 11 4140-8647\n\n📍 ESTAMOS UBICADOS EN AV NESTOR KIRCHNER N°1914 ENTRE 19 Y 20, BERAZATEGUI"
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": ["11-1.webp", "11-2.webp", "11-3.webp"],
+    "descripcion": "🚘 Peugeot 208 1.6 Active Pack Tiptronic\n\n📋 FICHA TÉCNICA:\n• Marca: Peugeot\n• Modelo: 208\n• Año: 2024\n• Versión: 1.6 Active Pack Tiptronic\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Automática\n• Tipo de carrocería: Hatchback\n• Kilómetros: 33.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
+  },
+  {
+    "id": "subaru-forester-2-5-awd-cvt-si-driver-limited-sport-2016",
+    "name": "Subaru Forester 2.5 Awd Cvt Si Driver Limited Sport",
+    "marca": "Subaru",
+    "marcaId": "subaru",
+    "ano": 2016,
+    "kilometraje": 123000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "2.5",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": ["12-1.webp", "12-2.webp", "12-3.webp"],
+    "descripcion": "🚘 Subaru Forester 2.5 Awd Cvt Si Driver Limited Sport\n\n📋 FICHA TÉCNICA:\n• Marca: Subaru\n• Modelo: Forester\n• Año: 2016\n• Versión: 2.5 Awd Cvt Si Driver Limited Sport\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Automática\n• Tipo de carrocería: SUV\n• Kilómetros: 123.000 km\n\n📍 Avellaneda - Puerto Madero\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp 11 6965-4894"
   }
 ]
