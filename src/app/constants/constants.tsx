@@ -4,24 +4,24 @@ export const company = {
   shortAdress: true,
   favicon: false,
   price: false,
-  id: 'dorregomotors',
-  name: 'Dorrego Motors',
-  adress: 'Cnel. Dorrego 2039',
-  city: 'Avellaneda',
-  email: null,
-  instagram: 'dorregomotors',
-  facebook: 'https://www.facebook.com/profile.php?id=100063686044880',
-  whatsapp: ['1169654894'],
-  googlemapsLink: 'https://maps.app.goo.gl/vL3bJBXUCzmaTYgY8',
+  id: 'fmaautomotores',
+  name: 'FMA Automotores',
+  adress: 'San Martín 663',
+  city: 'Campana',
+  email: 'fmaautomotores@gmail.com',
+  instagram: 'fmaautomotores',
+  facebook: 'https://www.facebook.com/fmaautomotores',
+  whatsapp: ['3489651981', '3489218383'],
+  googlemapsLink: 'https://maps.app.goo.gl/1aX4rwrHVDnybnpm8',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.320563377281!2d-58.35560446181952!3d-34.67185810608378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a333a463a25703%3A0x1de4998c05761cf6!2sDorrego%20Motors!5e0!3m2!1sen!2sar!4v1753797081570!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.110207974103!2d-58.961152178850945!3d-34.16909986457847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb733b99756b57%3A0x1c38fddd75bf2955!2sFMA%20Automotores!5e0!3m2!1sen!2sar!4v1753799308772!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:30 a 19:00hs'] },
-    { day: 'Martes', hours: ['09:30 a 19:00hs'] },
-    { day: 'Miércoles', hours: ['09:30 a 19:00hs'] },
-    { day: 'Jueves', hours: ['09:30 a 19:00hs'] },
-    { day: 'Viernes', hours: ['09:30 a 19:00hs'] },
-    { day: 'Sábado', hours: ['10:00 a 13:00hs'] },
+    { day: 'Lunes', hours: ['9 a 13 y 16:00 a 19:30hs'] },
+    { day: 'Martes', hours: ['9 a 13 y 16:00 a 19:30hs'] },
+    { day: 'Miércoles', hours: ['9 a 13 y 16:00 a 19:30hs'] },
+    { day: 'Jueves', hours: ['9 a 13 y 16:00 a 19:30hs'] },
+    { day: 'Viernes', hours: ['9 a 13 y 16:00 a 19:30hs'] },
+    { day: 'Sábado', hours: ['9 a 13hs'] },
     // { day: 'Domingo', hours: ['10:00 a 19:00'] },
   ],
   footer:
@@ -32,8 +32,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://dorregomotors.vercel.app/',
-  title: 'Dorrego Motors - Compra y Venta de Autos',
+  metadataBase: 'https://fmaautomotores.vercel.app/',
+  title: 'FMA Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
