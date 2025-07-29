@@ -324,6 +324,9 @@ export default function AutoDetailPage() {
                               alt={`${car.model} - Imagen ${index + 1}`}
                               fill
                               className='object-cover'
+                              style={{
+                                objectPosition: `center ${company.objectCover}`,
+                              }}
                               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                               priority
                             />
@@ -388,6 +391,9 @@ export default function AutoDetailPage() {
                             className={`object-cover ${
                               shouldShowBlur ? 'blur-sm' : ''
                             }`}
+                            style={{
+                              objectPosition: `center ${company.objectCover}`,
+                            }}
                           />
                         </motion.div>
 

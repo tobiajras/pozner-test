@@ -244,6 +244,9 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                         width={600}
                         height={600}
                         className='object-cover w-full h-full transition-transform duration-700'
+                        style={{
+                          objectPosition: `center ${company.objectCover}`,
+                        }}
                         src={
                           auto.Images.sort((a, b) => a.order - b.order)[0]
                             ?.thumbnailUrl || '/assets/placeholder.webp'

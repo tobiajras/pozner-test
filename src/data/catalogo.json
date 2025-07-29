@@ -1,18 +1,18 @@
 [
   {
-    "id": "volkswagen-suran-1-6-trendline-2011",
-    "name": "Volkswagen Suran 1.6 Trendline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2011,
-    "kilometraje": 151000,
+    "id": "honda-fit-lx-1-5-2010",
+    "name": "Honda Fit Lx 1.5",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 2010,
+    "kilometraje": 95813,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.5",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -23,21 +23,46 @@
       "1-5.webp",
       "1-6.webp",
       "1-7.webp",
-      "1-8.webp",
-      "1-9.webp",
-      "1-10.webp",
-      "1-11.webp",
-      "1-12.webp"
+      "1-8.webp"
     ],
-    "descripcion": "🚘Volkswagen Suran 1.6 Trendline 🚘\n\n📋 FICHA TÉCNICA:\n• Marca: Volkswagen\n• Modelo: Suran\n• Año: 2011\n• Versión: Trendline\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Tipo de carrocería: Furgón\n• Kilómetros: 151.000 km\n• Motor: 1.6\n• Tracción: Delantera\n• Aire y dirección\n• Lev vidrios manual\n• Espejos manuales\n• Servicios en tiempo y forma\n• Interior de tela impecable\n• Cierre centralizado\n• Estéreo original\n• Caja manual de 5 cambios\n• Único dueño de okm\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp (3489) 651981"
+    "descripcion": "🚘 HONDA FIT LX 1.5 – 📅 Año: 2010 KM: 95.813\n\n🚨🔧 Confiable, económico y súper cómodo para ciudad o ruta\n\n💰 Tomamos tu usado o te lo financiamos hasta un 50%\n\n📍 Visitanos en Pablo Ricchieri 553, Pilar."
   },
   {
-    "id": "volkswagen-polo-1-6-track-2024",
-    "name": "Volkswagen Polo 1.6 Track",
+    "id": "peugeot-boxer-350-2-3-hdi-confort-2012",
+    "name": "Peugeot Boxer 350 2.3 Hdi Confort",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2012,
+    "kilometraje": 302984,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Utilitario",
+    "transmision": "Manual",
+    "motor": "2.3",
+    "combustible": "Diésel",
+    "puertas": 3,
+    "images": [
+      "2-1.webp",
+      "2-2.webp",
+      "2-3.webp",
+      "2-4.webp",
+      "2-5.webp",
+      "2-6.webp",
+      "2-7.webp",
+      "2-8.webp",
+      "2-9.webp"
+    ],
+    "descripcion": "🌍 Tu próxima aventura sobre ruedas está acá\n\n🚐 Peugeot Boxer 350 2.3 HDI Confort – 2012\n\n🔧 302.984 KM bien recorridos y listos para muchos más\n\n✅ Espacio y comodidad para convertirla en tu motorhome\n\n💸 Tomamos tu usado o te la financiamos hasta un 50%\n\n📍 Estamos en Pablo Ricchieri 553, Pilar\n\n💬 Querés verla? Mandanos un mensaje y coordinamos 📲"
+  },
+  {
+    "id": "volkswagen-gol-trend-1-6-2010",
+    "name": "Volkswagen Gol Trend 1.6",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2024,
-    "kilometraje": 0,
+    "ano": 2010,
+    "kilometraje": 174532,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -48,71 +73,31 @@
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
-      "2-1.webp",
-      "2-2.webp",
-      "2-3.webp",
-      "2-4.webp",
-      "2-5.webp",
-      "2-6.webp",
-      "2-7.webp",
-      "2-8.webp",
-      "2-9.webp",
-      "2-10.webp",
-      "2-11.webp",
-      "2-12.webp",
-      "2-13.webp"
-    ],
-    "descripcion": "⚠️Unidad Okm, Entrega inmediata ⚠️\n🚗VOLKSWAGEN POLO 1.6 TRACK🚗\n\n📋 FICHA TÉCNICA:\n• Marca: Volkswagen\n• Modelo: Polo\n• Año: 2024\n• Versión: 1.6 Track\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Tipo de carrocería: Hatchback\n• Kilómetros: 0 km\n• 0KM patentado\n• Listo para transferir\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚨 Retira con $14,500.000 y 12 cuotas fijas tasa 0% interés\n🚨 Financiación mediante crédito prendario\n📲 Contactanos al WhatsApp (3489) 651981"
-  },
-  {
-    "id": "toyota-hilux-3-0-srv-4x4-at-2015",
-    "name": "Toyota Hilux 3.0 Srv 4x4 At",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2015,
-    "kilometraje": 247000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "3.0",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": [
       "3-1.webp",
       "3-2.webp",
       "3-3.webp",
       "3-4.webp",
       "3-5.webp",
-      "3-6.webp",
-      "3-7.webp",
-      "3-8.webp",
-      "3-9.webp",
-      "3-10.webp",
-      "3-11.webp",
-      "3-12.webp",
-      "3-13.webp"
+      "3-6.webp"
     ],
-    "descripcion": "🚘Toyota Hilux 3.0 Srv 4x4 at 🚘\n\n📋 FICHA TÉCNICA:\n• Marca: Toyota\n• Modelo: Hilux\n• Año: 2015\n• Versión: 3.0 Srv 4x4 at\n• Tipo de combustible: Diésel\n• Puertas: 4\n• Transmisión: Automática\n• Tipo de carrocería: Pickup\n• Kilómetros: 247.000 km\n• Motor: 3.0\n• Tracción: 4x4\n• Aire y dirección\n• Lev vidrios x4\n• Espejos eléctricos\n• Servicios en tiempo y forma\n• Interior de cuero impecable\n• Cierre centralizado\n• Estéreo original con cámara de retroceso\n• Caja automática de 5 cambios\n• Único dueño de okm\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp (3489) 651981"
+    "descripcion": "Volkswagen Gol Trend 1.6 – 2010 | 174.532 KM\n\nUn clásico que nunca pasa de moda!\n\n📌 Tomamos tu usado como parte de pago\n\n💸 Podés financiarlo hasta un 50%\n\n📍 Estamos en Pilar, acercate a Bautimotors y conocelo en persona."
   },
   {
-    "id": "toyota-corolla-1-8-xei-mt-2014",
-    "name": "Toyota Corolla 1.8 Xei Mt",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2014,
-    "kilometraje": 224800,
+    "id": "renault-clio-mio-1-3-expression-pack-ii-2013",
+    "name": "Renault Clio Mio 1.3 Expression Pack Ii",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2013,
+    "kilometraje": 66325,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.8",
+    "motor": "1.3",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "4-1.webp",
       "4-2.webp",
@@ -121,30 +106,25 @@
       "4-5.webp",
       "4-6.webp",
       "4-7.webp",
-      "4-8.webp",
-      "4-9.webp",
-      "4-10.webp",
-      "4-11.webp",
-      "4-12.webp",
-      "4-13.webp"
+      "4-8.webp"
     ],
-    "descripcion": "🚘Toyota Corolla 1.8 Xei Mt 🚘\n\n📋 FICHA TÉCNICA:\n• Marca: Toyota\n• Modelo: Corolla\n• Año: 2014\n• Versión: 1.8 Xei Mt\n• Tipo de combustible: Nafta\n• Puertas: 4\n• Transmisión: Manual\n• Tipo de carrocería: Sedán\n• Kilómetros: 224.800 km\n• Motor: 1.8\n• Aire y dirección\n• Lev vidrios x4\n• Espejos eléctricos\n• Servicios en tiempo y forma\n• Interior de pana impecable\n• Cierre centralizado\n• Estéreo original\n• Caja manual de 6 cambios\n• Único dueño de okm\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp (3489) 651981"
+    "descripcion": "Renault Clio Mío 1.3 Expression Pack II – 2013\n\n📍 Solo 66.325 km reales\n\n✔️ Excelente estado, ideal para moverte todos los días\n\n💸 Tomamos tu usado en parte de pago\n\n📊 Podemos financiarte hasta un 50%"
   },
   {
-    "id": "ford-ka-1-5-se-2015",
-    "name": "Ford Ka 1.5 Se",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2015,
-    "kilometraje": 128000,
+    "id": "renault-sandero-privilege-1-6-2017",
+    "name": "Renault Sandero Privilege 1.6",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2017,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.5",
-    "combustible": "GNC",
+    "motor": "1.6",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "5-1.webp",
@@ -152,88 +132,62 @@
       "5-3.webp",
       "5-4.webp",
       "5-5.webp",
-      "5-6.webp",
-      "5-7.webp",
-      "5-8.webp",
-      "5-9.webp",
-      "5-10.webp"
+      "5-6.webp"
     ],
-    "descripcion": "🚗FORD KA 1.5 SE🚗\n\n📋 FICHA TÉCNICA:\n• Marca: Ford\n• Modelo: Ka\n• Año: 2015\n• Versión: 1.5 SE\n• Tipo de combustible: GNC\n• Puertas: 5\n• Transmisión: Manual\n• Tipo de carrocería: Hatchback\n• Kilómetros: 128.000 km\n• Motor: 1.5\n• Con GNC\n• Aire y dirección\n• Lev vidrios\n• Cierre centralizado\n• Espejos eléctricos\n• Cubiertas semi nuevas\n• Interior de tela\n• Estéreo con Bluetooth original\n• Caja manual de 5 cambios\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚨 Retira con $6,900.000 y el saldo hasta 48 cuotas FIJAS Y EN PESOS\n📲 Contactanos al WhatsApp (3489) 651981"
+    "descripcion": "🌟 Tu próximo auto confiable y canchero: Renault Sandero Privilege 1.6 2017 🌟\n\n🔹 Motor 1.6 con excelente rendimiento\n\n🔹 Aire, dirección, levantavidrios eléctricos\n\n🔹 Pantalla táctil, Bluetooth y sensor de estacionamiento\n\nTomamos tu usado o te lo financiamos hasta un 50%"
   },
   {
-    "id": "toyota-hilux-2-8-srv-4x4-at-2022",
-    "name": "Toyota Hilux 2.8 Srv 4x4 At",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2022,
-    "kilometraje": 59800,
+    "id": "volkswagen-suran-1-6-2017",
+    "name": "Volkswagen Suran 1.6",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2017,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "2.8",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "categoria": "Utilitario",
+    "transmision": "Manual",
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "6-1.webp",
       "6-2.webp",
       "6-3.webp",
       "6-4.webp",
       "6-5.webp",
-      "6-6.webp",
-      "6-7.webp",
-      "6-8.webp",
-      "6-9.webp",
-      "6-10.webp",
-      "6-11.webp",
-      "6-12.webp",
-      "6-13.webp",
-      "6-14.webp"
+      "6-6.webp"
     ],
-    "descripcion": "🚘Toyota Hilux 2.8 Srv 4x4 at 🚘\n\n📋 FICHA TÉCNICA:\n• Marca: Toyota\n• Modelo: Hilux\n• Año: 2022\n• Versión: 2.8 Srv 4x4 at\n• Tipo de combustible: Diésel\n• Puertas: 4\n• Transmisión: Automática\n• Tipo de carrocería: Pickup\n• Kilómetros: 59.800 km\n• Motor: 2.8\n• Aire y dirección\n• Lev vidrios x4\n• Espejos eléctricos\n• Servicios oficiales\n• Interior de tela impecable\n• Cierre centralizado\n• Estéreo con Bluetooth original\n• Caja automática de 6 cambios\n• Cámara de retroceso\n• Sensores de estacionamiento\n• Segundo dueño de okm\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚗 Tomamos tu usado como parte de pago\n📲 Contactanos al WhatsApp (3489) 651981"
+    "descripcion": "🚗 Volkswagen Suran 1.6 2017\n\nConfort, espacio y confianza 🚗\n\n✔️ Gran capacidad de baúl\n\nTomamos tu usado como parte de pago!\n\n📍 Vení a verla a Pablo Ricchieri 553, Pilar\n\n📲 Consultanos por financiación hasta el 50%"
   },
   {
-    "id": "volkswagen-amarok-3-0-v6-highline-2024",
-    "name": "Volkswagen Amarok 3.0 V6 Highline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2024,
-    "kilometraje": 0,
+    "id": "ford-ranger-dc-4x4-xl",
+    "name": "Ford Ranger Dc 4x4 Xl",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 999999,
+    "kilometraje": 153801,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "3.0",
+    "transmision": "Manual",
+    "motor": "2.2",
     "combustible": "Diésel",
     "puertas": 4,
-    "images": [
-      "7-1.webp",
-      "7-2.webp",
-      "7-3.webp",
-      "7-4.webp",
-      "7-5.webp",
-      "7-6.webp",
-      "7-7.webp",
-      "7-8.webp",
-      "7-9.webp",
-      "7-10.webp",
-      "7-11.webp",
-      "7-12.webp",
-      "7-13.webp"
-    ],
-    "descripcion": "🚘Volkswagen amarok 3.0 V6 Highline 🚘\n\n📋 FICHA TÉCNICA:\n• Marca: Volkswagen\n• Modelo: Amarok\n• Año: 2024\n• Versión: 3.0 V6 Highline\n• Tipo de combustible: Diésel\n• Puertas: 4\n• Transmisión: Automática\n• Tipo de carrocería: Pickup\n• Kilómetros: 0 km\n• 0KM\n• Entrega inmediata\n• Tomamos tu usado al mejor precio\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚨 Financia hasta $12,000.000 a tasa 0% interés en 12 meses\n📲 Contactanos al WhatsApp (3489) 651981"
+    "images": ["7-1.webp", "7-2.webp", "7-3.webp", "7-4.webp", "7-5.webp"],
+    "descripcion": "💥 Potencia, espacio y aventura en una sola camioneta💥\n\n📍 Ford Ranger DC 4x4 XL\n\n🔧 153.801 KM reales y lista para lo que venga\n\n✅ Ideal para el laburo o para escaparte el finde\n\n✅ Tomamos tu usado en parte de pago!\n\n✅ O te la financiamos hasta un 50% 💸\n\n📍 Estamos en Pablo Ricchieri 553, Pilar"
   },
   {
-    "id": "peugeot-208-1-6-touchscreen-2015",
-    "name": "Peugeot 208 1.6 Touchscreen",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2015,
-    "kilometraje": 140000,
+    "id": "renault-sandero-confort-1-6-2011",
+    "name": "Renault Sandero Confort 1.6",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2011,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -252,21 +206,17 @@
       "8-6.webp",
       "8-7.webp",
       "8-8.webp",
-      "8-9.webp",
-      "8-10.webp",
-      "8-11.webp",
-      "8-12.webp",
-      "8-13.webp"
+      "8-9.webp"
     ],
-    "descripcion": "🚗Peugeot 208 1.6 touchscreen 🚗\n\n📋 FICHA TÉCNICA:\n• Marca: Peugeot\n• Modelo: 208\n• Año: 2015\n• Versión: 1.6 Touchscreen\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Tipo de carrocería: Hatchback\n• Kilómetros: 140.000 km\n• Motor: 1.6\n• Tracción delantera\n• Aire y dirección\n• Cierre centralizado\n• Lev vidrios eléctricos x4\n• Service en tiempo y forma\n• Cubiertas nuevas\n• Interior en óptimo estado\n• Caja manual de 5 velocidades\n• Velocidad crucero\n• Segundo dueño\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚨 Consultanos por la entrega y el saldo hasta 36 Cuotas FIJAS Y EN PESOS\n📲 Contactanos al WhatsApp (3489) 651981"
+    "descripcion": "🚘 RENAULT SANDERO CONFORT 1.6 – 2011\n\n📍 En excelente estado!\n\nSi queres un auto que te lleve y te traiga sin dramas, este Sandero es ese clásico rendidor que nunca falla 👇\n\n📍 Pablo Ricchieri 553 – Pilar\n\n📲 Mandanos un WhatsApp y vení a verlo."
   },
   {
-    "id": "peugeot-208-1-5-touchscreen-2013",
-    "name": "Peugeot 208 1.5 Touchscreen",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2013,
-    "kilometraje": 214000,
+    "id": "toyota-etios-x-1-5-mt-2023",
+    "name": "Toyota Etios X 1.5 Mt",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2023,
+    "kilometraje": 29776,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -284,31 +234,26 @@
       "9-5.webp",
       "9-6.webp",
       "9-7.webp",
-      "9-8.webp",
-      "9-9.webp",
-      "9-10.webp",
-      "9-11.webp",
-      "9-12.webp",
-      "9-13.webp"
+      "9-8.webp"
     ],
-    "descripcion": "🚗 Peugeot 208 1.5 Touchscreen 🚗\n\n📋 FICHA TÉCNICA:\n• Marca: Peugeot\n• Modelo: 208\n• Año: 2013\n• Versión: 1.5 Touchscreen\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Manual\n• Tipo de carrocería: Hatchback\n• Kilómetros: 214.000 km\n• Motor: 1.5\n• Tracción delantera\n• Aire y dirección\n• Cierre centralizado\n• Lev vidrios eléctricos x4\n• Service en tiempo y forma\n• Cubiertas nuevas\n• Interior en óptimo estado\n• Caja manual de 5 velocidades\n• Velocidad crucero\n• Único dueño\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚨 Consultanos por la entrega y el saldo hasta 36 Cuotas FIJAS Y EN PESOS\n📲 Contactanos al WhatsApp (3489) 651981"
+    "descripcion": "🚗 TOYOTA ETIOS X 1.5 MT – 2023\n\n📍 29.776 KM\n\nTodos sabemos que este Etios es todo lo que necesitás 👇\n\n✔️ Prácticamente nuevo: menos de 30.000 km!\n\n✔️ Perfecto como primer auto o para renovar el tuyo.\n\n💳 Financiamos hasta un 50%\n\n♻️ Tomamos tu usado como parte de pago"
   },
   {
-    "id": "volkswagen-amarok-2-0-highline-pack-4x4-2019",
-    "name": "Volkswagen Amarok 2.0 Highline Pack 4x4",
+    "id": "volkswagen-golf-tfsi-bluemotion",
+    "name": "Volkswagen Golf Tfsi Bluemotion",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2019,
-    "kilometraje": 162500,
+    "ano": 999999,
+    "kilometraje": 153219,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "motor": "1.4",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -316,30 +261,24 @@
       "10-4.webp",
       "10-5.webp",
       "10-6.webp",
-      "10-7.webp",
-      "10-8.webp",
-      "10-9.webp",
-      "10-10.webp",
-      "10-11.webp",
-      "10-12.webp",
-      "10-13.webp"
+      "10-7.webp"
     ],
-    "descripcion": "🚗Volkswagen Amarok 2.0 Highline pack 4x4🚗\n\n📋 FICHA TÉCNICA:\n• Marca: Volkswagen\n• Modelo: Amarok\n• Año: 2019\n• Versión: 2.0 Highline pack 4x4\n• Tipo de combustible: Diésel\n• Puertas: 4\n• Transmisión: Manual\n• Tipo de carrocería: Pickup\n• Kilómetros: 162.500 km\n• Motor: 2.0\n• Tracción: 4x4\n• Aire y dirección\n• Cierre centralizado\n• Lev vidrios eléctricos x4\n• Service en tiempo y forma\n• Cubiertas semi nuevas\n• Interior de cuero en óptimo estado\n• Caja manual de 6 velocidades\n• Velocidad crucero\n• Segundo dueño\n• Sensores de estacionamiento\n• Cámara de retroceso\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚨 Consultanos por la entrega y el saldo hasta 36 Cuotas FIJAS Y EN PESOS\n📲 Contactanos al WhatsApp (3489) 651981"
+    "descripcion": "🔹 Volkswagen Golf TFSI BlueMotion\n\n📍 153.219 KM\n\nAuto con diseño, tecnología y rendimiento.\n\n💳 Financiamos hasta un 50%\n\n♻️ Tomamos tu usado como parte de pago\n\n📍 Pablo Ricchieri 553 – Pilar"
   },
   {
-    "id": "honda-fit-1-5-exl-at-2010",
-    "name": "Honda Fit 1.5 Exl At",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2010,
-    "kilometraje": 176500,
+    "id": "fiat-qubo-1-4-dynamic-2012",
+    "name": "Fiat Qubo 1.4 Dynamic",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2012,
+    "kilometraje": 202470,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "1.5",
+    "categoria": "Utilitario",
+    "transmision": "Manual",
+    "motor": "1.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -350,31 +289,26 @@
       "11-5.webp",
       "11-6.webp",
       "11-7.webp",
-      "11-8.webp",
-      "11-9.webp",
-      "11-10.webp",
-      "11-11.webp",
-      "11-12.webp",
-      "11-13.webp"
+      "11-8.webp"
     ],
-    "descripcion": "🚗Honda Fit 1.5 EXL AT 🚗\n\n📋 FICHA TÉCNICA:\n• Marca: Honda\n• Modelo: Fit\n• Año: 2010\n• Versión: 1.5 EXL AT\n• Tipo de combustible: Nafta\n• Puertas: 5\n• Transmisión: Automática\n• Tipo de carrocería: Hatchback\n• Kilómetros: 176.500 km\n• Motor: 1.5\n• Tracción delantera\n• Aire y dirección\n• Cierre centralizado\n• Lev vidrios eléctricos x4\n• Service en tiempo y forma\n• Cubiertas en buen estado\n• Interior de cuero\n• Caja automática\n• Velocidad crucero\n• Segundo dueño\n• Sensores de estacionamiento\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚨 Consultanos por la entrega y el saldo hasta 36 Cuotas FIJAS Y EN PESOS\n📲 Contactanos al WhatsApp (3489) 651981"
+    "descripcion": "🚗 FIAT QUBO 1.4 DYNAMIC – 2012\n\n📍 202.470 KM\n\nNecesitás un vehículo espacioso, económico y versátil?\n\n💳 Financiamos hasta un 50%\n\n♻️ Tomamos tu usado como parte de pago\n\n📍 Pablo Ricchieri 553 – Pilar"
   },
   {
-    "id": "ford-focus-2-0-trend-plus-2013",
-    "name": "Ford Focus 2.0 Trend Plus",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2013,
-    "kilometraje": 210000,
+    "id": "chevrolet-cruze-turbo-2018",
+    "name": "Chevrolet Cruze Turbo",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2018,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "GNC",
-    "puertas": 5,
+    "motor": "1.4",
+    "combustible": "Nafta",
+    "puertas": 4,
     "images": [
       "12-1.webp",
       "12-2.webp",
@@ -383,13 +317,8 @@
       "12-5.webp",
       "12-6.webp",
       "12-7.webp",
-      "12-8.webp",
-      "12-9.webp",
-      "12-10.webp",
-      "12-11.webp",
-      "12-12.webp",
-      "12-13.webp"
+      "12-8.webp"
     ],
-    "descripcion": "🚗Ford Focus 2.0 Trend Plus 🚗\n\n📋 FICHA TÉCNICA:\n• Marca: Ford\n• Modelo: Focus\n• Año: 2013\n• Versión: 2.0 Trend Plus\n• Tipo de combustible: GNC\n• Puertas: 5\n• Transmisión: Manual\n• Tipo de carrocería: Hatchback\n• Kilómetros: 210.000 km\n• Motor: 2.0\n• Tracción delantera\n• Aire y dirección\n• Cierre centralizado\n• Lev vidrios eléctricos x4\n• Service en tiempo y forma\n• Cubiertas semi nuevas\n• Interior en óptimo estado\n• Caja manual de 5 cambios\n• Techo Corredizo\n• Nafta y Gnc\n• Único dueño de okm\n• Sensores de estacionamiento\n\n📍 San Martín 663 - Campana\n\n💸 Opciones de financiamiento\n🚨 Consultanos por la entrega y el saldo hasta 36 Cuotas FIJAS Y EN PESOS\n📲 Contactanos al WhatsApp (3489) 651981"
+    "descripcion": "🚀 CHEVROLET CRUZE TURBO 2018.\n\n💥 Motor 1.4 Turbo\n\n🛞 Sedán 4 puertas\n\n🎯 Ideal para quien busca elegancia, tecnología y rendimiento en un solo auto!\n\n♻️ Tomamos tu usado en parte de pago\n\n📍 Te esperamos en Pilar"
   }
 ]

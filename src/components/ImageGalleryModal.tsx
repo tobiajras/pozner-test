@@ -5,6 +5,7 @@ import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import ArrowIcon from './icons/ArrowIcon';
 import CloseIcon from './icons/CloseIcon';
+import { company } from '@/app/constants/constants';
 
 interface ImageGalleryModalProps {
   images: string[];
@@ -199,6 +200,9 @@ const ImageGalleryModal = ({
                   alt={`Imagen ${index + 1}`}
                   fill
                   className='object-cover'
+                  style={{
+                    objectPosition: `center ${company.objectCover}`,
+                  }}
                   draggable={false}
                   onMouseDown={handleMouseDown}
                   onMouseMove={handleMouseMove}
