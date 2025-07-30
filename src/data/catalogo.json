@@ -1,20 +1,20 @@
 [
   {
-    "id": "toyota-corolla-1-8-seg-hybrid-2025",
-    "name": "Toyota Corolla 1.8 Seg Hybrid",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2025,
-    "kilometraje": 0,
+    "id": "peugeot-partner-1-4-gnc-2014",
+    "name": "Peugeot Partner 1.4 GNC",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2014,
+    "kilometraje": 174000,
     "precio": {
-      "valor": 37000,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "1.8",
-    "combustible": "Híbrido",
-    "puertas": 4,
+    "categoria": "Utilitario",
+    "transmision": "Manual",
+    "motor": "1.4",
+    "combustible": "GNC",
+    "puertas": 5,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -27,24 +27,24 @@
       "1-9.webp",
       "1-10.webp"
     ],
-    "descripcion": "✔️ Toyota Corolla 1.8 SEG Hybrid, 2025 0Km! 💰U$D 37.000 ☎️11-5813-0778"
+    "descripcion": "PEUGEOT PARTNER 1.4 GNC\n\n174.000 km\n\n2014\n\n✅️ VTV\n\n✅️ Entrega inmediata\n\n✅️ Cubiertas nuevas\n\n✅️ Aceptamos permutas/ Financiamos"
   },
   {
-    "id": "ford-fiesta-kinetic-1-6-se-2015",
-    "name": "Ford Fiesta Kinetic 1.6 Se",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2015,
-    "kilometraje": 145000,
+    "id": "toyota-corolla-xli-2017",
+    "name": "Toyota Corolla XLI",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2017,
+    "kilometraje": 118000,
     "precio": {
-      "valor": 12000,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.8",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "2-1.webp",
       "2-2.webp",
@@ -57,24 +57,24 @@
       "2-9.webp",
       "2-10.webp"
     ],
-    "descripcion": "✔️ Ford Fiesta Kinetic 1.6 SE, 2015 con 145.000 Km, segunda dueña, muy bueno! 💰U$D 12.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
+    "descripcion": "TOYOTA COROLLA XLI\n\n118.000 km\n\n2017\n\n✅️ VTV\n\n✅️ 4 Cubiertas nuevas (Recien colocadas)\n\n✅️ Bateria nueva\n\n✅️ Excelente estado\n\n✅️ Aceptamos permutas/ Financiamos"
   },
   {
-    "id": "toyota-etios-1-5-x-2023",
-    "name": "Toyota Etios 1.5 X",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2023,
-    "kilometraje": 23000,
+    "id": "ford-ranger-3-0-xl-plus-4x2-2009",
+    "name": "Ford Ranger 3.0 XL Plus 4x2",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2009,
+    "kilometraje": 300000,
     "precio": {
-      "valor": 19000,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Pickup",
     "transmision": "Manual",
-    "motor": "1.5",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "3.0",
+    "combustible": "Diesel",
+    "puertas": 2,
     "images": [
       "3-1.webp",
       "3-2.webp",
@@ -84,27 +84,26 @@
       "3-6.webp",
       "3-7.webp",
       "3-8.webp",
-      "3-9.webp",
-      "3-10.webp"
+      "3-9.webp"
     ],
-    "descripcion": "✔️ Toyota Etios 1.5 X, 2023 con 23.000 Km, 100% pintura original, impecable! 💰U$D 19.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
+    "descripcion": "FORD RANGER 3.0 XL PLUS 4x2\n\n300.000 km\n\n2009\n\n✅️ VTV\n\n✅️ Inyectores 0km\n\n✅️ Cubiertas al 90%\n\n✅️ Excelente mecanica\n\n✅️ Aceptamos permutas/ Financiamos"
   },
   {
-    "id": "chevrolet-cruze-1-4-lt-2018",
-    "name": "Chevrolet Cruze 1.4 Lt",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2018,
-    "kilometraje": 999999,
+    "id": "renault-clio-5p-authentique-1-2-pack-ii-2012",
+    "name": "Renault Clio 5P Authentique 1.2 Pack II",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2012,
+    "kilometraje": 142000,
     "precio": {
       "valor": 999999,
-      "moneda": "USD"
+      "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "1.4",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.2",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "4-1.webp",
       "4-2.webp",
@@ -113,27 +112,25 @@
       "4-5.webp",
       "4-6.webp",
       "4-7.webp",
-      "4-8.webp",
-      "4-9.webp",
-      "4-10.webp"
+      "4-8.webp"
     ],
-    "descripcion": "✔️ Chevrolet Cruze 1.4 LT, 2018, muy bueno! 💰U$D 18.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
+    "descripcion": "RENAULT CLIO 5P AUTHENTIQUE 1.2 PACK II\n\n142.000 km\n\n2012\n\n✅️ Cubiertas al 90%\n\n✅️ VTV\n\n✅️ Entrega inmediata con garantia\n\n✅️ Se aceptan permutas/ Financiamos"
   },
   {
-    "id": "ford-ecosport-1-6-freestyle-2017",
-    "name": "Ford Ecosport 1.6 Freestyle",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2017,
-    "kilometraje": 999999,
+    "id": "toyota-sw4-4x4-7as-2011",
+    "name": "Toyota SW4 4x4 7AS",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2011,
+    "kilometraje": 300000,
     "precio": {
       "valor": 999999,
-      "moneda": "USD"
+      "moneda": "ARS"
     },
     "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
+    "motor": "3.0",
+    "combustible": "Diesel",
     "puertas": 5,
     "images": [
       "5-1.webp",
@@ -145,25 +142,26 @@
       "5-7.webp",
       "5-8.webp",
       "5-9.webp",
-      "5-10.webp"
+      "5-10.webp",
+      "5-11.webp"
     ],
-    "descripcion": "✔️ Ford Ecosport 1.6 Freestyle, 2017, muy bueno! 💰U$D 16.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
+    "descripcion": "TOYOTA SW4 4X4 7AS\n\n2011\n\n300.000 km\n\n✅️ Cubiertas al 90%\n\n✅️ VTV\n\n✅️ Minimos detalles acordea al kilometraje\n\n✅️ MECANICA EXCELENTE\n\n✅️ Aceptamos permutas/ Financiamos"
   },
   {
-    "id": "volkswagen-gol-trend-1-6-trendline-2020",
-    "name": "Volkswagen Gol Trend 1.6 Trendline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2020,
-    "kilometraje": 999999,
+    "id": "fiat-palio-attractive-gnc-2013",
+    "name": "Fiat Palio Attractive G.N.C",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2013,
+    "kilometraje": 170000,
     "precio": {
       "valor": 999999,
-      "moneda": "USD"
+      "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
+    "motor": "1.4",
+    "combustible": "GNC",
     "puertas": 5,
     "images": [
       "6-1.webp",
@@ -177,21 +175,21 @@
       "6-9.webp",
       "6-10.webp"
     ],
-    "descripcion": "✔️ Volkswagen Gol Trend 1.6 Trendline, 2020, muy bueno! 💰U$D 14.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
+    "descripcion": "FIAT PALIO ATTRACTIVE G.N.C\n\n170.000 km\n\n2013\n\n✅️ VTV\n\n✅️ CUBIERTAS AL 90%\n\n✅️ DISTRIBUCION COMPLETA RECIEN HECHA\n\n✅️ SERVICE\n\n✅️ PRUEBA HIDRAULICA 2025\n\n✅️ ACEPTAMOS PERMUTAS/ FINANCIAMOS"
   },
   {
-    "id": "peugeot-207-1-6-xt-2008",
-    "name": "Peugeot 207 1.6 Xt",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2008,
-    "kilometraje": 181000,
+    "id": "nissan-kicks-advance-cvt-2018",
+    "name": "Nissan Kicks Advance CVT",
+    "marca": "Nissan",
+    "marcaId": "nissan",
+    "ano": 2018,
+    "kilometraje": 86000,
     "precio": {
-      "valor": 7500,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
+    "categoria": "SUV",
+    "transmision": "Automática",
     "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
@@ -207,23 +205,23 @@
       "7-9.webp",
       "7-10.webp"
     ],
-    "descripcion": "✔️ Peugeot 207 1.6 XT, 2008 con 181.000 Km, muy bueno, pocos en este estado! 💰U$D 7.500 ☎️11-5813-0778"
+    "descripcion": "NISSAN KICKS ADVANCE CVT\n\n2018\n\n86.000 km\n\n✅️ VTV\n\n✅️ Cubiertas nuevas\n\n✅️ Auxilio sin rodar\n\n✅️ Unica mano\n\n✅️ Aceptamos permutas/ Financiamos"
   },
   {
-    "id": "volkswagen-suran-highline-msi-2019",
-    "name": "Volkswagen Suran Highline Msi",
+    "id": "vw-suran-1-6-gnc-2015",
+    "name": "VW Suran 1.6 GNC",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2019,
-    "kilometraje": 90000,
+    "ano": 2015,
+    "kilometraje": 170000,
     "precio": {
-      "valor": 17000,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
     "categoria": "Utilitario",
     "transmision": "Manual",
     "motor": "1.6",
-    "combustible": "Nafta",
+    "combustible": "GNC",
     "puertas": 5,
     "images": [
       "8-1.webp",
@@ -237,22 +235,22 @@
       "8-9.webp",
       "8-10.webp"
     ],
-    "descripcion": "✔️ Vw Suran Highline MSI, 2019 con 90.000 Km, caja de 6ta, cubiertas nuevas, muy buena! 💰U$D 17.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
+    "descripcion": "VW SURAN 1.6 GNC\n\n170.000 km\n\n2015\n\n✅️ VTV\n\n✅️ CUBIERTAS NUEVAS\n\n✅️ SERVICE AL DIA\n\n✅️ ACEPTAMOS PERMUTAS/ FINANCIAMOS"
   },
   {
-    "id": "chevrolet-tracker-1-8-ltz-2016",
-    "name": "Chevrolet Tracker 1.8 Ltz",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2016,
-    "kilometraje": 128000,
+    "id": "peugeot-308-1-6-active-2018",
+    "name": "Peugeot 308 1.6 Active",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2018,
+    "kilometraje": 88000,
     "precio": {
-      "valor": 14000,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.8",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -267,23 +265,23 @@
       "9-9.webp",
       "9-10.webp"
     ],
-    "descripcion": "RESERVADA❗️✔️ Chevrolet Tracker 1.8 LTZ, 2016 con 128.000 Km, cubiertas nuevas, muy buena! 💰U$D 14.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
+    "descripcion": "PEUGEOT 308 1.6 ACTIVE\n\n88.000 km\n\n2018\n\n✅️ UNICA MANO\n\n✅️ VTV\n\n✅️ ENTREGA INMEDIATA\n\n✅️ ACEPTAMOS PERMUTAS/ FINANCIAMOS"
   },
   {
-    "id": "chevrolet-classic-1-4-ls-2015",
-    "name": "Chevrolet Classic 1.4 Ls",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2015,
-    "kilometraje": 223000,
+    "id": "vw-voyage-1-6-2012",
+    "name": "VW Voyage 1.6",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2012,
+    "kilometraje": 149000,
     "precio": {
-      "valor": 8000,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
     "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.4",
-    "combustible": "GNC",
+    "motor": "1.6",
+    "combustible": "Nafta",
     "puertas": 4,
     "images": [
       "10-1.webp",
@@ -297,22 +295,22 @@
       "10-9.webp",
       "10-10.webp"
     ],
-    "descripcion": "VENDIDO❗️✔️ Chevrolet Classic 1.4 LS, 2015 con 223.000 Km, unico dueño, GNC de 5ta generacion, muy bueno! 💰U$D 8.000 ☎️11-5813-0778☑️ Consultar por financiacion."
+    "descripcion": "VW VOYAGE 1.6\n\n149.000 km\n\n2012\n\n✅️ VTV\n\n✅️ 4 cubiertas 0km\n\n✅️ Service al dia\n\n✅️ Aceptamos permutas/ Financiamos"
   },
   {
-    "id": "ford-ecosport-1-6-freestyle-2016",
-    "name": "Ford Ecosport 1.6 Freestyle",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2016,
-    "kilometraje": 80000,
+    "id": "vw-golf-1-4-highline-250-tsi-dsg-2020",
+    "name": "VW Golf 1.4 Highline 250 TSI DSG",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2020,
+    "kilometraje": 86000,
     "precio": {
-      "valor": 14500,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "categoria": "Hatchback",
+    "transmision": "Automática",
+    "motor": "1.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -327,22 +325,22 @@
       "11-9.webp",
       "11-10.webp"
     ],
-    "descripcion": "VENDIDA❗️✔️ Ford Ecosport 1.6 Freestyle, 2016 con 80.000 Km, cubiertas nuevas, realmente impecable! 💰U$D 14.500 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
+    "descripcion": "VW GOLF 1.4 HIGHLINE 250 TSI DSG\n\n86.000 km\n\n2020\n\n✅️ Excelente estado\n\n✅️ Cubiertas al 90%\n\n✅️ VTV\n\n✅️ Service al dia\n\n✅️ Aceptamos permutas/ Financiamos"
   },
   {
-    "id": "volkswagen-gol-trend-1-6-trendline-2021",
-    "name": "Volkswagen Gol Trend 1.6 Trendline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2021,
-    "kilometraje": 60000,
+    "id": "renault-clio-mio-1-2-confort-2014",
+    "name": "Renault Clio Mio 1.2 Confort",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2014,
+    "kilometraje": 999999,
     "precio": {
-      "valor": 15500,
-      "moneda": "USD"
+      "valor": 10500000,
+      "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.2",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -357,6 +355,6 @@
       "12-9.webp",
       "12-10.webp"
     ],
-    "descripcion": "✔️ Vw Gol Trend 1.6 Trendline, 2021 con 60.000 Km, servicios oficiales, muy bueno! 💰U$D 15.500 ☎️ 11-5813-0778☑️ Acepto permuta menor valor de mi interes, consultar por financiacion."
+    "descripcion": "RENAULT CLIO MIO 1.2 CONFORT\n\n2014\n\n✅️ VTV\n\n✅️ 2 llaves\n\n✅️ Cubiertas nuevas\n\n✅️ Impecable!\n\n✅️ Aceptamos permutas/ Financiamos\n\n✅️ ENTREGA INMEDIATA\n\n$10.500.000"
   }
 ]

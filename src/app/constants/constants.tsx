@@ -1,28 +1,28 @@
 export const company = {
   dark: true,
-  darkmode: false,
+  darkmode: true,
   shortAdress: true,
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'escuderomotors',
-  name: 'Escudero Motors',
-  adress: 'Av. Perón 3423',
-  city: 'San Miguel',
-  email: 'escuderopatricio402@gmail.com',
-  instagram: 'escuderomotors',
-  facebook: 'https://www.facebook.com/profile.php?id=100063717392022#',
-  whatsapp: ['1158130778'],
-  googlemapsLink: 'https://maps.app.goo.gl/Da4cdw8keAJLWGWU9',
+  id: 'dipietroautomotores',
+  name: 'Automotores Di Pietro',
+  adress: 'Lagomarsino 905',
+  city: 'Pilar',
+  email: 'automotoresdipietro@gmail.com',
+  instagram: 'dipietroautomotores',
+  facebook: 'https://www.facebook.com/automotores.dipietro/',
+  whatsapp: ['1150138987'],
+  googlemapsLink: 'https://maps.app.goo.gl/9jQB4aqkHxSn2Wjs7',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841464.3819579687!2d-59.949920321875!3d-34.5289819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd81fa859345%3A0x9039f9cb1ff9810!2sESCUDERO%20MOTORS!5e0!3m2!1sen!2sar!4v1753826921859!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.8600733865305!2d-58.89335510000001!3d-34.4556997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9d5bb349f7b5%3A0x98fcfed9a27c121e!2sAUTOMOTORES%20DI%20PIETRO!5e0!3m2!1sen!2sar!4v1753846452573!5m2!1sen!2sar',
   openDays: [
     { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
     { day: 'Martes', hours: ['09:00 a 18:00hs'] },
     { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
     { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
     { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
+    { day: 'Sábado', hours: ['10:00 a 17:00hs'] },
     // { day: 'Domingo', hours: ['10:00 a 15:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://escuderomotors.vercel.app/',
-  title: 'Escudero Motors - Compra y Venta de Autos',
+  metadataBase: 'https://dipietroautomotores.vercel.app/',
+  title: 'Automotores Di Pietro - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

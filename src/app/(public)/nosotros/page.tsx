@@ -63,21 +63,15 @@ const NosotrosPage = () => {
               Experiencia y compromiso
             </h3>
             <p className='text-color-text mb-2 lg:text-lg font-medium'>
-              Mi nombre es Patricio Escudero y soy la persona que está detrás de
-              Escudero Motors. Me gustan los autos desde muy chico. Compré uno
-              por primera vez a los 17 años y desde ese entonces lo cambiaba
-              cuando podía, tomándolo como un hobbie. Siempre tuve la idea de
-              poder dedicarme a esto, pero por una u otra cosa no lo hacía.
+              Nuestra experiencia en el mercado nos permite ofrecer la mejor
+              calidad y el mejor servicio. Desde la selección de los autos hasta
+              la entrega, te acompañamos en cada paso.
             </p>
             <p className='text-color-text lg:text-lg font-medium'>
-              Comencé con este proyecto a principios del 2017, trabajando
-              paralelamente en una empresa hasta que a mediados del 2018 pude
-              dedicarme de lleno. Durante ese tiempo llevaba a cabo las ventas
-              de manera particular hasta que a mediados del 2020 pude abrir
-              formalmente las puertas de Escudero Motors. Hoy nos enorgullece
-              decir que estamos establecidos en el mercado, con un mayor stock
-              de vehículos y una gran cantidad de clientes que confían en
-              nosotros.
+              Contamos con un equipo de profesionales especializados en el
+              sector automotriz. Nuestro objetivo es convertir tu sueño de tener
+              un auto en una realidad, ofreciendo opciones de financiamiento
+              flexibles y asesoramiento integral en cada etapa de tu compra.
             </p>
           </motion.div>
         </section>
