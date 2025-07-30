@@ -4,25 +4,25 @@ export const company = {
   shortAdress: true,
   favicon: false,
   price: false,
-  objectCover: '50%',
-  id: 'dipietroautomotores',
-  name: 'Automotores Di Pietro',
-  adress: 'Lagomarsino 905',
-  city: 'Pilar',
-  email: 'automotoresdipietro@gmail.com',
-  instagram: 'dipietroautomotores',
-  facebook: 'https://www.facebook.com/automotores.dipietro/',
-  whatsapp: ['1150138987'],
-  googlemapsLink: 'https://maps.app.goo.gl/9jQB4aqkHxSn2Wjs7',
+  objectCover: '55%',
+  id: 'marzettiautomotores',
+  name: 'Marzetti Automotores',
+  adress: 'J. M. de Rosas 4464',
+  city: 'San justo',
+  email: 'tomasmrz@yahoo.com',
+  instagram: 'marzettiautomotores',
+  facebook: 'https://www.facebook.com/p/Automotores-Marzetti-100063746335532/',
+  whatsapp: ['1140689987'],
+  googlemapsLink: 'https://maps.app.goo.gl/oUMT1MrybNtB62iZ8',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.8600733865305!2d-58.89335510000001!3d-34.4556997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9d5bb349f7b5%3A0x98fcfed9a27c121e!2sAUTOMOTORES%20DI%20PIETRO!5e0!3m2!1sen!2sar!4v1753846452573!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.717960974598!2d-58.56550092388358!3d-34.687067072924556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc622558fe98b%3A0xdcc961885aa88c52!2sMarzetti%20Automotores!5e0!3m2!1sen!2sar!4v1753814669606!5m2!1sen!2sar',
   openDays: [
     { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
     { day: 'Martes', hours: ['09:00 a 18:00hs'] },
     { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
     { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
     { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Sábado', hours: ['10:00 a 17:00hs'] },
+    { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
     // { day: 'Domingo', hours: ['10:00 a 15:00hs'] },
   ],
   footer:
@@ -33,13 +33,13 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://dipietroautomotores.vercel.app/',
-  title: 'Automotores Di Pietro - Compra y Venta de Autos',
+  metadataBase: 'https://marzettiautomotores.vercel.app/',
+  title: 'Marzetti Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
 
-// Necesito que actualices la informacion de catalogo.json. Las images tomalas de images de data.json, la descripcion tomala de caption de data.json, pero necesito que el texto este parseado, que no este todo junto sin espacios y saltos de linea. En name pone la marca y el modelo del vehiculo en title case, marca, marcaId todo esto acorde a la informacion de caption. Si en caption no se dice kilometraje o precio pone 999999, categoria estimala para el vehiculo (categorias tipicas de vehiculos en argentina. como utilitario, deportivo, suv, hatchback, etc). Transmision, motor, combustible y puertas estimalas acorde al vehiculo. La cantidad de vehiculos tiene que ser la de data.json, si en catalogo.json hay otros vehiculos removelos y pone los de data.json. No hagas un script, simplemente actualizalo con ia.
+// Necesito que actualices la informacion de catalogo.json. Las images tomalas de images de data.json, la descripcion tomala de caption de data.json, pero necesito que el texto este parseado, que no este todo junto sin espacios y saltos de linea. En name pone la marca y el modelo del vehiculo en title case, marca, marcaId todo esto acorde a la informacion de caption. Si en caption no se dice kilometraje o precio pone 999999, categoria estimala para el vehiculo (categorias tipicas de vehiculos en argentina. como utilitario, deportivo, suv, hatchback, etc). Transmision, motor, combustible y puertas estimalas acorde al vehiculo. La cantidad de vehiculos tiene que ser la de data.json, si en catalogo.json hay otros vehiculos removelos, los vehiclos de catalogo json tienen que ser los mismos que en data.json. No hagas un script, simplemente actualizalo con ia.
 
 export const preguntas = [
   {

@@ -1,20 +1,20 @@
 [
   {
-    "id": "peugeot-partner-1-4-gnc-2014",
-    "name": "Peugeot Partner 1.4 GNC",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2014,
-    "kilometraje": 174000,
+    "id": "toyota-hilux-srv-4x4-at-2023",
+    "name": "Toyota Hilux SRV 4x4 AT",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2023,
+    "kilometraje": 8000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
-    "transmision": "Manual",
-    "motor": "1.4",
-    "combustible": "GNC",
-    "puertas": 5,
+    "categoria": "Pickup",
+    "transmision": "Automática",
+    "motor": "2.8",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -25,25 +25,35 @@
       "1-7.webp",
       "1-8.webp",
       "1-9.webp",
-      "1-10.webp"
+      "1-10.webp",
+      "1-11.webp",
+      "1-12.webp",
+      "1-13.webp",
+      "1-14.webp",
+      "1-15.webp",
+      "1-16.webp",
+      "1-17.webp",
+      "1-18.webp",
+      "1-19.webp",
+      "1-20.webp"
     ],
-    "descripcion": "PEUGEOT PARTNER 1.4 GNC\n\n174.000 km\n\n2014\n\n✅️ VTV\n\n✅️ Entrega inmediata\n\n✅️ Cubiertas nuevas\n\n✅️ Aceptamos permutas/ Financiamos"
+    "descripcion": "Vendo o permuto‼️\n\n▪️Toyota Hilux SRV 4x4 AT 2023\n✔️8.000 KM\n✔️Único dueño\n✔️Servicios oficiales\n✔️Auxilio sin rodar\n✔️Con accesorios (tapa rígida, cobertor de caja, tuercas de seguridad y polarizado intermedio)\n✔️Toda su pintura original de fábrica\n✔️Se encuentra inobjetable, sin un detalle\n💎Financiamos 💰"
   },
   {
-    "id": "toyota-corolla-xli-2017",
-    "name": "Toyota Corolla XLI",
+    "id": "toyota-hilux-srv-3-0-4x4-manual-2012",
+    "name": "Toyota Hilux SRV 3.0 4x4 Manual",
     "marca": "Toyota",
     "marcaId": "toyota",
-    "ano": 2017,
-    "kilometraje": 118000,
+    "ano": 2012,
+    "kilometraje": 40909,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 31000,
+      "moneda": "USD"
     },
-    "categoria": "Sedán",
+    "categoria": "Pickup",
     "transmision": "Manual",
-    "motor": "1.8",
-    "combustible": "Nafta",
+    "motor": "3.0",
+    "combustible": "Diésel",
     "puertas": 4,
     "images": [
       "2-1.webp",
@@ -55,26 +65,30 @@
       "2-7.webp",
       "2-8.webp",
       "2-9.webp",
-      "2-10.webp"
+      "2-10.webp",
+      "2-11.webp",
+      "2-12.webp",
+      "2-13.webp",
+      "2-14.webp"
     ],
-    "descripcion": "TOYOTA COROLLA XLI\n\n118.000 km\n\n2017\n\n✅️ VTV\n\n✅️ 4 Cubiertas nuevas (Recien colocadas)\n\n✅️ Bateria nueva\n\n✅️ Excelente estado\n\n✅️ Aceptamos permutas/ Financiamos"
+    "descripcion": "Insólito!! 🤩💎\n\n▪️Toyota Hilux SRV 3.0 4x4 Manual 2012\n✔️Único dueño\n✔️40.909 KM\n✔️Auxilio sin rodar\n✔️Toda su pintura original de fabrica\nEstado inobjetable. Sin un solo detalle‼️\nSe evalúa posible permuta en parte de pago. 🚘\nValor: U$31.000 💵"
   },
   {
-    "id": "ford-ranger-3-0-xl-plus-4x2-2009",
-    "name": "Ford Ranger 3.0 XL Plus 4x2",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2009,
-    "kilometraje": 300000,
+    "id": "chevrolet-cruze-ltz-1-4t-2017",
+    "name": "Chevrolet Cruze LTZ 1.4T",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2017,
+    "kilometraje": 100000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "3.0",
-    "combustible": "Diesel",
-    "puertas": 2,
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "1.4",
+    "combustible": "Nafta",
+    "puertas": 4,
     "images": [
       "3-1.webp",
       "3-2.webp",
@@ -84,25 +98,26 @@
       "3-6.webp",
       "3-7.webp",
       "3-8.webp",
-      "3-9.webp"
+      "3-9.webp",
+      "3-10.webp"
     ],
-    "descripcion": "FORD RANGER 3.0 XL PLUS 4x2\n\n300.000 km\n\n2009\n\n✅️ VTV\n\n✅️ Inyectores 0km\n\n✅️ Cubiertas al 90%\n\n✅️ Excelente mecanica\n\n✅️ Aceptamos permutas/ Financiamos"
+    "descripcion": "Nuevo Ingreso‼️\n\n▪️Chevrolet Cruze LTZ 1.4T 2017\n✅ 100.000 KM\n✅ Caja automática\n✅ Excelente estado\nRecibimos tu vehículo usado.\nFinanciamos 📌"
   },
   {
-    "id": "renault-clio-5p-authentique-1-2-pack-ii-2012",
-    "name": "Renault Clio 5P Authentique 1.2 Pack II",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2012,
-    "kilometraje": 142000,
+    "id": "volkswagen-suran-1-6-trendline-2010",
+    "name": "Volkswagen Suran 1.6 Trendline",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2010,
+    "kilometraje": 185000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Utilitario",
     "transmision": "Manual",
-    "motor": "1.2",
-    "combustible": "Nafta",
+    "motor": "1.6",
+    "combustible": "GNC",
     "puertas": 5,
     "images": [
       "4-1.webp",
@@ -114,23 +129,23 @@
       "4-7.webp",
       "4-8.webp"
     ],
-    "descripcion": "RENAULT CLIO 5P AUTHENTIQUE 1.2 PACK II\n\n142.000 km\n\n2012\n\n✅️ Cubiertas al 90%\n\n✅️ VTV\n\n✅️ Entrega inmediata con garantia\n\n✅️ Se aceptan permutas/ Financiamos"
+    "descripcion": "Volkswagen Suran 1.6 Trendline 2010📌\n\n✔️Con GNC de 5 generación.\n✔️185.000 Km\n✔️Muy buenas condiciones\n✔️Segundo dueño\n✔️Funciona todo perfecto\n✔️Mantenimiento al día.\nFinanciamos con un anticipo y cuotas fijas ‼️"
   },
   {
-    "id": "toyota-sw4-4x4-7as-2011",
-    "name": "Toyota SW4 4x4 7AS",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2011,
-    "kilometraje": 300000,
+    "id": "ford-ecosport-titanium-1-6-2013",
+    "name": "Ford Ecosport Titanium 1.6",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2013,
+    "kilometraje": 124000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "3.0",
-    "combustible": "Diesel",
+    "motor": "1.6",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "5-1.webp",
@@ -143,17 +158,20 @@
       "5-8.webp",
       "5-9.webp",
       "5-10.webp",
-      "5-11.webp"
+      "5-11.webp",
+      "5-12.webp",
+      "5-13.webp",
+      "5-14.webp"
     ],
-    "descripcion": "TOYOTA SW4 4X4 7AS\n\n2011\n\n300.000 km\n\n✅️ Cubiertas al 90%\n\n✅️ VTV\n\n✅️ Minimos detalles acordea al kilometraje\n\n✅️ MECANICA EXCELENTE\n\n✅️ Aceptamos permutas/ Financiamos"
+    "descripcion": "Retira tu próximo auto con un 50% o tu usado y cuotas fijas‼️📲 11 4068-9987 Tomás\n\n▪️Ford Ecosport Titanium 1.6 2013\n✔️124.000 Km\n✔️Segundo dueño\n✔️Transmisión Manual\n✔️Versión tope de gama\n✔️Con accesorios\nExcelente estado 💎"
   },
   {
-    "id": "fiat-palio-attractive-gnc-2013",
-    "name": "Fiat Palio Attractive G.N.C",
+    "id": "fiat-punto-attractive-1-4-2016",
+    "name": "Fiat Punto Attractive 1.4",
     "marca": "Fiat",
     "marcaId": "fiat",
-    "ano": 2013,
-    "kilometraje": 170000,
+    "ano": 2016,
+    "kilometraje": 108900,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -161,7 +179,7 @@
     "categoria": "Hatchback",
     "transmision": "Manual",
     "motor": "1.4",
-    "combustible": "GNC",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "6-1.webp",
@@ -173,26 +191,30 @@
       "6-7.webp",
       "6-8.webp",
       "6-9.webp",
-      "6-10.webp"
+      "6-10.webp",
+      "6-11.webp",
+      "6-12.webp",
+      "6-13.webp",
+      "6-14.webp"
     ],
-    "descripcion": "FIAT PALIO ATTRACTIVE G.N.C\n\n170.000 km\n\n2013\n\n✅️ VTV\n\n✅️ CUBIERTAS AL 90%\n\n✅️ DISTRIBUCION COMPLETA RECIEN HECHA\n\n✅️ SERVICE\n\n✅️ PRUEBA HIDRAULICA 2025\n\n✅️ ACEPTAMOS PERMUTAS/ FINANCIAMOS"
+    "descripcion": "Vendo o permuto!📲 11 4068-9987 Tomás\n\n▪️Fiat Punto Attractive 1.4 2016\n108.900 km\nÚnico dueño\nExcelente estado💎\nFinanciamos 💰\nRecibimos vehículo usado en parte de pago. 🚘"
   },
   {
-    "id": "nissan-kicks-advance-cvt-2018",
-    "name": "Nissan Kicks Advance CVT",
-    "marca": "Nissan",
-    "marcaId": "nissan",
-    "ano": 2018,
-    "kilometraje": 86000,
+    "id": "vw-amarok-2-0-tdi-comfortline-4x2-at-2023",
+    "name": "VW Amarok 2.0 TDI Comfortline 4x2 AT",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2023,
+    "kilometraje": 31200,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 32000,
+      "moneda": "USD"
     },
-    "categoria": "SUV",
+    "categoria": "Pickup",
     "transmision": "Automática",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "2.0",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "7-1.webp",
       "7-2.webp",
@@ -201,27 +223,25 @@
       "7-5.webp",
       "7-6.webp",
       "7-7.webp",
-      "7-8.webp",
-      "7-9.webp",
-      "7-10.webp"
+      "7-8.webp"
     ],
-    "descripcion": "NISSAN KICKS ADVANCE CVT\n\n2018\n\n86.000 km\n\n✅️ VTV\n\n✅️ Cubiertas nuevas\n\n✅️ Auxilio sin rodar\n\n✅️ Unica mano\n\n✅️ Aceptamos permutas/ Financiamos"
+    "descripcion": "Vendo o Permuto 💸📲 11 4068-9987 Tomás\n\n▪️VW Amarok 2.0 TDI Comfortline 4x2 AT 2023\n31.200 KM 💎\nFinanciamos 💰\nValor: 💵 32.000\n📍Juan Manuel de Rosas 4464 San Justo.\n#vw #lovecars #amarok #fyp #extreme #detailing #racing #blackstyle #car #learnontiktok #paratii #foryoupage #tendencia #tik_tok #sanjusto #usados #video #viralvideos #foryoupage #fypシ゚"
   },
   {
-    "id": "vw-suran-1-6-gnc-2015",
-    "name": "VW Suran 1.6 GNC",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2015,
-    "kilometraje": 170000,
+    "id": "fiat-argo-1-3-drive-2018",
+    "name": "Fiat Argo 1.3 Drive",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2018,
+    "kilometraje": 68000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "GNC",
+    "motor": "1.3",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "8-1.webp",
@@ -233,24 +253,26 @@
       "8-7.webp",
       "8-8.webp",
       "8-9.webp",
-      "8-10.webp"
+      "8-10.webp",
+      "8-11.webp",
+      "8-12.webp"
     ],
-    "descripcion": "VW SURAN 1.6 GNC\n\n170.000 km\n\n2015\n\n✅️ VTV\n\n✅️ CUBIERTAS NUEVAS\n\n✅️ SERVICE AL DIA\n\n✅️ ACEPTAMOS PERMUTAS/ FINANCIAMOS"
+    "descripcion": "Vendo o Permuto💸📲 11 4068-9987 Tomás\n\n▪️Fiat Argo 1.3 Drive 2018\n✔️68.000 Km\n✔️Un solo dueño\n✔️Toda su pintura original de fabrica\n✔️Excelentes condiciones\n✔️Le funciona todo perfecto\nRecibimos tu vehículo usado📌\nFinanciamos un 50% en cuotas fijas‼️"
   },
   {
-    "id": "peugeot-308-1-6-active-2018",
-    "name": "Peugeot 308 1.6 Active",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2018,
-    "kilometraje": 88000,
+    "id": "vw-nivus-highline-200-tsi-0-km",
+    "name": "VW Nivus Highline 200 TSI",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2024,
+    "kilometraje": 0,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "1.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -263,26 +285,28 @@
       "9-7.webp",
       "9-8.webp",
       "9-9.webp",
-      "9-10.webp"
+      "9-10.webp",
+      "9-11.webp",
+      "9-12.webp"
     ],
-    "descripcion": "PEUGEOT 308 1.6 ACTIVE\n\n88.000 km\n\n2018\n\n✅️ UNICA MANO\n\n✅️ VTV\n\n✅️ ENTREGA INMEDIATA\n\n✅️ ACEPTAMOS PERMUTAS/ FINANCIAMOS"
+    "descripcion": "Vendo o Permuto 💸\n\n▪️VW Nivus Highline 200 TSI 0 KM\n📌El vehículo ya se encuentra patentado.\nVersión tope de gama 💣\nEntrega inmediata ‼️\nRecibimos tu vehículo usado ✔️\nFinanciamos en cuotas fijas 💰"
   },
   {
-    "id": "vw-voyage-1-6-2012",
-    "name": "VW Voyage 1.6",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2012,
-    "kilometraje": 149000,
+    "id": "mercedes-benz-sprinter-415-cdi-15-1-2018",
+    "name": "Mercedes Benz Sprinter 415 CDI 15+1",
+    "marca": "Mercedes-Benz",
+    "marcaId": "mercedes-benz",
+    "ano": 2018,
+    "kilometraje": 175000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "Utilitario",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 4,
+    "motor": "2.2",
+    "combustible": "Diésel",
+    "puertas": 5,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -295,22 +319,22 @@
       "10-9.webp",
       "10-10.webp"
     ],
-    "descripcion": "VW VOYAGE 1.6\n\n149.000 km\n\n2012\n\n✅️ VTV\n\n✅️ 4 cubiertas 0km\n\n✅️ Service al dia\n\n✅️ Aceptamos permutas/ Financiamos"
+    "descripcion": "Vendo o Permuto 💸\n\n▪️Mercedes Benz Sprinter 415 CDI 15+1\nAño 2018\nKm 175.000\nExcelentes condiciones 📌\nRecibimos 🚘 en parte de pago.\nFinanciamos en cuotas fijas 💰"
   },
   {
-    "id": "vw-golf-1-4-highline-250-tsi-dsg-2020",
-    "name": "VW Golf 1.4 Highline 250 TSI DSG",
+    "id": "vw-up-high-i-motion-2018",
+    "name": "VW Up High I-Motion",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2020,
-    "kilometraje": 86000,
+    "ano": 2018,
+    "kilometraje": 34000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Automática",
-    "motor": "1.4",
+    "motor": "1.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -325,24 +349,24 @@
       "11-9.webp",
       "11-10.webp"
     ],
-    "descripcion": "VW GOLF 1.4 HIGHLINE 250 TSI DSG\n\n86.000 km\n\n2020\n\n✅️ Excelente estado\n\n✅️ Cubiertas al 90%\n\n✅️ VTV\n\n✅️ Service al dia\n\n✅️ Aceptamos permutas/ Financiamos"
+    "descripcion": "Vendo o Permuto 💸\n\n▪️VW Up High I-Motion 2018\n34.000 KM ✔️\nExcelente estado 💎\nRecibimos tu 🚘 usado.\nFinanciamos‼️"
   },
   {
-    "id": "renault-clio-mio-1-2-confort-2014",
-    "name": "Renault Clio Mio 1.2 Confort",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2014,
-    "kilometraje": 999999,
+    "id": "fiat-cronos-stile-2023",
+    "name": "Fiat Cronos Stile",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2023,
+    "kilometraje": 8500,
     "precio": {
-      "valor": 10500000,
+      "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.2",
+    "motor": "1.8",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "12-1.webp",
       "12-2.webp",
@@ -355,6 +379,6 @@
       "12-9.webp",
       "12-10.webp"
     ],
-    "descripcion": "RENAULT CLIO MIO 1.2 CONFORT\n\n2014\n\n✅️ VTV\n\n✅️ 2 llaves\n\n✅️ Cubiertas nuevas\n\n✅️ Impecable!\n\n✅️ Aceptamos permutas/ Financiamos\n\n✅️ ENTREGA INMEDIATA\n\n$10.500.000"
+    "descripcion": "Vendo o Permuto 💸\n\n▪️Fiat Cronos Stile 2023\n📌8.500 KM ✔️\nEstado inobjetable 💎\nRecibimos tu 🚘 en parte de pago\nFinanciamos‼️"
   }
 ]
