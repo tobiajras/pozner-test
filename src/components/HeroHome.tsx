@@ -3,6 +3,7 @@
 import { company } from '@/app/constants/constants';
 import Link from 'next/link';
 import HeroCarousel from './HeroCarousel';
+import { motion } from 'framer-motion';
 
 const HeroHome = () => {
   return (
@@ -20,21 +21,41 @@ const HeroHome = () => {
 
             <div className='flex flex-col items-center mb-1'>
               <div className='md:gap-3 text-nowrap'>
-                <h2 className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-primary-light'>
+                <motion.h2
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-primary-light'
+                >
                   Vehículos Seleccionados,
-                </h2>
+                </motion.h2>
               </div>
               <div className='md:gap-3 text-nowrap lg:mb-1'>
-                <h2 className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-title-light'>
+                <motion.h2
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-title-light'
+                >
                   Usados y 0km
-                </h2>
+                </motion.h2>
               </div>
             </div>
-            <p className='text-lg lg:text-xl xl:text-2xl text-center text-color-text-light mx-4 max-w-md sm:max-w-md lg:max-w-lg xl:max-w-2xl'>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='text-lg lg:text-xl xl:text-2xl text-center text-color-text-light mx-4 max-w-md sm:max-w-md lg:max-w-lg xl:max-w-2xl'
+            >
               Autos multimarca, calidad garantizada y planes de financiación a
               tu medida. ¡Contactanos!
-            </p>
-            <div className='flex mt-4 md:mt-3 lg:mt-4 xl:mt-5 gap-5 mb-2 md:mb-1 lg:mb-0'>
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className='flex mt-4 md:mt-3 lg:mt-4 xl:mt-5 gap-5 mb-2 md:mb-1 lg:mb-0'
+            >
               <Link
                 href='/catalogo'
                 className={`${
@@ -66,7 +87,7 @@ const HeroHome = () => {
               >
                 Contactanos
               </Link> */}
-            </div>
+            </motion.div>
           </article>
         </div>
       </div>

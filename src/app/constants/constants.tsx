@@ -5,24 +5,24 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'automotoresdiaz',
-  name: 'Automotores Diaz',
-  adress: 'Av. Libertador 2411',
-  city: 'San Juan',
-  email: 'automotoresdiaz.sj@gmail.com',
-  instagram: 'automotoresdiaz_',
-  facebook: 'https://www.facebook.com/automotoresdiaz.sj/',
-  whatsapp: ['2645674114', '2646033579'],
-  googlemapsLink: 'https://maps.app.goo.gl/7GU9Uif1KCw9rdW36',
+  id: 'automotoresbottari',
+  name: 'Automotores Bottari',
+  adress: 'Av. Calchaqui 4397',
+  city: 'Quilmes',
+  email: 'roberbottari@hotmail.com',
+  instagram: 'automotoresbottari',
+  facebook: null,
+  whatsapp: ['1130582594'],
+  googlemapsLink: 'https://maps.app.goo.gl/gemzsioxZcA1eFrq5',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.8271642805776!2d-68.56050779664987!3d-31.52890662791475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96814179f3890b47%3A0x3a9ea95e28737edd!2sDiaz%20automotores!5e0!3m2!1sen!2sar!4v1753847966507!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18542.137760509504!2d-58.295920527635545!3d-34.760181325228835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e9f25a64349%3A0xe66962657828e0e8!2sAutomotores%20Bottari!5e0!3m2!1sen!2sar!4v1753850091503!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['9 a 13 y 17 a 21hs'] },
-    { day: 'Martes', hours: ['9 a 13 y 17 a 21hs'] },
-    { day: 'Miércoles', hours: ['9 a 13 y 17 a 21hs'] },
-    { day: 'Jueves', hours: ['9 a 13 y 17 a 21hs'] },
-    { day: 'Viernes', hours: ['9 a 13 y 17 a 21hs'] },
-    { day: 'Sábado', hours: ['9 a 13hs'] },
+    { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Martes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
+    { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
+    { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Sábado', hours: ['09:00 a 14:00hs'] },
     // { day: 'Domingo', hours: ['10:00 a 15:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://automotoresdiaz.vercel.app/',
-  title: 'Automotores Diaz - Compra y Venta de Autos',
+  metadataBase: 'https://automotoresbottari.vercel.app/',
+  title: 'Automotores Bottari - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
