@@ -63,23 +63,15 @@ const NosotrosPage = () => {
               Experiencia y compromiso
             </h3>
             <p className='text-color-text mb-2 lg:text-lg font-medium'>
-              Automotores Bottari es una empresa familiar, con más de 50 años de
-              trayectoria y tradición en el mercado de la compra y venta de
-              automotores 0km y usados. Nuestro prestigio se basa en la
-              transparencia y en la honestidad, pero por sobre todas las cosas
-              en la palabra dada.
-            </p>
-            <p className='text-color-text mb-2 lg:text-lg font-medium'>
-              El trato cordial y personalizado, mas la seriedad y transparencia
-              puesta en cada operacion, nos ha permitido aumentar nuestra
-              clientela en forma constante; lo cual nos ha posicionado como una
-              gran Agencia automotriz multimarca de la zona sur. nos ha
-              posicionado como una gran Agencia automotriz multimarca de la zona
-              sur.
+              Nuestra experiencia en el mercado nos permite ofrecer la mejor
+              calidad y el mejor servicio. Desde la selección de los autos hasta
+              la entrega, te acompañamos en cada paso.
             </p>
             <p className='text-color-text lg:text-lg font-medium'>
-              Desde ya esperamos su visita, para ver nuestras unidades y
-              conocernos.
+              Contamos con un equipo de profesionales especializados en el
+              sector automotriz. Nuestro objetivo es convertir tu sueño de tener
+              un auto en una realidad, ofreciendo opciones de financiamiento
+              flexibles y asesoramiento integral en cada etapa de tu compra.
             </p>
           </motion.div>
         </section>

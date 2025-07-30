@@ -5,24 +5,24 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'automotoresbottari',
-  name: 'Automotores Bottari',
-  adress: 'Av. Calchaqui 4397',
-  city: 'Quilmes',
-  email: 'roberbottari@hotmail.com',
-  instagram: 'automotoresbottari',
+  id: 'pemautomotores',
+  name: 'PEM Automotores',
+  adress: 'Virrey Vertiz 1967',
+  city: 'Villa Adelina',
+  email: 'pem.automotores@gmail.com',
+  instagram: 'pem.automotores',
   facebook: null,
-  whatsapp: ['1130582594'],
-  googlemapsLink: 'https://maps.app.goo.gl/gemzsioxZcA1eFrq5',
+  whatsapp: ['1140618148', '1176517555'],
+  googlemapsLink: 'https://maps.app.goo.gl/Yn3A3HqzPzp1Hi9cA',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18542.137760509504!2d-58.295920527635545!3d-34.760181325228835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e9f25a64349%3A0xe66962657828e0e8!2sAutomotores%20Bottari!5e0!3m2!1sen!2sar!4v1753850091503!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.29299678093!2d-58.54761733350024!3d-34.52080403895045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb141a97d291d%3A0xd26a04fd059dde29!2sPEM%20Automotores!5e0!3m2!1sen!2sar!4v1753848945574!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Martes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
-    { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
-    { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Sábado', hours: ['09:00 a 14:00hs'] },
+    { day: 'Lunes', hours: ['10 a 13 y 15 a 19hs'] },
+    { day: 'Martes', hours: ['10 a 13 y 15 a 19hs'] },
+    { day: 'Miércoles', hours: ['10 a 13 y 15 a 19hs'] },
+    { day: 'Jueves', hours: ['10 a 13 y 15 a 19hs'] },
+    { day: 'Viernes', hours: ['10 a 13 y 15 a 19hs'] },
+    { day: 'Sábado', hours: ['10 a 13hs'] },
     // { day: 'Domingo', hours: ['10:00 a 15:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://automotoresbottari.vercel.app/',
-  title: 'Automotores Bottari - Compra y Venta de Autos',
+  metadataBase: 'https://pemautomotores.vercel.app/',
+  title: 'PEM Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
