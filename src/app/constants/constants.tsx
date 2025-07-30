@@ -5,25 +5,25 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'luxurymotors',
-  name: 'Luxury Motors',
-  adress: 'Av. Manuel Belgrano 3228',
-  city: 'Avellaneda',
-  email: 'luxurymotors@gmail.com',
-  instagram: 'luxurymotors23',
+  id: 'automotoresfuentes',
+  name: 'Automotores Fuentes',
+  adress: 'Ricardo Balbín 2040',
+  city: 'San Miguel',
+  email: 'automotoresfuentes@gmail.com',
+  instagram: 'automotores.fuentes',
   facebook: null,
-  whatsapp: ['1161626351'],
-  googlemapsLink: 'https://maps.app.goo.gl/WV9LiCZrczWj1ME28',
+  whatsapp: ['1130477811'],
+  googlemapsLink: 'https://maps.app.goo.gl/PujzKUNQjM3UWQ6a8',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.804883975148!2d-58.3461453!3d-34.684873599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33300385d7a07%3A0xabc57ecafd5e0adb!2sLUXURY%20MOTORS!5e0!3m2!1sen!2sar!4v1753809377447!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.2031673175748!2d-58.72371230321044!3d-34.54841099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd675773d1d9%3A0x5a80acdabb00e3b4!2sAutomotores%20fuentes!5e0!3m2!1sen!2sar!4v1753828327999!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['9:30 a 13 y 14 a 18:30hs'] },
-    { day: 'Martes', hours: ['9:30 a 13 y 14 a 18:30h'] },
-    { day: 'Miércoles', hours: ['9:30 a 13 y 14 a 18:30h'] },
-    { day: 'Jueves', hours: ['9:30 a 13 y 14 a 18:30h'] },
-    { day: 'Viernes', hours: ['9:30 a 13 y 14 a 18:30h'] },
-    { day: 'Sábado', hours: ['10 a 14:30hs'] },
-    // { day: 'Domingo', hours: ['10:00 a 19:00'] },
+    { day: 'Lunes', hours: ['08:30 a 19:00hs'] },
+    { day: 'Martes', hours: ['08:30 a 19:00hs'] },
+    { day: 'Miércoles', hours: ['08:30 a 19:00hs'] },
+    { day: 'Jueves', hours: ['08:30 a 19:00hs'] },
+    { day: 'Viernes', hours: ['09:00 a 19:00hs'] },
+    { day: 'Sábado', hours: ['09:00 a 16:00hs'] },
+    { day: 'Domingo', hours: ['10:00 a 15:00hs'] },
   ],
   footer:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://luxurymotors.vercel.app/',
-  title: 'Luxury Motors - Compra y Venta de Autos',
+  metadataBase: 'https://automotoresfuentes.vercel.app/',
+  title: 'Automotores Fuentes - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

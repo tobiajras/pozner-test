@@ -1,20 +1,20 @@
 [
   {
-    "id": "toyota-hilux-3-0-srv-4x4-at-2012",
-    "name": "Toyota Hilux 3.0 Srv 4x4 At",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2012,
-    "kilometraje": 168000,
+    "id": "ford-focus-se-2-0-2014",
+    "name": "Ford Focus Se 2.0",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2014,
+    "kilometraje": 109500,
     "precio": {
-      "valor": 999999,
+      "valor": 10500000,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "3.0",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "2.0",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -24,50 +24,57 @@
       "1-6.webp",
       "1-7.webp",
       "1-8.webp",
-      "1-9.webp"
+      "1-9.webp",
+      "1-10.webp",
+      "1-11.webp",
+      "1-12.webp",
+      "1-13.webp"
     ],
-    "descripcion": "‼️ TOYOTA HILUX 3.0 SRV 4x4 AT ‼️\n\n• AÑO 2012\n\n• 168.000 KM\n\n• TAPIZADO CUERO EXCELENTE ESTADO !!"
+    "descripcion": "Focus SE 2.0 cadenero 2014 manual de 5ta 109.500 KM\n\nMotor cadenero\n\nService recientes\n\n4 cubiertas nuevas\n\nAuxilio sin rodar\n\nFrenos nuevos\n\nVTV 2026\n\nMUY BUENO\n\n10.500.000 y cuotas fijas en pesos"
   },
   {
-    "id": "ford-ranger-xl-2022",
-    "name": "Ford Ranger Xl",
-    "marca": "Ford",
-    "marcaId": "ford",
+    "id": "bajaj-dominar-250-2022",
+    "name": "Bajaj Dominar 250",
+    "marca": "Bajaj",
+    "marcaId": "bajaj",
     "ano": 2022,
-    "kilometraje": 90000,
+    "kilometraje": 11800,
     "precio": {
-      "valor": 999999,
+      "valor": 3000000,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "Moto",
     "transmision": "Manual",
-    "motor": "2.2",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "motor": "250cc",
+    "combustible": "Nafta",
+    "puertas": 0,
     "images": [
       "2-1.webp",
       "2-2.webp",
       "2-3.webp",
       "2-4.webp",
       "2-5.webp",
-      "2-6.webp"
+      "2-6.webp",
+      "2-7.webp",
+      "2-8.webp",
+      "2-9.webp"
     ],
-    "descripcion": "‼️ Ford ranger xl ‼️\n\n• año: 2022\n\n• 90.000km\n\n• 4 cubiertas nuevas\n\n• MT ✅ excelente estado ✅"
+    "descripcion": "Dominar 250 2022 11.800 km 6 velocidades\n\nPorta alforjas\n\n12v/carga USB\n\nCarPlay\n\nBaúl de 45 litros\n\nTransmisión completa nueva\n\nVTV 2026\n\nService completo\n\nLista para la ruta\n\n3.000.000 y cuotas fijas"
   },
   {
-    "id": "volkswagen-tiguan-exclusive-2012",
-    "name": "Volkswagen Tiguan Exclusive",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2012,
-    "kilometraje": 120000,
+    "id": "peugeot-208-allure-2021",
+    "name": "Peugeot 208 Allure",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2021,
+    "kilometraje": 999999,
     "precio": {
-      "valor": 999999,
+      "valor": 8500000,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "2.0",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -76,52 +83,68 @@
       "3-3.webp",
       "3-4.webp",
       "3-5.webp",
-      "3-6.webp"
+      "3-6.webp",
+      "3-7.webp",
+      "3-8.webp",
+      "3-9.webp",
+      "3-10.webp",
+      "3-11.webp",
+      "3-12.webp",
+      "3-13.webp",
+      "3-14.webp"
     ],
-    "descripcion": "☑️ vendida ☑️\n\n‼️ Volkswagen Tiguan exclusive ‼️\n\n• año: 2012\n\n• 120.000km\n\n• 2.0t MT\n\n• 4motion ✅ excelente estado ✅"
+    "descripcion": "Peugeot 208 2021 allure manual de 5ta\n\nÚnica mano de 0KM\n\nManuales\n\nSegunda llave\n\nService en tiempo y forma\n\n8.500.000 y cuotas fijas"
   },
   {
-    "id": "nissan-sentra-sr-2014",
-    "name": "Nissan Sentra Sr",
-    "marca": "Nissan",
-    "marcaId": "nissan",
-    "ano": 2014,
-    "kilometraje": 145000,
+    "id": "volkswagen-fox-confortline-2013",
+    "name": "Volkswagen Fox Confortline",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2013,
+    "kilometraje": 111400,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "2.0",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
-      "4-1.webp",
       "4-2.webp",
+      "4-1.webp",
       "4-3.webp",
       "4-4.webp",
       "4-5.webp",
-      "4-6.webp"
+      "4-6.webp",
+      "4-7.webp",
+      "4-8.webp",
+      "4-9.webp",
+      "4-10.webp",
+      "4-11.webp",
+      "4-12.webp",
+      "4-13.webp",
+      "4-14.webp"
     ],
-    "descripcion": "‼️ Nissan Sentra SR ‼️\n\n• año: 2014\n\n• 145.000km\n\n• 2.0 AT cvt\n\n• pure drive ✅ excelente estado ✅"
+    "descripcion": "Fox confortline 2013 111.400 km segundo dueño\n\nDistribución hecha\n\nVTV 2026\n\nFrenos delanteros nuevos\n\n4 cubiertas nuevas\n\nService hecho completo recientemente\n\nManuales\n\nSegunda llave\n\nComando al volante\n\nAire/calefacción\n\nMuy bueno\n\nEstamos en Ricardo Balbin 2040 san Miguel Buenos Aires"
   },
   {
-    "id": "volkswagen-passat-cc-vr6-2010",
-    "name": "Volkswagen Passat Cc Vr6",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2010,
-    "kilometraje": 150000,
+    "id": "toyota-etios-xls-2019",
+    "name": "Toyota Etios Xls",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2019,
+    "kilometraje": 40000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "3.6",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.5",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -129,26 +152,25 @@
       "5-4.webp",
       "5-5.webp",
       "5-6.webp",
-      "5-7.webp",
-      "5-8.webp"
+      "5-7.webp"
     ],
-    "descripcion": "‼️ Volkswagen Passat cc vr6 ‼️\n\n• año: 2010\n\n• 150.000km\n\n• tracción integral ✅ excelente estado ✅"
+    "descripcion": "Etios XLS 2019 40.000 KM 6MT\n\nÚnica mano de 0Km\n\nTodos los servicios en tiempo y forma\n\nManuales\n\nSegunda llave\n\nTodo al día\n\nListo para transferir\n\nEstamos en Ricardo Balbin 2040"
   },
   {
-    "id": "renault-kangoo-furgon-mixto-2017",
-    "name": "Renault Kangoo Furgón Mixto",
-    "marca": "Renault",
-    "marcaId": "renault",
+    "id": "mercedes-benz-sprinter-415-2017",
+    "name": "Mercedes Benz Sprinter 415",
+    "marca": "Mercedes-Benz",
+    "marcaId": "mercedes-benz",
     "ano": 2017,
-    "kilometraje": 100000,
+    "kilometraje": 71300,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Utilitario",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
+    "motor": "2.2",
+    "combustible": "Diésel",
     "puertas": 3,
     "images": [
       "6-1.webp",
@@ -156,76 +178,86 @@
       "6-3.webp",
       "6-4.webp",
       "6-5.webp",
-      "6-6.webp"
+      "6-6.webp",
+      "6-7.webp",
+      "6-8.webp",
+      "6-9.webp",
+      "6-10.webp"
     ],
-    "descripcion": "‼️ Renault kangoo furgón mixto ‼️\n\n• año: 2017\n\n• 100.000km\n\n• 1.6 nafta\n\n• levanta cristales, cierre centralizado\n\n• doble portón lateral ✅ excelente estado ✅"
+    "descripcion": "SPRINTER 415 mix furgón 2017 71.300 KM manual de 6ta\n\nCubiertas nuevas\n\nService completo\n\nMuy buena"
   },
   {
-    "id": "renault-kwid-intens-2018",
-    "name": "Renault Kwid Intens",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2018,
-    "kilometraje": 70000,
+    "id": "toyota-hilux-srx-2021",
+    "name": "Toyota Hilux Srx",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2021,
+    "kilometraje": 4500,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.0",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "categoria": "Pickup",
+    "transmision": "Automática",
+    "motor": "2.8",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "7-1.webp",
       "7-2.webp",
       "7-3.webp",
       "7-4.webp",
       "7-5.webp",
-      "7-6.webp"
+      "7-6.webp",
+      "7-7.webp",
+      "7-8.webp",
+      "7-9.webp",
+      "7-10.webp"
     ],
-    "descripcion": "‼️ Renault kwid intens ‼️\n\n• año: 2018\n\n• 70.000km\n\n• motor: 1.0\n\n• aire, dirección, levanta cristales ✅ excelente estado ✅"
+    "descripcion": "Toyota Hilux SRX 2021 AT 4x4 única mano de 0km\n\n4.500 KM\n\nService oficiales\n\nEstamos en Ricardo Balbin 2040 san Miguel"
   },
   {
-    "id": "ford-focus-se-plus-at-2014",
-    "name": "Ford Focus Se Plus At",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2014,
-    "kilometraje": 100000,
+    "id": "chevrolet-corsa-3ptas-2010",
+    "name": "Chevrolet Corsa 3ptas",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2010,
+    "kilometraje": 189000,
     "precio": {
-      "valor": 999999,
+      "valor": 6000000,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "2.0",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 3,
     "images": [
       "8-1.webp",
       "8-2.webp",
       "8-3.webp",
       "8-4.webp",
       "8-5.webp",
-      "8-6.webp"
+      "8-6.webp",
+      "8-7.webp",
+      "8-8.webp"
     ],
-    "descripcion": "‼️ Ford focus SE PLUS AT ‼️\n\n• año: 2014\n\n• 100.000km\n\n• 2.0\n\n• cuero, techo, espejos eléctricos\n\n• ✅ excelente estado ✅"
+    "descripcion": "Corsa 3PTAS 2010 189.000 KM full manual de 5ta\n\nSegunda llave\n\nAire/calefacción\n\n4 cubiertas nuevas\n\nLevanta vidrios eléctrico\n\nCierre/alarma\n\nLlantas de aleación\n\nService completo recién hecho\n\nDistribución hecha\n\n6.000.000 y el resto cuotas fijas\n\nEstamos en San Miguel Av Ricardo Balbin 2040 Buenos Aires"
   },
   {
-    "id": "audi-q5-quattro-2012",
-    "name": "Audi Q5 Quattro",
-    "marca": "Audi",
-    "marcaId": "audi",
-    "ano": 2012,
-    "kilometraje": 158000,
+    "id": "toyota-sw4-srx-7as-2016",
+    "name": "Toyota Sw4 Srx 7As",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2016,
+    "kilometraje": 192000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "2.0",
+    "transmision": "Automática",
+    "motor": "4.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -234,26 +266,30 @@
       "9-3.webp",
       "9-4.webp",
       "9-5.webp",
-      "9-6.webp"
+      "9-6.webp",
+      "9-7.webp",
+      "9-8.webp",
+      "9-9.webp",
+      "9-10.webp"
     ],
-    "descripcion": "‼️ AUDI Q5 QUATTRO ‼️\n\n• año: 2012\n\n• 158.000km\n\n• MT\n\n• 2.0T\n\n• 4 cubiertas nuevas ✅ excelente estado ✅"
+    "descripcion": "Toyota SW4 SRX 7AS AT 2016 192.000 KM\n\nLevas al volante\n\nSegunda mano\n\nManuales y segunda llave\n\nService completo\n\nCubiertas nuevas\n\nVTV 2026\n\nMantenimientos en tiempo y forma\n\nNada para hacerle\n\nTomamos permutas de mayor o menor valor\n\nEstamos en Ricardo Balbin 2040 san Miguel"
   },
   {
-    "id": "renault-logan-intens-2022",
-    "name": "Renault Logan Intens",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2022,
-    "kilometraje": 90000,
+    "id": "chevrolet-onix-ls-2018",
+    "name": "Chevrolet Onix Ls",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2018,
+    "kilometraje": 999999,
     "precio": {
-      "valor": 999999,
+      "valor": 7000000,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.0",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -262,55 +298,56 @@
       "10-5.webp",
       "10-6.webp",
       "10-7.webp",
-      "10-8.webp",
-      "10-9.webp",
-      "10-10.webp"
+      "10-8.webp"
     ],
-    "descripcion": "‼️ Renault Logan instens ‼️\n\n• año: 2022\n\n• 90.000km\n\n• 1.6 nafta/gnc de 5ta gen.\n\n• cuero-pantalla ✅ excelente estado ✅"
+    "descripcion": "Onix LS+ 2018 manual 5ta única mano de 0KM\n\nManuales\n\nSegunda llave\n\nVTV\n\nDistribución hecha completa\n\nService hecho completo\n\n7.000.000 y cuotas fijas\n\nEstamos en Ricardo Balbin 2040 san Miguel Buenos Aires"
   },
   {
-    "id": "volkswagen-suran-trendline-2012",
-    "name": "Volkswagen Suran Trendline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2012,
-    "kilometraje": 140000,
+    "id": "ford-focus-se-plus-2-0-2016",
+    "name": "Ford Focus Se Plus 2.0",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2016,
+    "kilometraje": 117000,
     "precio": {
-      "valor": 999999,
+      "valor": 8500000,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
-      "11-1.webp",
       "11-2.webp",
+      "11-1.webp",
       "11-3.webp",
       "11-4.webp",
       "11-5.webp",
       "11-6.webp",
-      "11-7.webp"
+      "11-7.webp",
+      "11-8.webp",
+      "11-9.webp",
+      "11-10.webp"
     ],
-    "descripcion": "‼️ Volkswagen suran trendline ‼️\n\n• año: 2012\n\n• 140.000km\n\n• 1.6 nafta/gnc de 4ta gen. ✅ excelente estado ✅"
+    "descripcion": "FOCUS SE PLUS 2.0 MT MANUAL DE 5TA 117.000 KM 2016\n\nManuales\n\nSegunda llave\n\nVTV 2026\n\nCubiertas nuevas\n\nService completo\n\nTODO AL DÍA LISTO PARA TRANSFERIR\n\n8.500.000 y cuotas fijas\n\nEstamos en san Miguel Av Ricardo Balbin 2040 Buenos Aires"
   },
   {
-    "id": "renault-kangoo-furgon-2016",
-    "name": "Renault Kangoo Furgón",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2016,
-    "kilometraje": 110000,
+    "id": "toyota-rav4-2014",
+    "name": "Toyota Rav4",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2014,
+    "kilometraje": 999999,
     "precio": {
-      "valor": 999999,
+      "valor": 15000000,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "2.0",
     "combustible": "Nafta",
-    "puertas": 3,
+    "puertas": 5,
     "images": [
       "12-1.webp",
       "12-2.webp",
@@ -319,8 +356,10 @@
       "12-5.webp",
       "12-6.webp",
       "12-7.webp",
-      "12-8.webp"
+      "12-8.webp",
+      "12-9.webp",
+      "12-10.webp"
     ],
-    "descripcion": "‼️ Renault kangoo furgón ‼️\n\n• año: 2016\n\n• 110.000km\n\n• 1.6 nafta/gnc de 5ta gen.\n\n• vtv vigente ✅ excelente estado ✅"
+    "descripcion": "Rav4 2014 2.0 cadenero CVT 6AT 4x2\n\nSegunda llave\n\nManuales\n\nService completos\n\nFrenos hechos\n\nVTV 2026\n\n5 cubiertas Yokohama nuevas\n\nTodo al día muy buena\n\n15.000.000 y cuotas fijas\n\nEstamos en Ricardo Balbin 2040 san Miguel Buenos Aires"
   }
 ]
