@@ -1,94 +1,131 @@
 [
   {
-    "id": "ford-ranger-limited-2015",
-    "name": "Ford Ranger Limited",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2015,
-    "kilometraje": 999999,
+    "id": "fiat-argo-drive-1-3-2018",
+    "name": "Fiat Argo Drive 1.3",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2018,
+    "kilometraje": 45000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "3.2",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": ["1-1.webp", "1-2.webp", "1-3.webp", "1-4.webp", "1-5.webp"],
-    "descripcion": "Ford Ranger año 2015 Limited.\n\nFinanció hasta 10.000 dólares con DNI con prenda bancaria.\n\nJuan Manuel de Rosas 4058 a metros de la rotonda de San Justo La Matanza.\n\n📲📲 WhatsApp 11 4094 3906."
+    "motor": "1.3",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "1-1.webp",
+      "1-2.webp",
+      "1-3.webp",
+      "1-4.webp",
+      "1-5.webp",
+      "1-6.webp"
+    ],
+    "descripcion": "NUEVO INGRESO FIAT ARGO DRIVE 1.3\n\n• Modelo 2018\n• 45.000km\n• Segundo dueño\n• Comandos al volante\n• Levanta vidrios eléctricos\n• Sensores de estacionamiento\n• Excelente estado\n\nFINANCIAMOS HASTA UN 70% DEL VALOR SOLO CON DNI, CUOTAS FIJAS Y EN PESOS\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2645674114 / 2646033579"
   },
   {
-    "id": "toyota-corolla-xei-automatico-2018",
-    "name": "Toyota Corolla XEI Automático",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2018,
-    "kilometraje": 999999,
+    "id": "mercedes-benz-c250-edition-c-avantgarde-2015",
+    "name": "Mercedes Benz C250 Edition C Avantgarde",
+    "marca": "Mercedes-Benz",
+    "marcaId": "mercedes-benz",
+    "ano": 2015,
+    "kilometraje": 47000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Sedán",
     "transmision": "Automática",
-    "motor": "1.8",
+    "motor": "2.5",
     "combustible": "Nafta",
     "puertas": 4,
-    "images": ["2-1.webp", "2-2.webp", "2-3.webp", "2-4.webp"],
-    "descripcion": "Toyota Corolla año 2018 XEI Automático.\n\nFinanció hasta 11.000.000 con DNI con prenda bancaria.\n\nJuan Manuel de Rosas 4058 a metros de la rotonda de San Justo La Matanza.\n\n📲📲 WhatsApp 11 4094 3906."
+    "images": [
+      "2-1.webp",
+      "2-2.webp",
+      "2-3.webp",
+      "2-4.webp",
+      "2-5.webp",
+      "2-6.webp",
+      "2-7.webp",
+      "2-8.webp",
+      "2-9.webp"
+    ],
+    "descripcion": "DISPONIBLE ✅ 💎MERCEDES BENZ C250 EDITION C AVANTGARDE\n\n• Modelo 2015\n• 47.000km\n• Caja automática de 7 velocidades\n• Tapizado de cuero\n• Techo panorámico\n• Llantas de aleación de 18'\n• Sistema de asistencia de estacionamiento\n• Control de crucero\n• Soporte de luz de día LED\n• Aire acondicionado automático bizona\n• Asientos delanteros con calefacción\n• Sistema de alerta de cambio de carril\n• Sensores de estacionamiento, etc\n• IMPECABLE !\n\nFINANCIAMOS HASTA UN 60% DEL VALOR.\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2645674114 / 2646033579"
   },
   {
-    "id": "citroen-c3-aircross-2013",
-    "name": "Citroen C3 AirCross",
-    "marca": "Citroen",
-    "marcaId": "citroen",
-    "ano": 2013,
-    "kilometraje": 999999,
+    "id": "fiat-cronos-1-3-drive-s-design-2022",
+    "name": "Fiat Cronos 1.3 Drive S-Design",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2022,
+    "kilometraje": 88000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.3",
     "combustible": "Nafta",
-    "puertas": 5,
-    "images": ["3-1.webp", "3-2.webp", "3-3.webp", "3-4.webp", "3-5.webp"],
-    "descripcion": "Citroen C3 AirCross año 2013 impecable.\n\nFinancio hasta 6.000.000 Con DNI con crédito prendario.\n\nJuan Manuel de Rosas 4058 a metros de la rotonda de San Justo La Matanza.\n\n📲📲 WhatsApp 11 4094 3906."
+    "puertas": 4,
+    "images": [
+      "3-1.webp",
+      "3-2.webp",
+      "3-3.webp",
+      "3-4.webp",
+      "3-5.webp",
+      "3-6.webp",
+      "3-7.webp",
+      "3-8.webp",
+      "3-9.webp"
+    ],
+    "descripcion": "NUEVO INGRESO ‼️FIAT CRONOS 1.3 DRIVE S-DESIGN\n\n• Modelo 2022\n• 88.000km\n• Manual\n• Cámara de retroceso\n• Sensores de estacionamiento\n• Llantas de aleación\n• Alerón trasero\n\n🚨FINANCIAMOS HASTA UN 70% DEL VALOR🚨\n🚨CRÉDITO PRENDARIO SIN GASTOS DE OTORGAMIENTO 🚨\n🚨TASA 57% ANUAL 🚨\n\n📍Av Libertador 2411 (o) Capital, San juan \"Automotores Díaz\"\n📱2645674198 / 2646033579 / 2645674114"
   },
   {
-    "id": "volkswagen-fox-2014",
-    "name": "Volkswagen Fox",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2014,
-    "kilometraje": 999999,
+    "id": "fiat-siena-fire-1-4-2009",
+    "name": "Fiat Siena Fire 1.4",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2009,
+    "kilometraje": 220000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Sedán",
+    "transmision": "Manual",
+    "motor": "1.4",
+    "combustible": "Nafta",
+    "puertas": 4,
+    "images": [
+      "4-1.webp",
+      "4-2.webp",
+      "4-3.webp",
+      "4-4.webp",
+      "4-5.webp",
+      "4-6.webp",
+      "4-7.webp",
+      "4-8.webp",
+      "4-9.webp"
+    ],
+    "descripcion": "NUEVO INGRESO ‼️FIAT SIENA FIRE 1.4\n\n• Modelo 2009\n• 220.000km\n• Solo uso familiar\n• Faros antiniebla\n• Levantavidrios eléctricos\n• Sensores de estacionamiento traseros\n• Excelente estado\n\nRecibimos permutas y financiamos\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2646033579 / 2645674198"
+  },
+  {
+    "id": "fiat-argo-drive-1-3-2018-2",
+    "name": "Fiat Argo Drive 1.3",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2018,
+    "kilometraje": 45000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": ["4-1.webp", "4-2.webp", "4-3.webp", "4-4.webp", "4-5.webp"],
-    "descripcion": "Volkswagen Fox año 2014 impecable.\n\nFinanció hasta 7.000.000 con DNI con prenda bancaria.\n\nJuan Manuel de Rosas 4058 a metros de la rotonda de San Justo La Matanza.\n\n📲📲 WhatsApp 11 4094 3906."
-  },
-  {
-    "id": "peugeot-308-2020",
-    "name": "Peugeot 308",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2020,
-    "kilometraje": 999999,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.3",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -97,26 +134,116 @@
       "5-3.webp",
       "5-4.webp",
       "5-5.webp",
-      "5-6.webp"
+      "5-6.webp",
+      "5-7.webp",
+      "5-8.webp",
+      "5-9.webp"
     ],
-    "descripcion": "Peugeot 308 año 2020 impecable.\n\nFinanció hasta 10.000.000 de pesos con DNI.\n\nJuan Manuel de Rosas 4058 a metros de la rotonda de San Justo La Matanza.\n\n📲📲 WhatsApp 11 4094 3906."
+    "descripcion": "NUEVO INGRESO FIAT ARGO DRIVE 1.3\n\n• Modelo 2018\n• 45.000km\n• Segundo dueño\n• Comandos al volante\n• Levanta vidrios eléctricos\n• Sensores de estacionamiento\n• Excelente estado\n\nFINANCIAMOS HASTA UN 70% DEL VALOR SOLO CON DNI, CUOTAS FIJAS Y EN PESOS\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2645674114 / 2646033579"
   },
   {
-    "id": "peugeot-206-2007",
-    "name": "Peugeot 206",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2007,
-    "kilometraje": 999999,
+    "id": "fiat-argo-drive-1-3-2018-3",
+    "name": "Fiat Argo Drive 1.3",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2018,
+    "kilometraje": 45000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "1.3",
     "combustible": "Nafta",
     "puertas": 5,
+    "images": [
+      "6-1.webp",
+      "6-2.webp",
+      "6-3.webp",
+      "6-4.webp",
+      "6-5.webp",
+      "6-6.webp",
+      "6-7.webp",
+      "6-8.webp",
+      "6-9.webp"
+    ],
+    "descripcion": "NUEVO INGRESO FIAT ARGO DRIVE 1.3\n\n• Modelo 2018\n• 45.000km\n• Segundo dueño\n• Comandos al volante\n• Levanta vidrios eléctricos\n• Sensores de estacionamiento\n• Excelente estado\n\nFINANCIAMOS HASTA UN 70% DEL VALOR SOLO CON DNI, CUOTAS FIJAS Y EN PESOS\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2645674114 / 2646033579"
+  },
+  {
+    "id": "fiat-argo-drive-1-3-2018-4",
+    "name": "Fiat Argo Drive 1.3",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2018,
+    "kilometraje": 45000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.3",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "7-1.webp",
+      "7-2.webp",
+      "7-3.webp",
+      "7-4.webp",
+      "7-5.webp",
+      "7-6.webp",
+      "7-7.webp",
+      "7-8.webp",
+      "7-9.webp"
+    ],
+    "descripcion": "NUEVO INGRESO FIAT ARGO DRIVE 1.3\n\n• Modelo 2018\n• 45.000km\n• Segundo dueño\n• Comandos al volante\n• Levanta vidrios eléctricos\n• Sensores de estacionamiento\n• Excelente estado\n\nFINANCIAMOS HASTA UN 70% DEL VALOR SOLO CON DNI, CUOTAS FIJAS Y EN PESOS\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2645674114 / 2646033579"
+  },
+  {
+    "id": "fiat-argo-drive-1-3-2018-5",
+    "name": "Fiat Argo Drive 1.3",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2018,
+    "kilometraje": 45000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.3",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "8-1.webp",
+      "8-2.webp",
+      "8-3.webp",
+      "8-4.webp",
+      "8-5.webp",
+      "8-6.webp",
+      "8-7.webp",
+      "8-8.webp",
+      "8-9.webp"
+    ],
+    "descripcion": "NUEVO INGRESO FIAT ARGO DRIVE 1.3\n\n• Modelo 2018\n• 45.000km\n• Segundo dueño\n• Comandos al volante\n• Levanta vidrios eléctricos\n• Sensores de estacionamiento\n• Excelente estado\n\nFINANCIAMOS HASTA UN 70% DEL VALOR SOLO CON DNI, CUOTAS FIJAS Y EN PESOS\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2645674114 / 2646033579"
+  },
+  {
+    "id": "ram-1500-5-7-v8-laramie-4x4-2019",
+    "name": "RAM 1500 5.7 V8 Laramie 4x4",
+    "marca": "RAM",
+    "marcaId": "ram",
+    "ano": 2019,
+    "kilometraje": 36000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Pickup",
+    "transmision": "Automática",
+    "motor": "5.7",
+    "combustible": "Nafta",
+    "puertas": 4,
     "images": [
       "9-1.webp",
       "9-2.webp",
@@ -124,25 +251,26 @@
       "9-4.webp",
       "9-5.webp",
       "9-6.webp",
-      "9-7.webp"
+      "9-7.webp",
+      "9-8.webp"
     ],
-    "descripcion": "Peugeot 206 año 2007 naftero full hermoso.\n\nFinanció hasta 6.000.000 con dos garantes con recibos de sueldo antiguedad mínima 2 años.\n\nJuan Manuel de Rosas 4058 a metros de la rotonda de san justo la matanza.\n\n📲📲 WhatsApp 11 4094 3906."
+    "descripcion": "NUEVO INGRESO RAM 1500 5.7 V8 LARAMIE 4X4\n\n• Modelo 2019\n• 36.000km\n• Automática\n• Tapizado de cuero\n• Cubiertas BF Goodrich\n• Impecable!\n\nFINANCIAMOS HASTA UN 70% DEL VALOR\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2645674198 / 2646033579"
   },
   {
-    "id": "peugeot-partner-gnc-2015",
-    "name": "Peugeot Partner GNC",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2015,
-    "kilometraje": 999999,
+    "id": "jeep-renegade-sport-1-8-2018",
+    "name": "Jeep Renegade Sport 1.8",
+    "marca": "Jeep",
+    "marcaId": "jeep",
+    "ano": 2018,
+    "kilometraje": 77000,
     "precio": {
-      "valor": 11900000,
+      "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "GNC",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "1.8",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "10-1.webp",
@@ -150,46 +278,63 @@
       "10-3.webp",
       "10-4.webp",
       "10-5.webp",
-      "10-6.webp"
+      "10-6.webp",
+      "10-7.webp",
+      "10-8.webp",
+      "10-9.webp"
     ],
-    "descripcion": "Peugeot Partner año 2015 GNC.\n\nFinanció hasta 7.000.000 con DnI.\n\nPrecio de contado 11.900.000.\n\nJuan Manuel de Rosas 4058 a metros de la rotonda de san justo la matanza.\n\n📲📲 WhatsApp 11 4094 3906."
+    "descripcion": "NUEVO INGRESO JEEP RENEGADE SPORT 1.8\n\n• Modelo 2018\n• 77.000km\n• Automática\n• Sensores de estacionamiento\n• Cámara de retroceso\n• Llantas de aleación\n• Service recientemente realizado\n• Batería nueva\n• Excelente estado\n\nFIANANCIAMOS HASTA UN 70% DEL VALOR\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2645674198 / 2646033579"
   },
   {
-    "id": "peugeot-3008-2014",
-    "name": "Peugeot 3008",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2014,
-    "kilometraje": 999999,
+    "id": "fiat-strada-adventure-1-6-cabina-doble-2013",
+    "name": "Fiat Strada Adventure 1.6 Cabina Doble",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2013,
+    "kilometraje": 170000,
     "precio": {
-      "valor": 10900000,
+      "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Pickup",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
-    "images": ["11-1.webp", "11-2.webp", "11-3.webp"],
-    "descripcion": "Peugeot 3008 año 2014.\n\nPrecio de contado 10.900.000.\n\nNo tomo permutas.\n\nFinanció hasta 7.000.000 con Dni.\n\nJuan Manuel de Rosas 4058 a metros de la rotonda de san justo la matanza.\n\n📲📲 WhatsApp 11 4094 3906."
+    "puertas": 4,
+    "images": [
+      "11-1.webp",
+      "11-2.webp",
+      "11-3.webp",
+      "11-4.webp",
+      "11-5.webp",
+      "11-6.webp"
+    ],
+    "descripcion": "NUEVO INGRESOFIAT STRADA ADVENTURE 1.6 CABINA DOBLE\n\n• Modelo 2013\n• 170.000km\n• Rto vigente\n• Cubiertas nuevas\n\nFINANCIAMOS HASTA UN 70% DEL VALOR\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2645674198 / 2646033579"
   },
   {
-    "id": "vw-amarok-v6-comfortline-2019",
-    "name": "VW Amarok V6 Comfortline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
+    "id": "ram-laramie-1500-5-7-v8-2019",
+    "name": "RAM Laramie 1500 5.7 V8",
+    "marca": "RAM",
+    "marcaId": "ram",
     "ano": 2019,
-    "kilometraje": 999999,
+    "kilometraje": 120000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Pickup",
     "transmision": "Automática",
-    "motor": "3.0",
-    "combustible": "Diésel",
+    "motor": "5.7",
+    "combustible": "Nafta",
     "puertas": 4,
-    "images": ["12-1.webp", "12-2.webp", "12-3.webp", "12-4.webp", "12-5.webp"],
-    "descripcion": "Vw Amarok año 2019 V6 confortline.\n\nFinanció con DNI hasta el 50 porciento del valor total del vehículo.\n\nJuan Manuel de Rosas 5058 a metros de la rotonda de San Justo La Matanza.\n\n📲📲 WhatsApp 11 4094 3906."
+    "images": [
+      "12-1.webp",
+      "12-2.webp",
+      "12-3.webp",
+      "12-4.webp",
+      "12-5.webp",
+      "12-6.webp"
+    ],
+    "descripcion": "NUEVO INGRESORAM LARAMIE 1500 5.7 V8\n\n• Modelo 2019\n• Automática\n• Tapizado de cuero\n• Tapa rígida retráctil\n• 120.000km\n\nFINANCIAMOS HASTA UN 70% DEL VALOR\n\n📍Av Libertador 2411 (o) San Juan \"Automotores Díaz\"\n📱2645674198 / 2646033579"
   }
 ]

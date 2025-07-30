@@ -5,24 +5,24 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'automotoresparis',
-  name: 'Automotores Paris',
-  adress: 'J. M. de Rosas 4058',
-  city: 'San justo',
-  email: null,
-  instagram: 'automotoresparis',
-  facebook: 'https://www.facebook.com/paris.automotores/',
-  whatsapp: ['1140943906'],
-  googlemapsLink: 'https://maps.app.goo.gl/qUEJyuiQo1mrUfJR8',
+  id: 'automotoresdiaz',
+  name: 'Automotores Diaz',
+  adress: 'Av. Libertador 2411',
+  city: 'San Juan',
+  email: 'automotoresdiaz.sj@gmail.com',
+  instagram: 'automotoresdiaz_',
+  facebook: 'https://www.facebook.com/automotoresdiaz.sj/',
+  whatsapp: ['2645674114', '2646033579'],
+  googlemapsLink: 'https://maps.app.goo.gl/7GU9Uif1KCw9rdW36',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.7832990385314!2d-58.55910209999999!3d-34.685418299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc615fe538485%3A0x9362689c4e38f9c1!2sAUTOMOTORES%20PARIS!5e0!3m2!1sen!2sar!4v1753817284541!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.8271642805776!2d-68.56050779664987!3d-31.52890662791475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96814179f3890b47%3A0x3a9ea95e28737edd!2sDiaz%20automotores!5e0!3m2!1sen!2sar!4v1753847966507!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 17:00hs'] },
-    { day: 'Martes', hours: ['09:00 a 17:00hs'] },
-    { day: 'Miércoles', hours: ['09:00 a 17:00hs'] },
-    { day: 'Jueves', hours: ['09:00 a 17:00hs'] },
-    { day: 'Viernes', hours: ['09:00 a 17:00hs'] },
-    { day: 'Sábado', hours: ['09:00 a 15:00hs'] },
+    { day: 'Lunes', hours: ['9 a 13 y 17 a 21hs'] },
+    { day: 'Martes', hours: ['9 a 13 y 17 a 21hs'] },
+    { day: 'Miércoles', hours: ['9 a 13 y 17 a 21hs'] },
+    { day: 'Jueves', hours: ['9 a 13 y 17 a 21hs'] },
+    { day: 'Viernes', hours: ['9 a 13 y 17 a 21hs'] },
+    { day: 'Sábado', hours: ['9 a 13hs'] },
     // { day: 'Domingo', hours: ['10:00 a 15:00hs'] },
   ],
   footer:
@@ -33,13 +33,13 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://automotoresparis.vercel.app/',
-  title: 'Automotores Paris - Compra y Venta de Autos',
+  metadataBase: 'https://automotoresdiaz.vercel.app/',
+  title: 'Automotores Diaz - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
 
-// Necesito que actualices la informacion de catalogo.json. Las images tomalas de images de data.json, la descripcion tomala de caption de data.json, pero necesito que el texto este parseado, que no este todo junto sin espacios y saltos de linea. En name pone la marca y el modelo del vehiculo en title case, marca, marcaId todo esto acorde a la informacion de caption. Si en caption no se dice kilometraje o precio pone 999999, categoria estimala para el vehiculo (categorias tipicas de vehiculos en argentina. como utilitario, deportivo, suv, hatchback, etc). Transmision, motor, combustible y puertas estimalas acorde al vehiculo. La cantidad de vehiculos tiene que ser la de data.json, si en catalogo.json hay otros vehiculos removelos, los vehiclos de catalogo json tienen que ser los mismos que en data.json. No hagas un script, simplemente actualizalo con ia.
+// Cambie el archivo data.json, necesito que actualices la informacion de catalogo.json. Las images tomalas de images de data.json, la descripcion tomala de caption de data.json, pero necesito que el texto este parseado, que no este todo junto sin espacios y saltos de linea. En name pone la marca y el modelo del vehiculo en title case, marca, marcaId todo esto acorde a la informacion de caption. Si en caption no se dice kilometraje o precio pone 999999, categoria estimala para el vehiculo (categorias tipicas de vehiculos en argentina. como utilitario, deportivo, suv, hatchback, etc). Transmision, motor, combustible y puertas estimalas acorde al vehiculo. La cantidad de vehiculos tiene que ser la de data.json, si en catalogo.json hay otros vehiculos removelos, los vehiclos de catalogo json tienen que ser los mismos que en data.json. No hagas un script, simplemente actualizalo con ia.
 
 export const preguntas = [
   {
