@@ -4,25 +4,25 @@ export const company = {
   shortAdress: true,
   favicon: false,
   price: false,
-  objectCover: '55%',
-  id: 'marzettiautomotores',
-  name: 'Marzetti Automotores',
-  adress: 'J. M. de Rosas 4464',
+  objectCover: '50%',
+  id: 'automotoresparis',
+  name: 'Automotores Paris',
+  adress: 'J. M. de Rosas 4058',
   city: 'San justo',
-  email: 'tomasmrz@yahoo.com',
-  instagram: 'marzettiautomotores',
-  facebook: 'https://www.facebook.com/p/Automotores-Marzetti-100063746335532/',
-  whatsapp: ['1140689987'],
-  googlemapsLink: 'https://maps.app.goo.gl/oUMT1MrybNtB62iZ8',
+  email: null,
+  instagram: 'automotoresparis',
+  facebook: 'https://www.facebook.com/paris.automotores/',
+  whatsapp: ['1140943906'],
+  googlemapsLink: 'https://maps.app.goo.gl/qUEJyuiQo1mrUfJR8',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.717960974598!2d-58.56550092388358!3d-34.687067072924556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc622558fe98b%3A0xdcc961885aa88c52!2sMarzetti%20Automotores!5e0!3m2!1sen!2sar!4v1753814669606!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.7832990385314!2d-58.55910209999999!3d-34.685418299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc615fe538485%3A0x9362689c4e38f9c1!2sAUTOMOTORES%20PARIS!5e0!3m2!1sen!2sar!4v1753817284541!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Martes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
-    { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
-    { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
+    { day: 'Lunes', hours: ['09:00 a 17:00hs'] },
+    { day: 'Martes', hours: ['09:00 a 17:00hs'] },
+    { day: 'Miércoles', hours: ['09:00 a 17:00hs'] },
+    { day: 'Jueves', hours: ['09:00 a 17:00hs'] },
+    { day: 'Viernes', hours: ['09:00 a 17:00hs'] },
+    { day: 'Sábado', hours: ['09:00 a 15:00hs'] },
     // { day: 'Domingo', hours: ['10:00 a 15:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://marzettiautomotores.vercel.app/',
-  title: 'Marzetti Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://automotoresparis.vercel.app/',
+  title: 'Automotores Paris - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
