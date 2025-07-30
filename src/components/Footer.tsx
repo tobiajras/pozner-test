@@ -16,8 +16,10 @@ const Footer = () => {
     <div className='relative'>
       <footer
         id='contactoSection'
-        className={`flex justify-center pt-10 shadow-top-lg relative ${
-          company.darkmode ? 'bg-color-bg-secondary-dark' : 'bg-zinc-900'
+        className={`flex justify-center pt-10 shadow-top-lg relative font-medium ${
+          company.darkmode
+            ? 'bg-color-bg-secondary-dark'
+            : 'bg-color-bg-primary'
         } `}
         style={{ boxShadow: '0 -4px 6px rgba(0, 0, 0, 0.1)' }}
       >
@@ -47,7 +49,13 @@ const Footer = () => {
                   </div>
                 )}
 
-                <p className='text-color-text-light text-sm lg:text-base mt-3 max-w-96'>
+                <p
+                  className={`${
+                    company.darkmode
+                      ? 'text-color-text-light'
+                      : 'text-color-text'
+                  } text-sm lg:text-base mt-3 max-w-96`}
+                >
                   {company.footer}
                 </p>
                 <div className='flex gap-4 mt-4'>
@@ -57,7 +65,13 @@ const Footer = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <InstagramIcon className='w-8 h-8 text-color-text-light hover:text-color-primary-light transition-colors' />
+                      <InstagramIcon
+                        className={`w-8 h-8 ${
+                          company.darkmode
+                            ? 'text-color-text-light hover:text-color-primary-light'
+                            : 'text-color-text hover:text-color-primary'
+                        }  transition-colors`}
+                      />
                     </a>
                   )}
                   {company.facebook && (
@@ -66,7 +80,13 @@ const Footer = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <FacebookIcon className='w-8 h-8 text-color-text-light hover:text-color-primary-light transition-colors' />
+                      <FacebookIcon
+                        className={`w-8 h-8 ${
+                          company.darkmode
+                            ? 'text-color-text-light hover:text-color-primary-light'
+                            : 'text-color-text hover:text-color-primary'
+                        }  transition-colors`}
+                      />
                     </a>
                   )}
                   {company.whatsapp && (
@@ -75,20 +95,38 @@ const Footer = () => {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      <WhatsappIcon className='w-8 h-8 text-color-text-light hover:text-color-primary-light transition-colors' />
+                      <WhatsappIcon
+                        className={`w-8 h-8 ${
+                          company.darkmode
+                            ? 'text-color-text-light hover:text-color-primary-light'
+                            : 'text-color-text hover:text-color-primary'
+                        }  transition-colors`}
+                      />
                     </a>
                   )}
                 </div>
               </article>
               <article className='flex md:justify-center'>
                 <div>
-                  <h4 className='text-color-title-light'>Menú</h4>
+                  <h4
+                    className={`${
+                      company.darkmode
+                        ? 'text-color-title-light'
+                        : 'text-color-title'
+                    }`}
+                  >
+                    Menú
+                  </h4>
                   <ul className='flex flex-col'>
                     {navigation.map((link) => (
                       <li key={link.id}>
                         <Link
                           href={`${link.url}`}
-                          className='text-color-text-light hover:text-color-primary-light transition-colors cursor-pointer'
+                          className={`${
+                            company.darkmode
+                              ? 'text-color-text-light hover:text-color-primary-light'
+                              : 'text-color-text hover:text-color-primary'
+                          } transition-colors cursor-pointer`}
                         >
                           {link.title}
                         </Link>
@@ -100,9 +138,23 @@ const Footer = () => {
               <article className='w-full'>
                 {company.adress || company.city ? (
                   <div>
-                    <h4 className='text-color-title-light'>Dirección</h4>
+                    <h4
+                      className={`${
+                        company.darkmode
+                          ? 'text-color-title-light'
+                          : 'text-color-title'
+                      }`}
+                    >
+                      Dirección
+                    </h4>
                     <div className='flex flex-col items-start text-center text-balance'>
-                      <div className='flex items-center gap-0.5'>
+                      <div
+                        className={`flex items-center gap-0.5 ${
+                          company.darkmode
+                            ? 'text-color-text-light'
+                            : 'text-color-text'
+                        }`}
+                      >
                         <span>{company.adress && `${company.adress}, `}</span>
                         <span>{company.city && `${company.city}`}</span>
                       </div>
@@ -113,7 +165,15 @@ const Footer = () => {
                 )}
 
                 <div>
-                  <h4 className='text-color-title-light'>Contacto</h4>
+                  <h4
+                    className={`${
+                      company.darkmode
+                        ? 'text-color-title-light'
+                        : 'text-color-title'
+                    }`}
+                  >
+                    Contacto
+                  </h4>
                   <div className='flex flex-col'>
                     {company.whatsapp &&
                       company.whatsapp.map((whatsappNumber, idx) => (
@@ -122,7 +182,11 @@ const Footer = () => {
                           href={`https://api.whatsapp.com/send?phone=549${whatsappNumber}&text=Hola! Quería hacer una consulta`}
                           target='_blank'
                           rel='noopener noreferrer'
-                          className='text-color-text-light hover:text-color-primary-light transition-colors'
+                          className={`${
+                            company.darkmode
+                              ? 'text-color-text-light hover:text-color-primary-light'
+                              : 'text-color-text hover:text-color-primary'
+                          } transition-colors`}
                         >
                           {whatsappNumber}
                         </a>
@@ -131,12 +195,24 @@ const Footer = () => {
                 </div>
                 {company.instagram && (
                   <div>
-                    <h4 className='text-color-title-light'>Instagram</h4>
+                    <h4
+                      className={`${
+                        company.darkmode
+                          ? 'text-color-title-light'
+                          : 'text-color-title'
+                      }`}
+                    >
+                      Instagram
+                    </h4>
                     <a
                       href={`https://www.instagram.com/${company.instagram}/`}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='text-color-text-light hover:text-color-primary-light transition-colors'
+                      className={`${
+                        company.darkmode
+                          ? 'text-color-text-light hover:text-color-primary-light'
+                          : 'text-color-text hover:text-color-primary'
+                      } transition-colors`}
                     >
                       @{company.instagram}
                     </a>
@@ -144,10 +220,22 @@ const Footer = () => {
                 )}
                 {company.email && (
                   <div>
-                    <h4 className='text-color-title-light'>Email</h4>
+                    <h4
+                      className={`${
+                        company.darkmode
+                          ? 'text-color-title-light'
+                          : 'text-color-title'
+                      }`}
+                    >
+                      Email
+                    </h4>
                     <a
                       href={`mailto:${company.email}`}
-                      className='text-color-text-light hover:text-color-primary-light transition-colors'
+                      className={`${
+                        company.darkmode
+                          ? 'text-color-text-light hover:text-color-primary-light'
+                          : 'text-color-text hover:text-color-primary'
+                      } transition-colors`}
                     >
                       {company.email}
                     </a>
@@ -164,19 +252,37 @@ const Footer = () => {
             } flex justify-center w-full pb-16 pt-8 border-t`}
           >
             <article className='flex flex-col md:flex-row justify-between items-center text-sm sm:text-base gap-3 sm:gap-5 w-full max-w-7xl mx-6 sm:mx-8 md:mx-10'>
-              <div className='flex items-center gap-1 sm:gap-2 text-color-text-light'>
+              <div
+                className={`flex items-center gap-1 sm:gap-2 ${
+                  company.darkmode ? 'text-color-text-light' : 'text-color-text'
+                }`}
+              >
                 <span>© Copyright {new Date().getFullYear()}</span>
                 <span>-</span>
                 <span>{company.name}</span>
               </div>
               <div className='flex items-center gap-2'>
-                <span className='text-color-text-light'>Desarrollado por:</span>
+                <span
+                  className={`${
+                    company.darkmode
+                      ? 'text-color-text-light'
+                      : 'text-color-text'
+                  }`}
+                >
+                  Desarrollado por:
+                </span>
                 <a
                   href='https://www.agenciagravity.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <GravityLogo className='w-20 md:w-24 text-white hover:text-[#D1FA2D] transition-colors' />
+                  <GravityLogo
+                    className={`w-20 md:w-24 ${
+                      company.darkmode
+                        ? 'text-white hover:text-[#D1FA2D]'
+                        : 'text-black hover:text-black/70'
+                    } transition-colors`}
+                  />
                 </a>
               </div>
             </article>

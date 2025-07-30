@@ -1,20 +1,20 @@
 [
   {
-    "id": "ford-focus-se-2-0-2014",
-    "name": "Ford Focus Se 2.0",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2014,
-    "kilometraje": 109500,
+    "id": "toyota-corolla-1-8-seg-hybrid-2025",
+    "name": "Toyota Corolla 1.8 Seg Hybrid",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2025,
+    "kilometraje": 0,
     "precio": {
-      "valor": 10500000,
-      "moneda": "ARS"
+      "valor": 37000,
+      "moneda": "USD"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "1.8",
+    "combustible": "Híbrido",
+    "puertas": 4,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -25,29 +25,26 @@
       "1-7.webp",
       "1-8.webp",
       "1-9.webp",
-      "1-10.webp",
-      "1-11.webp",
-      "1-12.webp",
-      "1-13.webp"
+      "1-10.webp"
     ],
-    "descripcion": "Focus SE 2.0 cadenero 2014 manual de 5ta 109.500 KM\n\nMotor cadenero\n\nService recientes\n\n4 cubiertas nuevas\n\nAuxilio sin rodar\n\nFrenos nuevos\n\nVTV 2026\n\nMUY BUENO\n\n10.500.000 y cuotas fijas en pesos"
+    "descripcion": "✔️ Toyota Corolla 1.8 SEG Hybrid, 2025 0Km! 💰U$D 37.000 ☎️11-5813-0778"
   },
   {
-    "id": "bajaj-dominar-250-2022",
-    "name": "Bajaj Dominar 250",
-    "marca": "Bajaj",
-    "marcaId": "bajaj",
-    "ano": 2022,
-    "kilometraje": 11800,
+    "id": "ford-fiesta-kinetic-1-6-se-2015",
+    "name": "Ford Fiesta Kinetic 1.6 Se",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2015,
+    "kilometraje": 145000,
     "precio": {
-      "valor": 3000000,
-      "moneda": "ARS"
+      "valor": 12000,
+      "moneda": "USD"
     },
-    "categoria": "Moto",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "250cc",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 0,
+    "puertas": 5,
     "images": [
       "2-1.webp",
       "2-2.webp",
@@ -57,24 +54,25 @@
       "2-6.webp",
       "2-7.webp",
       "2-8.webp",
-      "2-9.webp"
+      "2-9.webp",
+      "2-10.webp"
     ],
-    "descripcion": "Dominar 250 2022 11.800 km 6 velocidades\n\nPorta alforjas\n\n12v/carga USB\n\nCarPlay\n\nBaúl de 45 litros\n\nTransmisión completa nueva\n\nVTV 2026\n\nService completo\n\nLista para la ruta\n\n3.000.000 y cuotas fijas"
+    "descripcion": "✔️ Ford Fiesta Kinetic 1.6 SE, 2015 con 145.000 Km, segunda dueña, muy bueno! 💰U$D 12.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
   },
   {
-    "id": "peugeot-208-allure-2021",
-    "name": "Peugeot 208 Allure",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2021,
-    "kilometraje": 999999,
+    "id": "toyota-etios-1-5-x-2023",
+    "name": "Toyota Etios 1.5 X",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2023,
+    "kilometraje": 23000,
     "precio": {
-      "valor": 8500000,
-      "moneda": "ARS"
+      "valor": 19000,
+      "moneda": "USD"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.5",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -87,33 +85,29 @@
       "3-7.webp",
       "3-8.webp",
       "3-9.webp",
-      "3-10.webp",
-      "3-11.webp",
-      "3-12.webp",
-      "3-13.webp",
-      "3-14.webp"
+      "3-10.webp"
     ],
-    "descripcion": "Peugeot 208 2021 allure manual de 5ta\n\nÚnica mano de 0KM\n\nManuales\n\nSegunda llave\n\nService en tiempo y forma\n\n8.500.000 y cuotas fijas"
+    "descripcion": "✔️ Toyota Etios 1.5 X, 2023 con 23.000 Km, 100% pintura original, impecable! 💰U$D 19.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
   },
   {
-    "id": "volkswagen-fox-confortline-2013",
-    "name": "Volkswagen Fox Confortline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2013,
-    "kilometraje": 111400,
+    "id": "chevrolet-cruze-1-4-lt-2018",
+    "name": "Chevrolet Cruze 1.4 Lt",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2018,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
-      "moneda": "ARS"
+      "moneda": "USD"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "1.4",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
-      "4-2.webp",
       "4-1.webp",
+      "4-2.webp",
       "4-3.webp",
       "4-4.webp",
       "4-5.webp",
@@ -121,28 +115,24 @@
       "4-7.webp",
       "4-8.webp",
       "4-9.webp",
-      "4-10.webp",
-      "4-11.webp",
-      "4-12.webp",
-      "4-13.webp",
-      "4-14.webp"
+      "4-10.webp"
     ],
-    "descripcion": "Fox confortline 2013 111.400 km segundo dueño\n\nDistribución hecha\n\nVTV 2026\n\nFrenos delanteros nuevos\n\n4 cubiertas nuevas\n\nService hecho completo recientemente\n\nManuales\n\nSegunda llave\n\nComando al volante\n\nAire/calefacción\n\nMuy bueno\n\nEstamos en Ricardo Balbin 2040 san Miguel Buenos Aires"
+    "descripcion": "✔️ Chevrolet Cruze 1.4 LT, 2018, muy bueno! 💰U$D 18.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
   },
   {
-    "id": "toyota-etios-xls-2019",
-    "name": "Toyota Etios Xls",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2019,
-    "kilometraje": 40000,
+    "id": "ford-ecosport-1-6-freestyle-2017",
+    "name": "Ford Ecosport 1.6 Freestyle",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2017,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
-      "moneda": "ARS"
+      "moneda": "USD"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "1.5",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -152,26 +142,29 @@
       "5-4.webp",
       "5-5.webp",
       "5-6.webp",
-      "5-7.webp"
+      "5-7.webp",
+      "5-8.webp",
+      "5-9.webp",
+      "5-10.webp"
     ],
-    "descripcion": "Etios XLS 2019 40.000 KM 6MT\n\nÚnica mano de 0Km\n\nTodos los servicios en tiempo y forma\n\nManuales\n\nSegunda llave\n\nTodo al día\n\nListo para transferir\n\nEstamos en Ricardo Balbin 2040"
+    "descripcion": "✔️ Ford Ecosport 1.6 Freestyle, 2017, muy bueno! 💰U$D 16.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
   },
   {
-    "id": "mercedes-benz-sprinter-415-2017",
-    "name": "Mercedes Benz Sprinter 415",
-    "marca": "Mercedes-Benz",
-    "marcaId": "mercedes-benz",
-    "ano": 2017,
-    "kilometraje": 71300,
+    "id": "volkswagen-gol-trend-1-6-trendline-2020",
+    "name": "Volkswagen Gol Trend 1.6 Trendline",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2020,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
-      "moneda": "ARS"
+      "moneda": "USD"
     },
-    "categoria": "Utilitario",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "2.2",
-    "combustible": "Diésel",
-    "puertas": 3,
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -184,24 +177,24 @@
       "6-9.webp",
       "6-10.webp"
     ],
-    "descripcion": "SPRINTER 415 mix furgón 2017 71.300 KM manual de 6ta\n\nCubiertas nuevas\n\nService completo\n\nMuy buena"
+    "descripcion": "✔️ Volkswagen Gol Trend 1.6 Trendline, 2020, muy bueno! 💰U$D 14.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
   },
   {
-    "id": "toyota-hilux-srx-2021",
-    "name": "Toyota Hilux Srx",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2021,
-    "kilometraje": 4500,
+    "id": "peugeot-207-1-6-xt-2008",
+    "name": "Peugeot 207 1.6 Xt",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2008,
+    "kilometraje": 181000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 7500,
+      "moneda": "USD"
     },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "2.8",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "7-1.webp",
       "7-2.webp",
@@ -214,24 +207,24 @@
       "7-9.webp",
       "7-10.webp"
     ],
-    "descripcion": "Toyota Hilux SRX 2021 AT 4x4 única mano de 0km\n\n4.500 KM\n\nService oficiales\n\nEstamos en Ricardo Balbin 2040 san Miguel"
+    "descripcion": "✔️ Peugeot 207 1.6 XT, 2008 con 181.000 Km, muy bueno, pocos en este estado! 💰U$D 7.500 ☎️11-5813-0778"
   },
   {
-    "id": "chevrolet-corsa-3ptas-2010",
-    "name": "Chevrolet Corsa 3ptas",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2010,
-    "kilometraje": 189000,
+    "id": "volkswagen-suran-highline-msi-2019",
+    "name": "Volkswagen Suran Highline Msi",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2019,
+    "kilometraje": 90000,
     "precio": {
-      "valor": 6000000,
-      "moneda": "ARS"
+      "valor": 17000,
+      "moneda": "USD"
     },
-    "categoria": "Hatchback",
+    "categoria": "Utilitario",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 3,
+    "puertas": 5,
     "images": [
       "8-1.webp",
       "8-2.webp",
@@ -240,24 +233,26 @@
       "8-5.webp",
       "8-6.webp",
       "8-7.webp",
-      "8-8.webp"
+      "8-8.webp",
+      "8-9.webp",
+      "8-10.webp"
     ],
-    "descripcion": "Corsa 3PTAS 2010 189.000 KM full manual de 5ta\n\nSegunda llave\n\nAire/calefacción\n\n4 cubiertas nuevas\n\nLevanta vidrios eléctrico\n\nCierre/alarma\n\nLlantas de aleación\n\nService completo recién hecho\n\nDistribución hecha\n\n6.000.000 y el resto cuotas fijas\n\nEstamos en San Miguel Av Ricardo Balbin 2040 Buenos Aires"
+    "descripcion": "✔️ Vw Suran Highline MSI, 2019 con 90.000 Km, caja de 6ta, cubiertas nuevas, muy buena! 💰U$D 17.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
   },
   {
-    "id": "toyota-sw4-srx-7as-2016",
-    "name": "Toyota Sw4 Srx 7As",
-    "marca": "Toyota",
-    "marcaId": "toyota",
+    "id": "chevrolet-tracker-1-8-ltz-2016",
+    "name": "Chevrolet Tracker 1.8 Ltz",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
     "ano": 2016,
-    "kilometraje": 192000,
+    "kilometraje": 128000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 14000,
+      "moneda": "USD"
     },
     "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "4.0",
+    "motor": "1.8",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -272,24 +267,24 @@
       "9-9.webp",
       "9-10.webp"
     ],
-    "descripcion": "Toyota SW4 SRX 7AS AT 2016 192.000 KM\n\nLevas al volante\n\nSegunda mano\n\nManuales y segunda llave\n\nService completo\n\nCubiertas nuevas\n\nVTV 2026\n\nMantenimientos en tiempo y forma\n\nNada para hacerle\n\nTomamos permutas de mayor o menor valor\n\nEstamos en Ricardo Balbin 2040 san Miguel"
+    "descripcion": "RESERVADA❗️✔️ Chevrolet Tracker 1.8 LTZ, 2016 con 128.000 Km, cubiertas nuevas, muy buena! 💰U$D 14.000 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
   },
   {
-    "id": "chevrolet-onix-ls-2018",
-    "name": "Chevrolet Onix Ls",
+    "id": "chevrolet-classic-1-4-ls-2015",
+    "name": "Chevrolet Classic 1.4 Ls",
     "marca": "Chevrolet",
     "marcaId": "chevrolet",
-    "ano": 2018,
-    "kilometraje": 999999,
+    "ano": 2015,
+    "kilometraje": 223000,
     "precio": {
-      "valor": 7000000,
-      "moneda": "ARS"
+      "valor": 8000,
+      "moneda": "USD"
     },
-    "categoria": "Hatchback",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.0",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "1.4",
+    "combustible": "GNC",
+    "puertas": 4,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -298,29 +293,31 @@
       "10-5.webp",
       "10-6.webp",
       "10-7.webp",
-      "10-8.webp"
+      "10-8.webp",
+      "10-9.webp",
+      "10-10.webp"
     ],
-    "descripcion": "Onix LS+ 2018 manual 5ta única mano de 0KM\n\nManuales\n\nSegunda llave\n\nVTV\n\nDistribución hecha completa\n\nService hecho completo\n\n7.000.000 y cuotas fijas\n\nEstamos en Ricardo Balbin 2040 san Miguel Buenos Aires"
+    "descripcion": "VENDIDO❗️✔️ Chevrolet Classic 1.4 LS, 2015 con 223.000 Km, unico dueño, GNC de 5ta generacion, muy bueno! 💰U$D 8.000 ☎️11-5813-0778☑️ Consultar por financiacion."
   },
   {
-    "id": "ford-focus-se-plus-2-0-2016",
-    "name": "Ford Focus Se Plus 2.0",
+    "id": "ford-ecosport-1-6-freestyle-2016",
+    "name": "Ford Ecosport 1.6 Freestyle",
     "marca": "Ford",
     "marcaId": "ford",
     "ano": 2016,
-    "kilometraje": 117000,
+    "kilometraje": 80000,
     "precio": {
-      "valor": 8500000,
-      "moneda": "ARS"
+      "valor": 14500,
+      "moneda": "USD"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "2.0",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
-      "11-2.webp",
       "11-1.webp",
+      "11-2.webp",
       "11-3.webp",
       "11-4.webp",
       "11-5.webp",
@@ -330,22 +327,22 @@
       "11-9.webp",
       "11-10.webp"
     ],
-    "descripcion": "FOCUS SE PLUS 2.0 MT MANUAL DE 5TA 117.000 KM 2016\n\nManuales\n\nSegunda llave\n\nVTV 2026\n\nCubiertas nuevas\n\nService completo\n\nTODO AL DÍA LISTO PARA TRANSFERIR\n\n8.500.000 y cuotas fijas\n\nEstamos en san Miguel Av Ricardo Balbin 2040 Buenos Aires"
+    "descripcion": "VENDIDA❗️✔️ Ford Ecosport 1.6 Freestyle, 2016 con 80.000 Km, cubiertas nuevas, realmente impecable! 💰U$D 14.500 ☎️11-5813-0778☑️ Acepto permuta menor valor de mi interes."
   },
   {
-    "id": "toyota-rav4-2014",
-    "name": "Toyota Rav4",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2014,
-    "kilometraje": 999999,
+    "id": "volkswagen-gol-trend-1-6-trendline-2021",
+    "name": "Volkswagen Gol Trend 1.6 Trendline",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2021,
+    "kilometraje": 60000,
     "precio": {
-      "valor": 15000000,
-      "moneda": "ARS"
+      "valor": 15500,
+      "moneda": "USD"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.0",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -360,6 +357,6 @@
       "12-9.webp",
       "12-10.webp"
     ],
-    "descripcion": "Rav4 2014 2.0 cadenero CVT 6AT 4x2\n\nSegunda llave\n\nManuales\n\nService completos\n\nFrenos hechos\n\nVTV 2026\n\n5 cubiertas Yokohama nuevas\n\nTodo al día muy buena\n\n15.000.000 y cuotas fijas\n\nEstamos en Ricardo Balbin 2040 san Miguel Buenos Aires"
+    "descripcion": "✔️ Vw Gol Trend 1.6 Trendline, 2021 con 60.000 Km, servicios oficiales, muy bueno! 💰U$D 15.500 ☎️ 11-5813-0778☑️ Acepto permuta menor valor de mi interes, consultar por financiacion."
   }
 ]

@@ -1,29 +1,29 @@
 export const company = {
   dark: true,
-  darkmode: true,
+  darkmode: false,
   shortAdress: true,
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'automotoresfuentes',
-  name: 'Automotores Fuentes',
-  adress: 'Ricardo Balbín 2040',
+  id: 'escuderomotors',
+  name: 'Escudero Motors',
+  adress: 'Av. Perón 3423',
   city: 'San Miguel',
-  email: 'automotoresfuentes@gmail.com',
-  instagram: 'automotores.fuentes',
-  facebook: null,
-  whatsapp: ['1130477811'],
-  googlemapsLink: 'https://maps.app.goo.gl/PujzKUNQjM3UWQ6a8',
+  email: 'escuderopatricio402@gmail.com',
+  instagram: 'escuderomotors',
+  facebook: 'https://www.facebook.com/profile.php?id=100063717392022#',
+  whatsapp: ['1158130778'],
+  googlemapsLink: 'https://maps.app.goo.gl/Da4cdw8keAJLWGWU9',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.2031673175748!2d-58.72371230321044!3d-34.54841099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd675773d1d9%3A0x5a80acdabb00e3b4!2sAutomotores%20fuentes!5e0!3m2!1sen!2sar!4v1753828327999!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841464.3819579687!2d-59.949920321875!3d-34.5289819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd81fa859345%3A0x9039f9cb1ff9810!2sESCUDERO%20MOTORS!5e0!3m2!1sen!2sar!4v1753826921859!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['08:30 a 19:00hs'] },
-    { day: 'Martes', hours: ['08:30 a 19:00hs'] },
-    { day: 'Miércoles', hours: ['08:30 a 19:00hs'] },
-    { day: 'Jueves', hours: ['08:30 a 19:00hs'] },
-    { day: 'Viernes', hours: ['09:00 a 19:00hs'] },
-    { day: 'Sábado', hours: ['09:00 a 16:00hs'] },
-    { day: 'Domingo', hours: ['10:00 a 15:00hs'] },
+    { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Martes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
+    { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
+    { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
+    // { day: 'Domingo', hours: ['10:00 a 15:00hs'] },
   ],
   footer:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
@@ -33,13 +33,13 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://automotoresfuentes.vercel.app/',
-  title: 'Automotores Fuentes - Compra y Venta de Autos',
+  metadataBase: 'https://escuderomotors.vercel.app/',
+  title: 'Escudero Motors - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
 
-// Necesito que actualices la informacion de catalogo.json. Las images tomalas de images de data.json, la descripcion tomala de caption de data.json, pero necesito que el texto este parseado, que no este todo junto sin espacios y saltos de linea. En name pone la marca y el modelo del vehiculo en title case, marca, marcaId todo esto acorde a la informacion de caption. Si en caption no se dice kilometraje o precio pone 999999, categoria estimala para el vehiculo (categorias tipicas de vehiculos en argentina. como utilitario, deportivo, suv, hatchback, etc). Transmision, motor, combustible y puertas estimalas acorde al vehiculo. La cantidad de vehiculos tiene que ser la de data.json, los actuales de catalogo.json tenes que removerlos. No hagas un script, simplemente actualizalo con ia.
+// Necesito que actualices la informacion de catalogo.json. Las images tomalas de images de data.json, la descripcion tomala de caption de data.json, pero necesito que el texto este parseado, que no este todo junto sin espacios y saltos de linea. En name pone la marca y el modelo del vehiculo en title case, marca, marcaId todo esto acorde a la informacion de caption. Si en caption no se dice kilometraje o precio pone 999999, categoria estimala para el vehiculo (categorias tipicas de vehiculos en argentina. como utilitario, deportivo, suv, hatchback, etc). Transmision, motor, combustible y puertas estimalas acorde al vehiculo. La cantidad de vehiculos tiene que ser la de data.json, si en catalogo.json hay otros vehiculos removelos y pone los de data.json. No hagas un script, simplemente actualizalo con ia.
 
 export const preguntas = [
   {
