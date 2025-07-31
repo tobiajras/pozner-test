@@ -1,20 +1,20 @@
 [
   {
-    "id": "volkswagen-suran-1-6-trendline-2017",
-    "name": "Volkswagen Suran 1.6 Trendline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2017,
-    "kilometraje": 199000,
+    "id": "renault-duster-oroch-1-6-2020",
+    "name": "Renault Duster Oroch",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2020,
+    "kilometraje": 86000,
     "precio": {
-      "valor": 17500000,
+      "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
+    "categoria": "Pickup",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -25,26 +25,24 @@
       "1-7.webp",
       "1-8.webp",
       "1-9.webp",
-      "1-10.webp",
-      "1-11.webp",
-      "1-12.webp"
+      "1-10.webp"
     ],
-    "descripcion": "VW SURAN 1.6 TRENDLINE 2017!\n\n🛣️ 199 MIL KM\n💰 $ 17.500.000!"
+    "descripcion": "Renault duster oroch\nOutsider 1.6\n86.000km\n2020"
   },
   {
-    "id": "chevrolet-onix-1-2-lt-2020",
-    "name": "Chevrolet Ónix 1.2 LT",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2020,
-    "kilometraje": 15000,
+    "id": "ford-ka-2012",
+    "name": "Ford Ka",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2012,
+    "kilometraje": 125000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.2",
+    "motor": "1.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -56,25 +54,26 @@
       "2-6.webp",
       "2-7.webp",
       "2-8.webp",
-      "2-9.webp"
+      "2-9.webp",
+      "2-10.webp"
     ],
-    "descripcion": "CHEVROLET ÓNIX 1.2 LT 2020!\n\n🛣️ 15 MIL KM\n\nVENDIDO!"
+    "descripcion": "Ford ka\n2012\nFly viral\n125.000km"
   },
   {
-    "id": "volkswagen-amarok-v6-highline-2023",
-    "name": "Volkswagen Amarok V6 Highline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2023,
-    "kilometraje": 16000,
+    "id": "ford-focus-2015",
+    "name": "Ford Focus",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2015,
+    "kilometraje": 43000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "3.0",
-    "combustible": "Diésel",
+    "categoria": "Sedán",
+    "transmision": "Manual",
+    "motor": "2.0",
+    "combustible": "Nafta",
     "puertas": 4,
     "images": [
       "3-1.webp",
@@ -86,31 +85,26 @@
       "3-7.webp",
       "3-8.webp",
       "3-9.webp",
-      "3-10.webp",
-      "3-11.webp",
-      "3-12.webp",
-      "3-13.webp",
-      "3-14.webp",
-      "3-15.webp"
+      "3-10.webp"
     ],
-    "descripcion": "VW AMAROK V6 HIGLINE 2023!\n\n🛣️ 16 MIL KM\n\nVENDIDA!"
+    "descripcion": "Ford focus\n2015\nSe plus\n43000km\nManual"
   },
   {
-    "id": "fiat-toro-1-8-freedom-gnc-2020",
-    "name": "Fiat Toro 1.8 Freedom (GNC)",
-    "marca": "Fiat",
-    "marcaId": "fiat",
-    "ano": 2020,
-    "kilometraje": 123000,
+    "id": "volkswagen-nivus-2021",
+    "name": "Volkswagen Nivus",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2021,
+    "kilometraje": 98000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "1.8",
-    "combustible": "GNC",
-    "puertas": 4,
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "1.0",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "4-1.webp",
       "4-2.webp",
@@ -121,27 +115,24 @@
       "4-7.webp",
       "4-8.webp",
       "4-9.webp",
-      "4-10.webp",
-      "4-11.webp",
-      "4-12.webp",
-      "4-13.webp"
+      "4-10.webp"
     ],
-    "descripcion": "FIAT TORO 1.8 FREEDOM (GNC) 2020!\n\n🛣️ 123 MIL KM\n\nVENDIDA!"
+    "descripcion": "Volkswsgen nivus\n2021\n98.000km\nConfortline\nAut"
   },
   {
-    "id": "chevrolet-onix-1-0-rs-turbo-0km",
-    "name": "Chevrolet Ónix 1.0 RS Turbo",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2024,
-    "kilometraje": 0,
+    "id": "peugeot-308-2017",
+    "name": "Peugeot 308",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2017,
+    "kilometraje": 60000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.0",
+    "transmision": "Automática",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -154,34 +145,26 @@
       "5-7.webp",
       "5-8.webp",
       "5-9.webp",
-      "5-10.webp",
-      "5-11.webp",
-      "5-12.webp",
-      "5-13.webp",
-      "5-14.webp",
-      "5-15.webp",
-      "5-16.webp",
-      "5-17.webp",
-      "5-18.webp"
+      "5-10.webp"
     ],
-    "descripcion": "CHEVROLET ÓNIX 1.0 RS TURBO 0KM!"
+    "descripcion": "Peugeot 308\nFeline tiptronic\n2017\n60.000km"
   },
   {
-    "id": "volkswagen-amarok-trendline-2021",
-    "name": "Volkswagen Amarok Trendline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2021,
-    "kilometraje": 96000,
+    "id": "peugeot-208-2017",
+    "name": "Peugeot 208",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2017,
+    "kilometraje": 45000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "categoria": "Hatchback",
+    "transmision": "Automática",
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -194,207 +177,6 @@
       "6-9.webp",
       "6-10.webp"
     ],
-    "descripcion": "VW AMAROK TRENDLINE 2021!\n\n🛣️ 96 MIL KM\n\nVENDIDA!"
-  },
-  {
-    "id": "chevrolet-classic-1-4-ls-gnc-2014",
-    "name": "Chevrolet Classic 1.4 LS (GNC)",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2014,
-    "kilometraje": 209000,
-    "precio": {
-      "valor": 11000000,
-      "moneda": "ARS"
-    },
-    "categoria": "Sedán",
-    "transmision": "Manual",
-    "motor": "1.4",
-    "combustible": "GNC",
-    "puertas": 4,
-    "images": [
-      "7-1.webp",
-      "7-2.webp",
-      "7-3.webp",
-      "7-4.webp",
-      "7-5.webp",
-      "7-6.webp",
-      "7-7.webp",
-      "7-8.webp",
-      "7-9.webp",
-      "7-10.webp",
-      "7-11.webp",
-      "7-12.webp"
-    ],
-    "descripcion": "CHEVROLET CLASSIC 1.4 LS (gnc) 2014!\n\n🛣️ 209 MIL KM\n💰 $ 11.000.000!"
-  },
-  {
-    "id": "toyota-hilux-2-5-dx-2011",
-    "name": "Toyota Hilux 2.5 DX",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2011,
-    "kilometraje": 310000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "2.5",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": [
-      "8-1.webp",
-      "8-2.webp",
-      "8-3.webp",
-      "8-4.webp",
-      "8-5.webp",
-      "8-6.webp",
-      "8-7.webp",
-      "8-8.webp",
-      "8-9.webp",
-      "8-10.webp",
-      "8-11.webp",
-      "8-12.webp",
-      "8-13.webp"
-    ],
-    "descripcion": "TOYOTA HILUX 2.5 DX 2011!\n\n🛣️ 310 MIL KM\n\nVENDIDA!"
-  },
-  {
-    "id": "renault-duster-1-6-gnc-privilege-2015",
-    "name": "Renault Duster 1.6 (GNC) Privilege",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2015,
-    "kilometraje": 183000,
-    "precio": {
-      "valor": 18000000,
-      "moneda": "ARS"
-    },
-    "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "GNC",
-    "puertas": 5,
-    "images": [
-      "9-1.webp",
-      "9-2.webp",
-      "9-3.webp",
-      "9-4.webp",
-      "9-5.webp",
-      "9-6.webp",
-      "9-7.webp",
-      "9-8.webp",
-      "9-9.webp",
-      "9-10.webp",
-      "9-11.webp",
-      "9-12.webp",
-      "9-13.webp",
-      "9-14.webp",
-      "9-15.webp"
-    ],
-    "descripcion": "RENAULT DUSTER 1.6 (gnc) PRIVILEGE 2015!\n\n🛣️ 183 MIL KM\n💰 $ 18.000.000!"
-  },
-  {
-    "id": "volkswagen-amarok-180-hp-trendline-2015",
-    "name": "Volkswagen Amarok 180 HP Trendline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2015,
-    "kilometraje": 222000,
-    "precio": {
-      "valor": 26000000,
-      "moneda": "ARS"
-    },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": [
-      "10-1.webp",
-      "10-2.webp",
-      "10-3.webp",
-      "10-4.webp",
-      "10-5.webp",
-      "10-6.webp",
-      "10-7.webp",
-      "10-8.webp",
-      "10-9.webp",
-      "10-10.webp",
-      "10-11.webp",
-      "10-12.webp",
-      "10-13.webp",
-      "10-14.webp"
-    ],
-    "descripcion": "VW AMAROK 180 HP TRENDLINE 2015!\n\n🛣️ 222 MIL KM\n💰 $ 26.000.000!"
-  },
-  {
-    "id": "renault-duster-oroch-1-6-privilege-2020",
-    "name": "Renault Duster Oroch 1.6 Privilege",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2020,
-    "kilometraje": 43000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 4,
-    "images": [
-      "11-1.webp",
-      "11-2.webp",
-      "11-3.webp",
-      "11-4.webp",
-      "11-5.webp",
-      "11-6.webp",
-      "11-7.webp",
-      "11-8.webp",
-      "11-9.webp",
-      "11-10.webp",
-      "11-11.webp",
-      "11-12.webp",
-      "11-13.webp",
-      "11-14.webp",
-      "11-15.webp",
-      "11-16.webp",
-      "11-17.webp"
-    ],
-    "descripcion": "RENAULT DUSTER OROCH 1.6 PRIVILEGE 2020!\n\n🛣️ 43 MIL KM\n\nVENDIDA!"
-  },
-  {
-    "id": "volkswagen-gol-1-6-power-2010",
-    "name": "Volkswagen Gol 1.6 Power",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2010,
-    "kilometraje": 98000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": [
-      "12-1.webp",
-      "12-2.webp",
-      "12-3.webp",
-      "12-4.webp",
-      "12-5.webp",
-      "12-6.webp",
-      "12-7.webp",
-      "12-8.webp",
-      "12-9.webp",
-      "12-10.webp"
-    ],
-    "descripcion": "VW GOL 1.6 POWER 2010!\n\n🛣️ 98 MIL KM\n\nVENDIDO!"
+    "descripcion": "Peugeot 208\nAllure\n2017\n45.000km\nAutomatico"
   }
 ]
