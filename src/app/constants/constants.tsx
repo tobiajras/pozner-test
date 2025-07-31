@@ -1,28 +1,28 @@
 export const company = {
   dark: true,
-  darkmode: false,
+  darkmode: true,
   shortAdress: true,
   favicon: false,
   price: false,
-  objectCover: '50%',
-  id: 'grautomotores',
-  name: 'GR Automotores',
-  adress: 'Alberdi 1057',
-  city: 'Muñiz',
-  email: 'guidoricaldoni@gmail.com',
-  instagram: 'grautomotores',
-  facebook: 'https://www.facebook.com/GuidoRicaldoniAutomotores/',
-  whatsapp: ['1131176481'],
-  googlemapsLink: 'https://maps.app.goo.gl/TSSPaPCGcZzSsNkp6',
+  objectCover: '60%',
+  id: 'barbalacemotors',
+  name: 'Barbalace Motors',
+  adress: 'Av. Gral. Mosconi 355',
+  city: 'Lomas del Mirador',
+  email: 'barbalace.lomas@gmail.com',
+  instagram: 'barbalace.motors',
+  facebook: 'https://www.facebook.com/profile.php?id=100063737011527',
+  whatsapp: ['1169082971', '1169526452'],
+  googlemapsLink: 'https://maps.app.goo.gl/z11vDJPfB8NxYJGQ7',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9131.945092060694!2d-58.702939405107216!3d-34.54925666787439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbd539bf2c85d%3A0x2b1ea6353a86594d!2sGR%20Automotores!5e0!3m2!1sen!2sar!4v1753830716252!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.8249103985927!2d-58.530161699999994!3d-34.6591245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc85fed1cd94d%3A0x6fb8ed4c43a56faa!2sBarbalace%20Motors%20-%20Lomas%20del%20Mirador!5e0!3m2!1sen!2sar!4v1753980116415!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 19:00hs'] },
-    { day: 'Martes', hours: ['09:00 a 19:00hs'] },
-    { day: 'Miércoles', hours: ['09:00 a 19:00hs'] },
-    { day: 'Jueves', hours: ['09:00 a 19:00hs'] },
-    { day: 'Viernes', hours: ['09:00 a 19:00hs'] },
-    { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
+    { day: 'Lunes', hours: ['9 a 12:30 y 15 a 18:30hs'] },
+    { day: 'Martes', hours: ['9 a 12:30 y 15 a 18:30h'] },
+    { day: 'Miércoles', hours: ['9 a 12:30 y 15 a 18:30h'] },
+    { day: 'Jueves', hours: ['9 a 12:30 y 15 a 18:30h'] },
+    { day: 'Viernes', hours: ['9 a 12:30 y 15 a 18:30h'] },
+    // { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://grautomotores.vercel.app/',
-  title: 'GR Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://barbalacemotors.vercel.app/',
+  title: 'Barbalace Motors - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

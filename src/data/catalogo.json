@@ -1,19 +1,19 @@
 [
   {
-    "id": "toyota-hilux-srv-2-8-4x4-mt-2021",
-    "name": "Toyota Hilux SRV 2.8 4x4 MT",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2021,
-    "kilometraje": 99000,
+    "id": "volkswagen-vento-2-0t-sportline-dsg-2013",
+    "name": "Volkswagen Vento 2.0T Sportline DSG",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2013,
+    "kilometraje": 104000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "2.8",
-    "combustible": "Diésel",
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "2.0",
+    "combustible": "Nafta",
     "puertas": 4,
     "images": [
       "1-1.webp",
@@ -25,26 +25,36 @@
       "1-7.webp",
       "1-8.webp",
       "1-9.webp",
-      "1-10.webp"
+      "1-10.webp",
+      "1-11.webp",
+      "1-12.webp",
+      "1-13.webp",
+      "1-14.webp",
+      "1-15.webp",
+      "1-16.webp",
+      "1-17.webp",
+      "1-18.webp",
+      "1-19.webp",
+      "1-20.webp"
     ],
-    "descripcion": "Vendo Toyota Hilux SRV 2.8 4x4 MT 🚜🏁\n\nAño: 2021🏁\nKm: 99.000🏁\nMotor: 2.8 TDI 🏁\nTransmisión: Manual🏁\nTracción: 4x4🏁\nSegundo dueño🏁\nLlantas de SRX Cubiertas Todo Terreno🏁\nVidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 VOLKSWAGEN VENTO 2.0T SPORTLINE DSG\n▶️ 2013\n▶️ 104.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "chevrolet-sonic-lt-1-6-2014",
-    "name": "Chevrolet Sonic LT 1.6",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2014,
-    "kilometraje": 117000,
+    "id": "nissan-versa-1-6-advance-2022",
+    "name": "Nissan Versa 1.6 Advance",
+    "marca": "Nissan",
+    "marcaId": "nissan",
+    "ano": 2022,
+    "kilometraje": 16000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Sedán",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "2-1.webp",
       "2-2.webp",
@@ -56,24 +66,33 @@
       "2-8.webp",
       "2-9.webp",
       "2-10.webp",
-      "2-11.webp"
+      "2-11.webp",
+      "2-12.webp",
+      "2-13.webp",
+      "2-14.webp",
+      "2-15.webp",
+      "2-16.webp",
+      "2-17.webp",
+      "2-18.webp",
+      "2-19.webp",
+      "2-20.webp"
     ],
-    "descripcion": "Vendo Chevrolet Sonic LT 1.6🏁\n\nAño: 2014🏁\nKm: 117.000🏁\nMotor: 1.6 16v🏁\nTransmisión: Manual🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "🤝 VENDIDO 🤝\n\n🚘 NISSAN VERSA 1.6 ADVANCE\n▶️ 2022\n▶️ 16.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "haval-h2-1-5t-2019",
-    "name": "Haval H2 1.5T",
-    "marca": "Haval",
-    "marcaId": "haval",
-    "ano": 2019,
-    "kilometraje": 80000,
+    "id": "chevrolet-captiva-ls-2-4-mt6-7-plazas-2016",
+    "name": "Chevrolet Captiva LS 2.4 MT6 7 Plazas",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2016,
+    "kilometraje": 160000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.5",
+    "transmision": "Manual",
+    "motor": "2.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -90,26 +109,32 @@
       "3-11.webp",
       "3-12.webp",
       "3-13.webp",
-      "3-14.webp"
+      "3-14.webp",
+      "3-15.webp",
+      "3-16.webp",
+      "3-17.webp",
+      "3-18.webp",
+      "3-19.webp",
+      "3-20.webp"
     ],
-    "descripcion": "Vendo Haval H2 1.5T 🖤🏁\n\nAño: 2019🏁\nKm: 80.000🏁\nMotor: 1.5T🏁\nTransmisión: Automática 🏁\nSegundo dueño🏁\nTapizado de cuero - Techo solar eléctrico🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 CHEVROLET CAPTIVA LS 2.4 MT6 7 PLAZAS\n▶️ 2016\n▶️ 160.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "ford-ranger-xlt-3-2-4x2-mt-2019",
-    "name": "Ford Ranger XLT 3.2 4x2 MT",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2019,
-    "kilometraje": 272000,
+    "id": "citroen-berlingo-1-6-hdi-busines-aa-dh-2017",
+    "name": "Citroen Berlingo 1.6 HDI Busines AA DH",
+    "marca": "Citroen",
+    "marcaId": "citroen",
+    "ano": 2017,
+    "kilometraje": 102000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "Utilitario",
     "transmision": "Manual",
-    "motor": "3.2",
+    "motor": "1.6",
     "combustible": "Diésel",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "4-1.webp",
       "4-2.webp",
@@ -120,26 +145,36 @@
       "4-7.webp",
       "4-8.webp",
       "4-9.webp",
-      "4-10.webp"
+      "4-10.webp",
+      "4-11.webp",
+      "4-12.webp",
+      "4-13.webp",
+      "4-14.webp",
+      "4-15.webp",
+      "4-16.webp",
+      "4-17.webp",
+      "4-18.webp",
+      "4-19.webp",
+      "4-20.webp"
     ],
-    "descripcion": "Vendo Ranger XLT 3.2 4x2 MT 🤍🏁\n\nAño: 2019🏁\nKm:272.000 (SORPRENDE POR SU ESTADO)🏁\nMotor: 3.2 🏁\nTransmisión: Manual🏁\nTracción: 4x2🏁\nÚnico dueño - Estado inobjetable 🏁\n4 Cubiertas Recién puestas ni 30 km🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 CITROEN BERLINGO 1.6 HDI BUSINES AA DH\n▶️ 2017\n▶️ 102.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "audi-a5-2-0t-stronic-2012",
-    "name": "Audi A5 2.0T Stronic",
+    "id": "audi-a1-1-4-tsi-attraction-mt6-2011",
+    "name": "Audi A1 1.4 TSI Attraction MT6",
     "marca": "Audi",
     "marcaId": "audi",
-    "ano": 2012,
-    "kilometraje": 190000,
+    "ano": 2011,
+    "kilometraje": 119000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Deportivo",
-    "transmision": "Automática",
-    "motor": "2.0",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.4",
     "combustible": "Nafta",
-    "puertas": 2,
+    "puertas": 3,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -150,26 +185,35 @@
       "5-7.webp",
       "5-8.webp",
       "5-9.webp",
-      "5-10.webp"
+      "5-10.webp",
+      "5-11.webp",
+      "5-12.webp",
+      "5-13.webp",
+      "5-14.webp",
+      "5-15.webp",
+      "5-16.webp",
+      "5-17.webp",
+      "5-18.webp",
+      "5-19.webp"
     ],
-    "descripcion": "Vendo Audi A5 2.0T Stronic 😎🏁\n\nAño: 2012🏁\nKm: 190.000🏁\nMotor: 2.0 T🏁\nTransmisión: Automática Stronic🏁\nTercer dueño🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nTapizado de cuero - techo solar eléctrico🏁\nPantalla con navegador🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 AUDI A1 1.4 TSI ATTRACTION MT6\n▶️ 2011\n▶️ 119.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "renault-clio-expression-1-2-2013",
-    "name": "Renault Clio Expression 1.2",
-    "marca": "Renault",
-    "marcaId": "renault",
+    "id": "mercedes-benz-c200-blueefficiency-mt6-2013",
+    "name": "Mercedes Benz C200 BlueEfficiency MT6",
+    "marca": "Mercedes",
+    "marcaId": "mercedes",
     "ano": 2013,
-    "kilometraje": 140000,
+    "kilometraje": 120000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.2",
+    "motor": "2.0",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -180,24 +224,34 @@
       "6-7.webp",
       "6-8.webp",
       "6-9.webp",
-      "6-10.webp"
+      "6-10.webp",
+      "6-11.webp",
+      "6-12.webp",
+      "6-13.webp",
+      "6-14.webp",
+      "6-15.webp",
+      "6-16.webp",
+      "6-17.webp",
+      "6-18.webp",
+      "6-19.webp",
+      "6-20.webp"
     ],
-    "descripcion": "Vendo Clio Expression 1.2 🐇🏁\n\nAño: 2013🏁\nKm: 140.000🏁\nMotor: 1.2 16v🏁\nTransmisión: Manual🏁\nÚnico dueño🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Faros auxiliares🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 MERCEDES BENZ C200 BLUEEFFICIENCY MT6\n▶️ 2013\n▶️ 120.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "volkswagen-gol-trend-1-6-pack-ii-2019",
-    "name": "Volkswagen Gol Trend 1.6 Pack II",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2019,
-    "kilometraje": 140000,
+    "id": "chevrolet-onix-1-0-turbo-ltz-at6-2022",
+    "name": "Chevrolet Onix 1.0 Turbo LTZ AT6",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2022,
+    "kilometraje": 48000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "transmision": "Automática",
+    "motor": "1.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -210,26 +264,36 @@
       "7-7.webp",
       "7-8.webp",
       "7-9.webp",
-      "7-10.webp"
+      "7-10.webp",
+      "7-11.webp",
+      "7-12.webp",
+      "7-13.webp",
+      "7-14.webp",
+      "7-15.webp",
+      "7-16.webp",
+      "7-17.webp",
+      "7-18.webp",
+      "7-19.webp",
+      "7-20.webp"
     ],
-    "descripcion": "Vendo VW Gol Trend 1.6 Pack II 🤍🏁\n\nAño: 2019🏁\nKm: 140.000🏁\nMotor: 1.6 N🏁\nTransmisión: Manual🏁\nÚnico dueño🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n▶️ CHEVROLET ONIX 1.0 TURBO LTZ AT6\n▶️ 2022\n▶️ 48.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "renault-logan-1-6-gnc-2014",
-    "name": "Renault Logan 1.6 GNC",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2014,
-    "kilometraje": 165000,
+    "id": "citroen-c3-aircross-1-6-shine-2016",
+    "name": "Citroen C3 Aircross 1.6 Shine",
+    "marca": "Citroen",
+    "marcaId": "citroen",
+    "ano": 2016,
+    "kilometraje": 107000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "SUV",
     "transmision": "Manual",
     "motor": "1.6",
-    "combustible": "GNC",
-    "puertas": 4,
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "8-1.webp",
       "8-2.webp",
@@ -240,24 +304,34 @@
       "8-7.webp",
       "8-8.webp",
       "8-9.webp",
-      "8-10.webp"
+      "8-10.webp",
+      "8-11.webp",
+      "8-12.webp",
+      "8-13.webp",
+      "8-14.webp",
+      "8-15.webp",
+      "8-16.webp",
+      "8-17.webp",
+      "8-18.webp",
+      "8-19.webp",
+      "8-20.webp"
     ],
-    "descripcion": "Vendo Renault Logan 1.6 GNC 🐝🏁\n\nAño: 2014🏁\nKm: 165.000🏁\nMotor: 1.6 N (c/ GNC)🏁\nTransmisión: Manual🏁\nSegundo dueño🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 CITROEN C3 AIRCROSS 1.6 SHINE\n▶️ 2016\n▶️ 107.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "peugeot-206-1-4-active-2012",
-    "name": "Peugeot 206 1.4 Active",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2012,
-    "kilometraje": 189000,
+    "id": "volkswagen-gol-trend-1-6-pack-ii-2019",
+    "name": "Volkswagen Gol Trend 1.6 Pack II",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2019,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -269,24 +343,25 @@
       "9-6.webp",
       "9-7.webp",
       "9-8.webp",
-      "9-9.webp"
+      "9-9.webp",
+      "9-10.webp"
     ],
-    "descripcion": "Vendo Peugeot 206 1.4 Active 🗿🏁\n\nAño: 2012🏁\nKm: 189.000🏁\nMotor: 1.4🏁\nTransmisión: Manual🏁\nSegundo dueño🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 VOLKSWAGEN GOL TREND 1.6 PACK II\n▶️ 2019\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "peugeot-208-road-trip-at-2024",
-    "name": "Peugeot 208 Road Trip AT",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2024,
-    "kilometraje": 5200,
+    "id": "renault-clio-expression-1-2-2013",
+    "name": "Renault Clio Expression 1.2",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2013,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "1.6",
+    "transmision": "Manual",
+    "motor": "1.2",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -297,27 +372,25 @@
       "10-5.webp",
       "10-6.webp",
       "10-7.webp",
-      "10-8.webp",
-      "10-9.webp",
-      "10-10.webp"
+      "10-8.webp"
     ],
-    "descripcion": "Vendo Peugeot 208 Road Trip AT 🩶🏁\n\nAño: 2024🏁\nKm: 5.200🏁\nMotor: 1.6🏁\nTransmisión: Automático🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nNavegador c/ Car Play - Techo panorámico 🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 RENAULT CLIO EXPRESSION 1.2\n▶️ 2013\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "peugeot-308-1-6-hdi-2015",
-    "name": "Peugeot 308 1.6 Hdi",
+    "id": "peugeot-208-road-trip-at-2024",
+    "name": "Peugeot 208 Road Trip AT",
     "marca": "Peugeot",
     "marcaId": "peugeot",
-    "ano": 2015,
-    "kilometraje": 135000,
+    "ano": 2024,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
-    "transmision": "Manual",
+    "transmision": "Automática",
     "motor": "1.6",
-    "combustible": "Diésel",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "11-1.webp",
@@ -326,29 +399,26 @@
       "11-4.webp",
       "11-5.webp",
       "11-6.webp",
-      "11-7.webp",
-      "11-8.webp",
-      "11-9.webp",
-      "11-10.webp"
+      "11-7.webp"
     ],
-    "descripcion": "Vendo Peugeot 308 1.6 Hdi ❤️‍🔥🏁\n\nAño: 2015🏁\nKm: 135.000🏁\nMotor: 1.6 Hdi🏁\nTransmisión: Manual🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nTapizado de cuero - Techo panorámico 🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 PEUGEOT 208 ROAD TRIP AT\n▶️ 2024\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   },
   {
-    "id": "volkswagen-gol-1-4-n-2016",
-    "name": "Volkswagen Gol 1.4 N",
+    "id": "volkswagen-amarok-180-hp-trendline-2015",
+    "name": "Volkswagen Amarok 180 HP Trendline",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2016,
-    "kilometraje": 72000,
+    "ano": 2015,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Pickup",
     "transmision": "Manual",
-    "motor": "1.4",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "2.0",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "12-1.webp",
       "12-2.webp",
@@ -357,10 +427,8 @@
       "12-5.webp",
       "12-6.webp",
       "12-7.webp",
-      "12-8.webp",
-      "12-9.webp",
-      "12-10.webp"
+      "12-8.webp"
     ],
-    "descripcion": "Duro 20 minutos y fue mucho 🙊🏁\n\nAño: 2016🏁\nKm: 72.000🏁\nMotor: 1.4 N🏁\nTransmisión: Manual🏁\nÚnica dueña - Service Oficiales🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Faros auxiliares🏁\nAlgunos detalles estéticos 🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendido transferido🏁\nPermuto - Financio"
+    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 VOLKSWAGEN AMAROK 180 HP TRENDLINE\n▶️ 2015\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
   }
 ]
