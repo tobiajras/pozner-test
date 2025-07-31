@@ -5,24 +5,24 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'garagevip',
-  name: 'Garage Vip',
-  adress: 'Rivadavia 11061',
-  city: 'Liniers',
-  email: 'garageautosvip@gmail.com',
-  instagram: 'garageautosvip',
-  facebook: 'https://www.facebook.com/garageautosvip/',
-  whatsapp: ['1144794843'],
-  googlemapsLink: 'https://maps.app.goo.gl/rWxnJsvFYt18J3KHA',
+  id: 'mymautomotores',
+  name: 'M&M Automotores',
+  adress: 'Av. Mitre 3873',
+  city: '9 De Julio',
+  email: 'mymautomotores@gmail.com',
+  instagram: 'mym_automotores',
+  facebook: null,
+  whatsapp: ['2317447160'],
+  googlemapsLink: 'https://maps.app.goo.gl/1bKcXbj16ThCm5is5',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.62243791898!2d-58.520079700000004!3d-34.6389804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc84870aa861f%3A0xa37ea2a9196d0b7!2sAutos%20Vip!5e0!3m2!1sen!2sar!4v1753912661289!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831966.9516122626!2d-60.91026176360495!3d-35.45799030388586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bf0dcf84aad1df%3A0xf95cd2944b29cb72!2sM%26M%20AUTOMOTORES!5e0!3m2!1sen!2sar!4v1753923153206!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['10:00 a 18:30hs'] },
-    { day: 'Martes', hours: ['10:00 a 18:30hs'] },
-    { day: 'Miércoles', hours: ['10:00 a 18:30hs'] },
-    { day: 'Jueves', hours: ['10:00 a 18:30hs'] },
-    { day: 'Viernes', hours: ['10:00 a 18:30hs'] },
-    { day: 'Sábado', hours: ['10:00 a 15:00hs'] },
+    { day: 'Lunes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Martes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Miércoles', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Jueves', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Viernes', hours: ['8:30 a 12:30 y 16 a 20hs'] },
+    { day: 'Sábado', hours: ['9 a 12:30hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://garagevip.vercel.app/',
-  title: 'Garage Vip - Compra y Venta de Autos',
+  metadataBase: 'https://mymautomotores.vercel.app/',
+  title: 'M&M Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

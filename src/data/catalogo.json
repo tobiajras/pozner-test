@@ -1,18 +1,18 @@
 [
   {
-    "id": "volkswagen-nivus-highline-1-0tsi-tiptronic-2021",
-    "name": "Volkswagen Nivus Highline 1.0 TSI Tiptronic",
+    "id": "volkswagen-suran-1-6-trendline-2017",
+    "name": "Volkswagen Suran 1.6 Trendline",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2021,
-    "kilometraje": 28000,
+    "ano": 2017,
+    "kilometraje": 199000,
     "precio": {
-      "valor": 999999,
+      "valor": 17500000,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.0",
+    "categoria": "Utilitario",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -27,28 +27,24 @@
       "1-9.webp",
       "1-10.webp",
       "1-11.webp",
-      "1-12.webp",
-      "1-13.webp",
-      "1-14.webp",
-      "1-15.webp",
-      "1-16.webp"
+      "1-12.webp"
     ],
-    "descripcion": "Volkswagen Nivus Highline 1.0Tsi Tiptronic\n\n🗓️ Año 2021\n🛣️ 28.000kms con servicios oficiales\n\nLa versión mas completa de todas\nInmejorable estado!\n\nTomamos tú vehículo usado en permuta❗\n\nGarage 🚘 Vip"
+    "descripcion": "VW SURAN 1.6 TRENDLINE 2017!\n\n🛣️ 199 MIL KM\n💰 $ 17.500.000!"
   },
   {
-    "id": "mitsubishi-outlander-gls-4x4-at-7-asientos-2016",
-    "name": "Mitsubishi Outlander GLS 4x4 AT 7 Asientos",
-    "marca": "Mitsubishi",
-    "marcaId": "mitsubishi",
-    "ano": 2016,
-    "kilometraje": 123000,
+    "id": "chevrolet-onix-1-2-lt-2020",
+    "name": "Chevrolet Ónix 1.2 LT",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2020,
+    "kilometraje": 15000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.4",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.2",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -60,31 +56,26 @@
       "2-6.webp",
       "2-7.webp",
       "2-8.webp",
-      "2-9.webp",
-      "2-10.webp",
-      "2-11.webp",
-      "2-12.webp",
-      "2-13.webp",
-      "2-14.webp"
+      "2-9.webp"
     ],
-    "descripcion": "Mitsubishi Outlander Gls 4x4 At 7 asientos\n\n🗓️ Año 2016 (patente nueva mercosur)\n🛣️ 123.000kms (services oficiales)\n\nUnica dueña!\nEstado impecable!\nMuchísimo equipamiento\n\nCalienta asientos\nLevas al volante\nTecho corredizo\nSensor de estacionamiento\nCamara de estacionamiento\nBoton de apertura de baul automático\nCuero\nSensor de proximidad de choque y mucho mas!\n\nTómamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
+    "descripcion": "CHEVROLET ÓNIX 1.2 LT 2020!\n\n🛣️ 15 MIL KM\n\nVENDIDO!"
   },
   {
-    "id": "volkswagen-gol-trend-5-puertas-2012",
-    "name": "Volkswagen Gol Trend 5 Puertas",
+    "id": "volkswagen-amarok-v6-highline-2023",
+    "name": "Volkswagen Amarok V6 Highline",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2012,
-    "kilometraje": 142000,
+    "ano": 2023,
+    "kilometraje": 16000,
     "precio": {
-      "valor": 8900,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "categoria": "Pickup",
+    "transmision": "Automática",
+    "motor": "3.0",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "3-1.webp",
       "3-2.webp",
@@ -97,26 +88,29 @@
       "3-9.webp",
       "3-10.webp",
       "3-11.webp",
-      "3-12.webp"
+      "3-12.webp",
+      "3-13.webp",
+      "3-14.webp",
+      "3-15.webp"
     ],
-    "descripcion": "Volkswagen Gol Trend 5 puertas\n\n🗓️ Año 2012\n🛣️ 142.000kms\n\nAire - Direccion\n4 Cubiertas nuevas!\n\n💰 8900 Usd\n\nTómamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
+    "descripcion": "VW AMAROK V6 HIGLINE 2023!\n\n🛣️ 16 MIL KM\n\nVENDIDA!"
   },
   {
-    "id": "renault-clio-mio-2015",
-    "name": "Renault Clio Mio",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2015,
-    "kilometraje": 79000,
+    "id": "fiat-toro-1-8-freedom-gnc-2020",
+    "name": "Fiat Toro 1.8 Freedom (GNC)",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2020,
+    "kilometraje": 123000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Pickup",
     "transmision": "Manual",
-    "motor": "1.2",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "1.8",
+    "combustible": "GNC",
+    "puertas": 4,
     "images": [
       "4-1.webp",
       "4-2.webp",
@@ -129,26 +123,27 @@
       "4-9.webp",
       "4-10.webp",
       "4-11.webp",
-      "4-12.webp"
+      "4-12.webp",
+      "4-13.webp"
     ],
-    "descripcion": "Renault Clio Mio\n\n🗓️ Año fines del 2015\n🛣️ 79.000 kms\n\nUnico dueño de 0km!\nLlantas de aleacion\n4 cubiertas nuevas!\nAire / Dirección\nCierre centralizado/ alarma\nLevanta vidrios eléctricos\nEstereon con control\nFaros auxiliares\nVTV al dia\n\nTomamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
+    "descripcion": "FIAT TORO 1.8 FREEDOM (GNC) 2020!\n\n🛣️ 123 MIL KM\n\nVENDIDA!"
   },
   {
-    "id": "nissan-zx300-twin-turbo-1992",
-    "name": "Nissan ZX300 Twin Turbo",
-    "marca": "Nissan",
-    "marcaId": "nissan",
-    "ano": 1992,
-    "kilometraje": 50000,
+    "id": "chevrolet-onix-1-0-rs-turbo-0km",
+    "name": "Chevrolet Ónix 1.0 RS Turbo",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2024,
+    "kilometraje": 0,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Deportivo",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "3.0",
+    "motor": "1.0",
     "combustible": "Nafta",
-    "puertas": 2,
+    "puertas": 5,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -166,26 +161,27 @@
       "5-14.webp",
       "5-15.webp",
       "5-16.webp",
-      "5-17.webp"
+      "5-17.webp",
+      "5-18.webp"
     ],
-    "descripcion": "Nissan Zx300 Twin Turbo 🇯🇵\n\n🗓️ Año 1992\n🛣️ 50.000\n\nSe vende únicamente transferida❗\n\nGarage 🚘 Vip"
+    "descripcion": "CHEVROLET ÓNIX 1.0 RS TURBO 0KM!"
   },
   {
-    "id": "jeep-compass-longitude-2-4-2019",
-    "name": "Jeep Compass Longitude 2.4",
-    "marca": "Jeep",
-    "marcaId": "jeep",
-    "ano": 2019,
-    "kilometraje": 55000,
+    "id": "volkswagen-amarok-trendline-2021",
+    "name": "Volkswagen Amarok Trendline",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2021,
+    "kilometraje": 96000,
     "precio": {
-      "valor": 24900,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.4",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "categoria": "Pickup",
+    "transmision": "Manual",
+    "motor": "2.0",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -198,24 +194,24 @@
       "6-9.webp",
       "6-10.webp"
     ],
-    "descripcion": "Jeep compass Longitude 2.4\n\n🗓️ Año 2019\n🛣️ 55.000 kms\n\nLa versión mas full de todas con cuero, camara de estacionamiento trasera, levas al volante y mas...\n\n💰 24.900 usd\n\nTómamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
+    "descripcion": "VW AMAROK TRENDLINE 2021!\n\n🛣️ 96 MIL KM\n\nVENDIDA!"
   },
   {
-    "id": "volkswagen-suran-highline-msi-1-6-2019",
-    "name": "Volkswagen Suran Highline MSI 1.6",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2019,
-    "kilometraje": 86000,
+    "id": "chevrolet-classic-1-4-ls-gnc-2014",
+    "name": "Chevrolet Classic 1.4 LS (GNC)",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2014,
+    "kilometraje": 209000,
     "precio": {
-      "valor": 16900,
-      "moneda": "USD"
+      "valor": 11000000,
+      "moneda": "ARS"
     },
-    "categoria": "Utilitario",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "1.4",
+    "combustible": "GNC",
+    "puertas": 4,
     "images": [
       "7-1.webp",
       "7-2.webp",
@@ -226,26 +222,28 @@
       "7-7.webp",
       "7-8.webp",
       "7-9.webp",
-      "7-10.webp"
+      "7-10.webp",
+      "7-11.webp",
+      "7-12.webp"
     ],
-    "descripcion": "Volkswagen Suran Highline Msi 1.6\n\n🗓️ Año 2019\n🛣️ 86.000kms\n\n4 cubiertas nuevas\nSensor de estacionamiento delantero y trasero!\nEl color mas lindo!\n\n💰 16.900 Usd\n\nTomamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
+    "descripcion": "CHEVROLET CLASSIC 1.4 LS (gnc) 2014!\n\n🛣️ 209 MIL KM\n💰 $ 11.000.000!"
   },
   {
-    "id": "honda-hrv-1-8-exl-at-cvt-2017",
-    "name": "Honda HRV 1.8 EXL AT CVT",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2017,
-    "kilometraje": 69000,
+    "id": "toyota-hilux-2-5-dx-2011",
+    "name": "Toyota Hilux 2.5 DX",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2011,
+    "kilometraje": 310000,
     "precio": {
-      "valor": 22900,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.8",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "categoria": "Pickup",
+    "transmision": "Manual",
+    "motor": "2.5",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "8-1.webp",
       "8-2.webp",
@@ -256,25 +254,28 @@
       "8-7.webp",
       "8-8.webp",
       "8-9.webp",
-      "8-10.webp"
+      "8-10.webp",
+      "8-11.webp",
+      "8-12.webp",
+      "8-13.webp"
     ],
-    "descripcion": "VENDIDA!\n\nHonda Hrv 1.8 EXL AT Cvt\n\n🗓️ Año 2017\n🛣️ 69.000 kms (services oficiales en honda pilar)\n\nLa mas full\nCuero\nCamara de estacionamiento trasera\n\n💰 22.900 Usd\n\nTomamos tu vehículo usado en permuta❗\n\nGarage 🚘 Vip"
+    "descripcion": "TOYOTA HILUX 2.5 DX 2011!\n\n🛣️ 310 MIL KM\n\nVENDIDA!"
   },
   {
-    "id": "peugeot-208-feline-1-6-2019",
-    "name": "Peugeot 208 Feline 1.6",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2019,
-    "kilometraje": 87000,
+    "id": "renault-duster-1-6-gnc-privilege-2015",
+    "name": "Renault Duster 1.6 (GNC) Privilege",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2015,
+    "kilometraje": 183000,
     "precio": {
-      "valor": 16900000,
+      "valor": 18000000,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
     "motor": "1.6",
-    "combustible": "Nafta",
+    "combustible": "GNC",
     "puertas": 5,
     "images": [
       "9-1.webp",
@@ -286,26 +287,31 @@
       "9-7.webp",
       "9-8.webp",
       "9-9.webp",
-      "9-10.webp"
+      "9-10.webp",
+      "9-11.webp",
+      "9-12.webp",
+      "9-13.webp",
+      "9-14.webp",
+      "9-15.webp"
     ],
-    "descripcion": "Peugeot 208 Feline 1.6\n\n🗓️ Año 2019\n🛣️ 87.000kms (services oficiales)\n\nLa version mas completa de los 208\nBuen estado general!\n\n💰 16.900.000\n\nTomamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
+    "descripcion": "RENAULT DUSTER 1.6 (gnc) PRIVILEGE 2015!\n\n🛣️ 183 MIL KM\n💰 $ 18.000.000!"
   },
   {
-    "id": "jeep-compass-sport-1-3-t270-at-2022",
-    "name": "Jeep Compass Sport 1.3 T270 AT",
-    "marca": "Jeep",
-    "marcaId": "jeep",
-    "ano": 2022,
-    "kilometraje": 22000,
+    "id": "volkswagen-amarok-180-hp-trendline-2015",
+    "name": "Volkswagen Amarok 180 HP Trendline",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2015,
+    "kilometraje": 222000,
     "precio": {
-      "valor": 31000,
-      "moneda": "USD"
+      "valor": 26000000,
+      "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.3",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "categoria": "Pickup",
+    "transmision": "Manual",
+    "motor": "2.0",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -316,26 +322,30 @@
       "10-7.webp",
       "10-8.webp",
       "10-9.webp",
-      "10-10.webp"
+      "10-10.webp",
+      "10-11.webp",
+      "10-12.webp",
+      "10-13.webp",
+      "10-14.webp"
     ],
-    "descripcion": "VENDIDA!\n\nJeep Compass Sport 1.3 T270 At\n\n🗓️ Año 2022\n🛣️ 22.000kms (services oficiales)\n\nUnico dueño❗\nCuero a pedido, desde 0km en concesionario oficial Jeep.\nEstado impecable\n\n💰 31.000 Usd\n\nTomamos tu vehículo usado en permuta❗\n\nGarage 🚘 Vip"
+    "descripcion": "VW AMAROK 180 HP TRENDLINE 2015!\n\n🛣️ 222 MIL KM\n💰 $ 26.000.000!"
   },
   {
-    "id": "toyota-etios-1-5-xls-automatico-2019",
-    "name": "Toyota Etios 1.5 XLS Automático",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2019,
-    "kilometraje": 6000,
+    "id": "renault-duster-oroch-1-6-privilege-2020",
+    "name": "Renault Duster Oroch 1.6 Privilege",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2020,
+    "kilometraje": 43000,
     "precio": {
-      "valor": 18800,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "1.5",
+    "categoria": "Pickup",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "11-1.webp",
       "11-2.webp",
@@ -346,26 +356,33 @@
       "11-7.webp",
       "11-8.webp",
       "11-9.webp",
-      "11-10.webp"
+      "11-10.webp",
+      "11-11.webp",
+      "11-12.webp",
+      "11-13.webp",
+      "11-14.webp",
+      "11-15.webp",
+      "11-16.webp",
+      "11-17.webp"
     ],
-    "descripcion": "VENDIDO!\n\nToyota Etios 1.5 Xls Automatico\n\n🗓️ Año 2019\n🛣️ Solo 6.000kms\n\nService oficiales por tiempo!\nIgual a 0km!\n\n💰 18.800 Usd\n\nTomamos tu vehículo en permuta❗\n\nGarage 🚘 Vip"
+    "descripcion": "RENAULT DUSTER OROCH 1.6 PRIVILEGE 2020!\n\n🛣️ 43 MIL KM\n\nVENDIDA!"
   },
   {
-    "id": "subaru-impreza-1-8-gl-awd-1996",
-    "name": "Subaru Impreza 1.8 GL AWD",
-    "marca": "Subaru",
-    "marcaId": "subaru",
-    "ano": 1996,
-    "kilometraje": 160000,
+    "id": "volkswagen-gol-1-6-power-2010",
+    "name": "Volkswagen Gol 1.6 Power",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2010,
+    "kilometraje": 98000,
     "precio": {
-      "valor": 8500,
-      "moneda": "USD"
+      "valor": 999999,
+      "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.8",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "12-1.webp",
       "12-2.webp",
@@ -378,6 +395,6 @@
       "12-9.webp",
       "12-10.webp"
     ],
-    "descripcion": "VENDIDA ❗\n\nSubaru Impreza 1.8 Gl Awd\n\n🗓️ Año 1996\n🛣️ 160.000kms Reales\n\nEstado impecable!\nSiempre atendida en concesionario oficial Subaru.\n\nTomamos tu vehículo usado en permuta ❗\n\n💰 8500 Usd\n\nGarage 🚘 Vip"
+    "descripcion": "VW GOL 1.6 POWER 2010!\n\n🛣️ 98 MIL KM\n\nVENDIDO!"
   }
 ]

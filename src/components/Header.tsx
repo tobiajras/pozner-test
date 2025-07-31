@@ -59,7 +59,7 @@ const Header = () => {
                 </div>
               </>
             ) : (
-              <div className='h-14 md:h-16 w-48 sm:w-56 md:w-64'>
+              <div className='h-14 md:h-16 w-64 sm:w-80 lg:w-96'>
                 <Image
                   priority
                   className='h-full w-full object-contain object-left'
