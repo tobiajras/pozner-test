@@ -83,9 +83,9 @@ const Header = () => {
                       nav.button
                         ? `${
                             company.dark
-                              ? 'text-color-title-light hover:bg-color-primary-dark'
-                              : 'text-color-title-light hover:bg-color-primary-dark'
-                          }  bg-color-primary px-5 py-3 rounded-md`
+                              ? 'text-color-title-light bg-color-primary-dark hover:bg-color-primary'
+                              : 'text-color-title-light bg-color-primary hover:bg-color-primary-dark'
+                          } px-5 py-3 rounded-md`
                         : company.darkmode
                         ? `text-color-text-light hover:text-color-title-light ${
                             !nav.button && isActive && 'text-color-title-light'
@@ -99,7 +99,13 @@ const Header = () => {
                     {nav.title}
                   </Link>
                   {!nav.button && isActive && (
-                    <span className='absolute -bottom-2 left-0 w-full scale-x-110 h-0.5 bg-color-primary transition-all duration-300'></span>
+                    <span
+                      className={`absolute -bottom-2 left-0 w-full scale-x-110 h-0.5 ${
+                        company.dark
+                          ? 'bg-color-primary-dark'
+                          : 'bg-color-primary'
+                      } transition-all duration-300`}
+                    ></span>
                   )}
                 </li>
               );

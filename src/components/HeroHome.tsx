@@ -13,7 +13,7 @@ const HeroHome = () => {
     >
       <div className={`max-w-[1920px] w-full flex flex-col items-center z-10`}>
         <div className='flex justify-center max-w-6xl lg:max-w-[1920px] w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
-          <article className='h-[400px] md:h-[480px] lg:h-[580px] xl:h-[650px] relative w-full flex flex-col items-center justify-center md:min-w-[430px] lg:min-w-[540px] z-20'>
+          <article className='h-[400px] md:h-[480px] lg:h-[600px] xl:h-[680px] relative w-full flex flex-col items-center justify-center md:min-w-[430px] lg:min-w-[540px] z-20'>
             <HeroCarousel />
             <div
               className={`absolute w-full h-full top-0 -right-0 bg-black/65 md:bg-black/75 -z-20`}
@@ -47,8 +47,8 @@ const HeroHome = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className='text-lg lg:text-xl xl:text-2xl text-center text-color-text-light mx-4 max-w-md sm:max-w-md lg:max-w-lg xl:max-w-2xl'
             >
-              Autos multimarca, calidad garantizada y planes de financiación a
-              tu medida. ¡Contactanos!
+              Concesionaria multimarca. Vehículos seleccionados, precios
+              competitivos y atención profesional. ¡Contactanos!
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -62,31 +62,20 @@ const HeroHome = () => {
                   company.dark
                     ? 'text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark'
                     : 'text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark'
-                } lg:text-lg transition-colors py-2.5 md:py-3.5 px-5 md:px-8 rounded-full font-medium`}
+                } lg:text-lg transition-colors py-2.5 md:py-3.5 px-5 md:px-8 rounded-lg`}
               >
                 Ver Catálogo
               </Link>
-              {/* <Link
-                href='/catalogo'
-                className={`${
-                  company.dark
-                    ? 'text-color-title-light bg-color-primary hover:bg-color-primary-dark'
-                    : 'text-color-title bg-color-primary hover:bg-color-primary-dark'
-                } transition-colors py-4 px-6 md:px-8 rounded-full font-medium`}
-              >
-                Ver Catálogo
-              </Link> */}
-
-              {/* <Link
+              <Link
                 href='/contacto'
                 className={`${
                   company.dark
-                    ? 'text-color-title-light bg-black/30 backdrop-blur-[2px] ring ring-color-primary-dark hover:bg-color-primary-dark hover:text-color-title-light'
-                    : 'text-color-title bg-color-primary-light/20 ring ring-color-primary-light hover:bg-color-primary-dark hover:text-color-title-light'
-                } transition-colors py-4 px-6 md:px-8 rounded-full font-medium`}
+                    ? 'backdrop-blur bg-white/10 text-white font-medium ring ring-color-primary-dark hover:bg-white/20'
+                    : 'backdrop-blur bg-white/10 text-white font-medium ring ring-color-primary-dark hover:bg-white/20'
+                } lg:text-lg transition-colors py-2.5 md:py-3.5 px-5 md:px-8 rounded-lg`}
               >
                 Contactanos
-              </Link> */}
+              </Link>
             </motion.div>
           </article>
         </div>

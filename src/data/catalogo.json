@@ -1,19 +1,19 @@
 [
   {
-    "id": "vw-t-cross-trendline-200tsi-at-2025",
-    "name": "VW T-Cross Trendline 200TSI AT",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2025,
-    "kilometraje": 0,
+    "id": "mercedes-vito-111-cdi-2015",
+    "name": "Mercedes Vito 111 CDI",
+    "marca": "Mercedes",
+    "marcaId": "mercedes",
+    "ano": 2015,
+    "kilometraje": 148000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.0",
-    "combustible": "Nafta",
+    "categoria": "Utilitario",
+    "transmision": "Manual",
+    "motor": "2.2",
+    "combustible": "Diésel",
     "puertas": 5,
     "images": [
       "1-1.webp",
@@ -24,31 +24,24 @@
       "1-6.webp",
       "1-7.webp",
       "1-8.webp",
-      "1-9.webp",
-      "1-10.webp",
-      "1-11.webp",
-      "1-12.webp",
-      "1-13.webp",
-      "1-14.webp",
-      "1-15.webp",
-      "1-16.webp"
+      "1-9.webp"
     ],
-    "descripcion": "// VW T-CROSS //\n\n✅ Versión: TRENDLINE 200TSI AT\n✅ Año: 2025\n✅ Kilometraje: 0km\n📌 Motor: 1.0 TSI\n⛽️ Combustible: NAFTA\n⚙️ Transmisión: AUTOMÁTICA\n\n📍 Ubicación: San Isidro, Villa Adelina\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "🛣️ MERCEDES VITO\n\nAÑO: 2015\nMODELO: VITO 111 CDI\nKM: 148.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
   },
   {
-    "id": "volkswagen-nivus-trendline-at-2025",
-    "name": "Volkswagen Nivus Trendline AT",
+    "id": "volkswagen-gol-power-2011",
+    "name": "Volkswagen Gol Power",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2025,
-    "kilometraje": 2200,
+    "ano": 2011,
+    "kilometraje": 117000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.0",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -59,36 +52,26 @@
       "2-5.webp",
       "2-6.webp",
       "2-7.webp",
-      "2-8.webp",
-      "2-9.webp",
-      "2-10.webp",
-      "2-11.webp",
-      "2-12.webp",
-      "2-13.webp",
-      "2-14.webp",
-      "2-15.webp",
-      "2-16.webp",
-      "2-17.webp",
-      "2-18.webp"
+      "2-8.webp"
     ],
-    "descripcion": "// VOLKSWAGEN NIVUS //\n\n✅ Versión: TRENDLINE AT\n✅ Año: 2025\n✅ Kilometraje: 2.200\n📌 Motor: 1.0\n⛽️ Combustible: NAFTA\n⚙️ Transmisión: AUTOMÁTICA\n💎 Primera Mano: SI\n\nAGREGADOS:\nAlfombras ZIEL TECH\nPolarizado intermedio\nTuercas de seguridad\nAlfombra en baúl\n\n📍 Ubicación: San Isidro, Villa Adelina\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "💣 GOL POWER\n\nAÑO: 2011\nMODELO: GOL POWER\nMOTOR: 1.4 L\nKM: 117.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
   },
   {
-    "id": "volkswagen-amarok-highline-pack-4x4-at-2016",
-    "name": "Volkswagen Amarok Highline Pack 4x4 AT",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2016,
-    "kilometraje": 85600,
+    "id": "audi-a1-3ptas-2012",
+    "name": "Audi A1 3ptas",
+    "marca": "Audi",
+    "marcaId": "audi",
+    "ano": 2012,
+    "kilometraje": 100000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "2.0",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.2",
+    "combustible": "Nafta",
+    "puertas": 3,
     "images": [
       "3-1.webp",
       "3-2.webp",
@@ -98,33 +81,23 @@
       "3-6.webp",
       "3-7.webp",
       "3-8.webp",
-      "3-9.webp",
-      "3-10.webp",
-      "3-11.webp",
-      "3-12.webp",
-      "3-13.webp",
-      "3-14.webp",
-      "3-15.webp",
-      "3-16.webp",
-      "3-17.webp",
-      "3-18.webp",
-      "3-19.webp"
+      "3-9.webp"
     ],
-    "descripcion": "// VOLKSWAGEN AMAROK //\n\n✅ Versión: HIGHLINE PACK 4X4 AT L/16\n✅ Año: 2016\n✅ Kilometraje: 85.600\n📌 Motor: 2.0T\n⛽️ Combustible: DIÉSEL\n⚙️ Transmisión: AUTOMÁTICO\n💎 Primera Mano: SI\n\nService oficiales, 4 neumáticos nuevos Michelin. Estribos, lona, tuercas de seguridad, cobertor y barra san Antonio.\n\n📍 Ubicación: San Isidro, Villa Adelina\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "💣 AUDI A1\n\nAÑO: 2012\nMODELO: A1 3ptas\nMOTOR: 1.2 TFSI\nKM: 100.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
   },
   {
-    "id": "peugeot-208-allure-touchscreen-2015",
-    "name": "Peugeot 208 Allure Touchscreen",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2015,
-    "kilometraje": 78000,
+    "id": "ford-ecosport-se-2013",
+    "name": "Ford Ecosport SE",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2013,
+    "kilometraje": 160000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Automática",
+    "categoria": "SUV",
+    "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
@@ -137,27 +110,24 @@
       "4-6.webp",
       "4-7.webp",
       "4-8.webp",
-      "4-9.webp",
-      "4-10.webp",
-      "4-11.webp",
-      "4-12.webp"
+      "4-9.webp"
     ],
-    "descripcion": "// PEUGEOT 208 //\n\n✅ Versión: ALLURE TOUCHSCREEN\n✅ Año: 2015\n✅ Kilometraje: 78.000\n📌 Motor: 1.6 16v\n⛽️ Combustible: NAFTA\n⚙️ Transmisión: AUTOMÁTICA\n💎 Primera Mano: NO\n\n📍 Ubicación: San Isidro, Villa Adelina\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "🚙 ECOSPORT SE\n\nAÑO: 2013\nMODELO: ECOSPORT SE\nMOTOR: 1.6L\nKM: 160.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
   },
   {
-    "id": "peugeot-207-active-2014",
-    "name": "Peugeot 207 Active",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2014,
-    "kilometraje": 98000,
+    "id": "ford-ka-s-1-5l-2019",
+    "name": "Ford Ka S 1.5L",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2019,
+    "kilometraje": 144000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "1.5",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -168,63 +138,52 @@
       "5-5.webp",
       "5-6.webp",
       "5-7.webp",
-      "5-8.webp",
-      "5-9.webp",
-      "5-10.webp",
-      "5-11.webp",
-      "5-12.webp"
+      "5-8.webp"
     ],
-    "descripcion": "// PEUGEOT 207 //\n\n✅ Versión: ACTIVE\n✅ Año: 2014\n✅ Kilometraje: 98.000\n📌 Motor: 1.4 8v\n⛽️ Combustible: NAFTA\n⚙️ Transmisión: MANUAL\n\n📍 Ubicación: San Isidro, Villa Adelina\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "🚦 FORD KA S\n\nAÑO: 2019\nMODELO: FORD KA S 1.5L\nKM: 144.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
   },
   {
-    "id": "citroen-c3-feel-1-6-vti-115-cv-2017",
-    "name": "Citroen C3 Feel 1.6 VTI 115 CV",
-    "marca": "Citroen",
-    "marcaId": "citroen",
-    "ano": 2017,
-    "kilometraje": 98000,
+    "id": "suzuki-fun-2008",
+    "name": "Suzuki Fun",
+    "marca": "Suzuki",
+    "marcaId": "suzuki",
+    "ano": 2008,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
-      "6-1.webp",
-      "6-2.webp",
       "6-3.webp",
+      "6-2.webp",
+      "6-1.webp",
       "6-4.webp",
       "6-5.webp",
-      "6-6.webp",
-      "6-7.webp",
-      "6-8.webp",
-      "6-9.webp",
-      "6-10.webp",
-      "6-11.webp",
-      "6-12.webp",
-      "6-13.webp"
+      "6-6.webp"
     ],
-    "descripcion": "// CITROEN C3 //\n\n✅ Versión: FEEL 1.6 VTI 115 CV\n✅ Año: 2017\n✅ Kilometraje: 98.000\n📌 Motor: 1.6\n⛽️ Combustible: NAFTA\n⚙️ Transmisión: MANUAL\n💎 Primera Mano: SI\n\n📍 Ubicación: San Isidro, Villa Adelina\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "🚘 SUZUKI FUN\n\nAÑO: 2008\nMODELO: FUN\nMOTOR: 1.4\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
   },
   {
-    "id": "toyota-etios-xls-at-2017",
-    "name": "Toyota Etios XLS AT",
-    "marca": "Toyota",
-    "marcaId": "toyota",
+    "id": "chery-tiggo-3-1-6-comfort-2017",
+    "name": "Chery Tiggo 3 1.6 Comfort",
+    "marca": "Chery",
+    "marcaId": "chery",
     "ano": 2017,
-    "kilometraje": 56000,
+    "kilometraje": 105000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "1.5",
+    "categoria": "SUV",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "7-1.webp",
       "7-2.webp",
@@ -234,52 +193,73 @@
       "7-6.webp",
       "7-7.webp",
       "7-8.webp",
-      "7-9.webp",
-      "7-10.webp",
-      "7-11.webp",
-      "7-12.webp"
+      "7-9.webp"
     ],
-    "descripcion": "// TOYOTA ETIOS //\n\n✅ Versión: XLS AT\n✅ Año: 2017\n✅ Kilometraje: 56.000\n📌 Motor: 1.5 16v\n⛽️ Combustible: NAFTA\n⚙️ Transmisión: AUTOMÁTICA\n\n📍 Ubicación: San Isidro, Villa Adelina\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "VENDIDA ‼️\n💎 CHERY TIGGO\n\nAÑO: 2017\nMODELO: CHERY TIGGO 3 1.6 COMFORT\nKM: 105.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO"
   },
   {
-    "id": "ford-ranger-4x4-dob-cabina-xl-2-2-tdci-4x4-2021",
-    "name": "Ford Ranger 4x4 Dob Cabina XL 2.2 TDCI 4x4",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2021,
-    "kilometraje": 49000,
+    "id": "citroen-aircross-155-feel-2016",
+    "name": "Citroen Aircross 155 Feel",
+    "marca": "Citroen",
+    "marcaId": "citroen",
+    "ano": 2016,
+    "kilometraje": 79000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "2.2",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "8-1.webp",
       "8-2.webp",
       "8-3.webp",
       "8-4.webp",
       "8-5.webp",
-      "8-6.webp",
-      "8-7.webp",
-      "8-8.webp",
-      "8-9.webp",
-      "8-10.webp",
-      "8-11.webp",
-      "8-12.webp"
+      "8-6.webp"
     ],
-    "descripcion": "// FORD RANGER 4X4 DOB CABINA //\n\n✅ Versión: XL 2.2 TDCI 4X4\n✅ Año: 2021\n✅ Kilometraje: 49.000\n📌 Motor: 2.2 TDCI 150CV\n⛽️ Combustible: DIÉSEL\n⚙️ Transmisión: MANUAL\n💎 Primera Mano: SI\n\nAGREGADOS:\nLONA MARINA\nCOBERTOR DE CAJA\nCUBIERTAS YOKOHAMA GEOLANDAR 285/70 r17\nKIT DE ALTURA +3CM\nSEPARADORES +3CM\nPARAGOLPES PINTADO C. CARROCERIA\nFAROS ANTINIEBLAS\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "⚙️ CITROEN AIRCROSS\n\nAÑO: 2016\nMODELO: AIRCROSS 155 FEEL\nKM: 79.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
   },
   {
-    "id": "peugeot-expert-confort-hdi-2012",
-    "name": "Peugeot Expert Confort HDI",
+    "id": "toyota-rav4-4x2-vx-at-2014",
+    "name": "Toyota Rav4 4x2 VX AT",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2014,
+    "kilometraje": 999999,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "2.0",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "9-2.webp",
+      "9-1.webp",
+      "9-3.webp",
+      "9-4.webp",
+      "9-5.webp",
+      "9-6.webp",
+      "9-7.webp",
+      "9-8.webp",
+      "9-9.webp",
+      "9-10.webp"
+    ],
+    "descripcion": "VENDIDA‼️\n🛞 TOYOTA RAV4\n\nAÑO: 2014\nMODELO: RAV4 4X2 VX AT\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS UDADO EN ARTE DE PAGO"
+  },
+  {
+    "id": "peugeot-partner-confort-hdi-2017",
+    "name": "Peugeot Partner Confort HDI",
     "marca": "Peugeot",
     "marcaId": "peugeot",
-    "ano": 2012,
-    "kilometraje": 91500,
+    "ano": 2017,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -290,46 +270,6 @@
     "combustible": "Diésel",
     "puertas": 5,
     "images": [
-      "9-1.webp",
-      "9-2.webp",
-      "9-3.webp",
-      "9-4.webp",
-      "9-5.webp",
-      "9-6.webp",
-      "9-7.webp",
-      "9-8.webp",
-      "9-9.webp",
-      "9-10.webp",
-      "9-11.webp",
-      "9-12.webp",
-      "9-13.webp",
-      "9-14.webp",
-      "9-15.webp",
-      "9-16.webp",
-      "9-17.webp",
-      "9-18.webp",
-      "9-19.webp",
-      "9-20.webp"
-    ],
-    "descripcion": "// PEUGEOT EXPERT //\n\n✅ Versión: CONFORT HDI\n✅ Año: 2012\n✅ Kilometraje: 91.500\n📌 Motor: 1.6 HDI\n⛽️ Combustible: DIÉSEL\n⚙️ Transmisión: MANUAL\n💎 Primera Mano: NO\n\n📍 Ubicación: Villa Adelina, Pdo San Isidro\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
-  },
-  {
-    "id": "honda-fit-at-exl-at-5-ptas-2012",
-    "name": "Honda Fit AT EXL AT 5 PTAS",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2012,
-    "kilometraje": 56000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "1.5",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": [
       "10-1.webp",
       "10-2.webp",
       "10-3.webp",
@@ -337,30 +277,26 @@
       "10-5.webp",
       "10-6.webp",
       "10-7.webp",
-      "10-8.webp",
-      "10-9.webp",
-      "10-10.webp",
-      "10-11.webp",
-      "10-12.webp"
+      "10-8.webp"
     ],
-    "descripcion": "// HONDA FIT AT //\n\n✅ Versión: EXL AT 5 PTAS\n✅ Año: 2012\n✅ Kilometraje: 56.000\n📌 Motor: 1.5\n⛽️ Combustible: NAFTA\n⚙️ Transmisión: AUTOMÁTICO\n💎 Primera Mano: NO\n\n📍 Ubicación: San Isidro, Villa Adelina\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "⚙️ PEUGEOT PARTNER\n\nAÑO: 2017\nMOTOR: 1.6\nMODELO: PARTNER CONFORT HDI\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO"
   },
   {
-    "id": "ford-ranger-xl-4x2-xl-2-2tdci-150cv-dc-4x2-2018",
-    "name": "Ford Ranger XL 4x2 XL 2.2TDCI 150CV DC 4x2",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2018,
-    "kilometraje": 94000,
+    "id": "peugeot-208-allure-5p-2013",
+    "name": "Peugeot 208 Allure 5P",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2013,
+    "kilometraje": 120000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "2.2",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "11-1.webp",
       "11-2.webp",
@@ -368,31 +304,24 @@
       "11-4.webp",
       "11-5.webp",
       "11-6.webp",
-      "11-7.webp",
-      "11-8.webp",
-      "11-9.webp",
-      "11-10.webp",
-      "11-11.webp",
-      "11-12.webp",
-      "11-13.webp",
-      "11-14.webp"
+      "11-7.webp"
     ],
-    "descripcion": "// FORD RANGER XL 4X2 //\n\n✅ Versión: XL 2.2TDCI 150CV DC 4X2\n✅ Año: 2018\n✅ Kilometraje: 94.000\n📌 Motor: 2.2 TURBO DIÉSEL\n⛽️ Combustible: DIÉSEL\n⚙️ Transmisión: MANUAL\n💎 Primera Mano: NO\n\n📍 Ubicación: San Isidro, Villa Adelina\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "🦁 PEUGEOT 208\n\nAÑO: 2013\nMOTOR: 1.6\nMODELO: 208 ALLURE 5P\nKM: 120.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS UDADO EN PARTE DE PAGO"
   },
   {
-    "id": "volkswagen-up-high-1-0-5-ptas-2018",
-    "name": "Volkswagen Up! High 1.0 5 PTAS",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2018,
-    "kilometraje": 104000,
+    "id": "chevrolet-agile-5p-lt-spirit-2013",
+    "name": "Chevrolet Agile 5P LT Spirit",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2013,
+    "kilometraje": 78000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.0",
+    "motor": "1.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -403,17 +332,8 @@
       "12-5.webp",
       "12-6.webp",
       "12-7.webp",
-      "12-8.webp",
-      "12-9.webp",
-      "12-10.webp",
-      "12-11.webp",
-      "12-12.webp",
-      "12-13.webp",
-      "12-14.webp",
-      "12-15.webp",
-      "12-16.webp",
-      "12-17.webp"
+      "12-8.webp"
     ],
-    "descripcion": "// VOLKSWAGEN UP! //\n\n✅ Versión: HIGH 1.0 5 PTAS\n✅ Año: 2018\n✅ Kilometraje: 104.000\n📌 Motor: 1.0\n⛽️ Combustible: NAFTA\n⚙️ Transmisión: MANUAL\n💎 Primera Mano: SI\n\n📍 Ubicación: San Isidro, Villa Adelina\n\nEFECTIVO / TOMAMOS PERMUTAS / FINANCIAMOS\n\nCualquier consulta no dudes en mandarnos msj. Respondemos a la brevedad!"
+    "descripcion": "VENDIDO‼️\n🏆 CHEVROLET AGILE\n\nAÑO: 2013\nMOTOR: 1.4\nMODELO: AGILE 5P LT SPIRIT\nKM: 78.000\n\n💰 FINANCIACIÓN CON DNI\nACEPTAMOS USADO EN PARTE DE PAGO"
   }
 ]

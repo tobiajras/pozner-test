@@ -5,25 +5,26 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'pemautomotores',
-  name: 'PEM Automotores',
-  adress: 'Virrey Vertiz 1967',
-  city: 'Villa Adelina',
-  email: 'pem.automotores@gmail.com',
-  instagram: 'pem.automotores',
-  facebook: null,
-  whatsapp: ['1140618148', '1176517555'],
-  googlemapsLink: 'https://maps.app.goo.gl/Yn3A3HqzPzp1Hi9cA',
+  id: 'dosavenidasautomotores',
+  name: 'Dos Avenidas Automotores',
+  adress: 'J. M. de Rosas 9078',
+  city: 'Laferrere',
+  email: null,
+  instagram: 'dosavenidas.automotores',
+  facebook:
+    'https://www.facebook.com/p/Automotores-Dos-Avenidas-100085339827716/',
+  whatsapp: ['1130442572'],
+  googlemapsLink: 'https://maps.app.goo.gl/8AG6ftdx3Pg2HEve6',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.29299678093!2d-58.54761733350024!3d-34.52080403895045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb141a97d291d%3A0xd26a04fd059dde29!2sPEM%20Automotores!5e0!3m2!1sen!2sar!4v1753848945574!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.3902805975677!2d-58.596111061443!3d-34.720555578956166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc5d5896b1ac5%3A0x4a91994fd9de53fa!2sTWO%20AVENUES%20AUTOMOTORES!5e0!3m2!1sen!2sar!4v1753829264430!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['10 a 13 y 15 a 19hs'] },
-    { day: 'Martes', hours: ['10 a 13 y 15 a 19hs'] },
-    { day: 'Miércoles', hours: ['10 a 13 y 15 a 19hs'] },
-    { day: 'Jueves', hours: ['10 a 13 y 15 a 19hs'] },
-    { day: 'Viernes', hours: ['10 a 13 y 15 a 19hs'] },
-    { day: 'Sábado', hours: ['10 a 13hs'] },
-    // { day: 'Domingo', hours: ['10:00 a 15:00hs'] },
+    { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Martes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
+    { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
+    { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Sábado', hours: ['09:00 a 15:30hs'] },
+    // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
@@ -33,8 +34,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://pemautomotores.vercel.app/',
-  title: 'PEM Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://dosavenidasautomotores.vercel.app/',
+  title: 'Dos Avenidas Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

@@ -1,6 +1,6 @@
 'use client';
 
-import { preguntas } from '@/app/constants/constants';
+import { company, preguntas } from '@/app/constants/constants';
 import { useState } from 'react';
 import DropDownIcon from './icons/DropDownIcon';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -87,8 +87,16 @@ const PreguntasHome = () => {
                         className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300
                         ${
                           activeAnswer === pregunta.id
-                            ? 'bg-color-primary text-white shadow-lg'
-                            : 'bg-gray-100 text-gray-600 group-hover:bg-color-primary group-hover:text-color-title-light'
+                            ? `bg-color-primary text-white shadow-lg ${
+                                company.dark
+                                  ? 'bg-color-primary-dark'
+                                  : 'bg-color-primary'
+                              }`
+                            : `${
+                                company.dark
+                                  ? 'group-hover:bg-color-primary-dark'
+                                  : 'group-hover:bg-color-primary'
+                              } bg-gray-100 text-gray-600 group-hover:text-color-title-light`
                         }`}
                       >
                         <motion.div
