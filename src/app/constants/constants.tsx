@@ -1,29 +1,28 @@
 export const company = {
-  dark: true,
+  dark: false,
   darkmode: true,
   shortAdress: true,
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'dosavenidasautomotores',
-  name: 'Dos Avenidas Automotores',
-  adress: 'J. M. de Rosas 9078',
-  city: 'Laferrere',
-  email: null,
-  instagram: 'dosavenidas.automotores',
-  facebook:
-    'https://www.facebook.com/p/Automotores-Dos-Avenidas-100085339827716/',
-  whatsapp: ['1130442572'],
-  googlemapsLink: 'https://maps.app.goo.gl/8AG6ftdx3Pg2HEve6',
+  id: 'garagevip',
+  name: 'Garage Vip',
+  adress: 'Rivadavia 11061',
+  city: 'Liniers',
+  email: 'garageautosvip@gmail.com',
+  instagram: 'garageautosvip',
+  facebook: 'https://www.facebook.com/garageautosvip/',
+  whatsapp: ['1144794843'],
+  googlemapsLink: 'https://maps.app.goo.gl/rWxnJsvFYt18J3KHA',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.3902805975677!2d-58.596111061443!3d-34.720555578956166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc5d5896b1ac5%3A0x4a91994fd9de53fa!2sTWO%20AVENUES%20AUTOMOTORES!5e0!3m2!1sen!2sar!4v1753829264430!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.62243791898!2d-58.520079700000004!3d-34.6389804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc84870aa861f%3A0xa37ea2a9196d0b7!2sAutos%20Vip!5e0!3m2!1sen!2sar!4v1753912661289!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Martes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
-    { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
-    { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Sábado', hours: ['09:00 a 15:30hs'] },
+    { day: 'Lunes', hours: ['10:00 a 18:30hs'] },
+    { day: 'Martes', hours: ['10:00 a 18:30hs'] },
+    { day: 'Miércoles', hours: ['10:00 a 18:30hs'] },
+    { day: 'Jueves', hours: ['10:00 a 18:30hs'] },
+    { day: 'Viernes', hours: ['10:00 a 18:30hs'] },
+    { day: 'Sábado', hours: ['10:00 a 15:00hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -34,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://dosavenidasautomotores.vercel.app/',
-  title: 'Dos Avenidas Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://garagevip.vercel.app/',
+  title: 'Garage Vip - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

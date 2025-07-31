@@ -1,19 +1,19 @@
 [
   {
-    "id": "mercedes-vito-111-cdi-2015",
-    "name": "Mercedes Vito 111 CDI",
-    "marca": "Mercedes",
-    "marcaId": "mercedes",
-    "ano": 2015,
-    "kilometraje": 148000,
+    "id": "volkswagen-nivus-highline-1-0tsi-tiptronic-2021",
+    "name": "Volkswagen Nivus Highline 1.0 TSI Tiptronic",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2021,
+    "kilometraje": 28000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
-    "transmision": "Manual",
-    "motor": "2.2",
-    "combustible": "Diésel",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "1.0",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "1-1.webp",
@@ -24,24 +24,31 @@
       "1-6.webp",
       "1-7.webp",
       "1-8.webp",
-      "1-9.webp"
+      "1-9.webp",
+      "1-10.webp",
+      "1-11.webp",
+      "1-12.webp",
+      "1-13.webp",
+      "1-14.webp",
+      "1-15.webp",
+      "1-16.webp"
     ],
-    "descripcion": "🛣️ MERCEDES VITO\n\nAÑO: 2015\nMODELO: VITO 111 CDI\nKM: 148.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
+    "descripcion": "Volkswagen Nivus Highline 1.0Tsi Tiptronic\n\n🗓️ Año 2021\n🛣️ 28.000kms con servicios oficiales\n\nLa versión mas completa de todas\nInmejorable estado!\n\nTomamos tú vehículo usado en permuta❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "volkswagen-gol-power-2011",
-    "name": "Volkswagen Gol Power",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2011,
-    "kilometraje": 117000,
+    "id": "mitsubishi-outlander-gls-4x4-at-7-asientos-2016",
+    "name": "Mitsubishi Outlander GLS 4x4 AT 7 Asientos",
+    "marca": "Mitsubishi",
+    "marcaId": "mitsubishi",
+    "ano": 2016,
+    "kilometraje": 123000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.4",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "2.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -52,26 +59,32 @@
       "2-5.webp",
       "2-6.webp",
       "2-7.webp",
-      "2-8.webp"
+      "2-8.webp",
+      "2-9.webp",
+      "2-10.webp",
+      "2-11.webp",
+      "2-12.webp",
+      "2-13.webp",
+      "2-14.webp"
     ],
-    "descripcion": "💣 GOL POWER\n\nAÑO: 2011\nMODELO: GOL POWER\nMOTOR: 1.4 L\nKM: 117.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
+    "descripcion": "Mitsubishi Outlander Gls 4x4 At 7 asientos\n\n🗓️ Año 2016 (patente nueva mercosur)\n🛣️ 123.000kms (services oficiales)\n\nUnica dueña!\nEstado impecable!\nMuchísimo equipamiento\n\nCalienta asientos\nLevas al volante\nTecho corredizo\nSensor de estacionamiento\nCamara de estacionamiento\nBoton de apertura de baul automático\nCuero\nSensor de proximidad de choque y mucho mas!\n\nTómamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "audi-a1-3ptas-2012",
-    "name": "Audi A1 3ptas",
-    "marca": "Audi",
-    "marcaId": "audi",
+    "id": "volkswagen-gol-trend-5-puertas-2012",
+    "name": "Volkswagen Gol Trend 5 Puertas",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
     "ano": 2012,
-    "kilometraje": 100000,
+    "kilometraje": 142000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 8900,
+      "moneda": "USD"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.2",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 3,
+    "puertas": 5,
     "images": [
       "3-1.webp",
       "3-2.webp",
@@ -81,24 +94,27 @@
       "3-6.webp",
       "3-7.webp",
       "3-8.webp",
-      "3-9.webp"
+      "3-9.webp",
+      "3-10.webp",
+      "3-11.webp",
+      "3-12.webp"
     ],
-    "descripcion": "💣 AUDI A1\n\nAÑO: 2012\nMODELO: A1 3ptas\nMOTOR: 1.2 TFSI\nKM: 100.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
+    "descripcion": "Volkswagen Gol Trend 5 puertas\n\n🗓️ Año 2012\n🛣️ 142.000kms\n\nAire - Direccion\n4 Cubiertas nuevas!\n\n💰 8900 Usd\n\nTómamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "ford-ecosport-se-2013",
-    "name": "Ford Ecosport SE",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2013,
-    "kilometraje": 160000,
+    "id": "renault-clio-mio-2015",
+    "name": "Renault Clio Mio",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2015,
+    "kilometraje": 79000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.2",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -110,26 +126,29 @@
       "4-6.webp",
       "4-7.webp",
       "4-8.webp",
-      "4-9.webp"
+      "4-9.webp",
+      "4-10.webp",
+      "4-11.webp",
+      "4-12.webp"
     ],
-    "descripcion": "🚙 ECOSPORT SE\n\nAÑO: 2013\nMODELO: ECOSPORT SE\nMOTOR: 1.6L\nKM: 160.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
+    "descripcion": "Renault Clio Mio\n\n🗓️ Año fines del 2015\n🛣️ 79.000 kms\n\nUnico dueño de 0km!\nLlantas de aleacion\n4 cubiertas nuevas!\nAire / Dirección\nCierre centralizado/ alarma\nLevanta vidrios eléctricos\nEstereon con control\nFaros auxiliares\nVTV al dia\n\nTomamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "ford-ka-s-1-5l-2019",
-    "name": "Ford Ka S 1.5L",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2019,
-    "kilometraje": 144000,
+    "id": "nissan-zx300-twin-turbo-1992",
+    "name": "Nissan ZX300 Twin Turbo",
+    "marca": "Nissan",
+    "marcaId": "nissan",
+    "ano": 1992,
+    "kilometraje": 50000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Deportivo",
     "transmision": "Manual",
-    "motor": "1.5",
+    "motor": "3.0",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 2,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -138,48 +157,61 @@
       "5-5.webp",
       "5-6.webp",
       "5-7.webp",
-      "5-8.webp"
+      "5-8.webp",
+      "5-9.webp",
+      "5-10.webp",
+      "5-11.webp",
+      "5-12.webp",
+      "5-13.webp",
+      "5-14.webp",
+      "5-15.webp",
+      "5-16.webp",
+      "5-17.webp"
     ],
-    "descripcion": "🚦 FORD KA S\n\nAÑO: 2019\nMODELO: FORD KA S 1.5L\nKM: 144.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
+    "descripcion": "Nissan Zx300 Twin Turbo 🇯🇵\n\n🗓️ Año 1992\n🛣️ 50.000\n\nSe vende únicamente transferida❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "suzuki-fun-2008",
-    "name": "Suzuki Fun",
-    "marca": "Suzuki",
-    "marcaId": "suzuki",
-    "ano": 2008,
-    "kilometraje": 999999,
+    "id": "jeep-compass-longitude-2-4-2019",
+    "name": "Jeep Compass Longitude 2.4",
+    "marca": "Jeep",
+    "marcaId": "jeep",
+    "ano": 2019,
+    "kilometraje": 55000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 24900,
+      "moneda": "USD"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.4",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "2.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
-      "6-3.webp",
-      "6-2.webp",
       "6-1.webp",
+      "6-2.webp",
+      "6-3.webp",
       "6-4.webp",
       "6-5.webp",
-      "6-6.webp"
+      "6-6.webp",
+      "6-7.webp",
+      "6-8.webp",
+      "6-9.webp",
+      "6-10.webp"
     ],
-    "descripcion": "🚘 SUZUKI FUN\n\nAÑO: 2008\nMODELO: FUN\nMOTOR: 1.4\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
+    "descripcion": "Jeep compass Longitude 2.4\n\n🗓️ Año 2019\n🛣️ 55.000 kms\n\nLa versión mas full de todas con cuero, camara de estacionamiento trasera, levas al volante y mas...\n\n💰 24.900 usd\n\nTómamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "chery-tiggo-3-1-6-comfort-2017",
-    "name": "Chery Tiggo 3 1.6 Comfort",
-    "marca": "Chery",
-    "marcaId": "chery",
-    "ano": 2017,
-    "kilometraje": 105000,
+    "id": "volkswagen-suran-highline-msi-1-6-2019",
+    "name": "Volkswagen Suran Highline MSI 1.6",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2019,
+    "kilometraje": 86000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 16900,
+      "moneda": "USD"
     },
-    "categoria": "SUV",
+    "categoria": "Utilitario",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
@@ -193,24 +225,25 @@
       "7-6.webp",
       "7-7.webp",
       "7-8.webp",
-      "7-9.webp"
+      "7-9.webp",
+      "7-10.webp"
     ],
-    "descripcion": "VENDIDA ‼️\n💎 CHERY TIGGO\n\nAÑO: 2017\nMODELO: CHERY TIGGO 3 1.6 COMFORT\nKM: 105.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO"
+    "descripcion": "Volkswagen Suran Highline Msi 1.6\n\n🗓️ Año 2019\n🛣️ 86.000kms\n\n4 cubiertas nuevas\nSensor de estacionamiento delantero y trasero!\nEl color mas lindo!\n\n💰 16.900 Usd\n\nTomamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "citroen-aircross-155-feel-2016",
-    "name": "Citroen Aircross 155 Feel",
-    "marca": "Citroen",
-    "marcaId": "citroen",
-    "ano": 2016,
-    "kilometraje": 79000,
+    "id": "honda-hrv-1-8-exl-at-cvt-2017",
+    "name": "Honda HRV 1.8 EXL AT CVT",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 2017,
+    "kilometraje": 69000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 22900,
+      "moneda": "USD"
     },
     "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "transmision": "Automática",
+    "motor": "1.8",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -219,29 +252,33 @@
       "8-3.webp",
       "8-4.webp",
       "8-5.webp",
-      "8-6.webp"
+      "8-6.webp",
+      "8-7.webp",
+      "8-8.webp",
+      "8-9.webp",
+      "8-10.webp"
     ],
-    "descripcion": "⚙️ CITROEN AIRCROSS\n\nAÑO: 2016\nMODELO: AIRCROSS 155 FEEL\nKM: 79.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO\n📞 11 3044-2572"
+    "descripcion": "VENDIDA!\n\nHonda Hrv 1.8 EXL AT Cvt\n\n🗓️ Año 2017\n🛣️ 69.000 kms (services oficiales en honda pilar)\n\nLa mas full\nCuero\nCamara de estacionamiento trasera\n\n💰 22.900 Usd\n\nTomamos tu vehículo usado en permuta❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "toyota-rav4-4x2-vx-at-2014",
-    "name": "Toyota Rav4 4x2 VX AT",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2014,
-    "kilometraje": 999999,
+    "id": "peugeot-208-feline-1-6-2019",
+    "name": "Peugeot 208 Feline 1.6",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2019,
+    "kilometraje": 87000,
     "precio": {
-      "valor": 999999,
+      "valor": 16900000,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.0",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
-      "9-2.webp",
       "9-1.webp",
+      "9-2.webp",
       "9-3.webp",
       "9-4.webp",
       "9-5.webp",
@@ -251,23 +288,23 @@
       "9-9.webp",
       "9-10.webp"
     ],
-    "descripcion": "VENDIDA‼️\n🛞 TOYOTA RAV4\n\nAÑO: 2014\nMODELO: RAV4 4X2 VX AT\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS UDADO EN ARTE DE PAGO"
+    "descripcion": "Peugeot 208 Feline 1.6\n\n🗓️ Año 2019\n🛣️ 87.000kms (services oficiales)\n\nLa version mas completa de los 208\nBuen estado general!\n\n💰 16.900.000\n\nTomamos tu vehículo usado en permuta ❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "peugeot-partner-confort-hdi-2017",
-    "name": "Peugeot Partner Confort HDI",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2017,
-    "kilometraje": 999999,
+    "id": "jeep-compass-sport-1-3-t270-at-2022",
+    "name": "Jeep Compass Sport 1.3 T270 AT",
+    "marca": "Jeep",
+    "marcaId": "jeep",
+    "ano": 2022,
+    "kilometraje": 22000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 31000,
+      "moneda": "USD"
     },
-    "categoria": "Utilitario",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Diésel",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "1.3",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "10-1.webp",
@@ -277,24 +314,26 @@
       "10-5.webp",
       "10-6.webp",
       "10-7.webp",
-      "10-8.webp"
+      "10-8.webp",
+      "10-9.webp",
+      "10-10.webp"
     ],
-    "descripcion": "⚙️ PEUGEOT PARTNER\n\nAÑO: 2017\nMOTOR: 1.6\nMODELO: PARTNER CONFORT HDI\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS USADO EN PARTE DE PAGO"
+    "descripcion": "VENDIDA!\n\nJeep Compass Sport 1.3 T270 At\n\n🗓️ Año 2022\n🛣️ 22.000kms (services oficiales)\n\nUnico dueño❗\nCuero a pedido, desde 0km en concesionario oficial Jeep.\nEstado impecable\n\n💰 31.000 Usd\n\nTomamos tu vehículo usado en permuta❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "peugeot-208-allure-5p-2013",
-    "name": "Peugeot 208 Allure 5P",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2013,
-    "kilometraje": 120000,
+    "id": "toyota-etios-1-5-xls-automatico-2019",
+    "name": "Toyota Etios 1.5 XLS Automático",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2019,
+    "kilometraje": 6000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 18800,
+      "moneda": "USD"
     },
     "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "transmision": "Automática",
+    "motor": "1.5",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -304,26 +343,29 @@
       "11-4.webp",
       "11-5.webp",
       "11-6.webp",
-      "11-7.webp"
+      "11-7.webp",
+      "11-8.webp",
+      "11-9.webp",
+      "11-10.webp"
     ],
-    "descripcion": "🦁 PEUGEOT 208\n\nAÑO: 2013\nMOTOR: 1.6\nMODELO: 208 ALLURE 5P\nKM: 120.000\n\n💰 FINANCIACIÓN CON DNI\n🚘 ACEPTAMOS UDADO EN PARTE DE PAGO"
+    "descripcion": "VENDIDO!\n\nToyota Etios 1.5 Xls Automatico\n\n🗓️ Año 2019\n🛣️ Solo 6.000kms\n\nService oficiales por tiempo!\nIgual a 0km!\n\n💰 18.800 Usd\n\nTomamos tu vehículo en permuta❗\n\nGarage 🚘 Vip"
   },
   {
-    "id": "chevrolet-agile-5p-lt-spirit-2013",
-    "name": "Chevrolet Agile 5P LT Spirit",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2013,
-    "kilometraje": 78000,
+    "id": "subaru-impreza-1-8-gl-awd-1996",
+    "name": "Subaru Impreza 1.8 GL AWD",
+    "marca": "Subaru",
+    "marcaId": "subaru",
+    "ano": 1996,
+    "kilometraje": 160000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 8500,
+      "moneda": "USD"
     },
-    "categoria": "Hatchback",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "1.8",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "12-1.webp",
       "12-2.webp",
@@ -332,8 +374,10 @@
       "12-5.webp",
       "12-6.webp",
       "12-7.webp",
-      "12-8.webp"
+      "12-8.webp",
+      "12-9.webp",
+      "12-10.webp"
     ],
-    "descripcion": "VENDIDO‼️\n🏆 CHEVROLET AGILE\n\nAÑO: 2013\nMOTOR: 1.4\nMODELO: AGILE 5P LT SPIRIT\nKM: 78.000\n\n💰 FINANCIACIÓN CON DNI\nACEPTAMOS USADO EN PARTE DE PAGO"
+    "descripcion": "VENDIDA ❗\n\nSubaru Impreza 1.8 Gl Awd\n\n🗓️ Año 1996\n🛣️ 160.000kms Reales\n\nEstado impecable!\nSiempre atendida en concesionario oficial Subaru.\n\nTomamos tu vehículo usado en permuta ❗\n\n💰 8500 Usd\n\nGarage 🚘 Vip"
   }
 ]
