@@ -1,19 +1,19 @@
 [
   {
-    "id": "renault-duster-oroch-1-6-2020",
-    "name": "Renault Duster Oroch",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2020,
-    "kilometraje": 86000,
+    "id": "toyota-hilux-srv-2-8-4x4-mt-2021",
+    "name": "Toyota Hilux SRV 2.8 4x4 MT",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2021,
+    "kilometraje": 99000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Pickup",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
+    "motor": "2.8",
+    "combustible": "Diésel",
     "puertas": 4,
     "images": [
       "1-1.webp",
@@ -27,22 +27,22 @@
       "1-9.webp",
       "1-10.webp"
     ],
-    "descripcion": "Renault duster oroch\nOutsider 1.6\n86.000km\n2020"
+    "descripcion": "Vendo Toyota Hilux SRV 2.8 4x4 MT 🚜🏁\n\nAño: 2021🏁\nKm: 99.000🏁\nMotor: 2.8 TDI 🏁\nTransmisión: Manual🏁\nTracción: 4x4🏁\nSegundo dueño🏁\nLlantas de SRX Cubiertas Todo Terreno🏁\nVidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
   },
   {
-    "id": "ford-ka-2012",
-    "name": "Ford Ka",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2012,
-    "kilometraje": 125000,
+    "id": "chevrolet-sonic-lt-1-6-2014",
+    "name": "Chevrolet Sonic LT 1.6",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2014,
+    "kilometraje": 117000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.0",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -55,26 +55,27 @@
       "2-7.webp",
       "2-8.webp",
       "2-9.webp",
-      "2-10.webp"
+      "2-10.webp",
+      "2-11.webp"
     ],
-    "descripcion": "Ford ka\n2012\nFly viral\n125.000km"
+    "descripcion": "Vendo Chevrolet Sonic LT 1.6🏁\n\nAño: 2014🏁\nKm: 117.000🏁\nMotor: 1.6 16v🏁\nTransmisión: Manual🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
   },
   {
-    "id": "ford-focus-2015",
-    "name": "Ford Focus",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2015,
-    "kilometraje": 43000,
+    "id": "haval-h2-1-5t-2019",
+    "name": "Haval H2 1.5T",
+    "marca": "Haval",
+    "marcaId": "haval",
+    "ano": 2019,
+    "kilometraje": 80000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Manual",
-    "motor": "2.0",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "1.5",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "3-1.webp",
       "3-2.webp",
@@ -85,26 +86,30 @@
       "3-7.webp",
       "3-8.webp",
       "3-9.webp",
-      "3-10.webp"
+      "3-10.webp",
+      "3-11.webp",
+      "3-12.webp",
+      "3-13.webp",
+      "3-14.webp"
     ],
-    "descripcion": "Ford focus\n2015\nSe plus\n43000km\nManual"
+    "descripcion": "Vendo Haval H2 1.5T 🖤🏁\n\nAño: 2019🏁\nKm: 80.000🏁\nMotor: 1.5T🏁\nTransmisión: Automática 🏁\nSegundo dueño🏁\nTapizado de cuero - Techo solar eléctrico🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
   },
   {
-    "id": "volkswagen-nivus-2021",
-    "name": "Volkswagen Nivus",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2021,
-    "kilometraje": 98000,
+    "id": "ford-ranger-xlt-3-2-4x2-mt-2019",
+    "name": "Ford Ranger XLT 3.2 4x2 MT",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2019,
+    "kilometraje": 272000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.0",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "categoria": "Pickup",
+    "transmision": "Manual",
+    "motor": "3.2",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "4-1.webp",
       "4-2.webp",
@@ -117,24 +122,24 @@
       "4-9.webp",
       "4-10.webp"
     ],
-    "descripcion": "Volkswsgen nivus\n2021\n98.000km\nConfortline\nAut"
+    "descripcion": "Vendo Ranger XLT 3.2 4x2 MT 🤍🏁\n\nAño: 2019🏁\nKm:272.000 (SORPRENDE POR SU ESTADO)🏁\nMotor: 3.2 🏁\nTransmisión: Manual🏁\nTracción: 4x2🏁\nÚnico dueño - Estado inobjetable 🏁\n4 Cubiertas Recién puestas ni 30 km🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
   },
   {
-    "id": "peugeot-308-2017",
-    "name": "Peugeot 308",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2017,
-    "kilometraje": 60000,
+    "id": "audi-a5-2-0t-stronic-2012",
+    "name": "Audi A5 2.0T Stronic",
+    "marca": "Audi",
+    "marcaId": "audi",
+    "ano": 2012,
+    "kilometraje": 190000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Deportivo",
     "transmision": "Automática",
-    "motor": "1.6",
+    "motor": "2.0",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 2,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -147,22 +152,22 @@
       "5-9.webp",
       "5-10.webp"
     ],
-    "descripcion": "Peugeot 308\nFeline tiptronic\n2017\n60.000km"
+    "descripcion": "Vendo Audi A5 2.0T Stronic 😎🏁\n\nAño: 2012🏁\nKm: 190.000🏁\nMotor: 2.0 T🏁\nTransmisión: Automática Stronic🏁\nTercer dueño🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nTapizado de cuero - techo solar eléctrico🏁\nPantalla con navegador🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
   },
   {
-    "id": "peugeot-208-2017",
-    "name": "Peugeot 208",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2017,
-    "kilometraje": 45000,
+    "id": "renault-clio-expression-1-2-2013",
+    "name": "Renault Clio Expression 1.2",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2013,
+    "kilometraje": 140000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "1.6",
+    "transmision": "Manual",
+    "motor": "1.2",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -177,6 +182,185 @@
       "6-9.webp",
       "6-10.webp"
     ],
-    "descripcion": "Peugeot 208\nAllure\n2017\n45.000km\nAutomatico"
+    "descripcion": "Vendo Clio Expression 1.2 🐇🏁\n\nAño: 2013🏁\nKm: 140.000🏁\nMotor: 1.2 16v🏁\nTransmisión: Manual🏁\nÚnico dueño🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Faros auxiliares🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+  },
+  {
+    "id": "volkswagen-gol-trend-1-6-pack-ii-2019",
+    "name": "Volkswagen Gol Trend 1.6 Pack II",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2019,
+    "kilometraje": 140000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "7-1.webp",
+      "7-2.webp",
+      "7-3.webp",
+      "7-4.webp",
+      "7-5.webp",
+      "7-6.webp",
+      "7-7.webp",
+      "7-8.webp",
+      "7-9.webp",
+      "7-10.webp"
+    ],
+    "descripcion": "Vendo VW Gol Trend 1.6 Pack II 🤍🏁\n\nAño: 2019🏁\nKm: 140.000🏁\nMotor: 1.6 N🏁\nTransmisión: Manual🏁\nÚnico dueño🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+  },
+  {
+    "id": "renault-logan-1-6-gnc-2014",
+    "name": "Renault Logan 1.6 GNC",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2014,
+    "kilometraje": 165000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Sedán",
+    "transmision": "Manual",
+    "motor": "1.6",
+    "combustible": "GNC",
+    "puertas": 4,
+    "images": [
+      "8-1.webp",
+      "8-2.webp",
+      "8-3.webp",
+      "8-4.webp",
+      "8-5.webp",
+      "8-6.webp",
+      "8-7.webp",
+      "8-8.webp",
+      "8-9.webp",
+      "8-10.webp"
+    ],
+    "descripcion": "Vendo Renault Logan 1.6 GNC 🐝🏁\n\nAño: 2014🏁\nKm: 165.000🏁\nMotor: 1.6 N (c/ GNC)🏁\nTransmisión: Manual🏁\nSegundo dueño🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+  },
+  {
+    "id": "peugeot-206-1-4-active-2012",
+    "name": "Peugeot 206 1.4 Active",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2012,
+    "kilometraje": 189000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.4",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "9-1.webp",
+      "9-2.webp",
+      "9-3.webp",
+      "9-4.webp",
+      "9-5.webp",
+      "9-6.webp",
+      "9-7.webp",
+      "9-8.webp",
+      "9-9.webp"
+    ],
+    "descripcion": "Vendo Peugeot 206 1.4 Active 🗿🏁\n\nAño: 2012🏁\nKm: 189.000🏁\nMotor: 1.4🏁\nTransmisión: Manual🏁\nSegundo dueño🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+  },
+  {
+    "id": "peugeot-208-road-trip-at-2024",
+    "name": "Peugeot 208 Road Trip AT",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2024,
+    "kilometraje": 5200,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Automática",
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "10-1.webp",
+      "10-2.webp",
+      "10-3.webp",
+      "10-4.webp",
+      "10-5.webp",
+      "10-6.webp",
+      "10-7.webp",
+      "10-8.webp",
+      "10-9.webp",
+      "10-10.webp"
+    ],
+    "descripcion": "Vendo Peugeot 208 Road Trip AT 🩶🏁\n\nAño: 2024🏁\nKm: 5.200🏁\nMotor: 1.6🏁\nTransmisión: Automático🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nNavegador c/ Car Play - Techo panorámico 🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+  },
+  {
+    "id": "peugeot-308-1-6-hdi-2015",
+    "name": "Peugeot 308 1.6 Hdi",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2015,
+    "kilometraje": 135000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
+    "combustible": "Diésel",
+    "puertas": 5,
+    "images": [
+      "11-1.webp",
+      "11-2.webp",
+      "11-3.webp",
+      "11-4.webp",
+      "11-5.webp",
+      "11-6.webp",
+      "11-7.webp",
+      "11-8.webp",
+      "11-9.webp",
+      "11-10.webp"
+    ],
+    "descripcion": "Vendo Peugeot 308 1.6 Hdi ❤️‍🔥🏁\n\nAño: 2015🏁\nKm: 135.000🏁\nMotor: 1.6 Hdi🏁\nTransmisión: Manual🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Isofix - Faros auxiliares🏁\nTapizado de cuero - Techo panorámico 🏁\nTitular al día, Vendo transferida🏁\nPermuto - Financio"
+  },
+  {
+    "id": "volkswagen-gol-1-4-n-2016",
+    "name": "Volkswagen Gol 1.4 N",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2016,
+    "kilometraje": 72000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.4",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "12-1.webp",
+      "12-2.webp",
+      "12-3.webp",
+      "12-4.webp",
+      "12-5.webp",
+      "12-6.webp",
+      "12-7.webp",
+      "12-8.webp",
+      "12-9.webp",
+      "12-10.webp"
+    ],
+    "descripcion": "Duro 20 minutos y fue mucho 🙊🏁\n\nAño: 2016🏁\nKm: 72.000🏁\nMotor: 1.4 N🏁\nTransmisión: Manual🏁\nÚnica dueña - Service Oficiales🏁\nLev. Vidrios elec. - Cierre Centralizado - Alarma🏁\nABS - Airbag - Faros auxiliares🏁\nAlgunos detalles estéticos 🏁\nMantenimiento en tiempo y forma🏁\nTitular al día, Vendido transferido🏁\nPermuto - Financio"
   }
 ]
