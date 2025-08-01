@@ -5,24 +5,24 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'smcautomoviles',
-  name: 'SMC Automoviles',
-  adress: 'Catamarca 847',
-  city: 'CABA',
-  email: 'smcautomoviles@gmail.com',
-  instagram: 'smc_automoviles',
+  id: 'mzmotors',
+  name: 'MZ MOTORS',
+  adress: 'Av. Beiro 2497',
+  city: 'Villa Devoto',
+  email: null,
+  instagram: 'mzmotorsok',
   facebook: null,
-  whatsapp: ['1140250362'],
-  googlemapsLink: 'https://maps.app.goo.gl/QKuqMGiE9Tuqu9Qu5',
+  whatsapp: ['1135813871', '1131428363', '1139422263'],
+  googlemapsLink: 'https://maps.app.goo.gl/sNGbx1XNZs5XfmyE8',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.385275820722!2d-58.4049116!3d-34.6197029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbfdc73a237f%3A0x5bf54d6651ac2b19!2sSMC%20Automoviles!5e0!3m2!1sen!2sar!4v1754015627406!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420707.06626909727!2d-58.78059179374999!3d-34.533954525121395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7a8306ec115%3A0x783b80318f126d22!2sMZ%20MOTORS!5e0!3m2!1sen!2sar!4v1754077097513!5m2!1sen!2sar',
   openDays: [
     { day: 'Lunes', hours: ['10:00 a 19:00hs'] },
     { day: 'Martes', hours: ['10:00 a 19:00h'] },
     { day: 'Miércoles', hours: ['10:00 a 19:00h'] },
     { day: 'Jueves', hours: ['10:00 a 19:00h'] },
     { day: 'Viernes', hours: ['10:00 a 19:00h'] },
-    { day: 'Sábado', hours: ['10:00 a 17:00hs'] },
+    { day: 'Sábado', hours: ['10:00 a 14:00hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://smcautomoviles.vercel.app/',
-  title: 'SMC Automoviles - Compra y Venta de Autos',
+  metadataBase: 'https://mzmotors.vercel.app/',
+  title: 'MZ MOTORS - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

@@ -1,18 +1,18 @@
 [
   {
-    "id": "bmw-x1-xdrive-25i-xline-2018",
-    "name": "BMW X1 Xdrive 25i Xline",
-    "marca": "BMW",
-    "marcaId": "bmw",
-    "ano": 2018,
-    "kilometraje": 50000,
+    "id": "ford-ka-1-5-freestyle-sel-at-2020",
+    "name": "Ford Ka 1.5 Freestyle SEL AT",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2020,
+    "kilometraje": 52000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Hatchback",
     "transmision": "Automática",
-    "motor": "2.0",
+    "motor": "1.5",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -27,24 +27,24 @@
       "1-9.webp",
       "1-10.webp"
     ],
-    "descripcion": "♦️BMW X1 Xdrive 25i Xline ♦️\n\nAño 2018\n50.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#bmwx1 #bmw #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Ford Ka 1.5 Freestyle SEL AT\n📅 Año: 2020\n⚙️ Transmisión: Automática\nℹ️ 52.000 km\n✅ Papeles al día – Lista para transferir\n✨ En excelente estado, versión tope de gama con diseño aventurero.\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   },
   {
-    "id": "fiat-500-1-4-lounge-105cv-serie4-2019",
-    "name": "Fiat 500 1.4 Lounge 105cv Serie4",
-    "marca": "Fiat",
-    "marcaId": "fiat",
-    "ano": 2019,
-    "kilometraje": 31000,
+    "id": "land-rover-freelander-2-0-go-se-4-at-2006",
+    "name": "Land Rover Freelander 2.0 GO SE 4 AT",
+    "marca": "Land Rover",
+    "marcaId": "land-rover",
+    "ano": 2006,
+    "kilometraje": 88000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.4",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "2.0",
     "combustible": "Nafta",
-    "puertas": 3,
+    "puertas": 5,
     "images": [
       "2-1.webp",
       "2-2.webp",
@@ -54,25 +54,24 @@
       "2-6.webp",
       "2-7.webp",
       "2-8.webp",
-      "2-9.webp",
-      "2-10.webp"
+      "2-9.webp"
     ],
-    "descripcion": "♦️ Fiat 500 1.4 Lounge 105cv Serie4♦️\n\nAño 2019\n31.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#fiat500 #fiat #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Land Rover Freelander 2.0 GO SE 4 AT\n📅 Año: 2006\n⚙️ Transmisión: Automática\nℹ️ 88.000km\n✅ Papeles al día – Lista para transferir\n✨ Muy buen estado. Estilo, confort y robustez en un solo vehículo.\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   },
   {
-    "id": "jeep-renegade-1-8-sport-at-2017",
-    "name": "Jeep Renegade 1.8 Sport At",
-    "marca": "Jeep",
-    "marcaId": "jeep",
-    "ano": 2017,
-    "kilometraje": 56000,
+    "id": "honda-cr-v-2-4-lx-2wd-at-2012",
+    "name": "Honda CR-V 2.4 LX 2WD AT",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 2012,
+    "kilometraje": 147000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "1.8",
+    "motor": "2.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -83,25 +82,24 @@
       "3-5.webp",
       "3-6.webp",
       "3-7.webp",
-      "3-8.webp",
-      "3-9.webp"
+      "3-8.webp"
     ],
-    "descripcion": "♦️ Jeep Renegade 1.8 Sport At♦️\n\nAño 2017\n56.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#jeeprenegade #jeep #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Honda CR-V 2.4 LX 2WD AT\n📅 Año: 2012\n⚙️ Transmisión: Automática\nℹ️ 147.000 km\n✅ Papeles al día – Lista para transferir\n✨ Excelente estado, ❗️motor 2.4 de 185 CV, confiable y potente. Ideal para viajes largos, familia y uso diario. Espaciosa, segura y súper cómoda.\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   },
   {
-    "id": "renault-kangoo-1-6-furgon-ph3-confort-5as-lc-2015",
-    "name": "Renault Kangoo 1.6 Furgón Ph3 Confort 5as Lc",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2015,
-    "kilometraje": 122000,
+    "id": "kia-sportage-2011",
+    "name": "Kia Sportage",
+    "marca": "Kia",
+    "marcaId": "kia",
+    "ano": 2011,
+    "kilometraje": 187000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -112,30 +110,27 @@
       "4-5.webp",
       "4-6.webp",
       "4-7.webp",
-      "4-8.webp",
-      "4-9.webp",
-      "4-10.webp"
+      "4-8.webp"
     ],
-    "descripcion": "♦️Renault Kangoo 1.6 Furgón Ph3 Confort 5as Lc. ♦️\n\nAño 2015\n122.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#renaultkangoo #renault #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Kia Sportage\n📅 Año: 2011\n⚙️ Transmisión: automática\nℹ️ 187.000 km\n✅ Papeles al día – Lista para transferir\n✨ Excelente estado general – Interior full + tapizado de cuero\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   },
   {
-    "id": "ford-ranger-3-2-cd-xlt-tdci-200cv-automatica-4x4-2017",
-    "name": "Ford Ranger 3.2 Cd Xlt Tdci 200cv Automática 4x4",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2017,
-    "kilometraje": 122000,
+    "id": "honda-hr-v-1-8-lx-2wd-cvt-2022",
+    "name": "Honda HR-V 1.8 LX 2WD CVT",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 2022,
+    "kilometraje": 47000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "3.2",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "motor": "1.8",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
-      "5-9.webp",
       "5-1.webp",
       "5-2.webp",
       "5-3.webp",
@@ -143,22 +138,23 @@
       "5-5.webp",
       "5-6.webp",
       "5-7.webp",
-      "5-8.webp"
+      "5-8.webp",
+      "5-9.webp"
     ],
-    "descripcion": "♦️ Ford Ranger 3.2 Cd Xlt Tdci 200cv Automática 4x4.♦️\n\nAño 2017\n122.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#fordranger #ford #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Honda HR-V 1.8 LX 2WD CVT\n📅 Año: 2022\n⚙️ Transmisión: Automática (CVT)\nℹ️ 47.000 km\n✅ Papeles al día – Lista para transferir\n✨ Excelente estado, ❗️motor 1.8 eficiente y confiable, ideal para ciudad o ruta. Espaciosa, cómoda y con excelente equipamiento.\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   },
   {
-    "id": "volkswagen-gol-trend-1-6-pack-i-101cv-2013",
-    "name": "Volkswagen Gol Trend 1.6 Pack I 101cv",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
+    "id": "ford-ecosport-1-6-freestyle-110cv-4x2-2013",
+    "name": "Ford EcoSport 1.6 Freestyle 110CV 4x2",
+    "marca": "Ford",
+    "marcaId": "ford",
     "ano": 2013,
-    "kilometraje": 118000,
+    "kilometraje": 105000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
@@ -172,18 +168,17 @@
       "6-6.webp",
       "6-7.webp",
       "6-8.webp",
-      "6-9.webp",
-      "6-10.webp"
+      "6-9.webp"
     ],
-    "descripcion": "♦️Volkswagen Gol Trend 1.6 Pack I 101cv♦️\n\nAño 2013\n118.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#volkswagengoltrend #volkswagen #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Ford EcoSport 1.6 Freestyle 110CV 4x2\n📅 Año: 2013\n⚙️ Transmisión: manual\nℹ️ 105.000 km\n✅ Papeles al día – Lista para transferir\n✨ Muy buen estado – Ideal para ciudad y ruta\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   },
   {
-    "id": "volkswagen-gol-1-6-i-power-701-2010",
-    "name": "Volkswagen Gol 1.6 I Power 701",
+    "id": "volkswagen-golf-trend-1-6-nafta-caja-manual-2015",
+    "name": "Volkswagen Golf Trend",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2010,
-    "kilometraje": 106000,
+    "ano": 2015,
+    "kilometraje": 96000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -205,24 +200,24 @@
       "7-9.webp",
       "7-10.webp"
     ],
-    "descripcion": "♦️Volkswagen Gol 1.6 I Power 701♦️\n\nAño 2010\n106.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#volkswagen #volkswagengol #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗Nuevo Ingreso🚗\n\n🔹 Volkswagen Golf Trend\n⚙️ 1.6 Nafta, Caja Manual\n📅 Año: 2015\nℹ️ 96.000kms\n✅ Papeles al día, listo para transferir\n✨ Impecable estado\n📍Beiro 2497, Villa devoto\n✉️ Consúltanos para más info"
   },
   {
-    "id": "toyota-corolla-1-8-xei-cvt-pack-140cv-2014",
-    "name": "Toyota Corolla 1.8 Xei Cvt Pack 140cv",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2014,
-    "kilometraje": 94000,
+    "id": "nissan-kicks-1-6-advance-cvt-plus-2021",
+    "name": "Nissan Kicks 1.6 Advance CVT Plus",
+    "marca": "Nissan",
+    "marcaId": "nissan",
+    "ano": 2021,
+    "kilometraje": 83000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "1.8",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "8-1.webp",
       "8-2.webp",
@@ -231,22 +226,24 @@
       "8-5.webp",
       "8-6.webp",
       "8-7.webp",
-      "8-8.webp"
+      "8-8.webp",
+      "8-9.webp",
+      "8-10.webp"
     ],
-    "descripcion": "♦️Toyota Corolla 1.8 Xei Cvt Pack 140cv♦️\n\nAño 2014\n94.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#toyota #toyotacorolla #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Nissan Kicks 1.6 Advance CVT Plus\n📅 Año: 2021\n⚙️ Transmisión: Automática (CVT)\nℹ️ 83.000 km\n✅ Papeles al día – Lista para transferir\n✨ Excelente estado general – Ideal para ciudad y ruta\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   },
   {
-    "id": "peugeot-208-1-6-allure-pack-2023",
-    "name": "Peugeot 208 1.6 Allure Pack",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2023,
-    "kilometraje": 19900,
+    "id": "ford-ecosport-titanium-4x2-2014",
+    "name": "Ford Ecosport Titanium 4x2",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2014,
+    "kilometraje": 92000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
@@ -263,22 +260,22 @@
       "9-9.webp",
       "9-10.webp"
     ],
-    "descripcion": "♦️Peugeot 208 1.6 Allure Pack♦️\n\nAño 2023\n19.900km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#peugeot208 #peugeot #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Ford Ecosport Titanium 4x2\n📅 Año: 2014\n⚙️ Transmisión: Manual\nℹ️ 92.000 km\n✅ Papeles al día – Lista para transferir\n✨ Excelente estado general\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   },
   {
-    "id": "honda-civic-1-8-exl-2009",
-    "name": "Honda Civic 1.8 EXL",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2009,
-    "kilometraje": 140000,
+    "id": "mercedes-benz-c200-kompressor-2008",
+    "name": "Mercedes Benz C200 Kompressor",
+    "marca": "Mercedes Benz",
+    "marcaId": "mercedes-benz",
+    "ano": 2008,
+    "kilometraje": 158000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "1.8",
+    "transmision": "Manual",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 4,
     "images": [
@@ -289,26 +286,24 @@
       "10-5.webp",
       "10-6.webp",
       "10-7.webp",
-      "10-8.webp",
-      "10-9.webp",
-      "10-10.webp"
+      "10-8.webp"
     ],
-    "descripcion": "♦️Honda Civic 1.8 EXL ♦️\n\nAño 2009\n140.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#fiatargo #fiat #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Mercedes Benz C200 Kompressor\n📅 Año: 2008\n⚙️ Transmisión: Manual\nℹ️ 158.000 km\n⚠️ Cubiertas nuevas\n✅ Papeles al día – Listo para transferir\n✨ Excelente estado\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   },
   {
-    "id": "ford-ecosport-1-6-titanium-110cv-4x2-2013",
-    "name": "Ford Ecosport 1.6 Titanium 110cv 4x2",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2013,
-    "kilometraje": 105000,
+    "id": "chevrolet-tracker-1-8-ltz-fwd-mt-140cv-2014",
+    "name": "Chevrolet Tracker 1.8 Ltz Fwd Mt 140cv",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2014,
+    "kilometraje": 92000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.8",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -320,26 +315,25 @@
       "11-6.webp",
       "11-7.webp",
       "11-8.webp",
-      "11-9.webp",
-      "11-10.webp"
+      "11-9.webp"
     ],
-    "descripcion": "♦️Ford Ecosport 1.6 Titanium 110cv 4x2♦️\n\nAño 2013\n105.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#fordecosport #ford #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Chevrolet Tracker 1.8 Ltz Fwd Mt 140cv\n📅 Año: 2014\n⚙️ Transmisión: Manual\nℹ️ 92.000KM\n✅ Papeles al día – Listo para transferir\n✨ Excelente estado\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   },
   {
-    "id": "peugeot-207-1-4-xs-5p-2009",
-    "name": "Peugeot 207 1.4 Xs 5p",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2009,
-    "kilometraje": 110000,
+    "id": "ford-ecosport-tdci-2008",
+    "name": "Ford Ecosport TDCI",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2008,
+    "kilometraje": 128000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "1.4",
-    "combustible": "Nafta",
+    "motor": "1.6",
+    "combustible": "Diésel",
     "puertas": 5,
     "images": [
       "12-1.webp",
@@ -352,6 +346,6 @@
       "12-8.webp",
       "12-9.webp"
     ],
-    "descripcion": "♦️Peugeot 207 1.4 Xs 5p♦️\n\nAño 2009\n110.000km\n\nConsulta al privado\n\nTODOS LOS PAPELES AL DIA, LISTO PARA TRANSFERIR!!!!!\n\nACEPTO PERMUTA.\n\n#peugeot207 #peugeot #agencia #usados #usadosseleccionados"
+    "descripcion": "🚗 ¡NUEVO INGRESO! 🚗\n\n🔹 Ford Ecosport TDCI\n📅 Año: 2008\n⚙️ Transmisión: Manual\nℹ️ 128.000 km\n✅ Papeles al día – Listo para transferir\n✨ Excelente estado\n📍 Ubicación: Beiró 2497, Villa Devoto\n📩 ¡Consultanos por más info!"
   }
 ]
