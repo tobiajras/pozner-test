@@ -5,24 +5,24 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'monacocars',
-  name: 'Monaco Cars',
-  adress: 'Av. Gral. San Martín 2210',
-  city: 'Lomas del Mirador',
-  email: null,
-  instagram: 'monaco.cars.arg',
-  facebook: 'https://www.facebook.com/monaco.cars.18',
-  whatsapp: ['1132325379', '1153487387'],
-  googlemapsLink: 'https://maps.app.goo.gl/JKWVP4Ku8pj8zWgx5',
+  id: 'glpautomotores',
+  name: 'GLP Automotores',
+  adress: 'Av. Francisco Beiro 4567',
+  city: 'Villa Devoto',
+  email: 'glpautomotores@gmail.com',
+  instagram: 'glp.automotores',
+  facebook: null,
+  whatsapp: ['1151570528', '1144456638', '1135639104'],
+  googlemapsLink: 'https://maps.app.goo.gl/eNL38naMwKejAt41A',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.7765605584036!2d-58.5434003!3d-34.6603454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbf5c4c6104f%3A0x7a77e9f3d0d4cacd!2sM%C3%B3naco%20Cars!5e0!3m2!1sen!2sar!4v1754048646716!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8574630213297!2d-58.517806723391956!3d-34.60776565771359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7d19077226b%3A0x93d8c1617b4e8336!2sAv.%20Francisco%20Beir%C3%B3%204567%2C%20C1419HZH%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1754014002246!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Martes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
-    { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
-    { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Sábado', hours: ['09:00 a 12:00hs'] },
+    { day: 'Lunes', hours: ['9:30 a 13 y 15 a 19:30hs'] },
+    { day: 'Martes', hours: ['9:30 a 13 y 15 a 19:30hs'] },
+    { day: 'Miércoles', hours: ['9:30 a 13 y 15 a 19:30hs'] },
+    { day: 'Jueves', hours: ['9:30 a 13 y 15 a 19:30hs'] },
+    { day: 'Viernes', hours: ['9:30 a 13 y 15 a 19:30hs'] },
+    { day: 'Sábado', hours: ['10 a 15hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://monacocars.vercel.app/',
-  title: 'Monaco Cars - Compra y Venta de Autos',
+  metadataBase: 'https://glpautomotores.vercel.app/',
+  title: 'GLP Automotores - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

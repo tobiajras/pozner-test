@@ -1,18 +1,18 @@
 [
   {
-    "id": "chevrolet-tracker-1-8-16v-ltz-4x2-2016",
-    "name": "Chevrolet Tracker 1.8 16V LTZ 4x2",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2016,
-    "kilometraje": 999999,
+    "id": "volkswagen-suran-1-6-highline-101cv-cuero-2013",
+    "name": "Volkswagen Suran 1.6 Highline 101cv Cuero",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2013,
+    "kilometraje": 85000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Utilitario",
     "transmision": "Manual",
-    "motor": "1.8",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -22,25 +22,28 @@
       "1-4.webp",
       "1-5.webp",
       "1-6.webp",
-      "1-7.webp"
+      "1-7.webp",
+      "1-8.webp",
+      "1-9.webp",
+      "1-10.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nCHEVROLET TRACKER 1.8 16V LTZ 4X2\n\nModelo 2016\n\n• TABLERO DIGITAL\n• INTERIOR INMACULADO\n• EXCELENTE DE CUBIERTAS\n• SENSOR DE ESTACIONAMIENTO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Volkswagen Suran 1.6 Highline 101cv Cuero\n\n• Año: 2013\n• Kilómetros: 85.000\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "toyota-etios-1-5-sedan-xls-gnc-5ta-gen-2017",
-    "name": "Toyota Etios 1.5 Sedan XLS c/ GNC 5ta. Gen.",
+    "id": "toyota-hilux-pick-up-2-8-cd-srx-204cv-4x4-at-2024",
+    "name": "Toyota Hilux Pick-Up 2.8 Cd Srx 204Cv 4X4 At",
     "marca": "Toyota",
     "marcaId": "toyota",
-    "ano": 2017,
-    "kilometraje": 999999,
+    "ano": 2024,
+    "kilometraje": 9500,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Manual",
-    "motor": "1.5",
-    "combustible": "GNC",
+    "categoria": "Pickup",
+    "transmision": "Automática",
+    "motor": "2.8",
+    "combustible": "Diésel",
     "puertas": 4,
     "images": [
       "2-1.webp",
@@ -49,26 +52,29 @@
       "2-4.webp",
       "2-5.webp",
       "2-6.webp",
-      "2-7.webp"
+      "2-7.webp",
+      "2-8.webp",
+      "2-9.webp",
+      "2-10.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nTOYOTA ETIOS 1.5 SEDAN XLS C/ GNC 5TA. GEN.\n\nModelo 2017\n\n• TABLERO DIGITAL\n• GNC DE 5TA GENERACION FUNCIONANDO A LA PERFECCION\n• PANTALLA MULTIMEDIA\n• SENSOR DE ESTACIONAMIENTO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Toyota Hilux Pick-Up 2.8 Cd Srx 204Cv 4X4 At\n\n• Año: 2024\n• Kilómetros: 9.500\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "peugeot-208-allure-1-6-115hp-2019",
-    "name": "Peugeot 208 Allure 1.6 115HP",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2019,
-    "kilometraje": 999999,
+    "id": "honda-civic-1-8-exs-at-2008",
+    "name": "Honda Civic 1.8 Exs At",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 2008,
+    "kilometraje": 141000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "1.8",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "3-1.webp",
       "3-2.webp",
@@ -77,24 +83,26 @@
       "3-5.webp",
       "3-6.webp",
       "3-7.webp",
-      "3-8.webp"
+      "3-8.webp",
+      "3-9.webp",
+      "3-10.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\n208 ALLURE 1.6 115HP\n\nModelo 2019\n\n• INTERIOR IMPECABLE\n• CUBIERTAS IMPECABLES\n• PANTALLA CON NAVEGADOR\n• SENSOR DE ESTACIONAMIENTO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Honda Civic 1.8 Exs At\n\n• Año: 2008\n• Kilómetros: 141.000\n• 5 cubiertas nuevas\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "renault-duster-luxe-2-0-4x4-2013",
-    "name": "Renault Duster Luxe 2.0 4x4",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2013,
-    "kilometraje": 112200,
+    "id": "peugeot-2008-1-6-thp-sport-tip-2021",
+    "name": "Peugeot 2008 1.6 Thp Sport Tip",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2021,
+    "kilometraje": 77000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "2.0",
+    "transmision": "Automática",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -106,29 +114,26 @@
       "4-6.webp",
       "4-7.webp",
       "4-8.webp",
-      "4-9.webp",
-      "4-10.webp",
-      "4-11.webp",
-      "4-12.webp"
+      "4-9.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nRENAULT DUSTER LUXE 2.0 4X4\n\nCAJA DE 6TA\nModelo 2013\n112.200 Km\nTODOS LOS SERVICE OFICIALES EN RENAULT\n\n• INTERIOR IMPECABLE\n• CUBIERTAS IMPECABLES\n• LEVANTA VIDRIOS\n• CAJA DE 6TA\n• TRACCION 4X4\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Peugeot 2008 1.6 Thp Sport Tip\n\n• Año: 2021\n• Kilómetros: 77.000\n• Única mano\n• Service oficiales\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "chevrolet-corsa-ii-4-p-gl-aa-dir-1-8-2006",
-    "name": "Chevrolet Corsa II 4 P GL AA+DIR 1.8",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2006,
-    "kilometraje": 999999,
+    "id": "volkswagen-gol-trend-1-6-highline-101cv-2016",
+    "name": "Volkswagen Gol Trend 1.6 Highline 101cv",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2016,
+    "kilometraje": 140000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.8",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -138,28 +143,26 @@
       "5-6.webp",
       "5-7.webp",
       "5-8.webp",
-      "5-9.webp",
-      "5-10.webp",
-      "5-11.webp"
+      "5-9.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nCORSA II 4 P GL AA+DIR 1.8\n\nModelo 2006\n\n• INTERIOR MUY CUIDADO\n• CUBIERTAS IMPECABLES\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Volkswagen Gol Trend 1.6 Highline 101cv\n\n• Año: 2016\n• Kilómetros: 140.000\n• Única mano\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "fiat-siena-1-6-el-gnc-2016",
-    "name": "Fiat Siena 1.6 EL - CON GNC",
-    "marca": "Fiat",
-    "marcaId": "fiat",
-    "ano": 2016,
-    "kilometraje": 999999,
+    "id": "chevrolet-tracker-premier-awd-at-2018",
+    "name": "Chevrolet Tracker Premier AWD At",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2018,
+    "kilometraje": 90000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "GNC",
-    "puertas": 4,
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "1.4",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -170,28 +173,25 @@
       "6-7.webp",
       "6-8.webp",
       "6-9.webp",
-      "6-10.webp",
-      "6-11.webp",
-      "6-12.webp",
-      "6-13.webp"
+      "6-10.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nFIAT SIENA 1.6 EL - CON GNC\n\nModelo 2016\n\n• LEVANTA VIDRIOS DELANTEROS\n• CIERRE CENTRALIZADO\n• CUBIERTAS NUEVAS\n• INTERIOR INMACULADO\n• GNC DE 5TA GEN\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Chevrolet Tracker Premier AWD At\n\n• Año: 2018\n• Kilómetros: 90.000 km\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "renault-duster-4x2-1-6-16v-expression-gnc-2012",
-    "name": "Renault Duster 4x2 1.6 16V - EXPRESSION CON GNC",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2012,
-    "kilometraje": 999999,
+    "id": "peugeot-208-1-0t-gt-2025",
+    "name": "Peugeot 208 1.0T GT",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2025,
+    "kilometraje": 0,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "GNC",
+    "categoria": "Hatchback",
+    "transmision": "Automática",
+    "motor": "1.0",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "7-1.webp",
@@ -203,28 +203,26 @@
       "7-7.webp",
       "7-8.webp",
       "7-9.webp",
-      "7-10.webp",
-      "7-11.webp",
-      "7-12.webp"
+      "7-10.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nDUSTER 4X2 1.6 16V - EXPRESSION CON GNC\n\nModelo 2012\n\n• GNC 3RA GEN FUNCIONANDO A LA PERFECCION\n• CUBIERTAS IMPECABLES\n• INTERIOR MUY CUIDADO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Peugeot 208 1.0T GT\n\n• Año: 2025\n• Kilómetros: 0km\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "chevrolet-celta-ls-aa-dh-2014",
-    "name": "Chevrolet Celta LS AA + DH",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2014,
-    "kilometraje": 99600,
+    "id": "ford-ecosport-1-6-se-110cv-4x2-2015",
+    "name": "Ford Ecosport 1.6 Se 110cv 4x2",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2015,
+    "kilometraje": 84500,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "8-1.webp",
       "8-2.webp",
@@ -234,25 +232,24 @@
       "8-6.webp",
       "8-7.webp",
       "8-8.webp",
-      "8-9.webp",
-      "8-10.webp"
+      "8-9.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nCHEVROLET CELTA LS AA + DH\n\nModelo 2014\n\n• CUBIERTAS IMPECABLES\n• ALARMA\n• 99.600 KM\n• INTERIOR MUY CUIDADO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Ford Ecosport 1.6 Se 110cv 4x2\n\n• Año: 2015\n• Kilómetros: 84.500\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10hs a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "chevrolet-celta-ls-aa-2011",
-    "name": "Chevrolet Celta LS AA",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2011,
-    "kilometraje": 999999,
+    "id": "ram-1500-5-7-rebel-at8-4x4-2023",
+    "name": "RAM 1500 5.7 Rebel At8 4X4",
+    "marca": "RAM",
+    "marcaId": "ram",
+    "ano": 2023,
+    "kilometraje": 9600,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.4",
+    "categoria": "Pickup",
+    "transmision": "Automática",
+    "motor": "5.7",
     "combustible": "Nafta",
     "puertas": 4,
     "images": [
@@ -263,26 +260,28 @@
       "9-5.webp",
       "9-6.webp",
       "9-7.webp",
-      "9-8.webp"
+      "9-8.webp",
+      "9-9.webp",
+      "9-10.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nCHEVROLET CELTA LS AA\n\nModelo 2011\n\n• MUY BUEN ESTADO GENERAL\n• ALARMA CON CIERRE CENTRALIZADO\n• INTERIOR MUY CUIDADO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "RAM 1500 5.7 Rebel At8 4X4\n\n• Año: 2023\n• Kilómetros: 9.600\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "ford-ecosport-1-6-version-se-2016",
-    "name": "Ford Ecosport 1.6 Version SE",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2016,
-    "kilometraje": 999999,
+    "id": "volkswagen-saveiro-1-6-msi-extreme-cd-2024",
+    "name": "Volkswagen Saveiro 1.6 Msi Extreme Cd",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2024,
+    "kilometraje": 0,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Utilitario",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 2,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -295,23 +294,23 @@
       "10-9.webp",
       "10-10.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nFORD ECOSPORT 1.6 VERSION SE\n\nModelo 2016\n\n• LEVANTA VIDRIOS - CIERRE CENTRALIZADO\n• SENSOR DE ESTACIONAMIENTO\n• INTERIOR INMACULADO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Volkswagen Saveiro 1.6 Msi Extreme Cd\n\n• Año: 2024\n• Kilómetros: 0 km, patentada, entrega inmediata.\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "peugeot-308-hdi-allure-navegador-115-cv-2013",
-    "name": "Peugeot 308 HDI ALLURE CON NAVEGADOR 115 CV",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2013,
-    "kilometraje": 999999,
+    "id": "renault-sandero-2-0-rs-racing-spirit-145cv-2017",
+    "name": "Renault Sandero 2.0 Rs Racing Spirit 145cv",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2017,
+    "kilometraje": 69000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Diésel",
+    "motor": "2.0",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "11-1.webp",
@@ -323,30 +322,26 @@
       "11-7.webp",
       "11-8.webp",
       "11-9.webp",
-      "11-10.webp",
-      "11-11.webp",
-      "11-12.webp",
-      "11-13.webp",
-      "11-14.webp"
+      "11-10.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nPEUGEOT 308 HDI ALLURE CON NAVEGADOR 115 CV\n\nModelo 2013\n\n• MUY LINDA UNIDAD\n• CUBIERTAS EN EXCELENTE ESTADO\n• INTERIOR IMPECABLE\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Renault Sandero 2.0 Rs Racing Spirit 145cv\n\n• Año: 2017\n• Kilómetros: 69.000\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   },
   {
-    "id": "renault-sandero-stepway-1-6-16v-confort-105-cv-2010",
-    "name": "Renault Sandero Stepway 1.6 16V CONFORT 105 CV",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2010,
-    "kilometraje": 999999,
+    "id": "peugeot-408-1-6-allure-plus-thp-163cv-2016",
+    "name": "Peugeot 408 1.6 Allure Plus Thp 163cv",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2016,
+    "kilometraje": 65000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Manual",
+    "categoria": "Sedán",
+    "transmision": "Automática",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "12-1.webp",
       "12-2.webp",
@@ -355,8 +350,10 @@
       "12-5.webp",
       "12-6.webp",
       "12-7.webp",
-      "12-8.webp"
+      "12-8.webp",
+      "12-9.webp",
+      "12-10.webp"
     ],
-    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nRENAULT SANDERO STEPWAY 1.6 16V CONFORT 105 CV\n\nModelo 2010\n\n• MUY LINDA UNIDAD\n• CUBIERTAS EN EXCELENTE ESTADO\n• INTERIOR IMPECABLE\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
+    "descripcion": "Peugeot 408 1.6 Allure Plus Thp 163cv\n\n• Año: 2016\n• Kilómetros: 65.000\n\nDisponible en Villa Devoto\n📍 Av. Francisco Beiró 4567, CABA\n\nLunes a Viernes: 9:30 a 13 / 15 a 19:30\nSábados: 10 a 15 hs\n\nConsultas por WhatsApp\n📲 +54 11 7075-9998\n\nGLP Automotores\nVehículos seleccionados. Atención personalizada."
   }
 ]
