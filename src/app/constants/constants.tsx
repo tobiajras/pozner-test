@@ -5,24 +5,24 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'glpautomotores',
-  name: 'GLP Automotores',
-  adress: 'Av. Francisco Beiro 4567',
-  city: 'Villa Devoto',
-  email: 'glpautomotores@gmail.com',
-  instagram: 'glp.automotores',
+  id: 'smcautomoviles',
+  name: 'SMC Automoviles',
+  adress: 'Catamarca 847',
+  city: 'CABA',
+  email: 'smcautomoviles@gmail.com',
+  instagram: 'smc_automoviles',
   facebook: null,
-  whatsapp: ['1151570528', '1144456638', '1135639104'],
-  googlemapsLink: 'https://maps.app.goo.gl/eNL38naMwKejAt41A',
+  whatsapp: ['1140250362'],
+  googlemapsLink: 'https://maps.app.goo.gl/QKuqMGiE9Tuqu9Qu5',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8574630213297!2d-58.517806723391956!3d-34.60776565771359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7d19077226b%3A0x93d8c1617b4e8336!2sAv.%20Francisco%20Beir%C3%B3%204567%2C%20C1419HZH%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1754014002246!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.385275820722!2d-58.4049116!3d-34.6197029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbfdc73a237f%3A0x5bf54d6651ac2b19!2sSMC%20Automoviles!5e0!3m2!1sen!2sar!4v1754015627406!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['9:30 a 13 y 15 a 19:30hs'] },
-    { day: 'Martes', hours: ['9:30 a 13 y 15 a 19:30hs'] },
-    { day: 'Miércoles', hours: ['9:30 a 13 y 15 a 19:30hs'] },
-    { day: 'Jueves', hours: ['9:30 a 13 y 15 a 19:30hs'] },
-    { day: 'Viernes', hours: ['9:30 a 13 y 15 a 19:30hs'] },
-    { day: 'Sábado', hours: ['10 a 15hs'] },
+    { day: 'Lunes', hours: ['10:00 a 19:00hs'] },
+    { day: 'Martes', hours: ['10:00 a 19:00h'] },
+    { day: 'Miércoles', hours: ['10:00 a 19:00h'] },
+    { day: 'Jueves', hours: ['10:00 a 19:00h'] },
+    { day: 'Viernes', hours: ['10:00 a 19:00h'] },
+    { day: 'Sábado', hours: ['10:00 a 17:00hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://glpautomotores.vercel.app/',
-  title: 'GLP Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://smcautomoviles.vercel.app/',
+  title: 'SMC Automoviles - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
