@@ -5,24 +5,24 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '60%',
-  id: 'elgalponautomotores',
-  name: 'El Galpón Automotores',
-  adress: 'Enrique Santamarina 278',
-  city: 'Monte Grande',
-  email: 'alvarezjulianseguros@gmail.com',
-  instagram: 'elgalpon.mg',
-  facebook: 'https://www.facebook.com/profile.php?id=61553316273268',
-  whatsapp: ['1133741928', '1176028096'],
-  googlemapsLink: 'https://maps.app.goo.gl/K4faVtHqecdTFcaZ7',
+  id: 'bettergarage',
+  name: 'Better Garage',
+  adress: 'Av Las Heras esq Uriburu',
+  city: 'Bernal',
+  email: 'bettergarage@hotmail.com',
+  instagram: 'bettergarage',
+  facebook: 'https://www.facebook.com/bettergarage19',
+  whatsapp: ['1134206968', '1170301820'],
+  googlemapsLink: 'https://maps.app.goo.gl/5y5FJJtEcGBv8FNx5',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204.7118219782546!2d-58.46945271179889!3d-34.82130698457518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd100142c5713%3A0x57d91fda07e584dd!2sEl%20Galp%C3%B3n%20Automotores!5e0!3m2!1sen!2sar!4v1754016438093!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420707.06626909727!2d-58.780591793750006!3d-34.533954525121395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e05540ea9cf%3A0xf10478e2f7868061!2sJos%C3%A9%20Evaristo%20Uriburu%20%26%20Av%20Las%20Heras%2C%20B1878%20Bernal%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1754017605563!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['10:00 a 19:30hs'] },
-    { day: 'Martes', hours: ['10:00 a 19:30hs'] },
-    { day: 'Miércoles', hours: ['10:00 a 19:30hs'] },
-    { day: 'Jueves', hours: ['10:00 a 19:30hs'] },
-    { day: 'Viernes', hours: ['10:00 a 19:30hs'] },
-    // { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
+    { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Martes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
+    { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
+    { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://elgalponautomotores.vercel.app/',
-  title: 'El Galpón Automotores - Compra y Venta de Autos',
+  metadataBase: 'https://bettergarage.vercel.app/',
+  title: 'Better Garage - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
