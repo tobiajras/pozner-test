@@ -4,25 +4,25 @@ export const company = {
   shortAdress: true,
   favicon: false,
   price: false,
-  objectCover: '60%',
-  id: 'bettergarage',
-  name: 'Better Garage',
-  adress: 'Av Las Heras esq Uriburu',
-  city: 'Bernal',
-  email: 'bettergarage@hotmail.com',
-  instagram: 'bettergarage',
-  facebook: 'https://www.facebook.com/bettergarage19',
-  whatsapp: ['1134206968', '1170301820'],
-  googlemapsLink: 'https://maps.app.goo.gl/5y5FJJtEcGBv8FNx5',
+  objectCover: '50%',
+  id: 'monacocars',
+  name: 'Monaco Cars',
+  adress: 'Av. Gral. San Martín 2210',
+  city: 'Lomas del Mirador',
+  email: null,
+  instagram: 'monaco.cars.arg',
+  facebook: 'https://www.facebook.com/monaco.cars.18',
+  whatsapp: ['1132325379', '1153487387'],
+  googlemapsLink: 'https://maps.app.goo.gl/JKWVP4Ku8pj8zWgx5',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420707.06626909727!2d-58.780591793750006!3d-34.533954525121395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e05540ea9cf%3A0xf10478e2f7868061!2sJos%C3%A9%20Evaristo%20Uriburu%20%26%20Av%20Las%20Heras%2C%20B1878%20Bernal%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1754017605563!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.7765605584036!2d-58.5434003!3d-34.6603454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbf5c4c6104f%3A0x7a77e9f3d0d4cacd!2sM%C3%B3naco%20Cars!5e0!3m2!1sen!2sar!4v1754048646716!5m2!1sen!2sar',
   openDays: [
     { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
     { day: 'Martes', hours: ['09:00 a 18:00hs'] },
     { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
     { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
     { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
-    { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
+    { day: 'Sábado', hours: ['09:00 a 12:00hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://bettergarage.vercel.app/',
-  title: 'Better Garage - Compra y Venta de Autos',
+  metadataBase: 'https://monacocars.vercel.app/',
+  title: 'Monaco Cars - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

@@ -1,19 +1,19 @@
 [
   {
-    "id": "peugeot-207-2-0-hdi-mt-2010",
-    "name": "Peugeot 207 2.0 HDI MT",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2010,
-    "kilometraje": 140000,
+    "id": "chevrolet-tracker-1-8-16v-ltz-4x2-2016",
+    "name": "Chevrolet Tracker 1.8 16V LTZ 4x2",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2016,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Diésel",
+    "motor": "1.8",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "1-1.webp",
@@ -22,29 +22,26 @@
       "1-4.webp",
       "1-5.webp",
       "1-6.webp",
-      "1-7.webp",
-      "1-8.webp",
-      "1-9.webp",
-      "1-10.webp"
+      "1-7.webp"
     ],
-    "descripcion": "🚀 NUEVO INGRESO 🚀\n\n🔺 Peugeot 207\n🔺 Mod 2010\n🔺 Motor 2.0 HDI Mt\n🔺 140.000km\n🔺 Cubiertas colocadas recientemente\n\nTomamos permuta 🚘\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\nTomamos permuta 🚘\n🔺 Vtv vigente\n🔺 Grabado de autopartes y cristales\n🔺 Asesoramiento por medio de Productor de seguro\n🔺 Transferencia obligatoria\n🔺 Gestoria propia\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968-1170301820"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nCHEVROLET TRACKER 1.8 16V LTZ 4X2\n\nModelo 2016\n\n• TABLERO DIGITAL\n• INTERIOR INMACULADO\n• EXCELENTE DE CUBIERTAS\n• SENSOR DE ESTACIONAMIENTO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "peugeot-2008-sport-1-6-thp-mt-2017",
-    "name": "Peugeot 2008 Sport 1.6 THP MT",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
+    "id": "toyota-etios-1-5-sedan-xls-gnc-5ta-gen-2017",
+    "name": "Toyota Etios 1.5 Sedan XLS c/ GNC 5ta. Gen.",
+    "marca": "Toyota",
+    "marcaId": "toyota",
     "ano": 2017,
-    "kilometraje": 70000,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "1.5",
+    "combustible": "GNC",
+    "puertas": 4,
     "images": [
       "2-1.webp",
       "2-2.webp",
@@ -52,26 +49,23 @@
       "2-4.webp",
       "2-5.webp",
       "2-6.webp",
-      "2-7.webp",
-      "2-8.webp",
-      "2-9.webp",
-      "2-10.webp"
+      "2-7.webp"
     ],
-    "descripcion": "🚀 NUEVO INGRESO 🚀\n\n🔺 Peugeot 2008\n🔺 Sport motor 1.6 Thp Mt\n🔺 70.000km INMACULADA!\n🔺 Mod 2017\n\nTomamos permuta 🚘\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\nTomamos permuta 🚘\n🔺 Vtv vigente\n🔺 Grabado de autopartes y cristales\n🔺 Asesoramiento por medio de Productor de seguro\n🔺 Transferencia obligatoria\n🔺 Gestoria propia\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968-1170301820"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nTOYOTA ETIOS 1.5 SEDAN XLS C/ GNC 5TA. GEN.\n\nModelo 2017\n\n• TABLERO DIGITAL\n• GNC DE 5TA GENERACION FUNCIONANDO A LA PERFECCION\n• PANTALLA MULTIMEDIA\n• SENSOR DE ESTACIONAMIENTO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "peugeot-3008-allure-1-6-thp-tiptronic-2013",
-    "name": "Peugeot 3008 Allure 1.6 THP Tiptronic",
+    "id": "peugeot-208-allure-1-6-115hp-2019",
+    "name": "Peugeot 208 Allure 1.6 115HP",
     "marca": "Peugeot",
     "marcaId": "peugeot",
-    "ano": 2013,
-    "kilometraje": 130000,
+    "ano": 2019,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
@@ -83,26 +77,24 @@
       "3-5.webp",
       "3-6.webp",
       "3-7.webp",
-      "3-8.webp",
-      "3-9.webp",
-      "3-10.webp"
+      "3-8.webp"
     ],
-    "descripcion": "🚀 NUEVO INGRESO 🚀\n\n🔺 Peugeot 3008\n🔺 Mod 2013 Allure\n🔺 Motor 1.6 Thp Tiptronic\n🔺 130.000km\n\nTomamos permuta 🚘\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\nTomamos permuta 🚘\n🔺 Vtv vigente\n🔺 Grabado de autopartes y cristales\n🔺 Asesoramiento por medio de Productor de seguro\n🔺 Transferencia obligatoria\n🔺 Gestoria propia\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968-1170301820"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\n208 ALLURE 1.6 115HP\n\nModelo 2019\n\n• INTERIOR IMPECABLE\n• CUBIERTAS IMPECABLES\n• PANTALLA CON NAVEGADOR\n• SENSOR DE ESTACIONAMIENTO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "peugeot-2008-allure-nav-1-6-2019",
-    "name": "Peugeot 2008 Allure c/Nav 1.6",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2019,
-    "kilometraje": 72000,
+    "id": "renault-duster-luxe-2-0-4x4-2013",
+    "name": "Renault Duster Luxe 2.0 4x4",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2013,
+    "kilometraje": 112200,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -115,26 +107,28 @@
       "4-7.webp",
       "4-8.webp",
       "4-9.webp",
-      "4-10.webp"
+      "4-10.webp",
+      "4-11.webp",
+      "4-12.webp"
     ],
-    "descripcion": "🚀 PRÓXIMO INGRESO 🚀\n\n🔺 Peugeot 2008 Allure c/Nav\n🔺 Mod 2019\n🔺 Motor 1.6\n🔺 72.000 segunda mano\n🔺 Distribución realizada el año pasado\n\nTomamos permuta 🚘\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\nTomamos permuta 🚘\n🔺 Vtv vigente\n🔺 Grabado de autopartes y cristales\n🔺 Asesoramiento por medio de Productor de seguro\n🔺 Transferencia obligatoria\n🔺 Gestoria propia\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968-1170301820"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nRENAULT DUSTER LUXE 2.0 4X4\n\nCAJA DE 6TA\nModelo 2013\n112.200 Km\nTODOS LOS SERVICE OFICIALES EN RENAULT\n\n• INTERIOR IMPECABLE\n• CUBIERTAS IMPECABLES\n• LEVANTA VIDRIOS\n• CAJA DE 6TA\n• TRACCION 4X4\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "peugeot-208-allure-nav-1-6-2018",
-    "name": "Peugeot 208 Allure c/nav 1.6",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2018,
-    "kilometraje": 50000,
+    "id": "chevrolet-corsa-ii-4-p-gl-aa-dir-1-8-2006",
+    "name": "Chevrolet Corsa II 4 P GL AA+DIR 1.8",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2006,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.8",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -145,26 +139,27 @@
       "5-7.webp",
       "5-8.webp",
       "5-9.webp",
-      "5-10.webp"
+      "5-10.webp",
+      "5-11.webp"
     ],
-    "descripcion": "🚀 NUEVO INGRESO 🚀\n\n🔺 Peugeot 208 Allure c/nav\n🔺 Mod 2018\n🔺 50.000km Mt\n🔺 Motor 1.6\n\nTomamos permuta 🚘\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\nTomamos permuta 🚘\n🔺 Vtv vigente\n🔺 Grabado de autopartes y cristales\n🔺 Asesoramiento por medio de Productor de seguro\n🔺 Transferencia obligatoria\n🔺 Gestoria propia\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968-1170301820"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nCORSA II 4 P GL AA+DIR 1.8\n\nModelo 2006\n\n• INTERIOR MUY CUIDADO\n• CUBIERTAS IMPECABLES\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "peugeot-partner-patagonica-1-6-hdi-2019",
-    "name": "Peugeot Partner Patagonica 1.6 HDI",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2019,
-    "kilometraje": 69000,
+    "id": "fiat-siena-1-6-el-gnc-2016",
+    "name": "Fiat Siena 1.6 EL - CON GNC",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2016,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
+    "categoria": "Sedán",
     "transmision": "Manual",
     "motor": "1.6",
-    "combustible": "Diésel",
-    "puertas": 5,
+    "combustible": "GNC",
+    "puertas": 4,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -174,25 +169,29 @@
       "6-6.webp",
       "6-7.webp",
       "6-8.webp",
-      "6-9.webp"
+      "6-9.webp",
+      "6-10.webp",
+      "6-11.webp",
+      "6-12.webp",
+      "6-13.webp"
     ],
-    "descripcion": "🚀 NUEVO INGRESO 🚀\n\n🔺 Peugeot Partner Patagonica\n🔺 Mod 2019\n🔺 Única mano-69.000\n🔺 Motor 1.6 HDI\n🔺 Distribución y aceite realizados\n🔺 Batería nueva\n\nTomamos permuta 🚘\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\nTomamos permuta 🚘\n🔺 Vtv vigente\n🔺 Grabado de autopartes y cristales\n🔺 Asesoramiento por medio de Productor de seguro\n🔺 Transferencia obligatoria\n🔺 Gestoria propia\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968-1170301820"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nFIAT SIENA 1.6 EL - CON GNC\n\nModelo 2016\n\n• LEVANTA VIDRIOS DELANTEROS\n• CIERRE CENTRALIZADO\n• CUBIERTAS NUEVAS\n• INTERIOR INMACULADO\n• GNC DE 5TA GEN\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "volkswagen-tiguan-2-0t-4motion-2011",
-    "name": "Volkswagen Tiguan 2.0T 4Motion",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2011,
-    "kilometraje": 220000,
+    "id": "renault-duster-4x2-1-6-16v-expression-gnc-2012",
+    "name": "Renault Duster 4x2 1.6 16V - EXPRESSION CON GNC",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2012,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.0",
-    "combustible": "Nafta",
+    "transmision": "Manual",
+    "motor": "1.6",
+    "combustible": "GNC",
     "puertas": 5,
     "images": [
       "7-1.webp",
@@ -204,25 +203,27 @@
       "7-7.webp",
       "7-8.webp",
       "7-9.webp",
-      "7-10.webp"
+      "7-10.webp",
+      "7-11.webp",
+      "7-12.webp"
     ],
-    "descripcion": "🚀 NUEVO INGRESO 🚀\n\n🔺 Volkswagen Tiguan\n🔺 Mod 2011\n🔺 Motor 2.0T- 211 cv\n🔺 4Motion- Automática\n🔺 220.000km\n\nTomamos permuta 🚘\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\nTomamos permuta 🚘\n🔺 Vtv vigente\n🔺 Grabado de autopartes y cristales\n🔺 Asesoramiento por medio de Productor de seguro\n🔺 Transferencia obligatoria\n🔺 Gestoria propia\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968-1170301820"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nDUSTER 4X2 1.6 16V - EXPRESSION CON GNC\n\nModelo 2012\n\n• GNC 3RA GEN FUNCIONANDO A LA PERFECCION\n• CUBIERTAS IMPECABLES\n• INTERIOR MUY CUIDADO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "toyota-hilux-pick-up-2-8-cd-srx-4x4-2019",
-    "name": "Toyota Hilux Pick-Up 2.8 CD SRX 4x4",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2019,
-    "kilometraje": 50000,
+    "id": "chevrolet-celta-ls-aa-dh-2014",
+    "name": "Chevrolet Celta LS AA + DH",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2014,
+    "kilometraje": 99600,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "2.8",
-    "combustible": "Diésel",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.4",
+    "combustible": "Nafta",
     "puertas": 4,
     "images": [
       "8-1.webp",
@@ -234,27 +235,25 @@
       "8-7.webp",
       "8-8.webp",
       "8-9.webp",
-      "8-10.webp",
-      "8-11.webp",
-      "8-12.webp"
+      "8-10.webp"
     ],
-    "descripcion": "🔺 Toyota Hilux Pick-Up\n🔺 Motor 2.8 Cd SRX\n🔺 At 4x4 - 204 Cv\n🔺 50.000km única mano\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\nTomamos permuta 🚘\n🔺 Vtv vigente\n🔺 Grabado de autopartes y cristales\n🔺 Asesoramiento por medio de Productor de seguro\n🔺 Transferencia obligatoria\n🔺 Gestoria propia\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nCHEVROLET CELTA LS AA + DH\n\nModelo 2014\n\n• CUBIERTAS IMPECABLES\n• ALARMA\n• 99.600 KM\n• INTERIOR MUY CUIDADO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "volkswagen-amarok-2-0-tdi-180-cv-2016",
-    "name": "Volkswagen Amarok 2.0 TDI 180 CV",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2016,
-    "kilometraje": 179000,
+    "id": "chevrolet-celta-ls-aa-2011",
+    "name": "Chevrolet Celta LS AA",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2011,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "2.0",
-    "combustible": "Diésel",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.4",
+    "combustible": "Nafta",
     "puertas": 4,
     "images": [
       "9-1.webp",
@@ -264,28 +263,26 @@
       "9-5.webp",
       "9-6.webp",
       "9-7.webp",
-      "9-8.webp",
-      "9-9.webp",
-      "9-10.webp"
+      "9-8.webp"
     ],
-    "descripcion": "🚀 NUEVO INGRESO 🚀\n\n🔺 Volkswagen Amarok\n🔺 Mod 2016\n🔺 Motor 2.0 TDI- 180 cv\n🔺 179.000 km AT 4x4\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\n🔺 Tomamos permuta 🚘\n🔺 Vtv al día\n🔺 Grabado de autopartes y cristales realizados\n🔺 Productor de seguro\n🔺 Gestoría propia\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nCHEVROLET CELTA LS AA\n\nModelo 2011\n\n• MUY BUEN ESTADO GENERAL\n• ALARMA CON CIERRE CENTRALIZADO\n• INTERIOR MUY CUIDADO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "volkswagen-vento-2-5-at-2011",
-    "name": "Volkswagen Vento 2.5 AT",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2011,
-    "kilometraje": 69000,
+    "id": "ford-ecosport-1-6-version-se-2016",
+    "name": "Ford Ecosport 1.6 Version SE",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2016,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "2.5",
+    "categoria": "SUV",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -298,23 +295,23 @@
       "10-9.webp",
       "10-10.webp"
     ],
-    "descripcion": "🚀 NUEVO INGRESO 🚀\n\n🔺 Volkswagen Vento\n🔺 Mod 2011 69.000km\n🔺 Única mano motor 2.5 At\n\nTomamos permuta 🚘\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nFORD ECOSPORT 1.6 VERSION SE\n\nModelo 2016\n\n• LEVANTA VIDRIOS - CIERRE CENTRALIZADO\n• SENSOR DE ESTACIONAMIENTO\n• INTERIOR INMACULADO\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "renault-sandero-stepway-intense-1-6-2021",
-    "name": "Renault Sandero Stepway Intense 1.6",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2021,
-    "kilometraje": 30000,
+    "id": "peugeot-308-hdi-allure-navegador-115-cv-2013",
+    "name": "Peugeot 308 HDI ALLURE CON NAVEGADOR 115 CV",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2013,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Hatchback",
     "transmision": "Manual",
     "motor": "1.6",
-    "combustible": "Nafta",
+    "combustible": "Diésel",
     "puertas": 5,
     "images": [
       "11-1.webp",
@@ -326,25 +323,29 @@
       "11-7.webp",
       "11-8.webp",
       "11-9.webp",
-      "11-10.webp"
+      "11-10.webp",
+      "11-11.webp",
+      "11-12.webp",
+      "11-13.webp",
+      "11-14.webp"
     ],
-    "descripcion": "🚀 NUEVO INGRESO 🚀\n\n🔺 Renault Sandero Stepway intense\n🔺 Mod 2021\n🔺 30.000km única mano\n🔺 Motor 1.6\n\nTomamos permuta 🚘\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\n📍 Av Las Heras esq Uriburu, Bernal\n📞 1134206968"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nPEUGEOT 308 HDI ALLURE CON NAVEGADOR 115 CV\n\nModelo 2013\n\n• MUY LINDA UNIDAD\n• CUBIERTAS EN EXCELENTE ESTADO\n• INTERIOR IMPECABLE\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   },
   {
-    "id": "citroen-berlingo-1-6-hdi-2016",
-    "name": "Citroen Berlingo 1.6 HDI",
-    "marca": "Citroen",
-    "marcaId": "citroen",
-    "ano": 2016,
-    "kilometraje": 109000,
+    "id": "renault-sandero-stepway-1-6-16v-confort-105-cv-2010",
+    "name": "Renault Sandero Stepway 1.6 16V CONFORT 105 CV",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2010,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
+    "categoria": "SUV",
     "transmision": "Manual",
     "motor": "1.6",
-    "combustible": "Diésel",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "12-1.webp",
@@ -354,10 +355,8 @@
       "12-5.webp",
       "12-6.webp",
       "12-7.webp",
-      "12-8.webp",
-      "12-9.webp",
-      "12-10.webp"
+      "12-8.webp"
     ],
-    "descripcion": "🚀 NUEVO INGRESO 🚀\n\n🔺 Citroen Berlingo\n🔺 Mod 2016 motor 1.6 Hdi\n🔺 Furgon con portón lateral\n🔺 109.000km\n\nBETTER GARAGE \"La imagen es parte de tu personalidad\"\n\n📍 Avenida Las Heras esquina Uriburu, Bernal\n�� 1134206968"
+    "descripcion": "🚨 NUEVO INGRESO 🚨\n\nRENAULT SANDERO STEPWAY 1.6 16V CONFORT 105 CV\n\nModelo 2010\n\n• MUY LINDA UNIDAD\n• CUBIERTAS EN EXCELENTE ESTADO\n• INTERIOR IMPECABLE\n\nToda la documentación lista para transferir.\n\nTOMAMOS TU USADO EN PARTE DE PAGO.\n\nCUALQUIER CONSULTA NO DUDES EN CONTACTARTE.\n\n📲 11-3232-5379 (LLAMADOS Y WHATSAPP)\n📲 11-5348-7387 (LLAMADOS Y WHATSAPP)\n\n📍 Av. Gral. San Martín 2210, Lomas del Mirador, GBA. Esquina Av. Eva Perón"
   }
 ]
