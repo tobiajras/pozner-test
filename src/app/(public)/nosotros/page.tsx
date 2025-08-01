@@ -63,8 +63,9 @@ const NosotrosPage = () => {
               Experiencia y compromiso
             </h3>
             <p className='text-color-text mb-2 lg:text-lg font-medium'>
-              Llevamos 39 años compartiendo nuestra confianza en la Compra -
-              Venta - Consignacion - Permutas de automoviles de calidad
+              Nuestra experiencia en el mercado nos permite ofrecer la mejor
+              calidad y el mejor servicio. Desde la selección de los autos hasta
+              la entrega, te acompañamos en cada paso.
             </p>
             <p className='text-color-text lg:text-lg font-medium'>
               Contamos con un equipo de profesionales especializados en el

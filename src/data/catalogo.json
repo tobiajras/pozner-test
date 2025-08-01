@@ -1,19 +1,19 @@
 [
   {
-    "id": "volkswagen-vento-2-0t-sportline-dsg-2013",
-    "name": "Volkswagen Vento 2.0T Sportline DSG",
+    "id": "volkswagen-amarok-2-0-tdi-4x2-automatica-2014",
+    "name": "Volkswagen Amarok 2.0 TDI 4x2 Automática",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2013,
-    "kilometraje": 104000,
+    "ano": 2014,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "Pickup",
     "transmision": "Automática",
     "motor": "2.0",
-    "combustible": "Nafta",
+    "combustible": "Diésel",
     "puertas": 4,
     "images": [
       "1-1.webp",
@@ -24,37 +24,26 @@
       "1-6.webp",
       "1-7.webp",
       "1-8.webp",
-      "1-9.webp",
-      "1-10.webp",
-      "1-11.webp",
-      "1-12.webp",
-      "1-13.webp",
-      "1-14.webp",
-      "1-15.webp",
-      "1-16.webp",
-      "1-17.webp",
-      "1-18.webp",
-      "1-19.webp",
-      "1-20.webp"
+      "1-9.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 VOLKSWAGEN VENTO 2.0T SPORTLINE DSG\n▶️ 2013\n▶️ 104.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "🚙 Volkswagen Amarok 2.0 TDI 4x2 Automática 2014\n\nConfort, fuerza y presencia en una sola camioneta 💪\n\n✅ Caja automática\n✅ Asientos de tela en excelente estado\n✅ Barra antivuelco Bracco\n✅ Estribos de aluminio\n✅ Lista para el trabajo o la ruta\n\n🔧 Motor confiable y mantenimiento al día\n\n📍 ¡Probala y sentí la diferencia!\n\n📲 Consultanos por precio y financiación"
   },
   {
-    "id": "nissan-versa-1-6-advance-2022",
-    "name": "Nissan Versa 1.6 Advance",
-    "marca": "Nissan",
-    "marcaId": "nissan",
-    "ano": 2022,
-    "kilometraje": 16000,
+    "id": "renault-kangoo-ph3-confort-1-6-2018",
+    "name": "Renault Kangoo PH3 Confort 1.6",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2018,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "Utilitario",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "2-1.webp",
       "2-2.webp",
@@ -67,74 +56,52 @@
       "2-9.webp",
       "2-10.webp",
       "2-11.webp",
-      "2-12.webp",
-      "2-13.webp",
-      "2-14.webp",
-      "2-15.webp",
-      "2-16.webp",
-      "2-17.webp",
-      "2-18.webp",
-      "2-19.webp",
-      "2-20.webp"
+      "2-12.webp"
     ],
-    "descripcion": "🤝 VENDIDO 🤝\n\n🚘 NISSAN VERSA 1.6 ADVANCE\n▶️ 2022\n▶️ 16.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "✅ KANGOO PH3 CONFORT 1.6 - 2018\n\n¡Lista para trabajar desde el primer día!\n\n✔️ Motor 1.6 ágil y económico\n✔️ Cubiertas nuevas – Listas para rodar\n✔️ Caja en impecable estado\n✔️ Gran espacio de carga y confort de manejo\n✔️ Muy bien cuidada\n✔️ Ideal para laburo o uso diario\n\n📍 La venís a ver y te la llevás\n\n📲 Financiamos / Tomamos tu usado\n\n📌 El Galpón automotores Av. Enrique Santamarina 278"
   },
   {
-    "id": "chevrolet-captiva-ls-2-4-mt6-7-plazas-2016",
-    "name": "Chevrolet Captiva LS 2.4 MT6 7 Plazas",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2016,
-    "kilometraje": 160000,
+    "id": "ford-ka-sedan-4p-1-5-2021",
+    "name": "Ford Ka Sedan 4p 1.5",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2021,
+    "kilometraje": 165300,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "2.4",
+    "motor": "1.5",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "3-1.webp",
       "3-2.webp",
       "3-3.webp",
       "3-4.webp",
       "3-5.webp",
-      "3-6.webp",
-      "3-7.webp",
-      "3-8.webp",
-      "3-9.webp",
-      "3-10.webp",
-      "3-11.webp",
-      "3-12.webp",
-      "3-13.webp",
-      "3-14.webp",
-      "3-15.webp",
-      "3-16.webp",
-      "3-17.webp",
-      "3-18.webp",
-      "3-19.webp",
-      "3-20.webp"
+      "3-6.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 CHEVROLET CAPTIVA LS 2.4 MT6 7 PLAZAS\n▶️ 2016\n▶️ 160.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "✅ Ford Ka Sedan 4p 1.5 2021 con Gnc\n\n⛽ Nafta y Gnc\n✨ 165.300 km\n\nDirección Eléctrica\nAire acondicionado\nCalefacción\nCierre centralizado\nAlarma\nApertura remota de Baúl\nLevanta cristales eléctricos\nAbs\nAirbag\nTracción ASR"
   },
   {
-    "id": "citroen-berlingo-1-6-hdi-busines-aa-dh-2017",
-    "name": "Citroen Berlingo 1.6 HDI Busines AA DH",
-    "marca": "Citroen",
-    "marcaId": "citroen",
-    "ano": 2017,
-    "kilometraje": 102000,
+    "id": "ford-ranger-xls-2-0-turbo-dc-4x2",
+    "name": "Ford Ranger XLS 2.0 Turbo DC 4x2",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2019,
+    "kilometraje": 22000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
+    "categoria": "Pickup",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "2.0",
     "combustible": "Diésel",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "4-1.webp",
       "4-2.webp",
@@ -144,37 +111,26 @@
       "4-6.webp",
       "4-7.webp",
       "4-8.webp",
-      "4-9.webp",
-      "4-10.webp",
-      "4-11.webp",
-      "4-12.webp",
-      "4-13.webp",
-      "4-14.webp",
-      "4-15.webp",
-      "4-16.webp",
-      "4-17.webp",
-      "4-18.webp",
-      "4-19.webp",
-      "4-20.webp"
+      "4-9.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 CITROEN BERLINGO 1.6 HDI BUSINES AA DH\n▶️ 2017\n▶️ 102.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "✅ Ford Ranger XLS 2.0 Turbo DC 4x2\n\n⚡ Solo 22.000 km UNICO DUEÑO\n\n🔧 Motor 2.0 Turbo Diésel\n🛻 Doble cabina\n⚙️ Caja manual de 6ta\n🛣 Tracción 4x2\n🧊 Aire acondicionado\n🎶 Pantalla multimedia con USB/Bluetooth\n🔒 Cierre centralizado\n🪞 Espejos eléctricos\n🛞 Llantas de aleación\n📦 Dirección asistida\n\n💥 ¡Impecable, como nueva!\n\nTomamos tu usado llave por llave 🔑\n\n📍 El Galpón Automotores – Av. Santamarina 278, Monte Grande\n📲 1176028096"
   },
   {
-    "id": "audi-a1-1-4-tsi-attraction-mt6-2011",
-    "name": "Audi A1 1.4 TSI Attraction MT6",
-    "marca": "Audi",
-    "marcaId": "audi",
-    "ano": 2011,
-    "kilometraje": 119000,
+    "id": "ram-1500-2019",
+    "name": "RAM 1500",
+    "marca": "RAM",
+    "marcaId": "ram",
+    "ano": 2019,
+    "kilometraje": 97000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.4",
+    "categoria": "Pickup",
+    "transmision": "Automática",
+    "motor": "5.7",
     "combustible": "Nafta",
-    "puertas": 3,
+    "puertas": 4,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -188,32 +144,26 @@
       "5-10.webp",
       "5-11.webp",
       "5-12.webp",
-      "5-13.webp",
-      "5-14.webp",
-      "5-15.webp",
-      "5-16.webp",
-      "5-17.webp",
-      "5-18.webp",
-      "5-19.webp"
+      "5-13.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 AUDI A1 1.4 TSI ATTRACTION MT6\n▶️ 2011\n▶️ 119.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "RAM 1500 2019 | 97.000 km | Blanca\n\nPotencia, presencia y confort en una sola camioneta. Esta RAM 2019 está en excelente estado, lista para destacarse en la ciudad o en la ruta.\n\nCarrocería blanca, impecable por donde la mires. Interior cuidado, motor que ruge como el primer día y apenas 97.000 km.\n\nIdeal para quien busca un vehículo con fuerza y estilo.\n\n¡Consultanos y vení a verla en persona!"
   },
   {
-    "id": "mercedes-benz-c200-blueefficiency-mt6-2013",
-    "name": "Mercedes Benz C200 BlueEfficiency MT6",
-    "marca": "Mercedes",
-    "marcaId": "mercedes",
-    "ano": 2013,
-    "kilometraje": 120000,
+    "id": "ford-ka-s-1-5-5p-2018",
+    "name": "Ford Ka S 1.5 5P",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2018,
+    "kilometraje": 68500,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "2.0",
+    "motor": "1.5",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -222,38 +172,26 @@
       "6-5.webp",
       "6-6.webp",
       "6-7.webp",
-      "6-8.webp",
-      "6-9.webp",
-      "6-10.webp",
-      "6-11.webp",
-      "6-12.webp",
-      "6-13.webp",
-      "6-14.webp",
-      "6-15.webp",
-      "6-16.webp",
-      "6-17.webp",
-      "6-18.webp",
-      "6-19.webp",
-      "6-20.webp"
+      "6-8.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 MERCEDES BENZ C200 BLUEEFFICIENCY MT6\n▶️ 2013\n▶️ 120.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "✅ Ford Ka S 1.5 5P 2018\n\n⚡ Único dueño\n⛽️ Nafta\n✨ km: 95.000\n✨ Tipo de carrocería: Hatchback\n\nDirección Eléctrica\nAire acondicionado\nCalefacción\nComputadora de abordo\nComandos al volante\nCierre centralizado\nControl de tracción delantera\nPotencia 125hp\nAbs\nAirbag\nControl de estabilidad\nLlantas de aleación\n\n✨ Retiralo con un anticipo de $7.900.000 o tu usado más cuotas fijas en pesos ‼️"
   },
   {
-    "id": "chevrolet-onix-1-0-turbo-ltz-at6-2022",
-    "name": "Chevrolet Onix 1.0 Turbo LTZ AT6",
+    "id": "chevrolet-cruze-ltz-2017",
+    "name": "Chevrolet Cruze LTZ",
     "marca": "Chevrolet",
     "marcaId": "chevrolet",
-    "ano": 2022,
-    "kilometraje": 48000,
+    "ano": 2017,
+    "kilometraje": 145000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "1.0",
+    "categoria": "Sedán",
+    "transmision": "Manual",
+    "motor": "1.4",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "7-1.webp",
       "7-2.webp",
@@ -264,32 +202,22 @@
       "7-7.webp",
       "7-8.webp",
       "7-9.webp",
-      "7-10.webp",
-      "7-11.webp",
-      "7-12.webp",
-      "7-13.webp",
-      "7-14.webp",
-      "7-15.webp",
-      "7-16.webp",
-      "7-17.webp",
-      "7-18.webp",
-      "7-19.webp",
-      "7-20.webp"
+      "7-10.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n▶️ CHEVROLET ONIX 1.0 TURBO LTZ AT6\n▶️ 2022\n▶️ 48.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "Chevrolet Cruze LTZ 2017 – Manual | 145.000 km\n\n📍 Blanco perlado | Con baúl\n\nElegancia, confort y performance en un solo auto.\n\nEste Cruze LTZ combina un diseño moderno con un gran equipamiento:\n\n✅ Motor 1.4 turbo\n✅ Caja manual de 6ta\n✅ Climatizador automático\n✅ Pantalla multimedia con Android Auto / Apple CarPlay\n✅ Llantas de aleación\n✅ Control de estabilidad y tracción\n✅ Cámara de retroceso\n✅ ¡Con baúl grande para que no te falte espacio!\n\n📍 Venilo a ver en El Galpón Automotores - Monte Grande\n📲 1176028096\n📸 Más fotos en @elgalpon.mg"
   },
   {
-    "id": "citroen-c3-aircross-1-6-shine-2016",
-    "name": "Citroen C3 Aircross 1.6 Shine",
-    "marca": "Citroen",
-    "marcaId": "citroen",
-    "ano": 2016,
-    "kilometraje": 107000,
+    "id": "ford-focus-s-1-6-mt-2018",
+    "name": "Ford Focus S 1.6 Mt",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2018,
+    "kilometraje": 95000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Hatchback",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
@@ -302,29 +230,17 @@
       "8-5.webp",
       "8-6.webp",
       "8-7.webp",
-      "8-8.webp",
-      "8-9.webp",
-      "8-10.webp",
-      "8-11.webp",
-      "8-12.webp",
-      "8-13.webp",
-      "8-14.webp",
-      "8-15.webp",
-      "8-16.webp",
-      "8-17.webp",
-      "8-18.webp",
-      "8-19.webp",
-      "8-20.webp"
+      "8-8.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 CITROEN C3 AIRCROSS 1.6 SHINE\n▶️ 2016\n▶️ 107.000 km\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "✅ Ford Focus S 1.6 Mt 2018\n\n⚡ Unico Dueño\n⛽️ Nafta\n✨ km: 95.000\n✨ Tipo de carrocería: Hatchback\n\nDirección Eléctrica\nAire acondicionado\nCalefacción\nComputadora de abordo\nComandos al volante\nCierre centralizado\nControl de tracción delantera\nPotencia 125hp\nAbs\nAirbag\nControl de estabilidad\nLlantas de aleación\n\n✨ Retiralo con un anticipo de $7.900.000 o tu usado más cuotas fijas en pesos ‼️"
   },
   {
-    "id": "volkswagen-gol-trend-1-6-pack-ii-2019",
-    "name": "Volkswagen Gol Trend 1.6 Pack II",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2019,
-    "kilometraje": 999999,
+    "id": "renault-sandero-privilege-1-6-16v-2018",
+    "name": "Renault Sandero Privilege 1.6 16v",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2018,
+    "kilometraje": 118000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -341,27 +257,24 @@
       "9-4.webp",
       "9-5.webp",
       "9-6.webp",
-      "9-7.webp",
-      "9-8.webp",
-      "9-9.webp",
-      "9-10.webp"
+      "9-7.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 VOLKSWAGEN GOL TREND 1.6 PACK II\n▶️ 2019\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "Nuevo Sandero Privilege 1.6 16v 105cv\n\nAño: 2018\nKm: 118.000\n\nAire acondicionado\nDirección hidráulica\nLevanta cristales eléctricos\nEspejos eléctricos\nSistema Bluetooth\nComandos al volante\nPantalla táctil de 7\"\nComputadora a bordo\nSensor de estacionamiento\nAirbag\nAbs\nFaros Auxiliares\nLlantas de aleación\n\nFinanciacion solo con Dni\nAnticipo mínimo $7.300.000 o tu USADO y cuotas fijas en pesos"
   },
   {
-    "id": "renault-clio-expression-1-2-2013",
-    "name": "Renault Clio Expression 1.2",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2013,
-    "kilometraje": 999999,
+    "id": "chevrolet-sonic-lt-1-6-2015",
+    "name": "Chevrolet Sonic LT 1.6",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2015,
+    "kilometraje": 145000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.2",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -370,25 +283,23 @@
       "10-3.webp",
       "10-4.webp",
       "10-5.webp",
-      "10-6.webp",
-      "10-7.webp",
-      "10-8.webp"
+      "10-6.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 RENAULT CLIO EXPRESSION 1.2\n▶️ 2013\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "✨ Chevrolet Sonic LT 1.6 2015 – Confort y tecnología en cada kilómetro ✨\n\n📍 145.000 km\n⚙️ Motor 1.6 ágil y eficiente\n❄️ Aire acondicionado para viajes cómodos\n🚀 Control de velocidad crucero para mayor confort en ruta\n📺 Pantalla multimedia y 🎛️ comandos al volante\n⚡ Llantas de aleación y diseño moderno\n🛞 Dirección hidráulica y 🔝 levantavidrios eléctricos\n\n🔥 ¡Listo para disfrutar! Consultanos.\n\n#ChevroletSonic #SonicLT #ConfortYTecnología #AutoEnVenta #ViajeSeguro #ChevroletLovers"
   },
   {
-    "id": "peugeot-208-road-trip-at-2024",
-    "name": "Peugeot 208 Road Trip AT",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2024,
+    "id": "renault-sandero-stepway-2011",
+    "name": "Renault Sandero Stepway",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2011,
     "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Automática",
+    "categoria": "SUV",
+    "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
@@ -399,36 +310,68 @@
       "11-4.webp",
       "11-5.webp",
       "11-6.webp",
-      "11-7.webp"
+      "11-7.webp",
+      "11-8.webp",
+      "11-9.webp",
+      "11-10.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 PEUGEOT 208 ROAD TRIP AT\n▶️ 2024\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "Renault Sandero Stepway 2011 | Con GNC\n\nIdeal para la ciudad y la ruta, con un andar firme, cómodo y económico.\n\nMotor 1.6, aire acondicionado, dirección asistida, levantavidrios eléctricos, GNC de quinta generación y mucha practicidad.\n\nListo para transferir y rodar.\n\n¡Subite a un Stepway y dale un paso arriba a tu movilidad!\n\nEl Galpón Automotores\nAv. Enrique Santamarina 278, Monte Grande\n@elgalpon.mg | 1176028096"
   },
   {
-    "id": "volkswagen-amarok-180-hp-trendline-2015",
-    "name": "Volkswagen Amarok 180 HP Trendline",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2015,
-    "kilometraje": 999999,
+    "id": "suzuki-fun-1-4-2010",
+    "name": "Suzuki Fun 1.4",
+    "marca": "Suzuki",
+    "marcaId": "suzuki",
+    "ano": 2010,
+    "kilometraje": 150000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "motor": "1.4",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "12-1.webp",
       "12-2.webp",
       "12-3.webp",
       "12-4.webp",
       "12-5.webp",
-      "12-6.webp",
-      "12-7.webp",
-      "12-8.webp"
+      "12-6.webp"
     ],
-    "descripcion": "‼️ DISPONIBLE ‼️\n\n🚘 VOLKSWAGEN AMAROK 180 HP TRENDLINE\n▶️ 2015\n\n🤝 Dejanos tu Usado en Parte de Pago 🤝\n- Servicio de Gestoria\n- Asesor de Seguros\n\n🤳 Contactanos 1169526452\n📩 Envía mensaje para más Información\n📍 Av. Gral. Mosconi 355 Lomas del Mirador"
+    "descripcion": "🚗 Suzuki Fun 1.4 | 2010 | Blanco\n\n150.000 km reales – Impecable por donde lo mires.\n\nCompacto, ágil y económico. Ideal para moverse todos los días sin gastar de más.\n\n☸️ Direccion hidraulica\n💨 Aire acondicionado / calefacción\n🛞 Motor 1.4 confiable y rendidor\n📉 Bajísimo consumo\n🎨 Blanco perlado que se mantiene hermoso\n📅 Año 2010\n🔑 Listo para transferir\n\n📍 Vení a verlo a El Galpón Automotores – Monte Grande\n📞 1176028096\n📌 Av. Enrique Santamarina 278\n📲 Seguinos en Instagram: @elgalpon.mg"
+  },
+  {
+    "id": "mazda-mpv-2001",
+    "name": "Mazda MPV",
+    "marca": "Mazda",
+    "marcaId": "mazda",
+    "ano": 2001,
+    "kilometraje": 128000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Minivan",
+    "transmision": "Automática",
+    "motor": "3.0",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "13-1.webp",
+      "13-2.webp",
+      "13-3.webp",
+      "13-4.webp",
+      "13-5.webp",
+      "13-6.webp",
+      "13-7.webp",
+      "13-8.webp",
+      "13-9.webp",
+      "13-10.webp",
+      "13-11.webp"
+    ],
+    "descripcion": "💥 Mazda MPV 2001 💥\n\n🛣️ 128.000 km reales\n✅ VTV vigente hasta 2026\n🛞 4 cubiertas nuevas\n⚙️ Motor V6 24v – automática\n\nUna minivan cómoda, potente y lista para la ruta 🚐💨\n\nIdeal para la familia o para viajar con todo el confort.\n\n📍 Av. Enrique Santamarina 278 – Monte Grande\n📲 @elgalpon.mg"
   }
 ]
