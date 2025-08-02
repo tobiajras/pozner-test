@@ -1,18 +1,18 @@
 [
   {
-    "id": "audi-q5-2-0-tfsi-stronic-quattro-security-252cv-2021",
-    "name": "Audi Q5 2.0 Tfsi Stronic Quattro Security 252cv",
-    "marca": "Audi",
-    "marcaId": "audi",
-    "ano": 2021,
-    "kilometraje": 30900,
+    "id": "chery-tiggo-2-1-5-luxury-2018",
+    "name": "Chery Tiggo 2 1.5 Luxury",
+    "marca": "Chery",
+    "marcaId": "chery",
+    "ano": 2018,
+    "kilometraje": 72000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.0",
+    "transmision": "Manual",
+    "motor": "1.5",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -27,29 +27,26 @@
       "1-9.webp",
       "1-10.webp",
       "1-11.webp",
-      "1-12.webp",
-      "1-13.webp",
-      "1-14.webp",
-      "1-15.webp"
+      "1-12.webp"
     ],
-    "descripcion": "Hoy les presentamos:\n\n♦️Audi Q5 2.0 Tfsi Stronic Quattro Security 252cv\n⏱️Año: 2021\n🛣️30.900km\n⛽️Combustible: nafta\n🕹️Transmisión: automatica\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Chery Tiggo 2 1.5 Luxury🔹\n\n✅Año: 2018\n✅Motor: 1.5\n✅Kilómetros:72.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "suzuki-grand-vitara-1-6-mt-4x4-2008",
-    "name": "Suzuki Grand Vitara 1.6 Mt 4x4",
-    "marca": "Suzuki",
-    "marcaId": "suzuki",
-    "ano": 2008,
-    "kilometraje": 204000,
+    "id": "ford-focus-iii-2-0-titanium-at6-2016",
+    "name": "Ford Focus III 2.0 Titanium At6",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2016,
+    "kilometraje": 115000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "2.0",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "2-1.webp",
       "2-2.webp",
@@ -62,26 +59,25 @@
       "2-9.webp",
       "2-10.webp",
       "2-11.webp",
-      "2-12.webp",
-      "2-13.webp"
+      "2-12.webp"
     ],
-    "descripcion": "Hoy les presentamos:\n\n♦️Suzuki Grand Vitara 1.6 Mt 4x4\n⏱️Año: 2008\n🛣️204.000km\n⛽️Combustible: nafta\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Ford Focus III 2.0 Titanium At6🔹\n\n✅Año: 2016\n✅Motor: 2.0\n✅Kilómetros:115.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "ford-ecosport-1-6-my10-xi-plus-mp3-4x2-2011",
-    "name": "Ford Ecosport 1.6 My10 XI Plus Mp3 4x2",
+    "id": "ford-kuga-2-5-titanium-hibrida-adw-2020",
+    "name": "Ford Kuga 2.5 Titanium Hibrida Adw",
     "marca": "Ford",
     "marcaId": "ford",
-    "ano": 2011,
-    "kilometraje": 144000,
+    "ano": 2020,
+    "kilometraje": 78000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
+    "transmision": "Automática",
+    "motor": "2.5",
+    "combustible": "Híbrido",
     "puertas": 5,
     "images": [
       "3-1.webp",
@@ -97,27 +93,26 @@
       "3-11.webp",
       "3-12.webp",
       "3-13.webp",
-      "3-14.webp",
-      "3-15.webp"
+      "3-14.webp"
     ],
-    "descripcion": "Hoy les presentamos:\n\n♦️Ford Ecosport 1.6 My10 XI Plus Mp3 4x2\n⏱️Año: 2011\n🛣️144.000km\n⛽️Combustible: nafta\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Ford kuga 2.5 Titanium Hibrida Adw🔹\n\n✅Año: 2020\n✅Motor: 2.5\n✅Kilómetros:78.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n✅SERVICE RECIEN REALIZADO, TODOS OFICIALES\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "peugeot-106-xn-1-4-1998",
-    "name": "Peugeot 106 Xn 1.4",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 1998,
-    "kilometraje": 161000,
+    "id": "ford-fiesta-kinetic-1-6-sedan-s-plus-120cv-2014",
+    "name": "Ford Fiesta Kinetic 1.6 Sedan S Plus 120cv",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2014,
+    "kilometraje": 95000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 3,
+    "puertas": 4,
     "images": [
       "4-1.webp",
       "4-2.webp",
@@ -132,22 +127,22 @@
       "4-11.webp",
       "4-12.webp"
     ],
-    "descripcion": "❗️VENDIDO❗️\n\nHoy les presentamos:\n\n♦️Peugeot 106 xn 1.4\n⏱️Año: 1998\n🛣️161.000km\n⛽️Combustible: nafta\n🕹️Transmisión: manual\n\n💥Manuales, duplicado y triplicado de llaves\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Ford Fiesta Kinetic 1.6 Sedan S Plus 120cv🔹\n\n✅Año: 2014\n✅Motor: 1.6\n✅Kilómetros:95.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "chevrolet-onix-1-4-joy-ls-2020",
-    "name": "Chevrolet Onix 1.4 Joy Ls",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2020,
-    "kilometraje": 57000,
+    "id": "jeep-compass-2-4-longitude-2018",
+    "name": "Jeep Compass 2.4 Longitude",
+    "marca": "Jeep",
+    "marcaId": "jeep",
+    "ano": 2018,
+    "kilometraje": 119000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "2.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -161,24 +156,26 @@
       "5-8.webp",
       "5-9.webp",
       "5-10.webp",
-      "5-11.webp"
+      "5-11.webp",
+      "5-12.webp",
+      "5-13.webp"
     ],
-    "descripcion": "❗️VENDIDO❗️\n\nHoy les presentamos:\n\n♦️Chevrolet Onix 1.4 Joy Ls\n⏱️Año: 2020\n🛣️57.000km\n⛽️Combustible: nafta / GNC\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Jeep Compass 2.4 Longitude🔹\n\n✅Año: 2018\n✅Motor: 2.4\n✅Kilómetros:119.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n✅VTV 2026, SERVICE DE CAJA Y MOTOR HECHO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "honda-fit-1-5-ex-i-at-120cv-2011",
-    "name": "Honda Fit 1.5 Ex-I At 120cv",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2011,
-    "kilometraje": 105000,
+    "id": "chevrolet-tracker-1-8-ltz-premier-2018",
+    "name": "Chevrolet Tracker 1.8 Ltz Premier",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2018,
+    "kilometraje": 95000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "1.5",
+    "categoria": "SUV",
+    "transmision": "Manual",
+    "motor": "1.8",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -192,24 +189,25 @@
       "6-8.webp",
       "6-9.webp",
       "6-10.webp",
-      "6-11.webp"
+      "6-11.webp",
+      "6-12.webp"
     ],
-    "descripcion": "❗️VENDIDO❗️\n\nHoy les presentamos:\n\n♦️Honda Fit 1.5 Ex-I At 120cv\n⏱️Año: 2011\n🛣️105.000km\n⛽️Combustible: nafta\n🕹️Transmisión: automática\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Chevrolet Tracker 1.8 Ltz Premier🔹\n\n✅Año: 2018\n✅Motor: 1.8\n✅Kilómetros: 95.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "volkswagen-suran-1-6-highline-msi-110cv-2016",
-    "name": "Volkswagen Suran 1.6 Highline Msi 110cv",
+    "id": "volkswagen-polo-1-4-tsi-gts-2021",
+    "name": "Volkswagen Polo 1.4 Tsi Gts",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2016,
-    "kilometraje": 175000,
+    "ano": 2021,
+    "kilometraje": 52000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "transmision": "Automática",
+    "motor": "1.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -223,26 +221,24 @@
       "7-8.webp",
       "7-9.webp",
       "7-10.webp",
-      "7-11.webp",
-      "7-12.webp",
-      "7-13.webp"
+      "7-11.webp"
     ],
-    "descripcion": "❗️ VENDIDA❗️\n\nHoy les presentamos:\n\n♦️Volkswagen Suran 1.6 Highline Msi 110cv\n⏱️Año: 2016\n🛣️175.000km\n⛽️Combustible: nafta / GNC\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Volkswagen Polo 1.4 Tsi Gts🔹\n\n✅Año: 2021\n✅Motor: 1.4\n✅Kilómetros:52.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "citroen-c4-cactus-1-6-vti-115-feel-2020",
-    "name": "Citroën C4 Cactus 1.6 Vti 115 Feel",
-    "marca": "Citroën",
-    "marcaId": "citroen",
+    "id": "chevrolet-onix-1-0t-premier-2020",
+    "name": "Chevrolet Onix 1.0t Premier",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
     "ano": 2020,
-    "kilometraje": 75000,
+    "kilometraje": 52000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.6",
+    "motor": "1.0T",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -257,26 +253,23 @@
       "8-9.webp",
       "8-10.webp",
       "8-11.webp",
-      "8-12.webp",
-      "8-13.webp",
-      "8-14.webp",
-      "8-15.webp"
+      "8-12.webp"
     ],
-    "descripcion": "❗️VENDIDA❗️\n\nHoy les presentamos:\n\n♦️Citroën C4 Cactus 1.6 Vti 115 Feel\n⏱️Año: 2020\n🛣️75.000km\n⛽️Combustible: nafta\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Chevrolet Onix 1.0t premier🔹\n\n✅Año: 2020\n✅Motor: 1.0T\n✅Kilómetros:52.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "ford-focus-iii-2-0-se-plus-at6-2015",
-    "name": "Ford Focus III 2.0 Se Plus At6",
+    "id": "ford-ecosport-2-0-freestyle-143-4x4-2016",
+    "name": "Ford Ecosport 2.0 Freestyle 143 4x4",
     "marca": "Ford",
     "marcaId": "ford",
-    "ano": 2015,
-    "kilometraje": 130000,
+    "ano": 2016,
+    "kilometraje": 114000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Automática",
+    "categoria": "SUV",
+    "transmision": "Manual",
     "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 5,
@@ -291,26 +284,27 @@
       "9-8.webp",
       "9-9.webp",
       "9-10.webp",
-      "9-11.webp"
+      "9-11.webp",
+      "9-12.webp"
     ],
-    "descripcion": "Hoy les presentamos:\n\n♦️Ford Focus III 2.0 Se Plus At6\n⏱️Año: 2015\n🛣️130.000km\n⛽️Combustible: Nafta\n🕹️Transmisión: automática\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Ford Ecosport 2.0 Freestyle 143 4x4 🔹\n\n✅Año: 2016\n✅Motor: 2.0\n✅Kilómetros:114.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n‼️4 CUBIERTAS NUEVAS‼️SERVICE OFICIALES EN FORD\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "ford-ka-1-0-fly-viral-63cv-2013",
-    "name": "Ford Ka 1.0 Fly Viral 63cv",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2013,
-    "kilometraje": 52000,
+    "id": "volkswagen-amarok-2-0-cd-tdi-180cv-4x2-highline-pack-at-2021",
+    "name": "Volkswagen Amarok 2.0 Cd Tdi 180cv 4x2 Highline Pack At",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2021,
+    "kilometraje": 42000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.0",
-    "combustible": "Nafta",
-    "puertas": 3,
+    "categoria": "Pickup",
+    "transmision": "Automática",
+    "motor": "2.0",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -321,28 +315,30 @@
       "10-7.webp",
       "10-8.webp",
       "10-9.webp",
-      "10-10.webp"
+      "10-10.webp",
+      "10-11.webp"
     ],
-    "descripcion": "❗️VENDIDO❗️\n\nHoy les presentamos:\n\n♦️Ford Ka 1.0 Fly Viral 63cv\n⏱️Año: 2013\n🛣️52.000km\n⛽️Combustible: Nafta\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Volkswagen Amarok 2.0 Cd Tdi 180cv 4x2 Highline Pack At🔹\n\n✅Año: 2021\n✅Motor: 2.0\n✅Kilómetros:42.000 km\n✅Estado: impecable\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "honda-hrv-1-8-lx-2015",
-    "name": "Honda HRV 1.8 LX",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2015,
-    "kilometraje": 88000,
+    "id": "volkswagen-amarok-3-0-tdi-258cv-v6-extreme-4x4-at-2025",
+    "name": "Volkswagen Amarok 3.0 Tdi 258cv V6 Extreme 4x4 At",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2025,
+    "kilometraje": 0,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Pickup",
     "transmision": "Automática",
-    "motor": "1.8",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "3.0",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "11-1.webp",
+      "11-2.webp",
       "11-3.webp",
       "11-4.webp",
       "11-5.webp",
@@ -352,26 +348,25 @@
       "11-9.webp",
       "11-10.webp",
       "11-11.webp",
-      "11-12.webp",
-      "11-13.webp"
+      "11-12.webp"
     ],
-    "descripcion": "❗️VENDIDA❗️\n\nHoy les presentamos:\n\n♦️Honda HRV 1.8 LX\n⏱️Año: 2015\n🛣️88.000km\n⛽️Combustible: Nafta\n🕹️Transmisión: automática\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Volkswagen Amarok 3.0 tdi 258cv v6 Extreme 4x4 at🔹\n\n✅Año: 2025\n✅Motor: 3.0\n✅Kilómetros:0 km\n✅Estado: 0km\n✅0km\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   },
   {
-    "id": "citroen-c4-lounge-2-0-origine-am16-2015",
-    "name": "Citroën C4 Lounge 2.0 Origine Am16",
-    "marca": "Citroën",
-    "marcaId": "citroen",
-    "ano": 2015,
-    "kilometraje": 110000,
+    "id": "volkswagen-amarok-3-0-tdi-258cv-v6-extreme-4x4-at-2025-2",
+    "name": "Volkswagen Amarok 3.0 Tdi 258cv V6 Extreme 4x4 At",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2025,
+    "kilometraje": 0,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Nafta",
+    "categoria": "Pickup",
+    "transmision": "Automática",
+    "motor": "3.0",
+    "combustible": "Diésel",
     "puertas": 4,
     "images": [
       "12-1.webp",
@@ -383,8 +378,10 @@
       "12-7.webp",
       "12-8.webp",
       "12-9.webp",
-      "12-10.webp"
+      "12-10.webp",
+      "12-11.webp",
+      "12-12.webp"
     ],
-    "descripcion": "Hoy les presentamos:\n\n♦️Citroën C4 Lounge 2.0 Origine Am16\n⏱️Año: 2015\n🛣️110.000km\n⛽️Combustible: Nafta\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
+    "descripcion": "🔹Volkswagen Amarok 3.0 tdi 258cv v6 Extreme 4x4 at🔹\n\n✅Año: 2025\n✅Motor: 3.0\n✅Kilómetros:0 km\n✅Estado: 0km\n✅0km\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
   }
 ]
