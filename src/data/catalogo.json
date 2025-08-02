@@ -1,18 +1,18 @@
 [
   {
-    "id": "jeep-compass-sport-2-4-mt6-2018",
-    "name": "Jeep Compass Sport 2.4 MT6",
-    "marca": "Jeep",
-    "marcaId": "jeep",
-    "ano": 2018,
-    "kilometraje": 999999,
+    "id": "audi-q5-2-0-tfsi-stronic-quattro-security-252cv-2021",
+    "name": "Audi Q5 2.0 Tfsi Stronic Quattro Security 252cv",
+    "marca": "Audi",
+    "marcaId": "audi",
+    "ano": 2021,
+    "kilometraje": 30900,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "2.4",
+    "transmision": "Automática",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -30,27 +30,26 @@
       "1-12.webp",
       "1-13.webp",
       "1-14.webp",
-      "1-15.webp",
-      "1-16.webp"
+      "1-15.webp"
     ],
-    "descripcion": "⚠️ VENDIDO ⚠️ VENDIDO ⚠️ VENDIDO ⚠️\n\nJeep Compass Sport 2.4 Mt6 💎 año 2018\n💰 21.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "Hoy les presentamos:\n\n♦️Audi Q5 2.0 Tfsi Stronic Quattro Security 252cv\n⏱️Año: 2021\n🛣️30.900km\n⛽️Combustible: nafta\n🕹️Transmisión: automatica\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "volkswagen-vento-luxury-2-5-tiptronic-2015",
-    "name": "Volkswagen Vento Luxury 2.5 Tiptronic",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2015,
-    "kilometraje": 999999,
+    "id": "suzuki-grand-vitara-1-6-mt-4x4-2008",
+    "name": "Suzuki Grand Vitara 1.6 Mt 4x4",
+    "marca": "Suzuki",
+    "marcaId": "suzuki",
+    "ano": 2008,
+    "kilometraje": 204000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "2.5",
+    "categoria": "SUV",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "2-1.webp",
       "2-2.webp",
@@ -64,27 +63,24 @@
       "2-10.webp",
       "2-11.webp",
       "2-12.webp",
-      "2-13.webp",
-      "2-14.webp",
-      "2-15.webp",
-      "2-16.webp"
+      "2-13.webp"
     ],
-    "descripcion": "💣💣 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! 💣💣\n\nVolkswagen Vento Luxury 2.5 Tiptronic 💎 año 2015\n💰 16.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "Hoy les presentamos:\n\n♦️Suzuki Grand Vitara 1.6 Mt 4x4\n⏱️Año: 2008\n🛣️204.000km\n⛽️Combustible: nafta\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "chevrolet-tracker-1-2-turbo-at-2024",
-    "name": "Chevrolet Tracker 1.2 Turbo AT",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2024,
-    "kilometraje": 999999,
+    "id": "ford-ecosport-1-6-my10-xi-plus-mp3-4x2-2011",
+    "name": "Ford Ecosport 1.6 My10 XI Plus Mp3 4x2",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2011,
+    "kilometraje": 144000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.2",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -104,24 +100,24 @@
       "3-14.webp",
       "3-15.webp"
     ],
-    "descripcion": "⚪️▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️⚪️\n\nChevrolet Tracker 1.2 Turbo AT 💎 año 2024\n💰 23.900 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "Hoy les presentamos:\n\n♦️Ford Ecosport 1.6 My10 XI Plus Mp3 4x2\n⏱️Año: 2011\n🛣️144.000km\n⛽️Combustible: nafta\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "nissan-kicks-1-6-exclusive-cvt-2020",
-    "name": "Nissan Kicks 1.6 Exclusive CVT",
-    "marca": "Nissan",
-    "marcaId": "nissan",
-    "ano": 2020,
-    "kilometraje": 999999,
+    "id": "peugeot-106-xn-1-4-1998",
+    "name": "Peugeot 106 Xn 1.4",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 1998,
+    "kilometraje": 161000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.6",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.4",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 3,
     "images": [
       "4-1.webp",
       "4-2.webp",
@@ -131,24 +127,27 @@
       "4-6.webp",
       "4-7.webp",
       "4-8.webp",
-      "4-9.webp"
+      "4-9.webp",
+      "4-10.webp",
+      "4-11.webp",
+      "4-12.webp"
     ],
-    "descripcion": "🔘🔘 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! 🔘🔘\n\nNissan Kicks 1.6 Exclusive Cvt 💎 año 2020\n💰 21.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "❗️VENDIDO❗️\n\nHoy les presentamos:\n\n♦️Peugeot 106 xn 1.4\n⏱️Año: 1998\n🛣️161.000km\n⛽️Combustible: nafta\n🕹️Transmisión: manual\n\n💥Manuales, duplicado y triplicado de llaves\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "peugeot-3008-1-6-gt-line-thp-tiptronic-2020",
-    "name": "Peugeot 3008 1.6 GT-Line THP Tiptronic",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
+    "id": "chevrolet-onix-1-4-joy-ls-2020",
+    "name": "Chevrolet Onix 1.4 Joy Ls",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
     "ano": 2020,
-    "kilometraje": 999999,
+    "kilometraje": 57000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.6",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -162,28 +161,24 @@
       "5-8.webp",
       "5-9.webp",
       "5-10.webp",
-      "5-11.webp",
-      "5-12.webp",
-      "5-13.webp",
-      "5-14.webp",
-      "5-15.webp"
+      "5-11.webp"
     ],
-    "descripcion": "💎💎 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! 💎💎\n\nPeugeot 3008 1.6 Gt-Line Thp Tiptronic 💎 año 2020\n💰 28.500 USD\n👌🏼 Excelente estado\n🎨 El mejor color\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "❗️VENDIDO❗️\n\nHoy les presentamos:\n\n♦️Chevrolet Onix 1.4 Joy Ls\n⏱️Año: 2020\n🛣️57.000km\n⛽️Combustible: nafta / GNC\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "renault-kangoo-express-confort-1-6-sce-2021",
-    "name": "Renault Kangoo Express Confort 1.6 SCE",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 2021,
-    "kilometraje": 999999,
+    "id": "honda-fit-1-5-ex-i-at-120cv-2011",
+    "name": "Honda Fit 1.5 Ex-I At 120cv",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 2011,
+    "kilometraje": 105000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Utilitario",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "categoria": "Hatchback",
+    "transmision": "Automática",
+    "motor": "1.5",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -197,21 +192,17 @@
       "6-8.webp",
       "6-9.webp",
       "6-10.webp",
-      "6-11.webp",
-      "6-12.webp",
-      "6-13.webp",
-      "6-14.webp",
-      "6-15.webp"
+      "6-11.webp"
     ],
-    "descripcion": "🔹◽️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️🔹\n\nRenault Kangoo Express Confort 1.6 Sce 💎 año 2021\n💰 16.900 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "❗️VENDIDO❗️\n\nHoy les presentamos:\n\n♦️Honda Fit 1.5 Ex-I At 120cv\n⏱️Año: 2011\n🛣️105.000km\n⛽️Combustible: nafta\n🕹️Transmisión: automática\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "ford-focus-2-1-6-2012",
-    "name": "Ford Focus 2 1.6",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2012,
-    "kilometraje": 999999,
+    "id": "volkswagen-suran-1-6-highline-msi-110cv-2016",
+    "name": "Volkswagen Suran 1.6 Highline Msi 110cv",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2016,
+    "kilometraje": 175000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
@@ -234,27 +225,26 @@
       "7-10.webp",
       "7-11.webp",
       "7-12.webp",
-      "7-13.webp",
-      "7-14.webp"
+      "7-13.webp"
     ],
-    "descripcion": "🖥️▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️🖥️\n\nFord Focus 2 1.6 💎 año 2012\n💰 10.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "❗️ VENDIDA❗️\n\nHoy les presentamos:\n\n♦️Volkswagen Suran 1.6 Highline Msi 110cv\n⏱️Año: 2016\n🛣️175.000km\n⛽️Combustible: nafta / GNC\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "toyota-corolla-1-8-xei-cvt-pack-2017",
-    "name": "Toyota Corolla 1.8 XEI CVT Pack",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2017,
-    "kilometraje": 999999,
+    "id": "citroen-c4-cactus-1-6-vti-115-feel-2020",
+    "name": "Citroën C4 Cactus 1.6 Vti 115 Feel",
+    "marca": "Citroën",
+    "marcaId": "citroen",
+    "ano": 2020,
+    "kilometraje": 75000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "1.8",
+    "categoria": "SUV",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "8-1.webp",
       "8-2.webp",
@@ -272,22 +262,22 @@
       "8-14.webp",
       "8-15.webp"
     ],
-    "descripcion": "↗️▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️↗️\n\nToyota Corolla 1.8 Xei Cvt Pack 💎 año 2017\n💰 19.900 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "❗️VENDIDA❗️\n\nHoy les presentamos:\n\n♦️Citroën C4 Cactus 1.6 Vti 115 Feel\n⏱️Año: 2020\n🛣️75.000km\n⛽️Combustible: nafta\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "honda-hrv-1-8-ex-l-cvt-2017",
-    "name": "Honda HRV 1.8 EX-L CVT",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2017,
-    "kilometraje": 999999,
+    "id": "ford-focus-iii-2-0-se-plus-at6-2015",
+    "name": "Ford Focus III 2.0 Se Plus At6",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2015,
+    "kilometraje": 130000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Hatchback",
     "transmision": "Automática",
-    "motor": "1.8",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -299,26 +289,28 @@
       "9-6.webp",
       "9-7.webp",
       "9-8.webp",
-      "9-9.webp"
+      "9-9.webp",
+      "9-10.webp",
+      "9-11.webp"
     ],
-    "descripcion": "🔸▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️🔸\n\nHonda HRV 1.8 Ex-l Cvt 💎 año 2017\n💰 21.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "Hoy les presentamos:\n\n♦️Ford Focus III 2.0 Se Plus At6\n⏱️Año: 2015\n🛣️130.000km\n⛽️Combustible: Nafta\n🕹️Transmisión: automática\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "chevrolet-tracker-1-2-turbo-premier-at-2020",
-    "name": "Chevrolet Tracker 1.2 Turbo Premier AT",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2020,
-    "kilometraje": 999999,
+    "id": "ford-ka-1-0-fly-viral-63cv-2013",
+    "name": "Ford Ka 1.0 Fly Viral 63cv",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2013,
+    "kilometraje": 52000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.2",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.0",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 3,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -329,34 +321,28 @@
       "10-7.webp",
       "10-8.webp",
       "10-9.webp",
-      "10-10.webp",
-      "10-11.webp",
-      "10-12.webp",
-      "10-13.webp",
-      "10-14.webp",
-      "10-15.webp"
+      "10-10.webp"
     ],
-    "descripcion": "📎▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️📎\n\nChevrolet Tracker 1.2 Turbo Premier AT 💎 año 2020\n💰 22.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "❗️VENDIDO❗️\n\nHoy les presentamos:\n\n♦️Ford Ka 1.0 Fly Viral 63cv\n⏱️Año: 2013\n🛣️52.000km\n⛽️Combustible: Nafta\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "peugeot-3008-1-6-felipe-thp-tiptronic-2016",
-    "name": "Peugeot 3008 1.6 Felipe THP Tiptronic",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2016,
-    "kilometraje": 999999,
+    "id": "honda-hrv-1-8-lx-2015",
+    "name": "Honda HRV 1.8 LX",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 2015,
+    "kilometraje": 88000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "1.6",
+    "motor": "1.8",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "11-1.webp",
-      "11-2.webp",
       "11-3.webp",
       "11-4.webp",
       "11-5.webp",
@@ -367,26 +353,24 @@
       "11-10.webp",
       "11-11.webp",
       "11-12.webp",
-      "11-13.webp",
-      "11-14.webp",
-      "11-15.webp"
+      "11-13.webp"
     ],
-    "descripcion": "🇫🇷▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️🇫🇷\n\nPeugeot 3008 1.6 Felipe Thp Tiptronic 💎 año 2016\n💰 16.000 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "❗️VENDIDA❗️\n\nHoy les presentamos:\n\n♦️Honda HRV 1.8 LX\n⏱️Año: 2015\n🛣️88.000km\n⛽️Combustible: Nafta\n🕹️Transmisión: automática\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   },
   {
-    "id": "volkswagen-vento-luxury-2-5-tiptronic-2015-2",
-    "name": "Volkswagen Vento Luxury 2.5 Tiptronic",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
+    "id": "citroen-c4-lounge-2-0-origine-am16-2015",
+    "name": "Citroën C4 Lounge 2.0 Origine Am16",
+    "marca": "Citroën",
+    "marcaId": "citroen",
     "ano": 2015,
-    "kilometraje": 999999,
+    "kilometraje": 110000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Sedán",
-    "transmision": "Automática",
-    "motor": "2.5",
+    "transmision": "Manual",
+    "motor": "2.0",
     "combustible": "Nafta",
     "puertas": 4,
     "images": [
@@ -399,13 +383,8 @@
       "12-7.webp",
       "12-8.webp",
       "12-9.webp",
-      "12-10.webp",
-      "12-11.webp",
-      "12-12.webp",
-      "12-13.webp",
-      "12-14.webp",
-      "12-15.webp"
+      "12-10.webp"
     ],
-    "descripcion": "💣💣 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! 💣💣\n\nVolkswagen Vento Luxury 2.5 Tiptronic 💎 año 2015\n💰 16.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
+    "descripcion": "Hoy les presentamos:\n\n♦️Citroën C4 Lounge 2.0 Origine Am16\n⏱️Año: 2015\n🛣️110.000km\n⛽️Combustible: Nafta\n🕹️Transmisión: manual\n\n〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️\n\n🚀Tomamos tu vehículo en parte de pago.\n⚠️Financiamos con DNI.\n‼️Tenemos gestor propio para entregar tu vehículo transferido y con sus papeles correspondientes.\n⚠️Todos los vehículos se entregan con VTV vigente y Grabado de autopartes.\n‼️Ofrecemos seguros.\n📆Escribinos para coordinar tu cita.\n📲 11 3941 9251 • Facundo | Lucas\n\n🚀SOMOS DEMARTIN GARAGE, LA MEJOR ONDA SIEMPRE❗️"
   }
 ]
