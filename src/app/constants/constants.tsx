@@ -5,24 +5,24 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'mzmotors',
-  name: 'MZ MOTORS',
-  adress: 'Av. Beiro 2497',
-  city: 'Villa Devoto',
+  id: 'elianautos',
+  name: 'Elian Autos',
+  adress: 'Hipólito Yrigoyen 3386',
+  city: 'Lanús',
   email: null,
-  instagram: 'mzmotorsok',
+  instagram: 'elianautos',
   facebook: null,
-  whatsapp: ['1135813871', '1131428363', '1139422263'],
-  googlemapsLink: 'https://maps.app.goo.gl/sNGbx1XNZs5XfmyE8',
+  whatsapp: ['1122334455'],
+  googlemapsLink: 'https://maps.app.goo.gl/Kg8MDkhs79Fjyv1z8',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d420707.06626909727!2d-58.78059179374999!3d-34.533954525121395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7a8306ec115%3A0x783b80318f126d22!2sMZ%20MOTORS!5e0!3m2!1sen!2sar!4v1754077097513!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.415385302805!2d-58.39050950710831!3d-34.69470152300887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcccde9c368813%3A0x412c911d5ca1e74c!2sElian%20autos!5e0!3m2!1sen!2sar!4v1754095201342!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['10:00 a 19:00hs'] },
-    { day: 'Martes', hours: ['10:00 a 19:00h'] },
-    { day: 'Miércoles', hours: ['10:00 a 19:00h'] },
-    { day: 'Jueves', hours: ['10:00 a 19:00h'] },
-    { day: 'Viernes', hours: ['10:00 a 19:00h'] },
-    { day: 'Sábado', hours: ['10:00 a 14:00hs'] },
+    { day: 'Lunes', hours: ['09:00 a 19:00hs'] },
+    { day: 'Martes', hours: ['09:00 a 19:00h'] },
+    { day: 'Miércoles', hours: ['09:00 a 19:00h'] },
+    { day: 'Jueves', hours: ['09:00 a 19:00h'] },
+    { day: 'Viernes', hours: ['09:00 a 19:00h'] },
+    { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://mzmotors.vercel.app/',
-  title: 'MZ MOTORS - Compra y Venta de Autos',
+  metadataBase: 'https://elianautos.vercel.app/',
+  title: 'Elian Autos - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
