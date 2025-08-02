@@ -1,20 +1,20 @@
 [
   {
-    "id": "chery-tiggo-2-1-5-luxury-2018",
-    "name": "Chery Tiggo 2 1.5 Luxury",
-    "marca": "Chery",
-    "marcaId": "chery",
-    "ano": 2018,
-    "kilometraje": 72000,
+    "id": "ford-ranger-xls-4x4-2012",
+    "name": "Ford Ranger Xls 4x4",
+    "marca": "Ford",
+    "marcaId": "ford",
+    "ano": 2012,
+    "kilometraje": 191200,
     "precio": {
-      "valor": 999999,
+      "valor": 23500000,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Pickup",
     "transmision": "Manual",
-    "motor": "1.5",
-    "combustible": "Nafta",
-    "puertas": 5,
+    "motor": "3.2",
+    "combustible": "Diésel",
+    "puertas": 4,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -27,25 +27,27 @@
       "1-9.webp",
       "1-10.webp",
       "1-11.webp",
-      "1-12.webp"
+      "1-12.webp",
+      "1-13.webp",
+      "1-14.webp"
     ],
-    "descripcion": "🔹Chery Tiggo 2 1.5 Luxury🔹\n\n✅Año: 2018\n✅Motor: 1.5\n✅Kilómetros:72.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "VEHÍCULO EN VENTA: Ford ranger xls 4x4\n\n📅 Año: 2012\n🛣 Kilometraje: 191.200\n💪 Motor: 3.2\n⛽ Combustible: diesel\n⚙️ Transmisión: manual\n📍 Ubicación: LA PLATA\nValor : $23.500.000"
   },
   {
-    "id": "ford-focus-iii-2-0-titanium-at6-2016",
-    "name": "Ford Focus III 2.0 Titanium At6",
+    "id": "ford-ranger-xlt-at-2019",
+    "name": "Ford Ranger Xlt At",
     "marca": "Ford",
     "marcaId": "ford",
-    "ano": 2016,
-    "kilometraje": 115000,
+    "ano": 2019,
+    "kilometraje": 128000,
     "precio": {
-      "valor": 999999,
+      "valor": 34000000,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "Pickup",
     "transmision": "Automática",
-    "motor": "2.0",
-    "combustible": "Nafta",
+    "motor": "3.2",
+    "combustible": "Diésel",
     "puertas": 4,
     "images": [
       "2-1.webp",
@@ -59,25 +61,27 @@
       "2-9.webp",
       "2-10.webp",
       "2-11.webp",
-      "2-12.webp"
+      "2-12.webp",
+      "2-13.webp",
+      "2-14.webp"
     ],
-    "descripcion": "🔹Ford Focus III 2.0 Titanium At6🔹\n\n✅Año: 2016\n✅Motor: 2.0\n✅Kilómetros:115.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "VEHÍCULO EN VENTA: FORD RANGER XLT AT 2019\n\n📅 Año: 2019\n🛣 Kilometraje: 128.000\n💪 Motor: 3.2\n⛽ Combustible: diesel\n⚙️ Transmisión: automático\n📍 Ubicación: LA PLATA\nValor : $34.000.000"
   },
   {
-    "id": "ford-kuga-2-5-titanium-hibrida-adw-2020",
-    "name": "Ford Kuga 2.5 Titanium Hibrida Adw",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2020,
-    "kilometraje": 78000,
+    "id": "toyota-yaris-s-2019",
+    "name": "Toyota Yaris S",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2019,
+    "kilometraje": 5500,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 23500,
+      "moneda": "USD"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.5",
-    "combustible": "Híbrido",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
+    "combustible": "Nafta",
     "puertas": 5,
     "images": [
       "3-1.webp",
@@ -93,25 +97,28 @@
       "3-11.webp",
       "3-12.webp",
       "3-13.webp",
-      "3-14.webp"
+      "3-14.webp",
+      "3-15.webp",
+      "3-16.webp",
+      "3-17.webp"
     ],
-    "descripcion": "🔹Ford kuga 2.5 Titanium Hibrida Adw🔹\n\n✅Año: 2020\n✅Motor: 2.5\n✅Kilómetros:78.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n✅SERVICE RECIEN REALIZADO, TODOS OFICIALES\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "VEHÍCULO EN VENTA: TOYOTA YARIS S 2019\n\n📅 Año: 2019\n🛣 Kilometraje: 5.500\n💪 Motor: 1.6\n⛽ Combustible: nafta\n⚙️ Transmisión: manual\n📍 Ubicación: LA PLATA\n💰$23.500 USD"
   },
   {
-    "id": "ford-fiesta-kinetic-1-6-sedan-s-plus-120cv-2014",
-    "name": "Ford Fiesta Kinetic 1.6 Sedan S Plus 120cv",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2014,
-    "kilometraje": 95000,
+    "id": "fiat-siena-elx-2008",
+    "name": "Fiat Siena Elx",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2008,
+    "kilometraje": 200000,
     "precio": {
-      "valor": 999999,
+      "valor": 7500000,
       "moneda": "ARS"
     },
     "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
+    "motor": "1.7",
+    "combustible": "Diésel",
     "puertas": 4,
     "images": [
       "4-1.webp",
@@ -124,25 +131,24 @@
       "4-8.webp",
       "4-9.webp",
       "4-10.webp",
-      "4-11.webp",
-      "4-12.webp"
+      "4-11.webp"
     ],
-    "descripcion": "🔹Ford Fiesta Kinetic 1.6 Sedan S Plus 120cv🔹\n\n✅Año: 2014\n✅Motor: 1.6\n✅Kilómetros:95.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "VEHÍCULO EN VENTA: Fiat Siena elx 2008\n\n📅 Año: 2008\n🛣 Kilometraje: 200.000\n💪 Motor: 1.7\n⛽ Combustible: diesel\n⚙️ Transmisión: manual\n📍 Ubicación: LA PLATA\nValor : $7.500.000 contado\nCubiertas nuevas"
   },
   {
-    "id": "jeep-compass-2-4-longitude-2018",
-    "name": "Jeep Compass 2.4 Longitude",
-    "marca": "Jeep",
-    "marcaId": "jeep",
-    "ano": 2018,
-    "kilometraje": 119000,
+    "id": "fiat-palio-attractive-2013",
+    "name": "Fiat Palio Attractive",
+    "marca": "Fiat",
+    "marcaId": "fiat",
+    "ano": 2013,
+    "kilometraje": 130000,
     "precio": {
-      "valor": 999999,
+      "valor": 11000000,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "2.4",
+    "motor": "1.4",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -160,24 +166,24 @@
       "5-12.webp",
       "5-13.webp"
     ],
-    "descripcion": "🔹Jeep Compass 2.4 Longitude🔹\n\n✅Año: 2018\n✅Motor: 2.4\n✅Kilómetros:119.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n✅VTV 2026, SERVICE DE CAJA Y MOTOR HECHO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "FIAT PALIO ATTRACTIVE\n\n📅 Año: 2013\n🛣 Kilometraje: 130.000\n💪 Motor: 1.4\n⛽ Combustible: nafta\n⚙️ Transmisión: manual\n📍 Ubicación: LA PLATA\n💰$11.000.000"
   },
   {
-    "id": "chevrolet-tracker-1-8-ltz-premier-2018",
-    "name": "Chevrolet Tracker 1.8 Ltz Premier",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
-    "ano": 2018,
-    "kilometraje": 95000,
+    "id": "renault-logan-authentique-2015",
+    "name": "Renault Logan Authentique",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2015,
+    "kilometraje": 175000,
     "precio": {
-      "valor": 999999,
+      "valor": 11000000,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Sedán",
     "transmision": "Manual",
-    "motor": "1.8",
+    "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -189,25 +195,24 @@
       "6-8.webp",
       "6-9.webp",
       "6-10.webp",
-      "6-11.webp",
-      "6-12.webp"
+      "6-11.webp"
     ],
-    "descripcion": "🔹Chevrolet Tracker 1.8 Ltz Premier🔹\n\n✅Año: 2018\n✅Motor: 1.8\n✅Kilómetros: 95.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "Renault Logan AUTHENTIQUE\n\n📅 Año: 2015\n🛣 Kilometraje: 175.000\n💪 Motor: 1.6\n⛽ Combustible: Nafta GNC\n⚙️ Transmisión: Manual\n💲 $11.000.00 con tranferencia"
   },
   {
-    "id": "volkswagen-polo-1-4-tsi-gts-2021",
-    "name": "Volkswagen Polo 1.4 Tsi Gts",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2021,
-    "kilometraje": 52000,
+    "id": "chery-qq-2013",
+    "name": "Chery QQ",
+    "marca": "Chery",
+    "marcaId": "chery",
+    "ano": 2013,
+    "kilometraje": 123900,
     "precio": {
-      "valor": 999999,
+      "valor": 7500000,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
-    "transmision": "Automática",
-    "motor": "1.4",
+    "transmision": "Manual",
+    "motor": "1.1",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -220,25 +225,24 @@
       "7-7.webp",
       "7-8.webp",
       "7-9.webp",
-      "7-10.webp",
-      "7-11.webp"
+      "7-10.webp"
     ],
-    "descripcion": "🔹Volkswagen Polo 1.4 Tsi Gts🔹\n\n✅Año: 2021\n✅Motor: 1.4\n✅Kilómetros:52.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "chery QQ\n\n📅 Año: 2013\n🛣 Kilometraje: 123.900\n💪 Motor: 1.1\n⛽ Combustible: nafta\n⚙️ Transmisión: manual\n📍 Ubicación: LA PLATA\n💰$ 7.500.000"
   },
   {
-    "id": "chevrolet-onix-1-0t-premier-2020",
-    "name": "Chevrolet Onix 1.0t Premier",
-    "marca": "Chevrolet",
-    "marcaId": "chevrolet",
+    "id": "volkswagen-polo-comfortline-1-6-2020",
+    "name": "Volkswagen Polo Comfortline 1.6",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
     "ano": 2020,
-    "kilometraje": 52000,
+    "kilometraje": 42000,
     "precio": {
-      "valor": 999999,
+      "valor": 21900000,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.0T",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -253,24 +257,25 @@
       "8-9.webp",
       "8-10.webp",
       "8-11.webp",
-      "8-12.webp"
+      "8-12.webp",
+      "8-13.webp"
     ],
-    "descripcion": "🔹Chevrolet Onix 1.0t premier🔹\n\n✅Año: 2020\n✅Motor: 1.0T\n✅Kilómetros:52.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "Volkswagen polo comfortline 1.6. 2020\n42.000km\n$21.900.000"
   },
   {
-    "id": "ford-ecosport-2-0-freestyle-143-4x4-2016",
-    "name": "Ford Ecosport 2.0 Freestyle 143 4x4",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2016,
-    "kilometraje": 114000,
+    "id": "renault-sandero-stepway-intens-cvt-2024",
+    "name": "Renault Sandero Stepway Intens Cvt",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2024,
+    "kilometraje": 4200,
     "precio": {
-      "valor": 999999,
+      "valor": 22000000,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "2.0",
+    "transmision": "Automática",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -281,30 +286,26 @@
       "9-5.webp",
       "9-6.webp",
       "9-7.webp",
-      "9-8.webp",
-      "9-9.webp",
-      "9-10.webp",
-      "9-11.webp",
-      "9-12.webp"
+      "9-8.webp"
     ],
-    "descripcion": "🔹Ford Ecosport 2.0 Freestyle 143 4x4 🔹\n\n✅Año: 2016\n✅Motor: 2.0\n✅Kilómetros:114.000 km\n✅Estado: excelente\n✅UNICO DUEÑO\n‼️4 CUBIERTAS NUEVAS‼️SERVICE OFICIALES EN FORD\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "Renault Sandero stepway intens cvt 2024\n4200 km\n$22.000.000"
   },
   {
-    "id": "volkswagen-amarok-2-0-cd-tdi-180cv-4x2-highline-pack-at-2021",
-    "name": "Volkswagen Amarok 2.0 Cd Tdi 180cv 4x2 Highline Pack At",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2021,
-    "kilometraje": 42000,
+    "id": "peugeot-2008-allure-1-6-tiptronic-2017",
+    "name": "Peugeot 2008 Allure 1.6 Tiptronic",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2017,
+    "kilometraje": 70000,
     "precio": {
-      "valor": 999999,
+      "valor": 18500000,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "2.0",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "10-1.webp",
       "10-2.webp",
@@ -316,26 +317,28 @@
       "10-8.webp",
       "10-9.webp",
       "10-10.webp",
-      "10-11.webp"
+      "10-11.webp",
+      "10-12.webp",
+      "10-13.webp"
     ],
-    "descripcion": "🔹Volkswagen Amarok 2.0 Cd Tdi 180cv 4x2 Highline Pack At🔹\n\n✅Año: 2021\n✅Motor: 2.0\n✅Kilómetros:42.000 km\n✅Estado: impecable\n✅UNICO DUEÑO\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "Peugeot 2008 allure 1.6 tiptronic 2017\n70.000 km\n$18.500.000"
   },
   {
-    "id": "volkswagen-amarok-3-0-tdi-258cv-v6-extreme-4x4-at-2025",
-    "name": "Volkswagen Amarok 3.0 Tdi 258cv V6 Extreme 4x4 At",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2025,
-    "kilometraje": 0,
+    "id": "chevrolet-corsa-clasico-ls-2012",
+    "name": "Chevrolet Corsa Clásico Ls",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2012,
+    "kilometraje": 144000,
     "precio": {
-      "valor": 999999,
+      "valor": 8000000,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "3.0",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.4",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "11-1.webp",
       "11-2.webp",
@@ -350,24 +353,24 @@
       "11-11.webp",
       "11-12.webp"
     ],
-    "descripcion": "🔹Volkswagen Amarok 3.0 tdi 258cv v6 Extreme 4x4 at🔹\n\n✅Año: 2025\n✅Motor: 3.0\n✅Kilómetros:0 km\n✅Estado: 0km\n✅0km\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "CORSA CLÁSIC LS\n\n📅 Año: 2012\n🛣 Kilometraje: 144.000\n💪 Motor: 1.4\n⛽ Combustible: nafta\n⚙️ Transmisión: manual\n📍 Ubicación: LA PLATA\n💰$ 8.000.0000"
   },
   {
-    "id": "volkswagen-amarok-3-0-tdi-258cv-v6-extreme-4x4-at-2025-2",
-    "name": "Volkswagen Amarok 3.0 Tdi 258cv V6 Extreme 4x4 At",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2025,
-    "kilometraje": 0,
+    "id": "suzuki-grand-vitara-2001",
+    "name": "Suzuki Grand Vitara",
+    "marca": "Suzuki",
+    "marcaId": "suzuki",
+    "ano": 2001,
+    "kilometraje": 93000,
     "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
+      "valor": 15000,
+      "moneda": "USD"
     },
-    "categoria": "Pickup",
-    "transmision": "Automática",
-    "motor": "3.0",
+    "categoria": "SUV",
+    "transmision": "Manual",
+    "motor": "2.0",
     "combustible": "Diésel",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "12-1.webp",
       "12-2.webp",
@@ -382,6 +385,6 @@
       "12-11.webp",
       "12-12.webp"
     ],
-    "descripcion": "🔹Volkswagen Amarok 3.0 tdi 258cv v6 Extreme 4x4 at🔹\n\n✅Año: 2025\n✅Motor: 3.0\n✅Kilómetros:0 km\n✅Estado: 0km\n✅0km\n\n✍️ Se acepta permuta y financiación en cuotas fijas y en pesos solo con DNI.\n\n💵No te pierdas la tasa del 55% FIJA Y EN PESOS.\n\n¿Tenés dudas? Hacé tu consulta al WhatsApp 👇\n\n📲 11 3331 5656\n📲11 3611-7728\n\n📍Av. Pres. Arturo Illia 1451 | Villa Maipu, San Martín - BA\n\n#coolcars #buenosiares #auto #autos #car #cars #automovil #vehiculo #usado #usados"
+    "descripcion": "SUZUKI GRAND VITARA\n\n📅 Año: 2001\n🛣 Kilometraje: 93.000\n💪 Motor: 2.0\n⛽ Combustible: TDI 4X4\n⚙️ Transmisión: manual\n📍 Ubicación: LA PLATA\n💰$15.000 dólares"
   }
 ]
