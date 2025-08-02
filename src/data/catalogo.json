@@ -1,20 +1,20 @@
 [
   {
-    "id": "ford-mondeo-sel-2-0-ecoboost-2018",
-    "name": "Ford Mondeo Sel 2.0 Ecoboost",
-    "marca": "Ford",
-    "marcaId": "ford",
+    "id": "jeep-compass-sport-2-4-mt6-2018",
+    "name": "Jeep Compass Sport 2.4 MT6",
+    "marca": "Jeep",
+    "marcaId": "jeep",
     "ano": 2018,
-    "kilometraje": 118000,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "2.0",
+    "motor": "2.4",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "1-1.webp",
       "1-2.webp",
@@ -27,25 +27,29 @@
       "1-9.webp",
       "1-10.webp",
       "1-11.webp",
-      "1-12.webp"
+      "1-12.webp",
+      "1-13.webp",
+      "1-14.webp",
+      "1-15.webp",
+      "1-16.webp"
     ],
-    "descripcion": "Ford mondeo Sel 2.0 ecoboost 2018 118000km\n\nImpecable estado!!\n\nAceptamos permutas!!!"
+    "descripcion": "⚠️ VENDIDO ⚠️ VENDIDO ⚠️ VENDIDO ⚠️\n\nJeep Compass Sport 2.4 Mt6 💎 año 2018\n💰 21.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "nissan-frontier-le-4x4-automatica-2021",
-    "name": "Nissan Frontier Le 4x4 Automática",
-    "marca": "Nissan",
-    "marcaId": "nissan",
-    "ano": 2021,
-    "kilometraje": 89000,
+    "id": "volkswagen-vento-luxury-2-5-tiptronic-2015",
+    "name": "Volkswagen Vento Luxury 2.5 Tiptronic",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2015,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "Sedán",
     "transmision": "Automática",
     "motor": "2.5",
-    "combustible": "Diésel",
+    "combustible": "Nafta",
     "puertas": 4,
     "images": [
       "2-1.webp",
@@ -58,26 +62,31 @@
       "2-8.webp",
       "2-9.webp",
       "2-10.webp",
-      "2-11.webp"
+      "2-11.webp",
+      "2-12.webp",
+      "2-13.webp",
+      "2-14.webp",
+      "2-15.webp",
+      "2-16.webp"
     ],
-    "descripcion": "Nissan frontier Le 4x4 automatica 2021 89000km\n\nCubiertas nuevas !!!\n\nAceptamos permutas!!!"
+    "descripcion": "💣💣 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! 💣💣\n\nVolkswagen Vento Luxury 2.5 Tiptronic 💎 año 2015\n💰 16.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "fiat-cronos-precision-1-8-mt-2022",
-    "name": "Fiat Cronos Precision 1.8 MT",
-    "marca": "Fiat",
-    "marcaId": "fiat",
-    "ano": 2022,
-    "kilometraje": 46000,
+    "id": "chevrolet-tracker-1-2-turbo-at-2024",
+    "name": "Chevrolet Tracker 1.2 Turbo AT",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2024,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
-    "transmision": "Manual",
-    "motor": "1.8",
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "1.2",
     "combustible": "Nafta",
-    "puertas": 4,
+    "puertas": 5,
     "images": [
       "3-1.webp",
       "3-2.webp",
@@ -89,23 +98,27 @@
       "3-8.webp",
       "3-9.webp",
       "3-10.webp",
-      "3-11.webp"
+      "3-11.webp",
+      "3-12.webp",
+      "3-13.webp",
+      "3-14.webp",
+      "3-15.webp"
     ],
-    "descripcion": "Fiat cronos Precision 1.8 mt 2022 46000km\n\nÚnica mano Impecable estado!!!!"
+    "descripcion": "⚪️▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️⚪️\n\nChevrolet Tracker 1.2 Turbo AT 💎 año 2024\n💰 23.900 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "peugeot-208-active-pack-1-6-2023",
-    "name": "Peugeot 208 Active Pack 1.6",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2023,
-    "kilometraje": 14000,
+    "id": "nissan-kicks-1-6-exclusive-cvt-2020",
+    "name": "Nissan Kicks 1.6 Exclusive CVT",
+    "marca": "Nissan",
+    "marcaId": "nissan",
+    "ano": 2020,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
+    "categoria": "SUV",
+    "transmision": "Automática",
     "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
@@ -118,27 +131,26 @@
       "4-6.webp",
       "4-7.webp",
       "4-8.webp",
-      "4-9.webp",
-      "4-10.webp"
+      "4-9.webp"
     ],
-    "descripcion": "Peugeot 208 Active pack 1.6 2023 14000km\n\nAceptamos permutas!!"
+    "descripcion": "🔘🔘 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! 🔘🔘\n\nNissan Kicks 1.6 Exclusive Cvt 💎 año 2020\n💰 21.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "volkswagen-amarok-higline-pack-2-0-automatica-2018",
-    "name": "Volkswagen Amarok Higline Pack 2.0 Automática",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2018,
-    "kilometraje": 116000,
+    "id": "peugeot-3008-1-6-gt-line-thp-tiptronic-2020",
+    "name": "Peugeot 3008 1.6 GT-Line THP Tiptronic",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2020,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
+    "categoria": "SUV",
     "transmision": "Automática",
-    "motor": "2.0",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "5-1.webp",
       "5-2.webp",
@@ -151,26 +163,29 @@
       "5-9.webp",
       "5-10.webp",
       "5-11.webp",
-      "5-12.webp"
+      "5-12.webp",
+      "5-13.webp",
+      "5-14.webp",
+      "5-15.webp"
     ],
-    "descripcion": "Volkswagen amarok Higline pack 2.0 automatica 2018 116000km\n\nImpecable estado!!!\n\nAceptamos permutas!!"
+    "descripcion": "💎💎 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! 💎💎\n\nPeugeot 3008 1.6 Gt-Line Thp Tiptronic 💎 año 2020\n💰 28.500 USD\n👌🏼 Excelente estado\n🎨 El mejor color\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "toyota-corolla-xei-1-8-mt-c-gnc-5ta-2018",
-    "name": "Toyota Corolla Xei 1.8 MT C/GNC 5ta",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2018,
-    "kilometraje": 134000,
+    "id": "renault-kangoo-express-confort-1-6-sce-2021",
+    "name": "Renault Kangoo Express Confort 1.6 SCE",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2021,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Sedán",
+    "categoria": "Utilitario",
     "transmision": "Manual",
-    "motor": "1.8",
-    "combustible": "GNC",
-    "puertas": 4,
+    "motor": "1.6",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "6-1.webp",
       "6-2.webp",
@@ -182,24 +197,28 @@
       "6-8.webp",
       "6-9.webp",
       "6-10.webp",
-      "6-11.webp"
+      "6-11.webp",
+      "6-12.webp",
+      "6-13.webp",
+      "6-14.webp",
+      "6-15.webp"
     ],
-    "descripcion": "Toyota corolla Xei 1.8 mt c/gnc 5ta 2018 134000km\n\nImpecable estado!!!\n\nAceptamos permutas!!!"
+    "descripcion": "🔹◽️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️🔹\n\nRenault Kangoo Express Confort 1.6 Sce 💎 año 2021\n💰 16.900 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "ford-territory-titanium-1-5t-at-2022",
-    "name": "Ford Territory Titanium 1.5T AT",
+    "id": "ford-focus-2-1-6-2012",
+    "name": "Ford Focus 2 1.6",
     "marca": "Ford",
     "marcaId": "ford",
-    "ano": 2022,
-    "kilometraje": 51500,
+    "ano": 2012,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "1.5",
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -213,26 +232,29 @@
       "7-8.webp",
       "7-9.webp",
       "7-10.webp",
-      "7-11.webp"
+      "7-11.webp",
+      "7-12.webp",
+      "7-13.webp",
+      "7-14.webp"
     ],
-    "descripcion": "Ford territory Titanium 1.5t at 2022 51500km\n\nÚnica por su estado!!!\n\nAceptamos permutas!!!"
+    "descripcion": "🖥️▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️🖥️\n\nFord Focus 2 1.6 💎 año 2012\n💰 10.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "volkswagen-up-high-1-0-2016",
-    "name": "Volkswagen Up! High 1.0",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2016,
-    "kilometraje": 49000,
+    "id": "toyota-corolla-1-8-xei-cvt-pack-2017",
+    "name": "Toyota Corolla 1.8 XEI CVT Pack",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2017,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.0",
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "1.8",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "8-1.webp",
       "8-2.webp",
@@ -245,26 +267,29 @@
       "8-9.webp",
       "8-10.webp",
       "8-11.webp",
-      "8-12.webp"
+      "8-12.webp",
+      "8-13.webp",
+      "8-14.webp",
+      "8-15.webp"
     ],
-    "descripcion": "Volkswagen up! High 1.0 2016 49000km\n\nImpecable estado!!!"
+    "descripcion": "↗️▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️↗️\n\nToyota Corolla 1.8 Xei Cvt Pack 💎 año 2017\n💰 19.900 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "volkswagen-amarok-trendline-2-0-4x2-2024",
-    "name": "Volkswagen Amarok Trendline 2.0 4x2",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2024,
-    "kilometraje": 900,
+    "id": "honda-hrv-1-8-ex-l-cvt-2017",
+    "name": "Honda HRV 1.8 EX-L CVT",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 2017,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Diésel",
-    "puertas": 4,
+    "categoria": "SUV",
+    "transmision": "Automática",
+    "motor": "1.8",
+    "combustible": "Nafta",
+    "puertas": 5,
     "images": [
       "9-1.webp",
       "9-2.webp",
@@ -274,29 +299,24 @@
       "9-6.webp",
       "9-7.webp",
       "9-8.webp",
-      "9-9.webp",
-      "9-10.webp",
-      "9-11.webp",
-      "9-12.webp",
-      "9-13.webp",
-      "9-14.webp"
+      "9-9.webp"
     ],
-    "descripcion": "Volkswagen amarok Trendline 2.0 4x2 2024 900 km\n\nEn garantia oficial\n\nAceptamos permutas!!"
+    "descripcion": "🔸▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️🔸\n\nHonda HRV 1.8 Ex-l Cvt 💎 año 2017\n💰 21.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "ford-ecosport-freestyle-1-6-mt-2014",
-    "name": "Ford EcoSport Freestyle 1.6 MT",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2014,
-    "kilometraje": 105000,
+    "id": "chevrolet-tracker-1-2-turbo-premier-at-2020",
+    "name": "Chevrolet Tracker 1.2 Turbo Premier AT",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2020,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "transmision": "Automática",
+    "motor": "1.2",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -309,22 +329,27 @@
       "10-7.webp",
       "10-8.webp",
       "10-9.webp",
-      "10-10.webp"
+      "10-10.webp",
+      "10-11.webp",
+      "10-12.webp",
+      "10-13.webp",
+      "10-14.webp",
+      "10-15.webp"
     ],
-    "descripcion": "Ford ecosport Freestyle 1.6 mt 2014 105000km\n\nUnico dueño de okm\n\nEstado impecable !!!"
+    "descripcion": "📎▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️📎\n\nChevrolet Tracker 1.2 Turbo Premier AT 💎 año 2020\n💰 22.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "volkswagen-suran-higline-i-motion-2012",
-    "name": "Volkswagen Suran Higline I-Motion",
-    "marca": "Volkswagen",
-    "marcaId": "volkswagen",
-    "ano": 2012,
-    "kilometraje": 89000,
+    "id": "peugeot-3008-1-6-felipe-thp-tiptronic-2016",
+    "name": "Peugeot 3008 1.6 Felipe THP Tiptronic",
+    "marca": "Peugeot",
+    "marcaId": "peugeot",
+    "ano": 2016,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Van",
+    "categoria": "SUV",
     "transmision": "Automática",
     "motor": "1.6",
     "combustible": "Nafta",
@@ -340,26 +365,30 @@
       "11-8.webp",
       "11-9.webp",
       "11-10.webp",
-      "11-11.webp"
+      "11-11.webp",
+      "11-12.webp",
+      "11-13.webp",
+      "11-14.webp",
+      "11-15.webp"
     ],
-    "descripcion": "Volkswagen suran Higline I-motion 2012 89000km\n\nImpecable estado!!!"
+    "descripcion": "🇫🇷▫️ 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! ▫️🇫🇷\n\nPeugeot 3008 1.6 Felipe Thp Tiptronic 💎 año 2016\n💰 16.000 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 58952993 Axel/ 11 33570239 Pablo\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   },
   {
-    "id": "volkswagen-up-take-5p-1-0-mpi-2020",
-    "name": "Volkswagen Up! Take 5P 1.0 MPI",
+    "id": "volkswagen-vento-luxury-2-5-tiptronic-2015-2",
+    "name": "Volkswagen Vento Luxury 2.5 Tiptronic",
     "marca": "Volkswagen",
     "marcaId": "volkswagen",
-    "ano": 2020,
-    "kilometraje": 83000,
+    "ano": 2015,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.0",
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "2.5",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 4,
     "images": [
       "12-1.webp",
       "12-2.webp",
@@ -371,8 +400,12 @@
       "12-8.webp",
       "12-9.webp",
       "12-10.webp",
-      "12-11.webp"
+      "12-11.webp",
+      "12-12.webp",
+      "12-13.webp",
+      "12-14.webp",
+      "12-15.webp"
     ],
-    "descripcion": "Volkswagen up! Take 5p 1.0 mpi 2020 83000km\n\nImpecable estado!!!\n\nAceptamos permutas!!"
+    "descripcion": "💣💣 𝐍𝐔𝐄𝐕𝐎 𝐈𝐍𝐆𝐑𝐄𝐒𝐎!!! 💣💣\n\nVolkswagen Vento Luxury 2.5 Tiptronic 💎 año 2015\n💰 16.500 USD\n👌🏼 Excelente estado\n✍🏼 Listo para transferir\n🤝🏼 Entrega en el día\n\nInfo 📲 11 33570239 📲 1158952993\n\n✔ tomamos tu usado 🚘\n✔ financiamos en cuotas fijas"
   }
 ]
