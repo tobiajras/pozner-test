@@ -1,28 +1,28 @@
 export const company = {
-  dark: true,
+  dark: false,
   darkmode: true,
   shortAdress: true,
   favicon: false,
-  price: true,
+  price: false,
   objectCover: '50%',
-  id: 'automotoresgg',
-  name: 'Automotores GG',
-  adress: 'Av. 122 2535',
+  id: 'darcangeloautomotores',
+  name: "D'arcangelo Automotores",
+  adress: 'Avenida 44 y 189',
   city: 'La Plata',
-  email: 'automotoresgg@gmail.com',
-  instagram: 'automotores__gg',
-  facebook: 'https://www.facebook.com/profile.php?id=61554896789809',
-  whatsapp: ['2213553737'],
-  googlemapsLink: 'https://maps.app.goo.gl/s3F9QvJrzeNdYCSv6',
+  email: 'autosdarcangelo@hotmail.com',
+  instagram: 'darcangeloautomotoreslp',
+  facebook: 'https://www.facebook.com/Darcangeloautomotoreslp/',
+  whatsapp: ['215604953', '2214963633'],
+  googlemapsLink: 'https://maps.app.goo.gl/VkryabS8YWeZEnvDA',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6542.32796406991!2d-57.89876280432524!3d-34.927424143950404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2ef06051379b7%3A0xce0864ead04f646d!2sAutomotores%20GG!5e0!3m2!1sen!2sar!4v1754108856597!5m2!1sen!2sar',
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.7427494205035!2d-58.04255932337759!3d-34.98810787790179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2c2ed068508a5%3A0x5d32a70cbccf3cfb!2sD'arcangelo%20Automotores!5e0!3m2!1sen!2sar!4v1754188628316!5m2!1sen!2sar",
   openDays: [
-    { day: 'Lunes', hours: ['09:00 a 19:00hs'] },
-    { day: 'Martes', hours: ['09:00 a 19:00hs'] },
-    { day: 'Miércoles', hours: ['09:00 a 19:00hs'] },
-    { day: 'Jueves', hours: ['09:00 a 19:00hs'] },
-    { day: 'Viernes', hours: ['09:00 a 19:00hs'] },
-    { day: 'Sábado', hours: ['09:00 a 19:00hs'] },
+    { day: 'Lunes', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
+    { day: 'Martes', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
+    { day: 'Miércoles', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
+    { day: 'Jueves', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
+    { day: 'Viernes', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
+    // { day: 'Sábado', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://automotoresgg.vercel.app/',
-  title: 'Automotores GG - Compra y Venta de Autos',
+  metadataBase: 'https://darcangeloautomotores.vercel.app/',
+  title: "D'arcangelo Automotores - Compra y Venta de Autos",
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
