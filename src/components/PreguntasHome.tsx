@@ -1,6 +1,6 @@
 'use client';
 
-import { company, preguntas } from '@/app/constants/constants';
+import { preguntas } from '@/app/constants/constants';
 import { useState } from 'react';
 import DropDownIcon from './icons/DropDownIcon';
 import { motion, AnimatePresence } from 'framer-motion';
