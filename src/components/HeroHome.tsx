@@ -16,7 +16,7 @@ const HeroHome = () => {
           <article className='h-[400px] md:h-[480px] lg:h-[600px] xl:h-[680px] relative w-full flex flex-col items-center justify-center md:min-w-[430px] lg:min-w-[540px] z-20'>
             <HeroCarousel />
             <div
-              className={`absolute w-full h-full top-0 -right-0 bg-color-bg-secondary-dark/65 md:bg-color-bg-secondary-dark/75 -z-20`}
+              className={`absolute w-full h-full top-0 -right-0 bg-black/65 md:bg-black/75 -z-20`}
             ></div>
 
             {/* Máscara inferior para desvanecimiento sutil */}
