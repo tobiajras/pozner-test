@@ -543,12 +543,15 @@ export default function AutoDetailPage() {
                         href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='w-full h-12 bg-color-primary hover:bg-color-primary-dark text-color-title-light flex gap-2 font-medium rounded text-center transition-colors justify-center items-center'
+                        className='w-full h-12 bg-gradient-to-l from-neutral-800 to-neutral-700 text-color-title-light flex gap-2 font-medium rounded text-center transition-all duration-300 ease-in-out justify-center items-center relative overflow-hidden group'
                       >
-                        <WhatsappIcon className='w-6 h-6' />
-                        <span>Consultar</span>
+                        <span className='relative z-10 flex gap-2 items-center'>
+                          <WhatsappIcon className='w-6 h-6' />
+                          <span>Consultar</span>
+                        </span>
+                        <div className='absolute inset-0 bg-gradient-to-l from-neutral-600 to-neutral-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out'></div>
                       </Link>
-                      <div className='w-full h-12 relative'>
+                      <div className='w-full h-12 backdrop-blur bg-black/90 text-white font-medium ring-[1.5px] ring-color-primary-dark hover:bg-white/20 rounded-lg transition-all duration-300 ease-in-out'>
                         <ShareMenu
                           url={
                             typeof window !== 'undefined'

@@ -28,7 +28,7 @@ const HeroHome = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-primary-light'
+                  className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent'
                 >
                   Vehículos Seleccionados,
                 </motion.h2>
@@ -38,7 +38,7 @@ const HeroHome = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold text-color-title-light'
+                  className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent'
                 >
                   Usados y 0km
                 </motion.h2>
@@ -63,21 +63,23 @@ const HeroHome = () => {
                 href='/catalogo'
                 className={`${
                   company.dark
-                    ? 'text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark'
-                    : 'text-color-title-light bg-color-primary hover:bg-color-primary-dark ring ring-color-primary hover:ring-color-primary-dark'
-                } lg:text-lg transition-colors py-2.5 md:py-3.5 px-5 md:px-8 rounded-lg`}
+                    ? 'text-color-title-light bg-gradient-to-l from-neutral-600 to-neutral-500 ring-[1.5px] ring-transparent'
+                    : 'text-color-title-light bg-gradient-to-l from-neutral-600 to-neutral-500 ring-[1.5px] ring-transparent'
+                } lg:text-lg transition-all duration-300 ease-in-out py-2.5 md:py-3.5 px-5 md:px-8 rounded-lg relative overflow-hidden group`}
               >
-                Ver Catálogo
+                <span className='relative z-10'>Ver Catálogo</span>
+                <div className='absolute inset-0 bg-gradient-to-l from-neutral-700 to-neutral-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out'></div>
               </Link>
               <Link
                 href='/contacto'
                 className={`${
                   company.dark
-                    ? 'backdrop-blur bg-white/10 text-white font-medium ring ring-color-primary-dark hover:bg-white/20'
-                    : 'backdrop-blur bg-white/10 text-white font-medium ring ring-color-primary-dark hover:bg-white/20'
-                } lg:text-lg transition-colors py-2.5 md:py-3.5 px-5 md:px-8 rounded-lg`}
+                    ? 'backdrop-blur bg-white/5 text-white font-medium ring-[1.5px] ring-color-primary-dark'
+                    : 'backdrop-blur bg-white/5 text-white font-medium ring-[1.5px] ring-color-primary-dark'
+                } lg:text-lg transition-all duration-300 ease-in-out py-2.5 md:py-3.5 px-5 md:px-8 rounded-lg relative overflow-hidden group`}
               >
-                Contactanos
+                <span className='relative z-10'>Contactanos</span>
+                <div className='absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out'></div>
               </Link>
             </motion.div>
           </article>

@@ -30,7 +30,7 @@ const PreguntasHome = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-title-light mb-2'
+            className='text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent pb-2'
           >
             Preguntas Frecuentes
           </motion.h2>
@@ -84,32 +84,29 @@ const PreguntasHome = () => {
                     {/* Botón de toggle */}
                     <div className='flex-shrink-0'>
                       <div
-                        className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300
-                        ${
-                          activeAnswer === pregunta.id
-                            ? `bg-color-primary text-white shadow-lg ${
-                                company.dark
-                                  ? 'bg-color-primary-dark'
-                                  : 'bg-color-primary'
-                              }`
-                            : `${
-                                company.dark
-                                  ? 'group-hover:bg-color-primary-dark'
-                                  : 'group-hover:bg-color-primary'
-                              } bg-gray-100 text-gray-600 group-hover:text-color-title-light`
-                        }`}
+                        className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out relative overflow-hidden
+                          ${
+                            activeAnswer === pregunta.id
+                              ? 'bg-gradient-to-l from-neutral-600 to-neutral-500 text-white shadow-lg'
+                              : 'bg-gradient-to-l from-neutral-800 to-neutral-700 text-white'
+                          }`}
                       >
-                        <motion.div
-                          animate={{
-                            rotate: activeAnswer === pregunta.id ? 180 : 0,
-                          }}
-                          transition={{
-                            duration: 0.3,
-                            ease: 'easeInOut',
-                          }}
-                        >
-                          <DropDownIcon className='w-5 h-5' />
-                        </motion.div>
+                        <span className='relative z-10'>
+                          <motion.div
+                            animate={{
+                              rotate: activeAnswer === pregunta.id ? 180 : 0,
+                            }}
+                            transition={{
+                              duration: 0.3,
+                              ease: 'easeInOut',
+                            }}
+                          >
+                            <DropDownIcon className='w-5 h-5' />
+                          </motion.div>
+                        </span>
+                        {activeAnswer !== pregunta.id && (
+                          <div className='absolute inset-0 bg-gradient-to-l from-neutral-600 to-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-full'></div>
+                        )}
                       </div>
                     </div>
                   </div>

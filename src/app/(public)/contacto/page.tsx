@@ -22,7 +22,7 @@ const ContactoPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-primary mb-2'
+              className='text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent mb-2'
             >
               Contactanos
             </motion.h2>
@@ -57,8 +57,11 @@ const ContactoPage = () => {
                     viewport={{ once: true }}
                     className='group flex items-center p-4 md:p-6 bg-color-bg-secondary rounded-2xl shadow-lg hover:shadow-xl transition-colors duration-300 border border-neutral-500 hover:border-color-primary/30'
                   >
-                    <div className='flex-shrink-0 w-14 h-14 bg-color-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                      <WhatsappFillIcon className='w-7 h-7 text-white' />
+                    <div className='flex-shrink-0 w-14 h-14 bg-gradient-to-l from-neutral-700 to-neutral-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 ease-in-out relative overflow-hidden'>
+                      <span className='relative z-10'>
+                        <WhatsappFillIcon className='w-7 h-7 text-white' />
+                      </span>
+                      <div className='absolute inset-0 bg-gradient-to-l from-neutral-600 to-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-xl'></div>
                     </div>
                     <div className='ml-6 flex-1'>
                       <h3 className='text-lg font-semibold text-color-title-light group-hover:text-color-primary transition-colors'>
@@ -84,8 +87,11 @@ const ContactoPage = () => {
                     viewport={{ once: true }}
                     className='group flex items-center p-4 md:p-6 bg-color-bg-secondary rounded-2xl shadow-lg hover:shadow-xl transition-colors duration-300 border border-neutral-500 hover:border-color-primary/30'
                   >
-                    <div className='flex-shrink-0 w-14 h-14 bg-color-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                      <InstagramIcon className='w-7 h-7 text-white' />
+                    <div className='flex-shrink-0 w-14 h-14 bg-gradient-to-l from-neutral-700 to-neutral-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 ease-in-out relative overflow-hidden'>
+                      <span className='relative z-10'>
+                        <InstagramIcon className='w-7 h-7 text-white' />
+                      </span>
+                      <div className='absolute inset-0 bg-gradient-to-l from-neutral-600 to-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-xl'></div>
                     </div>
                     <div className='ml-6 flex-1'>
                       <h3 className='text-lg font-semibold text-color-title-light group-hover:text-color-primary transition-colors'>
@@ -111,8 +117,11 @@ const ContactoPage = () => {
                     viewport={{ once: true }}
                     className='group flex items-center p-4 md:p-6 bg-color-bg-secondary rounded-2xl shadow-lg hover:shadow-xl transition-colors duration-300 border border-neutral-500 hover:border-color-primary/30'
                   >
-                    <div className='flex-shrink-0 w-14 h-14 bg-color-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                      <LocationIcon className='w-7 h-7 text-white' />
+                    <div className='flex-shrink-0 w-14 h-14 bg-gradient-to-l from-neutral-700 to-neutral-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 ease-in-out relative overflow-hidden'>
+                      <span className='relative z-10'>
+                        <LocationIcon className='w-7 h-7 text-white' />
+                      </span>
+                      <div className='absolute inset-0 bg-gradient-to-l from-neutral-600 to-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-xl'></div>
                     </div>
                     <div className='ml-6 flex-1'>
                       <h3 className='text-lg font-semibold text-color-title-light group-hover:text-color-primary transition-colors'>
@@ -140,7 +149,7 @@ const ContactoPage = () => {
                 {/* Horarios */}
                 <div className='bg-color-bg-secondary rounded-2xl shadow-lg p-8 border border-neutral-500'>
                   <div className='flex items-center mb-6'>
-                    <div className='w-12 h-12 bg-color-primary rounded-xl flex items-center justify-center'>
+                    <div className='w-12 h-12 bg-gradient-to-l from-neutral-700 to-neutral-500 rounded-xl flex items-center justify-center'>
                       <ClockIcon className='w-6 h-6 text-white' />
                     </div>
                     <h3 className='text-2xl font-bold text-color-title-light ml-4'>

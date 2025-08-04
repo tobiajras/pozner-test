@@ -82,10 +82,9 @@ const Proceso = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-title-light mb-2'
+            className='text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent mb-2'
           >
-            Por qué elegir <span className='text-color-primary'>nuestros</span>{' '}
-            vehículos
+            Por qué elegir nuestros vehículos
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -132,7 +131,7 @@ const Proceso = () => {
                 key={i}
                 className='flex justify-center lg:justify-start items-start gap-3 md:gap-4'
               >
-                <div className='flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 p-1.5 md:p-2 lg:p-3 rounded-full bg-color-primary text-color-title-light'>
+                <div className='flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 p-1.5 md:p-2 lg:p-3 rounded-full bg-gradient-to-l from-neutral-800 to-neutral-700 text-color-title-light'>
                   {b.icono}
                 </div>
                 <div>

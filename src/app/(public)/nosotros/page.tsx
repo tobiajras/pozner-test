@@ -18,9 +18,9 @@ const NosotrosPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-title mb-2'
+              className='text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent mb-2'
             >
-              <span className='text-color-primary'>Sobre {company.name}</span>
+              Sobre {company.name}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -59,7 +59,7 @@ const NosotrosPage = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className='text-center lg:text-left max-w-lg'
           >
-            <h3 className='text-2xl lg:text-3xl font-semibold text-color-title-light mb-3'>
+            <h3 className='text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent mb-3'>
               Experiencia y compromiso
             </h3>
             <p className='text-color-text-light mb-2 lg:text-lg font-medium'>

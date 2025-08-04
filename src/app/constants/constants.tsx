@@ -4,18 +4,18 @@ export const company = {
   shortAdress: true,
   favicon: false,
   price: false,
-  objectCover: '50%',
-  id: 'carfriendly',
-  name: 'Car Friendly',
-  adress: 'Jose Hernandez 2314',
-  city: 'Belgrano CABA',
-  email: 'info@carfriendly.com.ar',
-  instagram: 'car_friendly',
-  facebook: 'https://www.facebook.com/carfriendlyarg/',
-  whatsapp: ['1161017535'],
-  googlemapsLink: 'https://maps.app.goo.gl/17Zdx3gBow36urv7A',
+  objectCover: '65%',
+  id: 'g-cars',
+  name: 'G-CARS',
+  adress: 'Av. Nestor Kirchner 5168',
+  city: 'Hudson',
+  email: 'g-cars@gmail.com',
+  instagram: 'gcars.ok',
+  facebook: 'https://www.facebook.com/lucas.gianoli.18/',
+  whatsapp: ['1154758338', '1151625129'],
+  googlemapsLink: 'https://maps.app.goo.gl/s5us1sTDaimKSMiQA',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10480.98965187041!2d-58.45256234799597!3d-34.56647717066568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5d032aeddc5%3A0xce5e5bc75fab18b9!2sJos%C3%A9%20Hern%C3%A1ndez%202314%2C%20C1426EOP%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1754203399010!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71063.83560037751!2d-58.19884220351534!3d-34.79291829405024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32700662bb46d%3A0xb2c4c93402933849!2sG%20CARS!5e0!3m2!1sen!2sar!4v1754206257555!5m2!1sen!2sar',
   openDays: [
     { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
     { day: 'Martes', hours: ['09:00 a 18:00hs'] },
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://carfriendly.vercel.app/',
-  title: 'Car Friendly - Compra y Venta de Autos',
+  metadataBase: 'https://g-cars.vercel.app/',
+  title: 'G-CARS - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };

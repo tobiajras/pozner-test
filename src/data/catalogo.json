@@ -1,10 +1,39 @@
 [
   {
-    "id": "peugeot-207-compact-xs-2012",
-    "name": "Peugeot 207 Compact Xs",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2012,
+    "id": "alfa-romeo-164-v6-3-0l-1992",
+    "name": "Alfa Romeo 164 V6 3.0L",
+    "marca": "Alfa Romeo",
+    "marcaId": "alfa-romeo",
+    "ano": 1992,
+    "kilometraje": 150000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Sedán",
+    "transmision": "Manual",
+    "motor": "3.0L V6",
+    "combustible": "Nafta",
+    "puertas": 4,
+    "images": [
+      "1-1.webp",
+      "1-2.webp",
+      "1-3.webp",
+      "1-4.webp",
+      "1-5.webp",
+      "1-6.webp",
+      "1-7.webp",
+      "1-8.webp",
+      "1-9.webp"
+    ],
+    "descripcion": "Alfa Romeo 164 V6 3.0L.\n\nAño 1992 con 150000 km."
+  },
+  {
+    "id": "volkswagen-gol-trend-1-6-gp-2014",
+    "name": "Volkswagen Gol Trend 1.6 GP",
+    "marca": "Volkswagen",
+    "marcaId": "volkswagen",
+    "ano": 2014,
     "kilometraje": 999999,
     "precio": {
       "valor": 999999,
@@ -12,163 +41,186 @@
     },
     "categoria": "Hatchback",
     "transmision": "Manual",
-    "motor": "1.4",
+    "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
-    "images": ["1-1.webp", "1-2.webp", "1-3.webp", "1-4.webp", "1-5.webp"],
-    "descripcion": "🔷 Peugeot 207 🔷\n\nVersión compact xs\n🔷 Motor Nafta 1.4\n🔷 Año 2012\n🔷 Segunda mano"
+    "images": [
+      "2-4.webp",
+      "2-1.webp",
+      "2-2.webp",
+      "2-3.webp",
+      "2-5.webp",
+      "2-6.webp",
+      "2-7.webp",
+      "2-8.webp",
+      "2-9.webp"
+    ],
+    "descripcion": "Volkswagen Gol Trend 1.6 GP.\n\nAño 2014"
   },
   {
-    "id": "honda-crv-exl-at-4x4-2009",
-    "name": "Honda Crv Exl At 4x4",
-    "marca": "Honda",
-    "marcaId": "honda",
-    "ano": 2009,
-    "kilometraje": 230000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.0",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": ["2-1.webp", "2-2.webp", "2-3.webp", "2-4.webp", "2-5.webp"],
-    "descripcion": "🔷 Honda Crv 🔷\n\nVersión Exl at 4x4\n🔷 Tope de gama\n🔷 Año 2009\n🔷 Kms 230.000"
-  },
-  {
-    "id": "hyundai-tucson-crdi-4x4-2009",
-    "name": "Hyundai Tucson Crdi 4x4",
-    "marca": "Hyundai",
-    "marcaId": "hyundai",
-    "ano": 2009,
-    "kilometraje": 170000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Diésel",
-    "puertas": 5,
-    "images": ["3-1.webp", "3-2.webp", "3-3.webp", "3-4.webp", "3-5.webp"],
-    "descripcion": "🔷 Hyundai Tucson\n\n🔷 Año 2009\n🔷 Versión Crdi 4x4\n🔷 Motor 2.0 Turbo diésel\n🔷 Kms 170.000"
-  },
-  {
-    "id": "toyota-hilux-srv-4x4-2009",
-    "name": "Toyota Hilux Srv 4x4",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2009,
-    "kilometraje": 240000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Pickup",
-    "transmision": "Manual",
-    "motor": "3.0",
-    "combustible": "Diésel",
-    "puertas": 4,
-    "images": ["4-1.webp", "4-2.webp", "4-3.webp", "4-4.webp", "4-5.webp"],
-    "descripcion": "🔷 Toyota Hilux 🔷\n\n🔷 Año 2009\n🔷 Versión Srv 4x4\n🔷 Motor 3.0 Td\n🔷 Único dueño!!!\n🔷 Kms 240.000"
-  },
-  {
-    "id": "peugeot-208-feline-tiptronic-2020",
-    "name": "Peugeot 208 Feline Tiptronic",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2020,
-    "kilometraje": 49000,
+    "id": "renault-clio-sport-2001",
+    "name": "Renault Clio Sport",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 2001,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "4 cilindros en línea 16 válvulas",
+    "combustible": "Nafta",
+    "puertas": 5,
+    "images": [
+      "3-2.webp",
+      "3-1.webp",
+      "3-3.webp",
+      "3-4.webp",
+      "3-5.webp",
+      "3-6.webp",
+      "3-7.webp",
+      "3-8.webp",
+      "3-9.webp"
+    ],
+    "descripcion": "RENAULT CLIO SPORT 4 cilindros en línea 16 válvulas.\n\nAño 2001.\n\nPerfecto total."
+  },
+  {
+    "id": "citroen-c4-cactus-eat6-shine-2019",
+    "name": "Citroen C4 Cactus EAT6 Shine",
+    "marca": "Citroen",
+    "marcaId": "citroen",
+    "ano": 2019,
+    "kilometraje": 100000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "SUV",
     "transmision": "Automática",
     "motor": "1.6",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
-      "5-1.webp",
-      "5-2.webp",
-      "5-3.webp",
-      "5-4.webp",
-      "5-5.webp",
-      "5-6.webp"
+      "4-2.webp",
+      "4-1.webp",
+      "4-3.webp",
+      "4-4.webp",
+      "4-5.webp",
+      "4-6.webp",
+      "4-7.webp",
+      "4-8.webp",
+      "4-9.webp",
+      "4-10.webp"
     ],
-    "descripcion": "🔷 Peugeot 208\n\n🔷 Versión Feline Tiptronic\n🔷 Motor 1.6 Nafta\n🔷 Año 2020\n🔷 Kms 49.000"
+    "descripcion": "CITROEN C4 CACTUS EAT6 SHINE.\n\nAUTOMÁTICO FULL EQUIP.\n\n2019.\n\n100mkm"
   },
   {
-    "id": "renault-duster-privilege-4x4",
-    "name": "Renault Duster Privilege 4x4",
-    "marca": "Renault",
-    "marcaId": "renault",
-    "ano": 999999,
-    "kilometraje": 129000,
+    "id": "toyota-land-cruiser-prado-vx-2005",
+    "name": "Toyota Land Cruiser Prado VX",
+    "marca": "Toyota",
+    "marcaId": "toyota",
+    "ano": 2005,
+    "kilometraje": 250000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
     "transmision": "Manual",
-    "motor": "2.0",
-    "combustible": "Nafta",
+    "motor": "3.0 Diesel",
+    "combustible": "Diésel",
     "puertas": 5,
+    "images": [
+      "5-2.webp",
+      "5-1.webp",
+      "5-3.webp",
+      "5-4.webp",
+      "5-5.webp",
+      "5-6.webp",
+      "5-7.webp",
+      "5-8.webp",
+      "5-9.webp"
+    ],
+    "descripcion": "TOYOTA LAND CRUISER PRADO VX.\n\n2005.\n\nDiesel 3.0 250000km"
+  },
+  {
+    "id": "ds3-sport-chic-1-6-turbo-2013",
+    "name": "DS3 Sport Chic 1.6 Turbo",
+    "marca": "DS",
+    "marcaId": "ds",
+    "ano": 2013,
+    "kilometraje": 999999,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Hatchback",
+    "transmision": "Manual",
+    "motor": "1.6 Turbo",
+    "combustible": "Nafta",
+    "puertas": 3,
     "images": [
       "6-1.webp",
       "6-2.webp",
       "6-3.webp",
       "6-4.webp",
       "6-5.webp",
-      "6-6.webp"
+      "6-6.webp",
+      "6-7.webp",
+      "6-8.webp",
+      "6-9.webp",
+      "6-10.webp"
     ],
-    "descripcion": "🔷 Renault Duster\n\n🔷 Versión Privilege 4x4\n🔷 Motor 2.0 Nafta\n🔷 Kms 129.000"
+    "descripcion": "DS3 Sport Chic 1.6 Turbo 2013."
   },
   {
-    "id": "toyota-sw4-srx-at-7-as-4x4-2018",
-    "name": "Toyota Sw4 Srx At 7 As 4x4",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2018,
-    "kilometraje": 150000,
+    "id": "renault-megane-coupe-f7r-1998",
+    "name": "Renault Megane Coupe F7R",
+    "marca": "Renault",
+    "marcaId": "renault",
+    "ano": 1998,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
-    "transmision": "Automática",
-    "motor": "2.8",
-    "combustible": "Diésel",
-    "puertas": 5,
+    "categoria": "Coupe",
+    "transmision": "Manual",
+    "motor": "F7R 16V",
+    "combustible": "Nafta",
+    "puertas": 3,
     "images": [
+      "7-3.webp",
       "7-1.webp",
       "7-2.webp",
-      "7-3.webp",
       "7-4.webp",
       "7-5.webp",
-      "7-6.webp"
+      "7-6.webp",
+      "7-7.webp",
+      "7-8.webp",
+      "7-9.webp",
+      "7-10.webp"
     ],
-    "descripcion": "🔷Toyota Sw4\n\n🔷Año 2018\n🔷Version SRX At 7 as. 4x4\n🔷Kms 150.000\n🔷Cubiertas 0km."
+    "descripcion": "RENAULT MEGANE COUPE motor F7R.\n\n16V.\n\nun auto para entendidos.\n\nAño 1998 🫶"
   },
   {
-    "id": "ford-ecosport-se-2015",
-    "name": "Ford Ecosport Se",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2015,
-    "kilometraje": 150000,
+    "id": "honda-crx-del-sol-1992",
+    "name": "Honda CRX del Sol",
+    "marca": "Honda",
+    "marcaId": "honda",
+    "ano": 1992,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "SUV",
+    "categoria": "Convertible",
     "transmision": "Manual",
     "motor": "1.6",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 2,
     "images": [
       "8-1.webp",
       "8-2.webp",
@@ -178,48 +230,51 @@
       "8-6.webp",
       "8-7.webp"
     ],
-    "descripcion": "🔹 Ford Ecosport 🔹\n\n🔹 Año 2015\n🔹 Versión SE\n🔹 Motor 1.6 Nafta\n🔹 Kms 150.000"
+    "descripcion": "HONDA CRX del SOL.\n\n1992.\n\nOrigen Japón.\n\nConvertible deportivo biplaza, techo eléctrico asombroso, todo funciona a la perfección.\n\nHermosa joya."
   },
   {
-    "id": "ford-fiesta-kinetic-se-plus-2017",
-    "name": "Ford Fiesta Kinetic Se Plus",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2017,
-    "kilometraje": 82000,
+    "id": "chevrolet-camaro-six-v8-ss-2018",
+    "name": "Chevrolet Camaro Six V8 SS",
+    "marca": "Chevrolet",
+    "marcaId": "chevrolet",
+    "ano": 2018,
+    "kilometraje": 20000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
+    "categoria": "Deportivo",
+    "transmision": "Automática",
+    "motor": "V8",
     "combustible": "Nafta",
-    "puertas": 5,
+    "puertas": 2,
     "images": [
+      "9-4.webp",
       "9-1.webp",
       "9-2.webp",
       "9-3.webp",
-      "9-4.webp",
       "9-5.webp",
-      "9-6.webp"
+      "9-6.webp",
+      "9-7.webp",
+      "9-8.webp",
+      "9-9.webp"
     ],
-    "descripcion": "🔹Ford Fiesta\n\n🔹Año 2017\n🔹Versión Kinetic SE Plus\n🔹Motor 1.6 Nafta\n🔹Kms 82.000"
+    "descripcion": "CHEVROLET CAMARO SIX V8 SS.\n\n20mkm 2018.\n\nperfecto …perfecto!!"
   },
   {
-    "id": "ford-ecosport-se-2015-2",
-    "name": "Ford Ecosport Se",
-    "marca": "Ford",
-    "marcaId": "ford",
-    "ano": 2015,
-    "kilometraje": 60000,
+    "id": "audi-q5-2-0t-225cv-fsi-quattro-2013",
+    "name": "Audi Q5 2.0T 225cv FSi Quattro",
+    "marca": "Audi",
+    "marcaId": "audi",
+    "ano": 2013,
+    "kilometraje": 147000,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "SUV",
-    "transmision": "Manual",
-    "motor": "1.5",
+    "transmision": "Automática",
+    "motor": "2.0T 225cv",
     "combustible": "Nafta",
     "puertas": 5,
     "images": [
@@ -228,55 +283,70 @@
       "10-3.webp",
       "10-4.webp",
       "10-5.webp",
-      "10-6.webp"
+      "10-6.webp",
+      "10-7.webp",
+      "10-8.webp",
+      "10-9.webp"
     ],
-    "descripcion": "♦️Ford Ecosport\n\n♦️Versión SE\n♦️Motor 1.5 Nafta\n♦️Kms 60.000"
+    "descripcion": "AUDI Q5 2.0T 225cv FSi Quattro.\n\n2013 147000km."
   },
   {
-    "id": "peugeot-308-allure-2012",
-    "name": "Peugeot 308 Allure",
-    "marca": "Peugeot",
-    "marcaId": "peugeot",
-    "ano": 2012,
-    "kilometraje": 141000,
-    "precio": {
-      "valor": 999999,
-      "moneda": "ARS"
-    },
-    "categoria": "Hatchback",
-    "transmision": "Manual",
-    "motor": "1.6",
-    "combustible": "Nafta",
-    "puertas": 5,
-    "images": [
-      "11-1.webp",
-      "11-2.webp",
-      "11-3.webp",
-      "11-4.webp",
-      "11-5.webp",
-      "11-6.webp",
-      "11-7.webp",
-      "11-8.webp"
-    ],
-    "descripcion": "Vení mañana y llevate este hermoso Peugeot 308!!!\n\n🔹 Año 2012\n🔹 Motor 1.6 Nafta\n🔹 Versión Allure\n🔹 Kms 141.000\n🔹 Cubiertas 0km!!!"
-  },
-  {
-    "id": "toyota-hilux-srx-2-8-4x4-at-2016",
-    "name": "Toyota Hilux Srx 2.8 4x4 At",
-    "marca": "Toyota",
-    "marcaId": "toyota",
-    "ano": 2016,
-    "kilometraje": 89000,
+    "id": "ram-rampage-laramie-272cv-4x4-2024",
+    "name": "Ram Rampage Laramie 272cv 4x4",
+    "marca": "Ram",
+    "marcaId": "ram",
+    "ano": 2024,
+    "kilometraje": 999999,
     "precio": {
       "valor": 999999,
       "moneda": "ARS"
     },
     "categoria": "Pickup",
     "transmision": "Automática",
-    "motor": "2.8",
-    "combustible": "Diésel",
+    "motor": "272cv",
+    "combustible": "Nafta",
     "puertas": 4,
-    "images": ["12-1.webp", "12-2.webp", "12-3.webp", "12-4.webp"],
-    "descripcion": "💎 Toyota Hilux SRX 2.8 4x4 At 2016 89.000 kms 💎"
+    "images": [
+      "11-6.webp",
+      "11-1.webp",
+      "11-2.webp",
+      "11-3.webp",
+      "11-4.webp",
+      "11-5.webp",
+      "11-7.webp",
+      "11-8.webp",
+      "11-9.webp",
+      "11-10.webp"
+    ],
+    "descripcion": "RAM RAMPAGE LARAMIE 272cv 4x4 Autolatic 9 vel.\n\nGME full equipe.\n\n2024"
+  },
+  {
+    "id": "audi-2-0-tfsi-252cv-s-tronic-front-2019",
+    "name": "Audi 2.0 Tfsi 252cv S-Tronic Front",
+    "marca": "Audi",
+    "marcaId": "audi",
+    "ano": 2019,
+    "kilometraje": 31000,
+    "precio": {
+      "valor": 999999,
+      "moneda": "ARS"
+    },
+    "categoria": "Sedán",
+    "transmision": "Automática",
+    "motor": "2.0 Tfsi 252cv",
+    "combustible": "Nafta",
+    "puertas": 4,
+    "images": [
+      "12-6.webp",
+      "12-1.webp",
+      "12-3.webp",
+      "12-2.webp",
+      "12-4.webp",
+      "12-5.webp",
+      "12-7.webp",
+      "12-8.webp",
+      "12-9.webp"
+    ],
+    "descripcion": "AUDI 2.0 Tfsi 252cv S-Tronic Front.\n\nFive Spoke Wheels audi.\n\naño 2019.\n\n31mkm.\n\nPerfecto total."
   }
 ]

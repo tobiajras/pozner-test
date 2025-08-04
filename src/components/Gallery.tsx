@@ -45,9 +45,9 @@ const Gallery = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-title-light mb-2 max-w-xl mx-auto'
+            className='text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent mb-2 max-w-xl mx-auto'
           >
-            Somos <span className='text-color-primary'>{company.name}</span>
+            Somos {company.name}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
