@@ -82,7 +82,7 @@ const Proceso = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-title mb-2'
+            className='text-2xl md:text-3xl lg:text-4xl font-extrabold text-color-title-light mb-2'
           >
             Por qué elegir <span className='text-color-primary'>nuestros</span>{' '}
             vehículos
@@ -92,7 +92,7 @@ const Proceso = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            className='text-color-text max-w-xl mx-auto md:text-lg font-medium'
+            className='text-color-text-light max-w-xl mx-auto md:text-lg font-medium'
           >
             En {company.name} nos especializamos en ofrecer vehículos de calidad
             con el respaldo y confianza que mereces.
@@ -130,16 +130,16 @@ const Proceso = () => {
             {beneficios.map((b, i) => (
               <div
                 key={i}
-                className='flex justify-center lg:justify-start items-start gap-3 md:gap-4 bg-white/10'
+                className='flex justify-center lg:justify-start items-start gap-3 md:gap-4'
               >
                 <div className='flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 p-1.5 md:p-2 lg:p-3 rounded-full bg-color-primary text-color-title-light'>
                   {b.icono}
                 </div>
                 <div>
-                  <h4 className='text-lg font-semibold text-color-title mb-1'>
+                  <h4 className='text-lg font-semibold text-color-title-light mb-1'>
                     {b.titulo}
                   </h4>
-                  <p className='text-color-text font-medium max-w-xs md:max-w-sm lg:max-w-md'>
+                  <p className='text-color-text-light font-medium max-w-xs md:max-w-sm lg:max-w-md'>
                     {b.descripcion}
                   </p>
                 </div>

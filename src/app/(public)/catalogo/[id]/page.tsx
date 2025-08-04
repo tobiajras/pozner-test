@@ -199,7 +199,7 @@ export default function AutoDetailPage() {
 
             {/* Detalles del auto - Skeleton */}
             <div className='w-full lg:w-1/3'>
-              <div className='bg-white border border-gray-200 rounded-lg shadow-lg p-6'>
+              <div className='bg-color-bg-secondary border border-neutral-500 rounded-lg shadow-lg p-6'>
                 <div className='h-6 w-32 bg-neutral-800/30 rounded animate-pulse mb-4'></div>
                 <div className='h-8 w-48 bg-neutral-800/30 rounded animate-pulse mb-6'></div>
                 <div className='grid grid-cols-2 gap-4 mb-6'>
@@ -245,15 +245,15 @@ export default function AutoDetailPage() {
           <div className='w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-7xl mb-4 sm:mb-5 mx-4 sm:mx-6 md:mx-8 lg:mx-10'>
             <div className='flex gap-2 font-medium items-center'>
               <Link href={`/catalogo`}>
-                <p className='text-color-text hover:text-color-primary transition-colors'>
+                <p className='text-color-text-light hover:text-color-primary transition-colors'>
                   Catálogo
                 </p>
               </Link>
-              <DropDownIcon className='w-2.5 h-2.5 -rotate-90 text-color-text' />
+              <DropDownIcon className='w-2.5 h-2.5 -rotate-90 text-color-text-light' />
               <Link
                 href={`/catalogo?categoria=${car.Category.name.toLowerCase()}`}
               >
-                <p className='text-color-text hover:text-color-primary transition-colors'>
+                <p className='text-color-text-light hover:text-color-primary transition-colors'>
                   {car.Category.name}
                 </p>
               </Link>
@@ -273,14 +273,14 @@ export default function AutoDetailPage() {
                   <>
                     <button
                       onClick={scrollPrev}
-                      className='hidden md:block absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-800 p-3 rounded-full transition-all shadow-lg z-10 opacity-100 cursor-pointer'
+                      className='hidden md:block absolute left-4 top-1/2 -translate-y-1/2 bg-color-bg-secondary hover:bg-color-bg-secondary text-color-title-light hover:text-color-primary p-3 rounded-full transition-all shadow-lg z-10 opacity-100 cursor-pointer'
                       aria-label='Anterior'
                     >
                       <ArrowIcon className='w-5 h-5 rotate-180' />
                     </button>
                     <button
                       onClick={scrollNext}
-                      className='hidden md:block absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-600 hover:text-gray-800 p-3 rounded-full transition-all shadow-lg z-10 opacity-100 cursor-pointer'
+                      className='hidden md:block absolute right-4 top-1/2 -translate-y-1/2 bg-color-bg-secondary hover:bg-color-bg-secondary text-color-title-light hover:text-color-primary p-3 rounded-full transition-all shadow-lg z-10 opacity-100 cursor-pointer'
                       aria-label='Siguiente'
                     >
                       <ArrowIcon className='w-5 h-5' />
@@ -290,7 +290,7 @@ export default function AutoDetailPage() {
 
                 {/* Indicador de posición */}
                 {car.Images.length > 1 && (
-                  <div className='absolute bottom-4 right-4 bg-white/90 text-gray-600 px-3 py-2 rounded-full text-sm font-medium shadow-lg z-10'>
+                  <div className='absolute bottom-4 right-4 bg-color-bg-secondary text-color-title-light px-3 py-2 rounded-full text-sm font-medium shadow-lg z-10'>
                     {selectedIndex + 1}/{car.Images.length}
                   </div>
                 )}
@@ -311,7 +311,7 @@ export default function AutoDetailPage() {
                             setModalStartIndex(index);
                             setShowModal(true);
                           }}
-                          className='relative w-full h-full overflow-hidden group bg-gray-50 cursor-zoom-in'
+                          className='relative w-full h-full overflow-hidden group bg-color-bg-secondary cursor-zoom-in'
                         >
                           <motion.div
                             initial={{ opacity: 0 }}
@@ -372,7 +372,7 @@ export default function AutoDetailPage() {
                             setShowModal(true);
                           }
                         }}
-                        className={`relative aspect-[4/3] rounded-lg overflow-hidden outline-none transition-all bg-gray-50 cursor-zoom-in group ${
+                        className={`relative aspect-[4/3] rounded-lg overflow-hidden outline-none transition-all bg-color-bg-secondary cursor-zoom-in group ${
                           selectedIndex === actualIndex ? '' : ''
                         }`}
                       >
@@ -420,10 +420,10 @@ export default function AutoDetailPage() {
             {/* Descripción del vehículo - Solo visible en desktop */}
             {car.description && (
               <div className='hidden lg:block'>
-                <h2 className='text-xl font-medium mb-4 text-color-title'>
+                <h2 className='text-xl font-medium mb-4 text-color-title-light'>
                   Descripción
                 </h2>
-                <p className='text-color-text whitespace-pre-line leading-relaxed font-medium'>
+                <p className='text-color-text-light whitespace-pre-line leading-relaxed font-medium'>
                   {car.description}
                 </p>
               </div>
@@ -433,133 +433,146 @@ export default function AutoDetailPage() {
           {/* Columna derecha - Características principales (sticky) */}
           <div className='w-full lg:w-2/5'>
             <div className='lg:sticky lg:top-28'>
-              <div className='bg-white lg:border lg:border-gray-200 lg:rounded-lg lg:shadow-lg lg:p-8'>
-                <div className=' mb-3 md:mb-4 lg:mb-6'>
-                  <h1 className='text-xl md:text-2xl font-semibold text-color-title line-clamp-3'>
-                    {car.model}
-                  </h1>
-                  <div className='flex flex-wrap items-center gap-2 text-sm text-color-text mt-2'>
-                    <span className='font-medium text-color-text'>
-                      {car.brand}
-                    </span>
-                    <span className='text-color-primary'>•</span>
-                    <span className='font-medium text-color-text'>
-                      {car.year}
-                    </span>
-                    <span className='text-color-primary'>•</span>
-                    <span className='font-medium text-color-text'>
-                      {car.Category.name}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Precio */}
-                {car.price && car.price.valor > 0 ? (
-                  <div
-                    className={`${
-                      company.price ? '' : 'hidden'
-                    } text-2xl font-bold text-color-primary mb-2 md:mb-4`}
-                  >
-                    {car.price.moneda === 'ARS' ? '$' : 'US$'}
-                    {car.price.valor.toLocaleString('es-ES')}
-                  </div>
-                ) : (
-                  ''
-                )}
-
-                <div className='grid grid-cols-2 md:grid-cols-3 gap-4 text-color-text mb-6'>
-                  <div>
-                    <p className='text-color-text text-sm font-medium'>
-                      Kilometraje
-                    </p>
-                    <p
-                      className={`font-medium ${
-                        car.mileage === 0
-                          ? 'text-color-primary font-semibold'
-                          : 'text-color-title'
-                      }`}
-                    >
-                      {car.mileage.toLocaleString('es-AR')} km
-                    </p>
-                  </div>
-                  {car.motor && (
-                    <div className='flex flex-col gap-1'>
-                      <p className='text-color-text text-sm font-medium'>
-                        Motor
-                      </p>
-                      <p className='text-color-title font-medium'>
-                        {car.motor}
-                      </p>
+              <div className='relative group'>
+                {/* Gradiente base */}
+                <div className='absolute inset-0 bg-color-primary/10 rounded-lg'></div>
+                {/* Gradiente hover */}
+                <div className='absolute inset-0 bg-color-primary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'></div>
+                {/* Contenido */}
+                <div className='relative z-10 p-6 bg-color-bg-secondary border border-neutral-600 rounded-lg shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)]'>
+                  <div className=' mb-3 md:mb-4 lg:mb-6'>
+                    <h1 className='text-xl md:text-2xl font-semibold text-color-title-light line-clamp-3'>
+                      {car.model}
+                    </h1>
+                    <div className='flex flex-wrap items-center gap-2 text-sm text-color-text-light mt-2'>
+                      <span className='font-medium text-color-text-light'>
+                        {car.brand}
+                      </span>
+                      <span className='text-color-primary'>•</span>
+                      <span className='font-medium text-color-text-light'>
+                        {car.year}
+                      </span>
+                      <span className='text-color-primary'>•</span>
+                      <span className='font-medium text-color-text-light'>
+                        {car.Category.name}
+                      </span>
                     </div>
-                  )}
-                  <div className='flex flex-col gap-1'>
-                    <p className='text-color-text text-sm font-medium'>Año</p>
-                    <p className='text-color-title font-medium'>{car.year}</p>
                   </div>
-                  <div>
-                    <p className='text-color-text text-sm font-medium'>
-                      Transmisión
-                    </p>
-                    <p className='text-color-title font-medium'>
-                      {car.transmission}
-                    </p>
-                  </div>
-                  <div>
-                    <p className='text-color-text text-sm font-medium'>
-                      Combustible
-                    </p>
-                    <p className='text-color-title font-medium'>{car.fuel}</p>
-                  </div>
-                  {car.doors ? (
-                    <div>
-                      <p className='text-color-text text-sm font-medium'>
-                        Puertas
-                      </p>
-                      <p className='text-color-title font-medium'>
-                        {car.doors}
-                      </p>
+
+                  {/* Precio */}
+                  {car.price && car.price.valor > 0 ? (
+                    <div
+                      className={`${
+                        company.price ? '' : 'hidden'
+                      } text-2xl font-bold text-color-primary mb-2 md:mb-4`}
+                    >
+                      {car.price.moneda === 'ARS' ? '$' : 'US$'}
+                      {car.price.valor.toLocaleString('es-ES')}
                     </div>
                   ) : (
                     ''
                   )}
-                </div>
 
-                {/* Botones de acción */}
-                {car.active && (
-                  <div className='flex flex-col gap-3 mt-3 '>
-                    <Link
-                      href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='w-full h-12 bg-color-primary hover:bg-color-primary-dark text-color-title-light flex gap-2 font-medium rounded text-center transition-colors justify-center items-center'
-                    >
-                      <WhatsappIcon className='w-6 h-6' />
-                      <span>Consultar</span>
-                    </Link>
-                    <div className='w-full h-12 relative'>
-                      <ShareMenu
-                        url={
-                          typeof window !== 'undefined'
-                            ? window.location.href
-                            : ''
-                        }
-                        title={`${car.model} ${car.year}`}
-                      />
+                  <div className='grid grid-cols-2 md:grid-cols-3 gap-4 text-color-text-light mb-6'>
+                    <div>
+                      <p className='text-color-text-light text-sm font-medium'>
+                        Kilometraje
+                      </p>
+                      <p
+                        className={`font-medium ${
+                          car.mileage === 0
+                            ? 'text-color-primary font-semibold'
+                            : 'text-color-title-light'
+                        }`}
+                      >
+                        {car.mileage.toLocaleString('es-AR')} km
+                      </p>
                     </div>
+                    {car.motor && (
+                      <div className='flex flex-col gap-1'>
+                        <p className='text-color-text-light text-sm font-medium'>
+                          Motor
+                        </p>
+                        <p className='text-color-title-light font-medium'>
+                          {car.motor}
+                        </p>
+                      </div>
+                    )}
+                    <div className='flex flex-col gap-1'>
+                      <p className='text-color-text-light text-sm font-medium'>
+                        Año
+                      </p>
+                      <p className='text-color-title-light font-medium'>
+                        {car.year}
+                      </p>
+                    </div>
+                    <div>
+                      <p className='text-color-text-light text-sm font-medium'>
+                        Transmisión
+                      </p>
+                      <p className='text-color-title-light font-medium'>
+                        {car.transmission}
+                      </p>
+                    </div>
+                    <div>
+                      <p className='text-color-text-light text-sm font-medium'>
+                        Combustible
+                      </p>
+                      <p className='text-color-title-light font-medium'>
+                        {car.fuel}
+                      </p>
+                    </div>
+                    {car.doors ? (
+                      <div>
+                        <p className='text-color-text-light text-sm font-medium'>
+                          Puertas
+                        </p>
+                        <p className='text-color-title-light font-medium'>
+                          {car.doors}
+                        </p>
+                      </div>
+                    ) : (
+                      ''
+                    )}
                   </div>
-                )}
 
-                {/* Descripción del vehículo - Solo visible en mobile */}
-                {car.description && (
-                  <div className='lg:hidden mt-8'>
-                    <h2 className='text-xl font-medium mb-2 sm:mb-3 text-color-title'>
-                      Descripción
-                    </h2>
-                    <p className='text-color-text whitespace-pre-line leading-relaxed'>
-                      {car.description}
-                    </p>
-                  </div>
-                )}
+                  {/* Botones de acción */}
+                  {car.active && (
+                    <div className='flex flex-col gap-3 mt-3 '>
+                      <Link
+                        href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='w-full h-12 bg-color-primary hover:bg-color-primary-dark text-color-title-light flex gap-2 font-medium rounded text-center transition-colors justify-center items-center'
+                      >
+                        <WhatsappIcon className='w-6 h-6' />
+                        <span>Consultar</span>
+                      </Link>
+                      <div className='w-full h-12 relative'>
+                        <ShareMenu
+                          url={
+                            typeof window !== 'undefined'
+                              ? window.location.href
+                              : ''
+                          }
+                          title={`${car.model} ${car.year}`}
+                        />
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Descripción del vehículo - Solo visible en mobile */}
+                  {car.description && (
+                    <div className='lg:hidden mt-8'>
+                      <h2 className='text-xl font-medium mb-2 sm:mb-3 text-color-title-light'>
+                        Descripción
+                      </h2>
+                      <p className='text-color-text-light whitespace-pre-line leading-relaxed'>
+                        {car.description}
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

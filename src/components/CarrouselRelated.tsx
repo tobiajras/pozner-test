@@ -152,7 +152,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
-            <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
+            <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide'>
               {title}
             </h3>
           </div>
@@ -170,7 +170,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
-            <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
+            <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide'>
               {title}
             </h3>
           </div>
@@ -186,11 +186,11 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
-            <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
+            <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide'>
               {title}
             </h3>
           </div>
-          <div className='text-center py-8 text-color-text'>
+          <div className='text-center py-8 text-color-text-light'>
             No hay vehículos relacionados disponibles
           </div>
         </div>
@@ -203,7 +203,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
       <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
         <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
           <div className='h-10 w-1 bg-color-primary mr-4'></div>
-          <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
+          <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide'>
             {title}
           </h3>
         </div>
@@ -289,69 +289,76 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                   </div>
 
                   {/* Información del vehículo */}
-                  <div className='py-3 relative group'>
-                    <h3
-                      className={`${
-                        company.dark
-                          ? 'group-hover:text-color-primary'
-                          : 'group-hover:text-color-primary-dark'
-                      } text-color-title text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
-                    >
-                      {auto.model}
-                    </h3>
-
-                    <div
-                      className={`${
-                        company.price ? '' : 'hidden'
-                      } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
-                    >
-                      {auto.price.moneda === 'ARS' ? '$' : 'US$'}
-                      {auto.price.valor.toLocaleString('es-ES')}
-                    </div>
-
-                    {/* Diseño minimalista con separadores tipo | */}
-                    <div className='flex flex-wrap items-center text-color-text font-medium'>
-                      <span className=''>{auto.brand}</span>
-                      <span
+                  <div className='relative group'>
+                    {/* Gradiente base */}
+                    <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-primary/20 rounded-lg'></div>
+                    {/* Gradiente hover */}
+                    <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-primary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'></div>
+                    {/* Contenido */}
+                    <div className='relative z-10 p-4'>
+                      <h3
                         className={`${
                           company.dark
-                            ? 'text-color-primary'
-                            : 'text-color-primary'
-                        } mx-2`}
+                            ? 'group-hover:text-color-primary'
+                            : 'group-hover:text-color-primary'
+                        } text-color-title-light text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                       >
-                        |
-                      </span>
-                      <span>{auto.year}</span>
-                    </div>
+                        {auto.model}
+                      </h3>
 
-                    {/* Precio o etiqueta destacada */}
-                    <div className='flex justify-between items-center text-color-text mt-0.5'>
-                      {auto.mileage === 0 ? (
-                        <span className='text-sm font-semibold uppercase tracking-wider text-color-primary'>
-                          Nuevo <span className='text-color-primary'>•</span>{' '}
-                          {auto.mileage.toLocaleString('es-ES')} km
-                        </span>
-                      ) : (
-                        <span className='text-sm text-color-text font-medium uppercase tracking-wider'>
-                          Usado <span className='text-color-primary'>•</span>{' '}
-                          {auto.mileage.toLocaleString('es-ES')} km
-                        </span>
-                      )}
-                    </div>
-
-                    <div className='md:mt-1'>
-                      <span
+                      <div
                         className={`${
-                          company.dark
-                            ? 'text-color-primary group-hover:text-color-primary-dark'
-                            : 'text-color-primary group-hover:text-color-primary-dark'
-                        } inline-flex items-center  transition-colors font-semibold`}
+                          company.price ? '' : 'hidden'
+                        } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                       >
-                        Ver más
-                        <span className='inline-block transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300 ml-1'>
-                          →
+                        {auto.price.moneda === 'ARS' ? '$' : 'US$'}
+                        {auto.price.valor.toLocaleString('es-ES')}
+                      </div>
+
+                      {/* Diseño minimalista con separadores tipo | */}
+                      <div className='flex flex-wrap items-center text-color-text-light font-medium'>
+                        <span className=''>{auto.brand}</span>
+                        <span
+                          className={`${
+                            company.dark
+                              ? 'text-color-primary'
+                              : 'text-color-primary'
+                          } mx-2`}
+                        >
+                          |
                         </span>
-                      </span>
+                        <span>{auto.year}</span>
+                      </div>
+
+                      {/* Precio o etiqueta destacada */}
+                      <div className='flex justify-between items-center text-color-text-light mt-0.5'>
+                        {auto.mileage === 0 ? (
+                          <span className='text-sm font-semibold uppercase tracking-wider text-color-primary'>
+                            Nuevo <span className='text-color-primary'>•</span>{' '}
+                            {auto.mileage.toLocaleString('es-ES')} km
+                          </span>
+                        ) : (
+                          <span className='text-sm text-color-text-light font-medium uppercase tracking-wider'>
+                            Usado <span className='text-color-primary'>•</span>{' '}
+                            {auto.mileage.toLocaleString('es-ES')} km
+                          </span>
+                        )}
+                      </div>
+
+                      <div className='md:mt-1'>
+                        <span
+                          className={`${
+                            company.dark
+                              ? 'text-color-primary-light'
+                              : 'text-color-primary-light'
+                          } inline-flex items-center  transition-colors font-semibold`}
+                        >
+                          Ver más
+                          <span className='inline-block transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300 ml-1'>
+                            →
+                          </span>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>

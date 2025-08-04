@@ -26,7 +26,7 @@ const NosotrosPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className='text-color-text max-w-sm sm:max-w-lg lg:max-w-2xl mx-auto md:text-lg font-medium'
+              className='text-color-text-light max-w-sm sm:max-w-lg lg:max-w-2xl mx-auto md:text-lg font-medium'
             >
               En {company.name} nos dedicamos a ofrecer la mejor experiencia de
               compra de autos usados, con la mejor calidad y el mejor servicio.
@@ -59,15 +59,15 @@ const NosotrosPage = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className='text-center lg:text-left max-w-lg'
           >
-            <h3 className='text-2xl lg:text-3xl font-semibold text-color-title mb-3'>
+            <h3 className='text-2xl lg:text-3xl font-semibold text-color-title-light mb-3'>
               Experiencia y compromiso
             </h3>
-            <p className='text-color-text mb-2 lg:text-lg font-medium'>
+            <p className='text-color-text-light mb-2 lg:text-lg font-medium'>
               Nuestra experiencia en el mercado nos permite ofrecer la mejor
               calidad y el mejor servicio. Desde la selección de los autos hasta
               la entrega, te acompañamos en cada paso.
             </p>
-            <p className='text-color-text lg:text-lg font-medium'>
+            <p className='text-color-text-light lg:text-lg font-medium'>
               Contamos con un equipo de profesionales especializados en el
               sector automotriz. Nuestro objetivo es convertir tu sueño de tener
               un auto en una realidad, ofreciendo opciones de financiamiento
@@ -82,7 +82,7 @@ const NosotrosPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className='max-w-xs h-full bg-white rounded-2xl shadow-md px-6 py-8 flex flex-col items-center text-center border-t-4 border-color-primary/70'
+            className='max-w-xs h-full bg-color-bg-secondary rounded-2xl shadow-md px-6 py-8 flex flex-col items-center text-center border-t-4 border-color-primary/70'
           >
             {/* Icono de variedad/estrellas */}
             <svg
@@ -98,10 +98,10 @@ const NosotrosPage = () => {
             >
               <polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2' />
             </svg>
-            <h4 className='font-bold text-lg mb-1 text-color-title'>
+            <h4 className='font-bold text-lg mb-1 text-color-title-light'>
               Variedad y calidad
             </h4>
-            <p className='text-color-text text-sm lg:text-base'>
+            <p className='text-color-text-light text-sm lg:text-base'>
               Catálogo seleccionado de autos de todas las marcas y modelos, con
               altos estándares de calidad.
             </p>
@@ -110,7 +110,7 @@ const NosotrosPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className='max-w-xs h-full bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center border-t-4 border-color-primary/70'
+            className='max-w-xs h-full bg-color-bg-secondary rounded-2xl shadow-md p-6 flex flex-col items-center text-center border-t-4 border-color-primary/70'
           >
             {/* Icono de atención personalizada */}
             <svg
@@ -127,10 +127,10 @@ const NosotrosPage = () => {
               <path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2' />
               <circle cx='12' cy='7' r='4' />
             </svg>
-            <h4 className='font-bold text-lg mb-1 text-color-title'>
+            <h4 className='font-bold text-lg mb-1 text-color-title-light'>
               Atención personalizada
             </h4>
-            <p className='text-color-text text-sm lg:text-base'>
+            <p className='text-color-text-light text-sm lg:text-base'>
               Acompañamiento profesional y asesoramiento honesto en todo el
               proceso de compra.
             </p>
@@ -139,7 +139,7 @@ const NosotrosPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className='max-w-xs h-full bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center border-t-4 border-color-primary/70'
+            className='max-w-xs h-full bg-color-bg-secondary rounded-2xl shadow-md p-6 flex flex-col items-center text-center border-t-4 border-color-primary/70'
           >
             {/* Icono de garantía */}
             <svg
@@ -156,10 +156,10 @@ const NosotrosPage = () => {
               <path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' />
               <path d='m9 12 2 2 4-4' />
             </svg>
-            <h4 className='font-bold text-lg mb-1 text-color-title'>
+            <h4 className='font-bold text-lg mb-1 text-color-title-light'>
               Compromiso y confianza
             </h4>
-            <p className='text-color-text text-sm lg:text-base'>
+            <p className='text-color-text-light text-sm lg:text-base'>
               Garantía, servicio postventa y transparencia en cada operación.
             </p>
           </motion.div>

@@ -5,24 +5,24 @@ export const company = {
   favicon: false,
   price: false,
   objectCover: '50%',
-  id: 'darcangeloautomotores',
-  name: "D'arcangelo Automotores",
-  adress: 'Avenida 44 y 189',
-  city: 'La Plata',
-  email: 'autosdarcangelo@hotmail.com',
-  instagram: 'darcangeloautomotoreslp',
-  facebook: 'https://www.facebook.com/Darcangeloautomotoreslp/',
-  whatsapp: ['215604953', '2214963633'],
-  googlemapsLink: 'https://maps.app.goo.gl/VkryabS8YWeZEnvDA',
+  id: 'carfriendly',
+  name: 'Car Friendly',
+  adress: 'Jose Hernandez 2314',
+  city: 'Belgrano CABA',
+  email: 'info@carfriendly.com.ar',
+  instagram: 'car_friendly',
+  facebook: 'https://www.facebook.com/carfriendlyarg/',
+  whatsapp: ['1161017535'],
+  googlemapsLink: 'https://maps.app.goo.gl/17Zdx3gBow36urv7A',
   googlemaps:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.7427494205035!2d-58.04255932337759!3d-34.98810787790179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2c2ed068508a5%3A0x5d32a70cbccf3cfb!2sD'arcangelo%20Automotores!5e0!3m2!1sen!2sar!4v1754188628316!5m2!1sen!2sar",
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10480.98965187041!2d-58.45256234799597!3d-34.56647717066568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5d032aeddc5%3A0xce5e5bc75fab18b9!2sJos%C3%A9%20Hern%C3%A1ndez%202314%2C%20C1426EOP%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1754203399010!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
-    { day: 'Martes', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
-    { day: 'Miércoles', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
-    { day: 'Jueves', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
-    { day: 'Viernes', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
-    // { day: 'Sábado', hours: ['9 a 12:30 y 15:30 a 18:30hs'] },
+    { day: 'Lunes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Martes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Miércoles', hours: ['09:00 a 18:00hs'] },
+    { day: 'Jueves', hours: ['09:00 a 18:00hs'] },
+    { day: 'Viernes', hours: ['09:00 a 18:00hs'] },
+    { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://darcangeloautomotores.vercel.app/',
-  title: "D'arcangelo Automotores - Compra y Venta de Autos",
+  metadataBase: 'https://carfriendly.vercel.app/',
+  title: 'Car Friendly - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
