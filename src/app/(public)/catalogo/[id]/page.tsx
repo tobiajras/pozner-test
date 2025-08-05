@@ -14,7 +14,7 @@ import CarrouselRelated from '@/components/CarrouselRelated';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import catalogo from '@/data/catalogo.json';
+import data from '@/data/data.json';
 import ShareMenu from '@/components/ShareMenu';
 
 interface ApiCar {
@@ -107,7 +107,7 @@ export default function AutoDetailPage() {
   useEffect(() => {
     const fetchCar = () => {
       try {
-        const carData = catalogo.find((car) => car.id === id);
+        const carData = data.cars.find((car) => car.id === id);
 
         if (!carData) {
           throw new Error('Vehículo no encontrado');
@@ -116,36 +116,38 @@ export default function AutoDetailPage() {
         // Transformar los datos al formato esperado
         const auto = {
           id: carData.id,
-          brand: carData.marca,
-          model: carData.name,
-          year: carData.ano,
-          color: '',
+          brand: carData.brand,
+          model: carData.mlTitle,
+          year: carData.year,
+          color: carData.color,
           price: {
-            valor: carData.precio.valor,
-            moneda: carData.precio.moneda,
+            valor: carData.price,
+            moneda: carData.currency,
           },
-          description: carData.descripcion,
-          categoryId: carData.categoria,
-          mileage: carData.kilometraje,
-          motor: carData.motor,
-          transmission: carData.transmision,
-          fuel: carData.combustible,
-          doors: carData.puertas,
-          position: 0,
-          featured: false,
-          favorite: false,
-          active: true,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
+          description: carData.description,
+          categoryId: carData.categoryId,
+          mileage: carData.mileage,
+          motor: carData.mlEngine || 'No especificado',
+          transmission: carData.transmission,
+          fuel: carData.fuel,
+          doors: carData.doors,
+          position: carData.position,
+          featured: carData.featured,
+          favorite: carData.favorite,
+          active: carData.active,
+          createdAt: carData.createdAt,
+          updatedAt: carData.updatedAt,
           Category: {
-            id: carData.categoria.toLowerCase(),
-            name: carData.categoria,
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
+            id: carData.Category.id,
+            name:
+              carData.Category.name.charAt(0).toUpperCase() +
+              carData.Category.name.slice(1).toLowerCase(),
+            createdAt: carData.createdAt,
+            updatedAt: carData.updatedAt,
           },
           Images: carData.images.map((img, index) => ({
-            thumbnailUrl: `/assets/catalogo/${img}`,
-            imageUrl: `/assets/catalogo/${img}`,
+            thumbnailUrl: img.thumbnailUrl,
+            imageUrl: img.thumbnailUrl,
             order: index,
           })),
         };
@@ -543,13 +545,12 @@ export default function AutoDetailPage() {
                         href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='w-full h-12 bg-gradient-to-l from-neutral-800 to-neutral-700 text-color-title-light flex gap-2 font-medium rounded text-center transition-all duration-300 ease-in-out justify-center items-center relative overflow-hidden group'
+                        className='w-full h-12 bg-neutral-700 hover:bg-neutral-600 text-color-title-light flex gap-2 font-medium rounded text-center transition-all duration-300 ease-in-out justify-center items-center relative overflow-hidden group'
                       >
                         <span className='relative z-10 flex gap-2 items-center'>
                           <WhatsappIcon className='w-6 h-6' />
                           <span>Consultar</span>
                         </span>
-                        <div className='absolute inset-0 bg-gradient-to-l from-neutral-600 to-neutral-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out'></div>
                       </Link>
                       <div className='w-full h-12 backdrop-blur bg-black/90 text-white font-medium ring-[1.5px] ring-color-primary-dark hover:bg-white/20 rounded-lg transition-all duration-300 ease-in-out'>
                         <ShareMenu

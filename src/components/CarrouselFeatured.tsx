@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { company } from '@/app/constants/constants';
-import catalogo from '@/data/catalogo.json';
+import data from '@/data/data.json';
 
 interface Imagen {
   id: string;
@@ -66,42 +66,42 @@ const CarrouselFeatured = ({ title }: CarrouselFeaturedProps) => {
     const obtenerDestacados = () => {
       setCargando(true);
       try {
-        const destacadosSimulados = catalogo.slice(0, 12).map((auto) => ({
+        const destacadosSimulados = data.cars.slice(0, 12).map((auto) => ({
           id: auto.id,
-          brand: auto.marca,
-          model: auto.name,
-          year: auto.ano,
-          color: '',
+          brand: auto.brand,
+          model: auto.mlTitle,
+          year: auto.year,
+          color: auto.color,
           price: {
-            valor: auto.precio.valor,
-            moneda: auto.precio.moneda,
+            valor: auto.price,
+            moneda: auto.currency,
           },
-          description: auto.descripcion,
-          position: 0,
-          featured: true,
-          favorite: false,
-          active: true,
-          categoryId: auto.categoria,
-          mileage: auto.kilometraje,
-          transmission: auto.transmision,
-          fuel: auto.combustible,
-          doors: auto.puertas,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
+          description: auto.description,
+          position: auto.position,
+          featured: auto.featured,
+          favorite: auto.favorite,
+          active: auto.active,
+          categoryId: auto.categoryId,
+          mileage: auto.mileage,
+          transmission: auto.transmission,
+          fuel: auto.fuel,
+          doors: auto.doors,
+          createdAt: auto.createdAt,
+          updatedAt: auto.updatedAt,
           Images: auto.images.map((img, index) => ({
             id: `${auto.id}-img-${index}`,
             carId: auto.id,
-            imageUrl: `/assets/catalogo/${img}`,
-            thumbnailUrl: `/assets/catalogo/${img}`,
+            imageUrl: img.thumbnailUrl,
+            thumbnailUrl: img.thumbnailUrl,
             order: index,
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
+            createdAt: auto.createdAt,
+            updatedAt: auto.updatedAt,
           })),
           Category: {
-            id: auto.categoria.toLowerCase(),
-            name: auto.categoria,
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
+            id: auto.Category.id,
+            name: auto.Category.name,
+            createdAt: auto.createdAt,
+            updatedAt: auto.updatedAt,
           },
         }));
 

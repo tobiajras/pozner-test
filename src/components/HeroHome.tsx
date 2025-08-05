@@ -74,8 +74,8 @@ const HeroHome = () => {
                 href='/contacto'
                 className={`${
                   company.dark
-                    ? 'backdrop-blur bg-white/5 text-white font-medium ring-[1.5px] ring-color-primary-dark'
-                    : 'backdrop-blur bg-white/5 text-white font-medium ring-[1.5px] ring-color-primary-dark'
+                    ? 'backdrop-blur-sm bg-white/5 text-white font-medium ring-[1.5px] ring-color-primary-dark'
+                    : 'backdrop-blur-sm bg-white/5 text-white font-medium ring-[1.5px] ring-color-primary-dark'
                 } lg:text-lg transition-all duration-300 ease-in-out py-2.5 md:py-3.5 px-5 md:px-8 rounded-lg relative overflow-hidden group`}
               >
                 <span className='relative z-10'>Contactanos</span>

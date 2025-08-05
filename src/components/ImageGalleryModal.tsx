@@ -5,7 +5,6 @@ import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import ArrowIcon from './icons/ArrowIcon';
 import CloseIcon from './icons/CloseIcon';
-import { company } from '@/app/constants/constants';
 
 interface ImageGalleryModalProps {
   images: string[];
@@ -162,7 +161,7 @@ const ImageGalleryModal = ({
       onClick={handleBackdropClick}
     >
       <div
-        className={`relative bg-color-bg-secondary rounded-lg overflow-hidden max-w-5xl w-full max-h-[85vh] shadow-2xl transition-all duration-200 ease-out transform ${
+        className={`relative rounded-lg overflow-hidden max-w-4xl w-full aspect-auto h-[50vh] md:h-[70vh] transition-all duration-200 ease-out transform ${
           isVisible && !isClosing
             ? 'opacity-100 scale-100'
             : 'opacity-0 scale-95'
@@ -172,24 +171,24 @@ const ImageGalleryModal = ({
         {/* Botón cerrar */}
         <button
           onClick={handleClose}
-          className='absolute top-2 right-2 text-color-title-light transition-colors z-50 bg-black/40 hover:bg-black/80 p-1.5 rounded-full'
+          className='absolute top-2 right-2 text-black transition-colors z-50 bg-color-primary hover:bg-color-primary-dark p-1.5 rounded-full'
         >
           <CloseIcon className='w-6 h-6 lg:w-8 lg:h-8' />
         </button>
 
         {/* Contenedor del carrusel */}
         <div
-          className='overflow-hidden'
+          className='overflow-hidden h-full'
           ref={emblaRef}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
         >
-          <div className='flex'>
+          <div className='flex h-full'>
             {images.map((image, index) => (
               <div
                 key={index}
-                className='relative min-w-full aspect-[4/3]'
+                className='relative min-w-full h-full'
                 onMouseDown={handleMouseDown}
                 onMouseMove={handleMouseMove}
                 onMouseUp={handleMouseUp}
@@ -199,9 +198,9 @@ const ImageGalleryModal = ({
                   src={image}
                   alt={`Imagen ${index + 1}`}
                   fill
-                  className='object-cover'
+                  className='object-contain w-full h-full'
                   style={{
-                    objectPosition: `center ${company.objectCover}`,
+                    objectPosition: 'center',
                   }}
                   draggable={false}
                   onMouseDown={handleMouseDown}
@@ -221,7 +220,7 @@ const ImageGalleryModal = ({
                 e.stopPropagation();
                 scrollPrev();
               }}
-              className='absolute left-2 top-1/2 -translate-y-1/2 text-white transition-colors bg-black/40 hover:bg-black/80 p-2 rounded-full opacity-100 cursor-pointer'
+              className='absolute left-2 top-1/2 -translate-y-1/2 text-black transition-colors bg-color-primary hover:bg-color-primary-dark p-2 rounded-full opacity-100 cursor-pointer'
             >
               <ArrowIcon className='w-6 h-6 rotate-180' />
             </button>
@@ -231,7 +230,7 @@ const ImageGalleryModal = ({
                 e.stopPropagation();
                 scrollNext();
               }}
-              className='absolute right-2 top-1/2 -translate-y-1/2 text-white transition-colors bg-black/40 hover:bg-black/80 p-2 rounded-full opacity-100 cursor-pointer'
+              className='absolute right-2 top-1/2 -translate-y-1/2 text-black transition-colors bg-color-primary hover:bg-color-primary-dark p-2 rounded-full opacity-100 cursor-pointer'
             >
               <ArrowIcon className='w-6 h-6' />
             </button>
@@ -240,7 +239,7 @@ const ImageGalleryModal = ({
 
         {/* Contador de imágenes */}
         {images.length > 1 && (
-          <div className='absolute bottom-2 left-1/2 -translate-x-1/2 text-white bg-black/50 px-3 py-1 rounded-full text-sm'>
+          <div className='absolute bottom-2 left-1/2 -translate-x-1/2 text-white bg-black/60 px-3 py-1 rounded-full text-sm'>
             {selectedIndex + 1} / {images.length}
           </div>
         )}

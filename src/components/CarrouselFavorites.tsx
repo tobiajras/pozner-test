@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { company } from '@/app/constants/constants';
-import catalogo from '@/data/catalogo.json';
+import data from '@/data/data.json';
 
 interface Imagen {
   id: string;
@@ -67,45 +67,45 @@ const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
     const loadFavoritos = () => {
       setLoading(true);
       try {
-        const favoritosSimulados = catalogo
+        const favoritosSimulados = data.cars
           .slice(0, 12)
           .reverse()
           .map((auto) => ({
             id: auto.id,
-            brand: auto.marca,
-            model: auto.name,
-            year: auto.ano,
-            color: '',
+            brand: auto.brand,
+            model: auto.mlTitle,
+            year: auto.year,
+            color: auto.color,
             price: {
-              valor: auto.precio.valor,
-              moneda: auto.precio.moneda,
+              valor: auto.price,
+              moneda: auto.currency,
             },
-            description: auto.descripcion,
-            position: 0,
-            featured: false,
-            favorite: true,
-            active: true,
-            categoryId: auto.categoria,
-            mileage: auto.kilometraje,
-            transmission: auto.transmision,
-            fuel: auto.combustible,
-            doors: auto.puertas,
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
+            description: auto.description,
+            position: auto.position,
+            featured: auto.featured,
+            favorite: auto.favorite,
+            active: auto.active,
+            categoryId: auto.categoryId,
+            mileage: auto.mileage,
+            transmission: auto.transmission,
+            fuel: auto.fuel,
+            doors: auto.doors,
+            createdAt: auto.createdAt,
+            updatedAt: auto.updatedAt,
             Images: auto.images.map((img, index) => ({
               id: `${auto.id}-img-${index}`,
               carId: auto.id,
-              imageUrl: `/assets/catalogo/${img}`,
-              thumbnailUrl: `/assets/catalogo/${img}`,
+              imageUrl: img.thumbnailUrl,
+              thumbnailUrl: img.thumbnailUrl,
               order: index,
-              createdAt: new Date().toISOString(),
-              updatedAt: new Date().toISOString(),
+              createdAt: auto.createdAt,
+              updatedAt: auto.updatedAt,
             })),
             Category: {
-              id: auto.categoria.toLowerCase(),
-              name: auto.categoria,
-              createdAt: new Date().toISOString(),
-              updatedAt: new Date().toISOString(),
+              id: auto.Category.id,
+              name: auto.Category.name,
+              createdAt: auto.createdAt,
+              updatedAt: auto.updatedAt,
             },
           }));
 
@@ -127,7 +127,7 @@ const CarrouselFavorites = ({ title }: CarrouselFavoritesProps) => {
         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
-            <h3 className='text-2xl sm:text-3xl text-color-title tracking-wide'>
+            <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide'>
               {title}
             </h3>
           </div>

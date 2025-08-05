@@ -83,9 +83,9 @@ const Header = () => {
                       nav.button
                         ? `${
                             company.dark
-                              ? 'text-color-title-light bg-gradient-to-l from-neutral-600 to-neutral-500 ring-[1.5px] ring-transparent'
-                              : 'text-color-title-light bg-gradient-to-l from-neutral-600 to-neutral-500 ring-[1.5px] ring-transparent'
-                          } px-5 py-3 rounded-md transition-all duration-300 ease-in-out hover:from-neutral-700 hover:to-neutral-600`
+                              ? 'text-color-title-light bg-neutral-700 hover:bg-neutral-600 ring-[1.5px] ring-transparent'
+                              : 'text-color-title-light bg-neutral-700 hover:bg-neutral-600 ring-[1.5px] ring-transparent'
+                          } px-5 py-3 rounded-md transition-all duration-300 ease-in-out`
                         : company.darkmode
                         ? `text-color-text-light hover:text-color-title-light ${
                             !nav.button && isActive && 'text-color-title-light'

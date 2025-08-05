@@ -18,7 +18,7 @@ import {
 import CloseIcon from '@/components/icons/CloseIcon';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import catalogo from '@/data/catalogo.json';
+import data from '@/data/data.json';
 
 interface ApiCar {
   id: string;
@@ -86,7 +86,7 @@ const CatalogoPage = () => {
     try {
       // Obtener marcas únicas del catálogo
       const marcas = Array.from(
-        new Set(catalogo.map((car) => car.marca))
+        new Set(data.cars.map((car) => car.brand))
       ).sort();
       setTodasLasMarcas(marcas);
     } catch (error) {
@@ -99,11 +99,11 @@ const CatalogoPage = () => {
     try {
       // Obtener categorías únicas del catálogo
       const categoriasUnicas = Array.from(
-        new Set(catalogo.map((car) => car.categoria))
+        new Set(data.cars.map((car) => car.Category.name))
       );
       const categoriasProcesadas = categoriasUnicas.map((cat) => ({
         id: cat.toLowerCase(),
-        name: cat,
+        name: cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase(),
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       }));
@@ -120,26 +120,26 @@ const CatalogoPage = () => {
   ) => {
     setLoading(true);
     try {
-      let filteredCars = [...catalogo];
+      let filteredCars = [...data.cars];
 
       // Aplicar filtros
       if (filters?.search) {
         const searchTerm = filters.search.toLowerCase();
         filteredCars = filteredCars.filter(
           (car) =>
-            car.name.toLowerCase().includes(searchTerm) ||
-            car.marca.toLowerCase().includes(searchTerm)
+            car.mlTitle.toLowerCase().includes(searchTerm) ||
+            car.brand.toLowerCase().includes(searchTerm)
         );
       }
       if (filters?.marca) {
         filteredCars = filteredCars.filter(
-          (car) => car.marca.toLowerCase() === filters.marca?.toLowerCase()
+          (car) => car.brand.toLowerCase() === filters.marca?.toLowerCase()
         );
       }
       if (filters?.categoria) {
         filteredCars = filteredCars.filter(
           (car) =>
-            car.categoria.toLowerCase() === filters.categoria?.toLowerCase()
+            car.Category.name.toLowerCase() === filters.categoria?.toLowerCase()
         );
       }
 
@@ -154,37 +154,41 @@ const CatalogoPage = () => {
         .slice(start, end)
         .map((car) => ({
           id: car.id,
-          brand: car.marca,
-          model: car.name,
-          year: car.ano,
-          color: '',
+          brand: car.brand,
+          model: car.mlTitle,
+          year: car.year,
+          color: car.color,
           price: {
-            valor: car.precio.valor,
-            moneda: car.precio.moneda,
+            valor: car.price,
+            moneda: car.currency,
           },
-          description: car.descripcion,
-          categoryId: car.categoria,
-          mileage: car.kilometraje,
-          transmission: car.transmision,
-          fuel: car.combustible,
-          doors: car.puertas,
-          position: 0,
-          featured: false,
-          favorite: false,
-          active: true,
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
+          description: car.description,
+          categoryId: car.categoryId,
+          mileage: car.mileage,
+          transmission: car.transmission,
+          fuel: car.fuel,
+          doors: car.doors,
+          position: car.position,
+          featured: car.featured,
+          favorite: car.favorite,
+          active: car.active,
+          createdAt: car.createdAt,
+          updatedAt: car.updatedAt,
           Category: {
-            id: car.categoria.toLowerCase(),
-            name: car.categoria,
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString(),
+            id: car.Category.id,
+            name:
+              car.Category.name.charAt(0).toUpperCase() +
+              car.Category.name.slice(1).toLowerCase(),
+            createdAt: car.createdAt,
+            updatedAt: car.updatedAt,
           },
-          Images: car.images.map((img, index) => ({
-            thumbnailUrl: `/assets/catalogo/${img}`,
-            imageUrl: `/assets/catalogo/${img}`,
-            order: index,
-          })),
+          Images: car.images.map(
+            (img: { thumbnailUrl: string }, index: number) => ({
+              thumbnailUrl: img.thumbnailUrl,
+              imageUrl: img.thumbnailUrl,
+              order: index,
+            })
+          ),
         }));
 
       setCars(paginatedCars);
@@ -565,7 +569,7 @@ const CatalogoPage = () => {
                         setSearchValue('');
                         router.push('/catalogo');
                       }}
-                      className='flex items-center gap-2 px-3 py-2 rounded-full bg-color-primary hover:bg-color-primary-dark text-white transition-colors'
+                      className='flex items-center gap-2 px-3 py-2 rounded-full bg-color-primary hover:bg-color-primary/80 text-black transition-colors'
                     >
                       <span>Limpiar filtros</span>
                       <CloseIcon className='w-4 h-4 stroke-[2]' />
@@ -769,21 +773,23 @@ const CatalogoPage = () => {
                       handlePageChange(Math.max(1, currentPage - 1))
                     }
                     disabled={currentPage === 1}
-                    className={`px-4 py-2 rounded ${
+                    className={`px-4 py-2 rounded relative overflow-hidden transition-all duration-300 ease-in-out ${
                       currentPage === 1
-                        ? 'bg-color-primary/50 text-color-title-light cursor-not-allowed'
-                        : 'bg-color-primary text-color-title-light hover:bg-color-primary-dark hover:text-color-title'
-                    } transition-colors`}
+                        ? 'bg-color-primary/50 text-color-title-light cursor-not-allowed opacity-50'
+                        : 'bg-gradient-to-l from-neutral-800 to-neutral-700 text-color-title-light'
+                    }`}
                   >
+                    {/* Overlay para hover */}
+                    {currentPage !== 1 && (
+                      <div className='absolute inset-0 bg-gradient-to-l from-neutral-600 to-neutral-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out'></div>
+                    )}
                     <ArrowIcon
-                      className={`w-4 h-4 rotate-180 ${
-                        company.dark
-                          ? 'text-color-title-light'
-                          : 'text-color-title-light'
+                      className={`w-4 h-4 rotate-180 text-color-title-light transition-opacity duration-300 relative z-10 ${
+                        currentPage === 1 ? 'opacity-50' : 'opacity-100'
                       }`}
                     />
                   </button>
-                  <span className='text-color-text'>
+                  <span className='text-color-text-light'>
                     Página {currentPage} de {totalPages}
                   </span>
                   <button
@@ -791,17 +797,21 @@ const CatalogoPage = () => {
                       handlePageChange(Math.min(totalPages, currentPage + 1))
                     }
                     disabled={currentPage === totalPages}
-                    className={`px-4 py-2 rounded ${
+                    className={`px-4 py-2 rounded relative overflow-hidden transition-all duration-300 ease-in-out ${
                       currentPage === totalPages
-                        ? 'bg-color-primary/50 text-color-title-light cursor-not-allowed'
-                        : 'bg-color-primary text-color-title-light hover:bg-color-primary-dark hover:text-color-title'
-                    } transition-colors`}
+                        ? 'bg-color-primary/50 text-color-title-light cursor-not-allowed opacity-50'
+                        : 'bg-gradient-to-l from-neutral-800 to-neutral-700 text-color-title-light'
+                    }`}
                   >
+                    {/* Overlay para hover */}
+                    {currentPage !== totalPages && (
+                      <div className='absolute inset-0 bg-gradient-to-l from-neutral-600 to-neutral-500 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out'></div>
+                    )}
                     <ArrowIcon
-                      className={`w-4 h-4 ${
-                        company.dark
-                          ? 'text-color-title-light'
-                          : 'text-color-title-light'
+                      className={`w-4 h-4 text-color-title-light transition-opacity duration-300 relative z-10 ${
+                        currentPage === totalPages
+                          ? 'opacity-50'
+                          : 'opacity-100'
                       }`}
                     />
                   </button>
@@ -810,11 +820,11 @@ const CatalogoPage = () => {
             </>
           ) : (
             <div className='flex flex-col items-center min-h-[600px] my-8 md:my-16'>
-              <div className='col-span-2 md:col-span-3 lg:col-span-4 text-center text-lg text-color-text'>
+              <div className='col-span-2 md:col-span-3 lg:col-span-4 text-center text-lg text-color-text-light'>
                 {searchFilter ? (
                   <>
                     No se encontraron resultados para la búsqueda{' '}
-                    <span className='text-color-title font-semibold'>
+                    <span className='text-color-title-light font-semibold'>
                       &quot;{searchFilter}&quot;
                     </span>
                     {(marcaFilter || categoriaFilter) &&
@@ -824,11 +834,11 @@ const CatalogoPage = () => {
                 ) : marcaFilter && categoriaFilter ? (
                   <>
                     No hay vehículos de la marca{' '}
-                    <span className='text-color-title font-semibold'>
+                    <span className='text-color-title-light font-semibold'>
                       {marcaFilter}
                     </span>{' '}
                     en la categoría{' '}
-                    <span className='text-color-title font-semibold'>
+                    <span className='text-color-title-light font-semibold'>
                       {categoriaFilter}
                     </span>
                     .
@@ -836,7 +846,7 @@ const CatalogoPage = () => {
                 ) : marcaFilter ? (
                   <>
                     No hay vehículos disponibles de la marca{' '}
-                    <span className='text-color-title font-semibold'>
+                    <span className='text-color-title-light font-semibold'>
                       {marcaFilter}
                     </span>
                     .
@@ -844,7 +854,7 @@ const CatalogoPage = () => {
                 ) : categoriaFilter ? (
                   <>
                     No hay vehículos disponibles en la categoría{' '}
-                    <span className='text-color-title font-semibold'>
+                    <span className='text-color-title-light font-semibold'>
                       {categoriaFilter}
                     </span>
                     .
@@ -854,7 +864,7 @@ const CatalogoPage = () => {
                 )}
               </div>
               <Link
-                className='mt-5 border-2 border-transparent bg-color-primary hover:bg-color-primary-dark transition-colors px-4 md:px-6 py-3 text-color-title-light rounded'
+                className='mt-5 border-2 border-transparent bg-color-primary hover:bg-color-primary/80 transition-colors px-4 md:px-6 py-3 text-color-title font-semibold rounded'
                 href='/catalogo'
                 onClick={(e) => {
                   e.preventDefault();
