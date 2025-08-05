@@ -1,13 +1,12 @@
 'use client';
 
-import CarrouselFeatured from '@/components/CarrouselFeatured';
-import CarrouselFavorites from '@/components/CarrouselFavorites';
 import HeroHome from '@/components/HeroHome';
 import Gallery from '@/components/Gallery';
 import PreguntasHome from '@/components/PreguntasHome';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Proceso from '@/components/Proceso';
+import CarsHome from '@/components/CarsHome';
 
 export default function Home() {
   return (
@@ -18,8 +17,7 @@ export default function Home() {
           <main className='flex flex-col w-full'>
             <HeroHome />
             <section className='flex flex-col gap-8 md:gap-10 lg:gap-12 mt-10 mb-10 md:mt-16 md:mb-16'>
-              <CarrouselFeatured title='Ingresos' />
-              <CarrouselFavorites title='Destacados' />
+              <CarsHome title='Nuestros Vehículos' />
             </section>
             <Proceso />
             <Gallery />

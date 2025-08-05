@@ -5,7 +5,7 @@ export const company = {
   favicon: false,
   price: true,
   objectCover: '50%',
-  id: 'kendallmotors',
+  id: 'kendall-motors',
   name: 'Kendall Motors',
   adress: 'Colectora Panamericana',
   city: 'Ramal Pilar Km 39.5',
@@ -33,7 +33,7 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://kendallmotors.vercel.app/',
+  metadataBase: 'https://kendall-motors.vercel.app/',
   title: 'Kendall Motors - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
