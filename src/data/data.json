@@ -1,306 +1,22 @@
 {
-  "total": 12,
+  "total": 26,
   "totalPages": 1,
   "currentPage": 1,
   "cars": [
     {
-      "price": 56900,
+      "price": 26500,
       "position": 1000,
       "downPayment": null,
-      "id": "generated-1754483832462-0",
-      "brand": "Bmw",
-      "model": "X2",
-      "year": 2022,
-      "color": "Negro",
+      "id": "generated-1754185417657-0",
+      "brand": "Toyota",
+      "model": "Corolla",
+      "year": 2021,
+      "color": "Blanco",
       "currency": "USD",
-      "description": "BMW X2 sDrive 20i M Sport 192cv AT7\nMod. 2022\n27.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\nHistorial de servicios oficiales completo (Genco BMW Mendoza)\n\nPrestaciones y Consumos Homologados\n\nVel. Máxima: 225km/h\nAceleración 0-100km/h: 7,8s\nConsumo extraurbano: 6,1L/100km\nConsumo urbano: 8,5L/100km\nConsumo promedio: 7,3L/100km\n\nConjunto Mecánico\n\nMotor: B48 2.0 Turbo 4cil nafta\nPotencia: 192cv\nAlimentación: Inyección directa. Turbo intercooler\nCaja de cambios: Automática de 7 marchas C/levas al volante\nFrenos: Discos ventilados delanteros y traseros \nNeumáticos: 225/45R19\n\nSeguridad y Conducción\n\n3 Modos de conducción (Sport, Comfort y Eco Pro)\n5 estrellas de seguridad EuroNCAP\n6 Airbags\nAnclajes isofix\nCámara de retroceso\nCierre automático en rodaje\nControl de crucero\nControl de descenso en pendiente (HDC)\nControl de estabilidad (DSC)\nControl de frenado en curva (CBC)\nControl de presión de neumáticos\nControl de tracción (ASC)\nDirección asistida electromecánica Servotronic (EPS)\nFaros antiniebla delanteros y traseros\nFaros full LED adaptativos\nFrenos ABS + EBD + BAS\nLimitador de velocidad\nNavegador GPS\nOrdenador de a bordo\nSensores de estacionamiento traseros\nSensor de lluvia y crepuscular\nStart & Stop\nSuspensión deportiva M\nTuercas antirrobo\nVolante multifunción M regulable en altura y profundidad\n\nElementos de Confort\n\nApertura de baúl eléctrica (interior y exterior)\nApoyabrazos delantero y trasero\nApple CarPlay y Android Auto inalámbricos\nAsientos delanteros con ajuste dorsal\nButacas deportivas M\nClimatizador automático Bi-zona\nCristales eléctricos\nEncendido por botón Start/Stop\nEspejos eléctricos con pliegue eléctrico\nLlantas M\nPantalla táctil bluetooth\nPaquete exterior M sport X\nPedalera deportiva\nTapizado de cuero y Alcántara\nTecho solar panorámico\nVolante M de cuero",
-      "categoryId": "suv",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 26000,
-      "transmission": "Automática",
-      "fuel": "Nafta",
-      "doors": 5,
-      "active": true,
-      "featured": false,
-      "favorite": false,
-      "lastFeaturedAt": null,
-      "lastFavoriteAt": null,
-      "mlId": "MLA1512219567",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-1512219567-bmw-x2-20-sdrive20i-msportx-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Bmw X2 2.0 Sdrive20i Msportx",
-      "mlCleanPrice": null,
-      "mlLocation": null,
-      "mlCondition": null,
-      "mlListId": null,
-      "mlBodyType": "SUV",
-      "mlEngine": "2.0",
-      "mlPower": null,
-      "mlGears": null,
-      "mlDimensions": null,
-      "mlFuelCapacity": null,
-      "mlValvesPerCylinder": null,
-      "mlSeatCapacity": null,
-      "mlTractionControl": null,
-      "mlAbsBrakes": null,
-      "mlAutoHeadlights": null,
-      "mlAirbags": null,
-      "mlStabilityControl": null,
-      "mlSingleOwner": null,
-      "mlAcceptsTrade": null,
-      "mlAirConditioning": null,
-      "mlBoardComputer": null,
-      "mlRainSensor": null,
-      "mlRemoteRadioControl": null,
-      "mlAssistedSteering": null,
-      "mlAlarm": null,
-      "mlAlloyWheels": null,
-      "mlCd": null,
-      "mlLeatherSeats": null,
-      "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-0",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-0",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
-      "Category": {
-        "id": "suv",
-        "name": "suv"
-      },
-      "images": [
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_642138-MLA88907550287_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_670288-MLA88558329748_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_825029-MLA88558369334_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_849628-MLA88558339678_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_652543-MLA88558339676_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_902503-MLA88907708655_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_781888-MLA88907609909_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_602195-MLA88907659399_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_728915-MLA88907580057_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_658633-MLA88907540497_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_959348-MLA88558529134_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_777430-MLA88558290036_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_953889-MLA88558617346_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_900044-MLA88907609935_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_965569-MLA88558053402_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_976804-MLA88558419168_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_750673-MLA88907550349_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_728630-MLA88907856539_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_619646-MLA88907590297_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_809936-MLA88558339738_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_939253-MLA88907500759_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_710309-MLA88907481077_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_704559-MLA88907550383_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_963277-MLA88907510725_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_733610-MLA88907580123_072025-F.webp"
-        }
-      ]
-    },
-    {
-      "price": 34900,
-      "position": 2000,
-      "downPayment": null,
-      "id": "generated-1754483832462-1",
-      "brand": "Audi",
-      "model": "A5",
-      "year": 2018,
-      "color": "Plateado",
-      "currency": "USD",
-      "description": "Audi A5 Sportback 2.0T 190cv AT7\nMod. 2018\n77.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\nHistorial de servicios oficiales completo (Goldstein Audi Mendoza)\n\nESPECIFICACIONES\n\nPrestaciones y Consumos Homologados\n\nVel. Máxima: 240km/h\nAceleración 0-100km/h: 7,5s\nConsumo extraurbano: 7,6L/100km\nConsumo urbano: 10,2L/100km\nConsumo promedio: 8,9L/100km\n\nDimensiones, peso y capacidades\n\nLongitud: 4,73m\nAncho: 1,84m\nAltura: 1,39m\nPeso: 1.520kg\nTanque de combustible: 54L\nNúmero de plazas: 5\n\nConjunto Mecánico\n\nMotor: 2.0TFSI Turbo 4cil nafta\nPotencia: 190cv\nCaja de cambios: Automática doble embrague de 7 marchas C/levas al volante\nFrenos: Discos ventilados delanteros y traseros \nNeumáticos: 245/40R18\nAuxilio temporal\n\nSeguridad y Conducción\n\n5 Modos de conducción - Audi Drive Select (Efficiency, Comfort, Auto, Dynamic e Individual)\n6 Airbags\nAnclajes isofix\nAuto Hold\nCierre automático en rodaje\nControl de crucero\nControl de arranque en pendiente\nControl de estabilidad\nControl de presión de neumáticos\nControl de tracción\nDirección asistida eléctrica\nEspejo interior fotocromático\nFaros antiniebla delanteros y traseros\nFaros regulables\nFaros Xenón\nFrenos ABS + EBD\nOrdenador de a bordo\nSensores de estacionamiento delanteros y traseros\nSensor de lluvia y crepuscular\nStart & Stop\nVolante multifunción regulable en altura y profundidad\n\nElementos de Confort\n\nApertura de baúl eléctrica (interior y exterior)\nApoyabrazos delantero y trasero\nClimatizador automático Tri-zona\nCristales eléctricos\nEncendido por botón Start/Stop\nEspejos eléctricos con pliegue eléctrico\nPantalla bluetooth\nTapizado de cuero\nVolante de cuero",
-      "categoryId": "hatchback",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 77000,
-      "transmission": "Automática",
-      "fuel": "Nafta",
-      "doors": 3,
-      "active": true,
-      "featured": false,
-      "favorite": false,
-      "lastFeaturedAt": null,
-      "lastFavoriteAt": null,
-      "mlId": "MLA2190872228",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-2190872228-audi-a5-sportback-20-tfsi-190cv-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Audi A5 Sportback 2.0 Tfsi 190cv",
-      "mlCleanPrice": null,
-      "mlLocation": null,
-      "mlCondition": null,
-      "mlListId": null,
-      "mlBodyType": "Hatchback",
-      "mlEngine": "2.0",
-      "mlPower": null,
-      "mlGears": null,
-      "mlDimensions": null,
-      "mlFuelCapacity": null,
-      "mlValvesPerCylinder": null,
-      "mlSeatCapacity": null,
-      "mlTractionControl": null,
-      "mlAbsBrakes": null,
-      "mlAutoHeadlights": null,
-      "mlAirbags": null,
-      "mlStabilityControl": null,
-      "mlSingleOwner": null,
-      "mlAcceptsTrade": null,
-      "mlAirConditioning": null,
-      "mlBoardComputer": null,
-      "mlRainSensor": null,
-      "mlRemoteRadioControl": null,
-      "mlAssistedSteering": null,
-      "mlAlarm": null,
-      "mlAlloyWheels": null,
-      "mlCd": null,
-      "mlLeatherSeats": null,
-      "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-1",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-1",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
-      "Category": {
-        "id": "hatchback",
-        "name": "hatchback"
-      },
-      "images": [
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_950032-MLA88295088749_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_615797-MLA87956212130_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_747634-MLA87956212112_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_643230-MLA87956458016_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_938702-MLA87956487776_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_653021-MLA88294970139_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_942538-MLA88295236645_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_794776-MLA87956212186_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_881437-MLA88295266407_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_925395-MLA88295236669_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_778454-MLA88294841585_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_962264-MLA88295236691_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_825058-MLA87956212240_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_746122-MLA87956467946_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_713111-MLA87956458086_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_624956-MLA88295236725_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_704622-MLA88294684681_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_652443-MLA88294841657_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_977509-MLA88294841661_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_635328-MLA87956487922_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_902488-MLA88294970245_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_744762-MLA87956644734_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_960960-MLA87956192618_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_668217-MLA88295059303_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_751225-MLA87956192652_072025-F.webp"
-        }
-      ]
-    },
-    {
-      "price": 73900,
-      "position": 3000,
-      "downPayment": null,
-      "id": "generated-1754483832462-2",
-      "brand": "Ford",
-      "model": "F-150",
-      "year": 2020,
-      "color": "Negro",
-      "currency": "USD",
-      "description": "Ford F-150 Raptor 3.5 V6 4x4 AT10 456cv\nMod. 2020\n9.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\nHistorial de servicios oficiales completo (JC Lorenzo Ford - San Rafael)\n4 neumáticos BF Goodrich nuevos\n\nESPECIFICACIONES\n\nPrestaciones y Consumos Homologados\n\nVel. Máxima: 175km/h (limitada)\nAceleración 0-100km/h: 6,6s\nConsumo extraurbano: 13L/100km\nConsumo urbano: 19,2L/100km\nConsumo promedio: 16,1L/100km\n\nDimensiones, peso y capacidades\n\nLongitud: 5,89m\nAncho: 2,19m\nAltura: 1,99m\nPeso: 2.616kg\nTanque de combustible: 136L\nNúmero de plazas: 5\n\nConjunto Mecánico\n\nMotor: Ecoboost V6 3.5L Biturbo\nPotencia: 456cv\nDistribución: cadena\nTracción: 2WD, 4WD Auto, 4WD High y 4WD Low\nCaja de cambios: Automática de 10 marchas C/Levas al volante\nFrenos: Discos ventilados delanteros y traseros \nNeumáticos: 315/70R17\nAuxilio homogéneo sin rodar\n\nSeguridad y Conducción\n\n3 Modos asistencia en la dirección (Normal, Comfort y Sport)\n7 Modos de manejo (Baja, Sport, Nieve/Hielo, Barro/Arena, Rock Crawl, Tráiler, Normal)\n8 Airbags\nAnclajes isofix\nAsistente de arranque en pendiente\nAsistente de información de punto ciego con alerta de tráfico cruzado\nAsistente de mantenimiento de carril\nAsistente de pre-colisión con detección de peatones\nAsistente de reversa con tráiler\nControl de crucero adaptativo\nCámara de retroceso 360 grados (3 modos de visión)\nControl antivuelco\nControl de estabilidad y tracción\nControl de freno de tráiler\nControl de presión de neumáticos\nEspejos eléctricos calefaccionados\nFaros LED con regulación automática\nFaros rompeniebla delanteros y traseros\nFrenos ABS\nNavegador GPS\nOrdenador de a bordo\nPedalera regulable eléctricamente\nSensores de estacionamiento\nSensor de lluvia y crepuscular\nStart & Stop\nVolante multifunción regulable en altura y profundidad eléctricamente\n\nElementos de Confort\n\nApple CarPlay y Android Auto\nApoyabrazos delantero y trasero\nArranque remoto desde la llave\nAsientos delanteros eléctricos con ajuste lumbar\nButacas calefaccionadas y ventiladas\nButaca del conductor con 3 memorias\nClimatizador automático Bi-zona\nCódigo de apertura\nCristales eléctricos\nEncendido por botón Start/Stop\nEscalón de ingreso a caja de carga\nEspejos eléctricos con pliegue eléctrico\nEstribos Raptor\nIluminación de caja de carga\nLlave con presencia (Smart Entry System)\nLuneta eléctrica\nPantalla táctil bluetooth de 8”\nSistema de audio Premium B&O de 10 parlantes + subwoofer \nTapizado de cuero\nTecho solar panorámico\nVolante de cuero calefaccionado",
-      "categoryId": "pick-up",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 89000,
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 120000,
       "transmission": "Automática",
       "fuel": "Nafta",
       "doors": 4,
@@ -309,16 +25,16 @@
       "favorite": false,
       "lastFeaturedAt": null,
       "lastFavoriteAt": null,
-      "mlId": "MLA2190833214",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-2190833214-ford-f-150-raptor-35l-bi-turbo-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Ford F-150 Raptor 3.5l Bi-turbo",
+      "mlId": "MLA2177253412",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2177253412-toyota-corolla-20-grs-cvt-170cv-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Toyota Corolla 2.0 Grs Cvt 170cv",
       "mlCleanPrice": null,
       "mlLocation": null,
       "mlCondition": null,
       "mlListId": null,
-      "mlBodyType": "Pick-Up",
-      "mlEngine": "3.5",
+      "mlBodyType": null,
+      "mlEngine": null,
       "mlPower": null,
       "mlGears": null,
       "mlDimensions": null,
@@ -342,249 +58,86 @@
       "mlCd": null,
       "mlLeatherSeats": null,
       "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-2",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-2",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
+      "mlImagesHash": "hash-1754185417657-0",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-0",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
       "Category": {
-        "id": "pick-up",
-        "name": "pick-up"
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
       },
       "images": [
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_662864-MLA87955923234_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_710127-MLA87569050000_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_870333-MLA87955784696_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_806221-MLA87569030062_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_668675-MLA88294836033_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_937942-MLA87900885895_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_609704-MLA88294708891_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_680062-MLA87569236802_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_932368-MLA87956206580_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_902125-MLA87901005037_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_614203-MLA88294562225_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_717567-MLA87569010540_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_948831-MLA88294836063_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_844128-MLA87569069604_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_887910-MLA87956187012_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_646428-MLA87568951272_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_809901-MLA87956011052_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_767272-MLA87900352975_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_857374-MLA88294562271_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_636671-MLA87900323237_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_871120-MLA88294679107_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_879668-MLA87568951338_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_676719-MLA88294582365_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_879810-MLA87900323253_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_730484-MLA88294679167_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_692396-MLA87569236994_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_958403-MLA88294709017_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_672936-MLA87569010722_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_781360-MLA87956187064_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_823850-MLA87569296568_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_943861-MLA88294836189_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_689011-MLA87900668537_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_885676-MLA88294836183_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_704180-MLA87569010786_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_748584-MLA88294836229_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_994533-MLA87956187112_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_989268-MLA87956187116_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_678012-MLA88294582445_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_929820-MLA87955923426_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_772239-MLA88294582485_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_930975-MLA88294582487_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_967463-MLA88294552671_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_920213-MLA87569187788_072025-F.webp"
         }
       ]
     },
     {
-      "price": 16900,
-      "position": 4000,
+      "price": 31000000,
+      "position": 2000,
       "downPayment": null,
-      "id": "generated-1754483832462-3",
-      "brand": "Fiat",
-      "model": "500",
-      "year": 2013,
-      "color": "Blanco",
-      "currency": "USD",
-      "description": "Fiat 500 Abarth 1.4T 135cv\nMod. 2013\n86.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors \n\nGestoría propia\nRecibimos Permutas\nTransferimos las Permutas en el Momento\n\nESPECIFICACIONES\n\nPrestaciones \n\nVel. Máxima: 205km/h\nAceleración 0-100km/h: 8s\n\nDimensiones, peso y capacidades\n\nLongitud: 3,66m\nAncho: 1,63m\nAltura: 1,49m\nPeso: 1.110kg\nNúmero de plazas: 4\n\nConjunto Mecánico\n\nMotor: 4cil 16v 1.4 turbo nafta\nPotencia: 135cv\nAlimentación: Inyección directa. Turbo intercooler\nCaja de cambios: Manual de 5 marchas\nFrenos: Discos ventilados delanteros y traseros \nNeumáticos: 205/40/R17\nCubierta de auxilio temporal\n\nSeguridad y Conducción\n\n2 modos de manejo (Normal & Sport)\n6 Airbags\nAnclajes isofix\nAsistente de arranque en pendiente\nControl de estabilidad (ESP)\nControl de transferencia de torque (TTC)\nDirección asistida eléctrica Dualdrive con modo Sport\nEspejos eléctricos calefaccionados\nFaros con proyectores de Xenón\nFaros antiniebla\nFrenos ABS y EBD\nIndicador de cambio de marcha\nManómetro de presión de turbo\nOrdenador de a bordo\nPedalera deportiva\nVolante multifunción regulable en altura\n\nElementos de Confort\n\nButacas deportivas de cuero Abarth\nClimatizador automático\nCristales eléctricos\nEquipo de audio Hi-Fi Premium\nLlantas de aleación Abarth de 17”\nTecho solar Skydome\nVolante de cuero Abarth",
-      "categoryId": "hatchback",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 86000,
-      "transmission": "Manual",
-      "fuel": "Nafta",
-      "doors": 3,
-      "active": true,
-      "featured": false,
-      "favorite": false,
-      "lastFeaturedAt": null,
-      "lastFavoriteAt": null,
-      "mlId": "MLA2129128158",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-2129128158-fiat-500-14-abarth-135cv-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Fiat 500 1.4 Abarth 135cv",
-      "mlCleanPrice": null,
-      "mlLocation": null,
-      "mlCondition": null,
-      "mlListId": null,
-      "mlBodyType": "Hatchback",
-      "mlEngine": "1.4",
-      "mlPower": null,
-      "mlGears": null,
-      "mlDimensions": null,
-      "mlFuelCapacity": null,
-      "mlValvesPerCylinder": null,
-      "mlSeatCapacity": null,
-      "mlTractionControl": null,
-      "mlAbsBrakes": null,
-      "mlAutoHeadlights": null,
-      "mlAirbags": null,
-      "mlStabilityControl": null,
-      "mlSingleOwner": null,
-      "mlAcceptsTrade": null,
-      "mlAirConditioning": null,
-      "mlBoardComputer": null,
-      "mlRainSensor": null,
-      "mlRemoteRadioControl": null,
-      "mlAssistedSteering": null,
-      "mlAlarm": null,
-      "mlAlloyWheels": null,
-      "mlCd": null,
-      "mlLeatherSeats": null,
-      "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-3",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-3",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
-      "Category": {
-        "id": "hatchback",
-        "name": "hatchback"
-      },
-      "images": [
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_635247-MLA86418121131_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_829852-MLA86417963843_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_718037-MLA86418287397_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_747134-MLA86102218926_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_742319-MLA86418347005_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_646741-MLA86418228247_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_763548-MLA86418209299_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_744282-MLA86418160659_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_978756-MLA86418347033_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_620920-MLA86417963887_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_799365-MLA86418287453_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_733164-MLA86418347045_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_710618-MLA86418032589_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_705337-MLA86418141051_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_725248-MLA86418141053_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_629965-MLA86417963913_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_651627-MLA86417963915_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_882040-MLA86418287473_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_692528-MLA86418307487_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_869646-MLA86102288132_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_705823-MLA86102288154_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_872872-MLA86418032645_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_713535-MLA86418022871_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_704862-MLA86418228301_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_718002-MLA86418170015_062025-F.webp"
-        }
-      ]
-    },
-    {
-      "price": 21900000,
-      "position": 5000,
-      "downPayment": null,
-      "id": "generated-1754483832462-4",
-      "brand": "Renault",
-      "model": "Captur",
-      "year": 2018,
-      "color": "Rojo",
+      "id": "generated-1754185417657-1",
+      "brand": "Peugeot",
+      "model": "208",
+      "year": 2025,
+      "color": "Negro",
       "currency": "ARS",
-      "description": "Renault Captur Zen 2.0 MT6\nMod. 2018\n23.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\n\nGestoría propia\nRecibimos permutas\nTransferimos las permutas en el acto\n\nESPECIFICACIONES\n\nPrestaciones y Consumos Homologados\n\nVel. Máxima: 185km/h\nAceleración 0-100km/h: 10,3s\nConsumo Extraurbano: 6,3L/100km\nConsumo Urbano: 9,9L/100km\nConsumo Promedio: 8,1L/100km\nManual Indica Nafta Regular (Grado 2 - Super)\n\nDimensiones, peso y capacidades\n\nLongitud: 4,33m\nAncho: 1,81m\nAltura: 1,61m\nPeso: 1.320kg\nTanque de Combustible: 50L\nVolumen Baúl: 437L\nNúmero de plazas: 5\n\nConjunto Mecánico\n\nMotor: F4R 2.0 16v naftero\nPotencia: 143cv\nTracción: Delantera\nCaja de Cambios: Manual de 6 marchas\nFrenos: Discos Ventilados Delanteros y Tambores Traseros\nNeumáticos: 215/60R17\n\nSeguridad y Conducción\n\n4 Airbags\nAlarma\nAnclajes ISOFIX y Top Tether\nAsistente de arranque en pendiente (HSA)\nAsistente de frenado de urgencia (AFU)\nCierre automático en rodaje\nCierre centralizado\nControl de estabilidad (ESP)\nControl de tracción (ASR)\nDirección asistida\nDistribución electrónica de frenado (EBD)\nFrenos ABS\nFaros regulables en altura con proyector\nFaros rompeniebla\nIndicador de cambio de marcha (GSI)\nLuces diurnas DRL\nOrdenador de a bordo\nSensor crepuscular\nSensores de estacionamiento traseros\nSensor de lluvia\nVolante regulable en altura\n\nElementos de Confort\n\nAire acondicionado\nApertura a distancia\nArranque por botón\nComando satelital del stereo\nControl crucero\nCristales eléctricos\nEspejos plegables eléctricamente con luz de giro incorporada\nFunción ECO (ahorro de combustible)\nLlantas de aleación de 17”\nNavegador GPS\nPantalla táctil bluetooth de 7”\nTarjeta llave manos libres\nVolante forrado en cuero",
-      "categoryId": "suv",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 23000,
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 0,
       "transmission": "Manual",
       "fuel": "Nafta",
       "doors": 5,
@@ -593,16 +146,470 @@
       "favorite": false,
       "lastFeaturedAt": null,
       "lastFavoriteAt": null,
-      "mlId": "MLA1489006875",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-1489006875-renault-captur-20-zen-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
+      "mlId": "MLA1475723433",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-1475723433-peugeot-208-16-allure-pack-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Peugeot 208 1.6 Allure Pack",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-1",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-1",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_681116-MLA82369048997_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_684948-MLA82369058915_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_966728-MLA82368949851_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_686495-MLA82086815300_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_965799-MLA82368930585_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_752369-MLA82369068651_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_852735-MLA82368930591_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_734868-MLA82368949913_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_675161-MLA82086563290_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_857921-MLA82369058993_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_699946-MLA82086563338_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_728093-MLA82369049121_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_946478-MLA82368959909_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_697760-MLA82369039027_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_872723-MLA82086815404_022025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_601812-MLA82368930767_022025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 10500000,
+      "position": 3000,
+      "downPayment": null,
+      "id": "generated-1754185417657-2",
+      "brand": "Kia",
+      "model": "Sportage",
+      "year": 2008,
+      "color": "Negro",
+      "currency": "ARS",
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA! Y TE SACAMOS TODAS LAS DUDAS!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 210000,
+      "transmission": "Manual",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2206211844",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2206211844-kia-sportage-20-ex-mt-4x2-esp-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Kia Sportage 2.0 Ex Mt 4x2 Esp",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-2",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-2",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_636733-MLA83253867705_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_684106-MLA83253887213_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_762400-MLA83253829683_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_899853-MLA82964537332_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_826648-MLA83253829693_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_679638-MLA83253867753_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_664629-MLA83253867757_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_617601-MLA82964463544_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_864118-MLA82964463556_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_958013-MLA82964537402_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_988244-MLA83253829765_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_727958-MLA82964537430_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_987817-MLA83253867857_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_625307-MLA82964463602_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_838853-MLA83253867881_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_689873-MLA83253867887_032025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 14000000,
+      "position": 4000,
+      "downPayment": null,
+      "id": "generated-1754185417657-3",
+      "brand": "Chevrolet",
+      "model": "Sonic",
+      "year": 2017,
+      "color": "Rojo",
+      "currency": "ARS",
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 143000,
+      "transmission": "Manual",
+      "fuel": "Nafta",
+      "doors": 4,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2191198560",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2191198560-chevrolet-sonic-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Chevrolet Sonic 1.6 Ltz 4p Mt",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-3",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-3",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_850160-MLA88312555115_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_691076-MLA87973231800_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_647616-MLA87973231802_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_899214-MLA88312112473_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_888822-MLA88312201283_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_728696-MLA88312555165_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_896964-MLA88312201327_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_747263-MLA88312240125_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_960560-MLA88312112525_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_823347-MLA88312112545_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_754316-MLA87973231922_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_935926-MLA88312485733_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_807151-MLA88312240197_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_652639-MLA88312555271_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_745291-MLA88312112591_072025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 40500000,
+      "position": 5000,
+      "downPayment": null,
+      "id": "generated-1754185417657-4",
+      "brand": "Peugeot",
+      "model": "2008",
+      "year": 2025,
+      "color": "Negro",
+      "currency": "ARS",
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 0,
+      "transmission": "Automática",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2134294518",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2134294518-peugeot-2008-10t-gt-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Peugeot 2008 1.0t Gt",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-4",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-4",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_979955-MLA86299867056_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_830827-MLA86617957233_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_898295-MLA86617592469_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_892637-MLA86617967369_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_910606-MLA86299542434_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_968181-MLA86299974896_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_877287-MLA86618026793_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_810283-MLA86299552670_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_802582-MLA86617987333_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_793094-MLA86299533026_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_749708-MLA86299533142_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_699851-MLA86618026889_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_622043-MLA86617661869_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_764731-MLA86299867544_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_911324-MLA86617928411_062025-OO.jpg"
+        }
+      ]
+    },
+    {
+      "price": 16500,
+      "position": 6000,
+      "downPayment": null,
+      "id": "generated-1754185417657-5",
+      "brand": "Renault",
+      "model": "Captur",
+      "year": 2017,
+      "color": "Negro",
+      "currency": "USD",
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 67000,
+      "transmission": "Manual",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2210812148",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2210812148-renault-captur-20-zen-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
       "mlTitle": "Renault Captur 2.0 Zen",
       "mlCleanPrice": null,
       "mlLocation": null,
       "mlCondition": null,
       "mlListId": null,
-      "mlBodyType": "SUV",
-      "mlEngine": "2.0",
+      "mlBodyType": null,
+      "mlEngine": null,
       "mlPower": null,
       "mlGears": null,
       "mlDimensions": null,
@@ -626,125 +633,92 @@
       "mlCd": null,
       "mlLeatherSeats": null,
       "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-4",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-4",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
+      "mlImagesHash": "hash-1754185417657-5",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-5",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
       "Category": {
-        "id": "suv",
-        "name": "suv"
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
       },
       "images": [
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_766713-MLA83451191094_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_720061-MLA89152640463_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_954111-MLA83743504351_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_683543-MLA88796153686_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_827797-MLA83743645611_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_874691-MLA88796659608_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_949866-MLA83743645609_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_925762-MLA88797027018_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_777586-MLA83451355288_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_664023-MLA89152264373_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_739480-MLA83451355320_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_761617-MLA88797027026_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_647569-MLA83743504371_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_998969-MLA88796957184_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_733487-MLA83743551237_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_728568-MLA88797086880_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_927784-MLA83451355324_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_694232-MLA88797046900_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_970364-MLA83451191116_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_883778-MLA89152680253_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_901573-MLA83451171332_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_949917-MLA88796104086_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_970254-MLA83743504379_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_812172-MLA89152700499_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_832207-MLA83451355350_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_913181-MLA88797027168_082025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_836386-MLA83743504381_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_973884-MLA83451123032_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_610044-MLA83451191156_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_621310-MLA83743551279_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_950553-MLA83451355368_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_994270-MLA83451191154_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_955738-MLA83451171352_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_894036-MLA83451123056_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_763847-MLA83451093326_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_981751-MLA83451093334_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_756978-MLA83743504425_042025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_758239-MLA83451171382_042025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_605419-MLA88797305130_082025-F.webp"
         }
       ]
     },
     {
-      "price": 24900000,
-      "position": 6000,
+      "price": 14000000,
+      "position": 7000,
       "downPayment": null,
-      "id": "generated-1754483832462-5",
-      "brand": "Chevrolet",
-      "model": "Cruze",
-      "year": 2022,
-      "color": "Blanco",
+      "id": "generated-1754185417657-6",
+      "brand": "Peugeot",
+      "model": "3008",
+      "year": 2012,
+      "color": "Gris",
       "currency": "ARS",
-      "description": "Chevrolet Cruze LT 1.4T MT 153cv\nMod. 2022\n39.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\n\nESPECIFICACIONES\n\nPrestaciones y Consumos Homologados\n\nVel. Máxima: 220km/h\nAceleración 0-100km/h: 8,5s\nConsumo extraurbano: 4,9L/100km\nConsumo urbano: 9,7L/100km\nConsumo promedio: 7,3L/100km\n\nConjunto Mecánico\n\nMotor: 1.4 turbo 4cil 16v nafta\nPotencia: 153cv\nCaja de cambios: Manual de 6 marchas\nFrenos: Discos ventilados delanteros y traseros \nNeumáticos: 215/50R17\n\nSeguridad y Conducción\n\n6 Airbags\nAnclajes ISOFIX\nAsistente de arranque en pendiente (HSA)\nCámara de retroceso HD\nCierre automático en rodaje\nControl de crucero\nControl de estabilidad\nControl de presión de neumáticos (TPMS)\nControl de tracción\nDirección asistida eléctrica\nEncendido automático de luces\nFaros antiniebla delanteros y traseros\nFaros con regulación en altura\nFrenos ABS y EBD\nOrdenador de a bordo\nSensor de lluvia y crepuscular\nSensores de estacionamiento traseros\nSensor de vida útil de aceite\nSistema Start & Stop (desactivable)\nVolante multifunción regulable en altura y profundidad\n\nElementos de Confort\n\nApple CarPlay y Android Auto\nButacas de cuero\nClimatizador automático\nCristales eléctricos\nEspejos eléctricos\nPantalla táctil bluetooth de 7”\nReposabrazos delantero y trasero\nSistema OnStar\nVolante de cuero",
-      "categoryId": "sedán",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 39000,
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 111000,
       "transmission": "Manual",
       "fuel": "Nafta",
-      "doors": 4,
+      "doors": 5,
       "active": true,
       "featured": false,
       "favorite": false,
       "lastFeaturedAt": null,
       "lastFavoriteAt": null,
-      "mlId": "MLA1498266661",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-1498266661-chevrolet-cruze-14-lt-mt-sedan-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Chevrolet Cruze 1.4 Lt Mt Sedan",
+      "mlId": "MLA2190801938",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2190801938-peugeot-3008-16-premium-thp-156cv-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Peugeot 3008 1.6 Premium Thp 156cv",
       "mlCleanPrice": null,
       "mlLocation": null,
       "mlCondition": null,
       "mlListId": null,
-      "mlBodyType": "Sedán",
-      "mlEngine": "1.4",
+      "mlBodyType": null,
+      "mlEngine": null,
       "mlPower": null,
       "mlGears": null,
       "mlDimensions": null,
@@ -768,104 +742,498 @@
       "mlCd": null,
       "mlLeatherSeats": null,
       "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-5",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-5",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
+      "mlImagesHash": "hash-1754185417657-6",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-6",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
       "Category": {
-        "id": "sedán",
-        "name": "sedán"
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
       },
       "images": [
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_813790-MLA84583665434_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_966536-MLA87973227750_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_968680-MLA84881816879_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_664262-MLA87973101278_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_933338-MLA84881777305_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_654464-MLA88312108447_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_862112-MLA84880894579_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_959000-MLA88312197217_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_687187-MLA84583665448_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_819349-MLA87973247632_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_809263-MLA84881608677_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_923121-MLA88312197221_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_933447-MLA84881816887_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_912897-MLA87973130976_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_988883-MLA84881608687_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_907572-MLA87973247696_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_970077-MLA84881201297_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_848265-MLA88312059627_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_957532-MLA84583665474_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_896452-MLA87973227856_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_748131-MLA84880933851_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_834277-MLA88312059675_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_952050-MLA84881201307_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_758341-MLA87973003160_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_719384-MLA84881777333_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_832752-MLA88312236195_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_714765-MLA84881796929_052025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_887809-MLA84583665502_052025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_670729-MLA84880944071_052025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_761552-MLA84582939886_052025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_986602-MLA84583268210_052025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_909292-MLA84881201321_052025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_638974-MLA84583665504_052025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_853406-MLA84880933897_052025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_921288-MLA84583665518_052025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_789815-MLA84880933899_052025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_869177-MLA84582939908_052025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_927294-MLA87973051678_072025-F.webp"
         }
       ]
     },
     {
-      "price": 29900000,
-      "position": 7000,
+      "price": 13500000,
+      "position": 8000,
       "downPayment": null,
-      "id": "generated-1754483832462-6",
-      "brand": "Fiat",
-      "model": "Toro",
-      "year": 2022,
+      "id": "generated-1754185417657-7",
+      "brand": "Peugeot",
+      "model": "208",
+      "year": 2014,
+      "color": "Negro",
+      "currency": "ARS",
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 150000,
+      "transmission": "Manual",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA1491011915",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-1491011915-peugeot-208-16-feline-pack-cuir-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Peugeot 208 1.6 Feline Pack Cuir",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-7",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-7",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_805274-MLA83679088158_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_765815-MLA83972505833_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_631032-MLA83678802586_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_851100-MLA83972564955_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_958998-MLA83678822372_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_816542-MLA83678802596_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_793060-MLA83678969954_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_784729-MLA83972367837_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_841083-MLA83972123875_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_854312-MLA83972416995_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_972690-MLA83678822398_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_618618-MLA83972417003_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_653003-MLA83972173317_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_647489-MLA83679088178_042025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 25000000,
+      "position": 9000,
+      "downPayment": null,
+      "id": "generated-1754185417657-8",
+      "brand": "Dodge",
+      "model": "Journey",
+      "year": 2017,
+      "color": "Negro",
+      "currency": "ARS",
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA! Y TE SACAMOS TODAS LAS DUDAS!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 140000,
+      "transmission": "Automática",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA1510026967",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-1510026967-dodge-journey-24-sxt-170cv-techo-dvd-nav-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Dodge Journey 2.4 Sxt 170cv (techo, Dvd, Nav)",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-8",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-8",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_857654-MLA82955239267_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_783949-MLA82955296435_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_694521-MLA82955278257_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_995831-MLA82955210357_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_993938-MLA82955258747_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_651830-MLA82955278275_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_608576-MLA82955239291_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_738667-MLA82955210379_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_714235-MLA82955278289_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_858462-MLA82955210387_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_964252-MLA82955239311_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_937768-MLA82955258773_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_725104-MLA82955210411_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_919427-MLA82955278333_032025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 40000,
+      "position": 10000,
+      "downPayment": null,
+      "id": "generated-1754185417657-9",
+      "brand": "Bmw",
+      "model": "Serie",
+      "year": 2020,
+      "color": "Negro",
+      "currency": "USD",
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 101000,
+      "transmission": "Automática",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA1506835913",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-1506835913-bmw-serie-1-15-118i-sport-line-136cv-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Bmw Serie 1 1.5 118i Sport Line 136cv",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-9",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-9",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_654143-MLA86360651842_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_812986-MLA86679391713_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_775526-MLA86679371967_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_641051-MLA86679421435_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_661002-MLA86360810220_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_854575-MLA86679332279_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_784347-MLA86360820128_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_665369-MLA86679391731_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_990257-MLA86679649009_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_760400-MLA86679322467_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_853736-MLA86679855519_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_863783-MLA86679401623_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_860400-MLA86679332343_062025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 31500000,
+      "position": 11000,
+      "downPayment": null,
+      "id": "generated-1754185417657-10",
+      "brand": "Peugeot",
+      "model": "208",
+      "year": 2025,
+      "color": "Plateado",
+      "currency": "ARS",
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 0,
+      "transmission": "Automática",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2134178286",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2134178286-peugeot-208-10t-allure-pack-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Peugeot 208 1.0t Allure Pack",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-10",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-10",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_912695-MLA86618163071_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_735276-MLA86300407752_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_925377-MLA86300447444_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_837862-MLA86618163069_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_965803-MLA86300407754_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_808768-MLA86618635829_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_679627-MLA86300536752_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_638176-MLA86300457522_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_704265-MLA86300132428_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_731327-MLA86300457520_062025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_828402-MLA86300467382_062025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 22500000,
+      "position": 12000,
+      "downPayment": null,
+      "id": "generated-1754185417657-11",
+      "brand": "Chevrolet",
+      "model": "Cruze",
+      "year": 2017,
       "color": "Blanco",
       "currency": "ARS",
-      "description": "Fiat Toro Freedom 1.8 4x2 AT6\nMod. 2022\n35.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\n\nGestoría propia\nRecibimos Permutas\nTransferimos las Permutas en el Momento\n\nESPECIFICACIONES\n\nPrestaciones y Consumos Homologados\n\nVel. Máxima: 175km/h\nAceleración 0-100km/h: 11s\nConsumo extraurbano: 7L/100km\nConsumo urbano: 11,5L/100km\nConsumo promedio: 9,25L/100km\n\nDimensiones, peso y capacidades\n\nLongitud: 4,95m\nAncho: 1,85m\nAltura: 1,74m\nPeso: 1.688kg\nTanque de combustible: 60L\nVolumen de carga: 937L\nNúmero de plazas: 5\n\nConjunto Mecánico\n\nMotor: E-TorQ EVO 1.8L 4cil nafta\nPotencia: 130cv\nDistribución: Cadena\nCaja de cambios: Automática de 6 marchas C/levas al volante\nFrenos: Discos ventilados delanteros y tambores traseros \nNeumáticos: 215/65R16\n\nSeguridad y Conducción\n\n7 Airbags\nAnclajes isofix\nAsistente de arranque en pendiente\nCámara de retroceso\nCierre automático en rodaje\nControl antivuelco\nControl de crucero\nControl de estabilidad\nControl de presión de neumáticos\nControl de tracción\nControl de transferencia de torque\nDirección asistida eléctricamente\nFaros antiniebla delanteros\nFaros full LED\nFrenos ABS + EBD\nLuces altas automáticas\nNavegador GPS\nOrdenador de a bordo\nSensores de estacionamiento traseros\nSensor de lluvia y crepuscular\nTablero digital de 7”\nTuercas antirrobo\nVolante multifunción regulable en altura y profundidad\n\nElementos de Confort\n\nApertura de baúl eléctrica\nApoyabrazos delantero y trasero\nApple CarPlay y Android Auto inalámbricos\nCargador inalámbrico de teléfono\nClimatizador automático Bi-zona\nCristales eléctricos\nEspejos eléctricos\nPantalla táctil bluetooth de 8,4”\nTapizado de cuero\nVolante de cuero",
-      "categoryId": "pick-up",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 35000,
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 75000,
       "transmission": "Automática",
       "fuel": "Nafta",
       "doors": 4,
@@ -874,16 +1242,16 @@
       "favorite": false,
       "lastFeaturedAt": null,
       "lastFavoriteAt": null,
-      "mlId": "MLA1509934477",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-1509934477-fiat-toro-18-170-e-torq-evo-freedom-at6-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Fiat Toro 1.8 170 E-torq Evo Freedom At6",
+      "mlId": "MLA1506822991",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-1506822991-chevrolet-cruze-14-ltz-at-sedan-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Chevrolet Cruze 1.4 Ltz At Sedan",
       "mlCleanPrice": null,
       "mlLocation": null,
       "mlCondition": null,
       "mlListId": null,
-      "mlBodyType": "Pick-Up",
-      "mlEngine": "1.8",
+      "mlBodyType": null,
+      "mlEngine": null,
       "mlPower": null,
       "mlGears": null,
       "mlDimensions": null,
@@ -907,119 +1275,80 @@
       "mlCd": null,
       "mlLeatherSeats": null,
       "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-6",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-6",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
+      "mlImagesHash": "hash-1754185417657-11",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-11",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
       "Category": {
-        "id": "pick-up",
-        "name": "pick-up"
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
       },
       "images": [
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_813796-MLA87513092182_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_864484-MLA86360817898_062025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_828634-MLA87844120343_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_645980-MLA86360857632_062025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_678422-MLA87513141494_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_860374-MLA86679330261_062025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_605428-MLA87844120319_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_786303-MLA86360817896_062025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_849626-MLA87513052752_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_941523-MLA86679419237_062025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_665288-MLA87513230730_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_891704-MLA86360867162_062025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_722104-MLA87513479772_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_830403-MLA86679646805_062025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_867979-MLA87844120427_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_722433-MLA86360333470_062025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_626097-MLA87513230754_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_865032-MLA86679646825_062025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_785102-MLA87844947427_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_683177-MLA87513230770_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_747718-MLA87513082538_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_891626-MLA87513032972_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_745009-MLA87513092412_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_800457-MLA87844120561_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_630780-MLA87843883151_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_876345-MLA87845136751_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_781039-MLA87513479970_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_845742-MLA87513102514_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_621409-MLA87844947719_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_981234-MLA87845136867_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_903103-MLA87513102588_072025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_684313-MLA87513092592_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_778666-MLA86360867226_062025-F.webp"
         }
       ]
     },
     {
-      "price": 13900000,
-      "position": 8000,
+      "price": 16500,
+      "position": 13000,
       "downPayment": null,
-      "id": "generated-1754483832462-7",
-      "brand": "Renault",
-      "model": "Kwid",
-      "year": 2018,
-      "color": "Naranja",
-      "currency": "ARS",
-      "description": "Renault Kwid Iconic 1.0\nMod. 2018\n72.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\n4 neumáticos 0km\n\nGestoria propia\nRecibimos permutas\nTransferimos las permutas en el momento\n\nESPECIFICACIONES\n\nConsumos Homologados\n\nConsumo extraurbano: 6,2L/100km\nConsumo urbano: 7,2L/100km\nConsumo promedio: 6,7L/100km\n\nDimensiones, peso y capacidades\n\nLongitud: 3,68m\nAncho: 1,59m\nAltura: 1,47m\nTanque de combustible: 41L\nCapacidad baul: 290L\n\nConjunto Mecánico\n\nMotor: 1.0 8v 3cil nafta\nPotencia: 66cv\nTracción: Delantera\nCaja de cambios: Manual de 5ta\nFrenos: Discos ventilados delanteros y tambores traseros\nNeumáticos: 165/70R14\n\nSeguridad y Conducción\n\n4 Airbags\nAlarma\nAnclajes ISOFIX\nApertura de baúl a distancia\nCámara de retroceso\nCierre automático en rodaje\nCierre centralizado\nDirección asistida\nDistribución electrónica de frenado\nFaros antiniebla delanteros\nFrenos ABS\nIndicador de cambio de marcha\nOrdenador de a bordo\n\nElementos de Confort\n\nAire acondicionado\nCristales eléctricos\nEspejos eléctricos\nNavegador GPS\nPantalla táctil bluetooth de 7”\nVolante multifunción",
-      "categoryId": "hatchback",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 72000,
-      "transmission": "Manual",
+      "id": "generated-1754185417657-12",
+      "brand": "Audi",
+      "model": "A1",
+      "year": 2014,
+      "color": "Gris",
+      "currency": "USD",
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 92000,
+      "transmission": "Automática",
       "fuel": "Nafta",
-      "doors": 5,
+      "doors": 3,
       "active": true,
       "featured": false,
       "favorite": false,
       "lastFeaturedAt": null,
       "lastFavoriteAt": null,
-      "mlId": "MLA1507654783",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-1507654783-renault-kwid-10-sce-66cv-iconic-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Renault Kwid 1.0 Sce 66cv Iconic",
+      "mlId": "MLA2071086328",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2071086328-audi-a3-14-ambition-tfsi-122cv-stronic-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Audi A1 1.4 Ambition Tfsi 122cv Stronic",
       "mlCleanPrice": null,
       "mlLocation": null,
       "mlCondition": null,
       "mlListId": null,
-      "mlBodyType": "Hatchback",
-      "mlEngine": "1.0",
+      "mlBodyType": null,
+      "mlEngine": null,
       "mlPower": null,
       "mlGears": null,
       "mlDimensions": null,
@@ -1043,225 +1372,62 @@
       "mlCd": null,
       "mlLeatherSeats": null,
       "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-7",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-7",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
+      "mlImagesHash": "hash-1754185417657-12",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-12",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
       "Category": {
-        "id": "hatchback",
-        "name": "hatchback"
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
       },
       "images": [
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_617818-MLA87007648569_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_876928-MLA84291268143_052025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_607396-MLA86685100828_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_978713-MLA84291248729_052025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_973551-MLA86685268062_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_643076-MLA84291151047_052025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_873071-MLA87007638459_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_842072-MLA83995572664_052025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_795572-MLA87007746659_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_758561-MLA84291051855_052025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_633875-MLA87007490491_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_728515-MLA83995572668_052025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_985444-MLA86684894600_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_916839-MLA84291307621_052025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_646319-MLA87007746691_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_866869-MLA84291248835_052025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_847361-MLA87007746685_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_996839-MLA84291239075_052025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_634330-MLA87007500349_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_730520-MLA86685268120_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_911201-MLA87007648637_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_613776-MLA86685485106_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_629142-MLA87007520355_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_893601-MLA87007500375_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_851335-MLA87007490533_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_767593-MLA87007520385_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_917403-MLA86685268158_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_943497-MLA87007500421_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_774468-MLA86685485132_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_893200-MLA87007638583_062025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_688648-MLA87007608943_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_987784-MLA84291268253_052025-F.webp"
         }
       ]
     },
     {
-      "price": 13900000,
-      "position": 9000,
+      "price": 14500000,
+      "position": 14000,
       "downPayment": null,
-      "id": "generated-1754483832462-8",
+      "id": "generated-1754185417657-13",
       "brand": "Ford",
-      "model": "Ka+",
+      "model": "Fiesta",
       "year": 2017,
-      "color": "Plateado",
-      "currency": "ARS",
-      "description": "Ford Ka+ SE 1.5 Sigma 4cil\nMod. 2017\n91.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\nNeumáticos nuevos\n\nESPECIFICACIONES\n\nPrestaciones y Consumos Homologados\n\nVel. Máxima: 180km/h\nAceleración 0-100km/h: 11,4s\nConsumo extraurbano: 4L/100km\nConsumo urbano: 6L/100km\nConsumo promedio: 5L/100km\n\nDimensiones, peso y capacidades\n\nLongitud: 4,25m\nAncho: 1,70m\nAltura: 1,53m\nCapacidad de baúl: 445L\nTanque de combustible: 47L\nNúmero de plazas: 5\n\nConjunto Mecánico\n\nMotor: 1.5 sigma 4cil 16v nafta\nPotencia: 105cv\nCaja de cambios: Manual de 5 marchas\nFrenos: Discos delanteros y tambores traseros \nNeumáticos: 175/65R14\nRueda de auxilio homogénea\n\nSeguridad y Conducción\n\nAirbags frontales\nAnclajes ISOFIX\nAsistente de frenado de emergencia (EBA)\nCierre automático en rodaje\nDirección asistida eléctrica\nDistribución electrónica de frenado (EBD)\nFrenos ABS\nLuces diurnas\nVolante multifunción regulable en altura\n\nElementos de Confort\n\nAire acondicionado\nApertura remota de baúl\nAsiento trasero rebatible\nCierre centralizado\nComandos al volante\nConexiones AUX y USB\nCristales eléctricos One Touch\nPantalla bluetooth de 8”\nSistema de conectividad Sync con control por voz",
-      "categoryId": "sedán",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 91000,
-      "transmission": "Manual",
-      "fuel": "Nafta",
-      "doors": 4,
-      "active": true,
-      "featured": false,
-      "favorite": false,
-      "lastFeaturedAt": null,
-      "lastFavoriteAt": null,
-      "mlId": "MLA2175379296",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-2175379296-ford-ka-15-se-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Ford Ka+ 1.5 Se",
-      "mlCleanPrice": null,
-      "mlLocation": null,
-      "mlCondition": null,
-      "mlListId": null,
-      "mlBodyType": "Sedán",
-      "mlEngine": "1.5",
-      "mlPower": null,
-      "mlGears": null,
-      "mlDimensions": null,
-      "mlFuelCapacity": null,
-      "mlValvesPerCylinder": null,
-      "mlSeatCapacity": null,
-      "mlTractionControl": null,
-      "mlAbsBrakes": null,
-      "mlAutoHeadlights": null,
-      "mlAirbags": null,
-      "mlStabilityControl": null,
-      "mlSingleOwner": null,
-      "mlAcceptsTrade": null,
-      "mlAirConditioning": null,
-      "mlBoardComputer": null,
-      "mlRainSensor": null,
-      "mlRemoteRadioControl": null,
-      "mlAssistedSteering": null,
-      "mlAlarm": null,
-      "mlAlloyWheels": null,
-      "mlCd": null,
-      "mlLeatherSeats": null,
-      "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-8",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-8",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
-      "Category": {
-        "id": "sedán",
-        "name": "sedán"
-      },
-      "images": [
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_677272-MLA87508341716_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_839149-MLA87507964632_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_898913-MLA87508341718_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_882293-MLA87507994272_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_709859-MLA87508252194_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_726584-MLA87839318639_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_836821-MLA87508342172_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_968443-MLA87508054150_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_875006-MLA87838854363_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_833913-MLA87508252692_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_945222-MLA87839319093_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_704947-MLA87839388385_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_757016-MLA87839774895_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_939995-MLA87508312528_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_907193-MLA87838854485_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_676090-MLA87839774921_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_709422-MLA87838854573_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_971109-MLA87839102143_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_886630-MLA87508054426_072025-OO.jpg"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_864406-MLA87508252984_072025-OO.jpg"
-        }
-      ]
-    },
-    {
-      "price": 12900000,
-      "position": 10000,
-      "downPayment": null,
-      "id": "generated-1754483832462-9",
-      "brand": "Renault",
-      "model": "Sandero",
-      "year": 2018,
       "color": "Rojo",
       "currency": "ARS",
-      "description": "Renault Sandero Authentique 1.6 8v\nMod. 2018\n77.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\nFinanciación: créditos prendarios hasta 48 cuotas fijas en pesos\nServices al día\nCubiertas nuevas\nRTO vigente\n\nGestoría propia\nRecibimos permutas\nTransferimos las permutas en el acto\n\nESPECIFICACIONES\n\nConsumos Homologados\n\nConsumo Extraurbano: 6,1L/100km\nConsumo Urbano: 9,9L/100km\nConsumo Promedio: 8L/100km\nManual indica Nafta Super (95 octanos)\n\nDimensiones, peso y capacidades\n\nLongitud: 4,02m\nAncho: 1,75m\nAltura: 1,53m\nTanque de Combustible: 50L\nVolumen Baúl: 320L\nNúmero de plazas: 5\n\nConjunto Mecánico\n\nMotor: K7M 1.6 8v naftero\nPotencia: 85cv\nTracción: Delantera\nCaja de Cambios: Manual de 5 marchas\nFrenos: Discos Ventilados Delanteros y Tambores Traseros\nNeumáticos: 195/65R15\n\nSeguridad y Conducción\n\nFrenos ABS y Airbags\nOrdenador de a bordo\nDirección asistida\nAire acondicionado\nStereo Bluetooth",
-      "categoryId": "hatchback",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 77000,
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 120000,
       "transmission": "Manual",
       "fuel": "Nafta",
       "doors": 5,
@@ -1270,16 +1436,16 @@
       "favorite": false,
       "lastFeaturedAt": null,
       "lastFavoriteAt": null,
-      "mlId": "MLA1509947427",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-1509947427-renault-sandero-16-authentique-90cv-nac-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Renault Sandero 1.6 Authentique 90cv Nac",
+      "mlId": "MLA1488922631",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-1488922631-ford-fiesta-kinetic-16-s-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Ford Fiesta Kinetic 1.6 S",
       "mlCleanPrice": null,
       "mlLocation": null,
       "mlCondition": null,
       "mlListId": null,
-      "mlBodyType": "Hatchback",
-      "mlEngine": "1.6",
+      "mlBodyType": null,
+      "mlEngine": null,
       "mlPower": null,
       "mlGears": null,
       "mlDimensions": null,
@@ -1303,101 +1469,213 @@
       "mlCd": null,
       "mlLeatherSeats": null,
       "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-9",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-9",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
+      "mlImagesHash": "hash-1754185417657-13",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-13",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
       "Category": {
-        "id": "hatchback",
-        "name": "hatchback"
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
       },
       "images": [
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_939993-MLA82812148692_032025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_856388-MLA83745241607_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_994836-MLA82812245746_032025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_865616-MLA83452917126_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_963925-MLA82812187020_032025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_697043-MLA83745173081_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_761247-MLA83100245379_032025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_871177-MLA83745173111_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_858030-MLA83100206269_032025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_817043-MLA83745394821_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_663716-MLA83100206299_032025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_652912-MLA83745375037_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_785161-MLA82812245786_032025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_697370-MLA83745173129_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_666954-MLA82812148714_032025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_844752-MLA83745375063_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_612814-MLA82812148716_032025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_880980-MLA83745173135_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_663547-MLA83100168127_032025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_950180-MLA82812245806_032025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_640238-MLA83100245445_032025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_812833-MLA83100206325_032025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_623026-MLA83100245447_032025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_869418-MLA83100206327_032025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_964896-MLA82812187064_032025-F.webp"
-        },
-        {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_927753-MLA82812245848_032025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_622433-MLA83745241727_042025-F.webp"
         }
       ]
     },
     {
-      "price": 21900000,
-      "position": 11000,
+      "price": 11000000,
+      "position": 15000,
       "downPayment": null,
-      "id": "generated-1754483832462-10",
-      "brand": "Toyota",
-      "model": "Hilux",
-      "year": 2011,
-      "color": "Gris",
+      "id": "generated-1754185417657-14",
+      "brand": "Renault",
+      "model": "Mégane",
+      "year": 2012,
+      "color": "Negro",
       "currency": "ARS",
-      "description": "Toyota Hilux DX Pack 4x2 2.5TD\nMod. 2011\n220.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\n4 neumáticos nuevos 0km\nÚnico dueño de 0km\n\nGestoria propia\n\nESPECIFICACIONES\n\nConsumos Homologados\n\nConsumo extraurbano: 7,2L/100km\nConsumo urbano: 10,1L/100km\nConsumo promedio: 8,65L/100km\n\nDimensiones, peso y capacidades\n\nLongitud: 5,26m\nAncho: 1,76m\nAltura: 1,86m\nTanque de combustible: 80L\nCapacidad de carga: 1.000kg\n\nConjunto Mecánico\n\nMotor: D-4D 2.5 turbo diesel\nPotencia: 102cv\nTracción: Trasera\nCaja de cambios: Manual de 5ta\nFrenos: Discos ventilados delanteros y tambores traseros \nNeumáticos: 255/70R16\n\nSeguridad y Conducción\n\nAirbags\nCámara de retroceso\nDirección asistida\nEnganche P/ tráiler \nFaros rompeniebla delanteros\nNavegador GPS\n\nElementos de Confort\n\nAire acondicionado\nLona marítima\nPantalla táctil bluetooth",
-      "categoryId": "pick-up",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 220000,
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 150000,
       "transmission": "Manual",
-      "fuel": "Diésel",
+      "fuel": "Nafta/GNC",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2158446438",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2158446438-renault-megane-iii-20-privilege-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Renault Mégane Iii 2.0 Privilege",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-14",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-14",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_605165-MLA87284894195_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_714172-MLA87285528477_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_840173-MLA87285796141_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_716011-MLA87284894025_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_861338-MLA87285796137_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_984781-MLA87285528479_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_807030-MLA87285439473_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_820048-MLA87285359643_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_783023-MLA87285449209_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_680040-MLA87285013091_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_851768-MLA87285013127_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_909932-MLA87285528551_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_652206-MLA87285935467_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_648714-MLA87284973301_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_965756-MLA87285013149_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_894496-MLA87285102157_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_860178-MLA87285935499_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_871058-MLA87285925503_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_791932-MLA87284904103_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_621907-MLA87285796223_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_845135-MLA87284904043_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_879245-MLA87285369617_072025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 17000000,
+      "position": 16000,
+      "downPayment": null,
+      "id": "generated-1754185417657-15",
+      "brand": "Renault",
+      "model": "Logan",
+      "year": 2021,
+      "color": "Blanco",
+      "currency": "ARS",
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA! Y TE SACAMOS TODAS LAS DUDAS!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 80000,
+      "transmission": "Manual",
+      "fuel": "Nafta",
       "doors": 4,
       "active": true,
       "featured": false,
       "favorite": false,
       "lastFeaturedAt": null,
       "lastFavoriteAt": null,
-      "mlId": "MLA1509947419",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-1509947419-toyota-hilux-pick-up-25-dx-pack-cab-doble-4x2-2009-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Toyota Hilux Pick-up 2.5 Dx Pack Cab Doble 4x2 (2009)",
+      "mlId": "MLA2062533926",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2062533926-renault-logan-16-16v-life-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Renault Logan 1.6 16v Life",
       "mlCleanPrice": null,
       "mlLocation": null,
       "mlCondition": null,
       "mlListId": null,
-      "mlBodyType": "Pick-Up",
-      "mlEngine": "2.5",
+      "mlBodyType": null,
+      "mlEngine": null,
       "mlPower": null,
       "mlGears": null,
       "mlDimensions": null,
@@ -1421,80 +1699,92 @@
       "mlCd": null,
       "mlLeatherSeats": null,
       "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-10",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-10",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
+      "mlImagesHash": "hash-1754185417657-15",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-15",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
       "Category": {
-        "id": "pick-up",
-        "name": "pick-up"
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
       },
       "images": [
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_848172-MLA87844952633_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_724995-MLA83745313162_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_929079-MLA87845957347_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_792442-MLA84038983037_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_932881-MLA87844952623_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_723198-MLA84039102517_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_879450-MLA87845977425_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_915178-MLA84039130863_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_804285-MLA87515088140_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_947359-MLA83745313166_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_803260-MLA87845997517_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_608469-MLA83745608464_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_983487-MLA87845957439_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_696150-MLA84039515327_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_743794-MLA87846116087_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_946360-MLA84039102559_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_702891-MLA87845141821_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_807077-MLA83745618174_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_914722-MLA87846175143_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_860877-MLA83745450996_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_961523-MLA87845141855_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_803568-MLA84039102581_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_704933-MLA87846155735_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_932399-MLA84039170351_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_817098-MLA87845957505_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_767449-MLA84039426219_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_942788-MLA87845928243_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_935165-MLA83745667224_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_894561-MLA87846175213_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_685735-MLA84039515373_042025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_730732-MLA87845938177_072025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_730260-MLA83745618218_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_793038-MLA83745667256_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_941870-MLA84039170381_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_936625-MLA83745313256_042025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_835207-MLA83745578570_042025-F.webp"
         }
       ]
     },
     {
-      "price": 19900000,
-      "position": 12000,
+      "price": 13000,
+      "position": 17000,
       "downPayment": null,
-      "id": "generated-1754483832462-11",
-      "brand": "Toyota",
-      "model": "Etios",
-      "year": 2019,
-      "color": "Gris",
-      "currency": "ARS",
-      "description": "Toyota Etios X 1.5 6M/T 5P\nMod. 2019\n36.000km\nUbicación: General Alvear - Mendoza\nD_Angel Motors\nHistorial de servicios oficiales completo (Toyota Yacopini San Rafael)\n\nESPECIFICACIONES\n\nPrestaciones y Consumos Homologados\n\nAceleración 0-100km/h: 10,5s\nConsumo extraurbano: 5,9L/100km\nConsumo urbano: 9L/100km\nConsumo promedio: 7,45L/100km\n\nDimensiones, peso y capacidades\n\nLongitud: 3,78m\nAncho: 1,70m\nAltura: 1,51m\nCapacidad de baúl: 270L\nTanque de combustible: 45L\nNúmero de plazas: 5\n\nConjunto Mecánico\n\nMotor: 1.5 4cil 16v nafta\nDistribución: cadena\nPotencia: 90cv\nCaja de cambios: Manual de 6 marchas\nFrenos: Discos ventilados delanteros y tambores traseros \nNeumáticos: 175/65R14\n\nSeguridad y Conducción\n\nAirbags\nAnclajes ISOFIX\nControl de tracción\nDirección asistida eléctrica\nFrenos ABS y EBD\nOrdenador de a bordo\nVolante multifunción regulable en altura\n\nElementos de Confort\n\nAire acondicionado\nCierre centralizado \nCristales eléctricos\nStereo bluetooth",
-      "categoryId": "hatchback",
-      "dealershipId": "dealership-dangel-motors",
-      "mileage": 36000,
+      "id": "generated-1754185417657-16",
+      "brand": "Volkswagen",
+      "model": "Fox",
+      "year": 2016,
+      "color": "Plateado",
+      "currency": "USD",
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 90000,
       "transmission": "Manual",
       "fuel": "Nafta",
       "doors": 5,
@@ -1503,16 +1793,16 @@
       "favorite": false,
       "lastFeaturedAt": null,
       "lastFavoriteAt": null,
-      "mlId": "MLA2121445730",
-      "mlUrl": "auto.mercadolibre.com.ar/MLA-2121445730-toyota-etios-15-x-6mt-my19-_JM",
-      "mlScrapedAt": "2025-08-06T12:37:12.462Z",
-      "mlTitle": "Toyota Etios 1.5 X 6mt My19",
+      "mlId": "MLA2208471440",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2208471440-volkswagen-fox-16-trendline-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Volkswagen Fox 1.6 Trendline",
       "mlCleanPrice": null,
       "mlLocation": null,
       "mlCondition": null,
       "mlListId": null,
-      "mlBodyType": "Hatchback",
-      "mlEngine": "1.5",
+      "mlBodyType": null,
+      "mlEngine": null,
       "mlPower": null,
       "mlGears": null,
       "mlDimensions": null,
@@ -1536,87 +1826,941 @@
       "mlCd": null,
       "mlLeatherSeats": null,
       "mlSku": null,
-      "mlImagesHash": "hash-1754483832462-11",
-      "mlImagesLastUpdated": "2025-08-06T12:37:12.462Z",
-      "catalogChecksum": "checksum-1754483832462-11",
-      "createdAt": "2025-08-06T12:37:12.462Z",
-      "updatedAt": "2025-08-06T12:37:12.462Z",
+      "mlImagesHash": "hash-1754185417657-16",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-16",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
       "Category": {
-        "id": "hatchback",
-        "name": "hatchback"
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
       },
       "images": [
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_634158-MLA86224064013_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_600992-MLA89059295537_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_901996-MLA86224083775_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_743968-MLA88705164456_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_891898-MLA86224203133_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_747815-MLA88705620714_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_699936-MLA86224995291_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_780410-MLA89059235777_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_986871-MLA86224064009_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_843148-MLA88705164506_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_758018-MLA85911615106_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_802654-MLA88705878544_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_810767-MLA86225045127_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_733701-MLA88705620828_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_738705-MLA86224975465_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_620919-MLA88705601102_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_970105-MLA85911625092_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_796930-MLA88705601106_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_930622-MLA86225064901_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_840926-MLA88706087530_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_859180-MLA86224787083_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_668057-MLA89059235947_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_705435-MLA86224975471_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_685338-MLA89059096819_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_819284-MLA86224995345_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_771780-MLA89059136357_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_987245-MLA85911615164_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_661794-MLA88705868566_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_715177-MLA86224985421_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_928489-MLA89059415081_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_716311-MLA85911496278_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_803359-MLA88705749682_072025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 38000,
+      "position": 18000,
+      "downPayment": null,
+      "id": "generated-1754185417657-17",
+      "brand": "Mercedes-benz",
+      "model": "Sprinter",
+      "year": 2016,
+      "color": "Blanco",
+      "currency": "USD",
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 34500,
+      "transmission": "Manual",
+      "fuel": "Diésel",
+      "doors": 2,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA1507797729",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-1507797729-mercedes-benz-sprinter-21-515-combi-4325-150cv-191-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Mercedes-benz Sprinter 2.1 515 Combi 4325 150cv 19+1",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-17",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-17",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_733026-MLA87055720167_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_903756-MLA86224886023_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_769062-MLA86733394760_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_929616-MLA85911407638_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_917007-MLA86732959910_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_758494-MLA85911496292_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_805042-MLA87055432559_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_694083-MLA86224073965_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_943463-MLA87055462537_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_902103-MLA86224054219_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_883555-MLA86733286038_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_819378-MLA86224975569_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_906992-MLA87055749889_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_865512-MLA86224787183_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_988415-MLA87055779655_072025-F.webp"
         },
         {
-          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_600711-MLA86224064155_062025-F.webp"
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_910390-MLA86733355476_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_955431-MLA86733296040_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_858397-MLA87055432639_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_976208-MLA87056115293_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_738803-MLA86732959962_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_816918-MLA86733355534_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_845625-MLA87055720319_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_700643-MLA86733325814_072025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 19500000,
+      "position": 19000,
+      "downPayment": null,
+      "id": "generated-1754185417657-18",
+      "brand": "Peugeot",
+      "model": "308",
+      "year": 2017,
+      "color": "Blanco",
+      "currency": "ARS",
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 72000,
+      "transmission": "Automática",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2113661346",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2113661346-peugeot-308-16-feline-thp-163cv-tiptronic-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Peugeot 308 1.6 Feline Thp 163cv Tiptronic",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-18",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-18",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_977460-MLA86039320187_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_833299-MLA86039457231_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_691318-MLA86039191333_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_707721-MLA86039101895_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_754964-MLA85727838470_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_733185-MLA85727838472_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_735655-MLA85727552780_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_913190-MLA85727552790_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_697473-MLA86039043633_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_684098-MLA86039003741_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_914531-MLA85727719904_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_633802-MLA86038974287_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_918095-MLA86039191363_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_963647-MLA85727838498_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_797765-MLA86039171341_062025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_868732-MLA86039171353_062025-OO.jpg"
+        }
+      ]
+    },
+    {
+      "price": 29500000,
+      "position": 20000,
+      "downPayment": null,
+      "id": "generated-1754185417657-19",
+      "brand": "Peugeot",
+      "model": "208",
+      "year": 2025,
+      "color": "Blanco",
+      "currency": "ARS",
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 0,
+      "transmission": "Automática",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2042857620",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2042857620-peugeot-208-16-allure-at-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Peugeot 208 1.6 Allure At",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-19",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-19",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_824104-MLA83499675405_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_831529-MLA83208259014_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_998267-MLA83499577829_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_763197-MLA83208464794_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_835929-MLA83208425250_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_782803-MLA83208464822_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_995399-MLA83208160896_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_624476-MLA83208239408_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_993519-MLA83208425298_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_714399-MLA83208464884_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_721328-MLA83499568073_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_879542-MLA83208160944_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_658337-MLA83499577979_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_979970-MLA83208239496_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_840828-MLA83208445266_042025-OO.jpg"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_683369-MLA83208160996_042025-OO.jpg"
+        }
+      ]
+    },
+    {
+      "price": 23000000,
+      "position": 21000,
+      "downPayment": null,
+      "id": "generated-1754185417657-20",
+      "brand": "Fiat",
+      "model": "Ducato",
+      "year": 2010,
+      "color": "Gris",
+      "currency": "ARS",
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA! Y TE SACAMOS TODAS LAS DUDAS!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 153000,
+      "transmission": "Manual",
+      "fuel": "Diésel",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2206250938",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2206250938-fiat-ducato-28-furgon-maxicargo-te-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Fiat Ducato 2.8 Furgon Maxicargo T.e.",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-20",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-20",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_837360-MLA83305086939_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_631353-MLA83305116653_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_769988-MLA83305106801_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_753836-MLA83304860713_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_727806-MLA83305086987_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_908709-MLA83015435722_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_726533-MLA83304860751_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_737258-MLA83304860755_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_786905-MLA83305057279_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_643300-MLA83304860801_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_678426-MLA83015435822_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_861561-MLA83015426118_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_678219-MLA83304860831_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_688798-MLA83304713027_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_698317-MLA83304880755_032025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_619039-MLA83304713043_032025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 12500,
+      "position": 22000,
+      "downPayment": null,
+      "id": "generated-1754185417657-21",
+      "brand": "Citroën",
+      "model": "C3",
+      "year": 2017,
+      "color": "Negro",
+      "currency": "USD",
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 90000,
+      "transmission": "Manual",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2210846452",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2210846452-citron-c3-16-vti-115-feel-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Citroën C3 1.6 Vti 115 Feel",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-21",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-21",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_973237-MLA88788138658_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_996124-MLA88788228232_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_842689-MLA89143591711_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_778997-MLA89143581679_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_672744-MLA89143492173_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_791404-MLA88788218218_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_669196-MLA89143571843_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_894396-MLA88788366420_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_798631-MLA88788218266_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_803678-MLA88788415960_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_632245-MLA89143849381_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_947323-MLA88788405970_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_633858-MLA88788475746_082025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_791989-MLA88788138836_082025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 13000,
+      "position": 23000,
+      "downPayment": null,
+      "id": "generated-1754185417657-22",
+      "brand": "Ford",
+      "model": "Fiesta",
+      "year": 2016,
+      "color": "Blanco",
+      "currency": "USD",
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 110000,
+      "transmission": "Manual",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2191198602",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2191198602-ford-fiesta-kinetic-16-se-120cv-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Ford Fiesta Kinetic 1.6 Se 120cv",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-22",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-22",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_873881-MLA88312114429_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_713722-MLA88312517683_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_603079-MLA87973665484_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_934427-MLA87973665532_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_634764-MLA88312537455_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_834995-MLA88312203373_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_824946-MLA87973253692_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_888028-MLA88312487905_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_993959-MLA88312557251_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_919719-MLA87973233990_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_833146-MLA88312242291_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_996511-MLA88312487977_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_932943-MLA88312242317_072025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 18000000,
+      "position": 24000,
+      "downPayment": null,
+      "id": "generated-1754185417657-23",
+      "brand": "Chevrolet",
+      "model": "Tracker",
+      "year": 2016,
+      "color": "Negro",
+      "currency": "ARS",
+      "description": "",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 130000,
+      "transmission": "Manual",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2070959338",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2070959338-chevrolet-tracker-18-ltz-fwd-mt-140cv-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Chevrolet Tracker 1.8 Ltz Fwd Mt 140cv",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-23",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-23",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_975853-MLA84291271819_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_936740-MLA84291252579_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_859896-MLA83996274742_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_642643-MLA83996235126_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_898260-MLA83996274768_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_767706-MLA84291527503_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_670260-MLA84291281929_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_614979-MLA83995989578_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_645666-MLA83995989590_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_619730-MLA84291527571_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_803438-MLA84291252657_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_964959-MLA83996146034_052025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_759889-MLA84291311573_052025-F.webp"
+        }
+      ]
+    },
+    {
+      "price": 9500000,
+      "position": 25000,
+      "downPayment": null,
+      "id": "generated-1754185417657-24",
+      "brand": "Ford",
+      "model": "Ecosport",
+      "year": 2010,
+      "color": "Negro",
+      "currency": "ARS",
+      "description": "¡MARTINO MOTORS AGENCIA DE AUTOS!ESTAMOS UBICADOS: 25 DE MAYO 161 BERNAL CENTRODEJANOS TU NUMERO EN UN MSJ NOS COMUNICAMOS DE FORMA INMEDIATA!TE FINANCIAMOS EL 50% O EL 60% ¡TOMAMOS USADOS!¡ENTREGA INMEDIATA DE LA UNIDAD! ¡NO DUDES EN CONSULTARNOS!",
+      "categoryId": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+      "dealershipId": "dealership-martino_motors",
+      "mileage": 218000,
+      "transmission": "Manual",
+      "fuel": "Nafta",
+      "doors": 5,
+      "active": true,
+      "featured": false,
+      "favorite": false,
+      "lastFeaturedAt": null,
+      "lastFavoriteAt": null,
+      "mlId": "MLA2158355564",
+      "mlUrl": "auto.mercadolibre.com.ar/MLA-2158355564-ford-ecosport-16-my10-xls-plus-4x2-_JM",
+      "mlScrapedAt": "2025-08-03T01:43:37.657Z",
+      "mlTitle": "Ford Ecosport 1.6 My10 Xls Plus 4x2",
+      "mlCleanPrice": null,
+      "mlLocation": null,
+      "mlCondition": null,
+      "mlListId": null,
+      "mlBodyType": null,
+      "mlEngine": null,
+      "mlPower": null,
+      "mlGears": null,
+      "mlDimensions": null,
+      "mlFuelCapacity": null,
+      "mlValvesPerCylinder": null,
+      "mlSeatCapacity": null,
+      "mlTractionControl": null,
+      "mlAbsBrakes": null,
+      "mlAutoHeadlights": null,
+      "mlAirbags": null,
+      "mlStabilityControl": null,
+      "mlSingleOwner": null,
+      "mlAcceptsTrade": null,
+      "mlAirConditioning": null,
+      "mlBoardComputer": null,
+      "mlRainSensor": null,
+      "mlRemoteRadioControl": null,
+      "mlAssistedSteering": null,
+      "mlAlarm": null,
+      "mlAlloyWheels": null,
+      "mlCd": null,
+      "mlLeatherSeats": null,
+      "mlSku": null,
+      "mlImagesHash": "hash-1754185417657-24",
+      "mlImagesLastUpdated": "2025-08-03T01:43:37.657Z",
+      "catalogChecksum": "checksum-1754185417657-24",
+      "createdAt": "2025-08-03T01:43:37.657Z",
+      "updatedAt": "2025-08-03T01:43:37.657Z",
+      "Category": {
+        "id": "f40b217f-239d-47a7-b7f4-b630e283d30e",
+        "name": "autos"
+      },
+      "images": [
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_873182-MLA86961405456_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_661098-MLA87285936921_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_834426-MLA87285529973_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_853739-MLA86961425442_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_922212-MLA86960523240_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_632060-MLA87285530011_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_846999-MLA86960523272_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_736237-MLA86961494750_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_701731-MLA87285926853_072025-F.webp"
+        },
+        {
+          "thumbnailUrl": "https://http2.mlstatic.com/D_NQ_NP_2X_667152-MLA87285014497_072025-F.webp"
         }
       ]
     }

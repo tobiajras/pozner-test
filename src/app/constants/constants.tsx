@@ -5,24 +5,24 @@ export const company = {
   favicon: true,
   price: true,
   objectCover: '50%',
-  id: 'dangelmotors',
-  name: 'D_ANGEL MOTORS',
-  adress: 'Av. Libertador Norte 102',
-  city: 'Gral Alvear - Mendoza',
-  email: 'dangelmotors@gmail.com',
-  instagram: 'dangelmotors',
-  facebook: 'https://www.facebook.com/profile.php?id=61577643361938',
-  whatsapp: ['2625407443'],
-  googlemapsLink: 'https://maps.app.goo.gl/LxHbfyHj5GSZcxZr6',
+  id: 'martinomotors',
+  name: 'Martino Motors',
+  adress: 'Av. Caseros 1750',
+  city: 'Quilmes',
+  email: 'martinoalann@gmail.com',
+  instagram: 'motors.martino',
+  facebook: 'https://www.facebook.com/profile.php?id=100064040315534',
+  whatsapp: ['1168213551', '1171703232'],
+  googlemapsLink: 'https://maps.app.goo.gl/Tjbjq1ByvKoYnjuK6',
   googlemaps:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.193980153449!2d-67.69220622337791!3d-34.97680557729904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967817710cd010a9%3A0x4d914a85bf8f3f84!2sD_Angel%20Motors!5e0!3m2!1sen!2sar!4v1754449617835!5m2!1sen!2sar',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.7454354477345!2d-58.28715032372563!3d-34.71160016320449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32d001d36b737%3A0xac8dd8b48763045f!2sMartino%20motors!5e0!3m2!1sen!2sar!4v1754493598319!5m2!1sen!2sar',
   openDays: [
-    { day: 'Lunes', hours: ['9 a 13 y 16 a 20hs'] },
-    { day: 'Martes', hours: ['9 a 13 y 16 a 20h'] },
-    { day: 'Miércoles', hours: ['9 a 13 y 16 a 20h'] },
-    { day: 'Jueves', hours: ['9 a 13 y 16 a 20h'] },
-    { day: 'Viernes', hours: ['9 a 13 y 16 a 20h'] },
-    { day: 'Sábado', hours: ['9 a 13hs'] },
+    { day: 'Lunes', hours: ['09:00 a 17:00hs'] },
+    { day: 'Martes', hours: ['09:00 a 17:00hs'] },
+    { day: 'Miércoles', hours: ['09:00 a 17:00hs'] },
+    { day: 'Jueves', hours: ['09:00 a 17:00hs'] },
+    { day: 'Viernes', hours: ['09:00 a 17:00hs'] },
+    { day: 'Sábado', hours: ['09:00 a 13:00hs'] },
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
@@ -33,8 +33,8 @@ export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
 export const TENANT = 'accotto-automotores';
 
 export const metadataCompany = {
-  metadataBase: 'https://dangelmotors.vercel.app/',
-  title: 'D_ANGEL MOTORS - Compra y Venta de Autos',
+  metadataBase: 'https://martinomotors.vercel.app/',
+  title: 'Martino Motors - Compra y Venta de Autos',
   description:
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
