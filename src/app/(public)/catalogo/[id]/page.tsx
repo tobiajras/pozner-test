@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ArrowIcon from '@/components/icons/ArrowIcon';
 import WhatsappIcon from '@/components/icons/WhatsappIcon';
-import { company } from '@/app/constants/constants';
+import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
 import ImageGalleryModal from '@/components/ImageGalleryModal';
 import useEmblaCarousel from 'embla-carousel-react';
 import DropDownIcon from '@/components/icons/DropDownIcon';
@@ -14,13 +14,23 @@ import CarrouselRelated from '@/components/CarrouselRelated';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import data from '@/data/data.json';
 import ShareMenu from '@/components/ShareMenu';
+
+interface Imagen {
+  thumbnailUrl: string;
+  imageUrl: string;
+}
+
+interface Categoria {
+  id: string;
+  name: string;
+}
 
 interface ApiCar {
   id: string;
   brand: string;
   model: string;
+  mlTitle: string;
   year: number;
   color: string;
   price: {
@@ -40,17 +50,8 @@ interface ApiCar {
   active: boolean;
   createdAt: string;
   updatedAt: string;
-  Category: {
-    id: string;
-    name: string;
-    createdAt: string;
-    updatedAt: string;
-  };
-  Images: {
-    thumbnailUrl: string;
-    imageUrl: string;
-    order: number;
-  }[];
+  Category: Categoria;
+  Images: Imagen[];
 }
 
 export default function AutoDetailPage() {
@@ -66,7 +67,7 @@ export default function AutoDetailPage() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [modalStartIndex, setModalStartIndex] = useState(0);
-  const [orderedImages, setOrderedImages] = useState<ApiCar['Images']>([]);
+  const [orderedImages, setOrderedImages] = useState<Imagen[]>([]);
 
   const scrollPrev = useCallback(() => {
     if (embla) {
@@ -105,19 +106,27 @@ export default function AutoDetailPage() {
   }, [embla]);
 
   useEffect(() => {
-    const fetchCar = () => {
+    const fetchCar = async () => {
       try {
-        const carData = data.cars.find((car) => car.id === id);
+        const response = await fetch(
+          `${API_BASE_URL}/api/cars/${id}?tenant=${TENANT}`
+        );
 
-        if (!carData) {
-          throw new Error('Vehículo no encontrado');
+        if (!response.ok) {
+          if (response.status === 404) {
+            throw new Error('Vehículo no encontrado');
+          }
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
 
-        // Transformar los datos al formato esperado
+        const carData = await response.json();
+
+        // Transformar los datos al formato esperado por el diseño original
         const auto = {
           id: carData.id,
           brand: carData.brand,
           model: carData.mlTitle,
+          mlTitle: carData.mlTitle,
           year: carData.year,
           color: carData.color,
           price: {
@@ -145,9 +154,9 @@ export default function AutoDetailPage() {
             createdAt: carData.createdAt,
             updatedAt: carData.updatedAt,
           },
-          Images: carData.images.map((img, index) => ({
+          Images: carData.images.map((img: Imagen, index: number) => ({
             thumbnailUrl: img.thumbnailUrl,
-            imageUrl: img.thumbnailUrl,
+            imageUrl: img.imageUrl,
             order: index,
           })),
         };
@@ -165,7 +174,9 @@ export default function AutoDetailPage() {
       }
     };
 
-    fetchCar();
+    if (id) {
+      fetchCar();
+    }
   }, [id]);
 
   const renderContent = () => {
@@ -313,7 +324,7 @@ export default function AutoDetailPage() {
                             setModalStartIndex(index);
                             setShowModal(true);
                           }}
-                          className='relative w-full h-full overflow-hidden group bg-color-bg-secondary cursor-zoom-in'
+                          className='relative w-full h-full overflow-hidden group bg-color-bg-secondary cursor-zoom-in border border-neutral-600'
                         >
                           <motion.div
                             initial={{ opacity: 0 }}
@@ -374,7 +385,7 @@ export default function AutoDetailPage() {
                             setShowModal(true);
                           }
                         }}
-                        className={`relative aspect-[4/3] rounded-lg overflow-hidden outline-none transition-all bg-color-bg-secondary cursor-zoom-in group ${
+                        className={`relative aspect-[4/3] rounded-lg overflow-hidden outline-none transition-all bg-color-bg-secondary cursor-zoom-in group border border-neutral-600 ${
                           selectedIndex === actualIndex ? '' : ''
                         }`}
                       >
@@ -400,7 +411,7 @@ export default function AutoDetailPage() {
                         </motion.div>
 
                         {/* Overlay de sombra al hacer hover */}
-                        <div className='absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+                        <div className='absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
 
                         {/* Overlay con contador en la última miniatura si hay más imágenes */}
                         {shouldShowBlur && (
@@ -508,14 +519,16 @@ export default function AutoDetailPage() {
                         {car.year}
                       </p>
                     </div>
-                    <div>
-                      <p className='text-color-text-light text-sm font-medium'>
-                        Transmisión
-                      </p>
-                      <p className='text-color-title-light font-medium'>
-                        {car.transmission}
-                      </p>
-                    </div>
+                    {car.transmission && (
+                      <div>
+                        <p className='text-color-text-light text-sm font-medium'>
+                          Transmisión
+                        </p>
+                        <p className='text-color-title-light font-medium'>
+                          {car.transmission}
+                        </p>
+                      </div>
+                    )}
                     <div>
                       <p className='text-color-text-light text-sm font-medium'>
                         Combustible

@@ -5,36 +5,26 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { company } from '@/app/constants/constants';
-import data from '@/data/data.json';
+import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
 
 interface Imagen {
-  id: string;
-  carId: string;
-  imageUrl: string;
   thumbnailUrl: string;
-  order: number;
-  createdAt: string;
-  updatedAt: string;
 }
 
 interface Categoria {
   id: string;
   name: string;
-  createdAt: string;
-  updatedAt: string;
 }
 
 interface Auto {
   id: string;
   brand: string;
   model: string;
+  mlTitle: string;
   year: number;
   color: string;
-  price: {
-    valor: number;
-    moneda: string;
-  };
+  price: number;
+  currency: 'USD' | 'ARS';
   description: string;
   position: number;
   featured: boolean;
@@ -47,7 +37,7 @@ interface Auto {
   doors: number;
   createdAt: string;
   updatedAt: string;
-  Images: Imagen[];
+  images: Imagen[];
   Category: Categoria;
 }
 
@@ -65,90 +55,35 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const obtenerRelacionados = () => {
+    const obtenerRelacionados = async () => {
       setCargando(true);
       try {
-        // Encontrar el auto actual y su categoría
-        const autoActual = data.cars.find((auto) => auto.id === currentCarId);
-        if (!autoActual) {
-          throw new Error('Auto no encontrado');
+        const response = await fetch(
+          `${API_BASE_URL}/api/cars/${currentCarId}/recommended?tenant=${TENANT}`
+        );
+
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
 
-        // Función para mezclar array aleatoriamente (Fisher-Yates shuffle)
-        const shuffleArray = <T,>(array: T[]): T[] => {
-          const shuffled = [...array];
-          for (let i = shuffled.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-          }
-          return shuffled;
-        };
-
-        // Obtener todos los autos excepto el actual
-        const autosDisponibles = data.cars.filter(
-          (auto) => auto.id !== currentCarId
-        );
-
-        // Mezclar aleatoriamente y tomar máximo 10
-        const autosAleatorios = shuffleArray(autosDisponibles).slice(0, 10);
-
-        const autosRelacionados = autosAleatorios.map((auto) => ({
-          id: auto.id,
-          brand: auto.brand,
-          model: auto.mlTitle,
-          year: auto.year,
-          color: auto.color,
-          price: {
-            valor: auto.price,
-            moneda: auto.currency,
-          },
-          description: auto.description,
-          position: auto.position,
-          featured: auto.featured,
-          favorite: auto.favorite,
-          active: auto.active,
-          categoryId: auto.categoryId,
-          mileage: auto.mileage,
-          transmission: auto.transmission,
-          fuel: auto.fuel,
-          doors: auto.doors,
-          createdAt: auto.createdAt,
-          updatedAt: auto.updatedAt,
-          Images: auto.images.map((img, index) => ({
-            id: `${auto.id}-img-${index}`,
-            carId: auto.id,
-            imageUrl: img.thumbnailUrl,
-            thumbnailUrl: img.thumbnailUrl,
-            order: index,
-            createdAt: auto.createdAt,
-            updatedAt: auto.updatedAt,
-          })),
-          Category: {
-            id: auto.Category.id,
-            name: auto.Category.name,
-            createdAt: auto.createdAt,
-            updatedAt: auto.updatedAt,
-          },
-        }));
-
-        setRelatedCars(autosRelacionados);
+        const data = await response.json();
+        setRelatedCars(data || []);
       } catch (err) {
-        console.error(
-          'Error al cargar vehículos relacionados del catálogo:',
-          err
-        );
+        console.error('Error al obtener vehículos relacionados:', err);
         setError('No se pudieron cargar los vehículos relacionados');
       } finally {
         setCargando(false);
       }
     };
 
-    obtenerRelacionados();
+    if (currentCarId) {
+      obtenerRelacionados();
+    }
   }, [currentCarId]);
 
   if (cargando) {
     return (
-      <section className='flex justify-center w-full bg-color-bg-primary'>
+      <section className='flex justify-center w-full'>
         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
@@ -166,7 +101,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
 
   if (error) {
     return (
-      <section className='flex justify-center w-full bg-color-bg-primary'>
+      <section className='flex justify-center w-full'>
         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
@@ -182,7 +117,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
 
   if (relatedCars.length === 0) {
     return (
-      <section className='flex justify-center w-full bg-color-bg-primary'>
+      <section className='flex justify-center w-full'>
         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
@@ -199,7 +134,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
   }
 
   return (
-    <section className='flex justify-center w-full bg-color-bg-primary'>
+    <section className='flex justify-center w-full'>
       <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
         <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
           <div className='h-10 w-1 bg-color-primary mr-4'></div>
@@ -232,7 +167,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                   )}
 
                   {/* Contenedor de la imagen */}
-                  <div className='relative overflow-hidden aspect-[4/3] rounded-xl group'>
+                  <div className='relative overflow-hidden aspect-[4/3] rounded-xl group border border-neutral-600'>
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -248,8 +183,8 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                           objectPosition: `center ${company.objectCover}`,
                         }}
                         src={
-                          auto.Images.sort((a, b) => a.order - b.order)[0]
-                            ?.thumbnailUrl || '/assets/placeholder.webp'
+                          auto.images[0]?.thumbnailUrl ||
+                          '/assets/placeholder.webp'
                         }
                         alt={`${auto.model}`}
                       />
@@ -301,18 +236,18 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                           company.dark
                             ? 'group-hover:text-color-primary'
                             : 'group-hover:text-color-primary'
-                        } text-color-title-light text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
+                        } text-color-title-light text-lg md:text-xl font-semibold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                       >
-                        {auto.model}
+                        {auto.mlTitle}
                       </h3>
 
                       <div
                         className={`${
                           company.price ? '' : 'hidden'
-                        } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
+                        } text-color-primary text-lg md:text-xl font-semibold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                       >
-                        {auto.price.moneda === 'ARS' ? '$' : 'US$'}
-                        {auto.price.valor.toLocaleString('es-ES')}
+                        {auto.currency === 'ARS' ? '$' : 'US$'}
+                        {auto.price.toLocaleString('es-ES')}
                       </div>
 
                       {/* Diseño minimalista con separadores tipo | */}

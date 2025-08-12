@@ -29,8 +29,8 @@ export const company = {
     'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
 };
 
-export const API_BASE_URL = 'https://dealership.agenciagrvity.com';
-export const TENANT = 'accotto-automotores';
+export const API_BASE_URL = 'https://only-motors.agenciagrvity.com';
+export const TENANT = 'pozner';
 
 export const metadataCompany = {
   metadataBase: 'https://poznerautomoviles.vercel.app/',

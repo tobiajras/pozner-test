@@ -5,37 +5,27 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { company } from '@/app/constants/constants';
-import data from '@/data/data.json';
-import CarStrokeIcon from '@/components/icons/CarStrokeIcon';
+import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
+import CarStrokeIcon from './icons/CarStrokeIcon';
 
 interface Imagen {
-  id: string;
-  carId: string;
-  imageUrl: string;
   thumbnailUrl: string;
-  order: number;
-  createdAt: string;
-  updatedAt: string;
 }
 
 interface Categoria {
   id: string;
   name: string;
-  createdAt: string;
-  updatedAt: string;
 }
 
 interface Auto {
   id: string;
   brand: string;
   model: string;
+  mlTitle: string;
   year: number;
   color: string;
-  price: {
-    valor: number;
-    moneda: string;
-  };
+  price: number;
+  currency: 'USD' | 'ARS';
   description: string;
   position: number;
   featured: boolean;
@@ -48,7 +38,7 @@ interface Auto {
   doors: number;
   createdAt: string;
   updatedAt: string;
-  Images: Imagen[];
+  images: Imagen[];
   Category: Categoria;
 }
 
@@ -64,69 +54,35 @@ const CarsHome = ({ title }: CarsHomeProps) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const loadVehiculos = () => {
+    const fetchVehiculos = async () => {
       setLoading(true);
       try {
-        const vehiculosProcesados = data.cars
-          .slice(0, 6) // Máximo 6 vehículos
-          .map((auto) => ({
-            id: auto.id,
-            brand: auto.brand,
-            model: auto.mlTitle,
-            year: auto.year,
-            color: auto.color,
-            price: {
-              valor: auto.price,
-              moneda: auto.currency,
-            },
-            description: auto.description,
-            position: auto.position,
-            featured: auto.featured,
-            favorite: auto.favorite,
-            active: auto.active,
-            categoryId: auto.categoryId,
-            mileage: auto.mileage,
-            transmission: auto.transmission,
-            fuel: auto.fuel,
-            doors: auto.doors,
-            createdAt: auto.createdAt,
-            updatedAt: auto.updatedAt,
-            Images: auto.images.map((img, index) => ({
-              id: `${auto.id}-img-${index}`,
-              carId: auto.id,
-              imageUrl: img.thumbnailUrl,
-              thumbnailUrl: img.thumbnailUrl,
-              order: index,
-              createdAt: auto.createdAt,
-              updatedAt: auto.updatedAt,
-            })),
-            Category: {
-              id: auto.Category.id,
-              name: auto.Category.name,
-              createdAt: auto.createdAt,
-              updatedAt: auto.updatedAt,
-            },
-          }));
-
-        setVehiculos(vehiculosProcesados);
+        const response = await fetch(
+          `${API_BASE_URL}/api/cars?tenant=${TENANT}&limit=6`
+        );
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
+        }
+        const data = await response.json();
+        setVehiculos(data.cars || []);
       } catch (err) {
-        console.error('Error al cargar vehículos:', err);
+        console.error('Error al obtener vehículos:', err);
         setError('No se pudieron cargar los vehículos');
       } finally {
         setLoading(false);
       }
     };
 
-    loadVehiculos();
+    fetchVehiculos();
   }, []);
 
   if (loading) {
     return (
-      <section className='flex justify-center w-full bg-color-bg-primary'>
+      <section className='flex justify-center w-full'>
         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
-            <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide'>
+            <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide font-semibold'>
               {title}
             </h3>
           </div>
@@ -140,11 +96,11 @@ const CarsHome = ({ title }: CarsHomeProps) => {
 
   if (error) {
     return (
-      <section className='flex justify-center w-full bg-color-bg-primary'>
+      <section className='flex justify-center w-full'>
         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
-            <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide'>
+            <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide font-semibold'>
               {title}
             </h3>
           </div>
@@ -156,11 +112,11 @@ const CarsHome = ({ title }: CarsHomeProps) => {
 
   if (vehiculos.length === 0) {
     return (
-      <section className='flex justify-center w-full bg-color-bg-primary'>
+      <section className='flex justify-center w-full'>
         <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
           <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
             <div className='h-10 w-1 bg-color-primary mr-4'></div>
-            <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide'>
+            <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide font-semibold'>
               {title}
             </h3>
           </div>
@@ -173,11 +129,11 @@ const CarsHome = ({ title }: CarsHomeProps) => {
   }
 
   return (
-    <section className='flex justify-center w-full bg-color-bg-primary'>
+    <section className='flex justify-center w-full'>
       <div className='max-w-7xl w-full mx-4 sm:mx-6 md:mx-8 lg:mx-10 overflow-hidden'>
         <div className='flex items-center mb-4 md:mb-6 lg:mb-8'>
           <div className='h-10 w-1 bg-color-primary mr-4'></div>
-          <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide'>
+          <h3 className='text-2xl sm:text-3xl text-color-title-light tracking-wide font-semibold'>
             {title}
           </h3>
         </div>
@@ -207,7 +163,7 @@ const CarsHome = ({ title }: CarsHomeProps) => {
                   )}
 
                   {/* Contenedor de la imagen */}
-                  <div className='relative overflow-hidden aspect-[4/3] rounded-xl group'>
+                  <div className='relative overflow-hidden aspect-[4/3] rounded-lg group border border-neutral-600'>
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -223,8 +179,8 @@ const CarsHome = ({ title }: CarsHomeProps) => {
                           objectPosition: `center ${company.objectCover}`,
                         }}
                         src={
-                          auto.Images.sort((a, b) => a.order - b.order)[0]
-                            ?.thumbnailUrl || '/assets/placeholder.webp'
+                          auto.images[0]?.thumbnailUrl ||
+                          '/assets/placeholder.webp'
                         }
                         alt={`${auto.model}`}
                       />
@@ -276,18 +232,18 @@ const CarsHome = ({ title }: CarsHomeProps) => {
                           company.dark
                             ? 'group-hover:text-color-primary'
                             : 'group-hover:text-color-primary'
-                        } text-color-title-light text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
+                        } text-color-title-light text-lg md:text-xl font-semibold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                       >
-                        {auto.model}
+                        {auto.mlTitle}
                       </h3>
 
                       <div
                         className={`${
                           company.price ? '' : 'hidden'
-                        } text-color-primary text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
+                        } text-color-primary text-lg md:text-xl font-semibold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                       >
-                        {auto.price.moneda === 'ARS' ? '$' : 'US$'}
-                        {auto.price.valor.toLocaleString('es-ES')}
+                        {auto.currency === 'ARS' ? '$' : 'US$'}
+                        {auto.price.toLocaleString('es-ES')}
                       </div>
 
                       {/* Diseño minimalista con separadores tipo | */}
@@ -326,7 +282,7 @@ const CarsHome = ({ title }: CarsHomeProps) => {
                             company.dark
                               ? 'text-color-primary-light'
                               : 'text-color-primary-light'
-                          } inline-flex items-center  transition-colors font-semibold`}
+                          } inline-flex items-center  transition-colors font-medium`}
                         >
                           Ver más
                           <span className='inline-block transform translate-x-0 group-hover:translate-x-1 transition-transform duration-300 ml-1'>
