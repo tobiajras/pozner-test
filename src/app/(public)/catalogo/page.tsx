@@ -104,12 +104,14 @@ const CatalogoPage = () => {
         throw new Error(`Error ${response.status}: ${response.statusText}`);
       }
       const data = await response.json();
-      const categoriasProcesadas = data.map((category: any) => ({
-        id: category.id || category.name.toLowerCase(),
-        name:
-          category.name.charAt(0).toUpperCase() +
-          category.name.slice(1).toLowerCase(),
-      }));
+      const categoriasProcesadas = data.map(
+        (category: { id?: string; name: string }) => ({
+          id: category.id || category.name.toLowerCase(),
+          name:
+            category.name.charAt(0).toUpperCase() +
+            category.name.slice(1).toLowerCase(),
+        })
+      );
       setCategorias(categoriasProcesadas);
     } catch (error) {
       console.error('Error al cargar las categorías:', error);
