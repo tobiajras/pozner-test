@@ -64,7 +64,12 @@ const CarsHome = ({ title }: CarsHomeProps) => {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
         const data = await response.json();
-        setVehiculos(data.cars || []);
+        // Filtrar vehículos que tienen al menos 1 imagen
+        const filteredCars = (data.cars || []).filter(
+          (car: Auto) =>
+            car.images && car.images.length > 0 && car.images[0]?.thumbnailUrl
+        );
+        setVehiculos(filteredCars);
       } catch (err) {
         console.error('Error al obtener vehículos:', err);
         setError('No se pudieron cargar los vehículos');

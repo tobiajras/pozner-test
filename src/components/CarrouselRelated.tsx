@@ -67,7 +67,12 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
         }
 
         const data = await response.json();
-        setRelatedCars(data || []);
+        // Filtrar vehículos que tienen al menos 1 imagen
+        const filteredCars = (data || []).filter(
+          (car: Auto) =>
+            car.images && car.images.length > 0 && car.images[0]?.thumbnailUrl
+        );
+        setRelatedCars(filteredCars);
       } catch (err) {
         console.error('Error al obtener vehículos relacionados:', err);
         setError('No se pudieron cargar los vehículos relacionados');

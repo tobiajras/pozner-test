@@ -150,7 +150,13 @@ const CatalogoPage = () => {
       }
       const data = await response.json();
 
-      setCars(data.cars || []);
+      // Filtrar vehículos que tienen al menos 1 imagen
+      const filteredCars = (data.cars || []).filter(
+        (car: ApiCar) =>
+          car.images && car.images.length > 0 && car.images[0]?.thumbnailUrl
+      );
+
+      setCars(filteredCars);
       setTotalPages(data.totalPages || 1);
     } catch (error) {
       console.error('Error al cargar los vehículos:', error);
