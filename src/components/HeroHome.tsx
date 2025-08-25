@@ -30,7 +30,7 @@ const HeroHome = () => {
                   transition={{ duration: 0.5 }}
                   className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent'
                 >
-                  Vehículos Seleccionados,
+                  Concesionario Multimarca
                 </motion.h2>
               </div>
               <div className='md:gap-3 text-nowrap lg:mb-1'>
@@ -40,7 +40,7 @@ const HeroHome = () => {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   className='text-[28px] sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-semibold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent'
                 >
-                  Usados y 0km
+                  0km y Usados
                 </motion.h2>
               </div>
             </div>
@@ -50,8 +50,8 @@ const HeroHome = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className='text-lg lg:text-xl xl:text-2xl text-center text-color-text-light mx-4 max-w-md sm:max-w-md lg:max-w-lg xl:max-w-2xl'
             >
-              Concesionaria multimarca. Vehículos seleccionados, precios
-              competitivos y atención profesional. ¡Contactanos!
+              Líder en Caba y Bs As. Tenemos el auto que queres, al precio que
+              buscas. ¡Contactanos!
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
