@@ -47,7 +47,6 @@ interface CarsHomeProps {
 
 const CarsHome = ({ title }: CarsHomeProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    dragFree: true,
     loop: true,
     align: 'start',
   });
@@ -89,13 +88,41 @@ const CarsHome = ({ title }: CarsHomeProps) => {
   useEffect(() => {
     if (!emblaApi || isUserInteracting) return;
 
+    let interval: NodeJS.Timeout;
+
     const autoplay = () => {
       emblaApi.scrollNext();
     };
 
-    const interval = setInterval(autoplay, 4000); // Mueve cada 4 segundos
+    const startAutoplay = () => {
+      interval = setInterval(autoplay, 4000); // Mueve cada 4 segundos
+    };
 
-    return () => clearInterval(interval);
+    const stopAutoplay = () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+
+    // Detectar cuando la pestaña está visible/oculta
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopAutoplay();
+      } else {
+        startAutoplay();
+      }
+    };
+
+    // Iniciar autoplay
+    startAutoplay();
+
+    // Escuchar cambios de visibilidad de la pestaña
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      stopAutoplay();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, [emblaApi, isUserInteracting]);
 
   // Handle user interaction
