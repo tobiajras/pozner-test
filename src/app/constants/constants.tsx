@@ -34,7 +34,7 @@ export const TENANT = 'pozner';
 
 export const metadataCompany = {
   metadataBase: 'https://pozner-test.vercel.app/',
-  title: 'POZNER AUTOMOVILES - Compra y Venta de Autos',
+  title: 'POZNER AUTOMOVILES - Concesionario Multimarca',
   description:
     'Concesionario Multimarca: Líder en Caba y Bs As. Tenemos el auto que queres, al precio que buscas. ¡Contactanos!',
 };
