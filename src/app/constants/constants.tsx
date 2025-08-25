@@ -26,17 +26,17 @@ export const company = {
     // { day: 'Domingo', hours: ['09:00 a 13:00hs'] },
   ],
   footer:
-    'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
+    'Concesionario Multimarca: Líder en Caba y Bs As. Vehículos seleccionados',
 };
 
 export const API_BASE_URL = 'https://only-motors.agenciagrvity.com';
 export const TENANT = 'pozner';
 
 export const metadataCompany = {
-  metadataBase: 'https://poznerautomoviles.com.ar/',
+  metadataBase: 'https://pozner-test.vercel.app/',
   title: 'POZNER AUTOMOVILES - Compra y Venta de Autos',
   description:
-    'Compra y Venta de Autos: Vehículos seleccionados, atención personalizada.',
+    'Concesionario Multimarca: Líder en Caba y Bs As. Tenemos el auto que queres, al precio que buscas. ¡Contactanos!',
 };
 
 // Cambie el archivo data.json, necesito que actualices la informacion de catalogo.json. Las images tomalas de images de data.json, la descripcion tomala de caption de data.json, pero necesito que el texto este parseado, que no este todo junto sin espacios y saltos de linea. En name pone la marca y el modelo del vehiculo en title case, marca, marcaId todo esto acorde a la informacion de caption. Si en caption no se dice kilometraje o precio pone 999999, categoria estimala para el vehiculo (categorias tipicas de vehiculos en argentina. como utilitario, deportivo, suv, hatchback, etc). Transmision, motor, combustible y puertas estimalas acorde al vehiculo. La cantidad de vehiculos tiene que ser la de data.json, si en catalogo.json hay otros vehiculos removelos, los vehiclos de catalogo json tienen que ser los mismos que en data.json. No hagas un script, simplemente actualizalo con ia.
@@ -44,33 +44,33 @@ export const metadataCompany = {
 export const preguntas = [
   {
     id: 'preg-1',
-    question: '¿Qué opciones de pago ofrecen?',
+    question: '¿Qué opciones de financiamiento manejan?',
     answer:
-      'Ofrecemos diferentes opciones de pago para adaptarnos a tus necesidades. Consultanos sobre las alternativas disponibles y te asesoramos para encontrar la mejor opción para ti.',
+      'Se ofrecen diferentes alternativas de financiamiento. Te asesoramos sobre las opciones disponibles según cada caso particular.',
   },
   {
     id: 'preg-2',
-    question: '¿Cómo verifican el estado de los vehículos?',
+    question: '¿Cómo evalúan el estado de los vehículos?',
     answer:
-      'Todos nuestros vehículos son revisados antes de ser ofrecidos. Realizamos las verificaciones necesarias para asegurar que estén en las mejores condiciones para nuestros clientes.',
+      'Los vehículos son sometidos a una revisión técnica previa a su comercialización. Se realizan las verificaciones correspondientes para asegurar su estado general.',
   },
   {
     id: 'preg-3',
-    question: '¿Incluyen algún tipo de garantía?',
+    question: '¿Incluyen garantía los vehículos?',
     answer:
-      'Sí, nuestros vehículos incluyen garantía según corresponda. Te informamos sobre los términos y condiciones al momento de la compra para tu tranquilidad.',
+      'Sí, los vehículos pueden incluir garantía según corresponda. Los términos específicos se informan durante el proceso de compra.',
   },
   {
     id: 'preg-4',
-    question: '¿Puedo ver el vehículo antes de decidir?',
+    question: '¿Se pueden ver los vehículos?',
     answer:
-      'Por supuesto, te invitamos a conocer nuestros vehículos personalmente. Coordina una visita con nuestro equipo y te mostramos todo lo que necesites saber.',
+      'Sí, podes ver los vehiculos en nuestro local. Se recomienda contactar previamente para agendar una visita.',
   },
   {
     id: 'preg-5',
-    question: '¿Brindan asesoramiento después de la compra?',
+    question: '¿Brindan asesoramiento post-venta?',
     answer:
-      'Sí, nuestro compromiso continúa después de la compra. Estamos disponibles para resolver tus dudas y brindarte el apoyo que necesites con tu vehículo.',
+      'Se mantiene contacto posterior a la venta para resolver consultas y brindar el apoyo necesario con el vehículo adquirido.',
   },
 ];
 

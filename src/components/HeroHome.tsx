@@ -63,12 +63,12 @@ const HeroHome = () => {
                 href='/catalogo'
                 className={`${
                   company.dark
-                    ? 'text-color-title-light bg-gradient-to-l from-neutral-600 to-neutral-500 ring-[1.5px] ring-transparent'
-                    : 'text-color-title-light bg-gradient-to-l from-neutral-600 to-neutral-500 ring-[1.5px] ring-transparent'
+                    ? 'text-color-title-light bg-color-primary ring-[1.5px] ring-color-primary-dark'
+                    : 'text-color-title-light bg-color-primary ring-[1.5px] ring-color-primary-dark'
                 } lg:text-lg transition-all duration-300 ease-in-out py-2.5 md:py-3.5 px-5 md:px-8 rounded-lg relative overflow-hidden group`}
               >
                 <span className='relative z-10'>Ver Catálogo</span>
-                <div className='absolute inset-0 bg-gradient-to-l from-neutral-700 to-neutral-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out'></div>
+                <div className='absolute inset-0 bg-color-primary-dark opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out'></div>
               </Link>
               <Link
                 href='/contacto'

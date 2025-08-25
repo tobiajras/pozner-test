@@ -76,7 +76,7 @@ const PreguntasHome = () => {
                 <div className='p-6 md:p-8'>
                   <div className='flex items-start justify-between gap-4'>
                     <div className='flex-1'>
-                      <h4 className='text-lg md:text-xl font-semibold text-color-title-light mb-2 group-hover:text-color-primary-light transition-colors duration-300'>
+                      <h4 className='text-lg md:text-xl font-semibold text-color-title-light mb-2 transition-colors duration-300'>
                         {pregunta.question}
                       </h4>
                     </div>
@@ -87,7 +87,7 @@ const PreguntasHome = () => {
                         className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out relative overflow-hidden
                           ${
                             activeAnswer === pregunta.id
-                              ? 'bg-gradient-to-l from-neutral-600 to-neutral-500 text-white shadow-lg'
+                              ? 'bg-gradient-to-l from-color-primary to-color-primary/60 text-white shadow-lg'
                               : 'bg-gradient-to-l from-neutral-800 to-neutral-700 text-white'
                           }`}
                       >
@@ -105,7 +105,7 @@ const PreguntasHome = () => {
                           </motion.div>
                         </span>
                         {activeAnswer !== pregunta.id && (
-                          <div className='absolute inset-0 bg-gradient-to-l from-neutral-600 to-neutral-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-full'></div>
+                          <div className='absolute inset-0 bg-gradient-to-l from-color-primary to-color-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-full'></div>
                         )}
                       </div>
                     </div>

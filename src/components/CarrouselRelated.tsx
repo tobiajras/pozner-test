@@ -48,11 +48,16 @@ interface CarrouselRelatedProps {
 }
 
 const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
-  const [emblaRef] = useEmblaCarousel({ dragFree: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    dragFree: true,
+    loop: true,
+    align: 'start',
+  });
   const [clicked, setClicked] = useState(false);
   const [relatedCars, setRelatedCars] = useState<Auto[]>([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isUserInteracting, setIsUserInteracting] = useState(false);
 
   useEffect(() => {
     const obtenerRelacionados = async () => {
@@ -85,6 +90,45 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
       obtenerRelacionados();
     }
   }, [currentCarId]);
+
+  // Autoplay functionality
+  useEffect(() => {
+    if (!emblaApi || isUserInteracting) return;
+
+    const autoplay = () => {
+      emblaApi.scrollNext();
+    };
+
+    const interval = setInterval(autoplay, 4000); // Mueve cada 4 segundos
+
+    return () => clearInterval(interval);
+  }, [emblaApi, isUserInteracting]);
+
+  // Handle user interaction
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const handleUserInteraction = () => {
+      setIsUserInteracting(true);
+    };
+
+    const handleUserStopInteraction = () => {
+      // Reiniciar autoplay después de 2 segundos de inactividad
+      setTimeout(() => {
+        setIsUserInteracting(false);
+      }, 2000);
+    };
+
+    emblaApi.on('pointerDown', handleUserInteraction);
+    emblaApi.on('pointerUp', handleUserStopInteraction);
+    emblaApi.on('reInit', () => setIsUserInteracting(false));
+
+    return () => {
+      emblaApi.off('pointerDown', handleUserInteraction);
+      emblaApi.off('pointerUp', handleUserStopInteraction);
+      emblaApi.off('reInit', () => setIsUserInteracting(false));
+    };
+  }, [emblaApi]);
 
   if (cargando) {
     return (
@@ -151,18 +195,25 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
         <div
           onMouseUp={() => setClicked(false)}
           onMouseDown={() => setClicked(true)}
+          onMouseMove={() => {
+            if (clicked) {
+              setIsUserInteracting(true);
+            }
+          }}
           ref={emblaRef}
-          className={`${clicked ? 'cursor-grabbing' : 'cursor-grab'}`}
+          className={`${
+            clicked ? 'cursor-grabbing' : 'cursor-grab'
+          } select-none`}
         >
-          <div className='flex gap-6 sm:gap-7 md:gap-8'>
+          <div className='flex'>
             {relatedCars.map((auto) => (
               <Link
                 href={`/catalogo/${auto.id}`}
-                className='w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] xl:flex-[0_0_26%]'
+                className='w-full relative overflow-hidden flex-[0_0_75%] min-[500px]:flex-[0_0_55%] sm:flex-[0_0_40%] lg:flex-[0_0_30%] xl:flex-[0_0_26%] ml-6 sm:ml-7 md:ml-8'
                 key={auto.id}
               >
                 {/* Card container con borde que se ilumina */}
-                <div className='relative overflow-hidden group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)]'>
+                <div className='relative overflow-hidden group-hover:border-color-primary transition-all duration-500 h-full shadow-[0_8px_30px_-15px_rgba(0,0,0,0.7)] group-hover:shadow-[0_8px_30px_-10px_rgba(233,0,2,0.2)] select-none'>
                   {!auto.active && (
                     <div className='absolute top-0 left-0 w-full h-full bg-black/70 flex items-center justify-center z-20'>
                       <span className='bg-red-500 text-white text-sm font-medium px-3 py-1.5 rounded'>
@@ -183,7 +234,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                         priority
                         width={600}
                         height={600}
-                        className='object-cover w-full h-full transition-transform duration-700'
+                        className='object-cover w-full h-full transition-transform duration-700 select-none pointer-events-none'
                         style={{
                           objectPosition: `center ${company.objectCover}`,
                         }}
@@ -231,16 +282,16 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                   {/* Información del vehículo */}
                   <div className='relative group'>
                     {/* Gradiente base */}
-                    <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-primary/20 rounded-lg'></div>
+                    <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-title-light/20 rounded-lg'></div>
                     {/* Gradiente hover */}
-                    <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-primary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'></div>
+                    <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-title-light/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'></div>
                     {/* Contenido */}
                     <div className='relative z-10 p-4'>
                       <h3
                         className={`${
                           company.dark
-                            ? 'group-hover:text-color-primary'
-                            : 'group-hover:text-color-primary'
+                            ? 'group-hover:text-color-title-light'
+                            : 'group-hover:text-color-title-light'
                         } text-color-title-light text-lg md:text-xl font-semibold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                       >
                         {auto.mlTitle}
@@ -249,7 +300,7 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                       <div
                         className={`${
                           company.price ? '' : 'hidden'
-                        } text-color-primary text-lg md:text-xl font-semibold tracking-tight truncate md:mb-1 transition-colors duration-300`}
+                        } text-color-title-light text-lg md:text-xl font-semibold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                       >
                         {auto.currency === 'ARS' ? '$' : 'US$'}
                         {auto.price.toLocaleString('es-ES')}
@@ -289,8 +340,8 @@ const CarrouselRelated = ({ title, currentCarId }: CarrouselRelatedProps) => {
                         <span
                           className={`${
                             company.dark
-                              ? 'text-color-primary-light'
-                              : 'text-color-primary-light'
+                              ? 'text-color-title-light'
+                              : 'text-color-title-light'
                           } inline-flex items-center  transition-colors font-semibold`}
                         >
                           Ver más

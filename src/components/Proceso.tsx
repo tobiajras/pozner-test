@@ -82,9 +82,13 @@ const Proceso = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-            className='text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent mb-2'
+            className='text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2'
           >
-            Por qué elegir nuestros vehículos
+            Por qué elegir{' '}
+            <span className='text-color-primary-light'>
+              {' '}
+              nuestros vehículos
+            </span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}

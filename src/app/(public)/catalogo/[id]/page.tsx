@@ -477,7 +477,7 @@ export default function AutoDetailPage() {
                     <div
                       className={`${
                         company.price ? '' : 'hidden'
-                      } text-2xl font-bold text-color-primary mb-2 md:mb-4`}
+                      } text-2xl font-bold text-color-title-light mb-2 md:mb-4`}
                     >
                       {car.price.moneda === 'ARS' ? '$' : 'US$'}
                       {car.price.valor.toLocaleString('es-ES')}
@@ -558,14 +558,14 @@ export default function AutoDetailPage() {
                         href={`https://api.whatsapp.com/send?phone=549${company.whatsapp[0]}&text=Hola! Quería consultar por ${car.model}`}
                         target='_blank'
                         rel='noopener noreferrer'
-                        className='w-full h-12 bg-neutral-700 hover:bg-neutral-600 text-color-title-light flex gap-2 font-medium rounded text-center transition-all duration-300 ease-in-out justify-center items-center relative overflow-hidden group'
+                        className='w-full h-12 bg-color-primary hover:bg-color-primary-dark text-color-title-light flex gap-2 font-medium rounded text-center transition-all duration-300 ease-in-out justify-center items-center relative overflow-hidden group'
                       >
                         <span className='relative z-10 flex gap-2 items-center'>
                           <WhatsappIcon className='w-6 h-6' />
                           <span>Consultar</span>
                         </span>
                       </Link>
-                      <div className='w-full h-12 backdrop-blur bg-black/90 text-white font-medium ring-[1.5px] ring-color-primary-dark hover:bg-white/20 rounded-lg transition-all duration-300 ease-in-out'>
+                      <div className='w-full h-12 backdrop-blur bg-black/90 text-white font-medium ring-[1.5px] ring-color-primary-dark hover:bg-white/10 rounded-lg transition-all duration-300 ease-in-out'>
                         <ShareMenu
                           url={
                             typeof window !== 'undefined'

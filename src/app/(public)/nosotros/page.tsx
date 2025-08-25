@@ -18,9 +18,10 @@ const NosotrosPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className='text-2xl md:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent mb-2'
+              className='text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2'
             >
-              Sobre {company.name}
+              Sobre{' '}
+              <span className='text-color-primary-light'> {company.name}</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -63,15 +64,14 @@ const NosotrosPage = () => {
               Experiencia y compromiso
             </h3>
             <p className='text-color-text-light mb-2 lg:text-lg font-medium'>
-              Nuestra experiencia en el mercado nos permite ofrecer la mejor
-              calidad y el mejor servicio. Desde la selección de los autos hasta
-              la entrega, te acompañamos en cada paso.
+              La experiencia en el mercado permite ofrecer calidad y servicio.
+              Desde la selección de los autos hasta la entrega, se acompaña en
+              cada paso del proceso.
             </p>
             <p className='text-color-text-light lg:text-lg font-medium'>
-              Contamos con un equipo de profesionales especializados en el
-              sector automotriz. Nuestro objetivo es convertir tu sueño de tener
-              un auto en una realidad, ofreciendo opciones de financiamiento
-              flexibles y asesoramiento integral en cada etapa de tu compra.
+              Estamos especializados en el sector automotriz. El objetivo es
+              facilitar la adquisición de vehículos, ofreciendo opciones de
+              financiamiento y asesoramiento en cada etapa de la compra.
             </p>
           </motion.div>
         </section>
@@ -102,8 +102,8 @@ const NosotrosPage = () => {
               Variedad y calidad
             </h4>
             <p className='text-color-text-light text-sm lg:text-base'>
-              Catálogo seleccionado de autos de todas las marcas y modelos, con
-              altos estándares de calidad.
+              Catálogo seleccionado de autos de diferentes marcas y modelos, con
+              estándares de calidad verificados.
             </p>
           </motion.div>
           <motion.div
@@ -131,8 +131,8 @@ const NosotrosPage = () => {
               Atención personalizada
             </h4>
             <p className='text-color-text-light text-sm lg:text-base'>
-              Acompañamiento profesional y asesoramiento honesto en todo el
-              proceso de compra.
+              Acompañamiento profesional y asesoramiento durante todo el proceso
+              de compra.
             </p>
           </motion.div>
           <motion.div
@@ -160,7 +160,7 @@ const NosotrosPage = () => {
               Compromiso y confianza
             </h4>
             <p className='text-color-text-light text-sm lg:text-base'>
-              Garantía, servicio postventa y transparencia en cada operación.
+              Servicio postventa y transparencia en cada operación realizada.
             </p>
           </motion.div>
         </section>

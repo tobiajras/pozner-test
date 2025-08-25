@@ -70,7 +70,7 @@ const ContactoPage = () => {
                       <p className='text-color-text-light'>
                         {company.whatsapp[0]}
                       </p>
-                      <p className='text-sm text-color-primary font-medium mt-1'>
+                      <p className='text-sm text-color-title-light font-medium mt-1'>
                         Mensaje directo →
                       </p>
                     </div>
@@ -100,7 +100,7 @@ const ContactoPage = () => {
                       <p className='text-color-text-light'>
                         @{company.instagram}
                       </p>
-                      <p className='text-sm text-color-primary font-medium mt-1'>
+                      <p className='text-sm text-color-title-light font-medium mt-1'>
                         Seguinos →
                       </p>
                     </div>
@@ -130,7 +130,7 @@ const ContactoPage = () => {
                       <p className='text-color-text-light'>
                         {company.adress}, {company.city}
                       </p>
-                      <p className='text-sm text-color-primary font-medium mt-1'>
+                      <p className='text-sm text-color-title-light font-medium mt-1'>
                         Ver en Google Maps →
                       </p>
                     </div>

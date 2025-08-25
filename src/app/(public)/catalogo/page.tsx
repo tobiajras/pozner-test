@@ -651,16 +651,16 @@ const CatalogoPage = () => {
                           {/* Información del vehículo */}
                           <div className='relative group'>
                             {/* Gradiente base */}
-                            <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-primary/20 rounded-lg'></div>
+                            <div className='absolute inset-0 bg-gradient-to-b from-transparent to-white/20 rounded-lg'></div>
                             {/* Gradiente hover */}
-                            <div className='absolute inset-0 bg-gradient-to-b from-transparent to-color-primary/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'></div>
+                            <div className='absolute inset-0 bg-gradient-to-b from-transparent to-white/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'></div>
                             {/* Contenido */}
                             <div className='relative z-10 p-4'>
                               <h3
                                 className={`${
                                   company.dark
-                                    ? 'group-hover:text-color-primary'
-                                    : 'group-hover:text-color-primary'
+                                    ? 'group-hover:text-color-title-light'
+                                    : 'group-hover:text-color-title-light'
                                 } text-color-title-light text-lg md:text-xl font-bold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                               >
                                 {car.mlTitle || 'Sin título'}
@@ -669,7 +669,7 @@ const CatalogoPage = () => {
                               <div
                                 className={`${
                                   company.price ? '' : 'hidden'
-                                } text-color-primary text-lg md:text-xl font-semibold tracking-tight truncate md:mb-1 transition-colors duration-300`}
+                                } text-color-title-light text-lg md:text-xl font-semibold tracking-tight truncate md:mb-1 transition-colors duration-300`}
                               >
                                 {car.price && car.price > 0 ? (
                                   <>
@@ -724,8 +724,8 @@ const CatalogoPage = () => {
                                 <span
                                   className={`${
                                     company.dark
-                                      ? 'text-color-primary-light'
-                                      : 'text-color-primary-light'
+                                      ? 'text-color-title-light'
+                                      : 'text-color-title-light'
                                   } inline-flex items-center  transition-colors font-medium`}
                                 >
                                   Ver más
