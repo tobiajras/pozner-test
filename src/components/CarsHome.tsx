@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { API_BASE_URL, company, TENANT } from '@/app/constants/constants';
+import AutoScroll from 'embla-carousel-auto-scroll';
 
 interface Imagen {
   thumbnailUrl: string;
@@ -46,15 +47,18 @@ interface CarsHomeProps {
 }
 
 const CarsHome = ({ title }: CarsHomeProps) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    align: 'start',
-  });
+  const [emblaRef] = useEmblaCarousel({ dragFree: true, loop: true }, [
+    AutoScroll({
+      speed: 1,
+      stopOnInteraction: false,
+      startDelay: 0,
+      stopOnFocusIn: false,
+    }),
+  ]);
   const [clicked, setClicked] = useState(false);
   const [vehiculos, setVehiculos] = useState<Auto[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isUserInteracting, setIsUserInteracting] = useState(false);
 
   useEffect(() => {
     const fetchVehiculos = async () => {
@@ -83,73 +87,6 @@ const CarsHome = ({ title }: CarsHomeProps) => {
 
     fetchVehiculos();
   }, []);
-
-  // Autoplay functionality
-  useEffect(() => {
-    if (!emblaApi || isUserInteracting) return;
-
-    let interval: NodeJS.Timeout;
-
-    const autoplay = () => {
-      emblaApi.scrollNext();
-    };
-
-    const startAutoplay = () => {
-      interval = setInterval(autoplay, 4000); // Mueve cada 4 segundos
-    };
-
-    const stopAutoplay = () => {
-      if (interval) {
-        clearInterval(interval);
-      }
-    };
-
-    // Detectar cuando la pestaña está visible/oculta
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        stopAutoplay();
-      } else {
-        startAutoplay();
-      }
-    };
-
-    // Iniciar autoplay
-    startAutoplay();
-
-    // Escuchar cambios de visibilidad de la pestaña
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    return () => {
-      stopAutoplay();
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, [emblaApi, isUserInteracting]);
-
-  // Handle user interaction
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    const handleUserInteraction = () => {
-      setIsUserInteracting(true);
-    };
-
-    const handleUserStopInteraction = () => {
-      // Reiniciar autoplay después de 3 segundos de inactividad
-      setTimeout(() => {
-        setIsUserInteracting(false);
-      }, 2000);
-    };
-
-    emblaApi.on('pointerDown', handleUserInteraction);
-    emblaApi.on('pointerUp', handleUserStopInteraction);
-    emblaApi.on('reInit', () => setIsUserInteracting(false));
-
-    return () => {
-      emblaApi.off('pointerDown', handleUserInteraction);
-      emblaApi.off('pointerUp', handleUserStopInteraction);
-      emblaApi.off('reInit', () => setIsUserInteracting(false));
-    };
-  }, [emblaApi]);
 
   if (loading) {
     return (
@@ -216,11 +153,6 @@ const CarsHome = ({ title }: CarsHomeProps) => {
         <div
           onMouseUp={() => setClicked(false)}
           onMouseDown={() => setClicked(true)}
-          onMouseMove={() => {
-            if (clicked) {
-              setIsUserInteracting(true);
-            }
-          }}
           ref={emblaRef}
           className={`${
             clicked ? 'cursor-grabbing' : 'cursor-grab'
