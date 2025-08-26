@@ -4,21 +4,34 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 const HeroCarousel = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   // Array de imágenes de fondo para desktop
   const desktopImages = [
     '/assets/inicio/home-background-1.webp',
     '/assets/inicio/home-background-2.webp',
     '/assets/inicio/home-background-3.webp',
     '/assets/inicio/home-background-4.webp',
+    '/assets/inicio/home-background-5.webp',
   ];
+
+  // Estado inicial aleatorio
+  const [currentImageIndex, setCurrentImageIndex] = useState(() =>
+    Math.floor(Math.random() * desktopImages.length)
+  );
+
+  // Función para obtener un índice aleatorio diferente al actual
+  const getRandomIndex = (currentIndex: number, totalImages: number) => {
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * totalImages);
+    } while (randomIndex === currentIndex && totalImages > 1);
+    return randomIndex;
+  };
 
   // Efecto para cambiar imagen automáticamente cada 5 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex === desktopImages.length - 1 ? 0 : prevIndex + 1
+        getRandomIndex(prevIndex, desktopImages.length)
       );
     }, 5000); // Cambia cada 5 segundos
 
